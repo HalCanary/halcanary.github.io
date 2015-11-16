@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Voder-Vocoder: HTML wierdness: border-top and blockquotes:</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" id="stylesheet" href="/styles/scrapple-from-the-apple.css">
+  </head>
+  <!-- Copyright 2006-2015 Hal Canary. ALL RIGHTS RESERVED. -->
+
+  <body style="padding:0;margin:0;">
+    <div class="column" style="max-width:640px;margin:0 auto;">
+
+      <h1 class="blogtitle">HTML wierdness: border-top and blockquotes:</h1>
+
+      <div class="byline">By Hal Canary,
+        2006-10-07 11:51:12
+        (<a href="http://halcanary.org/vv/2006/10/07/653/">link</a>)
+    <br><a href="../../../../category/computers-code/" class="categorylink">#computers-code</a>
+        </div>
+      <!-- SRC= 2006-10-07-653 -->
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <div class="content">
+
+<!-- BEGIN CONTENT -->
+<p>This:</p>
+<pre>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01//EN&quot;
+        &quot;http://www.w3.org/TR/html4/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;
+&lt;meta http-equiv=&quot;Content-Type&quot;
+ content=&quot;text/html; charset=utf-8&quot;&gt;
+&lt;title&gt;2006-10-07&lt;/title&gt;&lt;/head&gt;&lt;body&gt;
+&lt;div style=&quot;width:400px; margin:auto;&quot;&gt;
+
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing
+elit, sed do eiusmod tempor incididunt ut labore et
+dolore magna aliqua.&lt;/p&gt;
+
+&lt;blockquote style=&quot;border-left:solid 4px #ddd;
+ border-right:solid 4px #ddd&quot;&gt;&lt;p&gt;
+Ut enim ad minim veniam, quis nostrud exercitation
+ullamco laboris nisi ut aliquip ex ea commodo
+consequat.
+&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Duis aute irure dolor in reprehenderit in voluptate
+velit esse cillum dolore eu fugiat nulla pariatur.&lt;/p&gt;
+
+&lt;blockquote style=&quot;border-left:solid 4px #ddd;
+ border-right:solid 4px #ddd;
+ border-bottom:solid 4px #ddd;
+ border-top:solid 4px #ddd&quot;&gt;&lt;p&gt;
+Excepteur sint occaecat cupidatat non proident, sunt
+in culpa qui officia deserunt mollit anim id est
+laborum.
+&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing
+elit, sed do eiusmod tempor incididunt ut labore et
+dolore magna aliqua.&lt;/p&gt;
+
+&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</pre>
+<p>renders as:<br />
+<img src="/images/2006-10-07-html-border-issue.png" alt="html as rendered by firefox" /></p>
+<p>The act of simply adding a border-top and border-bottom to an element's style will radically change the distance between it and the preceding and following blocks.  This is why I've stopped using border-top and border-bottom.  See <a href="http://www.w3.org/TR/CSS21/box.html#collapsing-margins">collapsing margins</a></p>
+
+
+<!-- END CONTENT -->
+
+      </div>
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <p>(<a href="../../../../archives/">back</a>)</p>
+    </div>
+  </body>
+</html>

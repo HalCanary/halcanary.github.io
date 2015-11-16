@@ -1,0 +1,16 @@
+TITLE=What is |?
+COPYRIGHT=Copyright 2005-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2005-04-23 12:49:56
+PERMALINK=http://halcanary.org/vv/2005/04/23/446/
+PERMALINKPART=vv/2005/04/23/446/
+YEAR=2005
+MONTH=04
+DAY=23
+POSTID=446
+CATEGORIES=physics;
+MODE=htmldiv
+
+<p><img src="/images/ketbra.png" alt="[]" /></p>
+<p>---Dirac, by way of the <em>Feynman Lectures</em></p>
+<p>| is the identity matrix.  SUM &lt;i|i&gt; = 1 while SUM |i&gt;&lt;i| = I.</p>
+

@@ -1,0 +1,21 @@
+TITLE=rhythmbox
+COPYRIGHT=Copyright 2004-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2004-03-18 06:11:40
+PERMALINK=http://halcanary.org/vv/2004/03/18/206/
+PERMALINKPART=vv/2004/03/18/206/
+YEAR=2004
+MONTH=03
+DAY=18
+POSTID=206
+CATEGORIES=computers-code;
+MODE=htmldiv
+
+<p>I just got rhythmbox working for the first time.  I needed to do a &ldquo;sudo yum install gstreamer-plugins-mp3&rdquo;.  Of course!</p>
+<p>Review to follow.</p>
+<hr />
+<p>UPDATE 1:00 pm.</p>
+<p>It would seem that I stayed out all night and then came home and figured out how to make rythembox work. Huh?</p>
+<p>Okay. here's the deal.  My distro, FC1, ships with a broken copy of xmms.  You can get xmms-mp3 from the Livna.org repository, but xmms still looks like crap.  So if you get Ryhtembox, its dependances (like gstreamer), and gstreamer-plugins-mp3, you get a much better music player.</p>
+<p>F, it just hung.  Damnit.</p>
+<p><strong>UPDATE 2004-08-11:</strong>  I've been happy with rhythmbox for the last several months.  I reccomend.  Yet it still needs a few more features.</p>
+

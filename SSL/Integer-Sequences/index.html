@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <title></title>
+    <style type="text/css"><!--
+div.column {
+	margin:auto; width:620px
+}
+.deemphasize {
+	color: #555555;
+	background-color: #ffffff;
+}
+.achtung {
+	color: #aa0000;
+	background-color: #ffffff;
+}
+.indent {
+	margin-left: 2em;
+}
+.centered {
+	text-align: center;
+}
+.rightside {
+	text-align: right;
+}
+blockquote {
+	border-left:2px #dddddd solid;
+	margin-left:19px;
+	padding-left:19px;
+	border-right:2px #dddddd solid;
+	margin-right:19px;
+	padding-right:19px;
+}
+pre {
+	overflow-x: auto;
+	margin-left: 2em;
+}
+body {
+	font-family: sans-serif;
+}
+--></style>
+  </head>
+  <body>
+    <div class="column">
+
+<h1>Sequences that are integers for no good reason.</h1>
+
+<p>For example, the Dana Scott sequence:</p>
+
+<p class="centered">
+<em>f</em>(n) * <em>f</em>(n-4) = <em>f</em>(n-1) * <em>f</em>(n-3) +
+
+<em>f</em>(n-2)
+</p>
+
+<p>Where <em>f</em>(1) = <em>f</em>(2) = <em>f</em>(3) = <em>f</em>(4)
+= 1.</p>
+
+<pre>#begin Maple Code
+interface(prettyprint=false):
+f := proc(n) option remember ;
+if n&lt;=4 then 1 else
+(f(n-1) * f(n-3) + f(n-2))/f(n-4)
+fi end:
+seq(f(n),n=1..38);
+#end Maple Code
+
+1, 1, 1, 1, 2, 3, 5, 13, 22, 41, 111, 191, 361, 982, 1693,
+3205, 8723, 15042, 28481, 77521, 133681, 253121, 688962,
+1188083, 2249605, 6123133, 10559062, 19993321, 54419231,
+93843471, 177690281, 483649942, 834032173, 1579219205,
+4298430243, 7412446082, 14035282561, 38202222241
+
+</pre>
+
+<p>This can be generalized to the recurrance:</p>
+
+<p class="centered">
+F(n,k) * F(n-4,k-2) =  F(n-1,k-1) * F(n-3,k-1) + F(n-2,k-1)
+</p>
+
+<p class="centered">
+<em>n</em> is a positive integer and <em>k</em> is an integer.
+</p>
+
+<p class="centered">
+F(n,k) = x_{n,k} for <em>n</em> &lt; 5
+</p>
+
+<p>Then F(n,k) is always a Laurent polynomial in the x_{n,k} variables
+with all coefficents equal to 1. (a <em>faithful polynomial</em>)
+
+</p><p>Define the sequence {<em>g</em>}</p>
+
+<p class="centered">
+<em>g</em>(n) = 10 <em>g</em>(n-3) -10 <em>g</em>(n-6) + <em>g</em>(n-9)
+</p>
+<p class="centered">
+where <em>g</em>(n) = <em>f</em>(n) for 1 &lt; n &lt; 9
+
+</p>
+
+<p><em>g</em>(n) = <em>f</em>(n) for all <em>n</em> up to 6000. </p>
+
+<p>If we can prove that <em>g</em>(n) = <em>f</em>(n) for all
+<em>n</em>, then  we have shown that {<em>f</em>} is always an
+integer. </p>
+
+<p>Update:  <a href="dana_scott_proof.txt">I just did that</a>.</p>
+
+<p><a href="../writeups/dana_scott.pdf">Writeup</a>.</p>
+
+      <hr>
+      <p><a href="../">BACK</a></p>
+    </div>
+  </body>
+</html>

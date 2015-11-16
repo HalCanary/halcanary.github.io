@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Voder-Vocoder: Book Review: Linux Firewalls</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" id="stylesheet" href="/styles/scrapple-from-the-apple.css">
+  </head>
+  <!-- Copyright 2004-2015 Hal Canary. ALL RIGHTS RESERVED. -->
+
+  <body style="padding:0;margin:0;">
+    <div class="column" style="max-width:640px;margin:0 auto;">
+
+      <h1 class="blogtitle">Book Review: Linux Firewalls</h1>
+
+      <div class="byline">By Hal Canary,
+        2004-04-02 15:07:43
+        (<a href="http://halcanary.org/vv/2004/04/02/220/">link</a>)
+    <br><a href="../../../../category/books/" class="categorylink">#books</a>
+        </div>
+      <!-- SRC= 2004-04-02-220 -->
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <div class="content">
+
+<!-- BEGIN CONTENT -->
+<p><a href="http://www.amazon.com/exec/obidos/ASIN/0735710996/ref=nosim/theworldofhalcan"><img src="/images/linux_firewalls.jpg" width="130" height="167" alt="[book cover]" /></a></p>
+<p>I've been using Ziegler's <em>Linux Firewalls (2nd Edition)</em> to teach myself <code>iptables</code> syntax.   I'm not sure that it's the best book for getting started building firewalls and routers, bcause it advocates really compliated rulesets.</p>
+<p><img src="/images/iptables.png" width="270" height="461" alt="[]" /></p>
+<p>There are some basic facts about the way iptables works that aren't explained well.  One of them is the diagram on the left.  Everyone always draws it funny.  The way I draw it, all packes travel downward.</p>
+<p>Compare the <a href="http://www.linux-firewall-tools.com/ftp/firewall/optimized.firewall.2">giant scripts in Ziegler</a> to <a href="http://www.netfilter.org/documentation/HOWTO//packet-filtering-HOWTO-5.html">Rusty's Really Quick Guide To Packet Filtering</a></p>
+<p>When I was done confguring my router, I had a 61 line iptables script that blocked most ports, did SNAT and DNAT.  I didn't feel the need to, for example, DROP packets on the OUTPUT chain.</p>
+<p>Ziegler could use a chapter on troubleshooting with tcpdump and other tools.</p>
+
+
+<!-- END CONTENT -->
+
+      </div>
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <p>(<a href="../../../../archives/">back</a>)</p>
+    </div>
+  </body>
+</html>

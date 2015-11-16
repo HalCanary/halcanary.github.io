@@ -1,0 +1,288 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <title></title>
+    <style type="text/css"><!--
+div.column {
+	margin:auto; width:730px
+}
+.deemphasize {
+	color: #555555;
+	background-color: #ffffff;
+}
+.achtung {
+	color: #aa0000;
+	background-color: #ffffff;
+}
+.indent {
+	margin-left: 2em;
+}
+.centered {
+	text-align: center;
+}
+.rightside {
+	text-align: right;
+}
+blockquote {
+	border-left:2px #dddddd solid;
+	margin-left:19px;
+	padding-left:19px;
+	border-right:2px #dddddd solid;
+	margin-right:19px;
+	padding-right:19px;
+}
+pre {
+	overflow-x: auto;
+	margin-left: 2em;
+}
+body {
+	font-family: sans-serif;
+}
+--></style>
+  </head>
+  <body>
+    <div class="column">
+
+<h1>Thoughts on Snakes</h1>
+<p>
+Document history:<br>
+*hwc 2003-09-13 - created.<br>
+*hwc 2003-09-14 - added section on Fibonacci sequences.
+</p>
+
+<p><i>Apology:  this document is seriously lacking in digrams.
+Sorry.</i></p> 
+
+<h2>Labeling Snakes</h2>
+<pre>
+We need to define a way to label snakes.
+
+Also define function N(x) = the number of perfect matchings of snake
+x.
+	N : {snakes} -> Z+
+
+o---o
+| e |		The most basic snake is called e.
+o---o		N(e) = 2			[1]
+
+o---o---o
+| e | r |	The next snake is er 
+o---o---o	N(er) = 3			[2]
+
+
+o---o
+| u |		Here is snake eu, made by adding a box on top of 
+o---o		the e snake.  
+| e |
+o---o		N(eu) = 3.			[3]
+
+    o---o
+    | u |	Here is snake eru.
+o---o---o	N(eru) = 1 + N(er).        [4]	
+| e | r |	       = 1 + 3			
+o---o---o	       = 4					
+ 
+Let us generalize equation [4].  
+	
+	N(e(ru)^k) = 1 + N(e(ru)^{k-1}r)	[5]
+
+You can rotate any snake along the y=x line and switch all u's for
+r's.  Applying this transform to equation [5] gives
+
+	N(e(ur)^k) = 1 + N(e(ur)^{k-1}u)	[6]
+
+Another case:  erurururur or eururururu.  It's simple to see that:
+
+	N(er(ur)^k) = 1 + N(e(ru)^k)	  	[6.1]
+	N(eu(ru)^k) = 1 + N(e(ur)^k)		[6.2]
+
+But what if we have a snake of the form xurururur, where x is any
+snake?   (We're trying to recursively calculate the matchings of any
+snake.) We can not directly calculate N(xurururur).
+
+Instead we can calculate N(xr(ru)^k) and N(xr(ru)^{k}r).  (k>0)
+
+	N(xr(ru)^k) = N(x) + N(xrr(ur)^{k-1})		 [7]
+	N(xr(ru)^kr) = N(x) + N(xr(ru)^{k})		 [8]
+
+Apply transform to [7] and [8] to give:
+
+	N(xu(ur)^k) = N(x) + N(xuu(ru)^{k-1})		 [9]
+	N(xu(ur)^ku) = N(x) + N(xr(ur)^{k})		 [10]
+
+Simple Calculations:
+
+	N(xrr) = N(xr) + N(x)			[11]
+	N(xuu) = N(xu) + N(x)			[12]
+
+[11] and [12] are generalized forms of the Fibonacci recurrance.
+Since, in general, x can be anything, then the snake sequence
+
+	F = {x,xr,xrr,xrrr,xrrrr,xrrrrr,...}  
+
+is like a fibonacci sequence with odd starting conditions. 
+
+	f_1 = N(x)
+	f_2 = N(xr)
+	f_k = f_{k-1} + f_{k-2}
+
+where f_k = N(F_k), the Number of perfect matchings of the kth snake
+in the sequence F.  Of course, if x=e, then f_1=2 and f_2=3, giving
+the usual fibonacci sequence.
+
+Special case of [7] and [9]:
+
+	N(xrru) = N(x) + N(xrr)		[13]
+	N(xuur) = N(x) + N(xuu)		[14]
+
+These equations should give us the tools to recursively calculate N(x)
+for any snake.  
+
+To do:  prove that there aren't any cases that we are forgetting.  
+
+</pre>
+<h2>Proof: (?)</h2>
+<pre>
+Any snake string ends in 'e', 'er', 'eu', 'rr', 'uu', 'ur'
+or 'ru'.  Do my rules apply to *all* cases?
+
+Snake strings always get shorter when you apply a rule.  So if 
+a string is n chars long, you only need to apply rules at most 
+n times.
+
+</pre>
+<h2>Simplification:</h2>
+<pre>
+From [7] and [8], we get:
+	N(xr(ru)^{k})  = N(x) + N(xrr(ur)^{k-1})	 [7]
+	N(xr(ru)^{k}r) = N(x) + N(xr(ru)^{k})		 [8]
+
+	N(xr(ru)^{k})  = N(x) + N(xrr(ur)^{k-1})
+	N(xrr(ur)^{k-1}) = N(x) + N(xr(ru)^{k-1})
+
+	N(xr(ru)^{k}) = (2 * N(x)) + N(xr(ru)^{k-1})
+
+So, we have shown that:
+
+	N(xr(ru)^k) = (2 * k * N(x)) + N(xr)		[15]
+	N(xu(ur)^k) = (2 * k * N(x)) + N(xu)		[16]
+
+Doing it the other way:
+	N(xr(ru)^{k}r) = N(x) + N(xr(ru)^{k})		 [8]
+	N(xr(ru)^{k})  = N(x) + N(xrr(ur)^{k-1})	 [7]
+
+	N(xr(ru)^{k}r) = N(x) + N(xr(ru)^{k})	
+	N(xr(ru)^{k})  = N(x) + N(xr(ru)^{k-1}r)
+
+	N(xr(ru)^{k}r) = (2 * N(x)) + N(xr(ru)^{k-1}r)
+And:
+	N(xr(ru)^{k}r) = (2 * k * N(x)) + N(xrr)
+
+Apply [11]:
+
+	N(xr(ru)^{k}r) = (2 * k * N(x)) + N(xr) + N(x)
+	N(xr(ru)^{k}r) = ((2k+1) * N(x)) + N(xr)	[17]
+	N(xu(ur)^{k}u) = ((2k+1) * N(x)) + N(xu)	[18]
+
+
+From [5] and [6.1]
+	N(e(ru)^k) = 1 + N(e(ru)^{k-1}r)	[5]
+	N(er(ur)^k) = 1 + N(e(ru)^k)	  	[6.1]
+
+	N(e(ru)^k) = 1 + N(er(ur)^{k-1})
+	N(er(ur)^{k-1}) = 1 + N(e(ru)^{k-1})
+
+	N(e(ru)^k) = 2 + N(e(ru)^{k-1})
+	
+Simplify, giving: 
+
+	N(e(ru)^k) = 2k + N(e)
+	N(e(ru)^k) = 2k + 2			[19]
+
+x=y transform:
+
+	N(e(ur)^k) = 2k + 2			[20]
+
+From [5] and [6.1]:
+	N(er(ur)^k) = 1 + N(e(ru)^k)	  	[6.1]
+	N(e(ru)^k) = 1 + N(e(ru)^{k-1}r)	[5]
+
+	N(er(ur)^k) = 2 + N(er(ur)^{k-1})
+	N(er(ur)^k) = 2k + N(er)
+	N(er(ur)^k) = 2k + 3			[21]
+	N(eu(ru)^k) = 2k + 3			[22]
+
+
+</pre>
+<h2>Summarize:</h2>
+<pre>
+	N(e) = 2					[1]
+	N(er) = 3					[2]
+	N(eu) = 3					[3]
+	N(e(ru)^k) = 2k + 2				[19]
+	N(e(ur)^k) = 2k + 2				[20]
+	N(er(ur)^k) = 2k + 3				[21]
+	N(eu(ru)^k) = 2k + 3				[22]
+	N(xrr) = N(xr) + N(x)				[11]
+	N(xuu) = N(xu) + N(x)				[12]
+	N(xrru) = N(x) + N(xrr)				[13]
+	N(xuur) = N(x) + N(xuu)				[14]
+	N(xr(ru)^k) = (2 * k * N(x)) + N(xr)		[15]
+	N(xu(ur)^k) = (2 * k * N(x)) + N(xu)		[16]
+	N(xr(ru)^{k}r) = ((2k+1) * N(x)) + N(xr)	[17]
+	N(xu(ur)^{k}u) = ((2k+1) * N(x)) + N(xu)	[18]
+</pre>
+
+<h2>Code</h2>
+
+<p>I've written out this <a href="snake-counting">algorithm in
+perl.</a> Here is all of the output for snales of length 2 to 11: <a
+href="counted-snakes.txt">counted-snakes.txt</a>.
+Here is example output:</p>
+<pre>
+[hal@ups 2003]$ perl snake-counting 'e'
+<b>N(e) = 2</b>
+[hal@ups 2003]$ perl snake-counting 'er'
+<b>N(er) = 3</b>
+[hal@ups 2003]$ perl snake-counting 'eu'
+<b>N(eu) = 3</b>
+[hal@ups 2003]$ perl snake-counting 'eru'
+<b>N(eru) = 4</b>
+[hal@ups 2003]$ perl snake-counting 'errr'
+<b>N(errr) = 8</b>
+[hal@ups 2003]$ perl snake-counting 'erururr'
+<b>N(erururr) = 13</b>
+[hal@ups 2003]$ perl snake-counting 'erurururrurur'
+<b>N(erurururrurur) = 49</b>
+[hal@ups 2003]$ perl snake-counting 'er'
+<b>N(er) = 3</b>
+[hal@ups 2003]$ perl snake-counting 'err'
+<b>N(err) = 5</b>
+[hal@ups 2003]$ perl snake-counting 'errr'
+<b>N(errr) = 8</b>
+[hal@ups 2003]$ perl snake-counting 'errrr'
+<b>N(errrr) = 13</b>
+[hal@ups 2003]$ perl snake-counting 'errrrr'
+<b>N(errrrr) = 21</b>
+[hal@ups 2003]$ perl snake-counting 'errrrrr'        A
+<b>N(errrrrr) = 34</b>
+[hal@ups 2003]$ perl snake-counting 'errrrrrr'
+<b>N(errrrrrr) = 55</b>
+[hal@ups 2003]$ perl snake-counting 'errrrrrrr'
+<b>N(errrrrrrr) = 89</b>
+[hal@ups 2003]$ perl snake-counting 'errrrrrrrr'
+<b>N(errrrrrrrr) = 144</b>
+[hal@ups 2003]$ perl snake-counting 'errrrrrrrrr'
+<b>N(errrrrrrrrr) = 233</b>
+[hal@ups 2003]$ perl snake-counting 'errrrrrrrrrr'
+<b>N(errrrrrrrrrr) = 377</b>
+[hal@ups 2003]$ perl snake-counting 'errrrrrrrrrrr'
+<b>N(errrrrrrrrrrr) = 610</b>
+</pre>
+<hr>
+<p><a href="..">BACK</a></p>
+
+    </div>
+  </body>
+</html>

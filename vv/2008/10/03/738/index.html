@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Voder-Vocoder: (defun remove-excess-whitespace...</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" id="stylesheet" href="/styles/scrapple-from-the-apple.css">
+  </head>
+  <!-- Copyright 2008-2015 Hal Canary. ALL RIGHTS RESERVED. -->
+
+  <body style="padding:0;margin:0;">
+    <div class="column" style="max-width:640px;margin:0 auto;">
+
+      <h1 class="blogtitle">(defun remove-excess-whitespace...</h1>
+
+      <div class="byline">By Hal Canary,
+        2008-10-03 21:02:56
+        (<a href="http://halcanary.org/vv/2008/10/03/738/">link</a>)
+    <br><a href="../../../../category/computers-code/" class="categorylink">#computers-code</a>
+        </div>
+      <!-- SRC= 2008-10-03-738 -->
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <div class="content">
+
+<!-- BEGIN CONTENT -->
+<p>I always meant to go ahead and fix this function so it did what I want.  Now it uses proper regex.  See <a href="http://halcanary.org/vv/2004/02/18/176/">the old version, too</a>.</p>
+<pre>;; ~/.emacs ;;
+(defun remove-excess-whitespace () (interactive)
+  (auto-mega-replace  &quot;&#0092;&#0092;( &#0092;&#0092;|&#0092;t&#0092;&#0092;)$&quot; &quot;&quot;))
+(defun auto-mega-replace (arg1 arg2)
+  (save-excursion
+    (beginning-of-buffer)
+    (while (re-search-forward arg1)
+      (beginning-of-buffer)
+      (perform-replace arg1 arg2
+        nil t nil)
+      (beginning-of-buffer))))</pre>
+
+
+<!-- END CONTENT -->
+
+      </div>
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <p>(<a href="../../../../archives/">back</a>)</p>
+    </div>
+  </body>
+</html>

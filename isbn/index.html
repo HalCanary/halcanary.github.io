@@ -1,0 +1,117 @@
+<!doctype html>
+<html><head>
+<meta charset="UTF-8">
+<title>World of Hal Canary</title>
+<link rel="stylesheet" type="text/css" href="/styles/scrapple-from-the-apple.css">
+<link rel="SHORTCUT ICON" href="favicon.ico">
+<meta name="viewport" content="width=532">
+<script>
+// Example:
+// http://halcanary.org/isbn/?034549752X/The+City+and+The+City
+var target = null;
+function atb(t) {
+    if (target == null) {
+        alert("error"); return;
+    }
+    p = document.createElement("p");
+    p.appendChild(document.createTextNode(t));
+    target.appendChild(p);
+}
+function appendStrongPar(t) {
+    if (target == null) {
+        alert("error"); return;
+    }
+    p = document.createElement("p");
+    p.style.fontWeight = "bold";
+    p.appendChild(document.createTextNode(t));
+    target.appendChild(p);
+}
+function appendLinkPar(l,t) {
+    if (target == null) {
+        alert("error"); return;
+    }
+    p = document.createElement("p");
+    a = document.createElement("a");
+    a.href = l;
+    a.appendChild(document.createTextNode(t));
+    p.appendChild(a);
+    target.appendChild(p);
+}
+function is_isbn_valid(n) {
+    var check = 0;
+    for (var i = 0; i < 9; i++) {
+        check += (10 - i) * ( + n.substring(i, i + 1));
+    }
+    var t = n.substring(9, 10);
+    check += (t == 'x' || t == 'X') ? 10 : (+ t);
+    return ((check % 11) == 0);
+}
+function is_isbn_valid13(n) {
+    var check = 0;
+    for (var i = 0; i < 13; i+=2) {
+        check += (+ n.substring(i, i + 1));
+    }
+    for (var i = 1; i < 12; i+=2) {
+        check += 3 * (+ n.substring(i, i + 1));
+    }
+    return ((check % 10) == 0);
+}
+
+window.onload = function(){ 
+    target = document.getElementById('target'); // global
+    var search =  window.location.search;
+    var isbn_regex = /\?([0-9xX-]*)/;
+    var isbn = isbn_regex.exec(search);
+    if (isbn == null) {
+        atb("ERROR: MISSING ISBN");
+        return;
+    }
+    isbn = isbn[1].replace("-","");
+    var title_regex = /\?[0-9X-]*\/(.*)/;
+    var title = title_regex.exec(search);
+    if (title != null) {
+        title = title[1];
+        title = decodeURIComponent((title+'').replace(/\+/g, '%20'));
+        appendStrongPar(title);
+    }
+    if (isbn.length == 10) {
+        if (! is_isbn_valid(isbn))
+            atb("ERROR: ISBN 10 FAILS VALIDITY CHECK");
+    } else if (isbn.length == 13) {
+        if (! is_isbn_valid(isbn))
+            atb("ERROR: ISBN 13 FAILS VALIDITY CHECK");
+    } else {
+        atb("ERROR: ISBN LENGTH IS WRONG");
+        return;
+    }
+
+    var bn = "http://search.barnesandnoble.com/bookSearch/isbnInquiry.asp?isbn=" + isbn;
+
+    var bn2 = "ISBN " + isbn + " @ barnesandnoble.com";
+
+    var amzn = "http://www.amazon.com/exec/obidos/ASIN/";
+
+    if (isbn.length == 10) {
+        amzn = amzn + isbn + "/ref=nosim/hrmcb-20";
+    } else {
+        amzn = amzn + isbn + "&index=books&linkCode=qs&tag=hrmcb-20";
+    }
+    var amzn2 = "ISBN " + isbn + " @ amazon.com";
+
+    var goog = "https://www.google.com/search?tbm=bks&q=isbn:"+ isbn;
+    
+    var goog2 = "ISBN " + isbn + " @ books.google.com";        
+
+    appendLinkPar(bn, bn2);
+    appendLinkPar(amzn, amzn2);
+    appendLinkPar(goog, goog2);
+}
+</script>
+</head>
+  <body>
+    <div class="column" style="width:512px;">
+       <div id='target' class='section'>
+      </div><!-- end div section -->
+    </div><!-- end div column -->
+  </body>
+</html>

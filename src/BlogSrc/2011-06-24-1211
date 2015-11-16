@@ -1,0 +1,49 @@
+TITLE= change-epub-formatting.py
+COPYRIGHT=Copyright 2011-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2011-06-24 15:28:54
+PERMALINK=http://halcanary.org/vv/2011/06/24/1211/
+PERMALINKPART=vv/2011/06/24/1211/
+YEAR=2011
+MONTH=06
+DAY=24
+POSTID=1211
+CATEGORIES=books;computers-code;
+MODE=htmldiv
+
+<pre>#!/usr/bin/python
+#DTPD#
+import subprocess
+import os.path
+import sys
+import glob
+
+def fixfile(in_file_name):
+  ebookconvert = r&#0039;C:&#0092;PROGRA~2&#0092;Calibre2&#0092;ebook&#0045;convert.exe&#0039;
+  #ebookconvert = &#0039;/usr/bin/ebook&#0045;convert&#0039;
+  base = os.path.basename(in_file_name)
+  dirn = os.path.dirname(in_file_name)
+  newdir = &#0039;myformat&#0039;
+  try:
+    os.mkdir(os.path.join(dirn, newdir))
+  except OSError:
+    pass
+  out_file_name = os.path.join(dirn, newdir, base)
+
+  cmd = [ebookconvert, in_file_name, out_file_name,
+    &#0039;&#0045;&#0045;preserve&#0045;cover&#0045;aspect&#0045;ratio&#0039;,
+    &#0039;&#0045;&#0045;change&#0045;justification&#0039;, &#0039;left&#0039;,
+    &#0039;&#0045;&#0045;margin&#0045;bottom&#0039;, &#0039;4&#0039;,
+    &#0039;&#0045;&#0045;margin&#0045;left&#0039;, &#0039;4&#0039;,
+    &#0039;&#0045;&#0045;margin&#0045;right&#0039;, &#0039;4&#0039;,
+    &#0039;&#0045;&#0045;margin&#0045;top&#0039;, &#0039;4&#0039;,
+    &#0039;&#0045;&#0045;remove&#0045;paragraph&#0045;spacing&#0039;]
+  print &#0039; &#0039;.join(cmd), &#0039;&#0092;n&#0039;
+  sproc = subprocess.Popen(cmd)
+  sproc.wait()
+
+if __name__ == &#0039;__main__&#0039;:
+  for arg in sys.argv[1:]:
+    for filen in glob.glob(arg):
+      fixfile(filen)
+  exit(0)</pre>
+

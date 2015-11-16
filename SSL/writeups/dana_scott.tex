@@ -1,0 +1,242 @@
+\documentclass[10pt]{article}
+\title{The Dana Scott Recurrence}
+\author{{\sc Hal Canary} \\
+{\small University of Wisconsin--Madison}}
+%\date{March 15, 2004}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\hypersetup{pdfstartview=FitH,pdfauthor={},
+pdftitle={Newton's Recurrence}}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+
+\setlength{\textwidth}{6.3in}
+\setlength{\textheight}{8.7in}
+\setlength{\topmargin}{0pt}
+\setlength{\headsep}{0pt}
+\setlength{\headheight}{0pt}
+\setlength{\oddsidemargin}{0pt}
+\setlength{\evensidemargin}{0pt}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\onto}{\rightarrow}
+
+\begin{document}
+
+\maketitle
+
+
+%\begin{abstract}
+%\end{abstract}
+
+\section{Introduction}
+
+In an article on the Somos Sequence \cite{gale91}, David Gale mentions a
+recurrence discovered by Dana Scott,
+\begin{equation}\label{scott}
+a_n a_{n-4} = a_{n-1} a_{n-3} + a_{n-2} \qquad a_1=a_2=a_3=a_4=1,
+\end{equation}
+and mentions that there exists a number theoretical proof that it
+always gives integers. We will present an alternative proof.
+
+Emilie Hogan found a family of similar recurrences indexed by the
+parameter $k$ ($k$ is odd):
+\begin{equation}\label{hogan}
+a_n a_{n-k} = a_{n-1} a_{n-(k-1)} + a_{n-(k-1)/2} + a_{n-(k+1)/2}.
+\end{equation}
+Hopefully, (\ref{hogan}) can be approached just like we will approach
+(\ref{scott}).
+
+\section{Linearizing}
+
+Equation (\ref{scott}) generates the sequence $\{1,$ $1,$ $1,$ $1,$
+$2,$ $3,$ $5, 13,$ $22,$ $41,$ $111,$ $191,$ $361,$ $982,\ldots\}$.
+Using a computer, we found that this sequence grows like
+$\textrm{O}(C^n)$.  This suggested that the sequence satisfied a
+linear recurrence, which we proceeded to find:
+\begin{equation}\label{linscott}
+0 = a_n - 10~ a_{n-3} + 10~ a_{n-6} - a_{n-9}.
+\end{equation}
+The characteristic equation of (\ref{linscott}) is
+\[
+0 = x^9 - 10~ x^6 + 10~ x^3 - 1.
+\]
+Finding the explicit formula for a linear recurrance is fairly simple,
+but time-consuming.  It is better to ask a computer to do it.  The
+following code will produce the explicit formula.
+\begin{quote}
+\begin{verbatim}
+#begin Maple code
+# Manually enter the characteristic polynomial.
+chari := (x) -> x^9 - 10*x^6 + 10*x^3 - 1:
+# order of characteristic polynomial.
+N:=9:
+# quadratic recurrance.
+quadrat := proc(n) option remember;
+  if n<3 then 1
+  else return((quadrat(n-1)*quadrat(n-3)+
+    quadrat(n-2))/quadrat(n-4));
+  fi;
+end:
+
+# Solve for roots of characteristic polynomial.
+routes := solve(chari(x),x) :
+# Get initial conditions from quadratic.
+initial := seq(quadrat(n),n=0..N-1):
+# Solve for coefficients.
+assign(solve({seq( add( coffs[i]*routes[i]^(j-1) ,i=1..N)
+  = initial[j],j=1..N)}, {seq(coffs[i],i=1..N)})):
+# Explicit function.
+explicit := (n) ->
+  simplify(add( coffs[i]*routes[i]^n ,i=1..N)):
+# Print out explicit formula.
+interface(prettyprint=false):
+explicit(n);
+#verify that explicit satisfies the quadratic recurrence.
+evalb(simplify(explicit(n)*explicit(n-4)) =
+ simplify(explicit(n-1)*explicit(n-3)+explicit(n-2)));
+#end Maple code
+\end{verbatim}
+\end{quote}
+If the last line of that code returns \emph{true} (which it doesn't),
+then we have just proved that the Dana Scott Recurrence is equivilant
+to the recurrence given in (\ref{linscott}), and since a linear
+recurrance that starts with integers always gives integer, the Dana
+Scott Recurrence wil also always give integers.
+
+\section{A Better Proof}
+
+Define the sequence $\{a\}$ recursivly:
+\begin{equation}\label{linscott2}
+	a_n = 10~ a_{n-3} - 10~ a_{n-6} + a_{n-9}.
+\end{equation}
+With the intial conditions 
+$(a_1{}\ldots{}a_9 ) = (1, 1, 1, 1, 2, 3, 5, 13, 22)$.
+
+We wish to prove by induction that $\{a\}$ is the same as the Dana
+Scott recurrance, that it satisifes 
+\[     	a_n a_{n-4} - a_{n-1} a_{n-3} - a_{n-2} = 0.	\]
+
+For convienence, let 
+\[	\phi(n) := a_n a_{n-4} - a_{n-1} a_{n-3} - a_{n-2}	\]
+Assume that $\phi(k)=0$ for $k < n$.  Show that $\phi(n) = 0$.
+This gives:
+\begin{eqnarray*}
+	\phi(n-1) & =& a_{n-1} a_{n-5} - a_{n-2} a_{n-4} - a_{n-3} = 0 \\
+	\phi(n-2) & =& a_{n-2} a_{n-6} - a_{n-3} a_{n-5} - a_{n-4} = 0\\
+	\phi(n-3) & =& a_{n-3} a_{n-7} - a_{n-4} a_{n-6} - a_{n-5} = 0\\
+	\phi(n-4) & =& a_{n-4} a_{n-8} - a_{n-5} a_{n-7} - a_{n-6} = 0\\
+	\phi(n-5) & =& a_{n-5} a_{n-9} - a_{n-6} a_{n-8} - a_{n-7} = 0\\
+	\phi(n-6) & =& a_{n-6} a_{n-10} - a_{n-7} a_{n-9} - a_{n-8} = 0\\
+	\phi(n-7) & =& a_{n-7} a_{n-11} - a_{n-8} a_{n-10} - a_{n-9} = 0\\
+	\phi(n-8) & =& a_{n-8} a_{n-12} - a_{n-9} a_{n-11} - a_{n-10} = 0\\
+	\phi(n-9) & =& a_{n-9} a_{n-13} - a_{n-10} a_{n-12} - a_{n-11} = 0\\
+	\phi(n-10)& =& a_{n-10} a_{n-14} - a_{n-11} a_{n-13} - a_{n-12} = 0\\
+	& \ldots &
+\end{eqnarray*}
+
+
+Now, compute $\phi(n)$.
+\[	\phi(n) = a_{n}  a_{n-4} -  a_{n-1}  a_{n-3} - a_{n-2} \]
+Substitute for $a_{n}$ and $a_{n-1}$ from the definition of $\{a\}$.
+\begin{eqnarray*}
+	a_{n}   &=& 10  a_{n-3} - 10  a_{n-6} + a_{n-9} \\
+	a_{n-1}	&=& 10  a_{n-4} - 10  a_{n-7} + a_{n-10} 
+\end{eqnarray*}
+\begin{eqnarray*}
+\phi(n) &=&   ( 10  a_{n-3} - 10  a_{n-6} + a_{n-9}  )  a_{n-4}\\
+        && - ( 10  a_{n-4} - 10  a_{n-7} + a_{n-10} )   a_{n-3} \\
+	&& - ( 10  a_{n-5} - 10  a_{n-8} + a_{n-11} ) 
+\end{eqnarray*}
+Simplify:
+\begin{eqnarray*}
+	\phi(n) &=&  10 a_{n - 3} a_{n - 7} - 10 a_{n - 4} a_{n - 6} - 10 a_{n - 5} \\
+		&&+ a_{n - 4} a_{n - 9} - a_{n - 3} a_{n - 10} + 10 a_{n - 8} - a_{n - 11}
+\end{eqnarray*}
+Since $\phi(n-3)=0$, 
+\begin{eqnarray*}
+	\phi(n) &=&  a_{n - 4} a_{n - 9}  - a_{n - 3} a_{n - 10}\\ 
+		&& + 10 a_{n - 8}  - a_{n - 11}
+\end{eqnarray*}
+
+Substitute for $a_{n-3}$ and $a_{n-4}$ from the definition of $\{a\}$.
+\begin{eqnarray*}
+	a_{n-3} &=& 10  a_{n-6} - 10  a_{n-9}  + a_{n-12} \\
+	a_{n-4} &=& 10  a_{n-7} - 10  a_{n-10} + a_{n-13}\end{eqnarray*}
+\begin{eqnarray*}
+	\phi(n) &=& (10  a_{n-7} - 10  a_{n-10} + a_{n-13} )  a_{n - 9} \\
+	        && - (10  a_{n-6} - 10  a_{n-9}  + a_{n-12} ) a_{n - 10} \\
+	        && + 10  a_{n - 8} \\
+	        && - a_{n - 11} ;
+\end{eqnarray*}
+Simplify:
+\begin{eqnarray*}
+	\phi(n) &=& - 10 a_{n - 10}  a_{n - 6}  + 10 a_{n - 9}  a_{n -
+		7}  + 10 a_{n - 8} \\ 
+		&&  + a_{n - 9}  a_{n - 13} - a_{n - 10}  a_{n - 12} -
+		a_{n - 11} 
+\end{eqnarray*}
+\begin{eqnarray*}
+	\phi(n) &=& - 10  ( + a_{n - 10}  a_{n - 6} - a_{n - 9}  a_{n - 7} 
+		  - a_{n - 8} )\\
+		&& + a_{n - 9}  a_{n - 13} - a_{n - 10}  a_{n - 12} - a_{n - 11}
+\end{eqnarray*}
+Since $\phi(n-6) = \phi(n-9) = 0$
+\[	a_{n-6} a_{n-10} - a_{n-7} a_{n-9} - a_{n-8} = 0 \]
+\[	a_{n-9} a_{n-13} - a_{n-10} a_{n-12} - a_{n-11} = 0 \]
+\[	\phi(n) = 0 \]
+QED.
+
+\section{Aside: Laurent Polynomials}
+
+If we choose the first four terms of (\ref{scott}) to be $(w,x,y,z)$
+instead of $(1,1,1,1)$, then the next five terms are
+\[a_5=\frac{z x + y}{w}\]
+\[a_6=\frac{yzx+y^2+zw}{wx}\]
+\[a_7=\frac{yz^2x+zy^2+z^2w+zx^2+xy}{wxy}\]
+\[a_8=\frac{yz^3x^2+2y^2z^2x+zy^3+z^3wx+z^2wy+z^2x^3+2zx^2y+xy^2+wy^2zx+wy^3+w^2yz}
+{w^2xyz}\]
+\[a_9=\frac{
+\begin{array}{c}
+yz^2x^3+x^2y^2z^3+x^2z^2w+2x^2zy^2+x^2zw^2+2xwyz^3+2xz^2y^3\\
++xz^2w^2y+xzwy+xzwy^3+xy^3+w^2z^3+2z^2y^2w+z^2w^3+2zw^2y^2+zy^4+wy^4
+\end{array}
+}{x^2yzw^2}\]
+These are all Laurent polynomials, so if we choose the first nine
+terms of $\{a\}$ to be $(w,x,y,z,a_5,a_6,a_7,a_8,a_9)$
+instead of $(1, 1, 1, 1, 2, 3, 5, 13, 22)$, then by the
+linearity of (\ref{linscott2}), all subsequent terms are Laurent
+polynomials. 
+
+\begin{quote}
+\begin{verbatim}
+#begin Maple code
+a := proc(n)
+  if n = 1 then w
+  elif n = 2 then x
+  elif n = 3 then y
+  elif n = 4 then z
+  else simplify((a(n - 1)*a(n - 3) + a(n - 2))/a(n - 4))
+  end if
+end proc:
+interface(prettyprint=false);
+seq(a(n),n=1..9);
+#end Maple code
+\end{verbatim}
+\end{quote}
+
+
+\begin{thebibliography}{9}
+
+\bibitem{gale91} 
+{\sc David Gale.}  ``The Strange and Surprising Saga of the Somos
+Sequences.''  \emph{Mathematical Intelligencer} \textbf{13} 1 (1991)
+40-42.
+
+\end{thebibliography}
+
+\end{document}
+
+

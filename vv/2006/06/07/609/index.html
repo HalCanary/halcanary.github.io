@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Voder-Vocoder: fun with POSIX bc...</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" id="stylesheet" href="/styles/scrapple-from-the-apple.css">
+  </head>
+  <!-- Copyright 2006-2015 Hal Canary. ALL RIGHTS RESERVED. -->
+
+  <body style="padding:0;margin:0;">
+    <div class="column" style="max-width:640px;margin:0 auto;">
+
+      <h1 class="blogtitle">fun with POSIX bc...</h1>
+
+      <div class="byline">By Hal Canary,
+        2006-06-07 17:53:53
+        (<a href="http://halcanary.org/vv/2006/06/07/609/">link</a>)
+    <br><a href="../../../../category/computers-code/" class="categorylink">#computers-code</a>
+        </div>
+      <!-- SRC= 2006-06-07-609 -->
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <div class="content">
+
+<!-- BEGIN CONTENT -->
+<p><a href="http://en.wikipedia.org/wiki/POSIX">POSIX</a> defines a command-line calculator language/interpretor known as<br />
+<em>bc</em>.  <a href="http://en.wikipedia.org/wiki/Bc_programming_language">bc</a> is convientent but fairly light on the included math<br />
+functions.  I wanted a power function that would take floating point<br />
+numbers as exponents.  bc's basic math library provides the following<br />
+functions: sqrt(), sin(), cos(), atan(), ln(), and exp()---abriviated<br />
+to sqrt(), s(), c(), a(), l(), and e().</p>
+<p>Since</p>
+<pre>a^b = e^( b * ln(a) ),</pre>
+<p>I can define a new fucntion---</p>
+<pre>define pow(a,b) { return e(b*l(a)); } </pre>
+<p>---for my power function.  While I was at it, I went ahead and created<br />
+defininitions for the most common trig functions:</p>
+<pre>
+#DTPD#
+define ln(a) { return l(a); }
+define exp(a) { return e(a); }
+define pow(a,b) { return e(b*l(a)); }
+define sqrtt(a) { return e(0.5*l(a)); }
+define log(a) { return l(a)/l(10); }
+define sin(a) { return s(a); }
+define cos(a) { return c(a); }
+define tan(a) { return s(a)/c(a); }
+define sec(a) { return 1/c(a); }
+define csc(a) { return 1/s(a); }
+define cot(a) { return c(a)/s(a); }
+define asin(x) { return a(x/sqrt(1-(x^2))); }
+define acos(x) { return a(sqrt(1-(x^2))/x); }
+define atan(x) { return a(x); }
+define asec(x) { return a(sqrt((x^2)-1)); }
+define acsc(x) { return a(1/sqrt((x^2)-1)); }
+define acot(x) { return a(1/x);}
+define sinh(x) { return (e(x)-e(-x))/2;}
+define cosh(x) { return (e(x)+e(-x))/2;}
+define tanh(x) { return (e(2*x) - 1)/(e(2*x) + 1); }
+define asinh(x) { return l(x+sqrt((x^2)+1)); }
+define acosh(x) { return l(x+sqrt((x^2)-1)); }
+define atanh(x) { return 0.5*l((1+x)/(1-x)); }
+pi = 4*a(1);
+</pre>
+<p>Of course, now that I read more about it I find that I could have just looked up the answers.</p>
+
+
+<!-- END CONTENT -->
+
+      </div>
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <p>(<a href="../../../../archives/">back</a>)</p>
+    </div>
+  </body>
+</html>

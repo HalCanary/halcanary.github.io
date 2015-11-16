@@ -1,0 +1,91 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <meta http-equiv="Content-type" content='text/html; charset="us-ascii"'>
+    <title>Rotor Router Model</title>
+    <style type="text/css"><!--
+    body { margin: 0; padding: 0; }
+    h1 { margin: 0; padding: 0 6px; }
+    h2 { margin: 2px 12px; padding: 0; color:#008;border-bottom:1px #008 solid}
+    h3 { margin: 10px 16px; padding: 0; }
+    p.appletcontainer { margin: 0; padding: 0; text-align:center;}
+    p { padding: 0 18px; }
+    p.reference{ padding-left: 2em;
+      text-indent: -2em; }
+    li {margin-bottom: 1ex;}
+    p.smaller {font-size : 80%;}
+    p.menu {margin:0 12px ;padding:0;text-align:center;
+    font-size:80%;background-color: #f6f6f6; color:#000000;}
+    div.page { min-height:130ex; }
+    applet { border:1px solid black; }
+    -->
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <p class="menu">Contents:
+	<a href="#00">Intro</a> |
+	<a href="#01">The Applet</a> |
+	<a href="#03">The Algorithm</a> |
+	<a href="#04">The Graphs</a> |
+	<a href="#05">Instructions</a> |
+	<a href="#references">References</a> |
+	<a href="#06">Errata</a>
+	<a name="00"></a></p>
+      <h1>Rotor Router Model</h1>
+      <h2>Introduction</h2>
+
+      <p>Welcome to this page. We'd like to show off a mathematical
+	model (the <em>Rotor Router Model</em>) using a java applet.
+      </p>
+
+      <p>
+	<img src="Images/bug.png" style="float:left" width="200"
+	     height="104" alt="[a bug]">
+	The model involves a bug (represented by an empty black and
+	while square) moving along a graph (represented by boxes
+	linked by arrows).<br style="clear:both"></p>
+
+      <p>
+	<img src="Images/rotor-states.png" style="float:left"
+	     width="200" height="104" alt="[a rotor]">
+	Each box on the graph contains a rotor that can be in different
+	states. These states are represented by colors and arrows.
+	When a bug visits a box, that box's state will change.
+	<br style="clear:both"></p>
+
+      <p>To get started, <a href="#01">jump to the Applet</a> and
+	click the <b>step</b> button repeatedly and watch how the bug
+	moves around the graph.</p>
+
+      <p>If you are confused, try our <a href="./help/">walkthrough</a>.</p>
+
+      <p style="text-align: center;">
+	If your browser window is too small, try 
+	<a href="./index-800x600.html#01">this</a>. 
+      </p>
+
+      <p style="text-align: center;">
+	<a href="./index-800x600.html#01">small</a> | 
+	<a href="./#01">medium</a> |
+	<a href="./index-1280x960.html#01">large</a>. 
+	<br>No Double Buffer: 
+	<a href="./ndb-800x600.html#01">small</a> | 
+	<a href="./ndb.html#01">medium</a> |
+	<a href="./ndb-1280x960.html#01">large</a>. 
+      </p>
+
+    </div>
+
+    <div class="page">
+      <p class="menu">Contents:
+	<a href="#00">Intro</a> |
+	<a href="#01">The Applet</a> |
+	<a href="#03">The Algorithm</a> |
+	<a href="#04">The Graphs</a> |
+	<a href="#05">Instructions</a> |
+	<a href="#references">References</a> |
+	<a href="#06">Errata</a>
+	<a name="01"></a></p>
+      <h2>The Rotor Router Applet</h2>
+      <p class="appletcontainer">

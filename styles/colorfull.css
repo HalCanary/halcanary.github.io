@@ -1,0 +1,93 @@
+@import url(margins1.css);
+body {
+    color : #000000;
+    background-color : #DD9944;
+    font-family : serif ;
+} 
+
+.rightcol {
+    color : #DD9944;
+    background-color : #005500;
+
+}
+.leftcol {
+    background-color : #335577;
+    color : #DD9944;
+}
+h1 {
+    text-align : center; 
+    font-size : 300%; 
+    background : #AA4444;
+    color : #DD9944;
+    border : solid 0px
+    border-color : black;
+    font-family : sans-serif ;
+    border-bottom : solid 0px ;
+}
+h2 {
+    color : #333333;
+    padding-left : 0.5cm; 
+    padding-right : 0.5cm; 
+    font-family : sans-serif ;
+} 
+h3 {
+    font-family : sans-serif ;
+} 
+a:link {
+    color : #ffffff; 
+    background : transparent; 
+} 
+a:visited {
+    color : #ffffff; 
+    background :  transparent; 
+} 
+a:active {
+    color : #ffffff; 
+    background :  transparent; 
+} 
+a:hover {
+    color :  #000000 ; 
+    background : #ffffff; 
+} 
+hr {
+    color : #333333;
+    background : #333333;
+    border : solid 0px ;
+    border-color : black;
+    height : 10px;
+} 
+
+pre { 
+    color : #000000;
+    background : #dd9944;
+}
+
+table, table.b {	border-spacing : 10px; 
+	background : #333333;
+	color : #ffffff; }
+
+table th {
+	background : #efefef;
+	color : #000000;
+}
+table tr {
+    color : #000000;
+    background-color : #DD9944;
+}
+
+table.p, table.code {
+	background : #333333;
+	color : #ffffff; 
+}
+table.p th ,table.code th {
+    background : #AA4444;
+    color : #DD9944;
+}
+table.p td, table.code td {
+    color : #DD9944;
+    background-color : #005500;
+}
+
+
+
+

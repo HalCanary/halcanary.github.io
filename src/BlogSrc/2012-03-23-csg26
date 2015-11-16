@@ -1,0 +1,38 @@
+TITLE=generate image files
+COPYRIGHT=Copyright 2012-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2012-03-23 12:00:00
+PERMALINK=http://halcanary.org/vv/2012/03/23/csg26/
+PERMALINKPART=vv/2012/03/23/csg26/
+YEAR=2012
+MONTH=03
+DAY=23
+POSTID=csg26
+MODE=htmldiv
+
+
+
+<pre>#!/usr/bin/python
+
+import Image
+import numpy
+
+X = 1024
+Y = 768
+filename = &#0039;/tmp/x.png&#0039;
+
+ima = numpy.zeros((Y,X,4), dtype=numpy.uint8)
+ima[:,:,3] = 255 # make opaque
+Image.fromarray(ima,mode=&#0039;RGBA&#0039;).save(filename)
+</pre>
+
+For example:
+<pre><span class="comment">#!/usr/bin/env python</span>
+<span class="preproc">import</span><span class="normal"> Image</span>
+<span class="preproc">import</span><span class="normal"> numpy</span>
+<span class="normal">N</span><span class="symbol">,</span><span class="normal"> K </span><span class="symbol">=</span><span class="normal"> </span><span class="symbol">(</span><span class="number">16</span><span class="symbol">,</span><span class="number">16</span><span class="symbol">),</span><span class="normal"> </span><span class="symbol">(</span><span class="number">256</span><span class="symbol">,</span><span class="normal"> </span><span class="number">256</span><span class="symbol">)</span>
+<span class="normal">fn </span><span class="symbol">=</span><span class="normal"> </span><span class="string">'random_pixels.png'</span>
+<span class="normal">im </span><span class="symbol">=</span><span class="normal"> numpy</span><span class="symbol">.</span><span class="normal">random</span><span class="symbol">.</span><span class="function">random_integers</span><span class="symbol">(</span>
+<span class="normal">    </span><span class="number">0</span><span class="symbol">,</span><span class="number">255</span><span class="symbol">,(</span><span class="normal">N</span><span class="symbol">[</span><span class="number">0</span><span class="symbol">],</span><span class="normal">N</span><span class="symbol">[</span><span class="number">1</span><span class="symbol">],</span><span class="number">3</span><span class="symbol">)).</span><span class="function">astype</span><span class="symbol">(</span><span class="string">'uint8'</span><span class="symbol">)</span>
+<span class="normal">Image</span><span class="symbol">.</span><span class="function">fromarray</span><span class="symbol">(</span><span class="normal">im</span><span class="symbol">,</span><span class="normal">mode</span><span class="symbol">=</span><span class="string">'RGB'</span><span class="symbol">).</span><span class="function">resize</span><span class="symbol">(</span><span class="normal">K</span><span class="symbol">).</span><span class="function">save</span><span class="symbol">(</span><span class="normal">fn</span><span class="symbol">)</span>
+<span class="keyword">print</span><span class="normal"> </span><span class="string">'Wrote to'</span><span class="symbol">,</span><span class="normal"> fn</span></pre>
+

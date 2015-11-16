@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Voder-Vocoder: reset-ramdisk</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" id="stylesheet" href="/styles/scrapple-from-the-apple.css">
+  </head>
+  <!-- Copyright 2004-2015 Hal Canary. ALL RIGHTS RESERVED. -->
+
+  <body style="padding:0;margin:0;">
+    <div class="column" style="max-width:640px;margin:0 auto;">
+
+      <h1 class="blogtitle">reset-ramdisk</h1>
+
+      <div class="byline">By Hal Canary,
+        2004-03-28 00:50:48
+        (<a href="http://halcanary.org/vv/2004/03/28/212/">link</a>)
+    <br><a href="../../../../category/computers-code/" class="categorylink">#computers-code</a>
+        </div>
+      <!-- SRC= 2004-03-28-212 -->
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <div class="content">
+
+<!-- BEGIN CONTENT -->
+<p>The issue: as far as I know, no editor shreds old versions of files upon writing new versions.  How do you keep data off of a hard drive? Use the ramdisk.</p>
+<pre>
+#!/bin/sh
+## /usr/local/bin/reset-ramdisk ##
+if `df | grep -q ramdisk` ;then
+    umount /dev/ramdisk
+fi
+shred -n 2 /dev/ramdisk
+/sbin/mke2fs -q /dev/ramdisk
+mkdir -p /mnt/ramdisk
+mount /dev/ramdisk /mnt/ramdisk
+chmod 777 /mnt/ramdisk
+</pre>
+<p>Run that code before and after you are done with your work.<br />
+(Assumes a single-user system.) Don't forget to turn off swap!</p>
+<pre>$ sudo /sbin/swapoff -a</pre>
+
+
+<!-- END CONTENT -->
+
+      </div>
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <p>(<a href="../../../../archives/">back</a>)</p>
+    </div>
+  </body>
+</html>

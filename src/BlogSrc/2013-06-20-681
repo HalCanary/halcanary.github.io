@@ -1,0 +1,69 @@
+TITLE=Color in shell scripts (not prompts)
+COPYRIGHT=Copyright 2013-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2013-06-20 18:53:31
+PERMALINK=http://halcanary.org/vv/2013/06/20/681/
+PERMALINKPART=vv/2013/06/20/681/
+YEAR=2013
+MONTH=06
+DAY=20
+POSTID=681
+SUMMARY=Some shell-script macros for adding color to the output of your programs.
+CATEGORIES=computers-code;shell-scripts;
+MODE=markdown
+
+&nbsp;
+
+    #!/bin/sh
+
+    # ANSI Color -- use these variables to easily have
+    # different color and format output. Make sure to
+    # output the reset sequence after colors (f =
+    # foreground, b = background), and use the 'off'
+    # feature for anything you turn on.
+    #
+    # This function is: Copyright 2004 Dave Taylor
+    # from book _Wicked_Cool_Shell_Scripts_,
+    # ISBN 1593270127.
+    # http://www.intuitive.com/wicked/showscript.cgi?011-colors.sh
+    initializeANSI() {
+        esc=$(printf '\033')
+
+        blackf="${esc}[30m"; redf="${esc}[31m";
+        yellowf="${esc}[33m" bluef="${esc}[34m";
+        cyanf="${esc}[36m"; whitef="${esc}[37m";
+        greenf="${esc}[32m"; purplef="${esc}[35m";
+
+        blackb="${esc}[40m"; redb="${esc}[41m";
+        yellowb="${esc}[43m" blueb="${esc}[44m";
+        cyanb="${esc}[46m"; whiteb="${esc}[47m";
+        greenb="${esc}[42m"; purpleb="${esc}[45m";
+
+        boldon="${esc}[1m"; boldoff="${esc}[22m";
+        italicson="${esc}[3m"; italicsoff="${esc}[23m";
+        ulon="${esc}[4m"; uloff="${esc}[24m";
+        invon="${esc}[7m"; invoff="${esc}[27m";
+
+        reset="${esc}[0m";
+    }
+    ##
+    ## The rest of the program is:
+    ## Copyright 2007 Hal Canary
+    ## Dedicated to the public domain.
+    ##
+    initializeANSI
+    COLORS="red green yellow blue purple cyan white black"
+    for B in $COLORS; do
+        for F in $COLORS; do
+            eval FC=\${${F}f}
+            eval BC=\${${B}b}
+            echo -en "${FC}${BC}${F}f ${B}b${reset} \t"
+            echo -en "${boldon}${FC}${BC}${F}f ${B}b bold${reset} \t"
+            echo -e "${FC}${BC}${italicson}${F}f ${B}b italics${reset}"
+            echo -en "${ulon}${FC}${BC}${F}f ${B}b ul${reset} \t"
+            echo -en "${boldon}${ulon}${FC}${BC}${F}f ${B}b bol ul${reset}\t"
+            echo -en "${boldon}${ulon}${italicson}${FC}${BC}"
+            echo -e "${F}f ${B}b bold ul italics${reset}"
+        done
+        echo ""
+    done
+    exit 0

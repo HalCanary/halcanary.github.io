@@ -1,0 +1,17 @@
+TITLE=From Today's Algebra Class
+COPYRIGHT=Copyright 2003-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2003-03-11 12:18:01
+PERMALINK=http://halcanary.org/vv/2003/03/11/37/
+PERMALINKPART=vv/2003/03/11/37/
+YEAR=2003
+MONTH=03
+DAY=11
+POSTID=37
+CATEGORIES=mathematics;
+MODE=htmldiv
+
+<p>You can define a natural isomorphism from  Hom<sub>R</sub>(R<sup>(&#923;<sub>1</sub>)</sup>,  R<sup>(&#923;<sub>2</sub>)</sup>)   to (R<sup>(&#923;<sub>2</sub>)</sup>)<sup>&#923;<sub>1</sub></sup>.  (Where Hom<sub>R</sub>(R<sup>(&#923;<sub>1</sub>)</sup>,  R<sup>(&#923;<sub>2</sub>)</sup>) is the R-linear homomorphisms from R<sup>(&#923;<sub>1</sub>)</sup> to R<sup>(&#923;<sub>2</sub>)</sup>.)</p>
+<p> Hom<sub>R</sub>(R<sup>(&#923;<sub>1</sub>)</sup>, R<sup>(&#923;<sub>2</sub>)</sup>) ---&gt;  R<sup>(&#923;<sub>2</sub>) , &#923;<sub>1</sub></sup></p>
+<p>If <em>f</em> is an element of  Hom<sub>R</sub>(R<sup>(&#923;<sub>1</sub>)</sup>, R<sup>(&#923;<sub>2</sub>)</sup>) then that map sends <em>f</em> to [<em>f</em>],  a (&#923;<sub>2</sub>) , &#923;<sub>1</sub> matrix.</p>
+<p>Isn't that the most beautiful thing you've ever seen?</p>
+

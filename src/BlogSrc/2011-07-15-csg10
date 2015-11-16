@@ -1,0 +1,31 @@
+TITLE=stopwatch
+COPYRIGHT=Copyright 2011-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2011-07-15 12:00:00
+PERMALINK=http://halcanary.org/vv/2011/07/15/csg10/
+PERMALINKPART=vv/2011/07/15/csg10/
+YEAR=2011
+MONTH=07
+DAY=15
+POSTID=csg10
+MODE=markdown
+
+
+    #!/usr/bin/python
+    """Stopwatch program.
+    
+    Hit 'Enter' to save a time.
+    
+    Hit 'Ctrl-c' to stop the script
+    """
+    from datetime import datetime, date, time
+    import time, sys
+    start = datetime.now()
+    print __doc__
+    try:
+    	while True:
+    		time.sleep(0.071)
+    		sys.stdout.write('\b'*22)
+    		sys.stdout.write(str(datetime.now() - start))
+    		sys.stdout.flush()
+    except KeyboardInterrupt:
+    	sys.stdout.write('\n\n')

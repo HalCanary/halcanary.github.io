@@ -1,0 +1,15 @@
+TITLE=better...
+COPYRIGHT=Copyright 2004-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2004-12-04 13:28:00
+PERMALINK=http://halcanary.org/vv/2004/12/04/368/
+PERMALINKPART=vv/2004/12/04/368/
+YEAR=2004
+MONTH=12
+DAY=04
+POSTID=368
+CATEGORIES=computers-code;
+MODE=htmldiv
+
+<p>With the newer releases of linux distributions, things have become extraordinarily user-friendly.  This is the only bug I've discovered so far  <a href="https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=141043"> and it's a minor problem with an easy work-around.</a></p>
+<p>Of course, to do things RIGHT, you do need to know what you are doing. I still want to be able to partition my own drives, write my own firewall scripts,  and change a lot of the other configurations; and I can still do all of those things.</p>
+

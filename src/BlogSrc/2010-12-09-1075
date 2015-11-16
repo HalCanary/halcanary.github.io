@@ -1,0 +1,14 @@
+TITLE=REAL10
+COPYRIGHT=Copyright 2010-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2010-12-09 00:20:44
+PERMALINK=http://halcanary.org/vv/2010/12/09/1075/
+PERMALINKPART=vv/2010/12/09/1075/
+YEAR=2010
+MONTH=12
+DAY=09
+POSTID=1075
+CATEGORIES=computer-science;computers-code;mathematics;
+MODE=htmldiv
+
+<p>&ldquo;Real&rdquo; is not an acceptible synonym for &ldquo;80&#0045;bit floating&#0045;point number.&rdquo; Real numbers aren&#0039;t even countable, much less in a bijection to a set of size 2^80.</p>
+

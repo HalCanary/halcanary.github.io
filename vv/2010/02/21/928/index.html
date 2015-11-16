@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Voder-Vocoder: private static String itoa(int i)</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" id="stylesheet" href="/styles/scrapple-from-the-apple.css">
+  </head>
+  <!-- Copyright 2010-2015 Hal Canary. ALL RIGHTS RESERVED. -->
+
+  <body style="padding:0;margin:0;">
+    <div class="column" style="max-width:640px;margin:0 auto;">
+
+      <h1 class="blogtitle">private static String itoa(int i)</h1>
+
+      <div class="byline">By Hal Canary,
+        2010-02-21 11:19:27
+        (<a href="http://halcanary.org/vv/2010/02/21/928/">link</a>)
+    <br><a href="../../../../category/computers-code/" class="categorylink">#computers-code</a>
+        </div>
+      <!-- SRC= 2010-02-21-928 -->
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <div class="content">
+
+<!-- BEGIN CONTENT -->
+<p>I like Java's verbosity; it is consistant and clear.  But sometimes you want succinct things.</p>
+<pre>/** &quot;Returns a String object representing the specified integer.&quot; */
+private static String itoa(int i){
+	return Integer.toString(i);
+}
+/** &quot;Returns a String object representing this Integer&#0039;s value.&quot; */
+private static String itoa(Integer i){
+	return i.toString();
+}</pre>
+<hr />
+<p>Also, I realized I had been using <code>assert</code> statements without <code>-enableassertions</code> for the last month, which did me very little good.  A good habit, I suppose.</p>
+<hr />
+<p>ALSO:</p>
+<pre>private static void printl(String s) {
+	System.out.println(s);
+}
+private static void error(String s) {
+	System.err.println(s);
+}</pre>
+
+
+<!-- END CONTENT -->
+
+      </div>
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <p>(<a href="../../../../archives/">back</a>)</p>
+    </div>
+  </body>
+</html>

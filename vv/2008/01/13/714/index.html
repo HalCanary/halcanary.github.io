@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Voder-Vocoder: fcp (FTP copy)</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" id="stylesheet" href="/styles/scrapple-from-the-apple.css">
+  </head>
+  <!-- Copyright 2008-2015 Hal Canary. ALL RIGHTS RESERVED. -->
+
+  <body style="padding:0;margin:0;">
+    <div class="column" style="max-width:640px;margin:0 auto;">
+
+      <h1 class="blogtitle">fcp (FTP copy)</h1>
+
+      <p class="byline">A ftp client that uses rcp/scp syntax</p>
+
+      <div class="byline">By Hal Canary,
+        2008-01-13 00:05:28
+        (<a href="http://halcanary.org/vv/2008/01/13/714/">link</a>)
+    <br><a href="../../../../category/computers-code/" class="categorylink">#computers-code</a>
+        </div>
+      <!-- SRC= 2008-01-13-714 -->
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <div class="content">
+
+<!-- BEGIN CONTENT -->
+<p>My XO-1  has gotten me interested in hacking in python again, since that is the XO's primary programming environment.</p>
+<p>I quickly hacked out an ftp script in python since the default install lacked an ftp client.  "My next project will be to finally write version 1.0 of my fcp (FTP copy) program --- a ftp client that uses rcp/scp syntax.</p>
+<p>Here's the first script:</p>
+<pre>#!/usr/bin/env python2.5
+import ftplib
+import os
+import getpass
+host=&quot;hostname&quot;
+user=&quot;hal&quot;
+pas=getpass.getpass(user+&quot;@&quot;+host+&quot;'s password: &quot;)
+# local file with path
+localfile="ftpcp"
+# directory  on sever
+dir="/www/pub"
+# filrnaame on server
+filename=&quot;ftpcp.txt&quot;
+# login to FTP
+f=ftplib.FTP(host)
+f.login(user, pas)
+f.set_pasv(True)
+f.cwd(dir)
+f.storbinary(&quot;STOR &quot; + filename, open(localfile, 'rb'))
+f.quit()</pre>
+<p>Next I've got to write some very savy code that can parse complex command-line options.</p>
+<p>Then I've got to learn how to do everything else in python.</p>
+<hr />
+<p>Update:  a function!</p>
+<pre>import ftplib
+import os
+import getpass
+def ftpputfiles(host, direct, *files, **kwds):
+    'user defaults to $USERNAME if blank'
+    # does little error checking.  this is bad!
+    user, password = ('', '')
+    if kwds.has_key('user'):
+        user = kwds['user']
+    if user == '':
+        user = os.environ['USERNAME']
+
+    if kwds.has_key('password'):
+        password = kwds['password']
+    if password == '':
+        querystring = '%s@%s\'s password: ' % (user,host)
+        password = getpass.getpass(querystring)
+
+    f = ftplib.FTP(host)
+    f.login(user, password)
+    f.set_pasv(True)
+    f.cwd(direct)
+    for localfile in files :
+        filename = os.path.basename(localfile)
+        fl = open(localfile, 'rb')
+        f.storbinary('STOR %s' % filename, fl)
+        fl.close()
+    f.quit()</pre>
+
+
+<!-- END CONTENT -->
+
+      </div>
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <p>(<a href="../../../../archives/">back</a>)</p>
+    </div>
+  </body>
+</html>

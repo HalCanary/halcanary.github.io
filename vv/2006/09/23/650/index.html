@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Voder-Vocoder: Apolonian Circle Inversion</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" id="stylesheet" href="/styles/scrapple-from-the-apple.css">
+  </head>
+  <!-- Copyright 2006-2015 Hal Canary. ALL RIGHTS RESERVED. -->
+
+  <body style="padding:0;margin:0;">
+    <div class="column" style="max-width:640px;margin:0 auto;">
+
+      <h1 class="blogtitle">Apolonian Circle Inversion</h1>
+
+      <div class="byline">By Hal Canary,
+        2006-09-23 00:56:33
+        (<a href="http://halcanary.org/vv/2006/09/23/650/">link</a>)
+    <br><a href="../../../../category/mathematics/" class="categorylink">#mathematics</a>
+        </div>
+      <!-- SRC= 2006-09-23-650 -->
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <div class="content">
+
+<!-- BEGIN CONTENT -->
+<p>I was reading some old notes from some math research I did in 2004.  I was looking at the Soddy Equation---</p>
+<pre>(a + b + c + d)^2 = 2(a^2 + b^2 + c^2 + d^2)</pre>
+<p>---which relates the curvatures of four kissing circles (see <a href="http://en.wikipedia.org/wiki/Descartes%27_theorem">Descartes' theorem</a>).  Example of four kissing circles.</p>
+<p><img src="/images/2006-09-23-kissers.png" alt="" /></p>
+<p>Given three kissing circles, one can find two possible fourth circles (it's a quadratic, right?).  This makes a cluster algebra-like thing and graphically makes a <a href="http://en.wikipedia.org/wiki/Apollonian_gasket">Apollonian gasket</a>.</p>
+<p><img src="/images/apollonian_gasket_example.png" alt="" /></p>
+<p>So far no big suprise.  This has all been known since Rene Descartes.</p>
+<p>* * *</p>
+<p>We had an interesting idea.  Draw a Apolonian Gasket.  For each of the infinite number of circles in the gasket, perform a circle inversion of all the OTHER circles with respect to that circle.  Then plot that out.  Repeat the process on all the new circles, ad infinitum.  You now have an infinite number of circles, <strong>topologically dense</strong> in R^2, with the property that <strong>no two circles intersect in anyway but tangentially</strong>.  </p>
+<p>I never came up with a decent way to program a computer to display such a set.</p>
+<p>I called this the <strong>Dionysian Gasket</strong>.</p>
+<p><img src="/images/dionysian-gasket.png" alt="" /></p>
+
+
+<!-- END CONTENT -->
+
+      </div>
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <p>(<a href="../../../../archives/">back</a>)</p>
+    </div>
+  </body>
+</html>

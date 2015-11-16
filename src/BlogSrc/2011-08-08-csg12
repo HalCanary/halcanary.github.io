@@ -1,0 +1,14 @@
+TITLE=make -j
+COPYRIGHT=Copyright 2011-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2011-08-08 12:00:00
+PERMALINK=http://halcanary.org/vv/2011/08/08/csg12/
+PERMALINKPART=vv/2011/08/08/csg12/
+YEAR=2011
+MONTH=08
+DAY=08
+POSTID=csg12
+MODE=htmldiv
+
+<pre>#!/bin/sh
+N_CPUS=`grep processor /proc/cpuinfo | wc &#0045;l`
+exec /usr/bin/make &#0045;j &quot;$N_CPUS&quot; &quot;$@&quot;</pre>

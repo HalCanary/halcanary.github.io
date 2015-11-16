@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Voder-Vocoder: ransdomize</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" id="stylesheet" href="/styles/scrapple-from-the-apple.css">
+  </head>
+  <!-- Copyright 2008-2015 Hal Canary. ALL RIGHTS RESERVED. -->
+
+  <body style="padding:0;margin:0;">
+    <div class="column" style="max-width:640px;margin:0 auto;">
+
+      <h1 class="blogtitle">ransdomize</h1>
+
+      <div class="byline">By Hal Canary,
+        2008-12-21 18:50:35
+        (<a href="http://halcanary.org/vv/2008/12/21/754/">link</a>)
+    <br><a href="../../../../category/computers-code/" class="categorylink">#computers-code</a>
+        </div>
+      <!-- SRC= 2008-12-21-754 -->
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <div class="content">
+
+<!-- BEGIN CONTENT -->
+<pre>#!/usr/bin/env python
+# randomize_list.py
+# Written 2008 Hal Canary
+# Dedicated to the public domain.
+import sys, random
+l=[]
+for line in sys.stdin:
+	l.append(line)
+while l:
+	e = random.choice(l)
+	l.remove(e)
+	sys.stdout.write(e)</pre>
+<p><strong>UPDATE 2009-01-04</strong>:  Just as I suspected, that code is highly inefficient.  Here's a different algorithm which is much faster for large N.</p>
+<pre>#!/usr/bin/env python
+# randomize_list.py
+# Written 2008-2009 Hal Canary
+# Dedicated to the public domain.
+import sys, random
+l=[]
+for line in sys.stdin:
+	l.append(line)
+while l:
+	i = random.randint(0,len(l)-1)
+	sys.stdout.write(l.pop(i))</pre>
+<p>Testing with the <code>time</code> command showed a 74% reduction in CPU use with the better algorithm.</p>
+
+
+<!-- END CONTENT -->
+
+      </div>
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <p>(<a href="../../../../archives/">back</a>)</p>
+    </div>
+  </body>
+</html>

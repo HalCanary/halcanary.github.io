@@ -1,0 +1,20 @@
+TITLE=Book Review: Linux Firewalls
+COPYRIGHT=Copyright 2004-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2004-04-02 15:07:43
+PERMALINK=http://halcanary.org/vv/2004/04/02/220/
+PERMALINKPART=vv/2004/04/02/220/
+YEAR=2004
+MONTH=04
+DAY=02
+POSTID=220
+CATEGORIES=books;
+MODE=htmldiv
+
+<p><a href="http://www.amazon.com/exec/obidos/ASIN/0735710996/ref=nosim/theworldofhalcan"><img src="/images/linux_firewalls.jpg" width="130" height="167" alt="[book cover]" /></a></p>
+<p>I've been using Ziegler's <em>Linux Firewalls (2nd Edition)</em> to teach myself <code>iptables</code> syntax.   I'm not sure that it's the best book for getting started building firewalls and routers, bcause it advocates really compliated rulesets.</p>
+<p><img src="/images/iptables.png" width="270" height="461" alt="[]" /></p>
+<p>There are some basic facts about the way iptables works that aren't explained well.  One of them is the diagram on the left.  Everyone always draws it funny.  The way I draw it, all packes travel downward.</p>
+<p>Compare the <a href="http://www.linux-firewall-tools.com/ftp/firewall/optimized.firewall.2">giant scripts in Ziegler</a> to <a href="http://www.netfilter.org/documentation/HOWTO//packet-filtering-HOWTO-5.html">Rusty's Really Quick Guide To Packet Filtering</a></p>
+<p>When I was done confguring my router, I had a 61 line iptables script that blocked most ports, did SNAT and DNAT.  I didn't feel the need to, for example, DROP packets on the OUTPUT chain.</p>
+<p>Ziegler could use a chapter on troubleshooting with tcpdump and other tools.</p>
+

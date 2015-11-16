@@ -1,0 +1,105 @@
+/*	This file copyright (C) 2005-2006 Hal Canary
+	http://halcanary.org/
+	You are free to use it under the terms of the
+	Creative Commons ShareAlike 1.0 Liscense
+	http://creativecommons.org/licenses/sa/1.0/
+*/
+.deemphasize {
+	color: #555555;
+	background-color: #ffffff;
+}
+.achtung {
+	color: #aa0000;
+	background-color: #ffffff;
+}
+.indent {
+	margin-left: 2em;
+}
+.centered {
+	text-align: center;
+}
+.rightside {
+	text-align: right;
+}
+pre {
+	margin-left: 2em;
+}
+body {
+	color: #000000;
+	background-color: #ffffff;
+	font-family: sans-serif;
+}
+.section {
+	border-top: 2px solid #dddddd;
+}
+.subsection, .blog {
+	border-top: 2px dashed #dddddd;
+}
+table {
+	border-style: solid;
+	border-color: #888;
+	border-width: 1px;
+	border-collapse: collapse;
+}
+table td, table th {
+	border: 1px solid #888;
+	padding: 5px;
+}
+.blog-notes {
+	text-align: center;
+	clear: both;
+}
+.fl {
+	float: left;
+	margin: 0 20px 4px 0;
+}
+.fr {
+	float: right;
+	margin: 0 0 4px 20px;
+}
+ul.flat, ol.flat {
+	margin: 0.5em 0;
+	padding: 0;
+	list-style-type: none;
+	list-style-image: none;
+}
+ul.flat li.first:before, ol.flat li.first:before {
+	content: "";
+}
+ul.flat li:before, ol.flat li:before {
+	content: " | ";
+}
+ul.flat li, ol.flat li {
+	display: inline;
+}
+ul.flat li.first, ol.flat li.first {
+	font-weight: bolder;
+}
+.byline {
+	background: #fff;
+	color: #888;
+}
+img.avatar {
+	float: left;
+	margin-right: 5px;
+	border-style: solid;
+	border-color: #888;
+	border-width: 2px;
+	background: #eee;
+	color: #222;
+}
+div.comment {
+	clear: left;
+	margin-left: 2em;
+	padding-left: 1em;
+	border-left: 2px solid #888;
+}
+.comment-info {
+	font-size: 1.17em;
+	font-weight: bold;
+}
+a.hiddenlink {
+	background: #fff;
+	color: #000;
+	text-decoration: none;
+}

@@ -1,0 +1,177 @@
+#!/usr/bin/perl
+
+##   Copyright 2003 Hal Canary
+##   
+##   I PROVIDE THE PROGRAM "AS IS" WITHOUT WARRANTY OF ANY KIND, 
+##   EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, 
+##   THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A 
+##   PARTICULAR PURPOSE. In particular, this program might not 
+##   do what it purports to do.  The algorithm upon which it is
+##   based may not be mathematically sound.  Or I could have 
+##   made a mistake converting mathematical formulas into code.
+##   
+##   This is free software, and you are welcome to redistribute 
+##   it _ONLY_ under the terms of the GPL.  See 
+##   	http://www.gnu.org/copyleft/gpl.txt
+##   for more information.
+
+# Revision history:
+# *hwc 2003-09-13 - created.
+# *hwc 2003-09-14 - Add better comments.
+# *hwc 2003-09-15 - Multiple arguments.
+
+##
+#  This is a recursivly defined function that returns the number
+#    of perfect matchings on a snake graph.
+#  Argument:  a string describing the snake, such as 'e' or 'erur'
+#    In general, it is a string beginning with 'e' followed by 
+#    any number of 'u's or 'r's.
+##
+sub countsnake {
+    my $snake = shift;
+    # N(e) = 2
+    if ($snake eq 'e') {
+       return 2;
+    } 
+    # N(er) = N(eu) = 3
+    elsif (($snake eq 'er') or ($snake eq 'eu')) {
+       return 3;
+    } 
+    $len = length($snake);
+    if ($len%2 == 1) {
+	# k = (length - 1)/2
+	# N(e(ru)^k) = 2k + 2
+	if ($snake eq 'e'.'ru'x(($len-1)/2)) {
+	    return  $len+1;
+	} 
+	# N(e(ur)^k) = 2k + 2
+	elsif ($snake eq 'e'.'ur'x(($len-1)/2)) {
+	    return  $len+1;
+	} 
+    } else {
+	# N(eu(ru)^k) = 2k + 3
+	if ($snake eq 'eu'.'ru'x(($len/2)-1)   ) {
+	    return  $len+1;
+	}
+	# N(er(ur)^k) = 2k + 3
+	elsif ($snake eq 'er'.'ur'x(($len/2)-1)   ) {
+	    return  $len+1;
+	}
+    }
+    if ($snake =~ m/rr\z/ ) {
+        ## N(xrr) = N(xr) + N(x)				[11]
+	my $xr = $snake;
+	$xr =~ s/rr\z/r/;
+	my $x = $snake;
+	$x =~ s/rr\z//;
+	return &countsnake($xr) + &countsnake($x);
+    } elsif ($snake =~ m/uu\z/ ) {
+        ## N(xuu) = N(xu) + N(x)				[11]
+	my $xu = $snake;
+	$xu =~ s/uu\z/u/;
+	my $x = $snake;
+	$x =~ s/uu\z//;
+	return &countsnake($xu) + &countsnake($x);
+    }
+    ##	N(xr(ru)^k) = (2 * k * N(x)) + N(xr)		[15]
+    my $counter = 0;
+    while($counter < $len/2) {
+	$counter++;
+	$pattern = 'r'.('ru'x$counter);
+	if (substr($snake, -length($pattern)) eq $pattern) {
+	    my $x = substr($snake,0,-length($pattern));
+	    return 2*$counter*&countsnake($x) + &countsnake($x.'r');
+	}
+	$pattern = 'u'.('ur'x$counter);
+	if (substr($snake, -length($pattern)) eq $pattern) {
+	    my $x = substr($snake,0,-length($pattern));
+	    return 2*$counter*&countsnake($x) + &countsnake($x.'u');
+	}
+        ## N(xr(ru)^{k}r) = ((2k+1) * N(x)) + N(xr)	[17]
+	$pattern = 'rr'.('ur'x$counter) ;
+	if (substr($snake, -length($pattern)) eq $pattern) {
+	    my $x = substr($snake,0,-length($pattern));
+	    return (2 * $counter + 1) * &countsnake($x) 
+	        + &countsnake($x.'r');
+	}
+	$pattern = 'uu'.('ru'x$counter) ;
+	if (substr($snake, -length($pattern)) eq $pattern) {
+	    my $x = substr($snake,0,-length($pattern));
+	    return (2 * $counter + 1) * &countsnake($x) 
+	        + &countsnake($x.'u');
+	}
+    }
+    ##  Should never get here unless code buggy or there 
+    ##  is a case I missed.  Or if there is bad input. 
+    return '9999999';
+}    
+    
+##
+#  This function is a frontend to the &countsnake function.
+#  It prints the output nicely.
+##
+sub printsnake {
+    my $snake = shift;
+    print 'N('.$snake.") = ".&countsnake($snake) ." \n";
+}
+
+##
+#  main part of program starts here.
+##
+if ($ARGV[0]) {
+    if ($ARGV[0] eq 'all') {
+	$low = $ARGV[1];
+	$high = $ARGV[2];
+	if ($high eq '') {
+	    print "useage:  $0 all [number] [number]\n\n";
+	    exit 1;
+	}
+	foreach my $length ($low..$high) { 
+	    my $part = 'u'x$length;
+	    my $i=0;
+	    &printsnake("e$part");
+	    while ($part ne 'r'x$length){ 
+		#print "\t * ".substr($part,$i,1)."\n";
+		if (substr($part,$i,1) eq 'u'){
+		    substr($part,$i,1) = 'r';
+		    while ($i > 0) {
+			$i--;
+			substr($part,$i,1) = 'u';
+		    }
+		    &printsnake("e$part");
+		} else {
+		    $i++;
+		}
+	    }
+	}
+    } else {
+	# Undocumented easter egg.  You can pass in many
+	# arguments at once.
+	foreach $x (@ARGV) { &printsnake($x); }
+    }
+} else {
+    print "\n  Usage: \n    perl snake-counting [snake]\n\n";
+    print "  where [snake] is a string beginning with 'e'\n";
+    print "  followed by any number of 'u's or 'r's.\n";
+    print "\n  Example: \n    perl snake-counting eruurr\n\n";
+}
+# Examples of useage.
+# perl snake-counting 'e'
+# perl snake-counting 'er'
+# perl snake-counting 'eu'
+# perl snake-counting 'eru'
+# perl snake-counting 'errr'
+# perl snake-counting 'erururr'
+# perl snake-counting 'erurururrurur'
+# perl snake-counting 'er'
+# perl snake-counting 'err'
+# perl snake-counting 'errr'
+# perl snake-counting 'errrr'
+# perl snake-counting 'errrrr'
+# perl snake-counting 'errrrrr'
+# perl snake-counting 'errrrrrr'
+# perl snake-counting 'errrrrrrr'
+# perl snake-counting 'errrrrrrrr'
+# perl snake-counting 'errrrrrrrrr'
+# perl snake-counting 'errrrrrrrrrr'
+# perl snake-counting 'errrrrrrrrrrr'  

@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Voder-Vocoder: Surface Viewing</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" id="stylesheet" href="/styles/scrapple-from-the-apple.css">
+  </head>
+  <!-- Copyright 2013-2015 Hal Canary. ALL RIGHTS RESERVED. -->
+
+  <body style="padding:0;margin:0;">
+    <div class="column" style="max-width:640px;margin:0 auto;">
+
+      <h1 class="blogtitle">Surface Viewing</h1>
+
+      <div class="byline">By Hal Canary,
+        2013-04-20 20:00:26
+        (<a href="http://halcanary.org/vv/2013/04/20/1305/">link</a>)
+    <br><a href="../../../../category/computer-science/" class="categorylink">#computer-science</a>;<a href="../../../../category/computers-code/" class="categorylink">#computers-code</a>
+        </div>
+      <!-- SRC= 2013-04-20-1305 -->
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <div class="content">
+
+<!-- BEGIN CONTENT -->
+<p>In the class I am sitting in on this semester - <a href="http://www.cs.unc.edu/Admin/Courses/descriptions/257.html">Visual Solid Shape</a>, we use a piece of software called <a href="http://andrewthall.org/papers/draft7_7Feb05.pdf">shapemonger</a>.</p>
+<p>I wanted to get a better view at monge patch (a surface defined by (<em>x</em>,<em>y</em>,<em>f</em>(<em>x</em>,<em>y</em>)) so I wrote a little Python-VTK program to generate a vtkPolyData of the surface.</p>
+<pre><span class="comment">#!/usr/bin/vtkpython</span>
+<span class="keyword">import</span> <span class="variable">vtk</span>
+
+<span class="variable">function</span> = <span class="keyword">lambda</span> <span class="variable">x</span>,<span class="variable">y</span>: <span class="variable">x</span>**<span class="number">2</span> - <span class="variable">y</span>**<span class="number">2</span>
+<span class="variable">outputName</span> = <span class="string">&#0039;/tmp/monge.vtp&#0039;</span>
+<span class="variable">resolution</span> = <span class="number">50</span>
+<span class="variable">xmin</span>, <span class="variable">xmax</span> = -<span class="number">1.0</span>, <span class="number">1.0</span>
+<span class="variable">ymin</span>, <span class="variable">ymax</span> = -<span class="number">1.0</span>, <span class="number">1.0</span>
+
+<span class="comment">######</span>
+<span class="variable">polyData</span> = <span class="variable">vtk</span>.<span class="variable">vtkPolyData</span>()
+<span class="variable">points</span> = <span class="variable">vtk</span>.<span class="variable">vtkPoints</span>()
+<span class="variable">index</span> = <span class="number">0</span>
+<span class="variable">cells</span> = <span class="variable">vtk</span>.<span class="variable">vtkCellArray</span>()
+<span class="keyword">def</span> <span class="identifier">makeQuad</span>(<span class="parameter">cells</span>,<span class="parameter">a</span>,<span class="parameter">b</span>,<span class="parameter">c</span>,<span class="parameter">d</span>):
+    <span class="variable">cells</span>.<span class="variable">InsertNextCell</span>(<span class="number">4</span>)
+    <span class="variable">cells</span>.<span class="variable">InsertCellPoint</span>(<span class="variable">a</span>)
+    <span class="variable">cells</span>.<span class="variable">InsertCellPoint</span>(<span class="variable">b</span>)
+    <span class="variable">cells</span>.<span class="variable">InsertCellPoint</span>(<span class="variable">c</span>)
+    <span class="variable">cells</span>.<span class="variable">InsertCellPoint</span>(<span class="variable">d</span>)
+<span class="keyword">for</span> <span class="variable">i</span> <span class="keyword">in</span> <span class="variable">xrange</span>(<span class="variable">resolution</span>):
+    <span class="variable">x</span> = <span class="variable">xmin</span> + (<span class="variable">xmax</span>-<span class="variable">xmin</span>) * <span class="variable">i</span> / <span class="variable">float</span>(<span class="variable">resolution</span> - <span class="number">1</span>)
+    <span class="keyword">for</span> <span class="variable">j</span> <span class="keyword">in</span> <span class="variable">xrange</span>(<span class="variable">resolution</span>):
+        <span class="variable">y</span> = <span class="variable">ymin</span> + (<span class="variable">ymax</span> - <span class="variable">ymin</span>) * <span class="variable">j</span> / <span class="variable">float</span>(<span class="variable">resolution</span> - <span class="number">1</span>)
+        <span class="variable">points</span>.<span class="variable">InsertPoint</span>(<span class="variable">index</span>, <span class="variable">x</span>,<span class="variable">y</span>,<span class="variable">function</span>(<span class="variable">x</span>,<span class="variable">y</span>))
+        <span class="keyword">if</span> (<span class="variable">i</span> &gt; <span class="number">0</span>) <span class="keyword">and</span> (<span class="variable">j</span> &gt; <span class="number">0</span>):
+            <span class="variable">makeQuad</span>(
+                <span class="variable">cells</span>,<span class="variable">index</span>,<span class="variable">index</span>-<span class="variable">resolution</span>,
+                <span class="variable">index</span>-<span class="variable">resolution</span>-<span class="number">1</span>,<span class="variable">index</span>-<span class="number">1</span>)
+        <span class="variable">index</span> += <span class="number">1</span>
+<span class="variable">polyData</span>.<span class="variable">SetPoints</span>(<span class="variable">points</span>)
+<span class="variable">polyData</span>.<span class="variable">SetPolys</span>(<span class="variable">cells</span>)
+<span class="variable">writer</span> = <span class="variable">vtk</span>.<span class="variable">vtkXMLPolyDataWriter</span>()
+<span class="variable">writer</span>.<span class="variable">SetInput</span>(<span class="variable">polyData</span>)
+<span class="variable">writer</span>.<span class="variable">SetFileName</span>(<span class="variable">outputName</span>)
+<span class="variable">writer</span>.<span class="variable">Write</span>()
+<span class="keyword">print</span> <span class="string">&#0039;wrote to&#0039;</span>, <span class="variable">outputName</span></pre>
+<p>The surface can be viewed in Paraview or <a href="https://github.com/HalCanary/vtkviewer">vtkviewer</a>.<br />
+<img src="http://halcanary.org/images/vtkviewer0.png" alt="[]"/><br />
+To make this surface look better, calculate the normals.  The (unnormalized) normal direction is (&#0045;&part;f/&part;x,&#0045;&part;f/&part;y,1).</p>
+<pre>
+.......
+def partial(func,v,i):
+    epsilon = 5e&#0045;7
+    def f(v,i,d):
+        return v[:i] + [v[i] + d] + v[(i+1):]
+    return ( (1.0 / 12.0) * func(*f(v,i,&#0045;2*epsilon)) +
+             (&#0045;2.0 / 3.0) * func(*f(v,i,&#0045;1*epsilon)) +
+             ( 2.0 / 3.0) * func(*f(v,i,+1*epsilon)) +
+             (&#0045;1.0 /12.0) * func(*f(v,i,+2*epsilon))
+              ) / epsilon
+def makenormal(func,x,y):
+    n = 045;partial(func,[x,y],0),&#0045;partial(func,[x,y],1),1.0)
+    f = 1.0 / math.sqrt(sum(x**2 for x in n))
+    return tuple(f * x for x in n)
+.......
+normals = vtk.vtkDoubleArray()
+normals.SetNumberOfComponents(3)
+normals.SetNumberOfTuples(resolution**2)
+.......
+        .......
+        normals.InsertTupleValue(index, makenormal(function,x,y))
+        .......
+.......
+polyData.GetPointData().SetNormals(normals)
+.......
+</pre>
+<p><img src="http://halcanary.org/images/vtkviewer.png" alt="[]"/></p>
+
+
+<!-- END CONTENT -->
+
+      </div>
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <p>(<a href="../../../../archives/">back</a>)</p>
+    </div>
+  </body>
+</html>

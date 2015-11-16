@@ -1,0 +1,40 @@
+TITLE=.emacs look and feel
+COPYRIGHT=Copyright 2011-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2011-09-29 12:00:00
+PERMALINK=http://halcanary.org/vv/2011/09/29/csg15/
+PERMALINKPART=vv/2011/09/29/csg15/
+YEAR=2011
+MONTH=09
+DAY=29
+POSTID=csg15
+MODE=markdown
+
+<pre>
+;_____________________________________________________________________
+;
+;	 Look And Feel
+;_____________________________________________________________________
+(setq inhibit-startup-screen 't)
+(tool-bar-mode nil)
+(menu-bar-mode nil)
+(set-scroll-bar-mode 'right)
+(when window-system
+  (add-to-list 'default-frame-alist '(background-color . &quot;black&quot;))
+  (add-to-list 'default-frame-alist '(foreground-color . &quot;white&quot;))
+  (add-to-list 'default-frame-alist '(background-mode . dark))
+  (custom-set-faces '(default ((t
+    (:height 110 :family &quot;DejaVu Sans Mono&quot;))))))
+
+;_____________________________________________________________________
+;
+;	 Keyboard Bindings
+;_____________________________________________________________________
+(setq x-select-enable-primary t)
+(setq x-select-enable-clipboard t)
+(cua-mode)
+(global-unset-key (kbd &quot;M-z&quot;))
+(global-set-key (kbd &quot;M-z&quot;) 'suspend-emacs)
+(global-set-key (kbd &quot;C-h&quot;) 'backward-delete-char-untabify)
+(global-set-key	[(control s)] 'save-buffer)
+(global-set-key	[(control f)] 'isearch-forward)
+(define-key isearch-mode-map [(control f)] 'isearch-repeat-forward)</pre>

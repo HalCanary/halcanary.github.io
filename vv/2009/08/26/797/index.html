@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Voder-Vocoder: unzip-nozipbomb</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" id="stylesheet" href="/styles/scrapple-from-the-apple.css">
+  </head>
+  <!-- Copyright 2009-2015 Hal Canary. ALL RIGHTS RESERVED. -->
+
+  <body style="padding:0;margin:0;">
+    <div class="column" style="max-width:640px;margin:0 auto;">
+
+      <h1 class="blogtitle">unzip-nozipbomb</h1>
+
+      <div class="byline">By Hal Canary,
+        2009-08-26 07:03:57
+        (<a href="http://halcanary.org/vv/2009/08/26/797/">link</a>)
+    <br><a href="../../../../category/computers-code/" class="categorylink">#computers-code</a>
+        </div>
+      <!-- SRC= 2009-08-26-797 -->
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <div class="content">
+
+<!-- BEGIN CONTENT -->
+<pre>#!/bin/sh
+## $HOME/bin/unzip-nozipbomb
+## Written 2007 Hal Canary
+## DTPD ##
+for zipfile in &quot;$@&quot; ; do
+    dir=$(basename &quot;${zipfile}&quot; .zip)
+    if [ &quot;${dir}&quot; = &quot;${zipfile}&quot; ] ; then
+	dir=&quot;${dir}.d&quot;
+    fi
+    mkdir -p &quot;${dir}&quot;
+    unzip -d &quot;${dir}&quot; &quot;${zipfile}&quot;
+done</pre>
+
+
+<!-- END CONTENT -->
+
+      </div>
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <p>(<a href="../../../../archives/">back</a>)</p>
+    </div>
+  </body>
+</html>

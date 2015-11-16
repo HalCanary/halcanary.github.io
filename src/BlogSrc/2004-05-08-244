@@ -1,0 +1,17 @@
+TITLE=duh...add-hook
+COPYRIGHT=Copyright 2004-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2004-05-08 16:36:13
+PERMALINK=http://halcanary.org/vv/2004/05/08/244/
+PERMALINKPART=vv/2004/05/08/244/
+YEAR=2004
+MONTH=05
+DAY=08
+POSTID=244
+CATEGORIES=computers-code;
+MODE=htmldiv
+
+<pre>
+;; from ~/.emacs
+(add-hook 'php-mode-hook 'html-mode)
+</pre>
+

@@ -1,0 +1,12 @@
+TITLE=git clone clone
+COPYRIGHT=Copyright 2011-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2011-06-03 12:00:00
+PERMALINK=http://halcanary.org/vv/2011/06/03/csg06/
+PERMALINKPART=vv/2011/06/03/csg06/
+YEAR=2011
+MONTH=06
+DAY=03
+POSTID=csg06
+MODE=markdown
+
+One beautiful thing about git is that I can clone my own clone of someone else's repository.  That way I can easily keep my laptop in sync with my workstation.  Neat.

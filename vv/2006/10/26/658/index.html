@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Voder-Vocoder: The fallout.</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" id="stylesheet" href="/styles/scrapple-from-the-apple.css">
+  </head>
+  <!-- Copyright 2006-2015 Hal Canary. ALL RIGHTS RESERVED. -->
+
+  <body style="padding:0;margin:0;">
+    <div class="column" style="max-width:640px;margin:0 auto;">
+
+      <h1 class="blogtitle">The fallout.</h1>
+
+      <div class="byline">By Hal Canary,
+        2006-10-26 12:57:42
+        (<a href="http://halcanary.org/vv/2006/10/26/658/">link</a>)
+    <br><a href="../../../../category/computers-code/" class="categorylink">#computers-code</a>
+        </div>
+      <!-- SRC= 2006-10-26-658 -->
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <div class="content">
+
+<!-- BEGIN CONTENT -->
+<p>What all happened to my computer:</p>
+<p>1) /dev/hda (formatted with ntfs and vfat for windows) died suddenly.  Made loud clicking noises.  Was many years old anyways.  When were 30GB HDDs still sold?  2001?</p>
+<p>2) I yanked /dev/hda from the box.</p>
+<p>3) /dev/hdb would no longer boot, cause the MBR that contained Grub lived on /dev/hda.  Used Knoppix and Fedora Rescue CD to access drive.</p>
+<p>4) I tried to convence grub to install to /dev/hdb.  I had no luck.  With lilo that would have been easy.  With grub, it's a mystery.  Spent lots of time stairing at the grub> prompt.</p>
+<p>5) Gave up on /sbin/grub-install.  Used dd.  dd killed my partition table.  Apparently, the MBR and the partition table live in the same sector.  I STILL DON'T UNDERSTAND HOW THIS WORKS.</p>
+<p>6) Recovered the partition table using gpart (Guess Partitions?)  and some intelegent guesses.</p>
+<p>7) Went to the store and bought a new 190 GiB (== 204 GB) hard disk.  Formatted it with an NTFS partition so I can play World of Warcraft when the need takes me.  Left a 142G vFAT partition for cross-OS file transfer and cross-device backups.</p>
+<p>8) Installed XP.  Installed basic software and patches.</p>
+<p>9) Figured out that I could make a bootable Grub CD by with the /usr/share/grub/i386-redhat/stage2_eltorito file.  CD boots and I get a grub&gt; prompt.  By typing</p>
+<pre>grub&gt; root (hd1,0)
+grub&gt; kernel /vmlinuz-2.6.18-1.2200.fc5 ro root=/dev/hdb2
+grub&gt; initrd /initrd-2.6.18-1.2200.fc5.img
+grub&gt; boot</pre>
+<p>I can boot up the functional OS on /dev/hdb.  There is much rejoicing!  So much better than a liveCD.</p>
+<p>10) I wait until FC6 comes out, then fire up bittorrent to get it.</p>
+<p>11)  I install FC6 on /dev/hdb.  At the same time, FC6 installer writes wotking grub MBR to /dev/hda.  All is well.</p>
+<p>Review of FC6 to follow.   </p>
+<p>* * *</p>
+<p>Thought:  Hard disks tend to last long enough  for something six times as big to replace them.  By which time you won't even miss them.</p>
+
+
+<!-- END CONTENT -->
+
+      </div>
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <p>(<a href="../../../../archives/">back</a>)</p>
+    </div>
+  </body>
+</html>

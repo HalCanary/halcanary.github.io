@@ -1,0 +1,252 @@
+/************
+ * HTML Minimums
+ ************/
+/************
+ * Columns
+ ************/
+
+div.leftcol      { position:absolute; align:left; width:20%; margin-left:0;   }
+div.centercol    { position:absolute; align:left; width:60%; margin-left:20%; }
+div.rightcol     { position:absolute; align:left; width:20%; margin-left:80%; }
+div.widerightcol { position:absolute; align:left; width:80%; margin-left:20%; }
+
+td.rightcol, td.leftcol, td.centercol { 
+    vertical-align: top;
+}
+td.rightcol, td.leftcol { 
+    width : 20% ; 
+    text-align : left; 
+}
+pre { 
+    white-space : pre;
+    /*font-family: monospace; */
+}
+
+/************
+ * HAL's BASICS
+ ************/
+.small-center {
+    text-align : center; 
+    font-size : 80%; 
+} 
+.centered {
+    text-align : center; 
+} 
+.center-verse {
+    text-align : center; 
+    font-style: italic;
+} 
+.rightside {
+    text-align : right; 
+} 
+
+body {
+    padding-top : 0px; 
+    padding-right : 0px;  
+    padding-bottom : 0px; 
+    padding-left : 0px;
+    margin : 0 0 0 0;
+} 
+a:link, a:visited, a:active a:hover {
+    text-decoration : underline;
+
+}
+
+/************
+ * MARGINS
+ ************/
+
+body {	text-align : justify;}
+
+p {	padding-left : 10mm; 
+	padding-right : 10mm; 
+	margin-top : 1ex ;
+	margin-bottom : 1.5ex ;  } 
+
+/*enable for ie?  nah.  Let them sweat thier default */
+/*p,li {	font-size : 14pt; }*/
+
+
+.leftcol p, .rightcol p {
+	text-align : left;
+	padding-left : 2mm; 
+	padding-right : 2mm; }
+
+.leftcol h3, .rightcol h3 {
+	padding-left : 4mm; 
+	padding-right : 4mm; }
+
+.blog p , {
+	padding-left : 5mm;
+	padding-right : 5mm;
+}
+.blog h3  {
+	padding-left : 2mm;
+	padding-right : 2mm;
+}
+.blog hr {
+	margin-left : 15mm;
+	margin-right : 15mm;
+}
+div.blog {
+	padding : 0 0 1ex 0;
+	border-bottom : solid 1px ;
+	margin : 0 5mm 2ex 5mm; 
+}
+
+h1 {	text-align : left;
+	margin : 0 ;
+	padding-left : 3mm; 
+	padding-right : 3mm; 
+	padding-top : 2mm ;
+	padding-bottom : 0 ;
+	border-bottom : solid 3px ;
+	border-color : black;
+	font-size : 250% ;} 
+
+h2 {	text-align : left;
+	margin-bottom : 0;
+	margin-left : 0;
+	margin-right : 0;
+	margin-top : 1ex ;
+	padding-left : 6mm; 
+	padding-right : 6mm; 
+	font-size : 150% ;
+	font-weight: bold;} 
+
+h3 {	text-align : left;
+	margin : 0;
+	padding-top : 1ex ;
+	padding-left : 10mm; 
+	padding-right : 10mm; 
+	font-size : 100% ;
+	font-weight: bold;} 
+
+h4 {	text-align : left;
+	margin-bottom : 0;
+	margin-left : 0;
+	margin-right : 0;
+	margin-top : 1ex ;
+	padding-left : 10mm; 
+	padding-right : 10mm; 
+	font-size : 100% ;
+	font-weight: bold;} 
+
+
+img {	border : 0;}
+
+.blog p img {
+	margin: 4px; 
+	float: left; 
+}
+hr.blogsep {
+	display: none;
+}
+
+hr {	padding : 0 ; 
+	display : inline ;
+	margin-left : 0; 
+	margin-right : 0; 
+	margin-top : 0; 
+	margin-bottom : 0; 
+	border : solid 0px ;
+	height : 3px;
+}
+
+/* "b" class table.  For layout only. */
+
+table.b {
+	margin-top : 0 ; 
+	margin-bottom : 0 ; 
+	margin-left : 0  ; 
+	margin-right : 0 ; 
+	padding : 0 ;
+	border-width:0;
+	border-spacing:0; 
+}
+table.b td , table.b th {
+	margin : 0 ; 
+	padding : 0 ; 
+}
+
+/* "p" class table.  For real table type stuff. */
+
+table.p {
+	border : solid black 1px;
+	border-collapse : collapse;
+	margin-top : 1ex ; 
+	margin-bottom : 1ex ; 
+	margin-right : 0 ; 
+	padding : 0 ;
+	margin-left:15mm;
+}
+
+/*	border-width:0;
+	border-spacing:3px; */
+
+table.p td {
+	margin : 0 ; 
+	padding: 5px;
+	border : solid black 1px;
+}
+table.p th {
+	margin : 0 ; 
+	padding: 5px;
+	border : solid black 1px;
+	align : center; 
+}
+
+/* "code" class table.  Put code inside a pre. */
+
+table.code {
+	border : solid black 1px;
+	border-collapse : collapse;
+	margin-top : 1ex ; 
+	margin-bottom : 1ex ; 
+	margin-left:15mm;     
+	margin-right : 0 ; 
+	padding : 0 ;
+}
+table.code td {
+	border : solid black 1px;
+	margin : 0 ; 
+	padding : 0 ; 
+}
+table.code th {
+	border : solid black 1px;
+	margin : 0 ; 
+	padding : 5px ; 
+	align : center; 
+}
+
+/* pre */
+
+pre{	padding: 5px;
+	border: none;
+	margin-left : 0mm ; 
+	margin-right : 0mm; 
+	margin-top : 0mm ; 
+	margin-bottom : 0mm; }
+
+/* lists */
+
+ul,ol {	margin-left : 17mm; 
+	margin-right : 10mm; 
+	padding-left: 0;}
+
+li ul,li ol {
+	margin-left : 7mm; 
+	margin-right : 0; }
+
+li {	text-align : left;
+	display: list-item;
+	margin-left : 0; 
+	margin-right : 0; }
+
+blockquote {
+	padding-left : 5mm; 
+	padding-right : 5mm;   
+	margin: 0; } 
+
+
+p.blog-notes { text-align : center; }

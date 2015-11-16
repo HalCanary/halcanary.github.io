@@ -1,0 +1,37 @@
+TITLE=Vote
+COPYRIGHT=Copyright 2004-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2004-02-17 13:30:50
+PERMALINK=http://halcanary.org/vv/2004/02/17/175/
+PERMALINKPART=vv/2004/02/17/175/
+YEAR=2004
+MONTH=02
+DAY=17
+POSTID=175
+CATEGORIES=politics;
+MODE=htmldiv
+
+<p>I left the house to vote today, even though I feel not well.</p>
+<p>I don't think I've written anything about voting. See <a href="http://abusabletech.org/archives/000027.html">link</a>, <a href="http://news.google.com/news?q=touch+screen+voting">link</a>, <a href="http://home.businesswire.com/portal/site/google/index.jsp?ndmViewId=news_view&amp;newsId=20040217005995&amp;newsLang=en">link</a> for background.</p>
+<p>WI has a hybrid paper/electronic system.  I mark a very clear paper ballot with a felt-tip pen, then stick the paper into a scanner.  The scanner tallies the votes, but the paper ballots are kept as a permanent record.</p>
+<p>It is generally believed that this is the best voting system currently in use</p>
+<p>Let's analyze this system for places where it could be potentially abused:</p>
+<ol>
+<li>A voter can claim to be someone else and vote for them.  I did not have to present any identification beyond knowing my street and last name.  "McDivitt Rd., Canary."  An evildoer could pretend to be
+<ul>
+<li>Someone who has died, but was not purged from the rolls</li>
+<li>Someone not likely to show at the polls</li>
+<li>Someone who has moved to another precinct, but was not purged from the rolls</li>
+<li>A person who exists only on paper. A False Identity.</li>
+</ul>
+</li>
+<li>An official, or group of officials at the voting location could fill out additional ballots, especially end of day, once they know who did not vote.</li>
+<li>An official, or group of officials at the voting location could tamper with the machine that tallies the votes. (An audit would catch this, but how often does that happen.)</li>
+<li>An official, or group of officials at the voting location could tamper with the machine that tallies the votes and destroy ballots to make the numbers come out correctly. (An audit would NOT catch this.)</li>
+<li>The  program that  tallies the votes could lie.  (OSS would help here.) See Diebold (<a href="http://www.scoop.co.nz/mason/stories/HL0309/S00106.htm">link</a>, <a href="http://www.eff.org/Legal/ISP_liability/OPG_v_Diebold/">link</a>, <a href="http://www.eff.org/Activism/E-voting/20030724_evote_research_report.pdf">link</a>.)</li>
+<li>Someone up the line (election commission) could falsify data.  (Only a large scale audit (statewide) would find this.)</li>
+</ol>
+<p>So, what would the perfectly trustworthy system look like? It would require <strong>permanent</strong>, <strong>positive</strong> certification of each vote cast. (Permanence allows for auditing.)</p>
+<p>Solution: <strong>cypherpunk open voting system</strong>.  Each voter provides positive proof that he is who he says he is and has the right to vote in a particular precinct and is not voting an another precinct.  Then that voter hands the election commission a public key.  That information: The voter's name, key, and location is signed by a public servant and published to the Internet and mirrored by anyone who wishes to have a privately controlled version of the election rolls.  Then, if keys on the rolls spontaneously change, everyone will know.  Each citizen later verifies that his information is correct.  At election time, each voter creates a marked-ballot (a machine-created, human readable text document of some kind.  It may be producible by way of a ECMAscript program that the voter runs on his own computer) then signs that marked-ballot and sends it to the election commission.  The commission publishes all of these ballots.  Then the citizen can verify that his ballot is published and corresponds to what he submitted.  Any third party can download all of the ballots, verify each signature, and count the votes. </p>
+<p>Of course, COVS has drawbacks.  The ballot is no longer secret.  It requires constant vigilance on the part of every citizen.  It requires citizens to safeguard their private key.  It would be difficult to authenticate every citizen, but once the system is in place, only new voters need to be authenticated. It requires sophisticated computer literacy on the part of every citizen. (Of course the current system presupposes normal literacy, which was uncommon 500 years ago.)</p>
+<p>There's your tradeoff:  privacy vs. auditability.</p>
+

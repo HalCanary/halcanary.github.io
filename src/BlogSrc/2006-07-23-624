@@ -1,0 +1,16 @@
+TITLE=Caps Lock
+COPYRIGHT=Copyright 2006-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2006-07-23 12:59:47
+PERMALINK=http://halcanary.org/vv/2006/07/23/624/
+PERMALINKPART=vv/2006/07/23/624/
+YEAR=2006
+MONTH=07
+DAY=23
+POSTID=624
+CATEGORIES=computers-code;
+MODE=htmldiv
+
+<p>Howto disable Caps Lock in Fedora Core 5 / Gnome 2.14.  Even better---map caps lock to Ctrl!</p>
+<p>System--&gt;Preferences--&gt;Keyboard--&gt;Layout Options--&gt;Ctrl key position--&gt;Make CapsLock an additional Ctrl.</p>
+<p><img src="/images/caps-lock-ctrl-fedora-core-5.png" alt="[Make CapsLock an additional Ctrl.]" /></p>
+

@@ -1,0 +1,17 @@
+TITLE=imagemagik convert
+COPYRIGHT=Copyright 2004-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2004-03-01 09:51:16
+PERMALINK=http://halcanary.org/vv/2004/03/01/178/
+PERMALINKPART=vv/2004/03/01/178/
+YEAR=2004
+MONTH=03
+DAY=01
+POSTID=178
+CATEGORIES=computers-code;
+MODE=htmldiv
+
+<p>This:</p>
+<pre>convert -size 120x120 $1 -resize 120x120 +profile "*" $2</pre>
+<p>Works better than this:</p>
+<pre>convert -sample 120x120 $1 $2</pre>
+

@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Voder-Vocoder: bourne shell absolute path</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" id="stylesheet" href="/styles/scrapple-from-the-apple.css">
+  </head>
+  <!-- Copyright 2010-2015 Hal Canary. ALL RIGHTS RESERVED. -->
+
+  <body style="padding:0;margin:0;">
+    <div class="column" style="max-width:640px;margin:0 auto;">
+
+      <h1 class="blogtitle">bourne shell absolute path</h1>
+
+      <div class="byline">By Hal Canary,
+        2010-03-31 10:20:12
+        (<a href="http://halcanary.org/vv/2010/03/31/968/">link</a>)
+    <br><a href="../../../../category/uncategorized/" class="categorylink">#uncategorized</a>
+        </div>
+      <!-- SRC= 2010-03-31-968 -->
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <div class="content">
+
+<!-- BEGIN CONTENT -->
+<pre><code>#!/bin/sh
+abspath () {
+    D7636=`/usr/bin/dirname "$1"`;
+    D7636=`(cd "$D7636"; pwd -P)`;
+    B7636=`/usr/bin/basename "$1"`;
+    echo "${D7636}/${B7636}";
+}
+PATH=$1
+echo "path = \"${PATH}\""
+ABSPATH=`abspath "$PATH"`
+echo "absolute path = \"${ABSPATH}\""
+</code></pre>
+
+<hr />
+
+<p>UPDATE: I just realised that <code>readlink -f "$FILE"</code> will do the trick.</p>
+
+<hr />
+
+<p>UPDATE 2: Even better, since it is concise and follows the POSIX standard:</p>
+
+<pre><code>#!/bin/sh
+abspath () {
+    echo "$(cd "$(dirname "$1")" ; pwd;)/$(basename "$1")"
+}
+</code></pre>
+
+<!-- END CONTENT -->
+
+      </div>
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <p>(<a href="../../../../archives/">back</a>)</p>
+    </div>
+  </body>
+</html>

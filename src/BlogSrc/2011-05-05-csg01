@@ -1,0 +1,15 @@
+TITLE=Network Opacity
+COPYRIGHT=Copyright 2011-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2011-05-05 12:00:00
+PERMALINK=http://halcanary.org/vv/2011/05/05/csg01/
+PERMALINKPART=vv/2011/05/05/csg01/
+YEAR=2011
+MONTH=05
+DAY=05
+POSTID=csg01
+MODE=markdown
+
+Just becasue Samba and AFS allow you to open multi-gigabyte data files
+as if they were local, you still should *not*.  Even if you have a
+nice 100 Mbit/sec direct connection.  Unless the software in question
+knows to expect these sort of shenanigans.

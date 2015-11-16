@@ -1,0 +1,17 @@
+TITLE=ups$ uptime
+COPYRIGHT=Copyright 2005-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2005-05-10 09:24:03
+PERMALINK=http://halcanary.org/vv/2005/05/10/459/
+PERMALINKPART=vv/2005/05/10/459/
+YEAR=2005
+MONTH=05
+DAY=10
+POSTID=459
+CATEGORIES=computers-code;
+MODE=htmldiv
+
+<pre>
+[hal@ups(pts/1) ~]$ uptime
+ 09:23:09  up 133 days, 12:35, 2 users, load average: 0.00, 0.01, 0.00
+</pre>
+

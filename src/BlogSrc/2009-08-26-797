@@ -1,0 +1,25 @@
+TITLE=unzip-nozipbomb
+COPYRIGHT=Copyright 2009-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2009-08-26 07:03:57
+PERMALINK=http://halcanary.org/vv/2009/08/26/797/
+PERMALINKPART=vv/2009/08/26/797/
+YEAR=2009
+MONTH=08
+DAY=26
+POSTID=797
+CATEGORIES=computers-code;
+MODE=htmldiv
+
+<pre>#!/bin/sh
+## $HOME/bin/unzip-nozipbomb
+## Written 2007 Hal Canary
+## DTPD ##
+for zipfile in &quot;$@&quot; ; do
+    dir=$(basename &quot;${zipfile}&quot; .zip)
+    if [ &quot;${dir}&quot; = &quot;${zipfile}&quot; ] ; then
+	dir=&quot;${dir}.d&quot;
+    fi
+    mkdir -p &quot;${dir}&quot;
+    unzip -d &quot;${dir}&quot; &quot;${zipfile}&quot;
+done</pre>
+

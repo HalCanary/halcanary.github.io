@@ -1,0 +1,27 @@
+TITLE=halcanary.org
+COPYRIGHT=Copyright 2002-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2002-09-28 18:16:04
+PERMALINK=http://halcanary.org/vv/2002/09/28/14/
+PERMALINKPART=vv/2002/09/28/14/
+YEAR=2002
+MONTH=09
+DAY=28
+POSTID=14
+CATEGORIES=meta;
+MODE=htmldiv
+
+<p>Okay, here's the new page, at the new site, <em>halcanary.org</em>. The page is dynamically created. I wrote a couple of perl scripts that do the job. </p>
+<p>There's still a lot that's missing. I've done the work, I just need to put it in place. Here's a list:</p>
+<ul>
+<li>Prefs &amp; styles</li>
+<li>The other pages.</li>
+<li>logins for guests
+<ul>
+<li>a way to post to the blog via cgi</li>
+<li>allow guests to post to the blog too.</li>
+</ul>
+</li>
+<li>view old blog entries</li>
+</ul>
+<p>Stay tuned!</p>
+

@@ -1,0 +1,51 @@
+TITLE=RTF
+COPYRIGHT=Copyright 2008-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2008-11-02 08:27:52
+PERMALINK=http://halcanary.org/vv/2008/11/02/752/
+PERMALINKPART=vv/2008/11/02/752/
+YEAR=2008
+MONTH=11
+DAY=02
+POSTID=752
+CATEGORIES=computers-code;
+MODE=htmldiv
+
+<p>I was reading the other day the submission guidelines for a certain publishing house.  They wanted <a href="http://en.wikipedia.org/wiki/Rich_Text_Format">RTF</a> documents.  One would think plain text would be just as good, but it's easy enough to write a program that converts a utf8-encoded plain text document to a simple <a href="http://search.cpan.org/~sburke/RTF-Writer/lib/RTF/Cookbook.pod">RTF</a> document.  And the output is about a third of the size of the document that you would get from using oowriter.</p>
+<pre>#!/usr/bin/env python
+# txt2rtf.py
+# Written 2008 Hal Canary
+# Dedicated to the Public Domain
+import sys
+fi = sys.stdin
+fo = sys.stdout
+encoding = &#0039;UTF-8&#0039;
+fo.write(r&#0039;{&#0092;rtf1&#0092;ansi&#0092;deff0{&#0092;fonttbl{&#0092;f0 Times New Roman;}}&#0039;)
+fo.write(r&#0039;&#0092;paperh15840&#0092;paperw12240&#0092;margl1800&#0092;margr1800&#0092;margt1440&#0092;margb1440&#0092;fs24&#0039;)
+fo.write(&#0039;&#0092;n&#0039;)
+for line in fi:
+  uline = unicode(line, encoding)
+  for char in uline:
+    if (char == &quot;&#0092;n&quot;):
+      fo.write(&quot;&#0092;&#0092;par&#0092;n&quot;)
+      continue
+    if (char == &quot;&#0092;t&quot;):
+      fo.write(&quot;&#0092;&#0092;tab &quot;)
+      continue
+    if (char == &quot;&#0092;&#0092;&quot;):
+      fo.write(&quot;&#0092;&#0092;&#0092;&#0092;&quot;)
+      continue
+    if (char == &quot;{&quot;):
+      fo.write(&quot;&#0092;&#0092;{&quot;)
+      continue
+    if (char == &quot;}&quot;):
+      fo.write(&quot;&#0092;&#0092;}&quot;)
+      continue
+    ordchar = ord(char)
+    if (ordchar &gt;= 128):
+      fo.write(&quot;&#0092;&#0092;u%d?&quot; % ordchar)
+      continue
+    fo.write(char)
+fo.write(&#0039;}&#0092;n&#0092;n&#0039;)
+</pre>
+<p>For a manuscript, you don't want to do any fancy formating, bold text, fonts, colors, curly quotes, et cetera.  This avoids all of that jazz.  One might want italic text, but that's not <a href="http://everything2.com/title/fASCIIst">fASCIIst</a> enough, is it?</p>
+

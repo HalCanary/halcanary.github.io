@@ -1,0 +1,19 @@
+TITLE=Dear 1999, please take your music player back.
+COPYRIGHT=Copyright 2006-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2006-11-23 21:48:30
+PERMALINK=http://halcanary.org/vv/2006/11/23/665/
+PERMALINKPART=vv/2006/11/23/665/
+YEAR=2006
+MONTH=11
+DAY=23
+POSTID=665
+CATEGORIES=computers-code;
+MODE=htmldiv
+
+<pre>#!/bin/sh
+#DTPD#
+M=/tmp/Musiclist
+DIR=/home/music
+find $DIR -name &quot;*.mp3&quot; &gt; $M
+mpg321 --list $M --random</pre>
+

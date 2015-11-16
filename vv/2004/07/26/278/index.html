@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Voder-Vocoder: sshd attacks</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" id="stylesheet" href="/styles/scrapple-from-the-apple.css">
+  </head>
+  <!-- Copyright 2004-2015 Hal Canary. ALL RIGHTS RESERVED. -->
+
+  <body style="padding:0;margin:0;">
+    <div class="column" style="max-width:640px;margin:0 auto;">
+
+      <h1 class="blogtitle">sshd attacks</h1>
+
+      <div class="byline">By Hal Canary,
+        2004-07-26 13:47:22
+        (<a href="http://halcanary.org/vv/2004/07/26/278/">link</a>)
+    <br><a href="../../../../category/computers-code/" class="categorylink">#computers-code</a>
+        </div>
+      <!-- SRC= 2004-07-26-278 -->
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <div class="content">
+
+<!-- BEGIN CONTENT -->
+<p>I've been getting attacks against my sshd server:</p>
+<pre>
+Failed logins from these:
+   admin/password from 12.47.62.139: 2 Time(s)
+   admin/password from 134.21.2.227: 2 Time(s)
+   guest/password from 12.47.62.139: 1 Time(s)
+   guest/password from 134.21.2.227: 1 Time(s)
+   guest/password from 210.1.9.227: 1 Time(s)
+   guest/password from 61.193.179.162: 1 Time(s)
+   root/password from 12.47.62.139: 3 Time(s)
+   root/password from 134.21.2.227: 3 Time(s)
+   test/password from 12.47.62.139: 2 Time(s)
+   test/password from 134.21.2.227: 2 Time(s)
+   test/password from 210.1.9.227: 1 Time(s)
+   test/password from 61.193.179.162: 1 Time(s)
+   user/password from 12.47.62.139: 1 Time(s)
+   user/password from 134.21.2.227: 1 Time(s)
+</pre>
+<p>If you have one of these common accounts, shut off logins from them:</p>
+<pre>
+## lines added to /etc/ssh/sshd_config
+PermitRootLogin no
+DenyUsers admin guest test user
+## EOF
+</pre>
+
+
+<!-- END CONTENT -->
+
+      </div>
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <p>(<a href="../../../../archives/">back</a>)</p>
+    </div>
+  </body>
+</html>

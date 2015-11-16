@@ -1,0 +1,20 @@
+TITLE=postponing ntpd start
+COPYRIGHT=Copyright 2006-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2006-11-22 09:28:16
+PERMALINK=http://halcanary.org/vv/2006/11/22/664/
+PERMALINKPART=vv/2006/11/22/664/
+YEAR=2006
+MONTH=11
+DAY=22
+POSTID=664
+CATEGORIES=computers-code;
+MODE=htmldiv
+
+<p>Yet another Linux hint:</p>
+<p>Because ntpd (Network Time Protocol Daemon) takes some time to synchronize with the time server, I don't start it on boot:</p>
+<pre>$ sudo /sbin/chkconfig ntpd off</pre>
+<p>But I do start it later on, as a background process, so I can go ahead and log in before it finishes.  One could do this with any startup procedure that slows you down.</p>
+<pre>##  Line from /etc/rc.local
+nohup /etc/init.d/ntpd start &gt; /dev/null 2&gt;&amp;1 &amp;
+</pre>
+

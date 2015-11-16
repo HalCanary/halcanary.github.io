@@ -1,0 +1,21 @@
+TITLE=Beautiful one-liner
+COPYRIGHT=Copyright 2003-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2003-05-29 02:26:17
+PERMALINK=http://halcanary.org/vv/2003/05/29/55/
+PERMALINKPART=vv/2003/05/29/55/
+YEAR=2003
+MONTH=05
+DAY=29
+POSTID=55
+CATEGORIES=computers-code;
+MODE=htmldiv
+
+<pre>
+#/bin/sh
+#DTPD#
+# ~/bin/despacify v2003-05
+ls&nbsp;-x1 | &#0092;
+  perl&nbsp;-e 'while(&lt;&gt;){chomp;$x=$_;s/ /_/g; &#0092;
+  system(&quot;mv &#0092;&quot;$x&#0092;&quot; &#0092;&quot;$_&#0092;&quot;&quot;) if ($x ne $_);}'
+</pre>
+

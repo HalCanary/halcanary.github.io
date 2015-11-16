@@ -1,0 +1,10 @@
+body { margin: 0;
+       padding: 0; }
+h1 { margin: 0;
+     padding: 0 8px;
+     background-color: #e6e6e6;
+     border-top: 1px solid black }
+p.appletcontainer { margin: 0; }
+div.help { padding: 0 8px; }
+p.reference{ padding-left: 2em;
+	     text-indent: -2em; }

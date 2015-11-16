@@ -1,0 +1,28 @@
+TITLE=timeinmicroseconds.c
+COPYRIGHT=Copyright 2007-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2007-03-22 15:50:15
+PERMALINK=http://halcanary.org/vv/2007/03/22/678/
+PERMALINKPART=vv/2007/03/22/678/
+YEAR=2007
+MONTH=03
+DAY=22
+POSTID=678
+CATEGORIES=computers-code;
+MODE=htmldiv
+
+<p>I wrote this today as a demonstration of where /dev/random gets all its randomness.</p>
+<pre>/* Copyright 2007 Hal Canary, http://halcanary.org/
+Dedicated to the Public Domain. */
+#include &lt;stdio.h&gt;
+#include &lt;sys/time.h&gt;
+int main(void) {
+        struct timeval x;
+        struct timezone t;
+        gettimeofday(&amp;x, &amp;t);
+        printf(&quot;%u.%06u&#0092;n&quot;,x.tv_sec,x.tv_usec);
+        return(0);
+}</pre>
+<p>And then...</p>
+<pre>$ cc -o timeinmicroseconds timeinmicroseconds.c
+$ while read -s -n 1 x ; do ./timeinmicroseconds ; done</pre>
+

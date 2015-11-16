@@ -1,0 +1,21 @@
+TITLE=Mplayer and Gnome's screensaver.
+COPYRIGHT=Copyright 2010-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2010-02-17 21:05:06
+PERMALINK=http://halcanary.org/vv/2010/02/17/912/
+PERMALINKPART=vv/2010/02/17/912/
+YEAR=2010
+MONTH=02
+DAY=17
+POSTID=912
+CATEGORIES=computers-code;
+MODE=htmldiv
+
+<pre>#!/bin/sh
+#DTPD
+gnome&#0045;screensaver&#0045;command &#0045;&#0045;inhibit &amp;
+INHIBIT_PID=$!
+mplayer &#0045;dvd&#0045;device /dev/scd0 &#0045;ontop &#0092;
+	&#0045;fs dvdnav:// &#0045;nocache 2&gt; /dev/null
+kill $INHIBIT_PID</pre>
+<p>This is how to use gnome-screensaver's inhibit command with a video player such as mplayer.</p>
+

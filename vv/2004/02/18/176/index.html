@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Voder-Vocoder: search and replace for elisp.</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" id="stylesheet" href="/styles/scrapple-from-the-apple.css">
+  </head>
+  <!-- Copyright 2004-2015 Hal Canary. ALL RIGHTS RESERVED. -->
+
+  <body style="padding:0;margin:0;">
+    <div class="column" style="max-width:640px;margin:0 auto;">
+
+      <h1 class="blogtitle">search and replace for elisp.</h1>
+
+      <div class="byline">By Hal Canary,
+        2004-02-18 13:56:59
+        (<a href="http://halcanary.org/vv/2004/02/18/176/">link</a>)
+    <br><a href="../../../../category/computers-code/" class="categorylink">#computers-code</a>
+        </div>
+      <!-- SRC= 2004-02-18-176 -->
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <div class="content">
+
+<!-- BEGIN CONTENT -->
+<p>When mutt is told to <a href="http://gnupg.org/">gpg</a> sign an email, it will use <a href="http://www.freesoft.org/CIE/RFC/1521/6.htm">Quoted-Printable Content-Transfer-Encoding</a>, which will replace <code>&quot;&nbsp;&#0092;n&quot;</code> with <code>&quot;=20&#0092;n&quot;</code>, an escape sequence of some sort. (ASCII &quot;&nbsp;&quot; is 0x20.)</p>
+<p>I'd rather replace <code>&quot;&nbsp;&#0092;n&quot;</code> with <code>&quot;&#0092;n&quot;</code> anyways.   Here's some elisp code to do just that:</p>
+<pre>
+;; ~/.emacs ;;
+(defun hal1 () (interactive)
+  (auto-mega-replace  " &#0092;n" "&#0092;n"))
+(defun auto-mega-replace (arg1 arg2)
+  (save-excursion
+    (beginning-of-buffer)
+    (while (search-forward arg1)
+      (beginning-of-buffer)
+      (perform-replace arg1 arg2
+        nil nil nil)
+      (beginning-of-buffer))))
+</pre>
+<p>[<em>edited 2003-02-20</em>]</p>
+
+
+<!-- END CONTENT -->
+
+      </div>
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <p>(<a href="../../../../archives/">back</a>)</p>
+    </div>
+  </body>
+</html>

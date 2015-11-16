@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Voder-Vocoder: genpasswd.py</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" id="stylesheet" href="/styles/scrapple-from-the-apple.css">
+  </head>
+  <!-- Copyright 2008-2015 Hal Canary. ALL RIGHTS RESERVED. -->
+
+  <body style="padding:0;margin:0;">
+    <div class="column" style="max-width:640px;margin:0 auto;">
+
+      <h1 class="blogtitle">genpasswd.py</h1>
+
+      <div class="byline">By Hal Canary,
+        2008-01-27 15:54:05
+        (<a href="http://halcanary.org/vv/2008/01/27/716/">link</a>)
+    <br><a href="../../../../category/computers-code/" class="categorylink">#computers-code</a>
+        </div>
+      <!-- SRC= 2008-01-27-716 -->
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <div class="content">
+
+<!-- BEGIN CONTENT -->
+<pre>
+#!/usr/bin/env python
+# ~/bin/genpasswd.py
+#   Generate a random password with about
+#   142 bits of randomness, making use of
+#   /dev/urandom.
+# Note:
+#   Most online services have somewhat
+#   arbitrary rules about what characters
+#   can be included in a password. So we
+#   limit ourselves to A-Za-z0-9.
+# Copyright 2007-2008 Hal Canary
+# Dedicated to the Public Domain.
+import os, base64
+print base64.b64encode(os.urandom(18),'Zz')</pre>
+
+
+<!-- END CONTENT -->
+
+      </div>
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <p>(<a href="../../../../archives/">back</a>)</p>
+    </div>
+  </body>
+</html>

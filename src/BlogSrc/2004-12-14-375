@@ -1,0 +1,30 @@
+TITLE=happy
+COPYRIGHT=Copyright 2004-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2004-12-14 17:19:24
+PERMALINK=http://halcanary.org/vv/2004/12/14/375/
+PERMALINKPART=vv/2004/12/14/375/
+YEAR=2004
+MONTH=12
+DAY=14
+POSTID=375
+CATEGORIES=life;
+MODE=htmldiv
+
+<p>Stolen from <a href="http://www.bobharris.com/index.php?option=com_content&amp;task=view&amp;id=265&amp;Itemid=2">here</a></p>
+<blockquote><form action="http://halcanary.org/formmail.cgi" method="post">
+<div>Happy<br />
+<input type="checkbox" name="Christmas"   value="T" />Christmas<br />
+<input type="checkbox" name="Chanukah"    value="T" />Chanukah<br />
+<input type="checkbox" name="Kwanzaa"     value="T" />Kwanzaa<br />
+<input type="checkbox" name="O Shohgatsu" value="T" />O Shohgatsu<br />
+<input type="checkbox" name="Diwali"      value="T" />Diwali<br />
+<input type="checkbox" name="Soyal"       value="T" />Soyal<br />
+<input type="checkbox" name="Tongji"      value="T" />Tongji<br />
+<input type="checkbox" name="Zagmuk"      value="T" />Zagmuk (for you ancient Mesopotamians with Internet access) or<br />
+<input type="checkbox" name="Dazh Boh"    value="T" />festival of Dazh Boh (not to be confused with Dodge Ball).And in case my bases aren't fully covered:<br />
+<input type="checkbox" name="Everything" value="T" />Happy Everything!<br />
+<input type="checkbox" name="Everything" value="T" />Happy Nothing.<br />
+<input type="submit"  value="SUBMIT" /></div>
+</form>
+</blockquote>
+

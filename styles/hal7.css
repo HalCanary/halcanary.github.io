@@ -1,0 +1,74 @@
+@import url(margins1.css);
+body {
+    color : #000000; 
+    background-color : #cc7700; 
+    font-family : serif ;
+} 
+
+.leftcol, .rightcol, pre {
+    color : #ffffff; 
+    background-color : #7f4600; 
+}
+.leftcol hr, .rightcol hr {
+    background : #cc7700; 
+    color : #cc7700; 
+}
+
+hr {
+    color : #7f4600; 
+    background : #7f4600; 
+    border : solid 0px ;
+    border-color : black;
+    height : 15px;
+} 
+
+
+h1 {
+    text-align : center; 
+    font-size : 250%; 
+    color : #000000; 
+    background : #ceac00; 
+    border : solid 0px
+    border-color : #7f4600;
+    border-bottom : solid #7f4600 15px ;
+    font-family : sans-serif ;
+}
+h2 {
+    padding-left : 0.5cm; 
+    padding-right : 0.5cm; 
+    font-family : sans-serif ;
+} 
+h3 {
+    font-family : sans-serif ;
+} 
+
+a:link, a:visited {
+    color : #663800; 
+    background : transparent; 
+} 
+.leftcol  a:link, .leftcol  a:visited,
+.rightcol a:link, .rightcol a:visited {
+    color : #ceac00; 
+    background :  transparent; 
+} 
+a:active {
+    color : #ff0000; 
+    background :  transparent; 
+} 
+a:hover {
+    color :  #ceac00 ; 
+    background : #000000; 
+} 
+table.p, table.code {
+    background-color : #000000; 
+    color : #ffffff; 
+}
+table.p th ,table.code th {
+    color : #000000; 
+    background-color : #eeeeee; 
+}
+table.p td, table.code p {
+    color : #000000; 
+    background-color : #ffffff; 
+}
+

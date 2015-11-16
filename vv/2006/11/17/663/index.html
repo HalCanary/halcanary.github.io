@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Voder-Vocoder: In honor of Telemonian Ajax, apparently</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" id="stylesheet" href="/styles/scrapple-from-the-apple.css">
+  </head>
+  <!-- Copyright 2006-2015 Hal Canary. ALL RIGHTS RESERVED. -->
+
+  <body style="padding:0;margin:0;">
+    <div class="column" style="max-width:640px;margin:0 auto;">
+
+      <h1 class="blogtitle">In honor of Telemonian Ajax, apparently</h1>
+
+      <div class="byline">By Hal Canary,
+        2006-11-17 18:22:32
+        (<a href="http://halcanary.org/vv/2006/11/17/663/">link</a>)
+    <br><a href="../../../../category/computers-code/" class="categorylink">#computers-code</a>
+        </div>
+      <!-- SRC= 2006-11-17-663 -->
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <div class="content">
+
+<!-- BEGIN CONTENT -->
+<p>Read <em>Head Rush Ajax</em> yesterday. If you already know Javascript and the DOM, all there is left to learn about the magic of Ajax is the XMLHttpRequest / Msxml2.XMLHTTP / Microsoft.XMLHTTP functions, which aparently all work identically.</p>
+<pre>
+/* ajax-http-request.js */
+function newHttpRequest() {
+  var request = null;
+  try {
+    request = new <a href="http://en.wikipedia.org/wiki/XMLHttpRequest">XMLHttpRequest()</a>;
+  } catch (trymicrosoft) {
+    try {
+      request = new ActiveXObject(&quot;Msxml2.XMLHTTP&quot;);
+    } catch (othermicrosoft) {
+      try {
+         request = new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);
+      } catch (failed) {
+        request = null;
+        }
+    }
+  }
+  return(request);
+}
+</pre>
+<p>Given that simple library file, you can do this:</p>
+<pre>
+/* some-other-javascript-file.js */
+var req = newHttpRequest();
+if (req == null)
+  alert(&quot;Error creating request object!&quot;);
+
+function dealWithResponse() {
+  if (req.readyState == 4) {
+    if (req.status == 200)
+      doSomethingWith(req.responseText);
+    } else {
+      throwAnErrorOrSomething();
+  }
+}
+req.open(&quot;GET&quot;, &quot;someurl&quot;, true);
+req.onreadystatechange = dealWithResponse;
+req.send(null);
+</pre>
+<p>And that's all you really need to know to do Ajax.</p>
+
+
+<!-- END CONTENT -->
+
+      </div>
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <p>(<a href="../../../../archives/">back</a>)</p>
+    </div>
+  </body>
+</html>

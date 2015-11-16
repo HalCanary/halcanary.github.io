@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Voder-Vocoder: Reduce</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" id="stylesheet" href="/styles/scrapple-from-the-apple.css">
+  </head>
+  <!-- Copyright 2011-2015 Hal Canary. ALL RIGHTS RESERVED. -->
+
+  <body style="padding:0;margin:0;">
+    <div class="column" style="max-width:640px;margin:0 auto;">
+
+      <h1 class="blogtitle">Reduce</h1>
+
+      <div class="byline">By Hal Canary,
+        2011-05-27 12:00:00
+        (<a href="http://halcanary.org/vv/2011/05/27/csg05/">link</a>)
+        </div>
+      <!-- SRC= 2011-05-27-csg05 -->
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <div class="content">
+
+<!-- BEGIN CONTENT -->
+<p>In high-school chemistry, you learn that the ideal gas law is</p>
+
+<div style="text-align:center;"><em>P</em>&middot;<em>V</em> =
+<em>n</em>&middot;<em>R</em>&middot;<em>T</em></div>
+
+<p>These letters are drilled into my head, but I realised yesterday that
+I am losing my intuitive understanding of the relation.  The physics
+version of it is</p>
+
+<div style="text-align:center;"><em>P</em>&middot;<em>V</em> =
+<em>N</em>&middot;<em>kT</em></div>
+
+<p>where <em>N</em> is now a dimensionless number and <em>k</em> is comes from the
+definition of <em>T</em>.  Let <em>&rho;</em> be our number density and the relation
+simplifies to</p>
+
+<div style="text-align:center;"><em>P</em> =
+<em>&rho;</em>&middot;<em>kT</em></div>
+
+<p>Pressure is density times temperature.</p>
+
+<hr />
+
+<p>In the heterogeneous CS Unix environment, I may be executing emacs
+from a console as “<code>emacs -nw</code>” or from an icon on the desktop.  Some
+computers will have the emacs-color-theme package installed, others
+won't.  So in my .emacs file, I put the following lines:</p>
+
+<pre><code>;; from .emacs ...
+(setq emacs-style-file "~/.emacs-style")
+(when
+    (and window-system
+         (require 'color-theme nil t)
+         (file-readable-p emacs-style-file))
+  (progn
+    (load emacs-style-file)
+(my-color-theme)))
+</code></pre>
+
+<!-- END CONTENT -->
+
+      </div>
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <p>(<a href="../../../../archives/">back</a>)</p>
+    </div>
+  </body>
+</html>

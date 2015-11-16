@@ -1,0 +1,17 @@
+TITLE=IceWM
+COPYRIGHT=Copyright 2005-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2005-03-01 22:50:15
+PERMALINK=http://halcanary.org/vv/2005/03/01/415/
+PERMALINKPART=vv/2005/03/01/415/
+YEAR=2005
+MONTH=03
+DAY=01
+POSTID=415
+CATEGORIES=computers-code;
+MODE=htmldiv
+
+<p><strong>Warning/Disclaimer.</strong></p>
+<p>Te following is a geeky linux-related post. Chances are, you will want to skip it.  And I promised that this post wouldn't be geeky.  Sorry.</p>
+<p>Shane the physics major (not the monk, the other one) introduced me to IceWM by way of Mandrake.  This might be my new lightweight WM of choice.  So without further ado, I present:</p>
+<p><a href="/p/fedora-icewm">Howto Install IceWM under Fedora.</a> (moved to a new page)</p>
+

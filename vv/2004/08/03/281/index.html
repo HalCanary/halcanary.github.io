@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Voder-Vocoder: tar c | ssh "tar x"</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" id="stylesheet" href="/styles/scrapple-from-the-apple.css">
+  </head>
+  <!-- Copyright 2004-2015 Hal Canary. ALL RIGHTS RESERVED. -->
+
+  <body style="padding:0;margin:0;">
+    <div class="column" style="max-width:640px;margin:0 auto;">
+
+      <h1 class="blogtitle">tar c | ssh "tar x"</h1>
+
+      <div class="byline">By Hal Canary,
+        2004-08-03 18:44:29
+        (<a href="http://halcanary.org/vv/2004/08/03/281/">link</a>)
+    <br><a href="../../../../category/computers-code/" class="categorylink">#computers-code</a>
+        </div>
+      <!-- SRC= 2004-08-03-281 -->
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <div class="content">
+
+<!-- BEGIN CONTENT -->
+<pre>
+tar c directory/ | ssh lensman "tar x"
+</pre>
+<p>Unix is beautiful.</p>
+<p>(Yes, I know about scp and rsync.)</p>
+<p><strong>UPDATE 2004-08-06:</strong> Other options:</p>
+<p>This is the most ugly way of doing it.  It involves wasting disc space.</p>
+<pre>
+$ tar czf directory.tgz directory
+$ scp directory.tgz lensman:
+$ ssh lensman
+$ tar xzf directory.tgz
+</pre>
+<p>Until I did this research, I didn't know you could do this one:  (Notice the rcp-like syntax.)</p>
+<pre>
+$ scp -r directory lensman:
+</pre>
+<p>rsync is the king of the rcp replacements.  It has the most options and is best for incremental backups.<br />
+Set the RSYNC_RSH variable in your ~/.bashrc file.</p>
+<pre>
+$ export RSYNC_RSH="ssh"
+$ rsync -r directory lensman:
+</pre>
+
+
+<!-- END CONTENT -->
+
+      </div>
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <p>(<a href="../../../../archives/">back</a>)</p>
+    </div>
+  </body>
+</html>

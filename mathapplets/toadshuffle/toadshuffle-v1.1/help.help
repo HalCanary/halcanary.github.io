@@ -1,0 +1,74 @@
+Help File
+TOAD Shuffler Help
+?What is it?
+What is it?
+ 
+A TOAD is a Tiling Of an Aztec Diamond with domino tiles; a domino is
+a 2-by-1 rectangle.  Set "speed" to three steps,  and set "Initial
+Size" to 2.  Then click on "New AD."  TOAD Shuffler will now display
+an Aztec Diamond of order 2.  Hit Iterate AD several times.  Each time,
+it will display a larger  Aztec Diamond.  Each Diamond has been tiled
+with dominos.
+ 
+An order n Aztec diamond has 2^(n(n+1)/2) different tilings.  This
+program will produce a random tiling from the uniform distribution of
+all such tilings.
+
+?Credits.
+Credits.
+ 
+Hal Canary wrote TOAD Shuffler in the Spring of 2001 while working
+with the Spatial Systems Lab (SSL) at the University of Wisconsin-
+Madison.  TOAD Shuffler is based on the program shuffle.tcl by Matthew
+Blum.  TOAD Shuffler demonstrates the domino shuffling algorithm from
+Elkies, Kuperberg, Larson, and Propp.
+ 
+SSL is sponsored by the National Science Foundation through their
+VIGRE (Vertical Integration of Graduate Research and Education)
+program, with supplemental support from the National Science
+Foundation's REU (Research Experiences for Undergraduates) program and
+from the National Security Agency.  
+ 
+TOAD Shuffler, Copyright (C) 2001 Hal Canary
+TOAD Shuffler comes with ABSOLUTELY NO WARRANTY.  This program is free
+software; you can redistribute it and/or modify it under the terms of
+version 2 of the GNU General Public License as published by the Free
+Software Foundation.
+
+?What is a FPL?
+What is a FPL?
+ 
+A FPL (Fully Packed Loop) is a way to represent an ASM  (Alternating
+Sign Matrix.)  Each TOAD corresponds to two  ASMs.  If you turn on
+``Show FPL,'' TOAD Shuffler will  display the two FPLs that correspond
+to the two ASMs that  correspond to the TOAD.
+
+?Rules?
+What are the rules?
+ 
+There are three steps to ``growing'' a TOAD via the EKLP shuffling
+algorithm.  They are filling, destruction, and Sliding.
+ 
+Rule for Filling:
+Divide the untiled area into squares.  Then randomly tile each square
+with either two horizontal dominos or two vertical dominos.
+ 
+Rule for Destruction:
+If a north-going domino is about to collide with a south-going domino,
+delete them both.  Same for east and west-going dominos.
+ 
+Rule for Sliding:
+Move the horizontal dominos north or south, depending on their color.
+Move the vertical dominos east or west, depending on their color.  
+
+?Meaning of Colors?
+What do the colors mean?
+ 
+The colors of each tile represent the direction that they will move in
+the sliding step of the shuffling algorithm.  But the colors come from
+the position of the tiles.  Imagine the Aztec diamond as a large
+checkerboard where each domino overlaps two squares, a black and a
+white square.  if the black square is to the left of the white square,
+color it one color, if the black square is to the right, color it
+another color. The same applies to the two colors of vertical dominos.
+

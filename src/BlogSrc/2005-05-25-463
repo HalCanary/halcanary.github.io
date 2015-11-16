@@ -1,0 +1,37 @@
+TITLE=Visual Test CGI thing.
+COPYRIGHT=Copyright 2005-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2005-05-25 09:57:50
+PERMALINK=http://halcanary.org/vv/2005/05/25/463/
+PERMALINKPART=vv/2005/05/25/463/
+YEAR=2005
+MONTH=05
+DAY=25
+POSTID=463
+CATEGORIES=computers-code;
+MODE=htmldiv
+
+<pre>
+#!/bin/sh
+## VISUAL TEST CGI THING
+## (C) Hal Canary 2005
+## This is free software; you can redistribute
+## it and modify it under the terms of version
+## 2 of the GNU GPL.
+TEMP=tempfile.txt
+# 'random_word' grabs N rand words
+# from the dictionary file.
+random_word 200 &gt; ${TEMP}
+for word in $(cat ${TEMP}) ; do
+    hash=$(echo ${word} | sha1sum - ) ;
+    # remeber that s oe versions of
+    # cnvert are broken.
+    convert -background "#d0d0d0" &#92;
+        -fill black -pointsize 20 &#92;
+        label:${word} "${hash}.png";
+done
+rename "  -" "" *.png
+rm $TEMP
+</pre>
+<p>The other side of  it will be finished as soon as I get to it. Yes, I  know  that this one is  (quite literally) succeptable to a dictionary attack.</p>
+<p><strong>UPDATE 4pm:</strong> <a href="http://ups.physics.wisc.edu/~hal/comments/?2005-05-25-15-40">Go here for an example.</a></p>
+

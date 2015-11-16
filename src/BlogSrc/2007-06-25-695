@@ -1,0 +1,27 @@
+TITLE=Firefox Addons
+COPYRIGHT=Copyright 2007-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2007-06-25 09:17:51
+PERMALINK=http://halcanary.org/vv/2007/06/25/695/
+PERMALINKPART=vv/2007/06/25/695/
+YEAR=2007
+MONTH=06
+DAY=25
+POSTID=695
+CATEGORIES=computers-code;
+MODE=htmldiv
+
+<p>Favorite Firefox Addons:</p>
+<p><strong><a href="https://addons.mozilla.org/en-US/firefox/addon/1677">Go Up</a></strong></p>
+<blockquote><p>Lets you go &quot;up&quot; a level in the current website via the provided toolbar button, or by pressing Alt+Up arrow. The &quot;up&quot; is determined by trimming the last section of the URL, e.g. example.org/foo/somepage.html becomes example.org/foo/</p></blockquote>
+<p>I don't use this much, but it does come in handy every so often.</p>
+<p><strong><a href="https://addons.mozilla.org/en-US/firefox/addon/433">Flashblock</a></strong></p>
+<blockquote><p>Flashblock is an extension for the Mozilla, Firefox, and Netscape browsers that takes a pessimistic approach to dealing with Macromedia Flash content on a webpage and blocks ALL Flash content from loading. It then leaves placeholders on the webpage that allow you to click to download and then view the Flash content.</p></blockquote>
+<p>This is a lifesaver.  Try moving your mouse cursor over a piece of flash, then hitting the page-down key.  Nothing happens, unless the flash is blocked.</p>
+<p><strong><a href="https://addons.mozilla.org/en-US/firefox/addon/2648">MM3-ProxySwitch</a></strong></p>
+<blockquote><p>In the Firefox Browser (and other Mozilla programs) you can per default configure only the setting for one internet connection. With the MM3-ProxySwitch you can manage different configurations and simply switch over between these.</p></blockquote>
+<p>I use this one on my laptop for managing proxies.</p>
+<p><strong><a href="https://addons.mozilla.org/en-US/firefox/addon/4650">FullerScreen</a></strong></p>
+<blockquote><p>This extension enhances the Full Screen mode into a really full screen mode, hiding the remaining toolbars and statusbar and making them visible again when the mouse pointer hits an edge of the screen.</p>
+<p>It also offers a slideshow mode, enabling @projection CSS rules in a document when full screen mode is turned on. Navigation between slides in implemented in the extension and a slide manager showing thumbnails for the slides is available through shift-F11.</p></blockquote>
+<p>I'm still trying this out, but it seems like a good idea.</p>
+

@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Voder-Vocoder: find-and-sha1sum</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" id="stylesheet" href="/styles/scrapple-from-the-apple.css">
+  </head>
+  <!-- Copyright 2007-2015 Hal Canary. ALL RIGHTS RESERVED. -->
+
+  <body style="padding:0;margin:0;">
+    <div class="column" style="max-width:640px;margin:0 auto;">
+
+      <h1 class="blogtitle">find-and-sha1sum</h1>
+
+      <div class="byline">By Hal Canary,
+        2007-05-17 18:25:57
+        (<a href="http://halcanary.org/vv/2007/05/17/689/">link</a>)
+    <br><a href="../../../../category/computers-code/" class="categorylink">#computers-code</a>
+        </div>
+      <!-- SRC= 2007-05-17-689 -->
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <div class="content">
+
+<!-- BEGIN CONTENT -->
+<pre>#!/bin/sh
+# this script will calculate the sha1sum
+# for each regular file in the PWD.
+# and put it into a file called SHA1SUM.txt
+# It prints one &quot;.&quot; to the stderr for each
+# file processed.
+# DTPD
+
+[ -f &quot;SHA1SUM.txt&quot; ] &amp;&amp; rm -i SHA1SUM.txt
+TMPFILE=`mktemp`
+find . -type f &#0092;
+	-exec sha1sum {} ';' &#0092;
+	-fprintf /dev/stderr '.' &#0092;
+	&gt; &quot;${TMPFILE}&quot;
+mv &quot;${TMPFILE}&quot; SHA1SUM.txt
+echo '' 2&gt;&amp;1</pre>
+
+
+<!-- END CONTENT -->
+
+      </div>
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <p>(<a href="../../../../archives/">back</a>)</p>
+    </div>
+  </body>
+</html>

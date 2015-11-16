@@ -1,0 +1,54 @@
+TITLE=In honor of Telemonian Ajax, apparently
+COPYRIGHT=Copyright 2006-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2006-11-17 18:22:32
+PERMALINK=http://halcanary.org/vv/2006/11/17/663/
+PERMALINKPART=vv/2006/11/17/663/
+YEAR=2006
+MONTH=11
+DAY=17
+POSTID=663
+CATEGORIES=computers-code;
+MODE=htmldiv
+
+<p>Read <em>Head Rush Ajax</em> yesterday. If you already know Javascript and the DOM, all there is left to learn about the magic of Ajax is the XMLHttpRequest / Msxml2.XMLHTTP / Microsoft.XMLHTTP functions, which aparently all work identically.</p>
+<pre>
+/* ajax-http-request.js */
+function newHttpRequest() {
+  var request = null;
+  try {
+    request = new <a href="http://en.wikipedia.org/wiki/XMLHttpRequest">XMLHttpRequest()</a>;
+  } catch (trymicrosoft) {
+    try {
+      request = new ActiveXObject(&quot;Msxml2.XMLHTTP&quot;);
+    } catch (othermicrosoft) {
+      try {
+         request = new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);
+      } catch (failed) {
+        request = null;
+        }
+    }
+  }
+  return(request);
+}
+</pre>
+<p>Given that simple library file, you can do this:</p>
+<pre>
+/* some-other-javascript-file.js */
+var req = newHttpRequest();
+if (req == null)
+  alert(&quot;Error creating request object!&quot;);
+
+function dealWithResponse() {
+  if (req.readyState == 4) {
+    if (req.status == 200)
+      doSomethingWith(req.responseText);
+    } else {
+      throwAnErrorOrSomething();
+  }
+}
+req.open(&quot;GET&quot;, &quot;someurl&quot;, true);
+req.onreadystatechange = dealWithResponse;
+req.send(null);
+</pre>
+<p>And that's all you really need to know to do Ajax.</p>
+

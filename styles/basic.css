@@ -1,0 +1,20 @@
+@import url(minimum.css);
+.small-center {
+    text-align : center; 
+    font-size : 80%; 
+} 
+.centered {
+    text-align : center; 
+} 
+
+body {
+    padding-top : 0px; 
+    padding-right : 0px;  
+    padding-bottom : 0px; 
+    padding-left : 0px;
+    margin : 0 0 0 0;
+} 
+a:link, a:visited, a:active a:hover {
+    text-decoration : underline;
+
+}

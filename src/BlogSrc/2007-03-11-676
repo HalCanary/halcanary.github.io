@@ -1,0 +1,36 @@
+TITLE=hexer
+COPYRIGHT=Copyright 2007-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2007-03-11 10:16:41
+PERMALINK=http://halcanary.org/vv/2007/03/11/676/
+PERMALINKPART=vv/2007/03/11/676/
+YEAR=2007
+MONTH=03
+DAY=11
+POSTID=676
+CATEGORIES=computers-code;
+MODE=htmldiv
+
+<pre>/*  hexer - Convert  binary files to hexadecimal
+    Copyright 2007 Hal Canary
+    Dedicated to the Public Domain. */
+/*  cc -o hexer hexer.c */
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+int main (int argc, char *argv[]) {
+  int i=0;
+  char x;
+  while (fread(&amp;x, sizeof(x), 1, stdin) == 1) {
+    i++;
+    printf(&quot;%02hhx&quot;,x);
+    if (i % 32 == 0) {
+      printf(&quot;&#0092;n&quot;);
+    }
+  }
+  printf(&quot;&#0092;n&quot;);
+  return(0);
+}
+/*EOF*/</pre>
+<p>Or:</p>
+<pre>#!/bin/sh
+exec hexdump -e '32/1 &quot;%02x&quot; &quot;&#0092;n&quot;' &quot;$@&quot;</pre>
+

@@ -1,0 +1,32 @@
+TITLE=netbook network mp3 player
+COPYRIGHT=Copyright 2009-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2009-09-16 15:37:59
+PERMALINK=http://halcanary.org/vv/2009/09/16/817/
+PERMALINKPART=vv/2009/09/16/817/
+YEAR=2009
+MONTH=09
+DAY=16
+POSTID=817
+CATEGORIES=computers-code;music;
+MODE=htmldiv
+
+<p>I wanted to access my desktop&#0039;s music library from my living room and play it through the amplifier and speakers there.  So I grabbed my netbook, and after fumbling around with NFS for too long, I just tried:</p>
+<pre>yum install sshfs</pre>
+<p>(It&#0039;s a OLPC XO&#0045;1, so it&#0039;s Redhat&#0045;based.) And then wrote a little script:</p>
+<pre>#!/bin/sh
+## ~/bin/mount&#0045;music
+mkdir -p "${HOME}/music"
+sshfs hal@sloop:/d/music "${HOME}/music"</pre>
+<p>I installed mpg123&#0045;alsa (by the simple expedient of copying the executable) and wrote a little script to run it.</p>
+<pre>#!/bin/sh
+test &#0045;f &quot;${HOME}/music/index.txt&quot; || &#0092;
+    sshfs hal@sloop:/d/music &quot;${HOME}/music&quot;
+cd &quot;${HOME}/music&quot;
+exec mpg123&#0045;alsa &#0045;&#0045;control &#0045;&#0045;long&#0045;tag &#0092;
+    &#0045;&#0045;shuffle &#0045;&#0045;list index.txt</pre>
+<p>And index.txt is a file created with the find command on the server:</p>
+<pre>#!/bin/sh
+# run this script to refresh the index file.
+cd $HOME/music
+find . &#0045;type f &#0045;a &#0045;name &#0039;*.mp3&#0039; &gt; index.txt</pre>
+

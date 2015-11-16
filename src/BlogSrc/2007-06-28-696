@@ -1,0 +1,34 @@
+TITLE=Excessively long URLs.
+COPYRIGHT=Copyright 2007-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2007-06-28 10:14:14
+PERMALINK=http://halcanary.org/vv/2007/06/28/696/
+PERMALINKPART=vv/2007/06/28/696/
+YEAR=2007
+MONTH=06
+DAY=28
+POSTID=696
+CATEGORIES=computers-code;
+MODE=htmldiv
+
+<p>I hate <a href="http://www.w3.org/Provider/Style/URI">unnecessarily long URLs</a>.  One of the things I always try to figure out how to leave out is the file name extension.  As Tim Berners-Lee says:</p>
+<blockquote><p>&quot;cgi&quot;, even &quot;.html&quot; is something which will change. You may not be using HTML for that page in 20 years time, but you might want today's links to it to still be valid. The canonical way of making links to the W3C site doesn't use the extension</p></blockquote>
+<p>Here are two ways of doing this with Apache.</p>
+<p>1) Insert this line into your &quot;.htaccess&quot; file:</p>
+<pre>DefaultType text/html</pre>
+<p>Then when you create any new html pages, call them &quot;foobar&quot; instead of &quot;foobar.html&quot; and then your URL will be:</p>
+<pre>http://example.com/directory/foobar</pre>
+<p>and not</p>
+<pre>http://example.com/directory/foobar.html</pre>
+<p>Which makes more sense.  Now you can at some later point in time change the default to .shtml or .php</p>
+<p>2)  Put this in your &quot;.htaccess&quot; file:</p>
+<pre>Options All MultiViews</pre>
+<p>Then put a file called &quot;foobar.html&quot; in the directory &quot;directory/&quot; and the URL:</p>
+<pre>http://example.com/directory/foobar</pre>
+<p>will automagically work.</p>
+<hr />
+<p>Other options:</p>
+<p>3) Here's a third way:</p>
+<pre>RewriteEngine on
+RewriteCond %{REQUEST_FILENAME}.html  -f
+RewriteRule ^(.*)$           $1.html</pre>
+

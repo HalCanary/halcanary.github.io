@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Voder-Vocoder: Setting the Gnome Desktop Background With a Script</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" id="stylesheet" href="/styles/scrapple-from-the-apple.css">
+  </head>
+  <!-- Copyright 2009-2015 Hal Canary. ALL RIGHTS RESERVED. -->
+
+  <body style="padding:0;margin:0;">
+    <div class="column" style="max-width:640px;margin:0 auto;">
+
+      <h1 class="blogtitle">Setting the Gnome Desktop Background With a Script</h1>
+
+      <div class="byline">By Hal Canary,
+        2009-09-10 18:23:48
+        (<a href="http://halcanary.org/vv/2009/09/10/813/">link</a>)
+    <br><a href="../../../../category/computers-code/" class="categorylink">#computers-code</a>
+        </div>
+      <!-- SRC= 2009-09-10-813 -->
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <div class="content">
+
+<!-- BEGIN CONTENT -->
+<pre>#!/bin/sh
+## Written 2009 Hal Canary
+## based on numerous examples
+## DTPD
+if [ &quot;$#&quot; &#0045;lt 1 ] ; then
+   X=`basename &quot;$0&quot;`
+   echo &quot;Useage:  $X FILENAME&quot;
+   exit 1
+fi
+D=`dirname &quot;$1&quot;`
+B=`basename &quot;$1&quot;`
+cd $D
+X=`pwd`/$B
+cd &#0045;
+if [ ! &#0045;f &quot;$X&quot; ] ; then
+  echo &quot;not a file: &#0039;$X&#0039;.&quot;
+  exit 1
+fi
+echo &quot;New background: &#0039;$X&#0039;&quot;
+gconftool&#0045;2 &#0045;t str &#0045;&#0045;set &#0092;
+  /desktop/gnome/background/picture_filename &#0092;
+  &quot;$X&quot;
+gconftool&#0045;2 &#0045;t str &#0045;&#0045;set &#0092;
+  /desktop/gnome/background/picture_options &#0092;
+  &quot;centered&quot;
+exit 0</pre>
+
+
+<!-- END CONTENT -->
+
+      </div>
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <p>(<a href="../../../../archives/">back</a>)</p>
+    </div>
+  </body>
+</html>

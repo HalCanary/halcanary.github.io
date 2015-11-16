@@ -1,0 +1,14 @@
+TITLE=Blog Changes
+COPYRIGHT=Copyright 2003-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2003-08-13 18:48:42
+PERMALINK=http://halcanary.org/vv/2003/08/13/90/
+PERMALINKPART=vv/2003/08/13/90/
+YEAR=2003
+MONTH=08
+DAY=13
+POSTID=90
+CATEGORIES=meta;
+MODE=htmldiv
+
+<p>I'm making a few changes to the blog form on this site. The eventual goal is to make a RSS feed. To do that I've got to first make some changes in my data structures.</p>
+

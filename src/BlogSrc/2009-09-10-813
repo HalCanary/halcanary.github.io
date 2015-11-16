@@ -1,0 +1,39 @@
+TITLE=Setting the Gnome Desktop Background With a Script
+COPYRIGHT=Copyright 2009-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2009-09-10 18:23:48
+PERMALINK=http://halcanary.org/vv/2009/09/10/813/
+PERMALINKPART=vv/2009/09/10/813/
+YEAR=2009
+MONTH=09
+DAY=10
+POSTID=813
+CATEGORIES=computers-code;
+MODE=htmldiv
+
+<pre>#!/bin/sh
+## Written 2009 Hal Canary
+## based on numerous examples
+## DTPD
+if [ &quot;$#&quot; &#0045;lt 1 ] ; then
+   X=`basename &quot;$0&quot;`
+   echo &quot;Useage:  $X FILENAME&quot;
+   exit 1
+fi
+D=`dirname &quot;$1&quot;`
+B=`basename &quot;$1&quot;`
+cd $D
+X=`pwd`/$B
+cd &#0045;
+if [ ! &#0045;f &quot;$X&quot; ] ; then
+  echo &quot;not a file: &#0039;$X&#0039;.&quot;
+  exit 1
+fi
+echo &quot;New background: &#0039;$X&#0039;&quot;
+gconftool&#0045;2 &#0045;t str &#0045;&#0045;set &#0092;
+  /desktop/gnome/background/picture_filename &#0092;
+  &quot;$X&quot;
+gconftool&#0045;2 &#0045;t str &#0045;&#0045;set &#0092;
+  /desktop/gnome/background/picture_options &#0092;
+  &quot;centered&quot;
+exit 0</pre>
+

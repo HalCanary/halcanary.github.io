@@ -1,0 +1,29 @@
+TITLE=reset-ramdisk
+COPYRIGHT=Copyright 2004-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2004-03-28 00:50:48
+PERMALINK=http://halcanary.org/vv/2004/03/28/212/
+PERMALINKPART=vv/2004/03/28/212/
+YEAR=2004
+MONTH=03
+DAY=28
+POSTID=212
+CATEGORIES=computers-code;
+MODE=htmldiv
+
+<p>The issue: as far as I know, no editor shreds old versions of files upon writing new versions.  How do you keep data off of a hard drive? Use the ramdisk.</p>
+<pre>
+#!/bin/sh
+## /usr/local/bin/reset-ramdisk ##
+if `df | grep -q ramdisk` ;then
+    umount /dev/ramdisk
+fi
+shred -n 2 /dev/ramdisk
+/sbin/mke2fs -q /dev/ramdisk
+mkdir -p /mnt/ramdisk
+mount /dev/ramdisk /mnt/ramdisk
+chmod 777 /mnt/ramdisk
+</pre>
+<p>Run that code before and after you are done with your work.<br />
+(Assumes a single-user system.) Don't forget to turn off swap!</p>
+<pre>$ sudo /sbin/swapoff -a</pre>
+

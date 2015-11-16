@@ -1,0 +1,32 @@
+TITLE=Vaio Notebook / Anarchy
+COPYRIGHT=Copyright 2002-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2002-10-26 00:00:00
+PERMALINK=http://halcanary.org/vv/2002/10/26/19/
+PERMALINKPART=vv/2002/10/26/19/
+YEAR=2002
+MONTH=10
+DAY=26
+POSTID=19
+CATEGORIES=computers-code;
+MODE=htmldiv
+
+<p>A fool and his money are soon parted. I, on the hand, felt that the economy needed stimulating. So I bought a new sub-notebook computer. It's a Sony VAIO PCG-SRX87 (not to be confused with a Swarny WOW).  I meant to install linux on it as soon as possible, but soon gave up, seeing as the install program failed to recognize either my DVD drive or hard drive. </p>
+<p>So instead, I installed a lot of cygwin stuff on top of XP. I'm using windowmaker on xfree86 on cygwin. </p>
+<p>Now I have five different ways to connect to the internet from the notebook.</p>
+<ol>
+<li>Dialing in to my isp.</li>
+<li>Dialing into work.</li>
+<li>Wired ethernet to wherever.</li>
+<li>Wireless ehternet where I can find it. (I've been moderately  successful with this. Mark's house has wireless, it worked there.  I've also found a signal at the Memorial Union, although I couldn't  get the authentication to work. The other day, I found an open  network from the stifskeller. I am tempted to chalk it, but that  might be considered graphiti when you do it on the inside of a  building. I think a better thing to do would be to get out my pocket  knife and carve the warmark into the table. Then noone would  notice. )</li>
+<li>Wireless ethernet to connect to my desktop. Then ssh into the<br />
+desktop, start the ppp conection remotely, and use X11 forwarding to<br />
+run browser remotely.</li>
+</ol>
+<hr />
+<p>I started reading the <a href="http://www.diy-punk.org/anarchy/">Anarchy  FAQ</a> the other day. In order for me to be an anarchist, someone is going to have to show me that a 100% anarchist society would work. On the other hand, I do believe that anarchy works in certain situations. I'd like to see the internet become even less organized. We shouldn't rely so much on DNS. <strong>DNS is not the internet.</strong></p>
+<p>The reason I'm thinking about this is that I'd like to see someone organize a wireless cooperative in this city. The idea is to buy bandwidth in bulk and distribute it throughout the city using cheap wireless hardware.</p>
+<hr />
+<p>Fun links: <a href="http://www.counterpunch.org/wormer1011.html">one</a> and  <a href="http://www.counterpunch.org/leupp1003.html">two</a>.</p>
+<hr />
+<p>A while back I purchased a subscriotion to  <a href="http://salon.com">Salon</a>. So far, I'm happy with it. It's better than most newspapers that I've ever subscribed to. Especially considering how much I hate killing trees just to print up boring sports scores or 14 hour old stock prices.</p>
+

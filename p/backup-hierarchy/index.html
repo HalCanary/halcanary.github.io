@@ -1,0 +1,145 @@
+<!doctype html>
+<html><head>
+<meta charset="UTF-8">
+<title>World of Hal Canary</title>
+<link rel="stylesheet" type="text/css" href="/styles/scrapple-from-the-apple.css">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<meta name="viewport" content="width=532">
+<script>
+function search_hco() {
+  document.getElementById("search-link-halcanary-org").style.display = "none";
+  document.getElementById("search-halcanary-org").style.display = "block";
+  return false;
+}
+</script>
+</head>
+<body><div class="column" style="width:512px;">
+<h1><a href="/" class="hiddenlink"><img src="/images/Hal_W_Canary_3_hand.jpg" alt="Hal W Canary, III" width="400" height="91" style="border:0px"></a></h1>
+<div class="section">
+<nav><p><a href="/">Home</a></p></nav>
+</div>
+<div class="section">
+<h2>Backup Directory Hierarchy To CDR/DVDR.</h2>
+<p>I use this on my /home/music directory, which is 23 GiB.</p>
+<pre class="indent">
+#!/usr/bin/perl
+
+##   Backup Hierarchy.
+##
+##	Version:  backup-hierarchy.pl v2005-06-24.
+##
+##	Description:  backup a directory hierarchy to a set 
+##	of CDR/DVDRs.
+##
+##   Copyright (c) 2005 Hal Canary.
+##
+##	hal at ups dot physics dot wisc dot edu.
+##
+##   Licence Information:
+##
+##	This program is free software; you can redistribute it
+##	and/or modify it under the terms of version 2 of the
+##	GNU General Public License as published by the Free
+##	Software Foundation.
+##
+##	A copy of the licence can be found at:
+##			http://www.gnu.org/licenses/gpl.txt
+##
+##	This program is distributed in the hope that it will
+##	be useful, but WITHOUT ANY WARRANTY; without even the
+##	implied warranty of MERCHANTABILITY or FITNESS FOR A
+##	PARTICULAR PURPOSE.  See the GNU General Public
+##	License for more details.
+##
+##   TO DO: Limit symlink filename length to 64 chars.
+##
+##   How to use:
+##	Change the $backupdir, $startdir, and $originaldir
+##	variables.  Maybe also change the $discsize variable.
+##
+##	After running the program, copy or symlink INDEX.txt
+##	into each directory.  Now you can use a single disc to
+##	look up files on ALL discs.
+##
+##	If you want to preserve permissions and such, tar up
+##	the files before burning.  "tar --dereference" will
+##	dereference those symlinks.  For backing up music and
+##	video this is most likey unnessisary.
+##
+##	mkisofs -V "MUSIC 001" -r -J -f -quiet \
+##		-o MUSIC_001.iso MUSIC_001/
+##	cdrecord -v -pad -eject MUSIC_001.iso
+
+my $backupdir = "/home/hal/MUSIC_BACKUP"; #abs
+my $backupname = "MUSIC" ;
+my $startdir = "/home"; #abs
+my $originaldir = "music"; #rel
+mkdir $backupdir;
+#$discsize = 700*1024*1024; # Bytes for CD-R
+my $discsize = 4.7*1000*1000*1000; # Bytes for DVD-R
+
+my $num=1;
+my $dirnum = &amp;padnum($num);
+my $disc = $backupdir."/".$backupname."_".$dirnum;
+my $cursize = 0;
+mkdir $disc;
+
+chdir $startdir ;
+&amp;dealwithdir($originaldir);
+
+chdir $backupdir ;
+system ("/bin/ls -shpR . &gt; INDEX.txt");
+
+sub dealwithdir {
+    my $dir=shift;
+    mkdir $disc."/".$dir ;
+    opendir(DH, $dir);
+    my @contents = readdir(DH);
+    closedir(DH);    #print($dir."\n");
+    foreach my $file (@contents) {
+	if (-f $dir . "/" . $file ) {
+	    dealwithfile($dir, $file);
+	} elsif ( -d $dir . "/" . $file ) {
+	    &amp;dealwithdir ($dir . "/" . $file)
+		unless ($file eq "."
+			or $file eq "..");
+	}
+    }
+}
+
+sub dealwithfile {
+    my $dir = shift;
+    my $file = shift;
+    my $size = (stat($dir."/".$file))[7] ;
+    $cursize += $size;
+    if ($cursize &gt; $discsize) {
+	$num++;
+ 	$dirnum = &amp;padnum($num);
+	$cursize = $size ;
+	$disc = $backupdir."/"
+	    .$backupname."_".$dirnum;
+	mkdir $disc;
+	system( "mkdir -p ".$disc."/".$dir );
+    }
+    my $bdir = $disc."/".$dir ;
+    symlink( $startdir."/".$dir."/".$file ,
+	     $bdir."/".$file )
+	or die "HELP";
+}
+
+sub padnum {
+    $num=shift;
+    return "00".$num if $num%lt;10;
+    return "0".$num if $num%lt;100;
+    return "$num";
+}
+</pre>
+</div><div class="section"><p class="rightside">file modification time: 2005-06-24 16:44:06</p></div>
+<div class="section">
+<p class="centered">Copyright 1997-2013 by Hal Canary.<br>
+<i>mailto: halcanary at gmail dot com</i><br>
+<a href="http://halcanary.org"><i>http://halcanary.org</i></a></p>
+</div>
+</div>
+</body>
+</html>

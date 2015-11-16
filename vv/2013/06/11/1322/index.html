@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Voder-Vocoder: spiral</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" id="stylesheet" href="/styles/scrapple-from-the-apple.css">
+  </head>
+  <!-- Copyright 2013-2015 Hal Canary. ALL RIGHTS RESERVED. -->
+
+  <body style="padding:0;margin:0;">
+    <div class="column" style="max-width:640px;margin:0 auto;">
+
+      <h1 class="blogtitle">spiral</h1>
+
+      <p class="byline">Your challenge: make a pretty postscript picture as one tweet</p>
+
+      <div class="byline">By Hal Canary,
+        2013-06-11 14:00:34
+        (<a href="http://halcanary.org/vv/2013/06/11/1322/">link</a>)
+    <br><a href="../../../../category/computers-code/" class="categorylink">#computers-code</a>
+        </div>
+      <!-- SRC= 2013-06-11-1322 -->
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <div class="content">
+
+<!-- BEGIN CONTENT -->
+<p>Your challenge: make a pretty postscript picture as one tweet.  "%!\n"  is not necessary
+(<a href="https://twitter.com/halcanary/status/344530170532741120">tweet</a>)</p>
+
+<pre><code>%!
+300 300 translate newpath 3 0 2 copy moveto 604 { 5 add
+exch 1.01 mul exch 2 copy cos mul 3 copy pop sin mul
+lineto } repeat stroke showpage
+</code></pre>
+
+<p><img src="/images/postscriptChallenge_spiral.png" alt="" title="" /></p>
+
+<hr />
+
+<p><a href="https://twitter.com/gmfawcett/status/344891033202614272">gmfawcett:</a></p>
+
+<pre><code>%!
+/n 90 def 150 150 translate newpath n n moveto 36 { 170
+rotate n n lineto} repeat stroke showpage
+</code></pre>
+
+<p><img src="/images/postscriptChallenge_spirograph.png" alt="" title="" /></p>
+
+<hr />
+
+<p><a href="https://twitter.com/seanjensengrey/status/344825151264808961">seanjensengrey:</a></p>
+
+<pre><code>%!
+/box { newpath moveto 72 0 rlineto 0 72 rlineto -72 0
+rlineto closepath stroke } def 99 99 translate 0 1 5{60
+rotate -20 0 box}for showpage
+</code></pre>
+
+<p><img src="/images/postscriptChallenge_sixBoxes.png" alt="" title="" /></p>
+
+<hr />
+
+<p><a href="https://twitter.com/gmfawcett/status/344986403962253312">gmfawcett:</a></p>
+
+<pre><code>%!
+/Courier findfont 50 scalefont setfont 150 250 moveto
+(#postscriptchallenge) { 1 string dup 0 4 3 roll put
+show -18 rotate} forall
+showpage
+</code></pre>
+
+<p><img src="/images/postscriptChallenge_words.png" alt="" title="" /></p>
+
+<hr />
+
+<p>Note: to display these,m I used this command:</p>
+
+<pre><code>gs -sDEVICE=png16m -g500x500 -sOutputFile=out.png &lt;&lt;EOF
+300 300 translate newpath 3 0 2 copy moveto 604 { 5 add
+exch 1.01 mul exch 2 copy cos mul 3 copy pop sin mul
+lineto } repeat stroke showpage
+EOF
+</code></pre>
+
+<!-- END CONTENT -->
+
+      </div>
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <p>(<a href="../../../../archives/">back</a>)</p>
+    </div>
+  </body>
+</html>

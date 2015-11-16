@@ -1,0 +1,21 @@
+TITLE=~/bin/longest-filename
+COPYRIGHT=Copyright 2008-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2008-06-07 18:10:57
+PERMALINK=http://halcanary.org/vv/2008/06/07/722/
+PERMALINKPART=vv/2008/06/07/722/
+YEAR=2008
+MONTH=06
+DAY=07
+POSTID=722
+CATEGORIES=computers-code;
+MODE=htmldiv
+
+<pre>#!/bin/sh
+#DTPD#
+# ~/bin/longest-filename
+# How long is the longest filename
+# in these directories?
+{ for x in &quot;$@&quot; ; do
+find &quot;$x&quot; -exec basename {} &#0092;;
+done } | wc -L</pre>
+

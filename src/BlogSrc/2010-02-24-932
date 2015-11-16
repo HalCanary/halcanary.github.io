@@ -1,0 +1,19 @@
+TITLE=zip-one-file
+COPYRIGHT=Copyright 2010-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2010-02-24 08:47:50
+PERMALINK=http://halcanary.org/vv/2010/02/24/932/
+PERMALINKPART=vv/2010/02/24/932/
+YEAR=2010
+MONTH=02
+DAY=24
+POSTID=932
+CATEGORIES=computers-code;
+MODE=htmldiv
+
+<pre>#!/bin/sh
+## zip&#0045;one&#0045;file
+## DTPD
+for x in &quot;$@&quot;; do
+  zip &quot;${x}.zip&quot; &quot;$x&quot;
+done</pre>
+

@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Voder-Vocoder: palm pilot scripts</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" id="stylesheet" href="/styles/scrapple-from-the-apple.css">
+  </head>
+  <!-- Copyright 2006-2015 Hal Canary. ALL RIGHTS RESERVED. -->
+
+  <body style="padding:0;margin:0;">
+    <div class="column" style="max-width:640px;margin:0 auto;">
+
+      <h1 class="blogtitle">palm pilot scripts</h1>
+
+      <div class="byline">By Hal Canary,
+        2006-02-10 14:26:59
+        (<a href="http://halcanary.org/vv/2006/02/10/560/">link</a>)
+    <br><a href="../../../../category/computers-code/" class="categorylink">#computers-code</a>
+        </div>
+      <!-- SRC= 2006-02-10-560 -->
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <div class="content">
+
+<!-- BEGIN CONTENT -->
+<p>Pilot scripts:</p>
+<pre>
+#!/bin/sh
+## $HOME/Palm/pilot-xfer-install
+export PILOTPORT=/dev/ttyS0
+export PILOTRATE=115200
+if ! (/bin/ls -l $PILOTPORT | grep -q rwxrwxrwx) ; then
+    echo "sudo chmod 777 $PILOTPORT"
+    sudo chmod 777 $PILOTPORT
+fi
+exec pilot-xfer -i "$@"</pre>
+<p>and</p>
+<pre>
+#!/bin/sh
+## $HOME/Palm/INSTALL_EVERYTHING.sh
+exec $HOME/Palm/pilot-xfer-install &#92;
+    $HOME/Palm/Docs/*.pdb &#92;
+    $HOME/Palm/Apps/*.prc</pre>
+
+
+<!-- END CONTENT -->
+
+      </div>
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <p>(<a href="../../../../archives/">back</a>)</p>
+    </div>
+  </body>
+</html>

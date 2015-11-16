@@ -1,0 +1,273 @@
+/*	This file copyright (C) 2005-2010 Hal Canary
+	http://halcanary.org/
+	You are free to use it under the terms of the
+	Creative Commons ShareAlike 1.0 Liscense
+	http://creativecommons.org/licenses/sa/1.0/
+*/
+.maxy {
+	max-width: 100%;
+        height:auto;
+}
+.deemphasize {
+	color: #555555;
+	background-color: #ffffff;
+}
+.achtung {
+	color: #aa0000;
+	background-color: #ffffff;
+}
+.indent {
+	margin-left: 2em;
+}
+.centered {
+	text-align: center;
+}
+.rightside {
+	text-align: right;
+}
+blockquote {
+	border-left:2px #dddddd solid;
+	margin-left:19px;
+	padding-left:19px;
+	border-right:2px #dddddd solid;
+	margin-right:19px;
+	padding-right:19px;
+}
+pre {
+	/*overflow-x: auto;*/
+	overflow:auto;
+	overflow-y:visible;
+	border-left:2px #dddddd solid;
+	margin-left:19px;
+	padding-left:19px;
+	color: black;
+	background-color: white;
+	z-index: 12
+}
+div.column {
+	color: black;
+	background-color: white;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	max-width: 640px;
+	width:expression(document.body.clientWidth > 640? "640px": "auto" );
+	text-align: left;
+	padding: 0 8px 8px 8px;
+}
+body {
+	color: #000000;
+	background-color: #dddddd;
+	padding:0;
+	margin:0;
+	font-family: sans-serif;
+	text-align: center;
+	/*background-image:url('/images/penguin-sushi-fratch.jpg');*/
+	background-image:url('/images/washeddeepfield.jpg');
+	background-repeat: repeat;
+	background-attachment: fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+}
+.section {
+	border-top: 2px solid #dddddd;
+	clear: both;
+}
+.subsection, .blog {
+	border-top: 2px dashed #dddddd;
+	clear: both;
+}
+table {
+	border-style: solid;
+	border-color: #888;
+	border-width: 1px;
+	border-collapse: collapse;
+}
+table td, table th {
+	border: 1px solid #888;
+	padding: 5px;
+}
+.blog-notes {
+	text-align: center;
+	clear: both;
+}
+.fl {
+	float: left;
+	margin: 0 20px 4px 0;
+}
+.fr {
+	float: right;
+	margin: 4px;
+}
+ul.flat, ol.flat {
+	margin: 0.5em 0;
+	padding: 0;
+	list-style-type: none;
+	list-style-image: none;
+}
+ul.flat li.first:before, ol.flat li.first:before {
+	content: "";
+}
+ul.flat li:before, ol.flat li:before {
+	content: " | ";
+}
+ul.flat li, ol.flat li {
+	display: inline;
+}
+ul.flat li.first, ol.flat li.first {
+	font-weight: bolder;
+}
+input.formarea, textarea.formarea {
+	border: 2px solid #222;
+	padding: 4px;
+}
+h2 {
+	margin: 0.83em 0 0.1em;
+}
+.byline {
+	background: #fff;
+	color: #888;
+}
+img.avatar {
+	float: left;
+	margin-right: 5px;
+	border-style: solid;
+	border-color: #888;
+	border-width: 2px;
+	background: #eee;
+	color: #222;
+}
+div.comment {
+	clear: left;
+	margin-left: 2em;
+	padding-left: 1em;
+	border-left: 2px solid #888;
+}
+.comment-info {
+	font-size: 1.17em;
+	font-weight: bold;
+}
+
+
+h1.big{
+	font-size: 4em;
+}
+
+h1 {
+	font-size: 2.5em;
+	text-align: center;
+	margin: 0;
+	padding: 0.5ex 0;
+	font-weight: normal;
+}
+a.hiddenlink:link {
+	background: #fff;
+	color: #000;
+	text-decoration: none;
+}
+a.hiddenlink:visited {
+	background: #fff;
+	color: #000;
+	text-decoration: none;
+}
+a.hiddenlink:active {
+	background: #fff;
+	color: #000;
+	text-decoration: none;
+}
+a:link, a:visited, a:active {
+	text-decoration: underline;
+}
+a:link {
+	color: #000088;
+}
+a:visited {
+	color: #440044;
+}
+a:active {
+	color: #ff0000;
+}
+a:hover {
+	cursor:pointer;
+}
+
+hr {
+	color: #dddddd;
+	background-color: #dddddd;
+	height: 4px;
+	border: 0;
+	width: 60%;
+}
+dl dt {
+	margin: 0.5em 0 0 0;
+}
+/* code markup */
+.cbracket {
+	color: #440044;
+	background-color: #ffffff;
+	text-decoration: none;
+	font-weight: bold;
+}
+.comment {
+	color: #880000;
+	background-color: #ffffff;
+	text-decoration: none;
+	font-weight: normal;
+}
+.function {
+	color: #008800;
+	background-color: #ffffff;
+	text-decoration: none;
+	font-weight: bold;
+}
+.keyword {
+	color: #000088;
+	background-color: #ffffff;
+	text-decoration: none;
+	font-weight: normal;
+}
+.normal {
+	color: #000000;
+	background-color: #ffffff;
+	text-decoration: none;
+	font-weight: normal;
+}
+.number {
+	color: #224466;
+	background-color: #ffffff;
+	text-decoration: none;
+	font-weight: normal;
+}
+.preproc {
+	color: #444400;
+	background-color: #ffffff;
+	text-decoration: underline;
+	font-weight: normal;
+}
+.specialchar {
+	color: #004488;
+	background-color: #ffffff;
+	text-decoration: none;
+	font-weight: normal;
+}
+.string {
+	color: #004444;
+	background-color: #ffffff;
+	text-decoration: none;
+	font-weight: normal;
+}
+.symbol {
+	color: #008844;
+	background-color: #ffffff;
+	text-decoration: none;
+	font-weight: normal;
+}
+.type {
+	color: #444444;
+	background-color: #ffffff;
+	text-decoration: none;
+	font-weight: normal;
+}

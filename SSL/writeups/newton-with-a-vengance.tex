@@ -1,0 +1,117 @@
+\documentclass[notitlepage, 10pt]{article}
+\title{Newton's Method as a Formal Recurrance}
+%\title{Newton's Method Applied Symbolically to Quadratics}
+%\title{Newton's Recurrence}
+\author{{\sc 
+	Carl Edquist,
+	Sam Lachterman,
+	Brendan Younger,
+	Hal Canary} \\
+{\small University of Wisconsin--Madison}}
+%\date{April 28, 2004}
+\usepackage{amssymb, amsthm, amsmath, amscd}
+\usepackage{fullpage}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\hypersetup{pdfstartview=FitH,pdfauthor={SSL},
+pdftitle={Newton's Method Applied Symbolically to Quadratics}}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{conjecture}{Conjecture}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Cstar}{\widetilde{\mathbb{C}}}
+\newcommand{\onto}{\rightarrow}
+\newcommand{\binomial}[2]{\genfrac{(}{)}{0pt}{}{ #1 }{ #2 }}
+\newcommand{\qbinomial}[2]{\genfrac{[}{]}{0pt}{}{ #1 }{ #2 }_q }
+
+\begin{document}
+
+\bibliographystyle{plain} % Entries are ordered alphabetically;
+%\bibliographystyle{unsrt} % Entries are not ordered alphabetically,
+			  %  but in the order they are first referenced.
+%\bibliographystyle{abbrv} % The bibliography looks the same as for
+			  %  plain style except that first names and
+			  %  names of journals and months are abbreviated;
+%\bibliographystyle{alpha} % The bibliography looks the same as for
+			  %  plain style except that the reference
+			  %  markers are not just 1,2,3... but are
+			  %  based on authors' initials and publication year;
+\bibliographystyle{plain} % Entries are ordered alphabetically;
+
+\maketitle
+
+%% \begin{abstract}
+%% Iterating Newton's method symbolically for the general quadratic
+%% $ax^2+bx+c$ yields a rational function $\frac{P_n(x)}{Q_n(x)}$, the
+%% numerator and denominator of which are polynomials with highly
+%% composite coefficients. In particular, the coefficients have no prime
+%% factors greater than $2^n$ after $n$ iterations.
+%% \end{abstract}
+
+\section*{Non-commuting Algebra}
+
+We have defined $P_n$ and $Q_n$ with $P_0(x)=x$ and $Q_0(x)=1$.  If we
+instead let $P_0(x)=x$ and $Q_0(x)=y$, it can be verified that we get
+slightly different formula:
+
+\[
+P_n(x,y) = a^{2^n-1}x^{2^n}~+~\sum\limits_{k=0}^{(2^n-2)} 
+\sum\limits_{i=1}^{~(2^n-k-1)~} 
+(-1)^{i} \binomial{2^n }{ k} \binomial{2^n-k-i-1}{i-1}  
+a^{k+i-1}~ b^{2^n-k-2i} ~c^i ~x^k y^{2^n-k}
+\]
+\[
+Q_n(x,y) = \sum\limits_{k=0}^{(2^n-1)}
+\sum\limits_{i=0}^{~(2^n-k-1)~} (-1)^i \binomial{2^n}{k} 
+\binomial{2^n-k-i-1}{i} 
+a^{k+i} ~b^{2^n-k-2i-1} ~c^i ~x^k y^{2^n-k}
+\]
+
+But suppose that $x$ and $y$ do not commute, but rather satisfy the
+formula $yx=qxy$.  What happens?  If we define
+\[ \qbinomial{n }{ k} = \prod_{i=1}^{n-k}
+\frac{ 1-q^{i+k} }{ 1-q^i }\]
+then the q-version of the binomial formula is: \cite{qbin}
+\[
+(x + y)^n = \sum_{k=0}^{n} \qbinomial{n }{ k} x^k y^{n-k}.
+\]
+
+\begin{conjecture}
+If $yx=qxy$ and if $P_n(x,y)$ and $P_n(x,y)$ are defined by
+\begin{eqnarray*}
+& P_0     = x \qquad Q_0 = y \\
+& P_{n+1} = a P_n^2 - c Q_n^2  \qquad
+Q_{n+1} = a P_n Q_n + a Q_n P_n + b Q_n Q_n .
+\end{eqnarray*}
+then
+\[
+P_n(x,y) = a^{2^n-1}x^{2^n}~+~\sum\limits_{k=0}^{(2^n-2)} 
+\sum\limits_{i=1}^{~(2^n-k-1)~}  (-1)^{i} 
+\qbinomial{2^n }{ k} \binomial{2^n-k-i-1}{i-1}  
+a^{k+i-1}~ b^{2^n-k-2i} ~c^i ~x^k y^{2^n-k}
+\]
+\[
+Q_n(x,y) = \sum\limits_{k=0}^{(2^n-1)}
+\sum\limits_{i=0}^{~(2^n-k-1)~} (-1)^i 
+\qbinomial{2^n }{ k} \binomial{2^n-k-i-1}{i} 
+a^{k+i} ~b^{2^n-k-2i-1} ~c^i ~x^k y^{2^n-k}.
+\]
+\end{conjecture}
+
+It is not clear to us that the proof we provided for Theorem
+(\ref{thm:maintheorem}) is aplicable to this more general conjecture.
+
+%% \begin{thebibliography}{9}
+%% \bibitem{qbin}
+%% {\sc M.~P.~Schutzenberger}. 
+%% ``Une interpretation de certaines solutions de l'equation
+%% fonctionnelle: $F(x + y) = F(x)F(y)$.''
+%% \emph{C.~R.~Acad.~Sci.~Paris}, 236 (1953), 352-353.
+%% \end{thebibliography}
+
+\bibliography{newton-with-a-vengance} 
+\end{document}
+
+

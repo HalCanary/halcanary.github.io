@@ -1,0 +1,16 @@
+TITLE=VTKViewer
+COPYRIGHT=Copyright 2013-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2013-04-27 14:30:21
+PERMALINK=http://halcanary.org/vv/2013/04/27/1312/
+PERMALINKPART=vv/2013/04/27/1312/
+YEAR=2013
+MONTH=04
+DAY=27
+POSTID=1312
+CATEGORIES=computers-code;software-projects;
+SUMMARY=A small and fast application to quickly view several 3D file formats.  There is both a C++ and a Python version.
+MODE=markdown
+
+[VTKViewer](https://github.com/HalCanary/vtkviewer)  
+![](http://halcanary.org/images/barbell.png)
+

@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Voder-Vocoder: Grub help.</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" id="stylesheet" href="/styles/scrapple-from-the-apple.css">
+  </head>
+  <!-- Copyright 2003-2015 Hal Canary. ALL RIGHTS RESERVED. -->
+
+  <body style="padding:0;margin:0;">
+    <div class="column" style="max-width:640px;margin:0 auto;">
+
+      <h1 class="blogtitle">Grub help.</h1>
+
+      <div class="byline">By Hal Canary,
+        2003-08-19 21:16:50
+        (<a href="http://halcanary.org/vv/2003/08/19/97/">link</a>)
+    <br><a href="../../../../category/computers-code/" class="categorylink">#computers-code</a>
+        </div>
+      <!-- SRC= 2003-08-19-97 -->
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <div class="content">
+
+<!-- BEGIN CONTENT -->
+<p>Today I wanted to play Civ III on my computer. It required booting into windows. Now don't get me wrong, Windows XP is a fine operating system....for playing games on. I'd hate to have a job where I was required to do any work on such a machine. Or if I had such a job, I'd quit it after 18 months.</p>
+<p>Windows has been unable to boot since I put in a new motherboard and processor. So I took this opportunity to reinstall windows and repartition /dev/hda. (You can't fit windows XP on 2GB. Don't even try.) Of course the istallation wrote over my master boot record. I had a little problem restoring it. I'll let you know what I ended up doing in case it ever helps someone else. (Although I think my setup is probably unique.)</p>
+<ol>
+<li>put in redhat install disk. Boot into rescue mode. It will mount your filesystmes under <code>/mnt/sysimage</code>. </li>
+<li>If <code>/boot</code> is a seperate partition, unmount it first:   "<code>umount /mnt/sysimage/boot</code>".</li>
+<li><code>chroot /mnt/sysimage</code></li>
+<li>remount the <code>/boot</code> partition:  "<code>mount /dev/hdb1 /boot</code>".</li>
+<li><code>grub-install '(hd0)'</code></li>
+</ol>
+
+
+<!-- END CONTENT -->
+
+      </div>
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <p>(<a href="../../../../archives/">back</a>)</p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Voder-Vocoder: /bin/coin</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" id="stylesheet" href="/styles/scrapple-from-the-apple.css">
+  </head>
+  <!-- Copyright 2011-2015 Hal Canary. ALL RIGHTS RESERVED. -->
+
+  <body style="padding:0;margin:0;">
+    <div class="column" style="max-width:640px;margin:0 auto;">
+
+      <h1 class="blogtitle">/bin/coin</h1>
+
+      <div class="byline">By Hal Canary,
+        2011-04-10 22:21:24
+        (<a href="http://halcanary.org/vv/2011/04/10/1180/">link</a>)
+    <br><a href="../../../../category/computers-code/" class="categorylink">#computers-code</a>
+        </div>
+      <!-- SRC= 2011-04-10-1180 -->
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <div class="content">
+
+<!-- BEGIN CONTENT -->
+<pre>#!/usr/bin/env python
+# ~/bin/coin
+#DTPD#
+if (ord(open(&#0039;/dev/random&#0039;).read(1)) % 2):
+ print &quot;heads&quot;
+else:
+ print &quot;tails&quot;</pre>
+<p>But why throw away seven bits of entropy?</p>
+<pre>#!/usr/bin/env python
+#DTPD#
+n=ord(open(&#0039;/dev/random&#0039;).read(1))
+for i in xrange(8):
+ if  (n % 2):
+  print &quot;heads&quot;,
+ else:
+  print &quot;tails&quot;,
+ n &gt;&gt;= 1
+print</pre>
+
+
+<!-- END CONTENT -->
+
+      </div>
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <p>(<a href="../../../../archives/">back</a>)</p>
+    </div>
+  </body>
+</html>

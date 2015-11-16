@@ -1,0 +1,18 @@
+TITLE=WordPress
+COPYRIGHT=Copyright 2006-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2006-09-14 00:44:24
+PERMALINK=http://halcanary.org/vv/2006/09/14/637/
+PERMALINKPART=vv/2006/09/14/637/
+YEAR=2006
+MONTH=09
+DAY=14
+POSTID=637
+CATEGORIES=meta;
+MODE=htmldiv
+
+<p>I moved my blog over to <a href="http://wordpress.org/">WordPress</a>, which I have been meaning to do for years.  It's finally come along to the point where it is fairly usable.</p>
+<p><strong>Update.</strong>  I've put a lot of effort into writing a decent Wordpress theme for this site.  I'm debating releasing this theme back to the community, versus keeping it all to myself.</p>
+<p>Yesterday I worked on the comments page.  The layout is somewhat reminiscent of the Livejournal comments layout. I am making use of <a href="http://www.gravatar.com/">Gravatars</a> for user icons.  So if you make a comment and want a fancy icon, be sure to use the same email as you use for your Gravatar account.  For those worried about spam-bots harvesting your email from my comments page, don't worry:  the Gravatar icon encodes you email in a MD5 one-way function.</p>
+<p>I also went through all 614 imported posts and validated the HTML and verified that the import didn't screw up the post too much.  That took a long time, but it was necessary.  I think I had a lot of invalid HTML out there before the import.</p>
+<p>I also wrote a <code>.htaccess</code> file to redirect every one of my old archive pages to the new archive pages.  This was necessary because I intend permanent links to be permanent.</p>
+

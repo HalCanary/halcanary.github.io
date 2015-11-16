@@ -1,0 +1,22 @@
+TITLE=because I hate navigating info pages
+COPYRIGHT=Copyright 2007-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2007-05-10 11:25:41
+PERMALINK=http://halcanary.org/vv/2007/05/10/687/
+PERMALINKPART=vv/2007/05/10/687/
+YEAR=2007
+MONTH=05
+DAY=10
+POSTID=687
+CATEGORIES=computers-code;
+MODE=htmldiv
+
+<pre>#!/bin/sh
+#~/bin/infoless
+#DTPD#
+if [ $# -ne 1 ] ; then
+  echo &quot;which page?&quot;
+  exit 1
+fi
+exec info $1 2&gt; /dev/null | less
+</pre>
+

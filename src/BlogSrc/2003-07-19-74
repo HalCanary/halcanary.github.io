@@ -1,0 +1,15 @@
+TITLE=Screenshots
+COPYRIGHT=Copyright 2003-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2003-07-19 03:48:10
+PERMALINK=http://halcanary.org/vv/2003/07/19/74/
+PERMALINKPART=vv/2003/07/19/74/
+YEAR=2003
+MONTH=07
+DAY=19
+POSTID=74
+CATEGORIES=computers-code;
+MODE=htmldiv
+
+<p><a href="/images/wohc-firebird06.png"> <img src="/images/thumb-wohc-firebird06.png" alt="[]" /></a> <a href="/images/wohc-ie60.png"> <img src="/images/thumb-wohc-ie60.png" alt="[]" /></a> <a href="/images/wohc-netscape47.png"> <img src="/images/thumb-wohc-netscape47.png" alt="[]" /></a></p>
+<p>This is what this pages looks likes in various browsers. Notice how NS47 degrades gracefully and IE60 ouputs garbage.</p>
+

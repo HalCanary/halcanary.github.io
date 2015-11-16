@@ -1,0 +1,23 @@
+TITLE=or just use xdg-open
+COPYRIGHT=Copyright 2013-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2013-06-13 12:00:00
+PERMALINK=http://halcanary.org/vv/2013/06/13/csg36/
+PERMALINKPART=vv/2013/06/13/csg36/
+YEAR=2013
+MONTH=06
+DAY=13
+POSTID=csg36
+MODE=htmldiv
+
+
+
+<p>How to ask the desktop to open a file from a shell script?  Define this function:</p>
+
+<pre><span class="function">getopencmd()</span><span class="normal"> {</span>
+<span class="normal">    </span><span class="keyword">case</span><span class="normal"> </span><span class="string">"$(uname -s)"</span><span class="normal"> </span><span class="keyword">in</span>
+<span class="normal">        </span><span class="symbol">*</span><span class="normal">WIN</span><span class="symbol">*|*</span><span class="normal">W32</span><span class="symbol">*)</span><span class="normal"> </span><span class="keyword">command</span><span class="normal"> -v </span><span class="string">"start"</span><span class="symbol">;;</span>
+<span class="normal">        Darwin</span><span class="symbol">)</span><span class="normal"> </span><span class="keyword">command</span><span class="normal"> -v </span><span class="string">"open"</span><span class="symbol">;;</span>
+<span class="normal">        </span><span class="symbol">*)</span><span class="normal">  </span><span class="keyword">command</span><span class="normal"> -v </span><span class="string">"xdg-open"</span><span class="normal"> </span><span class="symbol">||</span><span class="normal"> </span><span class="symbol">\</span>
+<span class="normal">            </span><span class="keyword">command</span><span class="normal"> -v </span><span class="string">"gvfs-open"</span><span class="normal"> </span><span class="symbol">||</span><span class="normal"> </span><span class="symbol">\</span>
+<span class="normal">            </span><span class="keyword">command</span><span class="normal"> -v </span><span class="string">"kde-open"</span><span class="normal"> </span><span class="symbol">||</span><span class="normal"> </span><span class="symbol">\</span>
+<span class="normal">            </span><span class="keyword">command</span><span class="normal"> -v </span><span class="string">"exo-open"</span><span class="normal"> </span><span class="symbol">;</span><span class="normal"> </span><span class="keyword">esac</span><span class="symbol">;</span><span class="normal"> }</span></pre>

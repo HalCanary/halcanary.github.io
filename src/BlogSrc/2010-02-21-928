@@ -1,0 +1,32 @@
+TITLE=private static String itoa(int i)
+COPYRIGHT=Copyright 2010-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2010-02-21 11:19:27
+PERMALINK=http://halcanary.org/vv/2010/02/21/928/
+PERMALINKPART=vv/2010/02/21/928/
+YEAR=2010
+MONTH=02
+DAY=21
+POSTID=928
+CATEGORIES=computers-code;
+MODE=htmldiv
+
+<p>I like Java's verbosity; it is consistant and clear.  But sometimes you want succinct things.</p>
+<pre>/** &quot;Returns a String object representing the specified integer.&quot; */
+private static String itoa(int i){
+	return Integer.toString(i);
+}
+/** &quot;Returns a String object representing this Integer&#0039;s value.&quot; */
+private static String itoa(Integer i){
+	return i.toString();
+}</pre>
+<hr />
+<p>Also, I realized I had been using <code>assert</code> statements without <code>-enableassertions</code> for the last month, which did me very little good.  A good habit, I suppose.</p>
+<hr />
+<p>ALSO:</p>
+<pre>private static void printl(String s) {
+	System.out.println(s);
+}
+private static void error(String s) {
+	System.err.println(s);
+}</pre>
+

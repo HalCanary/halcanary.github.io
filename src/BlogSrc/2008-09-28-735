@@ -1,0 +1,17 @@
+TITLE=sudo tee
+COPYRIGHT=Copyright 2008-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2008-09-28 20:27:24
+PERMALINK=http://halcanary.org/vv/2008/09/28/735/
+PERMALINKPART=vv/2008/09/28/735/
+YEAR=2008
+MONTH=09
+DAY=28
+POSTID=735
+CATEGORIES=computers-code;
+MODE=htmldiv
+
+<p>I had been doing this:</p>
+<pre>sudo su -c 'echo AT+MODE=8 > /dev/ttyACM0'</pre>
+<p>but I think that this is better becasue it spawns one less shell:</p>
+<pre>echo AT+MODE=8 | sudo tee /dev/ttyACM0 > /dev/null</pre>
+

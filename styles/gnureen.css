@@ -1,0 +1,237 @@
+/************
+ * HTML Minimums
+ ************/
+/*
+pre {
+	white-space : pre;
+	font-family: monospace;
+}
+*/
+/************
+ * HAL's BASICS
+ ************/
+
+.small-center {
+	text-align : center;
+	font-size : 80%;
+}
+.centered {
+	text-align : center;
+}
+.center-verse {
+	text-align : center;
+	font-style: italic;
+}
+.indent-verse {
+	text-align : left;
+	font-style: italic;
+	margin-left:2em;
+}
+.rightside {
+	text-align : right;
+}
+.indent {
+	margin-left:2em;
+}
+
+
+body {
+	padding-top : 0px;
+	padding-right : 0px;
+	padding-bottom : 0px;
+	padding-left : 0px;
+	margin : 0 0 0 0;
+}
+a:link, a:visited, a:active a:hover {
+	text-decoration : underline;
+
+}
+
+/************
+ * SIMPLIFIED MARGINS
+ ************/
+
+div.leftcol, div.centercol, div.rightcol, div.widerightcol,
+div.banner, div.section {
+	margin-left: auto; 
+	margin-right: auto; 
+	margin-top: 0.5ex; 
+	margin-bottom: 0.5ex; 
+	width: 750px;
+}
+div.sitestuff{
+	margin-left: auto; 
+	margin-right: auto; 
+	margin-top: 0ex; 
+	margin-bottom: 0ex; 
+	width: 750px;
+}
+
+.blog hr {
+	margin-left : 20px;
+	margin-right : 20px;
+}
+p,dl {
+	padding-left :  10px;
+	padding-right : 10px;
+}
+h1 {
+	padding-left : 10px;
+	padding-right : 10px;
+}
+h2 {
+	padding-left : 10px;
+	padding-right : 10px;
+	margin-left : 0
+	margin-right : 0;
+}
+h3 {
+	padding-left : 10px;
+	padding-right : 10px;
+	margin-left : 0
+	margin-right : 0;
+}
+pre{
+	padding: 5px;
+}
+ul,ol {	margin-left : 17mm;
+	margin-right : 17mm;
+	padding-left: 17mm;}
+
+li ul,li ol {
+	margin-left : 7mm;
+	margin-right : 7mm; }}
+
+li {	display: list-item;
+	margin-left : 20mm;
+	padding-left : 20mm;
+	margin-right : 0; }
+
+dt {	margin: 1em 0 0 0;
+	font-style: italic; }
+dd {	margin: 0 0 1em 40px; }
+
+table {
+	margin : 0 ;
+	padding : 0 ;
+	border-width:0;
+	border-spacing:0;
+}
+td {
+	margin : 0 ;
+	padding : 0 ;
+}
+
+table.code {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	border : solid black 1px;
+	border-collapse : collapse;
+	margin-left:2em;	
+	margin-right : 0 ;
+	padding : 0 ;
+}
+table.code tr th,table.code tr td {
+	text-align: left;
+	border : solid black 1px;
+}
+table.code tr td {
+	margin : 0 0 0 0;
+	padding : 0 0 0 0;
+}
+table.code tr th {
+	margin : 0 0 0 0;
+	padding : 4px 8px 4px 8px;
+}
+table.code tr td pre {
+	margin : 0 0 0 0;
+	padding : 4px 8px 4px 8px;
+}
+
+table.p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	border-collapse : collapse;
+	border : solid black 1px;
+	margin-left:2em;	
+}
+table.p td , table.p th {
+	border : solid black 1px; 
+	padding: 5px 5px 5px 5px;
+}
+table.p th {	align : center; }
+
+p.blog-notes { text-align : center; }
+
+
+/************
+ * COLORS AND BORDERS
+ ************/
+
+/* -------------------------- */
+
+
+body {
+	color:black ;
+	background-color : #cccccc;
+	/*	background-image: url("/images/gnureen.png"); */
+	/*	background-image: url("/images/gnurey.png");*/
+	background-attachment: fixed;
+}
+
+div.leftcol, div.centercol, div.rightcol, div.widerightcol, div.banner, div.section {
+	color:black ;
+	background-color: #ffffff;
+	border: 1px solid black;
+	border-bottom: 4px solid black;		  
+	border-right: 4px solid black;
+}
+div.sitestuff {
+	color:black ;
+	background-color: #dddddd;
+	border: 1px solid black;
+	border-bottom: 4px solid black;
+	border-right: 4px solid black;
+}
+
+div.sitestuff , div.section {
+	clear : both;
+}
+
+div.blog, div.subsection {
+	border-bottom : 1px solid #999999;
+	clear : both;
+}
+
+hr.blogsep, hr.subsectionsep {
+	display: none;
+}
+
+.achtung {
+	color: #990000 ;
+	background-color: #ffffff;
+}
+blockquote {
+	display: block;
+	margin: 1em 40px;
+	border-width: 1px 2px 2px 1px; 
+	border-style: solid; 
+	border-color: #999999;
+	padding: 0 10px 0 10px;
+}
+
+.quiz {
+      background-color: #cccccc; 
+      color: #000000;
+}
+
+p.blog-notes { clear:both; }
+.blog p img {
+	margin: 4px;
+	float: left; 
+	margin-right:20px ;}
+.blog p img.fn {	float: none;	margin: 0;}
+img.fl {	float: left;	margin: 4px; margin-right:20px}
+img.fr {	float: right;	margin: 4px; margin-left:10px}
+
+/*pre.indent {	color:black ;	background-color : #cccccc; }*/

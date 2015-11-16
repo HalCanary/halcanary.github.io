@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Voder-Vocoder: PowerShot A40 + Linux</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" id="stylesheet" href="/styles/scrapple-from-the-apple.css">
+  </head>
+  <!-- Copyright 2003-2015 Hal Canary. ALL RIGHTS RESERVED. -->
+
+  <body style="padding:0;margin:0;">
+    <div class="column" style="max-width:640px;margin:0 auto;">
+
+      <h1 class="blogtitle">PowerShot A40 + Linux</h1>
+
+      <p class="byline">Getting my Canon PowerShot A40 working under RedHat Linux 7.3 with gphoto2</p>
+
+      <div class="byline">By Hal Canary,
+        2003-07-16 01:18:43
+        (<a href="http://halcanary.org/vv/2003/07/16/whc04/">link</a>)
+        </div>
+      <!-- SRC= 2003-07-16-whc04 -->
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <div class="content">
+
+<!-- BEGIN CONTENT -->
+<p class="centered"><img src="http://halcanary.org/images/A40.jpg" alt="pic of A40" /></p>
+
+<p>
+Before you start, glance through the gphoto2 man page.
+</p>
+
+<h3>Getting gphoto2 to recognize the A40</h3>
+
+<p>
+First of all, check the version of gphoto2
+</p>
+
+<table class="code"><tr><td><pre>
+$ /usr/bin/gphoto2 -v
+gPhoto (v2.0) - Cross-platform digital camera library.
+Copyright (C) 2000,2001 Scott Fritzinger and others
+Licensed under the Library GNU Public License (LGPL).
+
+$ /usr/bin/gphoto2 -L
+ERROR: Please specify a model.
+*** Error ('Unknown model') ***
+
+For debugging messages, please use the --debug option.
+Debugging messages may help finding a solution to your problem.
+If you intend to send any error or debug messages to the gphoto
+developer mailing list &lt;gphoto-devel@gphoto.org>, please run
+gphoto2 as follows:
+
+    env LANG=C gphoto2 --debug -L
+
+Please make sure there is sufficient quoting around the arguments.
+</pre></td></tr></table>
+
+<p>
+Version 2.0 does not support the A40, so you'll have to try a command
+line that looks like this:
+</p>
+
+<table class="code"><tr><td><pre>
+$ gphoto2 --usbid 0x04a9:0x3058=0x04a9:0x304e -L
+</pre></td></tr></table>
+
+<p>
+But a better solution would be to download version 2.1 from
+<a href="http://prdownloads.sourceforge.net/gphoto/gphoto2-2.1.0.tar.gz">
+sourceforge</a>.  gPhoto v2.1.0 supports the A40.  You'll have to
+build from the source.
+</p>
+
+<p>
+Now, su to root, and try
+</p>
+
+<table class="code"><tr><td><pre>
+$ gphoto2 -v
+gPhoto (v2.1.0) - Cross-platform digital camera library.
+Copyright (C) 2000-2002 Scott Fritzinger and others
+Licensed under the Library GNU Public License (LGPL).
+
+$ gphoto2 -L
+Detected a 'Canon PowerShot A40'.
+There are no files in folder '/'.
+There are no files in folder '/DCIM'.
+There are 2 files in folder '/DCIM/100CANON':
+#1     IMG_0020.JPG               rd   458 KB image/jpeg
+#2     IMG_0021.JPG               rd   429 KB image/jpeg
+There are no files in folder '/DCIM/CANONMSC'.
+</pre></td></tr></table>
+
+<h3>Permissions</h3>
+
+<p>
+I got most of this from
+<a href="http://n-dimensional.de/projects/digicam/The_gPhoto2_Manual/html/permissions-usb.html">
+here</a>.
+</p>
+
+<p>
+Don't want to have to su to root all of the time?  Let's get the
+hotplug set up so that we don't have to worry about it.  In this case,
+we'll just want whoever has ownership of /dev/console to be able to
+access any usb devices on the machine.
+The important files should libe in /etc/hotplug.
+</p>
+
+<p>Instructions:</p>
+
+<ol>
+<li>$ cd /etc/hotplug/</li>
+<li>$ cp usb.usermap usb.usermap.old </li>
+<li>Edit usb.usermap.  Remove all lines that start with the word usbcam.</li>
+<li>$ gphoto2 --print-usb-usermap >> usb.usermap </li>
+<li>Make sure that there is a script called /etc/hotplug/usb/usbcam </li>
+</ol>
+
+<p>
+I think that's all I had to do.
+</p>
+
+<!-- END CONTENT -->
+
+      </div>
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <p>(<a href="../../../../archives/">back</a>)</p>
+    </div>
+  </body>
+</html>

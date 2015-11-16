@@ -1,0 +1,21 @@
+TITLE=ls directories script
+COPYRIGHT=Copyright 2003-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2003-12-03 20:15:15
+PERMALINK=http://halcanary.org/vv/2003/12/03/136/
+PERMALINKPART=vv/2003/12/03/136/
+YEAR=2003
+MONTH=12
+DAY=03
+POSTID=136
+CATEGORIES=computers-code;
+MODE=htmldiv
+
+<p>Useful unix tip of the week:</p>
+<pre>
+#!/bin/sh
+#DTPD#
+## $HOME/bin/lsd ##
+/bin/ls --color='yes' &#0092;
+    -l "$@" | grep "^d"
+</pre>
+

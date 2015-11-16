@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Voder-Vocoder: terminal lock</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" id="stylesheet" href="/styles/scrapple-from-the-apple.css">
+  </head>
+  <!-- Copyright 2004-2015 Hal Canary. ALL RIGHTS RESERVED. -->
+
+  <body style="padding:0;margin:0;">
+    <div class="column" style="max-width:640px;margin:0 auto;">
+
+      <h1 class="blogtitle">terminal lock</h1>
+
+      <div class="byline">By Hal Canary,
+        2004-05-10 17:14:47
+        (<a href="http://halcanary.org/vv/2004/05/10/245/">link</a>)
+    <br><a href="../../../../category/computers-code/" class="categorylink">#computers-code</a>
+        </div>
+      <!-- SRC= 2004-05-10-245 -->
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <div class="content">
+
+<!-- BEGIN CONTENT -->
+<pre>
+#!/bin/sh
+## ~/bin/tlock ##
+PASS='12345'
+trap '' TERM INT
+BAD="true"
+clear
+while [ "$BAD" == "true" ] ; do
+    echo -en "&#0092;ntlock password: "
+    stty -echo;
+    read x
+    stty echo;
+    [ "$x" == "$PASS" ] &amp;&amp; BAD="false"
+done
+echo "";
+</pre>
+<p><strong>UPDATE 2004-12-02:</strong> Add &ldquo;<code>trap '' TERM SIGTSTP</code>&rdquo; for additional security.</p>
+
+
+<!-- END CONTENT -->
+
+      </div>
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <p>(<a href="../../../../archives/">back</a>)</p>
+    </div>
+  </body>
+</html>

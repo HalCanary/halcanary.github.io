@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Voder-Vocoder: snap your window to the left or right</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" id="stylesheet" href="/styles/scrapple-from-the-apple.css">
+  </head>
+  <!-- Copyright 2011-2015 Hal Canary. ALL RIGHTS RESERVED. -->
+
+  <body style="padding:0;margin:0;">
+    <div class="column" style="max-width:640px;margin:0 auto;">
+
+      <h1 class="blogtitle">snap your window to the left or right</h1>
+
+      <div class="byline">By Hal Canary,
+        2011-11-08 12:00:00
+        (<a href="http://halcanary.org/vv/2011/11/08/csg18/">link</a>)
+        </div>
+      <!-- SRC= 2011-11-08-csg18 -->
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <div class="content">
+
+<!-- BEGIN CONTENT -->
+<p>This script will snap your window to the left or right side of the screen in Linux:
+(<a href="http://www.techsupportalert.com/content/ubuntu-tips-and-tricks.htm#Enable-Aero-Snap">SOURCE</a>)</p>
+<pre>
+#!/bin/sh
+## ${HOME}/bin/wmctrl&#0045;snap&#0045;edge
+#DTPD#
+WMCTRL=&quot;${HOME}/bin/wmctrl_`arch`&quot;
+#WMCTRL=&quot;/usr/bin/wmctrl&quot;
+test &#0045;x &quot;/usr/bin/xdpyinfo&quot; &#0045;a &#0045;x &quot;$WMCTRL&quot; || {
+    echo &quot;error&quot;; exit 1; }
+
+WIDTH=`xdpyinfo | sed &#0045;n &#0039;s/ *dimensions: *&#0092;([0&#0045;9]*&#0092;)x.*/&#0092;1/p&#0039;`
+HALF=$(($WIDTH / 2));
+&quot;$WMCTRL&quot; &#0045;r :ACTIVE: &#0045;b add,maximized_vert;
+if test &quot;$1&quot; = &quot;left&quot; ; then
+	&quot;$WMCTRL&quot; &#0045;r :ACTIVE: &#0045;e 0,0,0,$HALF,&#0045;1
+elif test &quot;$1&quot; = &quot;right&quot; ; then
+	&quot;$WMCTRL&quot; &#0045;r :ACTIVE: &#0045;e 0,$HALF,0,$HALF,&#0045;1
+fi
+</pre>
+
+<p>If you don't have wmctrl installed, you can apt-get it (Ubuntu):</p>
+<pre>sudo apt&#0045;get &#0045;&#0045;yes install wmctrl</pre>
+Or compile it yourself:
+<pre>
+sudo yum install libXmu&#0045;devel
+cd /tmp
+wget &#0039;http://tomas.styblo.name/wmctrl/dist/wmctrl&#0045;1.07.tar.gz&#0039;
+tar &#0045;&#0045;extract &#0045;&#0045;gzip &#0045;&#0045;file &quot;wmctrl&#0045;1.07.tar.gz&quot;
+cd wmctrl&#0045;1.07
+./configure
+make &#0045;j 4
+mv wmctrl ${HOME}/bin/wmctrl_`arch`
+</pre>
+
+<p>The next step is to set up hotkeys.  If you use Metacity like I do, then:</p>
+<pre>
+gconftool&#0045;2 &#0045;&#0045;type string &#0045;&#0045;set &#0092;
+	/apps/metacity/global_keybindings/run_command_6 &#0092;
+	&#0039;&lt;Ctrl&gt;&lt;Alt&gt;Page_Up&#0039;
+
+gconftool&#0045;2 &#0045;&#0045;type string &#0045;&#0045;set &#0092;
+	/apps/metacity/keybinding_commands/command_6 &#0092;
+	&quot;${HOME}/bin/wmctrl&#0045;snap&#0045;edge left&quot;
+
+gconftool&#0045;2 &#0045;&#0045;type string &#0045;&#0045;set &#0092;
+	/apps/metacity/global_keybindings/run_command_7 &#0092;
+	&#0039;&lt;Ctrl&gt;&lt;Alt&gt;Page_Down&#0039;
+
+gconftool&#0045;2 &#0045;&#0045;type string &#0045;&#0045;set &#0092;
+	/apps/metacity/keybinding_commands/command_7 &#0092;
+	&quot;${HOME}/bin/wmctrl&#0045;snap&#0045;edge right&quot;
+</pre>
+
+<!-- END CONTENT -->
+
+      </div>
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <p>(<a href="../../../../archives/">back</a>)</p>
+    </div>
+  </body>
+</html>

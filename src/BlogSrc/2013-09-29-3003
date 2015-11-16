@@ -1,0 +1,10 @@
+TITLE=Meta-news
+DATE=2013-09-29 19:56:02
+POSTID=3003
+MODE=markdown
+CATEGORIES=computers-code;www;
+SUMMARY=Over the past months I've moved this site twice.  Learn why.
+
+When I started this site around ten years ago, I wanted something more reliable than a computer sitting in my bedroom, but still affordable. I ended up going with a service that provided a LAMP stack (Linux, Apache, MySQL, PHP).  I blogged with Movable Type until Wordpress came along.
+
+Now, I've simply uploaded the site to cloud storage and wrote some scripts to generate the site and automate uploads.

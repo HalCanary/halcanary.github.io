@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Voder-Vocoder: lpr-text for CUPS</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" id="stylesheet" href="/styles/scrapple-from-the-apple.css">
+  </head>
+  <!-- Copyright 2006-2015 Hal Canary. ALL RIGHTS RESERVED. -->
+
+  <body style="padding:0;margin:0;">
+    <div class="column" style="max-width:640px;margin:0 auto;">
+
+      <h1 class="blogtitle">lpr-text for CUPS</h1>
+
+      <div class="byline">By Hal Canary,
+        2006-09-08 09:52:37
+        (<a href="http://halcanary.org/vv/2006/09/08/629/">link</a>)
+    <br><a href="../../../../category/computers-code/" class="categorylink">#computers-code</a>
+        </div>
+      <!-- SRC= 2006-09-08-629 -->
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <div class="content">
+
+<!-- BEGIN CONTENT -->
+<p>If you are using CUPS for your printing, there is no reason to continue using Enscript.</p>
+<pre>#!/bin/sh
+#DTPD#
+# http://cups.org/documentation.php/options.html
+# ~/bin/lpr-2col-text
+exec lpr -o page-left=36 &#92;
+        -o page-right=36 &#92;
+        -o page-top=72 &#92;
+        -o page-bottom=36 &#92;
+        -o columns=2 &#92;
+        -o landscape &#92;
+        -o cpi=16.842 &#92;
+        -o lpi=10.1052 "$@"
+# 80 columns width x 70 columns high x 2 columns
+</pre>
+<p>That's about 140  80-character lines per page, in two columns.  Somewhat analagous to "enscript -2r -B".  I leave room at the left margin for hole-punches, to make binding easier.</p>
+<p>In theory, this should handle Unicode characters much better than enscript or a2ps does.  If you are still having issues with unicode printing, try "ooffice - file".</p>
+<p>Here's the one-column version:</p>
+<pre>#!/bin/sh
+#DTPD#
+# http://cups.org/documentation.php/options.html
+# ~/bin/lpr-1col-text
+exec lpr -o page-left=72 &#92;
+        -o page-right=36 &#92;
+        -o page-top=36 &#92;
+        -o page-bottom=36 &#92;
+        -o cpi=11.43 -o lpi=6.858 "$@"
+# 80 columns width x 68 columns high</pre>
+
+
+<!-- END CONTENT -->
+
+      </div>
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <p>(<a href="../../../../archives/">back</a>)</p>
+    </div>
+  </body>
+</html>

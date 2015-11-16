@@ -1,0 +1,13 @@
+Changelog:
+
+v1.0 (April 24  2001)
+----
+  --> Original Version
+
+v1.1 (September 2002)
+----
+  --> Increase speed of applet. 
+  --> Redesigned index.html
+  --> Use of .jar file for quicker download.
+
+

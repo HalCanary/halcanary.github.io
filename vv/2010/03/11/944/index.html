@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Voder-Vocoder: algorithms matter</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" id="stylesheet" href="/styles/scrapple-from-the-apple.css">
+  </head>
+  <!-- Copyright 2010-2015 Hal Canary. ALL RIGHTS RESERVED. -->
+
+  <body style="padding:0;margin:0;">
+    <div class="column" style="max-width:640px;margin:0 auto;">
+
+      <h1 class="blogtitle">algorithms matter</h1>
+
+      <div class="byline">By Hal Canary,
+        2010-03-11 18:48:25
+        (<a href="http://halcanary.org/vv/2010/03/11/944/">link</a>)
+    <br><a href="../../../../category/computer-science/" class="categorylink">#computer-science</a>;<a href="../../../../category/computers-code/" class="categorylink">#computers-code</a>
+        </div>
+      <!-- SRC= 2010-03-11-944 -->
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <div class="content">
+
+<!-- BEGIN CONTENT -->
+<p>This example of why the right algorithm matters comes directly from my textbook.  Here's the C implementation:</p>
+<p>Bad:</p>
+<pre>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+long int fib(long int n) {
+  if (n==0)
+    return 1;
+  if (n==1)
+    return 1;
+  return fib(n&#0045;1) + fib(n&#0045;2);
+}
+int main(int argc, char *argv[]) {
+  if (argc &lt;= 1) {
+    fprintf(stderr, &quot;argument?&#0092;n&#0092;n&quot;);
+    exit(1);
+  }
+  long int n = atol(argv[1]);
+  printf(&quot;f(%li) = %li&#0092;n&quot;,n,fib(n));
+  return 0;
+}</pre>
+<p>Good:</p>
+<pre>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+long int fib(long int n) {
+  long a=1, b=1, c;
+  int i;
+  for (i = 1;i &lt; n; i++){
+    c = a + b; a = b; b = c;
+  }
+  return b;
+}
+int main(int argc, char *argv[]) {
+  if (argc &lt;= 1) {
+    fprintf(stderr, &quot;argument?&#0092;n&#0092;n&quot;);
+    exit(1);
+  }
+  long int n = atol(argv[1]);
+  printf(&quot;f(%li) = %li&#0092;n&quot;,n,fib(n));
+  return 0;
+}</pre>
+<p>Output:</p>
+<pre>$ time ./fib2 38 ; time ./fib1 38
+f(38) = 63245986
+
+real	0m0.002s
+user	0m0.000s
+sys	0m0.004s
+f(38) = 63245986
+
+real	0m1.492s
+user	0m1.428s
+sys	0m0.004s</pre>
+<p>And you can show how nicely the good algorithm scales up by pulling out a bigint library, like Java's BigInteger:</p>
+<pre>public class fib3 {
+  public static String fib(int n) {
+    java.math.BigInteger a,b,c;
+    int i;
+    a = b = java.math.BigInteger.ONE;
+    for (i = 1;i &lt; n; i++) {
+      c = a.add(b); a = b; b = c;
+    }
+    return b.toString();
+  }
+  public static void main(String[] args) {
+    if (args.length &lt; 1) {
+      System.err.println(&quot;argument?&quot;);
+      System.exit(1);
+    }
+    int n = Integer.parseInt(args[0]);
+    System.out.print(&quot;f(&quot; +
+      Integer.toString(n) + &quot;) = &quot;);
+    System.out.println(fib(n));
+  }
+}</pre>
+
+
+<!-- END CONTENT -->
+
+      </div>
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <p>(<a href="../../../../archives/">back</a>)</p>
+    </div>
+  </body>
+</html>

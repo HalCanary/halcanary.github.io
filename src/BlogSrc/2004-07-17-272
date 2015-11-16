@@ -1,0 +1,25 @@
+TITLE=Apache httpd
+COPYRIGHT=Copyright 2004-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2004-07-17 20:23:57
+PERMALINK=http://halcanary.org/vv/2004/07/17/272/
+PERMALINKPART=vv/2004/07/17/272/
+YEAR=2004
+MONTH=07
+DAY=17
+POSTID=272
+CATEGORIES=computers-code;
+MODE=htmldiv
+
+<p>If you have problems getting your .htaccess files working, don't forget to insert  "<code>AllowOverride All</code>" into /etc/httpd/conf/httpd.conf.</p>
+<p>I've been having fun with  mod_rewrite.  For example:</p>
+<pre>
+## public_html/archives/.htaccess
+## from halcanary.org
+RewriteEngine On
+RewriteBase   /
+RewriteRule ^cat$ /archives/cat.php [L]
+## EOF
+</pre>
+<p>So <a href="/archives/cat"><code>/archives/cat</code></a> is just a pointer to <a href="/archives/cat.php"><code>/archives/cat.php</code></a>.</p>
+<p>The whole <code>/p/*</code> directory is just a pointer to a single php script.</p>
+

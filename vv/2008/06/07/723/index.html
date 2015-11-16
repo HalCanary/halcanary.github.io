@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Voder-Vocoder: jolietify</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" id="stylesheet" href="/styles/scrapple-from-the-apple.css">
+  </head>
+  <!-- Copyright 2008-2015 Hal Canary. ALL RIGHTS RESERVED. -->
+
+  <body style="padding:0;margin:0;">
+    <div class="column" style="max-width:640px;margin:0 auto;">
+
+      <h1 class="blogtitle">jolietify</h1>
+
+      <div class="byline">By Hal Canary,
+        2008-06-07 18:11:49
+        (<a href="http://halcanary.org/vv/2008/06/07/723/">link</a>)
+    <br><a href="../../../../category/computers-code/" class="categorylink">#computers-code</a>
+        </div>
+      <!-- SRC= 2008-06-07-723 -->
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <div class="content">
+
+<!-- BEGIN CONTENT -->
+<pre>#!/usr/bin/env python
+
+# jolietify - reduce a filename to 64 chars, preserving
+# the suffix.
+#
+# See http://en.wikipedia.org/wiki/Joliet_(file_system)
+# for a justification.  It is recomended that filenames
+# be reduced to 64 chars before putting on a CD-ROM.
+#
+# Copyright 2008 Hal Canary
+#
+# Permission is hereby granted, free of charge, to any
+# person obtaining a copy of this software and
+# associated documentation files (the &#0039;Software&#0039;), to
+# deal in the Software without restriction, including
+# without limitation the rights to use, copy, modify,
+# merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom
+# the Software is furnished to do so, subject to the
+# following conditions:
+#
+# The above copyright notice and this permission notice
+# shall be included in all copies or substantial
+# portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED &#0039;AS IS&#0039;, WITHOUT WARRANTY OF
+# ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+# LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+# FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO
+# EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+# LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+# WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+# ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+# SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+
+import sys
+import glob
+import os
+import os.path
+
+def jolietify(dirfilename):
+    (head,fname) = os.path.split(dirfilename)
+    if (len(fname) &lt;= 64):
+        print &quot;Is good:&quot;, dirfilename
+        return 1
+    splitname=fname.rsplit(&#0039;.&#0039;,1)
+    if (len(splitname) == 1):
+	new=os.path.join(head,splitname[0][0:64])
+        print &#0039;rename&#0039;, dirfilename, new
+        os.rename(dirfilename, new)
+        return 0
+    else:
+	new=os.path.join(head,
+            splitname[0][0:63-len(splitname[1])]+&#0039;.&#0039;+splitname[1])
+	print &#0039;rename&#0039;, dirfilename, new
+        os.rename(dirfilename, new)
+        return 0
+
+if __name__ == &quot;__main__&quot;:
+    for x in sys.argv[1:]:
+       for y in glob.glob(x):
+            jolietify(y)</pre>
+
+
+<!-- END CONTENT -->
+
+      </div>
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <p>(<a href="../../../../archives/">back</a>)</p>
+    </div>
+  </body>
+</html>

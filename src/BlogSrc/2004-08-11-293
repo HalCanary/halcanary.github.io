@@ -1,0 +1,31 @@
+TITLE=Backup Strategy
+COPYRIGHT=Copyright 2004-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2004-08-11 22:33:26
+PERMALINK=http://halcanary.org/vv/2004/08/11/293/
+PERMALINKPART=vv/2004/08/11/293/
+YEAR=2004
+MONTH=08
+DAY=11
+POSTID=293
+CATEGORIES=computers-code;
+MODE=htmldiv
+
+<p>I've got a <strong>Backup Strategy</strong> for my home computers!</p>
+<p>1. I only care about my desktop (lensman), my email server (ups), and my web server (halcanary.org).  My laptop (hiro) and my mediapc (dalek) contain no files that need backup.</p>
+<p>2. Backup ups to lensman by way of rsync-over-ssh.  Backup halcanary.org by way of wget-over-ftp.  </p>
+<p>3. I've segregated my files into directories:</p>
+<ul>
+<li><strong>/home/hal</strong> contains normal home-diectory stuff: rc files, documents, scripts, temporary stuff, note-to-self.txt note-about-*.txt, etc.  A lot of small crap.  1.4G, but since its so much text, it compresses down to 634M to fit on a CDR.  If i gets much bigger, I'll move directories out of it.</li>
+<li><strong>/mnt/d/music</strong> is all *.mp3's.  It lives on a seperate drive.  backup is a hassel.  A seperate issue. </li>
+<li><strong>/home/files</strong> contains a bunch on stuff that doesn't nessisarily need to be backed up.  Mostly large files.  Mostly stuff I got off of the internet.  If I lose it, I will find it again. If I need to delete it I might consider putting it on CDR first.  A lot of *.iso and *.avi *.pdf.</li>
+<li><strong>/home/files/Photos</strong> is a seperate directory because it is big (I take a lot of digitals and don't ever delete the original images).  846M.  A few months ago, it fit on a CDR. I might segregate it into pre-2004 and post 2004 directories.</li>
+</ul>
+<p>If I am going to reinstall the OS, I'll grab a copy of /etc, but none of the system files need to be backed up</p>
+<p><strong>UPDATE 2004-08-12</strong>: I made a few changes last night:</p>
+<ul>
+<li><strong>/home/files/Backups</strong> contains mirrors of my files on halcanary.org and ups.  It is currently 444M; it fits on a CDR.</li>
+<li><strong>/home/files/Photos-pre-2004</strong> is just what it sounds like.<br />
+478M.
+</li>
+</ul>
+

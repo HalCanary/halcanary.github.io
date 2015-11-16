@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Voder-Vocoder: A new printer with Ubuntu 12.04</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" id="stylesheet" href="/styles/scrapple-from-the-apple.css">
+  </head>
+  <!-- Copyright 2012-2015 Hal Canary. ALL RIGHTS RESERVED. -->
+
+  <body style="padding:0;margin:0;">
+    <div class="column" style="max-width:640px;margin:0 auto;">
+
+      <h1 class="blogtitle">A new printer with Ubuntu 12.04</h1>
+
+      <div class="byline">By Hal Canary,
+        2012-06-16 15:44:45
+        (<a href="http://halcanary.org/vv/2012/06/16/1285/">link</a>)
+    <br><a href="../../../../category/computers-code/" class="categorylink">#computers-code</a>
+        </div>
+      <!-- SRC= 2012-06-16-1285 -->
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <div class="content">
+
+<!-- BEGIN CONTENT -->
+<p>We have a WiFi network printer in the house: a Kodak ESP C315.  The most recent version of Ubuntu (Ubuntu 12.04 Precise) does not recognize it and it asks for a PPD file.  This is because the printer-driver-c2esp package is at version 23.1 but version 24 provides that file.</p>
+<p>To install:</p>
+<p>Get the necesary packages:</p>
+<pre>
+$ sudo /usr/bin/apt&#0045;get &#0045;&#0045;yes install &#0092;
+    build&#0045;essential cups libcups2&#0045;dev &#0092;
+    libcupsimage2&#0045;dev libcupsdriver1&#0045;dev</pre>
+<p>Go to <a href="http://sourceforge.net/projects/cupsdriverkodak/files/">http://sourceforge.net/projects/cupsdriverkodak/files/</a> and get the file <code>c2esp24.tar.gz</code> .</p>
+<pre>
+$ cd `mktemp &#0045;d`
+$ tar &#0045;&#0045;extract &#0045;&#0045;gzip &#0045;&#0045;file ((...path to...))/c2esp24.tar.gz
+$ cd c2esp24/
+$ make
+$ find . &#0045;iname &#0092;*.ppd</pre>
+<p>Copy the apropriate PPD file to /usr/local/share/ppd/</p>
+<pre>$ sudo mkdir /usr/local/share/ppd
+$ sudo cp ppd/Kodak_ESP_C31x_Series.ppd /usr/local/share/ppd/
+$ system-config-printer</pre>
+<p>Then enter <code>/usr/local/share/ppd/Kodak_ESP_C31x_Series.ppd</code> where the CUPS configuration program asks for a  PPD file.</p>
+
+
+<!-- END CONTENT -->
+
+      </div>
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <p>(<a href="../../../../archives/">back</a>)</p>
+    </div>
+  </body>
+</html>

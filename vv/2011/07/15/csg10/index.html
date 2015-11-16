@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Voder-Vocoder: stopwatch</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" id="stylesheet" href="/styles/scrapple-from-the-apple.css">
+  </head>
+  <!-- Copyright 2011-2015 Hal Canary. ALL RIGHTS RESERVED. -->
+
+  <body style="padding:0;margin:0;">
+    <div class="column" style="max-width:640px;margin:0 auto;">
+
+      <h1 class="blogtitle">stopwatch</h1>
+
+      <div class="byline">By Hal Canary,
+        2011-07-15 12:00:00
+        (<a href="http://halcanary.org/vv/2011/07/15/csg10/">link</a>)
+        </div>
+      <!-- SRC= 2011-07-15-csg10 -->
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <div class="content">
+
+<!-- BEGIN CONTENT -->
+<p>#!/usr/bin/python
+    """Stopwatch program.</p>
+
+<pre><code>Hit 'Enter' to save a time.
+
+Hit 'Ctrl-c' to stop the script
+"""
+from datetime import datetime, date, time
+import time, sys
+start = datetime.now()
+print __doc__
+try:
+    while True:
+        time.sleep(0.071)
+        sys.stdout.write('\b'*22)
+        sys.stdout.write(str(datetime.now() - start))
+        sys.stdout.flush()
+except KeyboardInterrupt:
+    sys.stdout.write('\n\n')
+</code></pre>
+
+<!-- END CONTENT -->
+
+      </div>
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <p>(<a href="../../../../archives/">back</a>)</p>
+    </div>
+  </body>
+</html>

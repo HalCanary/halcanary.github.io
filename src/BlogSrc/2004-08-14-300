@@ -1,0 +1,33 @@
+TITLE=Apple Pro Keyboard with Linux
+COPYRIGHT=Copyright 2004-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2004-08-14 16:05:05
+PERMALINK=http://halcanary.org/vv/2004/08/14/300/
+PERMALINKPART=vv/2004/08/14/300/
+YEAR=2004
+MONTH=08
+DAY=14
+POSTID=300
+CATEGORIES=computers-code;
+MODE=htmldiv
+
+<p>I have a 109-key Apple Pro Keyboard. This is my current .Xmodmap file:</p>
+<pre>
+! xmodmap $HOME/.Xmodmap
+
+!! Funny Apple Keys:
+keycode 174 = F16
+keycode 176 = F17
+keycode 160 = F18
+keycode 204 = F19
+
+!! Why are these different on Apple Keyboard?
+keycode 157 = KP_Equal
+keycode 182 = Print
+keycode 183 = Scroll_Lock
+keycode 184 = Pause
+
+!! Remove Caps_Lock
+remove Lock = Caps_Lock
+keycode 66 = F20
+</pre>
+

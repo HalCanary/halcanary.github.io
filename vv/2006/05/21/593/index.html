@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Voder-Vocoder: bitten; shy</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" id="stylesheet" href="/styles/scrapple-from-the-apple.css">
+  </head>
+  <!-- Copyright 2006-2015 Hal Canary. ALL RIGHTS RESERVED. -->
+
+  <body style="padding:0;margin:0;">
+    <div class="column" style="max-width:640px;margin:0 auto;">
+
+      <h1 class="blogtitle">bitten; shy</h1>
+
+      <div class="byline">By Hal Canary,
+        2006-05-21 00:04:41
+        (<a href="http://halcanary.org/vv/2006/05/21/593/">link</a>)
+    <br><a href="../../../../category/movies/" class="categorylink">#movies</a>
+        </div>
+      <!-- SRC= 2006-05-21-593 -->
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <div class="content">
+
+<!-- BEGIN CONTENT -->
+<p>Everytime I go into my storage room in the basement, I get spider bites.  New plan:  I'm getting as many boxes out of there this evening as possible, and leave the big stuff for much later.  Then I avoid the basement.</p>
+<hr />
+<pre><strong>[hal@lensman]$</strong> time-till-I-leave-town.sh
+Time until Mon Jul  3 09:00:00 CDT 2006:
+3747726 seconds
+3.7477 megaseconds
+6 weeks + 1.3764 days
+43.3764 days</pre>
+<hr />
+<pre><strong>[hal@lensman]$</strong> cat ~/bin/time-till-I-leave-town.sh
+#!/bin/sh
+DDAY="Mon Jul  3 09:00:00 CDT 2006"
+SECONDS=$(( $(date -d "${DDAY}" +%s)-$(date +%s) ))
+MEGASECONDS=$( echo "scale=4;$SECONDS/10^6" | bc )
+WEEKS=$( echo "$SECONDS/604800" | bc )
+DAYS=$( echo "scale=4;$SECONDS/86400" | bc )
+EXTRAS=$( echo "scale=4;$DAYS-($WEEKS * 7)" | bc )
+echo "Time until ${DDAY}:"
+echo "$SECONDS seconds"
+echo "$MEGASECONDS megaseconds"
+echo "$WEEKS weeks + $EXTRAS days"
+echo "$DAYS days" ; echo ""</pre>
+
+
+<!-- END CONTENT -->
+
+      </div>
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <p>(<a href="../../../../archives/">back</a>)</p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+TITLE=scrabble.sh
+COPYRIGHT=Copyright 2011-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2011-06-21 06:27:46
+PERMALINK=http://halcanary.org/vv/2011/06/21/1209/
+PERMALINKPART=vv/2011/06/21/1209/
+YEAR=2011
+MONTH=06
+DAY=21
+POSTID=1209
+CATEGORIES=computers-code;
+MODE=htmldiv
+
+<pre>#!/bin/sh
+#DTPD#
+DICT=/usr/share/dict/words
+test &quot;$1&quot; || { cat &quot;$0&quot;; exit 1; }
+exec grep &#0045;i &quot;$@&quot; &quot;$DICT&quot; | less
+#
+# Useage:
+#   scrabble.sh PATTERN
+# Example:
+#   scrabble.sh &#0039;^a[lonrchl]&#0092;{4,7&#0092;}$&#0039;</pre>
+

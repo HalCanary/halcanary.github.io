@@ -1,0 +1,28 @@
+TITLE=Chaotic
+COPYRIGHT=Copyright 2004-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2004-10-31 14:20:39
+PERMALINK=http://halcanary.org/vv/2004/10/31/345/
+PERMALINKPART=vv/2004/10/31/345/
+YEAR=2004
+MONTH=10
+DAY=31
+POSTID=345
+CATEGORIES=politics;
+MODE=htmldiv
+
+<p>Over the past month, this graph has shown completely chaotic behavior.</p>
+<p><img src="/images/2004-10-31-ec-graph.png" alt="[http://www.electoral-vote.com/]" width="720" height="300" /></p>
+<p>I interpret it as having major trends, but nothing that is meaningul on the week timescale.</p>
+<p>Doesn't the last month look like this chatoic data?</p>
+<p><img src="/images/2004-10-31-logistic.png" alt="[logistic]" width="395" height="266" /></p>
+<p>This graph is from the logistic equation:</p>
+<pre>
+#!/usr/bin/perl
+$x=0.5;
+foreach $n (0..600){
+    $x = $x*(1-$x)*3.8;
+    if ( $n % 11 == 0) {
+        print "$n $x &#0092;n" if ($n&gt;200); }
+}
+</pre>
+

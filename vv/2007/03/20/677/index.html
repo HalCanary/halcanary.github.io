@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Voder-Vocoder: randpassphrase</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" id="stylesheet" href="/styles/scrapple-from-the-apple.css">
+  </head>
+  <!-- Copyright 2007-2015 Hal Canary. ALL RIGHTS RESERVED. -->
+
+  <body style="padding:0;margin:0;">
+    <div class="column" style="max-width:640px;margin:0 auto;">
+
+      <h1 class="blogtitle">randpassphrase</h1>
+
+      <div class="byline">By Hal Canary,
+        2007-03-20 13:24:02
+        (<a href="http://halcanary.org/vv/2007/03/20/677/">link</a>)
+    <br><a href="../../../../category/computers-code/" class="categorylink">#computers-code</a>
+        </div>
+      <!-- SRC= 2007-03-20-677 -->
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <div class="content">
+
+<!-- BEGIN CONTENT -->
+<pre>/*
+   randpassphrase.c
+   This makes use of /dev/random
+   Copyright 2006 Hal Canary
+   DTPD (Dedicated to the Public Domain)
+   cc -o randpassphrase randpassphrase.c
+*/
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;time.h&gt;
+int main() {
+  FILE *devrandom;
+  char source [] = &quot;/dev/random&quot;;
+  unsigned int num;
+  if ((devrandom = fopen(source, &quot;rb&quot;)) == NULL) {
+    fprintf(stderr, &quot;Cannot open %s&#0092;n&quot;, source);
+    exit(EXIT_FAILURE);
+  }
+  int i;
+  for (i=0; i&lt; 28; i++) {
+    if (fread(&amp;num, sizeof(num), 1, devrandom) != 1) {
+      fprintf(stderr, &quot;%s: file read error.&#0092;n&quot;, source);
+      exit(EXIT_FAILURE);
+    }
+    printf(&quot;%c&quot;,((num % 26) + 97));
+    fflush(stdout);
+    if (i%4 == 3) { printf(&quot; &quot;); }
+  }
+  close(devrandom);
+  printf(&quot;&#0092;n&quot;);
+  return(0);
+}</pre>
+
+
+<!-- END CONTENT -->
+
+      </div>
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <p>(<a href="../../../../archives/">back</a>)</p>
+    </div>
+  </body>
+</html>

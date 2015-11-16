@@ -1,0 +1,49 @@
+TITLE=Reduce
+COPYRIGHT=Copyright 2011-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2011-05-27 12:00:00
+PERMALINK=http://halcanary.org/vv/2011/05/27/csg05/
+PERMALINKPART=vv/2011/05/27/csg05/
+YEAR=2011
+MONTH=05
+DAY=27
+POSTID=csg05
+MODE=markdown
+
+In high-school chemistry, you learn that the ideal gas law is
+
+<div style="text-align:center;"><em>P</em>&middot;<em>V</em> =
+<em>n</em>&middot;<em>R</em>&middot;<em>T</em></div>
+
+These letters are drilled into my head, but I realised yesterday that
+I am losing my intuitive understanding of the relation.  The physics
+version of it is
+
+<div style="text-align:center;"><em>P</em>&middot;<em>V</em> =
+<em>N</em>&middot;<em>kT</em></div>
+
+where *N* is now a dimensionless number and *k* is comes from the
+definition of *T*.  Let *&rho;* be our number density and the relation
+simplifies to
+
+<div style="text-align:center;"><em>P</em> =
+<em>&rho;</em>&middot;<em>kT</em></div>
+
+Pressure is density times temperature.
+
+* * *
+
+In the heterogeneous CS Unix environment, I may be executing emacs
+from a console as “`emacs -nw`” or from an icon on the desktop.  Some
+computers will have the emacs-color-theme package installed, others
+won't.  So in my .emacs file, I put the following lines:
+
+    ;; from .emacs ...
+    (setq emacs-style-file "~/.emacs-style")
+    (when
+        (and window-system
+             (require 'color-theme nil t)
+             (file-readable-p emacs-style-file))
+      (progn
+        (load emacs-style-file)
+    (my-color-theme)))
+

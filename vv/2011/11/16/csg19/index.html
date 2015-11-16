@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Voder-Vocoder: Quick linear regression</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" id="stylesheet" href="/styles/scrapple-from-the-apple.css">
+  </head>
+  <!-- Copyright 2011-2015 Hal Canary. ALL RIGHTS RESERVED. -->
+
+  <body style="padding:0;margin:0;">
+    <div class="column" style="max-width:640px;margin:0 auto;">
+
+      <h1 class="blogtitle">Quick linear regression</h1>
+
+      <div class="byline">By Hal Canary,
+        2011-11-16 12:00:00
+        (<a href="http://halcanary.org/vv/2011/11/16/csg19/">link</a>)
+        </div>
+      <!-- SRC= 2011-11-16-csg19 -->
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <div class="content">
+
+<!-- BEGIN CONTENT -->
+
+<p>Quick linear regression script</p>
+<pre>#!/usr/bin/env python
+#sudo yum &#0045;y install scipy
+# input is space&#0045;deleimited (x y) pairs.
+import scipy
+import numpy
+import sys
+
+inp = [map(float, l.split()[0:2]) for l in sys.stdin]
+x = numpy.array([t[0] for t in inp])
+y = numpy.array([t[1] for t in inp])
+fit = scipy.polyfit(x,y,1)
+print &#0039;y = (%f) x + (%f)&#0039; % tuple(fit)
+</pre>
+
+<p>power fit:</p>
+<pre>#!/usr/bin/env python
+#sudo yum &#0045;y install scipy
+# input is space&#0045;deleimited (x y) pairs.
+import scipy
+import numpy
+import sys
+import math
+inp = [map(math.log, map(float, l.split()[0:2]))
+	for l in sys.stdin]
+x = numpy.array([t[0] for t in inp])
+y = numpy.array([t[1] for t in inp])
+fit = scipy.polyfit(x,y,1)
+print &#0039;y = ({0[1]})e^({0[0]})&#0039;.format(tuple(fit))</pre>
+
+<!-- END CONTENT -->
+
+      </div>
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <p>(<a href="../../../../archives/">back</a>)</p>
+    </div>
+  </body>
+</html>

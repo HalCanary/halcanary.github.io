@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Voder-Vocoder: manipulating filenames</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" id="stylesheet" href="/styles/scrapple-from-the-apple.css">
+  </head>
+  <!-- Copyright 2004-2015 Hal Canary. ALL RIGHTS RESERVED. -->
+
+  <body style="padding:0;margin:0;">
+    <div class="column" style="max-width:640px;margin:0 auto;">
+
+      <h1 class="blogtitle">manipulating filenames</h1>
+
+      <div class="byline">By Hal Canary,
+        2004-03-04 12:27:41
+        (<a href="http://halcanary.org/vv/2004/03/04/182/">link</a>)
+    <br><a href="../../../../category/computers-code/" class="categorylink">#computers-code</a>
+        </div>
+      <!-- SRC= 2004-03-04-182 -->
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <div class="content">
+
+<!-- BEGIN CONTENT -->
+<p>gphoto2 grabs images off of my camera and saves it as IMG_XXXX.JPG.  I use the <a href="http://halcanary.org/archives/000073.html">despacify script</a> to convert to lowercase img_XXXX.jpg.  Then I run this script to rename th file to include the date the photo was taken: 2003-11-06-img-XXXX.jpg. Then if the filesystem modification date is changed (e.g. if I rotate it.) I will still know when it originated.</p>
+<pre>
+#!/bin/sh
+## $HOME/bin/rename-files ##
+for FILE in img_????.jpg ; do
+    X=( `stat  -c %y $FILE ` )
+    DATE=${X[0]}
+    mv -v "$FILE" "$DATE-$FILE"
+done
+</pre>
+
+
+<!-- END CONTENT -->
+
+      </div>
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <p>(<a href="../../../../archives/">back</a>)</p>
+    </div>
+  </body>
+</html>

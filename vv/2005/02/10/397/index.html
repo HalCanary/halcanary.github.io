@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Voder-Vocoder: icky shiz ...or... burning audio in linux</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" id="stylesheet" href="/styles/scrapple-from-the-apple.css">
+  </head>
+  <!-- Copyright 2005-2015 Hal Canary. ALL RIGHTS RESERVED. -->
+
+  <body style="padding:0;margin:0;">
+    <div class="column" style="max-width:640px;margin:0 auto;">
+
+      <h1 class="blogtitle">icky shiz ...or... burning audio in linux</h1>
+
+      <div class="byline">By Hal Canary,
+        2005-02-10 14:27:10
+        (<a href="http://halcanary.org/vv/2005/02/10/397/">link</a>)
+    <br><a href="../../../../category/computers-code/" class="categorylink">#computers-code</a>
+        </div>
+      <!-- SRC= 2005-02-10-397 -->
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <div class="content">
+
+<!-- BEGIN CONTENT -->
+<p>I've used itunes at my parents house to burn audio CDs.  It works nicely.  At home, I use Rhythmbox, which has no such ability. Here's how I do it.</p>
+<p>Create a nice 80-minute playlist.  SAve it to /home/hal/tmp/x.</p>
+<p>Run this script:</p>
+<pre>
+#!/bin/sh
+# $HOME/bin/make-audio-cd-from-playlist.sh
+grep  '=file://' $1 | awk -F '//' '{print $2}' &gt; tmp-file
+i=1
+for LINE in $(cat tmp-file) ; do
+    if [ "$i" -lt 10 ] ; then
+	FILENAME="track_0${i}.wav"
+    else
+	FILENAME="track_${i}.wav"
+    fi
+    lame --decode "$LINE" $FILENAME
+    i=$(($i+1))
+done
+cdrecord dev=/dev/cdwriter -pad -v -audio track_??.wav
+</pre>
+<p>And then:</p>
+<pre>
+$ cd  /home/hal/tmp/
+$ make-audio-cd-from-playlist.sh x
+</pre>
+<p><span style="color:red">UPDATE</span>: Recent versions of Rhythmbox have the ability to burn audio CDs.</p>
+
+
+<!-- END CONTENT -->
+
+      </div>
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <p>(<a href="../../../../archives/">back</a>)</p>
+    </div>
+  </body>
+</html>

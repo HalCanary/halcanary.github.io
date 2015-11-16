@@ -1,0 +1,14 @@
+TITLE=RSS Feed
+COPYRIGHT=Copyright 2003-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2003-08-13 20:02:44
+PERMALINK=http://halcanary.org/vv/2003/08/13/91/
+PERMALINKPART=vv/2003/08/13/91/
+YEAR=2003
+MONTH=08
+DAY=13
+POSTID=91
+CATEGORIES=meta;
+MODE=htmldiv
+
+<p>Here's my <a href="/wohc-rss.xml">rss feed</a>. It seems to be working. I don't know if anyone else would even want to use it, but I will probably use this data to make a blog summary page.</p>
+

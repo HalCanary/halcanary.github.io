@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-type" content='text/html; charset="us-ascii"'>
+  <title>Rotor Router Model</title>
+  <style type="text/css"><!--
+    body { margin: 0; padding: 0; }
+    h1 { margin: 0; padding: 0 8px;
+      background-color: #e6e6e6;
+      border-top: 1px solid black }
+    p.appletcontainer { margin: 0; }
+    div.help { padding: 0 8px; }
+    p.reference{ padding-left: 2em; 
+      text-indent: -2em; }
+    li {margin-bottom: 1ex;}   -->
+  </style>
+</head>
+<body>
+  <h1>Rotor Router Model</h1>
+
+<div class="help">
+<h2>2-D Walk</h2>
+
+<p>
+2-D Walk on a square grid. Each vertex is represented by a square and
+is connected to each of its four closest neighbors.
+</p>
+
+<p>
+There is a source at (0,0) (shown as a square with a white border) and
+a sink at (1,1) (shown as a solid black square). In each stage, the
+bug starts at the source, and takes a walk following the instructions
+given by successive rotors, until it either arrives at the sink (at
+which point it hops back to the source) or it arrives at the source;
+either way, the stage is over, and a new stage start.
+</p>
+
+<p>
+The applet keeps track of how many times the bug arrives at the source
+(by walking from one of the four cells adjoining the source, not by
+hopping from the sink) and how many times the bug arrives on the sink.
+</p>
+
+<p>
+The location of the bug is indicated by a square superimposed with the
+cell occupied by the bug. 
+</p>
+
+<p>
+<img src="./Images/2dwalk.png" alt="[img]">
+</p>
+
+<p>
+The underlying directed graph is an infinite 2-D square graph:<br>
+<img src="./Images/two-dee-square-digraph.png" alt="[circles]">
+</p>
+
+<p><a href="./">Back to Rotor Router Model</a></p>
+
+<p>
+I have introduced artificial linitations into this simulation:
+</p>
+
+<pre>
+// from src/TwoDeeWalk.java :
+
+    /** Maximum size I want this system to get to.**/
+    public static int MAX_SIZE = 2024;
+
+    /** Maximum size that gets displayed.**/
+    public static int MAX_DISPLAY_SIZE = 256;
+</pre>
+
+<p>
+These constants control how large the simulation is allowed to grow.
+Once the bug visits a vertex outside of a MAX_SIZE x MAX_SIZE square
+centered at the origin, the system will halt, refusing to allocate
+more memory to the system.  
+</p>
+
+<p>
+The applet will not display any vertices outside of a MAX_DISPLAY_SIZE
+x MAX_DISPLAY_SIZE square centered at the origin, even though the bug
+is allowed to visit those vertices.
+</p>
+
+<p>
+If you have a java compiler, feel free to change these values and
+recompile.
+</p>
+
+<p>&nbsp;</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-type" content='text/html; charset="us-ascii"'>
+  <title>Rotor Router Model</title>
+  <style type="text/css"><!--
+    body { margin: 0; padding: 0; }
+    h1 { margin: 0; padding: 0 8px;
+      background-color: #e6e6e6;
+      border-top: 1px solid black }
+    p.appletcontainer { margin: 0; }
+    div.help { padding: 0 8px; }
+    p.reference{ padding-left: 2em; 
+      text-indent: -2em; }
+    li {margin-bottom: 1ex;}   -->
+  </style>
+</head>
+<body>
+  <h1>Rotor Router Model</h1>
+
+<div class="help">
+<h2>2-D Aggregation</h2>
+
+<p>
+Similar to 1-D Aggregation, but
+on a 2-D square grid.  Each vertex is represented by a square.  In the
+aggregation scenario, all vertices start out empty; once a bug hits an
+empty vertex, the vertex is filled and it gets a normal rotor on
+it. Each bug fills exactly one vertex when it reaches an empty vertex.
+It is interesting that the shape that is created is very round.  In
+fact, if you compare the circle centered at the origin that goes
+through the filled vertex farthest from the origin and the smallest
+circle centered at the origin that goes through the empty vertex
+closest to the origin, the difference is very small.
+</p>
+
+<p>
+How the radii are calculated:<br>
+<img src="./Images/circles.png" alt="[circles]">
+</p>
+
+<p>
+The underlying directed graph is an infinite 2-D square graph:<br>
+<img src="./Images/two-dee-square-digraph.png" alt="[graph]">
+</p>
+
+<p>
+After 100 000 stages.  Notice how round it is:
+<img src="./Images/2d-agg-stage-100000.png" alt="[100000]">
+</p>
+
+
+<p><a href="./">Back to Rotor Router Model</a></p>
+
+</div>
+
+</body>
+</html>

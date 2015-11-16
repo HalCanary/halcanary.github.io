@@ -1,0 +1,25 @@
+TITLE=Fedora Linux
+COPYRIGHT=Copyright 2004-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2004-01-16 11:58:09
+PERMALINK=http://halcanary.org/vv/2004/01/16/155/
+PERMALINKPART=vv/2004/01/16/155/
+YEAR=2004
+MONTH=01
+DAY=16
+POSTID=155
+CATEGORIES=computers-code;
+MODE=htmldiv
+
+<p><img src="/images/fedora.gif" alt="[F]" width="64" height="64" /></p>
+<p>I've been using Fedora Linux on six computers I'm responsible for.  I like it a lot.  Here's why:</p>
+<ol>
+<li>The project is becoming more open.  All of the how-to-hack-the-system info that RedHat never published is being provided bu the community now.</li>
+<li>More and more third-party rpms are being made availible.  Quality is improving.</li>
+</ol>
+<p>If you have a FC1 system, you really should go to:</p>
+<ul>
+<li><a href="http://fedora.redhat.com/">fedora.redhat.com.</a></li>
+<li><a href="http://fedora.artoo.net/faq/">The Unofficial Fedora FAQ</a>: info on setting up yum repositorys (hint: use the mirror.kernel.org mirror), info on installing java jdk or sdk correctly. Maintained by Max Kanat-Alexander.</li>
+<li><a href="http://fedoranews.org/">FedoraNews</a>: news from the fedora-list mailing list, beginner hints, building RPM packages for your system. Maintained by Thomas Chung.</li>
+</ul>
+

@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Voder-Vocoder: FC4 version of Clearlooks in FC5</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" id="stylesheet" href="/styles/scrapple-from-the-apple.css">
+  </head>
+  <!-- Copyright 2006-2015 Hal Canary. ALL RIGHTS RESERVED. -->
+
+  <body style="padding:0;margin:0;">
+    <div class="column" style="max-width:640px;margin:0 auto;">
+
+      <h1 class="blogtitle">FC4 version of Clearlooks in FC5</h1>
+
+      <div class="byline">By Hal Canary,
+        2006-10-04 18:28:35
+        (<a href="http://halcanary.org/vv/2006/10/04/652/">link</a>)
+    <br><a href="../../../../category/computers-code/" class="categorylink">#computers-code</a>
+        </div>
+      <!-- SRC= 2006-10-04-652 -->
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <div class="content">
+
+<!-- BEGIN CONTENT -->
+<p>How to install the Fedora Core 4 version of the default Clearlooks theme on Fedora Core 5 and later:</p>
+<p><img src="/images/Clearlooks_FC4_example.png" alt="SCREENSHOT OF THEME" /></p>
+<p>Begin by going to <a href="http://fedora.redhat.com/Download/">http://fedora.redhat.com/Download/</a> and find a mirror.  Navigate to the directory <code>core/4/i386/os/Fedora/RPMS/</code> to download the two rpm packages we need: gnome-themes-x.xx.x-x.xxx.rpm and gtk2-engines-x.x.x-x.xxxx.rpm</p>
+<pre>mkdir workingfolder
+cd workingfolder
+rpm2cpio [PATH]/gnome-themes-2.10.1-2.i386.rpm | cpio -id
+rpm2cpio [PATH]/gtk2-engines-2.6.3-2.i386.rpm | cpio -id
+cp -a usr/share/themes/Clearlooks Clearlooks_FC4</pre>
+<p>Now we need to edit the files in the Clearlooks_FC4 directory to give this theme a new name so the Theme Manager doesn't get confused.  Edit the file <code>Clearlooks_FC4/index.theme</code>:</p>
+<pre>[Desktop Entry]
+Name=Clearlooks_FC4
+Type=X-GNOME-Metatheme
+Comment=Attractive Usability
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Clearlooks_FC4
+MetacityTheme=Clearlooks_FC4
+IconTheme=Clearlooks</pre>
+<p>Edit the file <code>Clearlooks_FC4/metacity-1/metacity-theme-1.xml</code> and change one line:</p>
+<pre>&lt;name&gt;Clearlooks_FC4&lt;/name&gt;</pre>
+<p>Now let's wrap this up:</p>
+<pre>mkdir -p ~/.themes
+mv Clearlooks_FC4 ~/.themes
+cd ..
+rm -r workingfolder
+gnome-theme-manager &amp;</pre>
+<p>Or you could just download my copy of <a href="/pub/Clearlooks_FC4.tar.gz">Clearlooks_FC4.tar.gz</a>.</p>
+<pre>mkdir -p ~/.themes
+tar xzf Clearlooks_FC4.tar.gz -C ~/.themes/
+gnome-theme-manager &amp;</pre>
+
+
+<!-- END CONTENT -->
+
+      </div>
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <p>(<a href="../../../../archives/">back</a>)</p>
+    </div>
+  </body>
+</html>

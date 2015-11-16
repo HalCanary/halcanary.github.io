@@ -1,0 +1,21 @@
+TITLE=spam rules
+COPYRIGHT=Copyright 2011-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2011-10-26 15:01:41
+PERMALINK=http://halcanary.org/vv/2011/10/26/1252/
+PERMALINKPART=vv/2011/10/26/1252/
+YEAR=2011
+MONTH=10
+DAY=26
+POSTID=1252
+CATEGORIES=computers-code;life;
+MODE=htmldiv
+
+<p>These are my new spamassassin rules.  If your configured email client fails to have a valid DKIM or DK signature or SPF record, I'm probably going to mark you as spam.</p>
+<pre>
+#### .spamassassin/user_prefs
+required_score -1.0
+score DKIM_VALID_AU -10.0
+score SPF_PASS -5.0
+</pre>
+<p>99% of my legitimate correspondents are okay already.</p>
+

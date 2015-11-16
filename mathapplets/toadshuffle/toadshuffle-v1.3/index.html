@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- &ldquo; &rdquo; -->
+<html>
+<head>
+  <title>TOAD Shuffler</title>
+  <meta http-equiv="Content-type" content='text/html; charset="us-ascii"'>
+  <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+<h1>TOAD Shuffler Applet v1.3</h1>
+    <p class="appletcontainer">
+      <applet code="Shuffle.class" archive="toad.jar"
+              width="813" height="602"></applet>
+    </p>
+<h1>TOAD Shuffler Help</h1>
+
+<div class="help">
+
+<h2>What is it?</h2>
+
+<p>
+A TOAD is a Tiling Of an Aztec Diamond with domino tiles; a domino is
+a 2-by-1 rectangle.  Set &ldquo;Initial Size&rdquo; to 2.  Then click
+on &ldquo;New AD.&rdquo; TOAD Shuffler will now display an random
+Aztec Diamond of order 2.  Hit &ldquo;Iterate Stage&rdquo; several
+times.  Each time, it will display a larger Aztec Diamond, tiled with
+dominoes.
+</p>
+
+<p>
+An order <i>n</i> Aztec diamond has 2^(<i>n</i>(<i>n</i>+1)/2)
+different tilings.  This program will produce a random tiling from the
+uniform distribution of all such tilings.
+</p>
+
+<h2>What are the rules?</h2>
+ 
+<p>
+There are three steps to &ldquo;growing&rdquo; a TOAD via the EKLP shuffling
+algorithm.  They are filling, destruction, and sliding.
+</p>
+ 
+<p>
+<i>Rule for Filling:</i>
+<br>
+Divide the untiled area into squares.  Then randomly tile each square
+with either two horizontal dominoes or two vertical dominoes.
+</p>
+ 
+<p>
+<i>Rule for Destruction:</i>
+<br>
+If a north-going domino is about to collide with a south-going domino,
+delete them both.  Same for east and west-going dominoes.
+</p>
+ 
+<p>
+<i>Rule for Sliding:</i>
+<br>
+Move the horizontal dominoes north or south, depending on their color.
+Move the vertical dominoes east or west, depending on their color.  
+</p>
+
+<h2>What do the colors mean?</h2>
+
+<p>The colors of each tile represent the direction that they will move in
+the sliding step of the shuffling algorithm.  But the colors come from
+the position of the tiles.  Imagine the Aztec diamond as a large
+checkerboard where each domino overlaps two squares, a black and a
+white square.  if the black square is to the left of the white square,
+color it one color, if the black square is to the right, color it
+another color. The same applies to the two colors of vertical dominoes.
+</p>
+
+<h2>What is a FPL?</h2>
+
+<p>
+A FPL (Fully Packed Loop) is a way to represent an ASM (Alternating
+Sign Matrix.)  Each TOAD corresponds to two ASMs.  If you turn on
+&ldquo;Show FPL,&rdquo; TOAD Shuffler will display the two FPLs that
+correspond to the two ASMs that correspond to the TOAD.
+</p>
+
+<h2>Credits.</h2>
+
+<p>
+TOAD Shuffler is Copyright (C) 2001-2004 Hal Canary, University of
+Wisconsin-Madison. 
+</p>
+
+<p>Hal Canary <a href="#ref">[1]</a> wrote TOAD Shuffler in the Spring
+of 2001 while working with the Spatial Systems Lab (SSL) <a
+href="#ref">[2]</a> at the University of Wisconsin-Madison.  This work
+is based on the program shuffle.tcl by Matthew Blum. <a
+href="#ref">[3]</a> TOAD Shuffler demonstrates the domino shuffling
+algorithm from Elkies, Kuperberg, Larson, and Propp. <a
+href="#ref">[4]</a> <a href="#ref">[5]</a>
+</p>
+
+<p>
+SSL is sponsored by the National Science Foundation through their
+VIGRE (Vertical Integration of Graduate Research and Education)
+program, with supplemental support from the National Science
+Foundation's REU (Research Experiences for Undergraduates) program and
+from the National Security Agency.  
+</p>
+
+<p>
+TOAD Shuffler comes with ABSOLUTELY NO WARRANTY.  This program is free
+software; you can redistribute it and/or modify it under the terms of
+version 2 of the <a href="./LICENSE.txt">GNU General Public
+License</a> as published by the Free Software Foundation.
+</p>
+
+<p>
+Source: <a href="../toadshuffle-v1.3.tgz">tarball</a> and 
+<a href="../toadshuffle-v1.3.zip">zipfile</a>.
+</p>
+
+<h2><a name="ref"></a>References:</h2>
+<p class="reference">
+<span style="width:2em;">[1]</span>
+<a href="http://halcanary.org/">
+http://halcanary.org/</a>
+</p>
+<p class="reference">
+[2] 
+<a href="http://www.math.wisc.edu/~propp/SSL/">
+http://www.math.wisc.edu/~propp/SSL/</a>
+</p>
+<p class="reference">
+[3] 
+<a href="http://www.math.wisc.edu/~propp/software.html">
+http://www.math.wisc.edu/~propp/software.html</a>
+</p>
+<p class="reference">
+[4] 
+N. Elkies, G. Kuperberg, M. Larsen, and J. Propp. 
+&ldquo;Alternating-Sign Matrices and Domino Tilings (Part I).&rdquo;
+<i>Journal of Algebraic Combinatorics</i> 1 (1992) 111-132. 
+</p>
+
+<p class="reference">
+[5] Jim Propp
+&ldquo;The many faces of alternating-sign matrices.&rdquo;
+&ldquo;Discrete Models: Combinatorics, Computation, and
+ Geometry&rdquo; (special issue of <i>Discrete Mathematics and
+ Theoretical Computer Science</i>), July 2001
+(<a href="http://arxiv.org/abs/math.CO/0208125">arXiv:math.CO/0208125</a>)
+</p>
+
+<p>&nbsp;</p>
+
+<p><a href="..">up</a></p>
+
+</div>
+</body>
+</html>

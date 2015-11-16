@@ -1,0 +1,12 @@
+TITLE=diagnose
+COPYRIGHT=Copyright 2011-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2011-06-16 12:00:00
+PERMALINK=http://halcanary.org/vv/2011/06/16/csg08/
+PERMALINKPART=vv/2011/06/16/csg08/
+YEAR=2011
+MONTH=06
+DAY=16
+POSTID=csg08
+MODE=markdown
+
+I'm only using one out of four processor cores for this batch job. Why is my computer slowing down?  Ohhh.  Memory leak.  That's easy to remedy.

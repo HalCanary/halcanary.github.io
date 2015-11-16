@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Voder-Vocoder: Backups</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" id="stylesheet" href="/styles/scrapple-from-the-apple.css">
+  </head>
+  <!-- Copyright 2004-2015 Hal Canary. ALL RIGHTS RESERVED. -->
+
+  <body style="padding:0;margin:0;">
+    <div class="column" style="max-width:640px;margin:0 auto;">
+
+      <h1 class="blogtitle">Backups</h1>
+
+      <div class="byline">By Hal Canary,
+        2004-03-13 21:22:49
+        (<a href="http://halcanary.org/vv/2004/03/13/195/">link</a>)
+    <br><a href="../../../../category/computers-code/" class="categorylink">#computers-code</a>
+        </div>
+      <!-- SRC= 2004-03-13-195 -->
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <div class="content">
+
+<!-- BEGIN CONTENT -->
+<p>I've decided to back up my mp3 collection for the first time ever.  It's a whopping 14 Gb. which I split up among 21 CDs.  </p>
+<p>I'll be burning all night.</p>
+<p>At least I automated the task somewhat.  I wrote a script that softlinks the files into directories each less than 700000kb.</p>
+<p>Be sure to use &ldquo;mkisofs -f&rdquo; (follow symbolic links).</p>
+<pre>
+#!/usr/bin/perl
+#
+#DTPD#
+#
+# Arguments: file containing list of
+#   files to be backed up.
+#
+# To Do: Jolietify (64 char filename).
+#        Preserve directory structure.
+
+$backupdir = &quot;&#0092;$HOME/MP3_BACKUP&quot;;
+system(&quot;mkdir -p $backupdir&quot;);
+$num=1;
+$dirnum = &amp;padnum($num);
+system(&quot;mkdir $backupdir/$dirnum&quot;);
+while ($file = &lt;&gt;) {
+    chomp ($file);
+    @ar = split (/&#0092;//, $file);
+    $short = pop(@ar);
+    $dir = &quot;$backupdir/$dirnum&quot;;
+    $new = &quot;$dir/$short&quot;;
+    &amp;link($file,$new);
+    $size = `du -Ls &quot;$dir&quot;`;
+    chomp ($size);
+    if ($size &gt; 700000) {
+        system(&quot;rm &#0092;&quot;$new&#0092;&quot;&quot;);
+        $num++;
+        $dirnum = &amp;padnum($num);
+        $dir = &quot;$backupdir/$dirnum&quot;;
+        system(&quot;mkdir -p $dir&quot;);
+        $new = &quot;$dir/$short&quot;;
+        &amp;link($file,$new);
+    }
+}
+sub link {
+    my $o = shift;
+    my $l = shift;
+    system(&quot;ln -s &#0092;&quot;$o&#0092;&quot; &#0092;&quot;$l&#0092;&quot;&quot;);
+}
+sub padnum {
+    my $num=shift;
+    return &quot;00&quot;.$num if $num&lt;10;
+    return &quot;0&quot;.$num if $num&lt;100;
+    return &quot;$num&quot;;
+}
+</pre>
+
+
+<!-- END CONTENT -->
+
+      </div>
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <p>(<a href="../../../../archives/">back</a>)</p>
+    </div>
+  </body>
+</html>

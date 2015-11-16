@@ -1,0 +1,56 @@
+/************
+ * HTML Minimums
+ ************/
+
+pre {
+	white-space : pre;
+	font-family: monospace;
+}
+
+/************
+ * HAL's BASICS
+ ************/
+.small-center {
+	text-align : center;
+	font-size : 80%;
+}
+.centered {
+	text-align : center;
+}
+.center-verse {
+	text-align : center;
+	font-style: italic;
+}
+.rightside {
+	text-align : right;
+}
+
+.indent {
+	margin-left:2em;
+}
+
+a:link, a:visited, a:active a:hover {
+	text-decoration : underline;
+}
+
+table.code {
+	border : solid black 1px;
+	border-collapse : collapse;
+	margin-left:2em;
+}
+table.code tr th,table.code tr td {
+	text-align: left;
+	border : solid black 1px;
+}
+table.code tr td {
+	margin : 0 0 0 0;
+	padding : 0 0 0 0;
+}
+table.code tr td pre{
+	margin : 0 0 0 0;
+	padding : 4px 8px 4px 8px;
+}
+
+p.blog-notes { text-align : center; }
+
+

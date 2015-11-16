@@ -1,0 +1,44 @@
+TITLE=Update comparison
+COPYRIGHT=Copyright 2010-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2010-09-04 13:43:34
+PERMALINK=http://halcanary.org/vv/2010/09/04/1032/
+PERMALINKPART=vv/2010/09/04/1032/
+YEAR=2010
+MONTH=09
+DAY=04
+POSTID=1032
+CATEGORIES=computers-code;
+MODE=htmldiv
+
+<p>No comparison.  APT (the Advanced Packaging Tool) beats Windows Update by a million to one.  I had hoped that Windows Seven would improve things, but no such luck.</p>
+<p>APT: You run this script, once, in the background and it does everything.</p>
+<pre>#!/bin/sh
+sudo apt-get update
+sudo apt-get -y dist-upgrade
+sudo apt-get clean</pre>
+<p>Windows Update:  You run this program&#x2014;</p>
+<pre>%windir%&#0092;system32&#0092;wuapp.exe</pre>
+<p>&#x2014;then click on some things, then it downloads and installs, then it asks you to reboot.  Then while it shuts down it does things, then while it boots up it does things, then you have to repeat the same process THREE TIMES to get all the updates!</p>
+<hr />
+<p>Also, here's my full script:</p>
+<pre style="overflow:auto; overflow-y:visible">#!/bin/sh
+# ${HOME}/bin/agu &#0045;&#0045; &quot;Apt, Get Updates&quot;
+# Written by Hal Canary
+# Dedicated to the public domain.
+#
+# You may want to add the following lines to the /etc/sudoers file:
+#
+##  %admin ALL=NOPASSWD: /usr/bin/nice /usr/bin/apt&#0045;get &#0045;&#0045;yes update
+##  %admin ALL=NOPASSWD: /usr/bin/nice /usr/bin/apt&#0045;get &#0045;&#0045;yes dist&#0045;upgrade
+##  %admin ALL=NOPASSWD: /usr/bin/nice /usr/bin/apt&#0045;get autoremove
+##  %admin ALL=NOPASSWD: /usr/bin/nice /usr/bin/apt&#0045;get clean
+##  %admin ALL=NOPASSWD: /usr/bin/nice /usr/bin/dpkg &#0045;&#0045;configure &#0045;&#0045;pending
+#
+echo &quot;Running apt&#0045;get update, dist&#0045;upgrade, autoremove, clean&quot;
+echo &quot;&quot;
+sudo /usr/bin/nice /usr/bin/apt&#0045;get &#0045;&#0045;yes update &amp;&amp; &#0092;
+sudo /usr/bin/nice /usr/bin/apt&#0045;get &#0045;&#0045;yes dist&#0045;upgrade
+sudo /usr/bin/nice /usr/bin/apt&#0045;get autoremove
+sudo /usr/bin/nice /usr/bin/apt&#0045;get clean
+sudo /usr/bin/nice /usr/bin/dpkg &#0045;&#0045;configure &#0045;&#0045;pending</pre>
+

@@ -1,0 +1,237 @@
+<html>
+<head>
+<title>2003-10-30-apollonian.html</title>
+<!-- Created by Maple 9.00, Linux -->
+</head>
+<body bgcolor="FFFFFF">
+<a href="2003-10-30-apollonian.html#MapleAutoBookmark1">2003-10-30-apollonian.mw</a>
+<ul>
+</ul>
+<hr>
+<a name="MapleAutoBookmark1" />
+<p align="left"><font color="#000000" size="5" face="Times New Roman"><b>Apollonian Gasket Calculations</b></font></p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">First, here's the Saudi Equation</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>2*(a^2 + b^2 + c^2 + d^2) = (a+b+c+d)^2;</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Times New Roman"><img src="images/2003-10-30-apollonian_1.gif" width="262" height="21" alt="2*a^2+2*b^2+2*c^2+2*d^2 = (a+b+c+d)^2" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Suppose that for a given (a,b,c), both d and d' are solutions this equation:</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b></font><font color="#ff0000" face="Monospaced">2*(a^2 + b^2 + c^2) + 2*d^2 = (a+b+c)^2 + 2*d*(a+b+c) + d^2;</font><font color="#ff0000" face="Monospaced">
+<br>2*(a^2 + b^2 + c^2) + 2*d^2 - (a+b+c)^2 - 2*d*(a+b+c) - d^2 = 0;</font><font color="#ff0000" face="Monospaced">
+<br>d^2 - (2*a + 2*b + 2*c)*d + 2*(a^2 + b^2 + c^2) - (a+b+c)^2 = 0;</b></font><font color="#ff0000" face="Monospaced"><b>
+<br></b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Times New Roman"><img src="images/2003-10-30-apollonian_2.gif" width="372" height="21" alt="2*a^2+2*b^2+2*c^2+2*d^2 = (a+b+c)^2+2*d*(a+b+c)+d^2" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" face="Times New Roman"><img src="images/2003-10-30-apollonian_3.gif" width="349" height="21" alt="2*a^2+2*b^2+2*c^2+d^2-(a+b+c)^2-2*d*(a+b+c) = 0" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" face="Times New Roman"><img src="images/2003-10-30-apollonian_4.gif" width="371" height="21" alt="d^2-(2*a+2*b+2*c)*d+2*a^2+2*b^2+2*c^2-(a+b+c)^2 = 0" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">So then:</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b></font><font color="#ff0000" face="Monospaced">d + dprime = 2*a + 2*b + 2*c;</font><font color="#ff0000" face="Monospaced">
+<br>d * dprime = 2*(a^2 + b^2 + c^2) - (a+b+c)^2;</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Times New Roman"><img src="images/2003-10-30-apollonian_5.gif" width="172" height="13" alt="d+dprime = 2*a+2*b+2*c" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" face="Times New Roman"><img src="images/2003-10-30-apollonian_6.gif" width="261" height="21" alt="d*dprime = 2*a^2+2*b^2+2*c^2-(a+b+c)^2" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font><font color="#000000" size="3" face="Times New Roman">Next define a function u which takes in four cluster variables and return the exchange for the fourth.</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b></font><font color="#ff0000" size="3" face="Monospaced">u := (a,b,c,d) -&gt; simplify(</b></font><font color="#ff0000" face="Monospaced"><b></font><font color="#ff0000" face="Monospaced">2*a + 2*b + 2*c - d);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Times New Roman"><img src="images/2003-10-30-apollonian_7.gif" width="266" height="15" alt="u := proc (a, b, c, d) options operator, arrow; simplify(2*a+2*b+2*c-d) end proc" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Clusterfy u into a 4-cluster. &nbsp;</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b></font><font color="#ff0000" size="3" face="Monospaced">e := (w,x,y,z) -&gt; (u(x,y,z,w),x,y,z); </font><font color="#ff0000" size="3" face="Monospaced">
+<br>f := (w,x,y,z) -&gt; (w,u(w,y,z,x),y,z);</font><font color="#ff0000" size="3" face="Monospaced">
+<br>g := (w,x,y,z) -&gt; (w,x,u(w,x,z,y),z);</font><font color="#ff0000" size="3" face="Monospaced">
+<br>h := (w,x,y,z) -&gt; (w,x,y,u(w,x,y,z));</font><font color="#ff0000" size="3" face="Monospaced"></font><font color="#ff0000" size="3" face="Monospaced">
+<br></b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Times New Roman"><img src="images/2003-10-30-apollonian_8.gif" width="209" height="15" alt="e := proc (w, x, y, z) options operator, arrow; u(x, y, z, w), x, y, z end proc" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" face="Times New Roman"><img src="images/2003-10-30-apollonian_9.gif" width="212" height="15" alt="f := proc (w, x, y, z) options operator, arrow; w, u(w, y, z, x), y, z end proc" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" face="Times New Roman"><img src="images/2003-10-30-apollonian_10.gif" width="213" height="15" alt="g := proc (w, x, y, z) options operator, arrow; w, x, u(w, x, z, y), z end proc" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" face="Times New Roman"><img src="images/2003-10-30-apollonian_11.gif" width="215" height="15" alt="h := proc (w, x, y, z) options operator, arrow; w, x, y, u(w, x, y, z) end proc" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Some things we can &nbsp;are downright meaingless: &nbsp;For instance:</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b></font><font color="#ff0000" size="3" face="Monospaced">e(x,x,x,x);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Times New Roman"><img src="images/2003-10-30-apollonian_12.gif" width="56" height="13" alt="5*x, x, x, x" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font><font color="#000000" size="3" face="Times New Roman">doesn't mean anything. &nbsp;Can you imagine four circles that all have the same radius kissing? &nbsp;No. &nbsp;So we define.</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>v1 := (a,b,c) -&gt; simplify(a+b+c + 2*(a*b+a*c+b*c)^(1/2));</font><font color="#ff0000" face="Monospaced"></font><font color="#ff0000" face="Monospaced">
+<br>v2 := (a,b,c) -&gt; simplify(a+b+c - 2*(a*b+a*c+b*c)^(1/2));</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Times New Roman"><img src="images/2003-10-30-apollonian_13.gif" width="331" height="17" alt="v1 := proc (a, b, c) options operator, arrow; simplify(a+b+c+2*(a*b+a*c+b*c)^(1/2)) end proc" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" face="Times New Roman"><img src="images/2003-10-30-apollonian_14.gif" width="328" height="17" alt="v2 := proc (a, b, c) options operator, arrow; simplify(a+b+c-2*(a*b+a*c+b*c)^(1/2)) end proc" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">So if we had three circles with radius x,y, and z, we can let w be the inne</font><font color="#000000" size="3" face="Times New Roman">r circle for the kiss of x, y, and z.</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b></font><font color="#ff0000" size="3" face="Monospaced">w := v1(x,y,z);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Times New Roman"><img src="images/2003-10-30-apollonian_15.gif" width="212" height="16" alt="w := x+y+z+2*(x*y+x*z+y*z)^(1/2)" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">But we want &nbsp;simpler looking equations, so let M = (xy+xz+yz)^(1/2):</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b></font><font color="#ff0000" face="Monospaced">w := x+y+z+2*M;</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Times New Roman"><img src="images/2003-10-30-apollonian_16.gif" width="125" height="13" alt="w := x+y+z+2*M" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Then we can look at some of the clusters that are accessible form this cluster.</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b></font><font color="#ff0000" size="3" face="Monospaced">(w,x,y,z);</b></font><font color="#ff0000" face="Monospaced"><b></font><font color="#ff0000" size="3" face="Monospaced">
+<br>e(w,x,y,z);</font><font color="#ff0000" size="3" face="Monospaced">
+<br>e(f((w,x,y,z)));</font><font color="#ff0000" size="3" face="Monospaced">
+<br>e(f(e(w,x,y,z)));</font><font color="#ff0000" size="3" face="Monospaced"></font><font color="#ff0000" size="3" face="Monospaced">
+<br>e(e(f(e(w,x,y,z))));</font><font color="#ff0000" size="3" face="Monospaced">
+<br>h(h(e(f(e(w,x,y,z)))));</b></font><font color="#ff0000" face="Monospaced"><b>
+<br></b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Times New Roman"><img src="images/2003-10-30-apollonian_17.gif" width="134" height="13" alt="x+y+z+2*M, x, y, z" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" face="Times New Roman"><img src="images/2003-10-30-apollonian_18.gif" width="131" height="13" alt="x+y+z-2*M, x, y, z" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" face="Times New Roman"><img src="images/2003-10-30-apollonian_19.gif" width="266" height="13" alt="x+9*y+9*z+6*M, x+4*y+4*z+4*M, y, z" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" face="Times New Roman"><img src="images/2003-10-30-apollonian_20.gif" width="260" height="13" alt="x+9*y+9*z-6*M, x+4*y+4*z-4*M, y, z" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" face="Times New Roman"><img src="images/2003-10-30-apollonian_21.gif" width="238" height="13" alt="x+y+z-2*M, x+4*y+4*z-4*M, y, z" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" face="Times New Roman"><img src="images/2003-10-30-apollonian_22.gif" width="260" height="13" alt="x+9*y+9*z-6*M, x+4*y+4*z-4*M, y, z" align="center">
+</font></p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">All of these are "nice" equations, as expected!</font></p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">But what if we start with 0,1,1</font><font color="#000000" size="3" face="Times New Roman">? &nbsp;</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b></font><font color="#ff0000" size="3" face="Monospaced">z:=0;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>x:=1;</font><font color="#ff0000" size="3" face="Monospaced">
+<br>y:=1;</b></font><font color="#ff0000" face="Monospaced"><b></font><font color="#ff0000" size="3" face="Monospaced">
+<br>w:=v1(x,y,z);</font><font color="#ff0000" size="3" face="Monospaced">
+<br></font><font color="#ff0000" size="3" face="Monospaced">
+<br>(w,x,y,z);</font><font color="#ff0000" size="3" face="Monospaced"></font><font color="#ff0000" size="3" face="Monospaced">
+<br>h(w,x,y,z);</b></font><font color="#ff0000" size="3" face="Monospaced"><b>
+<br>e(f((w,x,y,z)));</font><font color="#ff0000" size="3" face="Monospaced">
+<br>e(f(e(w,x,y,z)));</font><font color="#ff0000" size="3" face="Monospaced">
+<br>e(e(h(e(w,x,y,z))));</font><font color="#ff0000" size="3" face="Monospaced">
+<br>h(h(e(f(e(w,x,y,z)))));</font><font color="#ff0000" size="3" face="Monospaced"></font><font color="#ff0000" size="3" face="Monospaced">
+<br>h(g(h(h(e(f(e(w,x,y,z)))))));</b></font><font color="#ff0000" face="Monospaced"><b>
+<br></b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Times New Roman"><img src="images/2003-10-30-apollonian_23.gif" width="34" height="13" alt="z := 0" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" face="Times New Roman"><img src="images/2003-10-30-apollonian_24.gif" width="34" height="13" alt="x := 1" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" face="Times New Roman"><img src="images/2003-10-30-apollonian_25.gif" width="35" height="13" alt="y := 1" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" face="Times New Roman"><img src="images/2003-10-30-apollonian_26.gif" width="38" height="13" alt="w := 4" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" face="Times New Roman"><img src="images/2003-10-30-apollonian_27.gif" width="49" height="13" alt="4, 1, 1, 0" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" face="Times New Roman"><img src="images/2003-10-30-apollonian_28.gif" width="56" height="13" alt="4, 1, 1, 12" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" face="Times New Roman"><img src="images/2003-10-30-apollonian_29.gif" width="56" height="13" alt="16, 9, 1, 0" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" face="Times New Roman"><img src="images/2003-10-30-apollonian_30.gif" width="49" height="13" alt="4, 1, 1, 0" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" face="Times New Roman"><img src="images/2003-10-30-apollonian_31.gif" width="49" height="13" alt="0, 1, 1, 4" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" face="Times New Roman"><img src="images/2003-10-30-apollonian_32.gif" width="49" height="13" alt="4, 1, 1, 0" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" face="Times New Roman"><img src="images/2003-10-30-apollonian_33.gif" width="56" height="13" alt="4, 1, 9, 28" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>z:='z': x='x': y:='y': w:='w';</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Times New Roman"><img src="images/2003-10-30-apollonian_34.gif" width="41" height="13" alt="w := w" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b></font><font color="#ff0000" size="3" face="Monospaced">x:='x':y:='y':z:='z':</font><font color="#ff0000" size="3" face="Monospaced">
+<br>(w,x,y,z);</font><font color="#ff0000" size="3" face="Monospaced">
+<br>e(w,x,y,z);</font><font color="#ff0000" size="3" face="Monospaced">
+<br>f(w,x,y,z);</font><font color="#ff0000" size="3" face="Monospaced">
+<br>g(w,x,y,z);</font><font color="#ff0000" size="3" face="Monospaced">
+<br>h(w,x,y,z);</b></font><font color="#ff0000" face="Monospaced"><b></font><font color="#ff0000" face="Monospaced">
+<br></b></font><font color="#ff0000" face="Monospaced"><b>
+<br></b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Times New Roman"><img src="images/2003-10-30-apollonian_35.gif" width="50" height="13" alt="w, x, y, z" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" face="Times New Roman"><img src="images/2003-10-30-apollonian_36.gif" width="153" height="13" alt="2*x+2*y+2*z-w, x, y, z" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" face="Times New Roman"><img src="images/2003-10-30-apollonian_37.gif" width="157" height="13" alt="w, 2*w+2*y+2*z-x, y, z" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" face="Times New Roman"><img src="images/2003-10-30-apollonian_38.gif" width="156" height="13" alt="w, x, 2*w+2*x+2*z-y, z" align="center">
+</font></p>
+<p align="center"><font color="#0000ff" face="Times New Roman"><img src="images/2003-10-30-apollonian_39.gif" width="157" height="13" alt="w, x, y, 2*w+2*x+2*y-z" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b>(x+y+z+2*(x*y+x*z+y*z)^(1/2), x, y, z);</b></font></td>
+</tr>
+</table></p>
+<p align="center"><font color="#0000ff" face="Times New Roman"><img src="images/2003-10-30-apollonian_40.gif" width="221" height="16" alt="x+y+z+2*(x*y+x*z+y*z)^(1/2), x, y, z" align="center">
+</font></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b></b></font></td>
+</tr>
+</table></p>
+<p align="left"><table width="100%">
+<tr>
+<td valign="top"><font color="#ff0000" face="Monospaced"><b>&gt; </b></font></td>
+<td width="100%" valign="top"><font color="#ff0000" face="Monospaced"><b></b></font></td>
+</tr>
+</table></p>
+<p></p>
+</body>
+</html>

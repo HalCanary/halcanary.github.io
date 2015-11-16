@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Voder-Vocoder: Pointer class</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" id="stylesheet" href="/styles/scrapple-from-the-apple.css">
+  </head>
+  <!-- Copyright 2013-2015 Hal Canary. ALL RIGHTS RESERVED. -->
+
+  <body style="padding:0;margin:0;">
+    <div class="column" style="max-width:640px;margin:0 auto;">
+
+      <h1 class="blogtitle">Pointer class</h1>
+
+      <div class="byline">By Hal Canary,
+        2013-04-14 12:00:00
+        (<a href="http://halcanary.org/vv/2013/04/14/csg34/">link</a>)
+        </div>
+      <!-- SRC= 2013-04-14-csg34 -->
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <div class="content">
+
+<!-- BEGIN CONTENT -->
+
+<p>Suppose you are writing a C++ program and are linking to a C
+library.  Many of the library calls return a pointer to a
+heap-allocated structure.  You are expected to free that structure
+using a specialized free function.  For example, the openssl library
+has a BIGNUM type that is typically created using BN_new() and deleted
+using BN_free(); The following <code>Pointer&lt; BIGNUM, BN_clear_free
+&gt;</code> class will take ownership of the BIGNUM pointer in a
+smart-pointer way and call the BN_free() function when ever the
+BIGNUM_ptr goes out of scope.</p>
+
+<p>This allows me to exit a function in any of several places (using
+return or throw) without explicitly freeing memeory.</p>
+
+<pre><span class="comment">// Pointer Template</span>
+<span class="comment">// Copyright 2013 Hal Canary</span>
+<span class="comment">//</span>
+<span class="comment">// Licensed under the Apache License, Version 2.0 (the "License");</span>
+<span class="comment">// you may not use this file except in compliance with the License.</span>
+<span class="comment">// You may obtain a copy of the License at</span>
+<span class="comment">//</span>
+<span class="comment">// http://www.apache.org/licenses/LICENSE-2.0</span>
+<span class="comment">//</span>
+<span class="comment">// Unless required by applicable law or agreed to in writing, software</span>
+<span class="comment">// distributed under the License is distributed on an "AS IS" BASIS,</span>
+<span class="comment">// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class="comment">// See the License for the specific language governing permissions and</span>
+<span class="comment">// limitations under the License.</span>
+<span class="preproc">#ifndef</span><span class="normal"> POINTER_H</span>
+<span class="preproc">#define</span><span class="normal"> POINTER_H</span>
+<span class="preproc">#include</span><span class="normal"> </span><span class="string">&lt;cstdlib&gt;</span><span class="normal"> </span><span class="comment">// std::free(void *)</span>
+
+<span class="keyword">namespace</span><span class="normal"> Pointers </span><span class="cbracket">{</span>
+<span class="comment">/**</span>
+<span class="comment">   A wrapper for the C free function that makes it type-correct. */</span>
+<span class="keyword">template</span><span class="symbol">&lt;</span><span class="normal"> </span><span class="keyword">typename</span><span class="normal"> </span><span class="classname">T</span><span class="normal"> </span><span class="symbol">&gt;</span>
+<span class="keyword">inline</span><span class="normal"> </span><span class="type">void</span><span class="normal"> </span><span class="function">free</span><span class="symbol">(</span><span class="normal">T </span><span class="symbol">*</span><span class="normal"> t_ptr</span><span class="symbol">)</span><span class="normal"> </span><span class="cbracket">{</span>
+<span class="normal">  std</span><span class="symbol">::</span><span class="function">free</span><span class="symbol">(</span><span class="keyword">static_cast</span><span class="symbol">&lt;</span><span class="normal"> </span><span class="type">void</span><span class="normal"> </span><span class="symbol">*</span><span class="normal"> </span><span class="symbol">&gt;(</span><span class="normal">t_ptr</span><span class="symbol">)</span><span class="normal"> </span><span class="symbol">);</span>
+<span class="cbracket">}</span>
+
+<span class="comment">/**</span>
+<span class="comment">   A wrapper for the C malloc function that makes it type-correct,</span>
+<span class="comment">   AND multiplies by sizeof(T). */</span>
+<span class="keyword">template</span><span class="symbol">&lt;</span><span class="normal"> </span><span class="keyword">typename</span><span class="normal"> </span><span class="classname">T</span><span class="normal"> </span><span class="symbol">&gt;</span>
+<span class="keyword">inline</span><span class="normal"> T </span><span class="symbol">*</span><span class="normal"> </span><span class="function">malloc</span><span class="symbol">(</span><span class="type">unsigned</span><span class="normal"> </span><span class="type">int</span><span class="normal"> number</span><span class="symbol">=</span><span class="number">1</span><span class="symbol">)</span><span class="normal"> </span><span class="cbracket">{</span>
+<span class="normal">  </span><span class="keyword">return</span><span class="normal"> </span><span class="keyword">static_cast</span><span class="symbol">&lt;</span><span class="normal"> T </span><span class="symbol">*</span><span class="normal"> </span><span class="symbol">&gt;(</span><span class="normal">std</span><span class="symbol">::</span><span class="function">malloc</span><span class="symbol">(</span><span class="normal">number </span><span class="symbol">*</span><span class="normal"> </span><span class="keyword">sizeof</span><span class="symbol">(</span><span class="normal">T</span><span class="symbol">)));</span>
+<span class="cbracket">}</span>
+<span class="cbracket">}</span>
+
+<span class="comment">/**</span>
+<span class="comment">   A wrapper for C pointers that makes them smart pointers.</span>
+
+<span class="comment">   Example use:</span>
+<span class="comment">    void f() {</span>
+<span class="comment">      static const unsigned int N = 100;</span>
+<span class="comment">      Pointer&lt; char, Pointers::free&lt; char &gt; &gt; str(
+        Pointers::malloc&lt; char &gt;(N));</span>
+<span class="comment">      sprintf( str, "%d = 0x%04x\n", 0x1234, 0x1234);</span>
+<span class="comment">      std::cout &lt;&lt; str;</span>
+<span class="comment">    } */</span>
+<span class="keyword">template</span><span class="symbol">&lt;</span><span class="normal"> </span><span class="keyword">typename</span><span class="normal"> </span><span class="classname">T</span><span class="symbol">,</span><span class="normal"> </span><span class="type">void</span><span class="normal"> </span><span class="symbol">(*</span><span class="normal">F</span><span class="symbol">)(</span><span class="normal"> T </span><span class="symbol">*)</span><span class="normal"> </span><span class="symbol">&gt;</span>
+<span class="keyword">class</span><span class="normal"> </span><span class="classname">Pointer</span><span class="normal"> </span><span class="cbracket">{</span>
+<span class="keyword">private</span><span class="symbol">:</span>
+<span class="normal">  T </span><span class="symbol">*</span><span class="normal"> m_ptr</span><span class="symbol">;</span>
+<span class="normal">  </span><span class="function">Pointer</span><span class="symbol">(</span><span class="keyword">const</span><span class="normal"> Pointer </span><span class="symbol">&amp;)</span><span class="normal"> </span><span class="cbracket">{</span><span class="normal"> </span><span class="comment">/* disallowed */</span><span class="cbracket">}</span>
+<span class="keyword">public</span><span class="symbol">:</span>
+<span class="normal">  </span><span class="function">Pointer</span><span class="normal"> </span><span class="symbol">(</span><span class="normal"> T </span><span class="symbol">*</span><span class="normal"> ptr</span><span class="symbol">=</span><span class="normal">NULL </span><span class="symbol">)</span>
+<span class="normal">    </span><span class="symbol">:</span><span class="normal"> </span><span class="function">m_ptr</span><span class="symbol">(</span><span class="normal">ptr</span><span class="symbol">)</span><span class="normal"> </span><span class="cbracket">{</span><span class="normal"> </span><span class="cbracket">}</span>
+<span class="normal">  </span><span class="symbol">~</span><span class="function">Pointer</span><span class="normal"> </span><span class="symbol">()</span><span class="normal"> </span><span class="cbracket">{</span>
+<span class="normal">    </span><span class="keyword">if</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">m_ptr</span><span class="symbol">)</span>
+<span class="normal">      </span><span class="function">F</span><span class="symbol">(</span><span class="normal">m_ptr</span><span class="symbol">);</span>
+<span class="normal">  </span><span class="cbracket">}</span>
+<span class="normal">  Pointer </span><span class="symbol">&amp;</span><span class="normal"> </span><span class="keyword">operator</span><span class="symbol">=(</span><span class="normal">T </span><span class="symbol">*</span><span class="normal"> ptr</span><span class="symbol">)</span><span class="normal"> </span><span class="cbracket">{</span>
+<span class="normal">    </span><span class="keyword">if</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">m_ptr</span><span class="symbol">)</span>
+<span class="normal">      </span><span class="function">F</span><span class="symbol">(</span><span class="normal">m_ptr</span><span class="symbol">);</span>
+<span class="normal">    m_ptr </span><span class="symbol">=</span><span class="normal"> ptr</span><span class="symbol">;</span>
+<span class="normal">    </span><span class="keyword">return</span><span class="normal"> </span><span class="symbol">*</span><span class="keyword">this</span><span class="symbol">;</span>
+<span class="normal">  </span><span class="cbracket">}</span>
+<span class="normal">  </span><span class="keyword">operator</span><span class="normal"> T </span><span class="symbol">*</span><span class="normal"> </span><span class="symbol">()</span><span class="normal"> </span><span class="cbracket">{</span><span class="normal"> </span><span class="keyword">return</span><span class="normal"> m_ptr</span><span class="symbol">;</span><span class="normal"> </span><span class="cbracket">}</span>
+<span class="normal">  </span><span class="keyword">operator</span><span class="normal"> T </span><span class="symbol">*</span><span class="normal"> </span><span class="symbol">()</span><span class="normal"> </span><span class="keyword">const</span><span class="normal"> </span><span class="cbracket">{</span><span class="normal"> </span><span class="keyword">return</span><span class="normal"> m_ptr</span><span class="symbol">;</span><span class="normal"> </span><span class="cbracket">}</span>
+<span class="normal">  </span><span class="type">bool</span><span class="normal"> </span><span class="keyword">operator</span><span class="symbol">!()</span><span class="normal"> </span><span class="keyword">const</span><span class="normal"> </span><span class="cbracket">{</span><span class="normal"> </span><span class="keyword">return</span><span class="normal"> </span><span class="symbol">(!</span><span class="normal"> m_ptr</span><span class="symbol">);</span><span class="normal"> </span><span class="cbracket">}</span>
+<span class="normal">  T </span><span class="symbol">**</span><span class="normal"> </span><span class="keyword">operator</span><span class="symbol">&amp;()</span><span class="normal"> </span><span class="cbracket">{</span><span class="normal"> </span><span class="keyword">return</span><span class="normal"> </span><span class="symbol">&amp;</span><span class="normal">m_ptr</span><span class="symbol">;</span><span class="normal"> </span><span class="cbracket">}</span>
+<span class="normal">  T </span><span class="symbol">**</span><span class="normal"> </span><span class="keyword">operator</span><span class="symbol">&amp;()</span><span class="normal"> </span><span class="keyword">const</span><span class="normal"> </span><span class="cbracket">{</span><span class="normal"> </span><span class="keyword">return</span><span class="normal"> </span><span class="symbol">&amp;</span><span class="normal">m_ptr</span><span class="symbol">;</span><span class="normal"> </span><span class="cbracket">}</span>
+<span class="normal">  T </span><span class="symbol">*</span><span class="normal"> </span><span class="keyword">operator</span><span class="symbol">-&gt;()</span><span class="normal"> </span><span class="cbracket">{</span><span class="normal"> </span><span class="keyword">return</span><span class="normal"> m_ptr</span><span class="symbol">;</span><span class="normal"> </span><span class="cbracket">}</span>
+<span class="normal">  T </span><span class="symbol">*</span><span class="normal"> </span><span class="keyword">operator</span><span class="symbol">-&gt;()</span><span class="normal"> </span><span class="keyword">const</span><span class="normal"> </span><span class="cbracket">{</span><span class="normal"> </span><span class="keyword">return</span><span class="normal"> m_ptr</span><span class="symbol">;</span><span class="normal"> </span><span class="cbracket">}</span>
+<span class="cbracket">}</span><span class="symbol">;</span>
+
+<span class="preproc">#endif</span><span class="normal"> </span><span class="comment">/* POINTER_H */</span>
+</pre>
+
+<p>And the main funtion, as promised:</p>
+
+<pre><span class="comment">// compile with "-lcrypto"</span>
+<span class="preproc">#include</span><span class="normal"> </span><span class="string">&lt;iostream&gt;</span><span class="normal"> </span><span class="comment">// cout</span>
+<span class="preproc">#include</span><span class="normal"> </span><span class="string">&lt;exception&gt;</span><span class="normal"> </span><span class="comment">// exception</span>
+<span class="preproc">#include</span><span class="normal"> </span><span class="string">&lt;openssl/bn.h&gt;</span><span class="normal"> </span><span class="comment">// BIGNUM</span>
+<span class="preproc">#include</span><span class="normal"> </span><span class="string">"Pointer.h"</span><span class="normal"> </span><span class="comment">// Pointer</span>
+<span class="comment">/**</span>
+<span class="comment">   Convert a long hexidecimal number to decimal. */</span>
+<span class="type">int</span><span class="normal"> </span><span class="function">main</span><span class="symbol">(</span><span class="type">int</span><span class="symbol">,</span><span class="normal"> </span><span class="type">char</span><span class="normal"> </span><span class="symbol">**)</span><span class="normal"> </span><span class="cbracket">{</span>
+<span class="normal">  </span><span class="keyword">const</span><span class="normal"> </span><span class="type">char</span><span class="normal"> hexnumber</span><span class="symbol">[]</span>
+<span class="normal">    </span><span class="symbol">=</span><span class="normal"> </span><span class="string">"b94d27b9934d3e08a52e52d7da7dabfac484efe37a5380ee9088f7ace2efcde9"</span><span class="symbol">;</span>
+<span class="normal">  </span><span class="usertype">Pointer&lt; BIGNUM, BN_clear_free &gt;</span><span class="normal"> </span><span class="function">bn</span><span class="symbol">(</span><span class="normal">NULL</span><span class="symbol">);</span>
+<span class="normal">  </span><span class="keyword">if</span><span class="normal"> </span><span class="symbol">(!</span><span class="normal"> </span><span class="function">BN_hex2bn</span><span class="symbol">(&amp;(</span><span class="normal">bn</span><span class="symbol">),</span><span class="normal"> hexnumber</span><span class="symbol">))</span>
+<span class="normal">    </span><span class="keyword">throw</span><span class="normal"> std</span><span class="symbol">::</span><span class="function">exception</span><span class="symbol">();</span>
+<span class="normal">  </span><span class="usertype">Pointer&lt; char, Pointers::free&lt; char &gt; &gt;</span><span class="normal"> </span><span class="function">dec</span><span class="symbol">(</span><span class="function">BN_bn2dec</span><span class="symbol">(</span><span class="normal">bn</span><span class="symbol">));</span>
+<span class="normal">  std</span><span class="symbol">::</span><span class="normal">cout </span><span class="symbol">&lt;&lt;</span><span class="normal"> dec </span><span class="symbol">&lt;&lt;</span><span class="normal"> </span><span class="string">'</span><span class="specialchar">\n</span><span class="string">'</span><span class="symbol">;</span>
+<span class="normal">  </span><span class="keyword">return</span><span class="normal"> </span><span class="number">0</span><span class="symbol">;</span>
+<span class="cbracket">}</span>
+</pre>
+
+<!-- END CONTENT -->
+
+      </div>
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <p>(<a href="../../../../archives/">back</a>)</p>
+    </div>
+  </body>
+</html>

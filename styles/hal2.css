@@ -1,0 +1,70 @@
+@import url(margins1.css);
+/*
+ * Yellow and Blue Doco
+ */
+body {
+    color : #000000; 
+    background-color : #ffffe6; 
+    font-family : serif ;
+} 
+
+.leftcol, .rightcol {
+    color : #000000; 
+    background-color : #efefd6;
+}
+
+h1 {
+    color : #ffffe6; 
+    background : #0000b0; 
+    font-family :sans-serif ;
+} 
+h2 {
+    background : transparent; 
+    color : #0000b0; 
+} 
+a:link {
+    color : #0000b0; 
+    background :  transparent; 
+} 
+a:visited {
+    color : #000070; 
+    background : transparent; 
+} 
+a:active {
+    color : #ff0000; 
+    background : transparent; 
+} 
+a:hover {
+    color : #ffffe6; 
+    background : #0000b0; 
+} 
+hr {
+    color : #000000; 
+    background : #000000; 
+    border-color : black;
+} 
+pre { 
+    color : #000000;
+    background : #e7e7f7;
+}
+
+table.p th ,table.code th {
+    color : #000000; 
+    background-color : #efefd6; 
+}
+table.p td.null, table.code td.null {
+    color : #000000; 
+    background-color : #e8e8d8; 
+}
+div.section {
+	border-bottom : solid 3px ;
+}
+
+/*
+h3 { background-color : #efefd6; }
+.blog    {
+        border-style: solid;
+        border-width: 1px; 
+        border-color: black;
+}
+*/

@@ -1,0 +1,52 @@
+######################################################################
+From: 	  James Propp <XXXXX@math.wisc.edu>
+Date: 	  Fri, 9 Apr 2004 13:52:41 -0500 (CDT)
+To: 	  Hal Canary <XXX@XXX.XXXXXXX.wisc.edu>,
+	  Francis Wong <XXXXXXXXX@wisc.edu>
+Subject:  some philosophy
+######################################################################
+
+>4) "Why does this matter?"  Answer: calculating pi inefficiently. (are
+>   there numbers for which this method would be efficient?) Patterns
+>   in the aggregation.  (Should we point them out? should we link to
+>   the corresponding xsand image?)
+>
+>   (Need Jim's input here.)
+
+Some of this info would best be relayed in person (next Monday), but
+for now, let me say that calculating pi efficiently (or inefficiently)
+is not a goal in itself.  Why it matters is that pi, by virtue of being
+transcendental, is hard to compute in most toy-computation settings;
+e.g., in Conway's Game of Life, the only way to create a system that
+computes pi (in any natural sense of the word "compute") is to create
+a universal computer and have it implement one of the standard infinite
+processes for computing pi.  In contrast, the rotor-router world is
+simultaneously digital (i.e., discrete) and analogue (i.e., based on
+analogies with continuous processes like diffusion).  So, to compute
+pi with rotors, you need only set up the system to mimic a continuous
+system that computes pi (like an infinite square grid of unit resistors,
+or equivalently, random walk in the 2D grid).
+
+Similarly, the 1-D aggregation models aren't useful because they
+compute numbers like sqrt(2):  Rather, they demonstrate that these
+discrete machines are such faithful mimics of the random systems
+they model that they are capably of following even where most
+discrete systems don't like to go, into the domain of the
+non-repeating and the irrational.
+
+I'm not saying you should include the above two paragraphs into the
+text that accompanies the applet; but I do want you to understand
+my take on this work.
+
+Real-world applications of the rotor-concept may come eventually
+(in fact, one can argue that they already have, in the work of
+Alistair Sinclair); and I'm looking forward to attending a conference
+on fluid mechanics in August, and telling the attendees about rotors.
+It'd be great if rotors were good for simulating hard-to-understand
+systems, like turbulent fluid flow.  For now, my goal is more modest:
+to prove (and, with nice applets, to demonstrate) that rotors are
+good models of systems that are easy to understand.
+
+Jim
+
+######################################################################

@@ -1,0 +1,28 @@
+TITLE=wget&nbsp;to standard out
+COPYRIGHT=Copyright 2004-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2004-02-12 23:35:59
+PERMALINK=http://halcanary.org/vv/2004/02/12/172/
+PERMALINKPART=vv/2004/02/12/172/
+YEAR=2004
+MONTH=02
+DAY=12
+POSTID=172
+CATEGORIES=computers-code;
+MODE=htmldiv
+
+<pre>
+#!/bin/sh
+#DTPD#
+## ~/bin/wgeto&nbsp;##
+exec&nbsp;wget&nbsp;-o /dev/null -O - "$@"
+</pre>
+<p>Then,</p>
+<pre>
+$ wgeto&nbsp;http://craphound.com/ebooksneitherenorbooks.txt &#0092;
+    &nbsp;|&nbsp;fold -s -w 70&nbsp;|&nbsp;less&nbsp;
+</pre>
+<p>Explanation for non-unix-literate people:  First of all, I wrote a neat script called&nbsp;wgeto.  wget&nbsp;is a program that downloads stuff off of the internet, via http or ftp.  wgeto&nbsp;calls&nbsp;wget, but tells it to ignore the progress dialog by sending it to the null device, "-o /dev/null". (See Rule of Silence from <a href="http://www.faqs.org/docs/artu/ch01s06.html#id2878450"><em>The Art of Unix Programming</em></a>.)  wgeto&nbsp;then pipes the document into standard output.</p>
+<p>I pipe it through fold to wrap long lines</p>
+<p>Then I pipe it into a pager, less, so that I can page through the document.</p>
+<p>Now I don't have to save a copy on the hard disk.</p>
+

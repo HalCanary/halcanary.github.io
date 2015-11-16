@@ -1,0 +1,39 @@
+TITLE=Java Makefiles
+COPYRIGHT=Copyright 2011-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2011-12-17 12:00:00
+PERMALINK=http://halcanary.org/vv/2011/12/17/csg21/
+PERMALINKPART=vv/2011/12/17/csg21/
+YEAR=2011
+MONTH=12
+DAY=17
+POSTID=csg21
+MODE=htmldiv
+
+
+
+	<p><strong>Java Makefiles</strong></p>
+	<p>Here's a basic makefile for compiling Java programs.  On most
+	  systems, you will only need to edit the first three lines.</p>
+<pre>
+classes = Prog.class AnotherClass.class
+entrypointclass = Prog
+jarfile = program.jar
+
+JAVAC = javac
+JAVA = java
+JAR = jar
+RM = rm &#0045;f
+JCFLAGS = &#0045;Xlint &#0045;g 
+JFLAGS = &#0045;enableassertions
+
+.PHONY : clean all run
+all: $(jarfile)
+run: $(jarfile)
+	$(JAVA) $(JFLAGS) &#0045;jar $(jarfile)
+clean:
+	$(RM) &#0045;v *~ $(classes)
+$(jarfile): $(classes)
+	$(JAR) cvfe $@ $(entrypointclass) $^
+%.class : %.java
+	$(JAVAC) $(JCFLAGS) $^
+</pre>

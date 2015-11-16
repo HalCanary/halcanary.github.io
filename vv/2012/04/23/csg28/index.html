@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Voder-Vocoder: Reasonable Contour Levels</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" id="stylesheet" href="/styles/scrapple-from-the-apple.css">
+  </head>
+  <!-- Copyright 2012-2015 Hal Canary. ALL RIGHTS RESERVED. -->
+
+  <body style="padding:0;margin:0;">
+    <div class="column" style="max-width:640px;margin:0 auto;">
+
+      <h1 class="blogtitle">Reasonable Contour Levels</h1>
+
+      <div class="byline">By Hal Canary,
+        2012-04-23 12:00:00
+        (<a href="http://halcanary.org/vv/2012/04/23/csg28/">link</a>)
+        </div>
+      <!-- SRC= 2012-04-23-csg28 -->
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <div class="content">
+
+<!-- BEGIN CONTENT -->
+
+<pre><!--
+import math
+def generateContours(min_value, max_val, target):
+    value_range = max_val - min_value
+    x = int(round(3 * math.log10(value_range / target)))
+    if x % 3 == 1:
+        x = 2.5 * math.pow(10,math.floor(x / 3))
+    elif x % 3 == 2:
+        x = 5.0 * math.pow(10,math.floor(x / 3))
+    else:
+        x = math.pow(10, x / 3)
+    low = math.ceil(min_value / x) * x
+    return [low + (x * i)
+        for i in xrange(1+int(value_range / x))]
+--><span class="preproc">import</span><span class="normal"> math</span>
+<span class="keyword">def</span><span class="normal"> </span><span class="function">generateContours</span><span class="symbol">(</span><span class="normal">min_value</span><span class="symbol">,</span><span class="normal"> max_val</span><span class="symbol">,</span><span class="normal"> target</span><span class="symbol">):</span>
+<span class="normal">    value_range </span><span class="symbol">=</span><span class="normal"> max_val </span><span class="symbol">-</span><span class="normal"> min_value</span>
+<span class="normal">    x </span><span class="symbol">=</span><span class="normal"> </span><span class="function">int</span><span class="symbol">(</span><span class="function">round</span><span class="symbol">(</span><span class="number">3</span><span class="normal"> </span><span class="symbol">*</span><span class="normal"> math</span><span class="symbol">.</span><span class="function">log10</span><span class="symbol">(</span><span class="normal">value_range </span><span class="symbol">/</span><span class="normal"> target</span><span class="symbol">)))</span>
+<span class="normal">    </span><span class="keyword">if</span><span class="normal"> x </span><span class="symbol">%</span><span class="normal"> </span><span class="number">3</span><span class="normal"> </span><span class="symbol">==</span><span class="normal"> </span><span class="number">1</span><span class="symbol">:</span>
+<span class="normal">        x </span><span class="symbol">=</span><span class="normal"> </span><span class="number">2.5</span><span class="normal"> </span><span class="symbol">*</span><span class="normal"> math</span><span class="symbol">.</span><span class="function">pow</span><span class="symbol">(</span><span class="number">10</span><span class="symbol">,</span><span class="normal">math</span><span class="symbol">.</span><span class="function">floor</span><span class="symbol">(</span><span class="normal">x </span><span class="symbol">/</span><span class="normal"> </span><span class="number">3</span><span class="symbol">))</span>
+<span class="normal">    </span><span class="keyword">elif</span><span class="normal"> x </span><span class="symbol">%</span><span class="normal"> </span><span class="number">3</span><span class="normal"> </span><span class="symbol">==</span><span class="normal"> </span><span class="number">2</span><span class="symbol">:</span>
+<span class="normal">        x </span><span class="symbol">=</span><span class="normal"> </span><span class="number">5.0</span><span class="normal"> </span><span class="symbol">*</span><span class="normal"> math</span><span class="symbol">.</span><span class="function">pow</span><span class="symbol">(</span><span class="number">10</span><span class="symbol">,</span><span class="normal">math</span><span class="symbol">.</span><span class="function">floor</span><span class="symbol">(</span><span class="normal">x </span><span class="symbol">/</span><span class="normal"> </span><span class="number">3</span><span class="symbol">))</span>
+<span class="normal">    </span><span class="keyword">else</span><span class="symbol">:</span>
+<span class="normal">        x </span><span class="symbol">=</span><span class="normal"> math</span><span class="symbol">.</span><span class="function">pow</span><span class="symbol">(</span><span class="number">10</span><span class="symbol">,</span><span class="normal"> x </span><span class="symbol">/</span><span class="normal"> </span><span class="number">3</span><span class="symbol">)</span>
+<span class="normal">    low </span><span class="symbol">=</span><span class="normal"> math</span><span class="symbol">.</span><span class="function">ceil</span><span class="symbol">(</span><span class="normal">min_value </span><span class="symbol">/</span><span class="normal"> x</span><span class="symbol">)</span><span class="normal"> </span><span class="symbol">*</span><span class="normal"> x</span>
+<span class="normal">    </span><span class="keyword">return</span><span class="normal"> </span><span class="symbol">[</span><span class="normal">low </span><span class="symbol">+</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">x </span><span class="symbol">*</span><span class="normal"> i</span><span class="symbol">)</span>
+<span class="normal">        </span><span class="keyword">for</span><span class="normal"> i </span><span class="keyword">in</span><span class="normal"> </span><span class="function">xrange</span><span class="symbol">(</span><span class="number">1</span><span class="symbol">+</span><span class="function">int</span><span class="symbol">(</span><span class="normal">value_range </span><span class="symbol">/</span><span class="normal"> x</span><span class="symbol">))]</span></pre>
+
+<!-- END CONTENT -->
+
+      </div>
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <p>(<a href="../../../../archives/">back</a>)</p>
+    </div>
+  </body>
+</html>

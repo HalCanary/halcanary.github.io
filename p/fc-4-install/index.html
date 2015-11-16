@@ -1,0 +1,257 @@
+<!doctype html>
+<html><head>
+<meta charset="UTF-8">
+<title>World of Hal Canary</title>
+<link rel="stylesheet" type="text/css" href="/styles/scrapple-from-the-apple.css">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<meta name="viewport" content="width=532">
+<script>
+function search_hco() {
+  document.getElementById("search-link-halcanary-org").style.display = "none";
+  document.getElementById("search-halcanary-org").style.display = "block";
+  return false;
+}
+</script>
+</head>
+<body><div class="column" style="width:512px;">
+<h1><a href="/" class="hiddenlink"><img src="/images/Hal_W_Canary_3_hand.jpg" alt="Hal W Canary, III" width="400" height="91" style="border:0px"></a></h1>
+<div class="section">
+<nav><p><a href="/">Home</a></p></nav>
+</div>
+<!--
+<link rel="stylesheet" type="text/css"
+      href="http://halcanary.org//styles/centeredcol.css" 
+      title="Centered Column" />
+<div class='centercol'>
+-->
+<div class="section">
+  <h2>FC4 Install Notes (Workstation)</h2>
+  <div class="subsection">
+    <h3>Pre-install</h3>
+    <p><b>FILESYSTEM</b></p>
+    <p>This is how I set up my hard drive.  I planned on formatting
+      every partition except for /home.  /home also contained a copy
+      of the four CDs, aquired from a
+      torrent. FC4-i386-disc{1,2,3,4}.iso. I only burnt the first CD.
+      The others could live on disc.  The advantage of copying the
+      packages from HDD to HDD is that it is MUCH faster.  Use
+      &ldquo;linux askmethod&rdquo; at the boot prompt to make this
+      work.</p>
+
+<pre class="indent">
+Filesystem	1M-blocks	Mounted on
+/dev/hdb1	      190	/boot
+/dev/hdb2	     9286	/
+/dev/hdb3	   101147	/home
+/dev/hdb4	    ~2048	[SWAP]
+/dev/hda1 (NTFS)		[not mounted]
+/dev/hda2 (VFAT)    19040	/d		
+</pre>  
+
+    <p><b>ETC AND VAR</b></p>
+
+    <p>You may copy /etc and /var to /home </p>
+<pre class="indent">
+sudp cp -a /etc /home/etc-$(date +%Y-%m-%d)
+sudp cp -a /var /home/var-$(date +%Y-%m-%d)
+</pre>
+
+    <p>Minimalist method:  keep useful files in /home/ETCETERA (hosts
+    dhcpd.conf ssh-_host*key*, sshd_config, iptables-script).</p>
+
+<pre class="indent">
+
+
+  </div>
+  <div class="subsection">
+    <h3>Install</h3>
+    <p>only wipe hdb1, hdb2, and hdb4.</p>
+    <p>Install packages....</p>
+  </div>
+  <div class="subsection">
+    <h3>Post-install</h3>
+    <p><b>/HOME</b></p>
+    <p>As root on the console, set up /home partition</p>
+<pre class="indent">
+echo '/dev/hdb3 /home ext3 defaults 1 2' &gt;&gt; /etc/fstab
+mv /home /OLD.home
+mkdir /home
+mount /home/
+</pre>
+
+    <p><b>SUDOERS</b></p>
+    <p>Add hal to wheel group (/etc/group).  Uncomment wheel group in
+      sudoers file (/etc/sudoers).</p>
+
+
+    <p><b>REPOS</b></p>
+
+<p>Add these files to /etc/yum.repos.d/. Notice that I enable freshrpms
+  this time.  They have the best package selection.  And they now
+  complement Fedora Extras just like livna has always done.</p>
+
+<pre class="indent">
+## /etc/yum.repos.d/freshrpms.repo
+[freshrpms]
+name=FreshRPMs Fedora Compatible Packages
+mirrorlist=http://ayo.freshrpms.net/fedora/linux/$releasever/mirrors-freshrpms
+enabled=1
+gpgkey=http://freshrpms.net/RPM-GPG-KEY-freshrpms
+gpgcheck=1
+</pre>
+
+<!--
+<pre class="indent">
+##  /etc/yum.repos.d/livna.repo
+[livna]
+name=Livna.org Fedora Compatible Packages
+baseurl=http://rpm.livna.org/fedora/$releasever/$basearch/RPMS.lvn/
+enabled=0
+gpgkey=http://rpm.livna.org/RPM-LIVNA-GPG-KEY-i386
+gpgcheck=1
+</pre>
+
+<pre class="indent">
+## /etc/yum.repos.d/dag.repo
+[dag]
+name=Dag Fedora Compatible Packages
+baseurl=http://dag.freshrpms.net/fedora/$releasever/en/$basearch/dag/
+  http://dag.atrpms.net/fedora/$releasever/en/$basearch/dag/
+enabled=0
+gpgkey=http://dag.wieers.com/packages/RPM-GPG-KEY.dag.txt
+gpgcheck=1
+</pre>
+-->
+
+    <p><b>INSTALL PACKAGES</b></p>
+
+    <p>Start by updating files.</p>
+    <pre class="indent">yum -y update</pre>    
+
+
+    <p>Find things to install witrh YUM. Check out availible software
+      in each directory listing.</p>
+
+    <pre class="indent">yum install <em>packages</em></pre>
+
+    <p>
+      <a href="http://download.fedora.redhat.com/pub/fedora/linux/core/4/i386/os/Fedora/RPMS/">Fedora Core</a> - 
+      switchdesk-gui dhcp
+    </p>
+
+    <p>
+      <a href="http://download.fedora.redhat.com/pub/fedora/linux/extras/4/i386/">Fedora Extras</a> - 
+      bash-completion
+      bittorrent
+      WindowMaker
+      blackbox
+      fluxbox
+      xfce*
+      lyx
+      gqview
+      id3lib
+      cpan2rpm
+    </p>
+
+    <p>
+      <a href="http://ayo.ie.freshrpms.net/fedora/linux/4/i386/freshrpms/RPMS/">Freshrpms</a> - 
+      gstreamer-plugins-extra-audio 
+      gstreamer-plugins-extra-dvd
+      gstreamer-plugins-extra-video 
+      mplayer
+      unrar
+      gtkpod
+    </p>
+<!--    
+    <p>
+      <a href="http://rpm.livna.org/fedora/4/i386/RPMS.lvn/">Livna</a> - 
+    </p>
+
+    <p>
+      <a href="http://dag.freshrpms.net/fedora/4/en/i386/RPMS.dag/">Dag</a> - 
+    </p>
+-->
+
+
+    <p><b>MPLAYER TWEAKS</b></p>
+    <p>Add line &ldquo;dev.rtc.max-user-freq = 1024&rdquo; in
+      /etc/sysctl.conf.  Run &ldquo;sysctl -p&rdquo;.</p>
+
+    <p>Edit $HOME/.asoundrc to make sound work nicely for mplayer.</p>
+<pre class="indent">
+### user's .asoundrc ###
+pcm.dsp0 {
+    type plug
+    #slave.pcm "dmix"
+    slave.pcm "hw:0"
+}
+ctl.mixer0 {
+    type hw
+    card 0
+}
+</pre>
+
+    <p>Edit mplayer config to use fake oss device</p>
+<pre class="indent">
+### user's .mplayer/config ###
+ao=oss
+ontop=yes
+</pre>
+
+    <p><b>JAVA JDK AND AZUREUS</b></p>
+
+    <p>Install jdk-1_5_0-linux-i586.rpm, which lives in my packages
+      directory. /usr/bin/java is still used by java-1.4.2-gcj-compat;
+      jdk will only install in /usr/java/jdk1.5.0/</p>
+
+    <p>Azureus can be unpackaged to /usr/local/azureus.  Then start it
+      with this script:</p>
+
+<pre class="indent">
+#!/bin/sh
+###$HOME/bin/azureus
+export JAVA_HOME="/usr/java/jdk1.5.0"
+export PATH=${JAVA_HOME}/bin:${PATH}
+exec /usr/local/azureus/azureus
+</pre>
+
+
+    <p><b>SSH</b></p>
+    <p>Grab my old SSHD keys. Tighten sshd security:</p>
+
+<pre class="indent">cd /etc/ssh 
+/sbin/service sshd stop
+rename key key.OLD *_key
+rename pub pub.OLD *.pub
+cp -a /home/ETCETERA/ssh_host_*key* .
+echo '## MODIFICATIONS HWC' &gt;&gt; sshd_config
+echo 'PermitRootLogin no' &gt;&gt; sshd_config
+echo 'AllowUsers hal' &gt;&gt; sshd_config
+/sbin/service sshd start
+</pre>
+
+
+    <p><b>MACROMEDIA FLASH</b></p>
+    <p> Go to 
+      <a href="http://ruslug.rutgers.edu/macromedia/">RSLUG's
+	page</a> and get the appropriate RPM.</p>
+
+    <p><b>DHCPD</b></p>
+<pre class="indent">
+cp -p /home/ETCETERA/dhcpd.conf /etc/
+/sbin/chkconfig dhcpd on
+/sbin/service dhcpd start
+</pre>
+    <p>I am having problems with dhcpd. More later.</p>
+  </div>
+<!--</div>-->
+
+<div class="section"><p class="rightside">file modification time: 2005-06-18 13:34:08</p></div>
+<div class="section">
+<p class="centered">Copyright 1997-2013 by Hal Canary.<br>
+<i>mailto: halcanary at gmail dot com</i><br>
+<a href="http://halcanary.org"><i>http://halcanary.org</i></a></p>
+</div>
+</div>
+</body>
+</html>

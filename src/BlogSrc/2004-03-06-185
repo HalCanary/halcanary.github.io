@@ -1,0 +1,37 @@
+TITLE=gui's suck
+COPYRIGHT=Copyright 2004-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2004-03-06 11:10:22
+PERMALINK=http://halcanary.org/vv/2004/03/06/185/
+PERMALINKPART=vv/2004/03/06/185/
+YEAR=2004
+MONTH=03
+DAY=06
+POSTID=185
+CATEGORIES=computers-code;
+MODE=htmldiv
+
+<p>xmms was giving me some crap the other day, so I gave up on it, again.</p>
+<pre>
+#!/bin/sh
+## $HOME/bin/playmusic ##
+
+FILE="$HOME/music-file.txt"
+M="$HOME/Music"
+
+echo -n "" &gt; $FILE
+cd $M
+for x in */*.mp3 ; do
+    echo $M/$x &gt;&gt; $FILE
+done
+for x in */*/*.mp3 ; do
+    echo $M/$x &gt;&gt; $FILE
+done
+for x in */*/*/*.mp3 ; do
+    echo $M/$x &gt;&gt; $FILE
+done
+
+echo mpg123 -z --list $FILE
+exec mpg123 -z --list $FILE
+</pre>
+<p><strong>UPDATE 2007-06-28:</strong> <a href="/vv/2006/11/23/665/"><code>find</code> is a lot better than this wildcard stuff</a>.</p>
+

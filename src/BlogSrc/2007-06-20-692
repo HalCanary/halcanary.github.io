@@ -1,0 +1,18 @@
+TITLE=Wattage
+COPYRIGHT=Copyright 2007-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2007-06-20 17:58:13
+PERMALINK=http://halcanary.org/vv/2007/06/20/692/
+PERMALINKPART=vv/2007/06/20/692/
+YEAR=2007
+MONTH=06
+DAY=20
+POSTID=692
+CATEGORIES=energy-policy;life;
+MODE=htmldiv
+
+<p>I got my Kill-A-Watt electricity usage monitor in the mail today. So far I have discovered:</p>
+<p>1) When completely powered off, the computer power supply and the television consume 5 watts each.</p>
+<p>2) The computer speakers/subwoofer consumes around seven watts if the power is off and around seven watts if the power is on.</p>
+<p>3) The 19 inch LCD monitor consumes very little power when off and around 26 watts when on. (Most of which is radiated as visible light.)</p>
+<p>4) The CPU consumes around 99 watts when running smoothly and not spinning the drives much.</p>
+

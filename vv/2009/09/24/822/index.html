@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Voder-Vocoder: MakeBookmarksFile</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" id="stylesheet" href="/styles/scrapple-from-the-apple.css">
+  </head>
+  <!-- Copyright 2009-2015 Hal Canary. ALL RIGHTS RESERVED. -->
+
+  <body style="padding:0;margin:0;">
+    <div class="column" style="max-width:640px;margin:0 auto;">
+
+      <h1 class="blogtitle">MakeBookmarksFile</h1>
+
+      <div class="byline">By Hal Canary,
+        2009-09-24 12:51:50
+        (<a href="http://halcanary.org/vv/2009/09/24/822/">link</a>)
+    <br><a href="../../../../category/computers-code/" class="categorylink">#computers-code</a>
+        </div>
+      <!-- SRC= 2009-09-24-822 -->
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <div class="content">
+
+<!-- BEGIN CONTENT -->
+<pre>#!/usr/bin/env python
+# MakeBookmarksFile &#0045; convert a text file containing
+# URLs into a HTMl file with clickable links.
+#
+# Copyright 2008 Hal Canary
+#
+# Permission is hereby granted, free of charge, to any
+# person obtaining a copy of this software and
+# associated documentation files (the &#0039;Software&#0039;), to
+# deal in the Software without restriction, including
+# without limitation the rights to use, copy, modify,
+# merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom
+# the Software is furnished to do so, subject to the
+# following conditions:
+#
+# The above copyright notice and this permission notice
+# shall be included in all copies or substantial
+# portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED &#0039;AS IS&#0039;, WITHOUT WARRANTY OF
+# ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+# LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+# FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO
+# EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+# LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+# WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+# ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+# SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+
+import sys,re
+fi = sys.stdin
+fo = sys.stdout
+s=fi.readline().strip()
+## The first line of the input is a title.
+head=&#0039;&lt;!DOCTYPE html PUBLIC &#0092;
+&quot;&#0045;//W3C//DTD HTML 4.01//EN&quot; &#0092;
+&quot;http://www.w3.org/TR/html4/strict.dtd&quot;&gt;&#0092;n&#0092;
+&lt;html&gt;&lt;head&gt;&#0092;n&lt;meta http&#0045;equiv=&quot;Content&#0045;Type&quot; &#0092;
+content=&quot;text/html; charset=utf&#0045;8&quot;&gt;&#0092;n&#0092;
+&lt;title&gt;%s&lt;/title&gt;&#0092;n&lt;/head&gt;&lt;body&gt;&lt;div&gt;&#0092;n&#0092;
+&lt;h1&gt;%s&lt;/h1&gt;&#0092;n&#0039;
+fo.write(head % (s,s))
+for line in fi:
+  s=line.strip()
+  if (s == &quot;&quot;) :
+    continue
+  ## convert &amp; to &amp;amp; and so on.
+  s=re.sub(&#0039;&amp;&#0039;,&#0039;&amp;amp;&#0039;,s)
+  s=re.sub(&#0039;&lt;&#0039;,&#0039;&amp;lt;&#0039;,s)
+  s=re.sub(&#0039;&gt;&#0039;,&#0039;&amp;gt;&#0039;,s)
+  s=re.sub(&#0039;&quot;&#0039;,&#0039;&amp;quot;&#0039;,s)
+  fo.write(&quot;&lt;a href=&#0092;&quot;%s&#0092;&quot;&gt;%s&lt;/a&gt;&lt;br&gt;&#0092;n&quot; % (s,s))
+fo.write(&#0039;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;&#0092;n&#0039;)</pre>
+
+
+<!-- END CONTENT -->
+
+      </div>
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <p>(<a href="../../../../archives/">back</a>)</p>
+    </div>
+  </body>
+</html>

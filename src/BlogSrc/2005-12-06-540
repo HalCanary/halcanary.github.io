@@ -1,0 +1,15 @@
+TITLE=puzzles
+COPYRIGHT=Copyright 2005-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2005-12-06 12:34:37
+PERMALINK=http://halcanary.org/vv/2005/12/06/540/
+PERMALINKPART=vv/2005/12/06/540/
+YEAR=2005
+MONTH=12
+DAY=06
+POSTID=540
+CATEGORIES=computers-code;
+MODE=htmldiv
+
+<p>My folks play <a href="http://en.wikipedia.org/wiki/Sudoku">Sudoku</a>.  I looked at the game and decided it was boring.  <a href="http://halcanary.org/p/sudoku-solver">So I wrote a program to solve it.</a></p>
+<p>Shouldn't humans stick to puzzles on which we can outperform computers?  Word games and such?</p>
+

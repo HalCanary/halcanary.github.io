@@ -1,0 +1,36 @@
+TITLE=about "$@"
+COPYRIGHT=Copyright 2004-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2004-06-01 16:43:27
+PERMALINK=http://halcanary.org/vv/2004/06/01/252/
+PERMALINKPART=vv/2004/06/01/252/
+YEAR=2004
+MONTH=06
+DAY=01
+POSTID=252
+CATEGORIES=computers-code;
+MODE=htmldiv
+
+<pre>#!/bin/sh
+## test.sh ##
+for x in  $*  ; do echo $x; done ; echo "" ;
+for x in "$*" ; do echo $x; done ; echo "" ;
+for x in  $@  ; do echo $x; done ; echo "" ;
+for x in "$@" ; do echo $x; done ; echo "" ;
+</pre>
+<p>Output:</p>
+<pre>
+$ code/test.sh 1 "2 3"
+1
+2
+3
+
+1 2 3
+
+1
+2
+3
+
+1
+2 3
+</pre>
+

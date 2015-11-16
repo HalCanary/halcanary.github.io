@@ -1,0 +1,78 @@
+TITLE=Installing Wordpress with MySQL
+COPYRIGHT=Copyright 2004-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2004-08-24 21:42:49
+PERMALINK=http://halcanary.org/vv/2004/08/24/309/
+PERMALINKPART=vv/2004/08/24/309/
+YEAR=2004
+MONTH=08
+DAY=24
+POSTID=309
+CATEGORIES=computers-code;
+MODE=htmldiv
+
+<blockquote><p>Definitions:</p>
+<dl>
+<dt>Wordpress</dt>
+<dd>WordPress is a state-of-the-art semantic personal publishing<br />
+    platform with a focus on aesthetics, web standards, and<br />
+    usability. Uses PHP and MySQL.  Licenced under the GPL.</dd>
+<dt>MySQL</dt>
+<dd>The MySQL database server is the world's most popular open<br />
+    source database. It is released under the GPL.</dd>
+</dl>
+</blockquote>
+<p>In a properly configured Fedora/Redhat system you can install MySQL  with yum.  You'll need atleast the following packages: mysql-server,  mysql, and <strong>php-mysql</strong>, as well as php and httpd.  Assuming  that your web server is already set up and working with php.</p>
+<pre>$ sudo yum install mysql-server mysql php-mysql</pre>
+<p>(Restart httpd after installing php-mysql.)  With a fresh install  of mysql, you'll need to start the server daemon and set things  up.</p>
+<pre>
+$ sudo /sbin/service httpd restart
+$ sudo /sbin/service mysqld start
+$ sudo /sbin/chkconfig --level 35 mysqld on
+</pre>
+<p>The mysql "root" password is initially blank, so don't worry and  hit return if it prompts you:</p>
+<pre>
+$ mysqladmin -u root -p password 'pick_a_good_password'
+$ mysql -u root -p
+mysql&gt; CREATE DATABASE wordpress;
+mysql&gt; GRANT ALL ON wordpress.*
+       TO wordpress_user@localhost
+       IDENTIFIED BY 'pick_another_good_password';
+</pre>
+<p>Now you are set. Write down that info:</p>
+<pre>
+    WORDPRESS INFO:
+Database Name : wordpress
+User Name     : wordpress_user
+Password      : pick_another_good_password
+Database Host : localhost
+Table Prefix  : wp1_
+</pre>
+<p>  Now, download the latest version from:   <a href="http://wordpress.org/latest.tar.gz">    http://wordpress.org/latest.tar.gz</a> .  Then as a user with    write access to /var/www/html, do:</p>
+<pre>
+$ cd /var/www/html
+$ <strong>wget</strong> -nv http://wordpress.org/latest.tar.gz
+$ tar xzf latest.tar.gz
+</pre>
+<p>Then it should be as simple as pointing your browser to   <a href="http://localhost/wordpress/wp-admin/install.php">    http://localhost/wordpress/wp-admin/install.php</a>  snd going from there.</p>
+<p><strong>UPDATE: 2004-08-27</strong>  How I installed Wordpress on halcanary.org.</p>
+<p>Since I already had a MySQL database set up, I just had to choose a uniqe prefix.  Movable Type tables use the prefix mt_.  So I set my Wordpress prefix to wp1_.  Here are the tables used by both programs, according to phpMyAdmin:</p>
+<pre>
+mt_author	wp1_categories
+mt_blog		wp1_comments
+mt_category	wp1_linkcategories
+mt_comment	wp1_links
+mt_entry	wp1_optiongroup_options
+mt_ipbanlist	wp1_optiongroups
+mt_log		wp1_options
+mt_notification	wp1_optiontypes
+mt_permission	wp1_optionvalues
+mt_placement	wp1_post2cat
+mt_plugindata	wp1_postmeta
+mt_tbping	wp1_posts
+mt_template	wp1_users
+mt_templatemap
+mt_trackback
+</pre>
+<p>I'm getting ahead of myself.  Before I got that far, I unpacked the wordpress tarball locally, used a gui ftp program to recursivly copy over the directory.  I renamed ~/public_html/wordpress/ to ~/public_html/wp/ for brevity's sake.  I then had to change the permission mode on that directory to 777 so that the install program could make the wp-config.php file.  Then I made a ~/public_html/b/ directory and copied index.php from the wp/ directory there.  This way my permlinks will be to http://halcanary.org/b/, and not to http://halcanary.org/wp/.</p>
+<p>Then I browsed to http://halcanary/wp/ and did the setup.</p>
+

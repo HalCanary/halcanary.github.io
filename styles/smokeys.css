@@ -1,0 +1,314 @@
+/* 
+	The license for this CSS is: 
+		http://creativecommons.org/licenses/sa/1.0/ 
+*/
+
+/************
+ * HTML Minimums
+ ************/
+pre { white-space : pre; }
+a:link, a:visited, a:active a:hover { text-decoration : underline; }
+
+/************
+ *  Old way of doing columns 
+ ************/
+td.rightcol, td.leftcol, td.centercol { vertical-align: top; }
+td.rightcol, td.leftcol { text-align : left; }
+td.leftcol {width : 20% ;}
+
+/************
+ * Columns
+ ************/
+div.leftcol      { position:absolute; align:left; width:20%; margin-left:0;   }
+div.centercol    { position:absolute; align:left; width:60%; margin-left:20%; }
+div.rightcol     { position:absolute; align:left; width:20%; margin-left:80%; }
+div.widerightcol { position:absolute; align:left; width:80%; margin-left:20%; }
+div.wideleftcol  { position:absolute; align:left; width:80%; margin-left:0; }
+
+hr.holder         { width: 600px; visibility: hidden; } /* Equal to 'top' */
+hr.left, hr.right { width: 120px; visibility: hidden; }
+hr.middle         { width: 360px; visibility: hidden; } 
+
+/************
+ * HAL's BASICS
+ ************/
+.small-center {
+    text-align : center; 
+    font-size : 80%; 
+} 
+.centered {
+    text-align : center; 
+} 
+.center-verse {
+    text-align : center; 
+    font-style: italic;
+} 
+p.center-verse em {	font-style: normal; } 
+
+.rightside {
+    text-align : right; 
+} 
+
+/************
+ * MARGINS
+ ************/
+body {	margin : 0 0 0 0; 
+	padding : 0 0 0 0; } 
+p {	margin : 1ex 0 1.5ex 0 ;
+	padding : 0 7mm 0 7mm; 
+	text-align : justify; } 
+dt {	margin : 0 0 0 0; 
+	padding : 0 7mm 0 7mm; 
+	text-align : left; }
+dd {    padding : 0 14mm 0 14mm;
+	margin : 0 0 1.5ex 0;  
+	text-align : justify; }
+
+.leftcol p, .rightcol p, .leftcol h3, .rightcol h3 {
+	text-align : left;
+	padding : 0 1ex 0 1ex; }
+
+div.blog hr { 
+	display: block;
+	height: 2px;
+	border: 1px;
+	margin: 0em 4em 0em 4em;
+}
+
+h1 {	margin : 0 0 8px 0;
+	padding : 5px 5px 5px 5px; 
+	text-align : left; } 
+h2 {	margin : 0 0 0 0;
+	padding : 5px 5px 5px 5px;
+	text-align : left; }
+h3 {	margin : 0 0 0 0;
+	padding : 1ex 7mm 0 7mm;
+	text-align : left; }
+h4 {	margin :  0.5em 0 0 0;
+	padding : 0 0 0 0;
+	text-align : center; }
+
+hr {	margin : 0 0 0 0; 
+	padding : 0 0 0 0; 
+	display : inline ;
+	border : solid 0px ;
+	height : 3px; }
+
+pre{	margin : 0 0 0 0; 
+	padding: 5px 5px 5px 5px; }
+
+ul,ol {	margin : 1ex 7mm 1ex 10mm; 
+	padding: 0 0 0 0;}
+
+li ul,li ol {	margin : 0 0 0 0;
+	 	padding: 0 0 0 0;}
+
+li {	margin : 0 0 0 7mm ;
+	padding: 0 0 0 0;
+	text-align : left;
+	display: list-item; }
+
+blockquote {	margin: 0 0 0 0; 
+		padding: 0 5mm 0 5mm;
+		text-align : justify; }
+
+/************
+ * Borders
+ ************/
+pre {	border: none;}
+div.banner {	border : solid 0px ;
+		border-color : black;
+		border-bottom : solid 3px #394424; }
+img {	border : 3px #000000;}
+.blog p img {
+	margin: 4px; 
+	float: left; }
+
+/************
+ * Fonts
+ ************/
+h1 {	font-size : 250% ; 
+	font-family: sans-serif;
+	font-variant:small-caps;
+	font-style:oblique;
+	font-weight:bold; }
+h2 {	font-size : 120% ;
+	font-weight: bold;
+	font-family : sans-serif;
+	font-variant : small-caps;
+	font-style : oblique; }
+h3 {	font-size : 100% ;
+	font-weight: bold;
+	font-style: italic;
+        font-family: sans-serif; } 
+h4 {	font-size : 100% ;
+	font-weight: normal;
+	font-style: italic;
+        font-family: sans-serif; } 
+dt {    font-weight: bold;}
+blockquote {	font-style: italic; } 
+blockquote p em {	font-style: normal; } 
+
+
+
+/********
+ * TABLES
+ ********/
+
+/* "b" (body) class table.  For layout only. */
+
+table.b {
+	width:100%; 
+	border-width:0;
+	border-spacing:0;  }
+table.b td , table.b th , table.b {
+	margin : 0 ; 
+	padding : 0 ; }
+
+/* "p" class table.  For real table type stuff.  */
+
+table.p {
+	border-collapse : collapse;
+	border : solid black 1px;
+	margin : 1ex 0 1ex 7mm; 
+	padding : 0 0 0 0 ; }
+
+table.p td , table.p th {
+	margin : 0 0 0 0; 
+	padding: 5px 5px 5px 5px;
+	border : solid black 1px; }
+table.p th {	align : center; }
+
+table.p td.null { background : #ffffff}
+
+/* "code" class table.  Put code inside a pre. */
+
+code {
+	white-space : pre;
+	font-family: monospace;
+	display: block;
+	border : solid black 1px;
+	margin :  1ex 0 1ex  7mm ;     
+	padding: 5px 5px 5px 5px;
+ 	color:#000000;
+	background-color:#e6e6e6; 
+}
+
+table.code {
+	border-collapse : collapse;
+	border : solid black 1px;
+	margin :  1ex 0 1ex  7mm ;     
+	padding : 0 0 0 0;
+}
+table.code td {
+	border : solid black 1px;
+	margin : 0 0 0 0; 
+	padding : 0 0 0 0; 
+}
+table.code th {
+	border : solid black 1px;
+	margin : 0 0 0 0; 
+	padding : 5px 5px 5px 5px; 
+	align : center; }
+
+/****************
+ * COLORS
+ ****************/
+
+body {
+	background-color : #5f7078;
+	color : #000000;
+} 
+.rightcol , .leftcol { }
+.centercol { }
+.bottom , .top { }
+h1 {}
+div.banner {
+	color:#e6e6e6;
+	background-image: url("/images/banner.jpg");
+	background-repeat : no-repeat;
+	height: 150px;
+}
+div.section {
+	border : 0px solid #000000;
+	clear : both;
+	margin : 8px 8px 8px 8px;
+	background-color : #e6e6e6; 
+	color : #35352a; }
+h2 {	color : #e6e6e6;
+	background-color : #394424;
+	border : 0;
+	border-bottom : 2px solid #000000; } 
+h3 {	color:#000000;
+	background-color:#e6e6e6; }
+h4 {	color:#000044;
+	background-color:#e6e6e6; }
+a:link {	color: #5f7078;
+		background: #e6e6e6; }
+a:visited {	color: #394424;
+		background: #e6e6e6; } 
+a:active {	color: #e64424;
+	 	background: #e6e6e6; } 
+a:hover {	background: #5f7078;
+		color: #e6e6e6;} 
+hr {	color : #000000; 
+	background : #000000; 
+	border-color : black;} 
+pre { 	color:#000000;
+	background-color:#e6e6e6; }
+
+table th {	color:#ffffff;
+		background-color : #394424 }
+
+
+/* sub-sub-sections refer to h4's  */
+div.subsubsection {   
+	border-bottom :1px solid #000000;
+	margin: 0;
+	clear:both;
+	padding : 0;
+}
+/* sub-sections refer to h3's  */  
+div.subsection {   
+	border-bottom :2px solid #000000;
+	clear:both;
+	margin: 0;
+	padding : 0;
+}
+hr.subsectionsep {
+	display: none;
+}
+
+/* blogs live in h3's too! */
+
+div.blog {
+	border-bottom :2px solid #000000;
+	clear:both;
+}
+
+div.blog { clear:both; }
+
+p.blog-notes { clear:both; }
+
+hr.blogsep {
+	display: none;
+}
+.blog-notes {
+	text-align : center; 
+	background-color :#e6e6e6; 
+	color : #000044;
+}
+.blog-notes a {
+	background-color :#e6e6e6; 
+	color : #000044;
+}
+h3.blogtitle {
+	/*font-family: palatino, georgia, times new roman, serif;*/
+	/*font-size: 1.17em; 	font-weight: bold; 	font-style: normal;  */
+}
+div.banner p a {
+	padding: 1mm 3mm 1mm 3mm;
+	margin: 0 4mm 0 4mm;
+	font-family: sans-serif;
+	border : 2px solid #5f7078;
+}

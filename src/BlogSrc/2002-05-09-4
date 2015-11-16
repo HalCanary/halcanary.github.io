@@ -1,0 +1,22 @@
+TITLE=First Blog
+COPYRIGHT=Copyright 2002-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2002-05-09 08:29:05
+PERMALINK=http://halcanary.org/vv/2002/05/09/4/
+PERMALINKPART=vv/2002/05/09/4/
+YEAR=2002
+MONTH=05
+DAY=09
+POSTID=4
+CATEGORIES=meta;
+MODE=htmldiv
+
+<p>Good Morning. This is my blog. The idea here is that I'll post here on a regular basis, and other people are encouraged to do so too.  </p>
+<p>Here are my plans for this blog:</p>
+<ol>
+<li>A login system to track users.</li>
+<li>Skinnable Style Sheets.</li>
+<li>Integration with the <a href="/~hal/ApChat/">chatting applet</a></li>
+<li>Perhapse eventually make my whole site dynamically generated.</li>
+</ol>
+<p>Now a link. This is <a href="http://oposite.stsci.edu/pubinfo/PR/2002/05/pr-photos.html">my new desktop background</a> on my work computer.</p>
+

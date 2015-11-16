@@ -1,0 +1,36 @@
+TITLE=another funny html thingy: blockquote
+COPYRIGHT=Copyright 2006-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2006-09-11 15:35:53
+PERMALINK=http://halcanary.org/vv/2006/09/11/631/
+PERMALINKPART=vv/2006/09/11/631/
+YEAR=2006
+MONTH=09
+DAY=11
+POSTID=631
+CATEGORIES=computers-code;
+MODE=htmldiv
+
+<p>Good html:</p>
+<pre>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01//EN&quot;
+&quot;http://www.w3.org/TR/html4/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;title&gt;&lt;/title&gt;&lt;/head&gt;&lt;body&gt;
+&lt;div&gt;
+&lt;blockquote&gt;
+&lt;div&gt;
+X
+&lt;/div&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;/body&gt;&lt;/html&gt;</pre>
+<p>Bad html:</p>
+<pre>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01//EN&quot;
+&quot;http://www.w3.org/TR/html4/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;title&gt;&lt;/title&gt;&lt;/head&gt;&lt;body&gt;
+&lt;div&gt;
+&lt;blockquote&gt;
+X
+&lt;/blockquote&gt;
+&lt;/div&gt;
+&lt;/body&gt;&lt;/html&gt;</pre>
+<p>Check it <a href="http://validator.w3.org/">yourself</a>.</p>
+

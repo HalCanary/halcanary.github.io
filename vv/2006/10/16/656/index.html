@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Voder-Vocoder: goodbye partition table</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" id="stylesheet" href="/styles/scrapple-from-the-apple.css">
+  </head>
+  <!-- Copyright 2006-2015 Hal Canary. ALL RIGHTS RESERVED. -->
+
+  <body style="padding:0;margin:0;">
+    <div class="column" style="max-width:640px;margin:0 auto;">
+
+      <h1 class="blogtitle">goodbye partition table</h1>
+
+      <div class="byline">By Hal Canary,
+        2006-10-16 09:55:40
+        (<a href="http://halcanary.org/vv/2006/10/16/656/">link</a>)
+    <br><a href="../../../../category/computers-code/" class="categorylink">#computers-code</a>
+        </div>
+      <!-- SRC= 2006-10-16-656 -->
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <div class="content">
+
+<!-- BEGIN CONTENT -->
+<p>Hard Drive A starts making loud clicking noises yesterday. I suspect it has finally died and I unplug it. Hard Drive B is newer, larger, and containes my day-to-day OS of choice. Tho only problem is that HDB contains no bootloader. So I need to install one. So I boot up knoppix from a CD and fool around trying to install grub. Then I figure I'll just try this:</p>
+<pre>dd if=boot/grub/stage1 of=/dev/hdb bs=512 count=1</pre>
+<p>Of course what I should have done was:</p>
+<pre>dd if=boot/grub/stage1 of=/dev/hdb1 bs=512 count=1</pre>
+<p>I managed to overwrite the partition table of my only working hard drive. Good thing my latest backup is only two weeks old, cause I'm not sure how to access any of the data on the drive.</p>
+
+
+<!-- END CONTENT -->
+
+      </div>
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <p>(<a href="../../../../archives/">back</a>)</p>
+    </div>
+  </body>
+</html>

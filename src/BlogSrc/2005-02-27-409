@@ -1,0 +1,18 @@
+TITLE=My favorite email interface
+COPYRIGHT=Copyright 2005-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2005-02-27 19:19:45
+PERMALINK=http://halcanary.org/vv/2005/02/27/409/
+PERMALINKPART=vv/2005/02/27/409/
+YEAR=2005
+MONTH=02
+DAY=27
+POSTID=409
+CATEGORIES=computers-code;
+MODE=htmldiv
+
+<p>Because I'm geek, AND I'm lazy.</p>
+<pre>
+echo 'Mom, what recipe do you use for chili?' &#0092;
+ | mutt mom -s chili
+</pre>
+

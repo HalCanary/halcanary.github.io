@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <title></title>
+    <style type="text/css"><!--
+div.column {
+	margin:auto; width:600px
+}
+.deemphasize {
+	color: #555555;
+	background-color: #ffffff;
+}
+.achtung {
+	color: #aa0000;
+	background-color: #ffffff;
+}
+.indent {
+	margin-left: 2em;
+}
+.centered {
+	text-align: center;
+}
+.rightside {
+	text-align: right;
+}
+blockquote {
+	border-left:2px #dddddd solid;
+	margin-left:19px;
+	padding-left:19px;
+	border-right:2px #dddddd solid;
+	margin-right:19px;
+	padding-right:19px;
+}
+pre {
+	overflow-x: auto;
+	margin-left: 2em;
+}
+body {
+	font-family: sans-serif;
+}
+--></style>
+  </head>
+  <body>
+    <div class="column">
+<h1>Polynomial Solution Graphs</h1>
+
+<p><b>Defining G(E,F).</b>
+Let <i>E</i> be a polynomial equation with <i>n</i> variables.  Let
+<i>E</i> be at most quadratic in any variable.  Let <i>F</i> be a
+ field or a ring.  Define a graph <i>G</i>(<i>E</i>,<i>F</i>) to hava
+ a vertex set made up of <i>n</i>-tuples from <i>F</i><sup><i>n</i></sup>
+
+ which are solutions to <i>E</i>.
+Let the edges in <i>G</i> be when two solutions differ in exaclty one
+ variable.
+</p>
+
+
+<p><b>Examples of multivariable quadratics:</b></p>
+
+<p class="centered">
+2(a<sup>2</sup> + b<sup>2</sup> + c<sup>2</sup> + d<sup>2</sup>)
+= (a + b + c + d)<sup>2</sup>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Soddy]
+</p>
+<p class="centered">
+a<sup>2</sup> + b<sup>2</sup> + c<sup>2</sup> = 3 a b c
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Markoff]
+</p>
+<p class="centered">
+a<sub>1</sub><sup>2</sup> + a<sub>2</sub><sup>2</sup> +
+a<sub>3</sub><sup>2</sup> + ... + a<sub>n</sub><sup>2</sup>
+
+= B a<sub>1</sub> a<sub>2</sub> a<sub>3</sub> ... a<sub>n</sub>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Hurwitz]
+</p>
+<p class="centered">
+a<sup>2</sup> + b<sup>2</sup> + 2 c<sup>2</sup> = 4 a b c
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Markoff Brother #1]
+</p>
+<p class="centered">
+a<sup>2</sup> + 2 b<sup>2</sup> + 3 c<sup>2</sup> = 6 a b c
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Markoff Brother #2]
+</p>
+
+<p>Note that The Soddy Equation was proved by Descartes.</p>
+
+<p>
+If M is the markoff equation, then G(M,Z) has 5 components.
+Martin says that for all of the p's he has tried, G(M,Z/p) is
+connected.
+</p>
+<p>
+G(M,GF(p^k)) does not seem to be connected for k &gt; 1.
+</p>
+
+<p>Code: <a href="galois.mw">galois.mw</a> and
+<a href="galois.mpl">galois.mpl</a></p>
+
+<hr>
+<p><a href="../">BACK</a></p>
+
+    </div>
+  </body>
+</html>

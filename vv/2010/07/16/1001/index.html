@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Voder-Vocoder: gnuplot question</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" id="stylesheet" href="/styles/scrapple-from-the-apple.css">
+  </head>
+  <!-- Copyright 2010-2015 Hal Canary. ALL RIGHTS RESERVED. -->
+
+  <body style="padding:0;margin:0;">
+    <div class="column" style="max-width:640px;margin:0 auto;">
+
+      <h1 class="blogtitle">gnuplot question</h1>
+
+      <div class="byline">By Hal Canary,
+        2010-07-16 22:10:14
+        (<a href="http://halcanary.org/vv/2010/07/16/1001/">link</a>)
+    <br><a href="../../../../category/computers-code/" class="categorylink">#computers-code</a>
+        </div>
+      <!-- SRC= 2010-07-16-1001 -->
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <div class="content">
+
+<!-- BEGIN CONTENT -->
+<p>Here's your basic LaTeX document:</p>
+<pre>
+%% FILE: basic.tex
+&#0092;documentclass[letterpaper,12pt]{article}
+&#0092;begin{document}
+&#0092;input{graph}
+&#0092;end{document}
+</pre>
+<p>The file graph.tex is generated using Gnuplot like this:</p>
+<pre>
+#!/usr/bin/gnuplot
+## FILE: graph.gnuplot
+set xrange [&#0045;3:3]
+set yrange [0:.42]
+set ytics nomirror autofreq 0, .1
+set terminal latex size 3,1.5
+set output &#0039;graph.tex&#0039;
+f(x) = .39894228040143267794 * exp(&#0045;0.5 * (x ** 2))
+set style line 1 linecolor rgb &quot;black&quot; linewidth 1
+plot f(x) ls 1 notitle
+</pre>
+<p>Here's the execution:</p>
+<pre>
+$ gnuplot graph.gnuplot
+$ pdflatex basic.tex > /dev/null
+$ evince basic.pdf &
+</pre>
+<p>This makes a really professional-looking graph I can put in a document.</p>
+<p><img src="/images/2010-07-16_graph.png" alt="[]" style="margin-left:2ex" /></p>
+<p>Now here's what I want to see:</p>
+<p><img src="/images/2010-07-16_graph_2.png" alt="[]" style="margin-left:2ex" /></p>
+<p>How do I do this with Gnuplot?</p>
+
+
+<!-- END CONTENT -->
+
+      </div>
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <p>(<a href="../../../../archives/">back</a>)</p>
+    </div>
+  </body>
+</html>

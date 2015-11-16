@@ -1,0 +1,45 @@
+TITLE=restart gdm under ubuntu
+COPYRIGHT=Copyright 2011-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2011-10-14 12:00:00
+PERMALINK=http://halcanary.org/vv/2011/10/14/csg16/
+PERMALINKPART=vv/2011/10/14/csg16/
+YEAR=2011
+MONTH=10
+DAY=14
+POSTID=csg16
+MODE=htmldiv
+
+<pre><!--(defun next&#0045;good&#0045;buffer () &quot;HWC&quot; (interactive)
+  (next&#0045;buffer)
+  (while (and (not (string= (buffer&#0045;name) &quot;*scratch*&quot;))
+	      (equal (buffer&#0045;file&#0045;name) nil))
+    (next&#0045;buffer)))
+(defun previous&#0045;good&#0045;buffer () &quot;HWC&quot; (interactive)
+  (previous&#0045;buffer)
+  (while (and (not (string= (buffer&#0045;name) &quot;*scratch*&quot;))
+	      (equal (buffer&#0045;file&#0045;name) nil))
+    (previous&#0045;buffer)))
+
+(global&#0045;set&#0045;key [(control next)] &#0039;next&#0045;good&#0045;buffer)
+(global&#0045;set&#0045;key [(control prior)] &#0039;previous&#0045;good&#0045;buffer)
+(global&#0045;set&#0045;key [(control tab)] &#0039;next&#0045;good&#0045;buffer)
+(global&#0045;set&#0045;key [(control shift tab)] &#0039;previous&#0045;good&#0045;buffer)
+(global&#0045;set&#0045;key [(control iso&#0045;lefttab)] &#0039;next&#0045;good&#0045;buffer)
+(global&#0045;set&#0045;key [(control shift iso&#0045;lefttab)] &#0039;previous&#0045;good&#0045;buffer)
+--><span class="symbol">(</span><span class="normal">defun next</span><span class="symbol">-</span><span class="normal">good</span><span class="symbol">-</span><span class="function">buffer</span><span class="normal"> </span><span class="symbol">()</span><span class="normal"> </span><span class="string">"HWC"</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">interactive</span><span class="symbol">)</span>
+<span class="normal">  </span><span class="symbol">(</span><span class="normal">next</span><span class="symbol">-</span><span class="normal">buffer</span><span class="symbol">)</span>
+<span class="normal">  </span><span class="symbol">(</span><span class="keyword">while</span><span class="normal"> </span><span class="symbol">(</span><span class="keyword">and</span><span class="normal"> </span><span class="symbol">(</span><span class="keyword">not</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">string</span><span class="symbol">=</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">buffer</span><span class="symbol">-</span><span class="normal">name</span><span class="symbol">)</span><span class="normal"> </span><span class="string">"*scratch*"</span><span class="symbol">))</span>
+<span class="normal">	      </span><span class="symbol">(</span><span class="function">equal</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">buffer</span><span class="symbol">-</span><span class="normal">file</span><span class="symbol">-</span><span class="normal">name</span><span class="symbol">)</span><span class="normal"> nil</span><span class="symbol">))</span>
+<span class="normal">    </span><span class="symbol">(</span><span class="normal">next</span><span class="symbol">-</span><span class="normal">buffer</span><span class="symbol">)))</span>
+<span class="symbol">(</span><span class="normal">defun previous</span><span class="symbol">-</span><span class="normal">good</span><span class="symbol">-</span><span class="function">buffer</span><span class="normal"> </span><span class="symbol">()</span><span class="normal"> </span><span class="string">"HWC"</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">interactive</span><span class="symbol">)</span>
+<span class="normal">  </span><span class="symbol">(</span><span class="normal">previous</span><span class="symbol">-</span><span class="normal">buffer</span><span class="symbol">)</span>
+<span class="normal">  </span><span class="symbol">(</span><span class="keyword">while</span><span class="normal"> </span><span class="symbol">(</span><span class="keyword">and</span><span class="normal"> </span><span class="symbol">(</span><span class="keyword">not</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">string</span><span class="symbol">=</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">buffer</span><span class="symbol">-</span><span class="normal">name</span><span class="symbol">)</span><span class="normal"> </span><span class="string">"*scratch*"</span><span class="symbol">))</span>
+<span class="normal">	      </span><span class="symbol">(</span><span class="function">equal</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">buffer</span><span class="symbol">-</span><span class="normal">file</span><span class="symbol">-</span><span class="normal">name</span><span class="symbol">)</span><span class="normal"> nil</span><span class="symbol">))</span>
+<span class="normal">    </span><span class="symbol">(</span><span class="normal">previous</span><span class="symbol">-</span><span class="normal">buffer</span><span class="symbol">)))</span>
+
+<span class="symbol">(</span><span class="keyword">global</span><span class="symbol">-</span><span class="normal">set</span><span class="symbol">-</span><span class="normal">key </span><span class="symbol">[(</span><span class="normal">control next</span><span class="symbol">)]</span><span class="normal"> 'next</span><span class="symbol">-</span><span class="normal">good</span><span class="symbol">-</span><span class="normal">buffer</span><span class="symbol">)</span>
+<span class="symbol">(</span><span class="keyword">global</span><span class="symbol">-</span><span class="normal">set</span><span class="symbol">-</span><span class="normal">key </span><span class="symbol">[(</span><span class="normal">control prior</span><span class="symbol">)]</span><span class="normal"> 'previous</span><span class="symbol">-</span><span class="normal">good</span><span class="symbol">-</span><span class="normal">buffer</span><span class="symbol">)</span>
+<span class="symbol">(</span><span class="keyword">global</span><span class="symbol">-</span><span class="normal">set</span><span class="symbol">-</span><span class="normal">key </span><span class="symbol">[(</span><span class="normal">control tab</span><span class="symbol">)]</span><span class="normal"> 'next</span><span class="symbol">-</span><span class="normal">good</span><span class="symbol">-</span><span class="normal">buffer</span><span class="symbol">)</span>
+<span class="symbol">(</span><span class="keyword">global</span><span class="symbol">-</span><span class="normal">set</span><span class="symbol">-</span><span class="normal">key </span><span class="symbol">[(</span><span class="normal">control shift tab</span><span class="symbol">)]</span><span class="normal"> 'previous</span><span class="symbol">-</span><span class="normal">good</span><span class="symbol">-</span><span class="normal">buffer</span><span class="symbol">)</span>
+<span class="symbol">(</span><span class="keyword">global</span><span class="symbol">-</span><span class="normal">set</span><span class="symbol">-</span><span class="normal">key </span><span class="symbol">[(</span><span class="normal">control iso</span><span class="symbol">-</span><span class="normal">lefttab</span><span class="symbol">)]</span><span class="normal"> 'next</span><span class="symbol">-</span><span class="normal">good</span><span class="symbol">-</span><span class="normal">buffer</span><span class="symbol">)</span>
+<span class="symbol">(</span><span class="keyword">global</span><span class="symbol">-</span><span class="normal">set</span><span class="symbol">-</span><span class="normal">key </span><span class="symbol">[(</span><span class="normal">control shift iso</span><span class="symbol">-</span><span class="normal">lefttab</span><span class="symbol">)]</span><span class="normal"> 'previous</span><span class="symbol">-</span><span class="normal">good</span><span class="symbol">-</span><span class="normal">buffer</span><span class="symbol">)</span></pre>

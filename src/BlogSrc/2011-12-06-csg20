@@ -1,0 +1,17 @@
+TITLE=quick GDB
+COPYRIGHT=Copyright 2011-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2011-12-06 12:00:00
+PERMALINK=http://halcanary.org/vv/2011/12/06/csg20/
+PERMALINKPART=vv/2011/12/06/csg20/
+YEAR=2011
+MONTH=12
+DAY=06
+POSTID=csg20
+MODE=htmldiv
+
+
+
+	<p>One can start an executable with arguments inside GDB with a single bash command:</p>
+	<pre>$ gdb EXECUTABLE &lt;&lt;&lt; 'run ARG1 ARG2 ARG3'</pre>
+
+

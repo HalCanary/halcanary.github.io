@@ -1,0 +1,50 @@
+TITLE=Getting Started With Mono
+COPYRIGHT=Copyright 2004-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2004-07-16 20:33:21
+PERMALINK=http://halcanary.org/vv/2004/07/16/269/
+PERMALINKPART=vv/2004/07/16/269/
+YEAR=2004
+MONTH=07
+DAY=16
+POSTID=269
+CATEGORIES=computers-code;
+MODE=htmldiv
+
+<p><img src="/images/mono.png" alt="[mono logo]" /></p>
+<p><a href="http://www.mono-project.com/">Mono</a> has just hit 1.0.  It is now time for me to abandon Java and start developing in c# instead.  Let's get started:</p>
+<pre>
+## Lines added to /etc/yum.conf
+## visit http://www.mono-project.com/downloads/
+## for the correct url for your distro and version.
+[ximian-mono]
+name=Ximian Mono
+baseurl=http://mono2.ximian.com/archive/1.0/fedora-2-i386/
+</pre>
+<p>After updating /etc/yum.conf, I installed everything mono, willy-nilly.</p>
+<pre>$ sudo yum install mono*</pre>
+<p>Now we play with <code>mcs</code>, the mono compiler. Here is Hello World:</p>
+<pre>
+/* ~/code/c-sharp/Hello.cs */
+/**
+   Hello World in C Sharp
+**/
+using System;
+class  Hello {
+    static void Main() {
+	Console.Write("hello world&#0092;n");
+    }
+}
+/*EOF*/</pre>
+<p>Compile and and run:</p>
+<pre>
+$ mcs Hello.cs
+Compilation succeeded
+$ ls
+Hello.cs  Hello.exe
+$ mono Hello.exe
+hello world
+$
+</pre>
+<p>Yea!</p>
+<pre>$ monodoc &amp;</pre>
+

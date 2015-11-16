@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Voder-Vocoder: spam rules</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" id="stylesheet" href="/styles/scrapple-from-the-apple.css">
+  </head>
+  <!-- Copyright 2011-2015 Hal Canary. ALL RIGHTS RESERVED. -->
+
+  <body style="padding:0;margin:0;">
+    <div class="column" style="max-width:640px;margin:0 auto;">
+
+      <h1 class="blogtitle">spam rules</h1>
+
+      <div class="byline">By Hal Canary,
+        2011-10-26 15:01:41
+        (<a href="http://halcanary.org/vv/2011/10/26/1252/">link</a>)
+    <br><a href="../../../../category/computers-code/" class="categorylink">#computers-code</a>;<a href="../../../../category/life/" class="categorylink">#life</a>
+        </div>
+      <!-- SRC= 2011-10-26-1252 -->
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <div class="content">
+
+<!-- BEGIN CONTENT -->
+<p>These are my new spamassassin rules.  If your configured email client fails to have a valid DKIM or DK signature or SPF record, I'm probably going to mark you as spam.</p>
+<pre>
+#### .spamassassin/user_prefs
+required_score -1.0
+score DKIM_VALID_AU -10.0
+score SPF_PASS -5.0
+</pre>
+<p>99% of my legitimate correspondents are okay already.</p>
+
+
+<!-- END CONTENT -->
+
+      </div>
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <p>(<a href="../../../../archives/">back</a>)</p>
+    </div>
+  </body>
+</html>

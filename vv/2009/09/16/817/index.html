@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Voder-Vocoder: netbook network mp3 player</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" id="stylesheet" href="/styles/scrapple-from-the-apple.css">
+  </head>
+  <!-- Copyright 2009-2015 Hal Canary. ALL RIGHTS RESERVED. -->
+
+  <body style="padding:0;margin:0;">
+    <div class="column" style="max-width:640px;margin:0 auto;">
+
+      <h1 class="blogtitle">netbook network mp3 player</h1>
+
+      <div class="byline">By Hal Canary,
+        2009-09-16 15:37:59
+        (<a href="http://halcanary.org/vv/2009/09/16/817/">link</a>)
+    <br><a href="../../../../category/computers-code/" class="categorylink">#computers-code</a>;<a href="../../../../category/music/" class="categorylink">#music</a>
+        </div>
+      <!-- SRC= 2009-09-16-817 -->
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <div class="content">
+
+<!-- BEGIN CONTENT -->
+<p>I wanted to access my desktop&#0039;s music library from my living room and play it through the amplifier and speakers there.  So I grabbed my netbook, and after fumbling around with NFS for too long, I just tried:</p>
+<pre>yum install sshfs</pre>
+<p>(It&#0039;s a OLPC XO&#0045;1, so it&#0039;s Redhat&#0045;based.) And then wrote a little script:</p>
+<pre>#!/bin/sh
+## ~/bin/mount&#0045;music
+mkdir -p "${HOME}/music"
+sshfs hal@sloop:/d/music "${HOME}/music"</pre>
+<p>I installed mpg123&#0045;alsa (by the simple expedient of copying the executable) and wrote a little script to run it.</p>
+<pre>#!/bin/sh
+test &#0045;f &quot;${HOME}/music/index.txt&quot; || &#0092;
+    sshfs hal@sloop:/d/music &quot;${HOME}/music&quot;
+cd &quot;${HOME}/music&quot;
+exec mpg123&#0045;alsa &#0045;&#0045;control &#0045;&#0045;long&#0045;tag &#0092;
+    &#0045;&#0045;shuffle &#0045;&#0045;list index.txt</pre>
+<p>And index.txt is a file created with the find command on the server:</p>
+<pre>#!/bin/sh
+# run this script to refresh the index file.
+cd $HOME/music
+find . &#0045;type f &#0045;a &#0045;name &#0039;*.mp3&#0039; &gt; index.txt</pre>
+
+
+<!-- END CONTENT -->
+
+      </div>
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <p>(<a href="../../../../archives/">back</a>)</p>
+    </div>
+  </body>
+</html>

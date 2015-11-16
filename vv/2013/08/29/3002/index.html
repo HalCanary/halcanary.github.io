@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Voder-Vocoder: Current Location</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" id="stylesheet" href="/styles/scrapple-from-the-apple.css">
+  </head>
+  <!-- Copyright 2013-2015 Hal Canary. ALL RIGHTS RESERVED. -->
+
+  <body style="padding:0;margin:0;">
+    <div class="column" style="max-width:640px;margin:0 auto;">
+
+      <h1 class="blogtitle">Current Location</h1>
+
+      <p class="byline">The existing software on your phone makes it impossible to send someone precise latitude/longitude that you pinpoint on a map. Here's my solution, IF you are already standing where you want to pinpoint.</p>
+
+      <div class="byline">By Hal Canary,
+        2013-08-29 09:48:42
+        (<a href="http://halcanary.org/vv/2013/08/29/3002/">link</a>)
+    <br><a href="../../../../category/computers-code/" class="categorylink">#computers-code</a>
+        </div>
+      <!-- SRC= 2013-08-29-3002 -->
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <div class="content">
+
+<!-- BEGIN CONTENT -->
+<script>
+function nav() {
+	if (! navigator.geolocation) {
+      document.getElementById("location").innerHTML = "<p>Sorry :(</p>";
+	  return;
+    }
+	document.getElementById("location").innerHTML = "<p>&nbsp;</p>";
+    function posfunc(pos) {
+      var c = pos.coords;
+      var r = 6;
+      var p = c.latitude.toFixed(r) + "," + c.longitude.toFixed(r);
+      document.getElementById("location").innerHTML =
+	    "<p><strong>Your Current Location:</strong></p>" +
+        "<p><a href='https://maps.google.com/maps?q="
+        + p + "'>" + p + "</a></p><p>("+ c.accuracy + "m)</p>"
+		+"<p><a href='geo:"+p+"'>geo:"+p+"</a></p>";
+    };
+    navigator.geolocation.getCurrentPosition(posfunc);
+    return false;
+}
+//window.addEventListener('load', nav);
+</script>
+<div id="location" style="height:160px; margin:0.5em 0;">
+<a href="" onclick="nav(); return false;">
+<div style="height:150px; border:3px solid;color:#000000; background-color:#dddddd;">
+<p class="centered">Find Me!</p>
+</div>
+</a>
+</div>
+
+
+
+<!-- END CONTENT -->
+
+      </div>
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <p>(<a href="../../../../archives/">back</a>)</p>
+    </div>
+  </body>
+</html>

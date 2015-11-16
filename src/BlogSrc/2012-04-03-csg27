@@ -1,0 +1,33 @@
+TITLE=Collapse paragraphs
+COPYRIGHT=Copyright 2012-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2012-04-03 12:00:00
+PERMALINK=http://halcanary.org/vv/2012/04/03/csg27/
+PERMALINKPART=vv/2012/04/03/csg27/
+YEAR=2012
+MONTH=04
+DAY=03
+POSTID=csg27
+MODE=htmldiv
+
+
+<pre><!--#!/usr/bin/env python
+# ignores witespace
+# collapses paragraphs
+import sys
+for line in sys.stdin:
+    line = line.strip()
+    if len(line) == 0:
+        sys.stdout.write(&#0039;&#0092;n&#0092;n&#0039;)
+    else:
+        sys.stdout.write(line+&#0039; &#0039;)-->
+<span class="comment">#!/usr/bin/env python</span>
+<span class="comment"># ignores witespace</span>
+<span class="comment"># collapses paragraphs</span>
+<span class="preproc">import</span><span class="normal"> sys</span>
+<span class="keyword">for</span><span class="normal"> line </span><span class="keyword">in</span><span class="normal"> sys</span><span class="symbol">.</span><span class="normal">stdin</span><span class="symbol">:</span>
+<span class="normal">    line </span><span class="symbol">=</span><span class="normal"> line</span><span class="symbol">.</span><span class="function">strip</span><span class="symbol">()</span>
+<span class="normal">    </span><span class="keyword">if</span><span class="normal"> </span><span class="function">len</span><span class="symbol">(</span><span class="normal">line</span><span class="symbol">)</span><span class="normal"> </span><span class="symbol">==</span><span class="normal"> </span><span class="number">0</span><span class="symbol">:</span>
+<span class="normal">        sys</span><span class="symbol">.</span><span class="normal">stdout</span><span class="symbol">.</span><span class="function">write</span><span class="symbol">(</span><span class="string">'\n\n'</span><span class="symbol">)</span>
+<span class="normal">    </span><span class="keyword">else</span><span class="symbol">:</span>
+<span class="normal">        sys</span><span class="symbol">.</span><span class="normal">stdout</span><span class="symbol">.</span><span class="function">write</span><span class="symbol">(</span><span class="normal">line</span><span class="symbol">+</span><span class="string">' '</span><span class="symbol">)</span>
+</pre>

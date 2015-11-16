@@ -1,0 +1,27 @@
+TITLE=dumping mt?
+COPYRIGHT=Copyright 2005-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2005-05-26 13:08:56
+PERMALINK=http://halcanary.org/vv/2005/05/26/466/
+PERMALINKPART=vv/2005/05/26/466/
+YEAR=2005
+MONTH=05
+DAY=26
+POSTID=466
+CATEGORIES=meta;
+MODE=htmldiv
+
+<p><strong>WARNING:</strong> Metablogging is always stupid.  Do not continue reading this post.</p>
+<p>Reasons to contiue using movable type:</p>
+<ol>
+<li>Already  installed and working</li>
+<li>Does everything I  want it to.</li>
+<li>Like its template system.</li>
+</ol>
+<p>Reasons to dump movable type:</p>
+<ol>
+<li>Free as in beer (v2.64), not as in speech.</li>
+<li>Version 2.x no longer supported.  Version 3.x not free.  (I fell for the BitKeeper Trap!)</li>
+<li>Comment Spam issue.</li>
+<li>Do I really need a forsaken database? It complicates backup.  I'd rather have a load of flat files tied together with php scripts.</li>
+</ol>
+

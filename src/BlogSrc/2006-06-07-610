@@ -1,0 +1,17 @@
+TITLE=trigonometry
+COPYRIGHT=Copyright 2006-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2006-06-07 18:31:58
+PERMALINK=http://halcanary.org/vv/2006/06/07/610/
+PERMALINKPART=vv/2006/06/07/610/
+YEAR=2006
+MONTH=06
+DAY=07
+POSTID=610
+CATEGORIES=mathematics;
+MODE=htmldiv
+
+<p>Why do I find trigonometry so beautiful?<br />
+<img src="/images/Circle-trig6.png" width="640" height="444" alt="[unit circle with trig functions]  All of the trigonometric functions can be constructed geometrically in terms of a unit circle centered at O" /><br />
+(<a href="http://commons.wikimedia.org/wiki/Image:Circle-trig6.svg">source</a>)</p>
+<p>By definition, versin(A)=1-cos(A), and exsec(A)=sec(A)-1.</p>
+

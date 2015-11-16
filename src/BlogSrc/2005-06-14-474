@@ -1,0 +1,23 @@
+TITLE=id3tag --genre
+COPYRIGHT=Copyright 2005-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2005-06-14 12:34:16
+PERMALINK=http://halcanary.org/vv/2005/06/14/474/
+PERMALINKPART=vv/2005/06/14/474/
+YEAR=2005
+MONTH=06
+DAY=14
+POSTID=474
+CATEGORIES=computers-code;
+MODE=htmldiv
+
+<p><strong>WARNING:  boring linux-related post follows!</strong></p>
+<p>Here's how to quickly fix the genres of your mp3 colection.</p>
+<p>Get the list of genres</p>
+<pre>
+$ lame --genre-list | sort -n | column
+</pre>
+<p>Pick one.  In general, the lower the number, the more standard it is. Suppose we pick genre #17 (rock).</p>
+<pre>
+id3tag --genre=17 <em>filelist</em>
+</pre>
+

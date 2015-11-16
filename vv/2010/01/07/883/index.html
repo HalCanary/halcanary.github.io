@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Voder-Vocoder: Printing a text file</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" id="stylesheet" href="/styles/scrapple-from-the-apple.css">
+  </head>
+  <!-- Copyright 2010-2015 Hal Canary. ALL RIGHTS RESERVED. -->
+
+  <body style="padding:0;margin:0;">
+    <div class="column" style="max-width:640px;margin:0 auto;">
+
+      <h1 class="blogtitle">Printing a text file</h1>
+
+      <div class="byline">By Hal Canary,
+        2010-01-07 13:22:40
+        (<a href="http://halcanary.org/vv/2010/01/07/883/">link</a>)
+    <br><a href="../../../../category/computers-code/" class="categorylink">#computers-code</a>
+        </div>
+      <!-- SRC= 2010-01-07-883 -->
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <div class="content">
+
+<!-- BEGIN CONTENT -->
+<p>Printing a text file is one of those basic things you never think about.  Unless you are me.  I like to play with the variables and make that printout look <em>good</em>.</p>
+<pre>#!/bin/sh
+# Print a UTF&#0045;8 document to the default printer
+# Written by Hal Canary 2009&#0045;12&#0045;23.
+#DTPD# Dedicated to the Public Domain.
+
+# Configurable Options
+font=&quot;Monospace 11&quot;
+#font=&quot;Serif 11&quot;
+#font=&quot;Sans 11&quot;
+paper=&quot;letter&quot;
+b_margin=0.25
+t_margin=0.25
+r_margin=0.25
+l_margin=0.75
+
+# convert inches to PostScript points
+b_margin=`echo &quot;( $b_margin * 72 ) / 1&quot; | bc`
+t_margin=`echo &quot;( $t_margin * 72 ) / 1&quot; | bc`
+r_margin=`echo &quot;( $r_margin * 72 ) / 1&quot; | bc`
+l_margin=`echo &quot;( $l_margin * 72 ) / 1&quot; | bc`
+
+exec paps &#0045;&#0045;font=&quot;$font&quot; &#0092;
+  &#0045;&#0045;paper=&quot;$paper&quot; &#0092;
+  &#0045;&#0045;bottom&#0045;margin=$b_margin &#0092;
+  &#0045;&#0045;top&#0045;margin=$t_margin &#0092;
+  &#0045;&#0045;right&#0045;margin=$r_margin &#0092;
+  &#0045;&#0045;left&#0045;margin=$l_margin &#0092;
+  &quot;$@&quot; | lpr
+#EOF#</pre>
+
+
+<!-- END CONTENT -->
+
+      </div>
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <p>(<a href="../../../../archives/">back</a>)</p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+TITLE=randpassphrase
+COPYRIGHT=Copyright 2007-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2007-03-20 13:24:02
+PERMALINK=http://halcanary.org/vv/2007/03/20/677/
+PERMALINKPART=vv/2007/03/20/677/
+YEAR=2007
+MONTH=03
+DAY=20
+POSTID=677
+CATEGORIES=computers-code;
+MODE=htmldiv
+
+<pre>/*
+   randpassphrase.c
+   This makes use of /dev/random
+   Copyright 2006 Hal Canary
+   DTPD (Dedicated to the Public Domain)
+   cc -o randpassphrase randpassphrase.c
+*/
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;time.h&gt;
+int main() {
+  FILE *devrandom;
+  char source [] = &quot;/dev/random&quot;;
+  unsigned int num;
+  if ((devrandom = fopen(source, &quot;rb&quot;)) == NULL) {
+    fprintf(stderr, &quot;Cannot open %s&#0092;n&quot;, source);
+    exit(EXIT_FAILURE);
+  }
+  int i;
+  for (i=0; i&lt; 28; i++) {
+    if (fread(&amp;num, sizeof(num), 1, devrandom) != 1) {
+      fprintf(stderr, &quot;%s: file read error.&#0092;n&quot;, source);
+      exit(EXIT_FAILURE);
+    }
+    printf(&quot;%c&quot;,((num % 26) + 97));
+    fflush(stdout);
+    if (i%4 == 3) { printf(&quot; &quot;); }
+  }
+  close(devrandom);
+  printf(&quot;&#0092;n&quot;);
+  return(0);
+}</pre>
+

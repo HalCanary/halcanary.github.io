@@ -1,0 +1,47 @@
+TITLE=dealing with lots of arguments in bash
+COPYRIGHT=Copyright 2006-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2006-12-27 12:00:57
+PERMALINK=http://halcanary.org/vv/2006/12/27/672/
+PERMALINKPART=vv/2006/12/27/672/
+YEAR=2006
+MONTH=12
+DAY=27
+POSTID=672
+CATEGORIES=computers-code;
+MODE=htmldiv
+
+<pre>#!/bin/sh
+#DTPD#
+echo first argument is '&quot;'${1}'&quot;'
+for argc in `seq 2 $#`; do
+        eval arg=&#0092;${$argc}
+        echo ${argc}th arg is $arg
+done</pre>
+<p>For example:</p>
+<pre>#!/bin/sh
+# prepend-something.sh
+#DTPD#
+if [ &quot;$#&quot; -lt 2 ] ; then
+        echo &quot;useage:  $0 PREFEX FILE[S]&quot;
+        exit 1
+fi
+PREFEX=${1}
+for argc in `seq 2 $#`; do
+        eval arg=&#0092;${$argc}
+        mv -v &quot;${arg}&quot; &quot;${PREFEX}${arg}&quot;
+done</pre>
+<hr />
+<p><strong>Update 2009-12-05</strong>:  Another way to do it would be to use the shift command.</p>
+<pre>#!/bin/sh
+# prepend&#0045;something.sh
+#DTPD#
+if [ &quot;$#&quot; &#0045;lt 2 ] ; then
+    echo &quot;useage:  $0 PREFEX FILE[S]&quot;
+    exit 1
+fi
+prefix=${1}
+shift
+for arg in &quot;$@&quot;; do
+    mv &#0045;v &quot;$arg&quot; &quot;${prefix}${arg}&quot;
+done</pre>
+

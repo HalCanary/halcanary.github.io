@@ -1,0 +1,257 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <title></title>
+    <style type="text/css"><!--
+div.column {
+	margin:auto; width:600px
+}
+.deemphasize {
+	color: #555555;
+	background-color: #ffffff;
+}
+.achtung {
+	color: #aa0000;
+	background-color: #ffffff;
+}
+.indent {
+	margin-left: 2em;
+}
+.centered {
+	text-align: center;
+}
+.rightside {
+	text-align: right;
+}
+blockquote {
+	border-left:2px #dddddd solid;
+	margin-left:19px;
+	padding-left:19px;
+	border-right:2px #dddddd solid;
+	margin-right:19px;
+	padding-right:19px;
+}
+pre {
+	overflow-x: auto;
+	margin-left: 2em;
+}
+body {
+	font-family: sans-serif;
+}
+dd {margin-bottom : 1.5ex;}
+dt {font-weight: bolder;}
+--></style>
+  </head>
+  <body>
+    <div class="column">
+<h1>Glossary 2003</h1>
+
+<p>We did this two years ago, and never got too far. Might as well try
+again; it was a good idea. “<em>Document everything</em>.”</p>
+
+<dl>
+
+<dt>Snake Graph</dt>
+	<dd>a planar graph on a square grid.  It might be
+best for me to define this recursivly.  THe smallest snake graph is
+the vertices at (0,0),(0,1),(1,0),(1,1) and the four edges joining
+(0,0) to (0,1), (0,1) to (1,1), (1,1) to (1,0), and (1,0) to (0,0). A
+snake graph cen be built from a smaller snake graph by adding two
+verices and three edges in one of two proscribed ways.  If (a,b) is
+the top-rightmost vertex, you can add vertices at (a+1,b) and
+(a+1,b-1) or at (a,b+1) and (a-1,b+1).  Then add one edge between the
+two new edges and one from each of those vertices to the nearest
+vertex in the old graph. </dd>
+
+<dt>Straight Snake Graph</dt>
+	<dd>A 2-by-n square grid.  The number of
+matchings is the F_n, the n-th Fibbonacci number.</dd>
+
+<dt>Staircase Snake Graph</dt>
+	<dd>what is sounds like.  A snake
+graph where the new boxes are added alternating to the right and up.  A
+staircase snake graph with <em>2n</em> vertices has <em>n</em> perfect
+matchings. (arithmetic progression)</dd>
+
+<dt>perfect matching of a graph</dt>
+	<dd> Each vertex is paired up with
+exactly one other vertex by selecting edges in the graph.
+
+A graph <em>M</em> is a perfect matching of a loopless graph
+
+<em>G</em> if (1) <em>M</em> is a subgraph of <em>G</em>. (2)
+<em>M</em> contains all of the vertices of <em>G</em>.  and (3) Each
+vertex of <em>M</em> is incident to exactly one edge.
+</dd>
+
+<dt>Fibonacci numbers</dt>
+	<dd>The sequence 1,1,2,3,5,8,13,21...,
+defined by F_n = F_{n-1} + F_{n-2} and F_0 = F_1 = 1. </dd>
+
+<dt>bijective proof</dt>
+	<dd>type of combinatorial proof that
+shows that the size of two sets are equal by constricting a bijection
+between them.</dd>
+
+<dt>Markoff equation</dt>
+	<dd>The equation: a^2 + b^2 + c^2 = 3 a b c</dd>
+
+<dt>Markoff triples</dt>
+	<dd>solutions to the Markoff equation from
+<em><b>Z</b>^3</em>: (1,1,1), (1,2,1), (1,2,5), ...</dd>
+
+<dt>Markoff numbers</dt>
+	<dd>Integers that appear in Markoff tripples: 1,
+2, 5, 13, 29, 34, 89, 169, 194, ...</dd>
+
+<dt>Solution to markoff equation</dt>
+
+	<dd>If <em>(a,b,c)</em> is a solution
+to Markoff equation, then <em>(a,b,c')</em> is also a solution:
+<em>c' = (a^2+b^2)/c</em>  and <em>c' = 3ab - c</em></dd>
+
+<dt>Domino Tiling</dt>
+	<dd>another way to look at perfect matchings on
+a square grid. Start with a graph on a square grid.  Take its dual
+(replace vertices with faces and faces with vertices, ignoring the
+unbounded face) Each matching on the original graph corresponds to
+tiling the new graph with 2x1 domino tiles covering two adjacent
+faces.</dd>
+
+<dt>Cluster Algebra</dt>
+	<dd>A class of commutative algebra, first
+described by Fomin and Zelevinsky
+(<a href="http://arxiv.org/abs/math.RT/0104151">arXiv:math.RT/0104151</a>).
+A cluster algebra of rank <em>n</em> is a commutative ring with unit
+and no zero divisors with the following structure:
+  <ol>
+  <li>The cluster algebra has a family of generators called <em>cluster
+  variables</em>.</li>
+  <li>A <em>cluster</em> is a set of <em>n</em> cluster variables </li>
+
+  <li>For any cluster <b>x</b> and <em>x</em> in <b>x</b>, there is
+  another cluster <b>x'</b>=<b>x</b>-{<em>x</em>} union {<em>x'</em>},
+  where <em>x</em> and <em>x'</em> are related by a mysterous <em>exchange
+  relation</em>.</li>
+
+  </ol>
+</dd>
+
+<dt>Markoff polynomials</dt>
+	<dd>suppose that
+formal variables <em>x,y,z</em> are a solution to the Markoff
+equation.  Find other such solutions using the <em>c' =
+(a^2+b^2)/c</em> relation.  Other solutions make up the set of Markoff
+polynomials, a subset of the Laurent polynomials. </dd>
+
+<dt>Arithmetic Progression</dt>
+
+	<dd>any sequence in
+the form <em>a, a+n, a+2n, a+3n, ...</em></dd>
+
+<dt>Weighted Graph</dt>
+	<dd>A graph, along with a number
+or formal variable assigned to each edge.</dd>
+
+<dt>Weighted Sum of Perfect Matchings</dt>
+	<dd>the sum
+over all perfect matching of a graph of the product of the edge
+weights of all the edges in the matching.  If each edge has weight 1,
+then the weighted sum is simply the number of perfect matchings.</dd>
+
+<dt>generating function</dt>
+	<dd>a function <em>f(x) = SUM a_n
+x^n</em>, where <em>a_n</em> counts something. </dd>
+
+<dt>Laurent polynomial</dt>
+	<dd>a polynomial divided by a monomial.</dd>
+
+<dt>mediant</dt>
+	<dd>map from rationals X rationals –&gt; rationals.
+mediant(a/b, c/d) := (a+c)/(b+d).  Refer to Kirillov's two jokes on this
+subject.</dd>
+
+<dt>Apollonian gasket</dt>
+	<dd>?</dd>
+
+<dt>triangulations of polygons</dt>
+	<dd>?</dd>
+
+<dt>Y-graphs</dt>
+	<dd>?</dd>
+
+<dt>graphical condensation</dt>
+	<dd>an operation used in bijective proofs
+involving perfect matchings.  If you superimpose two perfect machings
+of a graph, you will get a loopless multigraph where each vertex is
+incident to two edges. The number of ways to decompose two graphs is
+<em>2^k</em>, where <em>k</em> is the number of cycles in the doubled
+graph. See
+<a href="http://arxiv.org/abs/math.CO/0304090">arXiv:math.CO/0304090</a>
+
+</dd>
+
+<dt>Cube Snakes</dt>
+	<dd>A three-dimensional
+analog of the snake graph.  The smallest cube snake is the cube.
+Larger cube snakes can be made by adding a square in one of three
+positions.  Note that these are still planar graphs.</dd>
+
+<dt>Flat Cube Snake</dt>
+	<dd>A cube snake whose vertices lie in one of two planes.</dd>
+
+<dt>bipartite graph</dt>
+	<dd>A graph where the
+vertices can be partitioned into two sets <em>X</em> and <em>Y</em>,
+such that all edges join a vertex from set <em>X</em> to a vertex
+from set <em>Y</em>.</dd>
+
+<dt><em>k</em>-regular graph</dt>
+	<dd>A graph where each
+vertex is incident to exactly <em>k</em> edges.</dd>
+
+<dt>Laurent phenomenon</dt>
+	<dd>When you divide one
+Laurent polynomial by
+another, wou will not usually get another Laurent polynomial.  But
+there are some systems where you always get another Laurent
+polynomial.  This happens in Cluster Algebras.  This a deep and
+mysterious thing.  See
+<a href="http://arxiv.org/abs/math.CO/0104241">arXiv:math.CO/0104241</a>.
+ </dd>
+
+<dt>cellular automata</dt>
+	<dd>Mathematical system that evolves over time. There is a
+	function <em>f</em> : X × T –&gt; Y, where X is the
+	coordinate space (maybe the integers), T is the time axis
+	(nonnegative intigers, maybe),
+	and Y is the possible values at each coodinate.  The system
+	evolves according to some function Φ.
+	<br>
+	<em>f_t</em>(<em>n</em>) =
+	Φ(<em>f_{t-1}</em>(<em>n-1</em>),
+	<em>f_{t-1}</em>(<em>n</em>), <em>f_{t-1}</em>(<em>n+1</em>))
+	<br>
+
+	In order for this to work, we need a starting condition
+	<em>f_0</em>(<em>x</em>) = <em>g</em>(<em>x</em>).
+	If Φ is only a function of a cell and its two closest
+	neightbors, and if Y = {0,1}, then Φ is one of 2^(2^3)=256
+	possible values.  See Wolfram's book for more one-dimentional
+	cellular automata than any man could stand.</dd>
+
+<dt>faithful polynimial</dt>
+	<dd>A subset of the Laurent polynomials.  An expression is a
+	faithful polynomial if it is a polynomial with all coefficents
+	equal to plus-or-minus 1 divided by a monomial with unit
+	coefficents.</dd>
+
+
+<hr>
+<p><a href="../">BACK</a></p>
+
+
+    </div>
+  </body>
+</html>

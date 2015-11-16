@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Voder-Vocoder: PyQt QInputDialog.get*() wrappers</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" id="stylesheet" href="/styles/scrapple-from-the-apple.css">
+  </head>
+  <!-- Copyright 2012-2015 Hal Canary. ALL RIGHTS RESERVED. -->
+
+  <body style="padding:0;margin:0;">
+    <div class="column" style="max-width:640px;margin:0 auto;">
+
+      <h1 class="blogtitle">PyQt QInputDialog.get*() wrappers</h1>
+
+      <div class="byline">By Hal Canary,
+        2012-01-17 12:00:00
+        (<a href="http://halcanary.org/vv/2012/01/17/csg22/">link</a>)
+        </div>
+      <!-- SRC= 2012-01-17-csg22 -->
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <div class="content">
+
+<!-- BEGIN CONTENT -->
+
+<pre>#!/usr/bin/env python
+
+import PyQt4.QtGui
+
+def getInt(title, label, mini=&#0045;2147483647, maxa=2147483647):
+  assert mini &lt;= maxa
+  default = min(max(0, mini), maxa)
+  (ret, ok) = PyQt4.QtGui.QInputDialog.getInt(
+    PyQt4.QtGui.QWidget(), title, label, default, mini, maxa)
+  if not ok:
+    raise Exception(&#0039;select error&#0039;)
+  return ret
+
+def getItem(title, label, items):
+  (ret, ok) = PyQt4.QtGui.QInputDialog.getItem(
+    PyQt4.QtGui.QWidget(), title, label, items)
+  if not ok:
+    raise Exception(&#0039;select error&#0039;)
+  return str(ret)
+
+def getFloat(title, label, mini=&#0045;2147483647, maxa=2147483647,
+       default=None, decimals=1):
+  assert mini &lt;= maxa
+  if default is None:
+    default = min(max(0, mini), maxa)
+  (ret, ok) = PyQt4.QtGui.QInputDialog.getDouble(
+    PyQt4.QtGui.QWidget(), title, label, default, mini, maxa, decimals)
+  if not ok:
+    raise Exception(&#0039;select error&#0039;)
+  return ret
+
+def getItem(title, label, items):
+  (ret, ok) = PyQt4.QtGui.QInputDialog.getItem(
+    PyQt4.QtGui.QWidget(), title, label, items)
+  if not ok:
+    raise Exception(&#0039;select error&#0039;)
+  return str(ret)
+
+def getText(title, label, default=&#0039;&#0039;):
+  (ret, ok) = PyQt4.QtGui.QInputDialog.getText(
+    PyQt4.QtGui.QWidget(), title, label,
+    PyQt4.QtGui.QLineEdit.Normal, default)
+  if not ok:
+    raise Exception(&#0039;select error&#0039;)
+  return str(ret)
+
+qApplication = PyQt4.QtGui.QApplication([])
+
+print getItem(&#0039;getItem()&#0039;, &#0039;select a color&#0039;,
+  [&#0039;red&#0039;,&#0039;orange&#0039;,&#0039;yellow&#0039;,&#0039;green&#0039;,&#0039;blue&#0039;,&#0039;violet&#0039;])
+print getInt(&#0039;getInt()&#0039;, &#0039;give me a number&#0039;, 0, 100)
+print getFloat(&#0039;getFloat()&#0039;, &#0039;give me a number&#0039;, 0.0, 1.0, None, 2)
+print getText(&#0039;getText()&#0039;,&#0039;give me some text&#0039;,&#0039;string&#0039;)
+</pre>
+
+<!-- END CONTENT -->
+
+      </div>
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <p>(<a href="../../../../archives/">back</a>)</p>
+    </div>
+  </body>
+</html>

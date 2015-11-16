@@ -1,0 +1,38 @@
+TITLE=Current Location
+DATE=2013-08-29 09:48:42
+POSTID=3002
+MODE=htmldiv
+CATEGORIES=computers-code;
+SUMMARY=The existing software on your phone makes it impossible to send someone precise latitude/longitude that you pinpoint on a map. Here's my solution, IF you are already standing where you want to pinpoint.
+
+<script>
+function nav() {
+	if (! navigator.geolocation) {
+      document.getElementById("location").innerHTML = "<p>Sorry :(</p>";
+	  return;
+    }
+	document.getElementById("location").innerHTML = "<p>&nbsp;</p>";
+    function posfunc(pos) {
+      var c = pos.coords;
+      var r = 6;
+      var p = c.latitude.toFixed(r) + "," + c.longitude.toFixed(r);
+      document.getElementById("location").innerHTML =
+	    "<p><strong>Your Current Location:</strong></p>" +
+        "<p><a href='https://maps.google.com/maps?q="
+        + p + "'>" + p + "</a></p><p>("+ c.accuracy + "m)</p>"
+		+"<p><a href='geo:"+p+"'>geo:"+p+"</a></p>";
+    };
+    navigator.geolocation.getCurrentPosition(posfunc);
+    return false;
+}
+//window.addEventListener('load', nav);
+</script>
+<div id="location" style="height:160px; margin:0.5em 0;">
+<a href="" onclick="nav(); return false;">
+<div style="height:150px; border:3px solid;color:#000000; background-color:#dddddd;">
+<p class="centered">Find Me!</p>
+</div>
+</a>
+</div>
+
+

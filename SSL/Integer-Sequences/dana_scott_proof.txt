@@ -1,0 +1,134 @@
+	   Proof that Dana Scott Recurrance gives integers.
+
+Define the sequence {b} recursivly:
+
+	b(n) := 10 * b(n-3) - 10 * b(n-6) + b(n-9).
+
+Prove, by induction that for all n, 
+
+      	b(n) * b(n-4) -  b(n-1) * b(n-3) - b(n-2) = 0
+
+In other words, {b} is the Dana Scott recurrrance.
+
+For convienence, let 
+
+	phi(n) := b(n) * b(n-4) -  b(n-1) * b(n-3) - b(n-2)
+
+Assume that phi(k) is 0 for k < n.  Show that pni(n) = 0.
+
+This gives:
+
+	phi(n-1)  = b(n-1) b(n-5) - b(n-2) b(n-4) - b(n-3) = 0
+	phi(n-2)  = b(n-2) b(n-6) - b(n-3) b(n-5) - b(n-4) = 0
+	phi(n-3)  = b(n-3) b(n-7) - b(n-4) b(n-6) - b(n-5) = 0
+	phi(n-4)  = b(n-4) b(n-8) - b(n-5) b(n-7) - b(n-6) = 0
+	phi(n-5)  = b(n-5) b(n-9) - b(n-6) b(n-8) - b(n-7) = 0
+	phi(n-6)  = b(n-6) b(n-10) - b(n-7) b(n-9) - b(n-8) = 0
+	phi(n-7)  = b(n-7) b(n-11) - b(n-8) b(n-10) - b(n-9) = 0
+	phi(n-8)  = b(n-8) b(n-12) - b(n-9) b(n-11) - b(n-10) = 0
+	phi(n-9)  = b(n-9) b(n-13) - b(n-10) b(n-12) - b(n-11) = 0
+	phi(n-10) = b(n-10) b(n-14) - b(n-11) b(n-13) - b(n-12) = 0
+	...
+
+Now, compute phi(n).
+
+	phi(n) = b(n) * b(n-4) -  b(n-1) * b(n-3) - b(n-2)
+
+Substitute for b(n) and b(n-1) from the definition of {b}.
+
+	b(n)    = 10 * b(n-3) - 10 * b(n-6) + b(n-9)
+	b(n-1)	= 10 * b(n-4) - 10 * b(n-7) + b(n-10)
+
+	phi(n) =   ( 10 * b(n-3) - 10 * b(n-6) + b(n-9)  ) * b(n-4)
+	         - ( 10 * b(n-4) - 10 * b(n-7) + b(n-10) ) * b(n-3)
+		 - ( 10 * b(n-5) - 10 * b(n-8) + b(n-11) ) 
+Simplify:
+
+	phi(n) =  10 b(n - 3) b(n - 7)
+		- 10 b(n - 4) b(n - 6) 
+		- 10 b(n - 5) 
+		+ b(n - 4) b(n - 9) 
+		- b(n - 3) b(n - 10) 
+		+ 10 b(n - 8) 
+		- b(n - 11)
+
+Since phi(n-3)=0, 
+
+	phi(n) =  b(n - 4) b(n - 9) 
+		- b(n - 3) b(n - 10) 
+		+ 10 b(n - 8) 
+		- b(n - 11)
+
+Substitute for b(n-3) and b(n-4) from the definition of {b}.
+
+	b(n-3) = 10 * b(n-6) - 10 * b(n-9)  + b(n-12)
+	b(n-4) = 10 * b(n-7) - 10 * b(n-10) + b(n-13)
+
+	phi(n) =  (10 * b(n-7) - 10 * b(n-10) + b(n-13) ) * b(n - 9) 
+	        - (10 * b(n-6) - 10 * b(n-9)  + b(n-12) ) *b(n - 10) 
+	        + 10 * b(n - 8) 
+	        - b(n - 11) ;
+
+Simplify:
+
+	phi(n) = - 10 b(n - 10) * b(n - 6)
+		 + 10 b(n - 9) * b(n - 7) 
+		 + 10 b(n - 8) 
+	         + b(n - 9) * b(n - 13)   
+		 - b(n - 10) * b(n - 12) 
+		 - b(n - 11)
+
+	phi(n) = - 10 * ( + b(n - 10) * b(n - 6)
+			  - b(n - 9) * b(n - 7) 
+			  - b(n - 8) )
+	         + b(n - 9) * b(n - 13)   
+		 - b(n - 10) * b(n - 12) 
+		 - b(n - 11)
+
+Since phi(n-6) = phi(n-9) = 0
+
+	b(n-6) b(n-10) - b(n-7) b(n-9) - b(n-8) = 0
+	b(n-9) b(n-13) - b(n-10) b(n-12) - b(n-11) = 0
+
+	phi(n) = 0
+
+QED.
+
+######################################################################
+
+By the way, this also proves Laurentness.
+
+The above proof implicitly relies on the fact that for {a} and {b}
+defined as
+
+	a(n) = ( a(n-1) * a(n-3) + a(n-2) ) / a(n-4)
+	b(n) = 10 * b(n-3) - 10 * b(n-6) + b(n-9)
+
+the first 9 terms of the sequences are equal.  In the proof of
+integrality, we choose the first nine terms of {b} to be (1, 1, 1, 1,
+2, 3, 5, 13, 22).  
+
+If we instead choose the first nine terms of {b} to correspond to the
+Laurent version of a, 
+
+	a := proc(n)
+	    if n = 1 then w
+	    elif n = 2 then x
+	    elif n = 3 then y
+	    elif n = 4 then z
+	    else simplify((a(n - 1)*a(n - 3) + a(n - 2))/a(n - 4))
+	    end if
+	end proc:
+	interface(prettyprint=false);
+	seq(a(n),n=1..9);
+
+(w, x, y, z, (z*x+y)/w, (y*z*x+y^2+z*w)/w/x,
+(y*z^2*x+z*y^2+z^2*w+z*x^2+x*y)/w/x/y,
+(y*z^3*x^2+2*y^2*z^2*x+z*y^3+z^3*w*x+z^2*w*y+z^2*x^3+2*z*x^2*y+x*y^2
++w*y^2*z*x+w*y^3+w^2*y*z)/w^2/x/y/z,
+(y*z^2*x^3+x^2*y^2*z^3+x^2*z^2*w+2*x^2*z*y^2+x^2*z*w^2+2*x*w*y*z^3
++2*x*z^2*y^3+x*z^2*w^2*y+x*z*w*y^3+x*z*w*y+x*y^3+w^2*z^3+z^2*w^3
++2*z^2*y^2*w+z*y^4+2*z*w^2*y^2+w*y^4)/x^2/y/z/w^2),
+
+then it is clear from the linear nature of {b} that all b(n) will be a
+Laurent polynomial.

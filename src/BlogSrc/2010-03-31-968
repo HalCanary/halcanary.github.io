@@ -1,0 +1,36 @@
+TITLE=bourne shell absolute path
+COPYRIGHT=Copyright 2010-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2010-03-31 10:20:12
+PERMALINK=http://halcanary.org/vv/2010/03/31/968/
+PERMALINKPART=vv/2010/03/31/968/
+YEAR=2010
+MONTH=03
+DAY=31
+POSTID=968
+CATEGORIES=uncategorized;
+MODE=markdown
+
+    #!/bin/sh
+    abspath () {
+        D7636=`/usr/bin/dirname "$1"`;
+        D7636=`(cd "$D7636"; pwd -P)`;
+        B7636=`/usr/bin/basename "$1"`;
+        echo "${D7636}/${B7636}";
+    }
+    PATH=$1
+    echo "path = \"${PATH}\""
+    ABSPATH=`abspath "$PATH"`
+    echo "absolute path = \"${ABSPATH}\""
+
+* * *
+
+UPDATE: I just realised that `readlink -f "$FILE"` will do the trick.
+
+* * *
+
+UPDATE 2: Even better, since it is concise and follows the POSIX standard:
+
+    #!/bin/sh
+    abspath () {
+    	echo "$(cd "$(dirname "$1")" ; pwd;)/$(basename "$1")"
+    }

@@ -1,0 +1,19 @@
+TITLE=ssh discovery.
+COPYRIGHT=Copyright 2003-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2003-10-15 23:41:36
+PERMALINK=http://halcanary.org/vv/2003/10/15/126/
+PERMALINKPART=vv/2003/10/15/126/
+YEAR=2003
+MONTH=10
+DAY=15
+POSTID=126
+CATEGORIES=computers-code;
+MODE=htmldiv
+
+<p>The biggest problem with ssh is the vulnerability to a man-in-the-middle attack. This is why you should always check your host-key's fingerprint when logging on for the first time from a new box. To aquire these keys, do this:</p>
+<pre>
+for x in /etc/ssh/*pub; do
+   ssh-keygen -lf $x;
+done
+</pre>
+

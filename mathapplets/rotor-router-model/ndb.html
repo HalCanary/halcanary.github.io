@@ -1,0 +1,428 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <meta http-equiv="Content-type" content='text/html; charset="us-ascii"'>
+    <title>Rotor Router Model</title>
+    <style type="text/css"><!--
+    body { margin: 0; padding: 0; }
+    h1 { margin: 0; padding: 0 6px; }
+    h2 { margin: 2px 12px; padding: 0; color:#008;border-bottom:1px #008 solid}
+    h3 { margin: 10px 16px; padding: 0; }
+    p.appletcontainer { margin: 0; padding: 0; text-align:center;}
+    p { padding: 0 18px; }
+    p.reference{ padding-left: 2em;
+      text-indent: -2em; }
+    li {margin-bottom: 1ex;}
+    p.smaller {font-size : 80%;}
+    p.menu {margin:0 12px ;padding:0;text-align:center;
+    font-size:80%;background-color: #f6f6f6; color:#000000;}
+    div.page { min-height:130ex; }
+    applet { border:1px solid black; }
+    -->
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <p class="menu">Contents:
+	<a href="#00">Intro</a> |
+	<a href="#01">The Applet</a> |
+	<a href="#03">The Algorithm</a> |
+	<a href="#04">The Graphs</a> |
+	<a href="#05">Instructions</a> |
+	<a href="#references">References</a> |
+	<a href="#06">Errata</a>
+	<a name="00"></a></p>
+      <h1>Rotor Router Model</h1>
+      <h2>Introduction</h2>
+
+      <p>Welcome to this page. We'd like to show off a mathematical
+	model (the <em>Rotor Router Model</em>) using a java applet.
+      </p>
+
+      <p>
+	<img src="Images/bug.png" style="float:left" width="200"
+	     height="104" alt="[a bug]">
+	The model involves a bug (represented by an empty black and
+	while square) moving along a graph (represented by boxes
+	linked by arrows).<br style="clear:both"></p>
+
+      <p>
+	<img src="Images/rotor-states.png" style="float:left"
+	     width="200" height="104" alt="[a rotor]">
+	Each box on the graph contains a rotor that can be in different
+	states. These states are represented by colors and arrows.
+	When a bug visits a box, that box's state will change.
+	<br style="clear:both"></p>
+
+      <p>To get started, <a href="#01">jump to the Applet</a> and
+	click the <b>step</b> button repeatedly and watch how the bug
+	moves around the graph.</p>
+
+      <p>If you are confused, try our <a href="./help/">walkthrough</a>.</p>
+
+      <p style="text-align: center;">
+	If your browser window is too small, try 
+	<a href="./index-800x600.html#01">this</a>. 
+      </p>
+
+      <p style="text-align: center;">
+	<a href="./index-800x600.html#01">small</a> | 
+	<a href="./#01">medium</a> |
+	<a href="./index-1280x960.html#01">large</a>. 
+	<br>No Double Buffer: 
+	<a href="./ndb-800x600.html#01">small</a> | 
+	<a href="./ndb.html#01">medium</a> |
+	<a href="./ndb-1280x960.html#01">large</a>. 
+      </p>
+
+    </div>
+
+    <div class="page">
+      <p class="menu">Contents:
+	<a href="#00">Intro</a> |
+	<a href="#01">The Applet</a> |
+	<a href="#03">The Algorithm</a> |
+	<a href="#04">The Graphs</a> |
+	<a href="#05">Instructions</a> |
+	<a href="#references">References</a> |
+	<a href="#06">Errata</a>
+	<a name="01"></a></p>
+      <h2>The Rotor Router Applet</h2>
+      <p class="appletcontainer">
+	<applet code="RotorGraphsApplet.class"
+		archive="rotor.jar" width="950" height="600"
+		style="border: 1px solid black;">
+	  <param name="double_buffer" value="off">
+	</applet>
+      </p>
+
+    </div>
+    <div class="page">
+      <p class="menu">Contents:
+	<a href="#00">Intro</a> |
+	<a href="#01">The Applet</a> |
+	<a href="#03">The Algorithm</a> |
+	<a href="#04">The Graphs</a> |
+	<a href="#05">Instructions</a> |
+	<a href="#references">References</a> |
+	<a href="#06">Errata</a>
+	<a name="03"></a>
+      </p>
+      <h2>A description of the Algorithm</h2>
+
+      <p>
+	The <em>Rotor Router Model</em> is composed of a directed
+	graph (infinite or finite) with a <em>rotor</em> attached to
+	each vertex. The rotor at a given vertex is a pointer to one
+	of the edges that leaves that vertex.  In the model, a
+	<em>bug</em> traverses the graph along the edges, following
+	the direction of the rotor at each vertex.
+      </p>
+      <p>
+	The twist is that each time a bug visits a vertex, she
+	rotates the rotor so that it points to the next edge, before
+	following the rotor.
+      </p>
+      <p>
+	This is a deterministic system.
+      </p>
+
+      <p>
+	This model has two variations: the <em>walk mode</em> and the
+	<em>aggregation mode</em>.  
+      </p>
+
+      <p>
+	In the walk mode, the bug will traverse the graph until she
+	encounters a sink.
+	A <em>sink</em> is a vertex with no edges leaving it, If
+	there is a sink in the system, it has no rotor on it.  If a
+	bug visits a sink, she disappears from the system.  After
+	that happens, we put a new bug on some specified vertex,
+	called the <em>source</em>.
+      </p>
+
+      <p>
+	In the aggregation mode, all vertices start out
+	<em>empty</em>; once a bug hits an empty vertex, the vertex is
+	<em>filled</em> and it gets a normal rotor on it.  Then the
+	bug returns to the source.  For this mode to be interesting,
+	we need a graph with an infinite number of empty vertices.
+      </p>
+
+
+    </div>
+    <div class="page">
+      <p class="menu">Contents:
+	<a href="#00">Intro</a> |
+	<a href="#01">The Applet</a> |
+	<a href="#03">The Algorithm</a> |
+	<a href="#04">The Graphs</a> |
+	<a href="#05">Instructions</a> |
+	<a href="#references">References</a> |
+	<a href="#06">Errata</a>
+	<a name="04"></a>
+      </p>
+      <h2>Graphs and Modes</h2>
+
+      <ul>
+	<li><strong>1-D Walk</strong>: This infinite graph has a
+	  vertex for each nonnegative integer, and for each vertex
+	  n=2,3,4,5,... there is a (directed) edge from n to n+1 and
+	  from n to n-2.  Vertices 0 and 1 are sinks; vertex 2 is
+	  the source.  The ratio of the two sink counts approaches
+	  the golden ratio.  Models of this kind have been studied
+	  by Holroyd and Propp.
+	  <a href="./1-D_Walk.html">More information about 1-D
+	    Walk.</a>
+	</li>
+
+	<li><strong>1-D Aggregation</strong>: <em>Aggregation</em>
+	  is another process that can be modeled using rotors.  Here
+	  the underlying graph has a vertex for each non-negative
+	  integer, and for each vertex n there is an edge from n to
+	  n-1 and from n to n+1.  In the aggregation scenario, all
+	  vertices start out <em>empty</em>; once a bug hits an
+	  empty vertex, the vertex is filled and it gets a normal
+	  rotor on it.  If the newly occupied vertex is on the left
+	  side of 0, the vertex immediately to its left becomes
+	  occupied as well.  During each stage, a bug is added to
+	  the system at 0, and it walks until it results in either
+	  one new occupied site (on the right) or two new occupied
+	  sites (on the left).  The ratio between the number of
+	  occupied sites to the left of 0 and the number of occupied
+	  sites to the right of 0 approaches the square root of 2.
+	  Models of this kind have been studied by Levine and Propp.
+	  <a href="./1-D_Aggregation.html">More information about
+	    1-D Aggregation.</a>
+	</li>
+
+
+	<li><strong>Walk on finite graph A</strong></li>
+	
+	<li><strong>Walk on finite graph B</strong></li>
+	
+	<li><strong>Walk on finite graph C</strong></li>
+	
+	<li><strong>2-D Walk</strong> on a square grid.  Each vertex
+	  is represented by a square and is connected to each of its
+	  four closest neighbors.  There is a source at (0,0) (shown
+	  as a square with a white border) and a sink at (1,1)
+	  (shown as a solid black square). In each stage, the bug
+	  starts at the source, and takes a walk following the
+	  instructions given by successive rotors, until it either
+	  arrives at the sink (at which point it hops back to the
+	  source) or it arrives at the source; either way, the stage
+	  is over, and a new stage start.  The applet keeps track of
+	  how many times the bug arrives at the source (by walking
+	  from one of the four cells adjoining the source, not by
+	  hopping from the sink) and how many times the bug arrives
+	  on the sink.  The location of the bug is indicated by a
+	  square superimposed with the cell occupied by the bug.
+	  <a href="./2-D_Walk.html">More information about 2-D
+	    Walk.</a></li>
+
+	<li><strong>2-D Aggregation</strong>: Similar to 1-D
+	  Aggregation, but on a 2-D square grid.  Each vertex is
+	  represented by a square.  In the aggregation scenario, all
+	  vertices start out empty; once a bug hits an empty vertex,
+	  the vertex is filled and it gets a normal rotor on
+	  it. Each bug fills exactly one vertex when it reaches an
+	  empty vertex.  It is interesting that the shape that is
+	  created is very round.  In fact, if you compare the circle
+	  centered at the origin that goes through the filled vertex
+	  farthest from the origin and the smallest circle centered
+	  at the origin that goes through the empty vertex closest
+	  to the origin, the difference is very small.
+	  <a href="./2-D_Aggregation.html">More information about
+	    2-D Aggregation.</a>
+	</li>
+
+      </ul>
+
+    </div>
+    <div class="page">
+      <p class="menu">Contents:
+	<a href="#00">Intro</a> |
+	<a href="#01">The Applet</a> |
+	<a href="#03">The Algorithm</a> |
+	<a href="#04">The Graphs</a> |
+	<a href="#05">Instructions</a> |
+	<a href="#references">References</a> |
+	<a href="#06">Errata</a>
+	<a name="05"></a>
+      </p>
+      <h2>Instructions</h2>
+
+      <p>To switch between graphs, choose one from the drop-down
+	menu and hit &ldquo;Reset&rdquo;.</p>
+
+      <p>Pressing the <strong>Step</strong> button increments the
+	system by one <em>step</em>. The bug alternates between
+	moving to the next vertex and moving a rotor each step.</p>
+
+      <p>The <strong>Stage</strong> button increments the system
+	until a bug hits a sink (or, in the case of aggregation, a
+	new site becomes occupied).  A <em>stage</em> is made of
+	many steps.</p>
+
+      <p>The <strong>Reset</strong> button resets the system to the
+	initial state and zeros out any counters.  </p>
+
+      <p>The <strong>Pause/Unpause</strong> button controls the
+	automated iterations.  If the applet is unpaused, the system
+	will increment by steps or stages, according to the
+	<strong>Skip Each</strong> variable.</p>
+
+    </div>
+    <div class="page">
+      <p class="menu">Contents:
+	<a href="#00">Intro</a> |
+	<a href="#01">The Applet</a> |
+	<a href="#03">The Algorithm</a> |
+	<a href="#04">The Graphs</a> |
+	<a href="#05">Instructions</a> |
+	<a href="#references">References</a> |
+	<a href="#06">Errata</a>
+	<a name="references"></a>
+      </p>
+      <h2>References</h2>
+
+      <ol>
+	
+	<li>
+	  James Propp, &ldquo;Random walk and random aggregation,
+	  derandomized&rdquo; (Talk given at Microsoft Research).
+	  <a href="http://murl.microsoft.com/LectureDetails.asp?1050">http://murl.microsoft.com/LectureDetails.asp?1050</a>.
+	  video: <a href="http://tinyurl.com/2vmmx">http://tinyurl.com/2vmmx</a>
+	</li>
+	
+	<li>James Propp, &ldquo;Rotor-Router Automata&rdquo; (An early
+	  write-up of derandomized aggregation).
+	  <a href="http://www.math.wisc.edu/~propp/hidden/rotor">http://www.math.wisc.edu/~propp/hidden/rotor</a></li>
+
+	<li>James Propp, &ldquo;Rotor Router Walk&rdquo; (Email-log of some
+	  messages sent out about derandomized walk).
+	  <a href="http://www.math.wisc.edu/~propp/hidden/test/rotorwalk.to">http://www.math.wisc.edu/~propp/hidden/test/rotorwalk.to</a></li>
+
+	<li>Lionel Levine, &ldquo;The Rotor-Router Model&rdquo; (undergraduate
+	  thesis).
+	  <a href="http://www.math.berkeley.edu/~levine/rotorrouter.pdf">http://www.math.berkeley.edu/~levine/rotorrouter.pdf</a></li>
+
+	<li>Lionel Levine, &ldquo;The Rotor-Router Model&rdquo; (slides from a
+	  talk).
+	  <a href="http://www.math.berkeley.edu/~levine/slides/">http://www.math.berkeley.edu/~levine/slides/</a></li>
+
+	<li>Lionel Levine and Adam Kampff. &ldquo;Rotor-router aggregation
+	  blob after 270,000 particles have aggregated&rdquo; (Image).
+	  <a href="http://www.math.berkeley.edu/~levine/private/rotorrouter/bigblob.bmp">http://www.math.berkeley.edu/~levine/private/rotorrouter/bigblob.bmp</a></li>
+
+	<li>Lionel Levine and Adam Kampff.  &ldquo;Two close-ups of that same
+	  picture&rdquo; (Image).
+	  <a href="http://www.math.berkeley.edu/~levine/private/rotorrouter/closeup.bmp">http://www.math.berkeley.edu/~levine/private/rotorrouter/closeup.bmp</a></li>
+
+	<li>Ed Pegg.  &ldquo;The rotor-router blob after 750,000 particles
+	  have aggregated&rdquo; (Image).
+	  <a href="http://www.math.wisc.edu/~propp/proppcircle.gif">http://www.math.wisc.edu/~propp/proppcircle.gif</a></li>
+
+	<li>Ander Holroyd. &ldquo;The rotor-router blob after 1,000,000
+	  particles have aggregated&rdquo; (Image).
+	  <a href="http://www.math.wisc.edu/~propp/million.gif">http://www.math.wisc.edu/~propp/million.gif</a></li>
+
+	<li>Vishal Sanwalani.  &ldquo;The state achieved by the abelian
+	  sandpile model when sixty thousand grains have been added&rdquo;
+	  (Image).
+	  <a href="http://www.math.wisc.edu/~propp/hidden/501.gif">http://www.math.wisc.edu/~propp/hidden/501.gif</a></li>
+
+      </ol>
+
+    </div>
+    <div class="page">
+      <p class="menu">Contents:
+	<a href="#00">Intro</a> |
+	<a href="#01">The Applet</a> |
+	<a href="#03">The Algorithm</a> |
+	<a href="#04">The Graphs</a> |
+	<a href="#05">Instructions</a> |
+	<a href="#references">References</a> |
+	<a href="#06">Errata</a>
+	<a name="06"></a>
+      </p>
+      <h2>Errata.</h2>
+
+      <h3>Known Bugs</h3>
+      <p>There is a display bug with Apple JVM 1.4, used by current
+	versions of the Safari Browser.
+	If you experince this issue, use the non-double buffered
+	version of this applet:</p>
+
+      <p>
+	Normal:
+	<a href="./index-800x600.html#01">small</a> | 
+	<a href="./#01">medium</a> |
+	<a href="./index-1280x960.html#01">large</a>. 
+	<br>No Double Buffer: 
+	<a href="./ndb-800x600.html#01">small</a> | 
+	<a href="./ndb.html#01">medium</a> |
+	<a href="./ndb-1280x960.html#01">large</a>. 
+      </p>
+
+      <p>There are built-in limits to how big the 2-D systems can
+	become.  When they hit that limit, they will stop, even if the
+	stage is not done.  For more information, read the code.</p>
+
+      <h3>System Requirements</h3>
+      <p>The applet as designed with Java 1.1 in mind, so all browsers
+	back to 1998 <em>should</em> be supported.  But we cannot make
+	any guarantees.  You may want to maximize your browser window
+	if you want to see the whole applet.</p>
+
+
+      <h3>Credits</h3>
+      <p>
+	This work is Copyright (C) 2003-2004 by Hal Canary and the
+	University of Wisconsin-Madison.
+      </p>
+
+      <p>
+	Hal wrote most of the code while working
+	for Professor Jim Propp, who is studying the Rotor Router
+	System. Francis Wong has assisted.
+      </p>
+
+      <p>
+	This work was supported by the University of Wisconsin.
+      </p>
+
+      <p>
+	This work comes with ABSOLUTELY NO WARRANTY.  This program is free
+	software; you can redistribute it and/or modify it under the terms of
+	version 2 of the <a href="LICENSE.txt">GNU General Public License</a>
+	as published by the Free Software Foundation.
+      </p>
+
+      <p>
+	Source: <a href="../rotor-router-model.tgz">tarball</a> and
+	<a href="../rotor-router-model.zip">zipfile</a>.
+	<a href="./doc/">Programmer's documentation</a>.
+	<a href="./README.txt">Readme file</a>.
+      </p>
+
+      <p><a href="http://validator.w3.org/check/referer">Valid html?</a></p>
+
+      <p>Give us feedback!  Send mail to
+	<a href="http://halcanary.org/">Hal Canary</a>
+	&laquo;hal at ups dot physics dot wisc dot edu&raquo;
+	and
+	<a href="http://math.wisc.edu/~propp/">Jim Propp</a>
+	&laquo;propp at math dot wisc dot edu&raquo;.
+      </p>
+
+      <p>
+	<a href="http://ups.physics.wisc.edu/~hal/mathapplets/">Back
+	  to Hal Canary's Math Applets</a></p>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Voder-Vocoder: make-envelope.sh</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" id="stylesheet" href="/styles/scrapple-from-the-apple.css">
+  </head>
+  <!-- Copyright 2009-2015 Hal Canary. ALL RIGHTS RESERVED. -->
+
+  <body style="padding:0;margin:0;">
+    <div class="column" style="max-width:640px;margin:0 auto;">
+
+      <h1 class="blogtitle">make-envelope.sh</h1>
+
+      <div class="byline">By Hal Canary,
+        2009-06-08 17:58:49
+        (<a href="http://halcanary.org/vv/2009/06/08/771/">link</a>)
+    <br><a href="../../../../category/computers-code/" class="categorylink">#computers-code</a>
+        </div>
+      <!-- SRC= 2009-06-08-771 -->
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <div class="content">
+
+<!-- BEGIN CONTENT -->
+<pre>#!/bin/sh
+
+## make-envelope.sh
+##
+## Written 2009 Hal Canary.
+## Dedicated to the public domain.
+##
+## Put the envelope in the printer
+## with the front facing you, and
+## the opening flap to the right.
+##
+## Argument is file containing
+## &quot;to&quot; address.
+
+FROM=&quot;${HOME}/.return-address.txt&quot;
+
+## No 6-3/4 Envelope
+ WIDTH=6.5	# inches
+ HEIGHT=3.625	# inches
+
+## No. 10 Envelope
+# WIDTH=9.5	# inches
+# HEIGHT=4.5	# inches
+
+## Stationary Envelope
+#WIDTH=5.5	# inches
+#HEIGHT=4	# inches
+
+MARGINLEFT=$(echo &quot;(11-${WIDTH}+.5)*72&quot; &#0092;
+	|bc -l|awk -F. &#0039;{ print $1 }&#0039;)
+MARGINRIGHT=$(echo &quot;.25*72&quot;&#0092;
+	|bc -l|awk -F. &#0039;{ print $1 }&#0039;)
+MARGINTOPBOTTOM=$( echo &quot;(((8.5-${HEIGHT})/2)+.25)*72&quot;&#0092;
+	|bc -l|awk -F. &#0039;{ print $1 }&#0039;)
+
+echo &quot;	MARGINLEFT = $MARGINLEFT points&quot;
+echo &quot;	MARGINRIGHT = $MARGINRIGHT points&quot;
+echo &quot;	MARGINTOPBOTTOM = $MARGINTOPBOTTOM points&quot;
+
+TO=&quot;$1&quot;
+PDF=`mktemp`
+mv &quot;${PDF}&quot; &quot;${PDF}.pdf&quot;
+PDF=&quot;${PDF}.pdf&quot;
+TMP=`mktemp`
+{ cat &quot;${FROM}&quot;;
+  echo &quot;&#0092;n&#0092;n&quot; ;
+  sed &#0039;s/^/&#0092;t&#0092;t/g&#0039; &lt;&quot;${TO}&quot;; }  &gt; &quot;${TMP}&quot;
+cat &quot;$TMP&quot;
+paps --landscape &#0092;
+  --bottom-margin=$MARGINTOPBOTTOM &#0092;
+  --top-margin=$MARGINTOPBOTTOM &#0092;
+  --left-margin=$MARGINLEFT  &#0092;
+  --right-margin=$MARGINRIGHT   &#0092;
+  &lt; &quot;${TMP}&quot; | ps2pdf - - &gt; &quot;${PDF}&quot;
+echo &quot;lpr ${PDF}&quot;</pre>
+
+
+<!-- END CONTENT -->
+
+      </div>
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <p>(<a href="../../../../archives/">back</a>)</p>
+    </div>
+  </body>
+</html>

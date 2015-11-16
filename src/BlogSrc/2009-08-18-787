@@ -1,0 +1,45 @@
+TITLE=timer.c
+COPYRIGHT=Copyright 2009-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2009-08-18 20:33:59
+PERMALINK=http://halcanary.org/vv/2009/08/18/787/
+PERMALINKPART=vv/2009/08/18/787/
+YEAR=2009
+MONTH=08
+DAY=18
+POSTID=787
+CATEGORIES=computers-code;
+MODE=htmldiv
+
+<pre>/* Copyright 2009 Hal Canary, http://halcanary.org/
+   Dedicated to the Public Domain.
+
+   cc -o timer timer.c
+*/
+#include &lt;stdio.h&gt;
+#include &lt;sys/time.h&gt;
+int main(int argc, char *argv[]) {
+  int totalminutes, totalseconds; /* args */
+  int minute, second; /* counter */
+  if (argc &lt;= 1) {
+    fprintf(stderr, &quot;Usage: timer MINUTES [SECONDS]&#0092;n&#0092;n&quot;);
+    return(1);
+  }
+  totalminutes = atoi(argv[1]); /* FIRST ARGUMENT */
+  if (argc &gt;= 3) {
+    totalseconds = atoi(argv[2]); /* FIRST ARGUMENT */
+  } else {
+    totalseconds = 0;
+  }
+  printf(&quot;%02i:%02i &quot;,totalminutes,totalseconds);
+  for(minute=totalminutes; minute &gt;= 0; minute--) {
+    for(second=totalseconds-1; second &gt;= 0; second--) {
+      printf(&quot;&#0092;b&#0092;b&#0092;b&#0092;b&#0092;b&#0092;b&#0092;b%02i:%02i &quot;,minute,second);
+      fflush(stdout);
+      sleep(1);
+    }
+    totalseconds=60;
+  }
+  printf(&quot;&#0092;n&quot;);
+  return(0);
+}</pre>
+

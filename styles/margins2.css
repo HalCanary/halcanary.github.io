@@ -1,0 +1,120 @@
+/************
+ * HTML Minimums
+ ************/
+div.leftcol      { position:absolute; align:left; width:20%; margin-left:0;   }
+div.centercol    { position:absolute; align:left; width:60%; margin-left:20%; }
+div.rightcol     { position:absolute; align:left; width:20%; margin-left:80%; }
+div.widerightcol { position:absolute; align:left; width:80%; margin-left:20%; }
+
+td.rightcol, td.leftcol, td.centercol { 
+    vertical-align: top;
+}
+td.rightcol, td.leftcol { 
+    width : 20% ; 
+    text-align : left; 
+}
+pre { 
+    white-space : pre;
+    font-family: monospace; 
+}
+
+/************
+ * HAL's BASICS
+ ************/
+.small-center {
+    text-align : center; 
+    font-size : 80%; 
+} 
+.centered {
+    text-align : center; 
+} 
+.center-verse {
+    text-align : center; 
+    font-style: italic;
+} 
+.rightside {
+    text-align : right; 
+} 
+
+body {
+    padding-top : 0px; 
+    padding-right : 0px;  
+    padding-bottom : 0px; 
+    padding-left : 0px;
+    margin : 0 0 0 0;
+} 
+a:link, a:visited, a:active a:hover {
+    text-decoration : underline;
+
+}
+
+/************
+ * SIMPLIFIED MARGINS
+ ************/
+
+.leftcol p, .rightcol p {
+    padding-left : 2mm; 
+    padding-right : 2mm; 
+}
+
+.blog hr {
+    margin-left : 1cm; 
+    margin-right : 1cm; 
+    display : inline    
+}
+p,dl {
+    padding-left : 10mm; 
+    padding-right : 10mm; 
+} 
+h1 {
+    padding-left : 3mm; 
+    padding-right : 3mm; 
+} 
+h2 {
+    padding-left : 6mm; 
+    padding-right : 6mm; 
+} 
+h3 {
+    padding-left : 10mm; 
+    padding-right : 10mm; 
+} 
+pre{
+    padding: 5px;
+}
+ul,ol {	margin-left : 17mm; 
+	margin-right : 17mm; 
+	padding-left: 0;}
+
+li ul,li ol {
+	margin-left : 7mm; 
+	margin-right : 7mm; }
+
+li {	display: list-item;
+	margin-left : 0; 
+	margin-right : 0; }
+table {
+    margin : 0 ; 
+    padding : 0 ;
+    border-width:0;
+    border-spacing:0;
+}
+td {
+    margin : 0 ; 
+    padding : 0 ; 
+}
+
+table.code {
+    border : solid black 1px;
+    border-collapse : collapse;
+    margin-left:15mm;     
+    margin-right : 0 ; 
+    padding : 0 ;
+}
+table.code tr th,table.code tr td {
+    text-align: left;
+    border : solid black 1px;
+}
+
+p.blog-notes { text-align : center; }
+
+

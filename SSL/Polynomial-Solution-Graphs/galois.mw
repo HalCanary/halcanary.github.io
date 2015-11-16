@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Worksheet><Version major="6" minor="0"/><View-Properties><Zoom percentage="100"/></View-Properties><Styles><Layout alignment="left" bullet="none" name="Heading 1" spaceabove="8.0" spacebelow="4.0"/><Layout alignment="left" bullet="none" name="Normal"/><Layout alignment="centred" bullet="none" name="Maple Plot"/><Layout alignment="centred" bullet="none" linespacing="0.5" name="Maple Output"/><Font background="[0,0,0]" bold="true" family="Serif" name="Heading 1" size="18"/><Font background="[0,0,0]" family="Times New Roman" foreground="[0,0,255]" name="2D Output" readonly="true" size="12"/><Font background="[0,0,0]" bold="true" executable="true" family="Monospaced" foreground="[255,0,0]" name="Maple Input" size="12"/></Styles><Group><Input><Text-field layout="Normal" prompt="&gt; " style="Maple Input"><Font opaque="false">with(networks):</Font></Text-field></Input></Group><Group><Input><Text-field layout="Normal" prompt="&gt; " style="Maple Input"/></Input></Group><Group><Input><Text-field layout="Normal" prompt="&gt; " style="Maple Input"># encode an array as a single number.
+encode := (x,F) -&gt; ( F[output](x[1])*100 
+	           + F[output](x[2])*10	
+	           + F[output](x[3])*1 ): 
+</Text-field><Text-field layout="Normal" prompt="&gt; " style="Maple Input"># Define the switch function.
+switch := proc(a,b,c,F) 
+       local x3,x1;
+       x1 := F[input](1);
+       x3 := F[`+`]( x1, F[`+`]( x1,x1 ) ) ;
+       F[`-`]( F[`*`]( x3, F[`*`](a,b) ),c ); 
+end:
+</Text-field><Text-field layout="Normal" prompt="&gt; " style="Maple Input"># Define my three cluster functions.
+f:= (x,F) -&gt; [x[1],x[2],switch(x[1],x[2],x[3],F)]:
+g:= (x,F) -&gt; [x[1],switch(x[1],x[3],x[2],F),x[3]]:
+h:= (x,F) -&gt; [switch(x[2],x[3],x[1],F),x[2],x[3]]:
+ </Text-field><Text-field layout="Normal" prompt="&gt; " style="Maple Input"># Give me the graph neighbors of x.
+N := x -&gt; neighbors(x,G):
+ </Text-field><Text-field layout="Normal" prompt="&gt; " style="Maple Input"># Given a prime F, return a graph G(M,F)
+makegraph := proc(F,firstelement)
+   local g;
+   g := graph({encode(firstelement,F)},{}):
+   bleg(g, firstelement, 1, F):
+   eval(g);
+end:
+ </Text-field><Text-field layout="Normal" prompt="&gt; " style="Maple Input"># useful function
+bleg := proc(G,x,depth,F)
+  if depth &lt; 100 then
+    step(G,x,f(x,F),depth,F);
+    step(G,x,g(x,F),depth,F);
+    step(G,x,h(x,F),depth,F);
+  fi;
+end:
+ </Text-field><Text-field layout="Normal" prompt="&gt; " style="Maple Input"># useful function
+step := proc(G,x,y,depth,F)
+  if (encode(y,F) in vertices(G)) then
+    addedge({encode(x,F),encode(y,F)},G):
+  else
+  #  if markoff(x,F) then
+      addvertex(encode(y,F),G):
+      addedge({encode(x,F),encode(y,F)},G):
+      bleg(G,y,depth+1,F);
+  #  fi
+  fi
+end:
+
+</Text-field><Text-field layout="Normal" prompt="&gt; " style="Maple Input"># Usefull functions.</Text-field><Text-field layout="Normal" prompt="&gt; " style="Maple Input"># is this a markoff solution?  For debuging
+markoff := (x,F) -&gt; markoff2(x[1],x[2],x[3],F):
+markoff2 := proc(x,y,z,F)
+    local lhs,rhs,x1,x3;
+    x1 := F[input](1);
+    x3 := F[`+`](x1,x1,x1) ;	
+    lhs := F[`+`]( F[`^`](x,2), F[`^`](y,2), F[`^`](z,2));
+    rhs := F[`*`]( x3, x,y,z);
+    if lhs = rhs then true else false fi;
+    #if (x^2 + y^2 + z^2 - 3*x*y*z) mod p = 0 then true else false fi;
+end:
+</Text-field></Input><Input><Text-field layout="Normal" prompt="&gt; " style="Maple Input">decode2 := proc(x)
+    local n,one,ten,hun;
+    n := 10;
+    one := x mod n;
+    ten := ((x-one)/n) mod n;
+    hun := (x-one-(n*ten))/n^2;
+    [hun,ten,one];
+end:</Text-field></Input><Input><Text-field prompt="&gt; " style="Maple Input">decode := proc(x,F) 
+    local y;
+    y := decode2(x);
+    [F[input](y[1]), F[input](y[2]), F[input](y[3])];
+end:
+<Font opaque="false">
+# Enumerate ALL of the solutions
+enumerate := proc(p,k,F)
+	local a,b,c,A,B,C,sols;
+	sols := {}:
+	for a from 0 to p^k-1 do
+	    for b from 0 to p^k-1 do
+		for c from 0 to p^k-1 do
+		    A := F[input](a):
+		    B := F[input](b):
+		    C := F[input](c):
+		    if markoff([A,B,C],F) then 
+			sols := sols union {[A,B,C]};
+		    fi
+		od    
+	    od
+	od:  
+	sols;
+end:</Font>
+</Text-field></Input></Group><Group><Input><Text-field layout="Normal" prompt="&gt; " style="Maple Input"/></Input></Group><Group><Input><Text-field layout="Heading 1" style="Heading 1"><Font foreground="[0,0,0]" italic="false" underline="false">here is where things begin to happen.</Font></Text-field></Input></Group><Group><Input><Text-field layout="Normal" prompt="&gt; " style="Maple Input"><Font opaque="false">#let our field F be
+p:=2:
+k:=2:
+F := GF(p,k):
+#seq(F[input](x),x=0..p^k-1);</Font></Text-field></Input></Group><Group><Input><Text-field layout="Normal" prompt="&gt; " style="Maple Input">#G := makegraph(F,[F[input](1),<Font opaque="false">F[input](1),F[input](1)</Font>]):
+#nops(vertices(G));
+#vertices(G);
+#draw3d(G);
+#draw(G);</Text-field></Input></Group><Group><Input><Text-field layout="Normal" prompt="&gt; " style="Maple Input"><Font opaque="false">sols := enumerate(p,k,F):
+nops(sols);
+sols;</Font></Text-field></Input><Output><Text-field layout="Maple Output" style="2D Output"><Equation style="2D Output">NiMiIzw=</Equation></Text-field><Text-field layout="Maple Output" style="2D Output"><Equation style="2D Output">NiM8MzclZCZJIlRHNiIiIiMhImQmRiZGKCIiRik3JUYlRilGJTclZCRGJkYoRixGLDclRilGJUYlNyVGJUYsRiU3JUYpRilGJTclZCVGJkYoIkYxRiw3JUYpRilGLDclRixGMUYxNyVGKUYsRik3JUYlRiVGLDclRilGJUYpNyVGMUYsRjE3JUYxRjFGMTclRixGKUYpNyVGLEYlRiU3JUYlRiVGKQ==</Equation></Text-field></Output></Group><Group><Input><Text-field layout="Normal" prompt="&gt; " style="Maple Input">
+</Text-field></Input></Group><Group><Input><Text-field layout="Normal" prompt="&gt; " style="Maple Input">#found solutions.
+u := {}:
+# set of connected components.
+Gees := {}:
+for x in sols do 
+    if not(x in u)  then
+        G := <Font opaque="false">makegraph(F, x);</Font>
+        for y in vertices(G) do
+            u := u union {decode(y,F)}; 
+        od:
+        Gees<Font opaque="false"> := Gees union {eval(G)}; </Font>
+    fi
+od:
+nops(Gees);
+draw3d(Gees[1]);
+seq(nops(vertices(Gees[i])), i = 1..nops(Gees));<Font opaque="false">
+#seq((vertices(Gees[i])), i = 1..nops(Gees));</Font></Text-field></Input><Output><Text-field layout="Maple Output" style="2D Output"><Equation style="2D Output">NiMiIiQ=</Equation></Text-field></Output><Output><Text-field layout="Maple Plot"><Plot height="400" type="three-dimensional" width="400">LSUnUExPVDNERzYyLSUnQ1VSVkVTRzYvNyQ3JSQiK3EoRyF6TSEjNSQhK0UhSGUvI0YsJCErWTouJj4iRiw3JSQiK24qUUNhJEYsJCErVj5AWj9GLCQhK0soPV4oR0YsNyQ3JSQhKyd5ZjhdJEYsJCErdypRJmY/RiwkIStoKTRXLiJGLDclJCErdSo+LFwkRiwkIStTNUojMyNGLCQhK2MtOSVbI0YsNyQ3JSQiK3AnMyIzKCohIzkkISs/RkFMU0YsJCIraU1kO0FGLDclJCIrdShwdnoqRkskIStgJ3koUlRGLCQiK2g9c1tgRiw3JEZIRik3JEZIRjk3JDclJCErZ1UkKUgmKkZLJCIrNiEqZS1URiwkIitcIm9aPyNGLDclJCErJUcib3koKkZLJCIrPChIJjNURiwkIitVazFMX0YsNyQ3JSQiKzZANyVlJEYsJCIrKClRI1EyI0YsJCErK0ZCVDVGLEYpNyRGY283JSQiKyRcUiEqZSRGLCQiK0FIeG4/RiwkIStfI0hGXiNGLDckRmNvRlo3JDclJCErLihmelokRiwkIis1dCFcLyNGLCQhK2VxSSM+IkYsRjk3JEZkcEZaNyRGZHA3JSQhKyZSR1RgJEYsJCIrczBLTT9GLCQhK08zLW9HRiwtJSpUSElDS05FU1NHNiMiIiMtJSVURVhURzYlNyUkISk4b3koKiEjN0Zeb0Zgb1EjMjI2IiUrQUxJR05BQk9WRUctRmlxNiVGUFEjMzNGYHJGYXItRmlxNiU3JUZBJCEqLzZCMyMhIipGRVEkMjAyRmByRmFyLUZpcTYlNyVGMiQhMi8rK0klPkBaPyEjPEY2USQyMjBGYHJGYXItRmlxNiU3JSQiKnhHIXpNRmpyRi0kITIrKytnYUpdPiJGYXNRJDIyM0ZgckZhci1GaXE2JTclRjokITIrKytnKCpRJmY/RmFzRj5RJDIzMkZgckZhci1GaXE2JTclRkkkITIrKysrc0FLLiVGYXMkIjIvKys/WXRsQCNGYXNRJDIzM0ZgckZhci1GaXE2JTclJCIyLysrSVxSISplJEZhc0ZecEZgcFEkMzAzRmByRmFyLUZpcTYlNyUkIShNKUgmKiEjNkZnbkZpblEkMzIyRmByRmFyLUZpcTYlNyVGZG9GZm8kISlGQlQ1ISIpUSQzMjNGYHJGYXItRmlxNiU3JUZecSQiMi8rKz9kP1YuI0ZhcyQhMi8rK2ckMy1vR0Zhc1EkMzMwRmByRmFyLUZpcTYlNyUkITIvKytJcWZ6WiRGYXMkIipKMlwvI0ZqckZpcFEkMzMyRmByRmFyLSUoU0NBTElOR0c2IyUsQ09OU1RSQUlORURHLSUlRk9OVEc2JCUqSEVMVkVUSUNBRyIjNS0lJkNPTE9SRzYjJSlaU0hBRElOR0c=</Plot></Text-field></Output><Output><Text-field layout="Maple Output" style="2D Output"><Equation style="2D Output">NiUiIzciIiUiIiI=</Equation></Text-field></Output></Group><Group><Input><Text-field layout="Normal" prompt="&gt; " style="Maple Input"/></Input></Group><Group><Input><Text-field layout="Normal" prompt="&gt; " style="Maple Input"/></Input></Group><Text-field/></Worksheet>

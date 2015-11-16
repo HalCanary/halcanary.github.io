@@ -1,0 +1,28 @@
+TITLE=Standard Keybinding for Emacs
+COPYRIGHT=Copyright 2003-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2003-07-24 21:49:52
+PERMALINK=http://halcanary.org/vv/2003/07/24/81/
+PERMALINKPART=vv/2003/07/24/81/
+YEAR=2003
+MONTH=07
+DAY=24
+POSTID=81
+CATEGORIES=computers-code;
+MODE=htmldiv
+
+<pre>;; $HOME/.emacs ;;
+(global-set-key
+   [(control s)]
+   'save-buffer)
+(global-set-key
+   [(control f)]
+   'isearch-forward)
+ (define-key isearch-mode-map
+   [(control f)]
+   'isearch-repeat-forward)
+</pre>
+<p>Code from <a href="http://mail.gnu.org/archive/html/help-gnu-emacs/2003-02/msg00652.html">This message</a></p>
+<p>I've been working on this for a while now. I'd like to produce a .emacs file that will completely remap the keybindings to <a href="http://developer.gnome.org/projects/gup/hig/1.0/userinput.html#standard-shortcuts"> some kind of standard</a>. </p>
+<p>The biggest problem seems to be the ctrl-x and ctrl-c behavior. </p>
+<p><a href="http://mail.gnu.org/archive/html/help-gnu-emacs/2003-02/msg00652.html"> To those in the emacs community who say that the default behavior is superior</a>, I won't disagree. But ctrl-f is search in my browser, and whenever I hit ctrl-s to search, it tries to save the web page. So I figured I needed to retrain myself and emacs to a single standard.</p>
+

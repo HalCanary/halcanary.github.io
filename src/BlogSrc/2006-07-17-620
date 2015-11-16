@@ -1,0 +1,32 @@
+TITLE=too big
+COPYRIGHT=Copyright 2006-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2006-07-17 19:46:31
+PERMALINK=http://halcanary.org/vv/2006/07/17/620/
+PERMALINKPART=vv/2006/07/17/620/
+YEAR=2006
+MONTH=07
+DAY=17
+POSTID=620
+CATEGORIES=life;
+MODE=htmldiv
+
+<p>Same Population.</p>
+<p>But way too big.</p>
+<table>
+<tr>
+<th>				</th>
+<th>Population	</th>
+<th>Population Density</th>
+</tr>
+<tr>
+<td>Cape Coral Florida Urban Area	</td>
+<td>329,757 	</td>
+<td>1719 / mile^2</td>
+</tr>
+<tr>
+<td>Madison Wisconsin Urban Area	</td>
+<td>329,533 	</td>
+<td>2893 / mile^2</td>
+</tr>
+</table>
+

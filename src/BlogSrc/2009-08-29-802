@@ -1,0 +1,34 @@
+TITLE=gain
+COPYRIGHT=Copyright 2009-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2009-08-29 09:49:02
+PERMALINK=http://halcanary.org/vv/2009/08/29/802/
+PERMALINKPART=vv/2009/08/29/802/
+YEAR=2009
+MONTH=08
+DAY=29
+POSTID=802
+CATEGORIES=computers-code;music;
+MODE=htmldiv
+
+<p>Back on the CD-ripping project.  For popular music, the album titles and artists names are easy and the online databases almost always give me the right answer.  But for classical music, there are always  discrepancies.  So I always change the <em>artist</em> field to be <em>Composer, Performers</em>.</p>
+<p>After ripping a few CDs with Sound Juicer, I then run <a href="http://mp3gain.sourceforge.net/">mp3gain</a> (<code>sudo apt-get install &#0045;&#0045;yes mp3gain</code>) on the album.</p>
+<pre>#!/bin/sh
+## ~/bin/mp3gain-a-directory
+## Written 2009 Hal Canary, #DTPD#
+renice 10 $$ &gt; /dev/null
+for dir in &quot;$@&quot; ; do
+  if [ ! -d &quot;${dir}&quot; ] ; then
+    echo &quot;&#0039;${dir}&#0039; is not a directory&quot; &gt;&amp;2
+  else
+    if ( /bin/ls &quot;${dir}/&quot;*.mp3 &gt; /dev/null 2&gt;&amp;1 ) ; then
+      /usr/bin/mp3gain -k -a &quot;${dir}/&quot;*.mp3
+    else
+      echo &quot;&#0039;${dir}&#0039; has no .mp3 files in it.&quot; &gt;&amp;2
+    fi
+  fi
+done</pre>
+<p>That little script takes a list of directories as arguments, treats all of the mp3 files in a directory as an album and applies the same gain (<code>&#0045;a</code>) to each mp3 file in the directory.  The <code>&#0045;k</code> tells it &ldquo;of course I don't want to clip the sound;  don't ask me every time.&rdquo;  Since this operation is processor&#0045; and I/O&#0045;intensive, the <code>renice</code> is always appreciated.</p>
+<p>Or, if I want to all of the directories at once, I can run this command:</p>
+<pre>find &quot;${HOME}/Music/CDs&quot; &#0045;type d &#0045;exec mp3gain&#0045;a&#0045;directory &quot;{}&quot; &#0092;;</pre>
+<p>mp3gain is nice in that it notices that it's already modified a mp3 and won't waste time on it again.</p>
+

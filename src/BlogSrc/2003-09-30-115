@@ -1,0 +1,14 @@
+TITLE=Giving up on Debian.
+COPYRIGHT=Copyright 2003-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2003-09-30 11:11:44
+PERMALINK=http://halcanary.org/vv/2003/09/30/115/
+PERMALINKPART=vv/2003/09/30/115/
+YEAR=2003
+MONTH=09
+DAY=30
+POSTID=115
+CATEGORIES=computers-code;
+MODE=htmldiv
+
+<p>I am giving up on Debian Linux. I tried installing it for a headless server and it worked great--but was running a 2.2 kernel. So I install the 2.4.x kernel with apt-get, and reboot. Well, the install program modified lilo incorrectly and ran /sbin/lilo, so it was broken and failed to boot. I go in and fix lilo, and get it to boot the 2.4 kernel, but suddenly it no longer is loading the correct module for the net card. At this point I decided to give up on this.</p>
+

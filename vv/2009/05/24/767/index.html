@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Voder-Vocoder: ssh filesharing.</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" id="stylesheet" href="/styles/scrapple-from-the-apple.css">
+  </head>
+  <!-- Copyright 2009-2015 Hal Canary. ALL RIGHTS RESERVED. -->
+
+  <body style="padding:0;margin:0;">
+    <div class="column" style="max-width:640px;margin:0 auto;">
+
+      <h1 class="blogtitle">ssh filesharing.</h1>
+
+      <div class="byline">By Hal Canary,
+        2009-05-24 15:20:33
+        (<a href="http://halcanary.org/vv/2009/05/24/767/">link</a>)
+    <br><a href="../../../../category/computers-code/" class="categorylink">#computers-code</a>
+        </div>
+      <!-- SRC= 2009-05-24-767 -->
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <div class="content">
+
+<!-- BEGIN CONTENT -->
+<p>R. was looking for an easy way to share files among the computers in his house, most of which ran some version of Linux.  SSH offers one solution to this question.  Pro: it is available on all the Linux computers, is integrated with Gnome, allows shell as well as file access, and is secure over a wireless network.  Cons:  Poor support in Windows.</p>
+<p>To set up:</p>
+<p>1)  Install the OpenSSH D&aelig;mon.  In Ubuntu, for example, &quot;sudo apt-get install -y openssh-server&quot; will install it.</p>
+<p>2) Get the local address of each machine with:</p>
+<pre>/sbin/ifconfig | grep 'inet addr' | awk '{print $1 " " $2}'</pre>
+<p>3) Give each machine a unique and memorable hostname.  Hostnames can be changed permanently by changing the contents of the file /etc/hostname (on debian-style systems) and until the next boot with &quot;sudo hostname NEWNAME&quot;.</p>
+<p>4) Edit the file /etc/hosts on each computer to list all of the local IP addresses for each computer on the network.   (Under Windows, it&#0039;s &quot;%SystemRoot%&#0092;system32&#0092;drivers&#0092;etc&#0092;hosts&quot; and under MacOSX it&#0039;s &quot;/private/etc/hosts&quot;.</p>
+<p>5) In Gnome, open the file browser Nautilus (&quot;nautilus&quot; from the command line)&rarr;menu bar&rarr;File&rarr;Connect to server.  In the dialog, select &quot;Service type&quot; to be SSH, give the hostname, and username only if it&#0039;s different on the two computers.</p>
+<p>Alternatively, one can enter &quot;nautilus sftp://USERNAME@HOSTNAME/DIRECTORY&quot; on the command line.</p>
+<p>In recent versions of Nautilus/Gnome, you can bookmark locations like this.  Then they will be availible from the Gnome Menu&rarr;Places&rarr;Bookmarks.</p>
+
+
+<!-- END CONTENT -->
+
+      </div>
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <p>(<a href="../../../../archives/">back</a>)</p>
+    </div>
+  </body>
+</html>

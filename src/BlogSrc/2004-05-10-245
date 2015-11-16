@@ -1,0 +1,30 @@
+TITLE=terminal lock
+COPYRIGHT=Copyright 2004-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2004-05-10 17:14:47
+PERMALINK=http://halcanary.org/vv/2004/05/10/245/
+PERMALINKPART=vv/2004/05/10/245/
+YEAR=2004
+MONTH=05
+DAY=10
+POSTID=245
+CATEGORIES=computers-code;
+MODE=htmldiv
+
+<pre>
+#!/bin/sh
+## ~/bin/tlock ##
+PASS='12345'
+trap '' TERM INT
+BAD="true"
+clear
+while [ "$BAD" == "true" ] ; do
+    echo -en "&#0092;ntlock password: "
+    stty -echo;
+    read x
+    stty echo;
+    [ "$x" == "$PASS" ] &amp;&amp; BAD="false"
+done
+echo "";
+</pre>
+<p><strong>UPDATE 2004-12-02:</strong> Add &ldquo;<code>trap '' TERM SIGTSTP</code>&rdquo; for additional security.</p>
+

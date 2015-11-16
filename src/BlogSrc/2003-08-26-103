@@ -1,0 +1,25 @@
+TITLE=ssh-add script.
+COPYRIGHT=Copyright 2003-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2003-08-26 13:51:35
+PERMALINK=http://halcanary.org/vv/2003/08/26/103/
+PERMALINKPART=vv/2003/08/26/103/
+YEAR=2003
+MONTH=08
+DAY=26
+POSTID=103
+CATEGORIES=computers-code;
+MODE=htmldiv
+
+<p>Here's little script that check to see if the ssh-agent knows any keys. If not, it asks for your passphrase. Then it  executes ssh. </p>
+<pre>
+#!/bin/sh
+#DTPD#
+## $HOME/bin/ssh ##
+if ! (ssh-add -l &gt; /dev/null); then
+  ssh-add;
+fi
+echo ssh "$@";
+exec /usr/bin/ssh "$@";
+</pre>
+<p>Of course you have to have the ssh-agent working correctly in the first place.</p>
+

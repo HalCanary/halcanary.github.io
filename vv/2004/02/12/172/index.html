@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Voder-Vocoder: wget&nbsp;to standard out</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" id="stylesheet" href="/styles/scrapple-from-the-apple.css">
+  </head>
+  <!-- Copyright 2004-2015 Hal Canary. ALL RIGHTS RESERVED. -->
+
+  <body style="padding:0;margin:0;">
+    <div class="column" style="max-width:640px;margin:0 auto;">
+
+      <h1 class="blogtitle">wget&nbsp;to standard out</h1>
+
+      <div class="byline">By Hal Canary,
+        2004-02-12 23:35:59
+        (<a href="http://halcanary.org/vv/2004/02/12/172/">link</a>)
+    <br><a href="../../../../category/computers-code/" class="categorylink">#computers-code</a>
+        </div>
+      <!-- SRC= 2004-02-12-172 -->
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <div class="content">
+
+<!-- BEGIN CONTENT -->
+<pre>
+#!/bin/sh
+#DTPD#
+## ~/bin/wgeto&nbsp;##
+exec&nbsp;wget&nbsp;-o /dev/null -O - "$@"
+</pre>
+<p>Then,</p>
+<pre>
+$ wgeto&nbsp;http://craphound.com/ebooksneitherenorbooks.txt &#0092;
+    &nbsp;|&nbsp;fold -s -w 70&nbsp;|&nbsp;less&nbsp;
+</pre>
+<p>Explanation for non-unix-literate people:  First of all, I wrote a neat script called&nbsp;wgeto.  wget&nbsp;is a program that downloads stuff off of the internet, via http or ftp.  wgeto&nbsp;calls&nbsp;wget, but tells it to ignore the progress dialog by sending it to the null device, "-o /dev/null". (See Rule of Silence from <a href="http://www.faqs.org/docs/artu/ch01s06.html#id2878450"><em>The Art of Unix Programming</em></a>.)  wgeto&nbsp;then pipes the document into standard output.</p>
+<p>I pipe it through fold to wrap long lines</p>
+<p>Then I pipe it into a pager, less, so that I can page through the document.</p>
+<p>Now I don't have to save a copy on the hard disk.</p>
+
+
+<!-- END CONTENT -->
+
+      </div>
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <p>(<a href="../../../../archives/">back</a>)</p>
+    </div>
+  </body>
+</html>

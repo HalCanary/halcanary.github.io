@@ -1,0 +1,74 @@
+TITLE=makefiles
+COPYRIGHT=Copyright 2012-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2012-02-23 12:00:00
+PERMALINK=http://halcanary.org/vv/2012/02/23/csg24/
+PERMALINKPART=vv/2012/02/23/csg24/
+YEAR=2012
+MONTH=02
+DAY=23
+POSTID=csg24
+MODE=htmldiv
+
+
+<pre>
+# Example (GNU) Makefile for a C++ project.
+# Assume there is a .h file for each .cxx
+
+executable_file_name = program
+cxxfiles = &#0092;
+  file_one.cxx &#0092;
+  file_two.cxx &#0092;
+  file_three.cxx &#0092;
+  file_four.cxx
+
+CXX = g++
+CXXFLAGS = &#0045;g &#0045;Wall &#0045;std=c++0x
+objects := $(cxxfiles:.cxx=.o)
+headers := $(cxxfiles:.cxx=.h)
+
+##  If you use other extensions:
+# objects := $(cxxfiles:.cpp=.o)
+# objects := $(cxxfiles:.cc=.o)
+# headers := $(cxxfiles:.cxx=.hh)
+
+.PHONY : clean all
+all : $(executable_file_name)
+$(executable_file_name) : $(objects)
+	$(CXX) $(CXXFLAGS) $^ &#0045;o $@
+%.o: %.cxx $(headers)
+	$(CXX) &#0045;c $(CXXFLAGS) $&lt; &#0045;o $@
+clean:
+	rm &#0045;f &#0045;v $(objects)
+</pre>
+<hr>
+<pre>
+# Example (GNU) Makefile for a Java project.
+# Constructs a JAR file with all of the classes.
+
+entrypointclass = Program
+jarfile = program.jar
+javafiles = &#0092;
+  file_one.java &#0092;
+  file_two.java &#0092;
+  file_three.java &#0092;
+  file_four.java
+
+JAVAC = javac
+JAVA = java
+JAR = jar
+RM = rm &#0045;f
+JCFLAGS = &#0045;Xlint &#0045;g
+JFLAGS = &#0045;enableassertions
+classes := $(javafiles:.java=.class)
+
+.PHONY : clean all run
+all: $(jarfile)
+run: $(jarfile)
+	$(JAVA) $(JFLAGS) &#0045;jar $(jarfile)
+clean:
+	$(RM) &#0045;v $(classes)
+$(jarfile): $(classes)
+	$(JAR) cvfe $@ $(entrypointclass) $^
+%.class : %.java
+	$(JAVAC) $(JCFLAGS) $^</pre>
+

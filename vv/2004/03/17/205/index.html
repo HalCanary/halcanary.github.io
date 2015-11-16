@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Voder-Vocoder: /dev/clue</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" id="stylesheet" href="/styles/scrapple-from-the-apple.css">
+  </head>
+  <!-- Copyright 2004-2015 Hal Canary. ALL RIGHTS RESERVED. -->
+
+  <body style="padding:0;margin:0;">
+    <div class="column" style="max-width:640px;margin:0 auto;">
+
+      <h1 class="blogtitle">/dev/clue</h1>
+
+      <div class="byline">By Hal Canary,
+        2004-03-17 12:52:27
+        (<a href="http://halcanary.org/vv/2004/03/17/205/">link</a>)
+    <br><a href="../../../../category/computers-code/" class="categorylink">#computers-code</a>
+        </div>
+      <!-- SRC= 2004-03-17-205 -->
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <div class="content">
+
+<!-- BEGIN CONTENT -->
+<p>Wondeful farce.</p>
+<blockquote>
+<blockquote><p>I'd love to adopt Linux but am still trying to mount /dev/clue ;-)</p>
+</blockquote>
+<p>Well, that's easy. First, download the latest 2.6 kernel (/dev/clue on 2.4 kernels is still experimental). Use a vanilla kernel, the clue patch is probably not working with the kernel your distro may offer. Then get the clue patch, apply it, recompile (configure the clue as module, building it directly into the kernel is not well tested), don't forget to make modules &amp;&amp; make modules_install. Install your new kernel (if you use LILO, dont forget to call /sbin/lilo) and reboot. Type modprobe clue. Then look in the proc filesystem if clue has properly initialized. If not, you might have to create a /etc/clue.conf for your system (see the Clue-device-HOWTO for details, but beware that some instructions there are out of date, so check the CHANGES file of the current release). As soon as everything is running, there should be the clue device in you /dev. Now you need to activate the clue filesystem (installed together with the clue device, just do modprobe cluefs). Now you can just issue the corresponding mount command (the exact options can be found on www.cluefaq.org), and voila. To have your clue activated and mounted automatically, you should adapt your modules.conf and fstab.</p>
+<p>(<a href="http://developers.slashdot.org/comments.pl?sid=100742&amp;cid=8588208">link</a>)</p>
+</blockquote>
+
+
+<!-- END CONTENT -->
+
+      </div>
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <p>(<a href="../../../../archives/">back</a>)</p>
+    </div>
+  </body>
+</html>

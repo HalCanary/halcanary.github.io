@@ -1,0 +1,871 @@
+TITLE=Presentation last night: Cryptography, Linux, and You
+COPYRIGHT=Copyright 2007-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2007-04-11 14:25:35
+PERMALINK=http://halcanary.org/vv/2007/04/11/685/
+PERMALINKPART=vv/2007/04/11/685/
+YEAR=2007
+MONTH=04
+DAY=11
+POSTID=685
+CATEGORIES=computers-code;
+MODE=htmldiv
+SUMMARY=a presentation I gave at SWLUG
+
+<p>It would have been better had there been more people show up at LUG, but that happens.</p>
+
+<p>Check out the fancy javascript on this page!</p>
+
+<hr>
+
+<h2>Cryptography, Linux, and You</h2>
+
+<p>Hal Canary</p>
+
+  <p>Talk given at <a href="http://swflug.org/">SWFLUG</a>, 2007-04-10</p>
+
+  <p>More information can be found at:
+    <a href="http://halcanary.org/p/Cryptography_Linux_and_You">http://halcanary.org/p/Cryptography_Linux_and_You</a></p>
+
+  <p>Abstract:</p>
+
+  <blockquote>
+    <p>This 30 to 60 minute talk will deal with cryptography tools
+      that commonly come with modern Linux distributions.  The
+      &quot;You&quot; part of the title refers to the fact that this
+      will not be an overly technical talk and that these are tools
+      you can use in your daily life and work.  Some of these tools
+      you are already using.</p>
+
+    <p>Prerequisites: You know that Linux is an operating system and
+      you know that many Linux users make use of the Command Line
+      Interface to tell their computer what to do.  You know that
+      cryptography is the science and art of hiding a message so that
+      only those who know a secret---called the key---can read it.
+      You might even know a little about the the history of
+      cryptography before about 1945, but we won't touch on ancient
+      cryptography at all.</p>
+  </blockquote>
+
+  <p>Optional Activities:</p>
+
+  <blockquote>
+    <p>If several attendees bring laptops running Linux (or other
+      flavor of Unix), we could exchange GPG-encrypted emails as a
+      demonstration.  While we are at it we could do an old-fashioned
+      key-signing party.</p>
+  </blockquote>
+
+  <p>After the talk is given, I'll post the slides and the text here
+    on this page.</p>
+
+	<hr />
+
+  <p><a href="http://halcanary.org/pub/2007-04-10-CLY/cryptography_linux_and_you_slides.pdf">Here are the slides from the talk.</a></p>
+
+  <p>Here is the prepared text:</p>
+
+<script type="text/javascript">
+<!--
+function toggleMe(elementId) {
+	var listIms = new Array(
+		"ev0001",
+		"ev0002",
+		"ev0003",
+		"ev0004",
+		"ev0005",
+		"ev0006",
+		"ev0007",
+		"ev0008",
+		"ev0009",
+		"ev0010",
+		"ev0011",
+		"ev0012",
+		"ev0013",
+		"ev0014",
+		"ev0015",
+		"ev0016",
+		"ev0017",
+		"ev0018",
+		"ev0019",
+		"ev0020",
+		"ev0021",
+		"ev0022",
+		"ev0023",
+		"ev0024",
+		"ev0025",
+		"ev0026",
+		"ev0027",
+		"ev0028",
+		"ev0029");
+	var e = document.getElementById(elementId);
+	e.style.display = "inline";
+	for (var i = 0; i < 29; i++) {
+		var el = document.getElementById(listIms[i]);
+		if ( e != el ) {
+			el.style.display = "none";
+		}
+	}
+	return(true);
+}
+-->
+</script>
+
+<p>
+<img src="http://halcanary.org/images/ev0001.png" alt="[slide]" width="562" height="435" style="display:inline" id="ev0001" /><br />
+<span onclick='javascript:toggleMe("ev0001");' style="text-decoration:underline; color: #000088; cursor:pointer;">
+			<strong>SLIDE 1</strong></span>
+</p>
+<p>
+The title of this talk is &quot;Cryptography, Linux, and You&quot;. We will be
+dealing with cryptography tools that commonly come with modern Linux
+distributions.  The &quot;You&quot; part of the title refers to (1) the fact
+that this will not be an overly technical talk.  It also refers to (2)
+the fact that these are tools you can use in your daily life and work.
+Some of these tools you are already using.
+</p>
+<p>
+Assumptions: You know that Linux is an operating system and you know
+that many Linux users make use of the Command Line Interface to tell
+their computer what to do.  You know that cryptography is the science
+and art of hiding a message so that only those who know a
+secret---called the key---can read it.
+</p>
+<p>
+You know about the the history of cryptography: scytales (skitalys),
+the Caesar cypher, Cryptoquips, Enigma machines and Bletchley Park,
+Shannon security, et cetera.  Because I won't touch on any of this
+history.
+</p>
+<p>
+<img src="http://halcanary.org/images/ev0002.png" alt="[slide]" width="562" height="435" style="display:none" id="ev0002" /><br />
+<span onclick='javascript:toggleMe("ev0002");' style="text-decoration:underline;color: #000088;cursor:pointer;">
+			<strong>SLIDE 2</strong></span>
+</p>
+<p>
+We are going to talk about three broad topics: hash functions,
+symmetric cryptography, and asymmetric encryption.  Strictly speaking,
+cryptographic hash functions are not a form of cryptography, since
+cryptography literally means as &quot;secret writing&quot;.  On the other hand,
+cryptographic hash functions are incredibly useful for cryptographic
+applications.
+</p>
+<p>
+Another thing we are going to touch on is digital signatures.  These
+are not &quot;secret writing&quot; either, but but they are (1) useful for
+securing encrypted channels of communication, (2) make use of
+algorithms related to cryptography, and (3) useful in themselves.
+</p>
+<p>
+<img src="http://halcanary.org/images/ev0003.png" alt="[slide]" width="562" height="435" style="display:none" id="ev0003" /><br />
+<span onclick='javascript:toggleMe("ev0003");' style="text-decoration:underline;color: #000088;cursor:pointer;">
+			<strong>SLIDE 3</strong></span>
+</p>
+<p>
+A checksum is a mathematical function that can be used to verify that
+an input has not been accidentally changed.
+</p>
+<p>
+For example, the 10 digit ISBN (International Standard Book Number)
+that every book is identified with includes a checksum in the last
+digit.
+</p>
+<p>
+CHECK_DIGIT = 11 - ([SUM_{i=1}^{9} (11-i)*(ith digit )] modulo 11)
+</p>
+<p>
+Hash functions are similar to checksums.  For the sake of this talk,
+they are the same thing.  *Cryptographic* Hash Functions have the
+additional property that it is relatively hard to make a change in the
+input to produce the same output.  Because of the danger of a brute
+force attack, useful cryptographic hash functions have a large but
+finite range, larger than 2^128 elements.
+</p>
+<p>
+Here's a list of four common cryptographic hash functions---md5, sha1,
+and sha2 (sha256 and sha512)---and the size of their range.  Md5 and
+sha1 are broken, which means that there is an attack on them that is
+faster than a brute force attack.  These attacks still take some
+processing power, so they are only &quot;kind of&quot; broken.  Any new
+application should be designed to use the sha2 family of functions.
+</p>
+<p>
+The NSA and NIST have announced that they plan on creating a new
+family of cryptographic hash functions to replace sha2.  It may be
+some years before this happens.
+</p>
+<p>
+<img src="http://halcanary.org/images/ev0004.png" alt="[slide]" width="562" height="435" style="display:none" id="ev0004" /><br />
+<span onclick='javascript:toggleMe("ev0004");' style="text-decoration:underline;color: #000088;cursor:pointer;">
+			<strong>SLIDE 4</strong></span>
+</p>
+<p>
+Here's an example of how a you might make use of a hash function.
+These functions take in a stream of bits---for example a file on a
+computer--- and output a N-bit binary number.  That number is usually
+represented as a hexadecimal number.  In this example, sha1 gives 40
+digit hexadecimal number. (Or more precisely a 40 hexadigit number) A
+hexadecimal digit is base 16 - 16 is 2^4, so each digit is 4 bits
+(half a byte).  4 bits per hexadigit times 40 digits gives 160 bits,
+which is what we expected form the information that I gave you before!
+</p>
+<p>
+Here I create two files test1 and test2.  These two files differ by
+only one character---a single period.
+</p>
+<p>
+Aside: the echo command outputs the string &quot;hello world&quot;. The &quot;&gt;&quot;
+symbol redirects the output of echo into a file, in this case into the
+file test1
+</p>
+<p>
+When I use the sha1sum program and tell it to give me a checksum on
+these two files, it outputs two checksums, one for each file.  Notice
+how different the two sums are, even if the inputs were very much
+alike!
+</p>
+<p>
+So I don't have to remember these checksums, I can store them in a
+file, which I'll call &quot;SHA1SUM.txt&quot;.  Later, I'm going to come along
+and check to see that these two files haven't accidentally changed. to
+do that I'll use &quot;sha1sum -c&quot;.  The &quot;-c&quot; means check and reads input
+in a form identical to the output of sha1sum.  With &quot;-c&quot; I don't have
+to manually check the sums with my own eyeballs.
+</p>
+<p>
+<img src="http://halcanary.org/images/ev0005.png" alt="[slide]" width="562" height="435" style="display:none" id="ev0005" /><br />
+<span onclick='javascript:toggleMe("ev0005");' style="text-decoration:underline;color: #000088;cursor:pointer;">
+			<strong>SLIDE 5</strong></span>
+</p>
+<p>
+Here I use some fancy commands to add a newline character to the end
+of the file test2.  Now it should give a different checksum because
+the file has changed This time, &quot;sha1sum -c&quot; gave an error message!
+</p>
+<p>
+<img src="http://halcanary.org/images/ev0006.png" alt="[slide]" width="562" height="435" style="display:none" id="ev0006" /><br />
+<span onclick='javascript:toggleMe("ev0006");' style="text-decoration:underline;color: #000088;cursor:pointer;">
+			<strong>SLIDE 6</strong></span>
+</p>
+<p>
+Now we finally get to some real encryption!
+</p>
+<p>
+<img src="http://halcanary.org/images/ev0007.png" alt="[slide]" width="562" height="435" style="display:none" id="ev0007" /><br />
+<span onclick='javascript:toggleMe("ev0007");' style="text-decoration:underline;color: #000088;cursor:pointer;">
+			<strong>SLIDE 7</strong></span>
+</p>
+<p>
+For this example I want to encrypt these two files test1 and test2.
+The easiest way to do that is to put them in a new directory by
+themselves than archive the directory with the &quot;tar -cz&quot; command.
+This creates the compressed Tar archive secretstuff.tgz.  I then
+encrypt it with a program called GPG.  I'm going to use GPG in
+&quot;symmetric mode&quot; so I use the command &quot;gpg -c&quot; Here &quot;-c&quot; means
+&quot;symmetric&quot;.  I think &quot;-s&quot; was already taken.
+</p>
+<p>
+It asks for a passphrase twice---to make sure I entered it correctly.
+</p>
+<p>
+This creates a file called secretstuff.tgz.gpg
+</p>
+<p>
+<img src="http://halcanary.org/images/ev0008.png" alt="[slide]" width="562" height="435" style="display:none" id="ev0008" /><br />
+<span onclick='javascript:toggleMe("ev0008");' style="text-decoration:underline;color: #000088;cursor:pointer;">
+			<strong>SLIDE 8</strong></span>
+</p>
+<p>
+To be secure, I'm going to use the shred program to securely delete
+the original archive file.  To recover the original file, I simply run
+the command &quot;gpg secretstuff.tgz.gpg&quot;.  It asks for the passphrase and
+if I enter it correctly, it will spit out the original file.
+</p>
+<p>
+<img src="http://halcanary.org/images/ev0009.png" alt="[slide]" width="562" height="435" style="display:none" id="ev0009" /><br />
+<span onclick='javascript:toggleMe("ev0009");' style="text-decoration:underline;color: #000088;cursor:pointer;">
+			<strong>SLIDE 9</strong></span>
+</p>
+<p>
+Why did I use the term &quot;passphrase&quot; and not &quot;password&quot;.  There is a
+subtle difference.  Passwords are short, while passphrases can be very
+long. If I knew that your password was only eight characters long, I
+could try every eight combination of eight letters - that would only
+take me a few days if I could try one every microsecond.  I could go
+much faster if your password is subject to a dictionary attack.  Say
+you are trying to attack my home server with a brute-force attack
+against my ssh daemon.  My sshd always closes the connection after N
+incorrect passwords and waits about a second before it asks for
+another password.
+</p>
+<p>
+So passwords are great for situations where the system can control the
+number of tries that can be allowed.
+</p>
+<p>
+If an attacker gets a hold of the file secretstuff.tgz.gpg, that
+attacker could try to crack that file as many times a second as he
+wants to.  So you need to pick a much harder to guess passphrase.
+Here's a table that lists the relative &quot;hardness to guess&quot; of several
+passphrases.  On this scale, a 1.0 is approximately equals the
+security of a 128 bit number.  If you guessed one number every
+femptosecond (10^-15) it would take almost a million times the age of
+the universe before you've exhausted all the 128 bit numbers out
+there.  So 2^128 is considered a big number.  On the other hand,
+cryptosystems with a key 64 bits long have been broken with brute
+force attacks (584542 per microsecond for a year).
+</p>
+<p>
+<img src="http://halcanary.org/images/ev0010.png" alt="[slide]" width="562" height="435" style="display:none" id="ev0010" /><br />
+<span onclick='javascript:toggleMe("ev0010");' style="text-decoration:underline;color: #000088;cursor:pointer;">
+			<strong>SLIDE 10</strong></span>
+</p>
+<p>
+If I want a 128 bit random number, that's 16 bytes.  Let's grab 16
+byes out of /dev/random --- Linux's random device.  We'll use the head
+program to grab the first 16 bytes it gives us.  Then we'll that that
+and pipe it into the the hexdump program so that we can get a
+human-readable format.  de4226f80c92e9de1030f4811b8b9a07---that's a
+good passphrase, but you'll never remember it.  We could also use the
+base64 program to make a shorter human-readable passphrase.
+</p>
+<p>
+There are a bunch of different ways to come up with perfectly random
+passwords.  Diceware is software that uses the random throw of dice to
+produce a passphrase.
+</p>
+<p>
+I choose to trust Linux's Random Device.  The Linux Kernel watches its
+environment---keyboard stokes, mouse movements, Ethernet traffic, et
+cetera---and gathers randomness form the low bits of of the time when
+such interrupts are received.  Such inputs are considered very random.
+Since the Linux kernel keeps track of how much randomness it has,
+/dev/random is considered a true random number generator, and not a
+pseudorandom number generator.
+</p>
+<p>
+Microsoft's function CryptGenRandom() is not considered as secure as
+Linux's /dev/random.
+</p>
+<p>
+Just to see how /dev/random collects randomness from keystrokes,
+here's a little program I wrote, timeinmicroseconds, that prints out
+the current time to microsecond resolution.  If I run it like this:
+</p>
+<pre>while read -s -n 1 x ; do timeinmicroseconds ; done</pre>
+<p>
+it will print out the time on every keystroke, until I hit Ctrl-C.
+Notice that the current time in seconds is not very random, but the
+microseconds part of the number is very random looking.  Now you will
+think twice before doing this:
+</p>
+<pre>	srand(time(0));
+	int num = rand();</pre>
+<p>
+which only looks at the current time in seconds.  Here's a much better
+way of getting a random number in C:
+</p>
+<pre>	FILE *devrandom;
+	int num;
+	devrandom = fopen(&quot;/dev/random&quot;, &quot;rb&quot;);
+	fread(&amp;num, sizeof(num), 1, devrandom);
+	close(devrandom);</pre>
+<p>
+<img src="http://halcanary.org/images/ev0011.png" alt="[slide]" width="562" height="435" style="display:none" id="ev0011" /><br />
+<span onclick='javascript:toggleMe("ev0011");' style="text-decoration:underline;color: #000088;cursor:pointer;">
+			<strong>SLIDE 11</strong></span>
+</p>
+<p>
+Aespipe is a simple program that does one thing and does it well---it
+implements the AES (Advanced Encryption Standard) block cypher.
+Aespipe can be found in the Ubuntu universe or can be downloaded form
+this URL.
+</p>
+<p>
+Aespipe is about twice as fast as GPG for symmetric encryption.
+</p>
+<p>
+Aespipe either needs one 128-bit key or (in multi-key mode) 65
+different 128-bit keys.  It always gets these keys by applying a
+cryptographic hash function to your passphrase(s).  You can give it a
+passphrase in three different ways. (1) You can type it in at the
+prompt (2) you can leave it in a file and use the &quot;-P file&quot; option to
+read that file in (3) you can gpg-encrypt a file and use the &quot;-K&quot;
+option to access that file.
+</p>
+<p>
+<img src="http://halcanary.org/images/ev0012.png" alt="[slide]" width="562" height="435" style="display:none" id="ev0012" /><br />
+<span onclick='javascript:toggleMe("ev0012");' style="text-decoration:underline;color: #000088;cursor:pointer;">
+			<strong>SLIDE 12</strong></span>
+</p>
+<p>
+We first create an excessively long passphrase (more entropy than we
+will need, but why not?) and leave it in a ﬁle pass.txt
+</p>
+<p>
+In the second step, we will use the pipeline to take the output of tar
+and input it into aespipe.  We redirect the final output into the file
+secretstuff.tgz.aes.
+</p>
+<p>
+In the next sequence, we add a passphrase to secure the keyfile!
+</p>
+<p>
+When decrypting, use the &quot;-d&quot; option!
+</p>
+<p>
+I recently backed up 58 GB of data through aespipe and onto an
+external drive.  The bottleneck seemed to be the aespipe program, but
+I was able to write about 5MB of data a second.
+</p>
+<p>
+<img src="http://halcanary.org/images/ev0013.png" alt="[slide]" width="562" height="435" style="display:none" id="ev0013" /><br />
+<span onclick='javascript:toggleMe("ev0013");' style="text-decoration:underline;color: #000088;cursor:pointer;">
+			<strong>SLIDE 13</strong></span>
+</p>
+<p>
+Public Key, or Asymmetric, Cryptography is relatively new.  It was
+first made public in the 1970s but was in use by governments for some
+years before that.  Before public-key cryptography, if N people want
+to communicate secretly among themselves, they would need N*(N-1)/2
+separate keys.  Without Public Key Crypto, Internet commerce would
+never have happened, among other things.
+</p>
+<p>
+<img src="http://halcanary.org/images/ev0014.png" alt="[slide]" width="562" height="435" style="display:none" id="ev0014" /><br />
+<span onclick='javascript:toggleMe("ev0014");' style="text-decoration:underline;color: #000088;cursor:pointer;">
+			<strong>SLIDE 14</strong></span>
+</p>
+<p>
+Public-key cryptography (PKC) uses different keys to encrypt and
+decrypt your message!  These two keys are mathematically related and
+must be generated at the same time.
+</p>
+<p>
+The public key is used to encrypt the message, while the private key is
+used to decrypt it.
+</p>
+<p>
+In 1991, Philip Zimmerman wrote PGP (pretty good privacy) and brought
+public key crypto to the masses for the first time.
+</p>
+<p>
+The algorithms that PGP make use of are not mathematically proven to be
+unbreakable.  At best, you can still bruteforce calculate the private
+key from the public key, given an infinite amount of computing power
+or a quantum computer with a few thousand qbits.
+</p>
+<p>
+OpenPGP is a standard for PKC.  GPG (Gnu Privacy Guard) is a F/OSS
+implementation of the OpenPGP standard and is included in most
+distros.  After you have generated a key pair, you will want to
+publish the public key and keep the private key safe.  By default, GPG
+encrypts your private key with a passphrase as an added layer of
+security in case some one gains access to your computer.
+</p>
+<p>
+In actuality, GPG or PGP encrypts your message with a symmetric cypher
+and then encrypts the key to that cypher with PKE.  This is considered
+faster and safer.
+</p>
+<p>
+<img src="http://halcanary.org/images/ev0015.png" alt="[slide]" width="562" height="435" style="display:none" id="ev0015" /><br />
+<span onclick='javascript:toggleMe("ev0015");' style="text-decoration:underline;color: #000088;cursor:pointer;">
+			<strong>SLIDE 15</strong></span>
+</p>
+<p>
+Let's start by generating a new keypairs.  If you forget the
+command-line options to GPG, use the command &quot;man gpg&quot; to get the full
+documentation.  the &quot;--gen-key&quot; option lets you create a new keypair.
+</p>
+<p>
+Let's take the default options here.  The key is going to have a copy
+of your name and email address for easy searching online.  When it's
+done reading from the random device, it generates the key and drops
+the key in the ~/.gnupg/ directory.  Each key has an ID---an 8 digit
+hexadecimal number, and a fingerprint, a 40 digit hexadecimal number.
+The fingerprint is just a cryptographic hash of the public key and can
+be used to verify that two copies of a key are the same key.  This is
+used to prevent a man-in-the middle attack.
+</p>
+<p>
+You can get the fingerprint later by &quot;gpg --fingerprint&quot;.
+</p>
+<p>
+There are two ways of getting someone's key.  They can give you a
+keyfile they create with &quot;gpg -a --export KEYID &gt; KEYID.txt&quot;. You
+could import it with &quot;gpg --import KEYID.txt&quot;.
+</p>
+<p>
+Another option is to search a keyserver for a key, either over the
+web or using GPG's &quot;gpg --search-keys 'real name'&quot; or &quot;gpg --recv-keys
+KEYID&quot;.  A key can be uploaded via the web or &quot;gpg --send-keys KEYID&quot;.
+</p>
+<p>
+Once I've generated my own key pair and acquired and verified someone
+else's public key, I can encrypt a file to send to them with &quot;gpg
+--sign --encrypt --recipient 'NAME' FILE&quot;.
+</p>
+<p>
+If you receive a file, you can usually process it with &quot;gpg FILE&quot;.
+</p>
+<p>
+Ask for volunteers to send some files back and forth.
+</p>
+<p>
+<img src="http://halcanary.org/images/ev0016.png" alt="[slide]" width="562" height="435" style="display:none" id="ev0016" /><br />
+<span onclick='javascript:toggleMe("ev0016");' style="text-decoration:underline;color: #000088;cursor:pointer;">
+			<strong>SLIDE 16</strong></span>
+</p>
+<p>
+Digital Signatures are kind of like the opposite of Public Key
+Encryption.  They are used to verify that the signed file has not
+changed since they were signed by someone who possessed the private
+key.  Strictly speaking, you sign the digest from a cryptographic hash
+function and not the file itself, but as long as the hash function is
+secure, this is practically equivalent and much faster.
+</p>
+<p>
+About ten years ago, a law was passed here in the United States
+which made Digital Signatures legally equivalent to ordinary
+signatures.  This law was intended to facilitate Internet commerce.
+</p>
+<p>
+The most well know algorithm for digital signatures is DSA (Digital
+Signature Algorithm).  I will show five applications of Digital
+Signatures.
+</p>
+<p>
+<img src="http://halcanary.org/images/ev0017.png" alt="[slide]" width="562" height="435" style="display:none" id="ev0017" /><br />
+<span onclick='javascript:toggleMe("ev0017");' style="text-decoration:underline;color: #000088;cursor:pointer;">
+			<strong>SLIDE 17</strong></span>
+</p>
+<p>
+The first application is signing a plain text document.  This is used
+a lot for a plain file on posted on a newsgroup or a web page where it
+is not feasible to attach a second file with a signature file.  Before
+email clients learned to recognize attached signatures, this format
+was often used to sign emailed messages as well.
+</p>
+<p>
+Let's go through an example of signing something and verifying it.
+The commands are &quot;gpg --clearsign&quot; and &quot;gpg --verify&quot;.
+</p>
+<p>
+<img src="http://halcanary.org/images/ev0018.png" alt="[slide]" width="562" height="435" style="display:none" id="ev0018" /><br />
+<span onclick='javascript:toggleMe("ev0018");' style="text-decoration:underline;color: #000088;cursor:pointer;">
+			<strong>SLIDE 18</strong></span>
+</p>
+<p>
+The next way that this is often done is to clearsign a SHA1SUM file.
+This became popular in situations where a person was already producing
+SHA1SUM files and it was trivial to add a &quot;gpg --clearsign&quot; step to
+their routine.  Then users who were accustomed to checking files with
+&quot;sha1sum -c&quot; can continue with no change to their routines and users
+who want to &quot;gpg --verify&quot; as well can do that for added security.
+</p>
+<p>
+Power users will insist on combining the two processes with a
+pipeline.
+</p>
+<p>
+<img src="http://halcanary.org/images/ev0019.png" alt="[slide]" width="562" height="435" style="display:none" id="ev0019" /><br />
+<span onclick='javascript:toggleMe("ev0019");' style="text-decoration:underline;color: #000088;cursor:pointer;">
+			<strong>SLIDE 19</strong></span>
+</p>
+<p>
+Here's a real-life example:  Red Hat already was providing checksums
+for downloaded files.  It was trivial for them to begin signing those
+checksums.
+</p>
+<p>
+<img src="http://halcanary.org/images/ev0020.png" alt="[slide]" width="562" height="435" style="display:none" id="ev0020" /><br />
+<span onclick='javascript:toggleMe("ev0020");' style="text-decoration:underline;color: #000088;cursor:pointer;">
+			<strong>SLIDE 20</strong></span>
+</p>
+<p>
+Signing a random binary file.  The &quot;gpg --detach-sign&quot; command creates
+a separate signature.  Your email client probably does a similar thing
+when it GPG-signs an email and sends the signature as an attachment.
+</p>
+<p>
+<img src="http://halcanary.org/images/ev0021.png" alt="[slide]" width="562" height="435" style="display:none" id="ev0021" /><br />
+<span onclick='javascript:toggleMe("ev0021");' style="text-decoration:underline;color: #000088;cursor:pointer;">
+			<strong>SLIDE 21</strong></span>
+</p>
+<p>
+For example, if I use Evolution or Thunderbird, both popular GUI email
+clients for Linux, then it is easy to enable encryption and digital
+signatures.  In Evolution, you can get to this screen from the Account
+Editor from Preferences.  Just enter the KEYID of the GPG key you want
+to use to sign mail and it just works.  You will have to provide your
+passphrase to unlock the private key each time you use it.
+</p>
+<p>
+Signed email should be ignored by clients unable to make use of those
+signatures; it will serve as notice to everyone else that you use GPG!
+</p>
+<p>
+<img src="http://halcanary.org/images/ev0022.png" alt="[slide]" width="562" height="435" style="display:none" id="ev0022" /><br />
+<span onclick='javascript:toggleMe("ev0022");' style="text-decoration:underline;color: #000088;cursor:pointer;">
+			<strong>SLIDE 22</strong></span>
+</p>
+<p>
+Secure Sockets Layer (SSL) or TLS (Transport Layer Security) is a
+layer of encryption that can be applied to any TCP/IP connection.
+When it is applied to HTTP (the web's transfer protocol) the result is
+HTTPS, usually denoted by the https:// URL scheme and the little lock
+icon in your browser window.  SSL makes use of PKE like something
+this: (I may be glossing over details)
+</p>
+<p>
+1) Client (Web Browser) opens *clear* connection to server (Web Server).
+</p>
+<p>
+2) Server responds by sending its public key.
+</p>
+<p>
+3) Client looks at the key and sees that it has been digitally signed
+by a Certificate Authority.
+</p>
+<p>
+4) If the client ALREADY has a public key for that Certificate
+Authority, it checks the signature.  If not valid, it throws an error
+message.
+</p>
+<p>
+5) If everything is on the up-and-up, the client generates a random
+session key and asymmetrically encrypts it with the server's key.  It
+then responds to the server with this encrypted message.
+</p>
+<p>
+6) The server uses its private key to decrypt the session key.  From
+here on out, both the client and the server will encrypt everything
+they send each other with this session key.
+</p>
+<p>
+Before any of this can happen, the following must happen behind the
+scene:
+</p>
+<p>
+A) The server must generate a keypair.
+</p>
+<p>
+B) The server must give a CA money and prove to the CA that they are
+who they say they are in exchange for a signature on the public key.
+</p>
+<p>
+C) That CA must convince the makers of all web browsers to include the
+CA's public key with the web browser.
+</p>
+<p>
+<img src="http://halcanary.org/images/ev0023.png" alt="[slide]" width="562" height="435" style="display:none" id="ev0023" /><br />
+<span onclick='javascript:toggleMe("ev0023");' style="text-decoration:underline;color: #000088;cursor:pointer;">
+			<strong>SLIDE 23</strong></span>
+</p>
+<p>
+You can go to this page in Mozilla Firefox and get a list of all the
+CA's that it trusts.
+</p>
+<p>
+<img src="http://halcanary.org/images/ev0024.png" alt="[slide]" width="562" height="435" style="display:none" id="ev0024" /><br />
+<span onclick='javascript:toggleMe("ev0024");' style="text-decoration:underline;color: #000088;cursor:pointer;">
+			<strong>SLIDE 24</strong></span>
+</p>
+<p>
+Here's a screenshot from the &quot;Page Info&quot; box when I visit my bank's
+website.  Bank of America paid VeriSign to sign its key.
+</p>
+<p>
+Why go through all this rigmarole?  To prevent a Man-in-the-Middle
+attack.  If a malicious person intercepted my original connection to
+the bank and gave me a his own key, he could turn around and echo
+everything I said to the bank using the bank's own key.
+</p>
+<p>
+Draw a picture.
+</p>
+<p>
+<img src="http://halcanary.org/images/ev0025.png" alt="[slide]" width="562" height="435" style="display:none" id="ev0025" /><br />
+<span onclick='javascript:toggleMe("ev0025");' style="text-decoration:underline;color: #000088;cursor:pointer;">
+			<strong>SLIDE 25</strong></span>
+</p>
+<p>
+SSH (Secure Shell) was originally designed to replace rsh and telnet,
+programs which allowed remote logins to servers *without* any
+encryption.  Even the passwords were sent in cleartext.  On an
+ethernet, it was ridiculously easy to use a program called Ethereal to
+snoop on telnet sessions and steal passwords.
+</p>
+<p>
+The only two versions of SSH I use these days are OpenSSH, which comes
+with most Linux distributions, and Putty, which is available in a
+native Windows version.
+</p>
+<p>
+Like SSL, the session key for your SSH connection is encrypted with
+the server's public key.  When installing the SSH daemon, you generate
+a keypair.
+</p>
+<p>
+In order to prevent a man-in-the-middle attack, you'll need to
+manually check the fingerprint on the server's key.  You'll only need
+to do this the first time your client connects to a server or if a
+server gets a new keypair.
+</p>
+<p>
+To find the fingerprints on a server, you can use the command
+&quot;ssh-keygen -lf&quot;.  The public keys are kept in the files
+/etc/ssh/ssh_host_*key.pub
+</p>
+<p>
+First and foremost, SSH is used to remotely log into a command-line
+environment on a remote machine.  For those who do a lot of work on
+the command line already, the utility of this is obvious.  For
+example, I have used remote logins to:
+</p>
+<p>
+	1) log into a web server and make changes to the files there
+	   directly---without the need to make local copies and ftp
+	   them over to the server.
+</p>
+<p>
+	2) Log into a Linux machine that I was using as a router so I
+	   can modify the firewall rules using iptables.
+</p>
+<p>
+	3) Remotely long into a workstation to run mathematical or
+	   physical simulations that might take a lot of computational
+	   power and time to run.
+</p>
+<p>
+	4) Log into a email server and run Mutt or Pine to locally
+	   read and respond to my email.
+</p>
+<p>
+	5) Use &quot;wall&quot; to talk to other users on the same machine.
+</p>
+<p>
+But that's not all!
+</p>
+<p>
+<img src="http://halcanary.org/images/ev0026.png" alt="[slide]" width="562" height="435" style="display:none" id="ev0026" /><br />
+<span onclick='javascript:toggleMe("ev0026");' style="text-decoration:underline;color: #000088;cursor:pointer;">
+			<strong>SLIDE 26</strong></span>
+</p>
+<p>
+SSH can be used to copy files or even whole directories with the &quot;scp&quot;
+or &quot;sftp&quot; commands.  I am especially fond of the scp command, which
+has beautiful syntax, stolen from the old &quot;rcp&quot; command.  In my
+opinion, scp has more of the Unix Philosophy than sftp does.
+</p>
+<p>
+In the rsync example, we use the rsync command to manage the actual
+copying of files, but we *connect* to the ssh daemon and don't need to
+run a rsync daemon.  Rsync is smart enough to minimize network usage
+at the expense of processor time.
+</p>
+<p>
+You can also run a rsync daemon on the other end, without the need for
+ssh.  This is often used for anonymous, download-only rsync.
+</p>
+<p>
+Port forwarding.  In the first example, we forward the X11 protocol.
+Now programs that run on the remote machine running a ssh server can
+act as X11 clients for the X11 server that runs on the local machine
+running a ssh client.  If you've got Linux on both ends, you probably
+already have a X11 server on your local machine---it's what your GUI
+(graphical user interface) is built on!
+</p>
+<p>
+Example:  run xclock or xterm.
+</p>
+<p>
+Dynamic Port forwarding.  In the second example, we dynamically
+forward localhost port 12345 to be a SOCKS port.  To make use of it,
+we'll have to configure an application to make use of this port.
+But first let's draw a picture:
+</p>
+<p>
+<img src="http://halcanary.org/images/ev0027.png" alt="[slide]" width="562" height="435" style="display:none" id="ev0027" /><br />
+<span onclick='javascript:toggleMe("ev0027");' style="text-decoration:underline;color: #000088;cursor:pointer;">
+			<strong>SLIDE 27</strong></span>
+</p>
+<p>
+Here is a graphic which shows the relevant parts of a hypothetical
+situation I find myself in all the time.  I'm at a coffee shop and
+have my laptop with me.  I want to browse the web off the free WiFi
+someone has provided, but since it is not encrypted, anyone could
+listen in.  Worse, I know the hotspot provider could be monitoring my
+traffic.  Even if I use SSL, which is not always possible, he'll know
+what web sites I visit.  Strictly speaking, you always have this sort
+of problem with any connection to the Internet, but with your ISP, you
+pay them money to give you Internet service.  It is in their best
+intre$t to respect your privacy.
+</p>
+<p>
+Beforehand, I have
+</p>
+<p>
+	1) Figured out how to open port 22 (or other port) on my DSL
+	   or cable modem and how to forward that port to my Linux
+	   workstation on my home network.
+</p>
+<p>
+	2) Run sshd on my workstation, opened port 22 on my iptables
+	   firewall, and left my computer running while I'm out.
+</p>
+<p>
+	3) Gone to dyndns.org and set up a free account so
+	   example.dyndns.org now points at my home machine.  I run
+	   the ddclient daemon that periodically updates the dyndns
+	   dns server on my current DHCPed IP address.
+</p>
+<p>
+	4) Have a copy of my home machine's SSH key fingerprint either
+	   with me printed on a piece of paper, on a computer file, or
+	   in my laptop's ~/.ssh/known_hosts file.
+</p>
+<p>
+Now all I need to do is &quot;ssh -D 12345 example.dyndns.org&quot;. The
+hypothetical malevolent ISP *will* know that you have opened a ssh
+connection to example.dyndns.org, and will see a bunch of encrypted
+information going back and forth, but if you trust the SSH encryption,
+then there is no way for him to know anything beyond how much
+information is being passed in each direction.  (Remember that I will
+completely fail to mention any sort of *deniable* cryptography today.)
+</p>
+<p>
+We will want to convince my web browser to send any outgoing packets
+through the ssh tunnel to my workstation, then out to the Internet at
+large, unencrypted.
+</p>
+<p>
+<img src="http://halcanary.org/images/ev0028.png" alt="[slide]" width="562" height="435" style="display:none" id="ev0028" /><br />
+<span onclick='javascript:toggleMe("ev0028");' style="text-decoration:underline;color: #000088;cursor:pointer;">
+			<strong>SLIDE 28</strong></span>
+</p>
+<p>
+I need to tell my web browser to use the SOCKS proxy at
+localhost:12345.  Here's how I do it in Firefox 2.0.0.x.  I use the
+&quot;MM3 ProxySwitch&quot; Add-On to quickly switch back and forth between
+proxied and unproxied modes.  My configuration file looks this:
+</p>
+<pre>
+	[socksproxy
+	  socks=127.0.0.1:12345
+	  noProxy=127.0.0.1
+	]</pre>
+<p>
+And that's all there is.  I'd like to bust out Ethereal to show how
+http traffic is encrypted now, but that's out of the scope of this
+talk.
+</p>
+<p>
+<img src="http://halcanary.org/images/ev0029.png" alt="[slide]" width="562" height="435" style="display:none" id="ev0029" /><br />
+<span onclick='javascript:toggleMe("ev0029");' style="text-decoration:underline;color: #000088;cursor:pointer;">
+			<strong>SLIDE 29</strong></span>
+</p>
+<p>
+Conclusions:  There's a lot more to this subject than just picking the
+right algorithm!
+</p>

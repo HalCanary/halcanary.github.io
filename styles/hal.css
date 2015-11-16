@@ -1,0 +1,335 @@
+/* 
+	The license for this CSS is: 
+		http://creativecommons.org/licenses/sa/1.0/ 
+*/
+
+/************
+ * HTML Minimums
+ ************/
+td.rightcol, td.leftcol, td.centercol { 
+    vertical-align: top;
+}
+td.rightcol, td.leftcol { 
+  /*    width : 20% ; */
+    text-align : left; 
+}
+td.leftcol {width : 20% ;}
+pre { 
+    white-space : pre;
+    /*font-family: monospace; */
+}
+
+/************
+ * Columns
+ ************/
+div.leftcol      { position:absolute; align:left; width:20%; margin-left:0;   }
+div.centercol    { position:absolute; align:left; width:60%; margin-left:20%; }
+div.rightcol     { position:absolute; align:left; width:20%; margin-left:80%; }
+div.widerightcol { position:absolute; align:left; width:80%; margin-left:20%; }
+
+
+hr.holder         { width: 600px; visibility: hidden; } /* Equal to 'top' */
+hr.left, hr.right { width: 120px; visibility: hidden; }
+hr.middle         { width: 360px; visibility: hidden; } 
+
+/************
+ * HAL's BASICS
+ ************/
+.small-center {
+    text-align : center; 
+    font-size : 80%; 
+} 
+.centered {
+    text-align : center; 
+} 
+.rightside {
+    text-align : right; 
+} 
+
+body {
+     padding : 0px;
+     margin : 0 0 0 0;
+} 
+a:link, a:visited, a:active a:hover {
+    text-decoration : underline;
+}
+
+/************
+ * MARGINS
+ ************/
+
+body {	}
+
+p {	text-align : justify;
+	padding-left : 7mm; 
+	padding-right : 7mm; 
+	margin-top : 1ex ;
+	margin-bottom : 1.5ex ;  } 
+
+.leftcol p, .rightcol p, .leftcol h3, .rightcol h3 {
+	text-align : left;
+	padding-left : 1ex; 
+	padding-right : 1ex; }
+
+/*.blog p ,.blog h3,  div.blog {
+	padding-left : 5mm;
+	padding-right : 5mm;}*/
+.blog hr {
+	margin-left : 15mm;
+	margin-right : 15mm;
+}
+
+h1 {	text-align : left;
+	margin : 3px ;
+	padding-left : 3mm; 
+	padding-right : 3mm; 
+	padding-top : 2mm ;
+	padding-bottom : 0 ;
+	padding : 5px;
+	border-bottom : solid 3px ;
+	border : solid 3px ;
+	border-color : black;
+	font-size : 250% ;
+	width:75%;} 
+
+h2 {	text-align : left;
+	font-size : 120% ;
+	font-weight: bold;} 
+
+h3 {	text-align : left;
+	margin : 0;
+	padding-top : 1ex ;
+	padding-left : 7mm; 
+	padding-right : 7mm; 
+	font-size : 100% ;
+	font-weight: bold;
+	font-style: italic;
+	background-color :#ffffe6; 
+	color:#000044;
+        font-family: sans-serif;
+        /*font-variant:small-caps;*/
+} 
+
+h4 {	margin : 0;
+	margin-top : 0.5em ;
+	padding : 0 ;
+	text-align : center; 
+	font-size : 100% ;
+	font-weight: normal;
+	font-style: italic;
+	color:#000044;
+        font-family: sans-serif;
+} 
+
+img {	border : 3px #000000;}
+
+.blog p img {
+	margin: 4px; 
+	float: left; 
+}
+
+hr {	padding : 0 ; 
+	display : inline ;
+	margin-left : 0; 
+	margin-right : 0; 
+	margin-top : 0; 
+	margin-bottom : 0; 
+	border : solid 0px ;
+	height : 3px;
+}
+
+/* "b" (body) class table.  For layout only. */
+
+table.b {
+	width:100%; 
+	border-width:0;
+	border-spacing:0;  }
+table.b td , table.b th , table.b {
+	margin : 0 ; 
+	padding : 0 ; }
+
+/* "p" class table.  For real table type stuff.  */
+
+table.p {
+	border-collapse : collapse;
+	border : solid black 1px;
+	margin-top : 1ex ; 
+	margin-bottom : 1ex ; 
+	margin-right : 0 ; 
+	padding : 0 ;
+	margin-left:7mm; }
+
+table.p td , table.p th {
+	margin : 0 ; 
+	padding: 5px;
+	border : solid black 1px; }
+table.p th {
+	align : center; }
+table.p td.null { background : #d8d8c5}
+
+/* "code" class table.  Put code inside a pre. */
+
+table.code {
+	border-collapse : collapse;
+	border : solid black 1px;
+	margin-top : 1ex ; 
+	margin-bottom : 1ex ; 
+	margin-left : 7mm ;     
+	margin-right : 0 ; 
+	padding : 0 ;
+}
+table.code td {
+	border : solid black 1px;
+	margin : 0 ; 
+	padding : 0 ; 
+}
+table.code th {
+	border : solid black 1px;
+	margin : 0 ; 
+	padding : 5px ; 
+	align : center; 
+}
+
+/* pre */
+
+pre{	padding: 5px;
+	border: none;
+	margin-left : 0mm ; 
+	margin-right : 0mm; 
+	margin-top : 0mm ; 
+	margin-bottom : 0mm; }
+
+/* lists */
+
+ul,ol {	margin-left : 17mm; 
+	margin-right : 7mm; 
+	padding-left: 0;}
+
+li ul,li ol {
+	margin-left : 7mm; 
+	margin-right : 0; }
+
+li {	text-align : left;
+	display: list-item;
+	margin-left : 0; 
+	margin-right : 0; }
+
+blockquote {
+	text-align : justify;
+	font-style: italic;
+	padding-left : 5mm;	
+	padding-right : 5mm;	
+	margin: 0; } 
+
+
+body {
+	background-image : url("/images/Anniversaries-Biophysical-1.jpg");
+	background-color : #312811;
+	color : #ffffff;
+} 
+.rightcol , .leftcol {
+}
+.centercol {
+}
+.bottom , .top {
+}
+h1 {
+	font-family: sans-serif;
+	font-variant:small-caps;
+	font-style:oblique;
+	font-weight:bold;
+	color:#000000;
+	background-color:#dde0f1;
+}
+div.section {
+	border:3px solid #000000;
+	margin-left:0px;
+	clear:both;
+	margin-bottom:10px;
+	margin-top:30px;
+	margin-right:10px;
+	margin-left:10px;
+	background-color :#ffffe6; 
+	color:#000000;
+}
+h2 {
+	font-family: sans-serif;
+	font-variant:small-caps;
+	font-style:oblique;
+	color:#000000;
+	background-color:#dde0f1;
+	border:3px solid #000000;
+	padding:5px;
+	margin:0;
+	margin-bottom : -20px;
+} 
+div.section h2 {
+	width:75%;
+	position:relative;
+	top:-20px;
+	left:-10px;
+}
+a:link {
+} 
+a:visited {
+} 
+a:active {
+} 
+a:hover {
+} 
+hr {
+	color : #000000; 
+	background : #000000; 
+	border-color : black;
+} 
+pre { 
+	color:#000000;
+	background-color : #efefd6;
+}
+
+table th {
+	color:#000000;
+	background-color:#dde0f1;
+}
+
+
+
+
+/* sub-sub-sections refer to h4's  */
+div.subsubsection {   
+	border-bottom :1px solid #000000;
+	margin: 0;
+	clear:both;
+	padding : 0;
+}
+/* sub-sections refer to h3's  */  
+div.subsection {   
+	border-bottom :3px solid #000000;
+	clear:both;
+	margin: 0;
+	padding : 0;
+}
+hr.subsectionsep {
+	display: none;
+}
+/* blogs live in h3's too! */
+div.blog {
+	border-bottom :3px solid #000000;
+	clear:both;
+}
+hr.blogsep {
+	display: none;
+}
+.blog-notes {
+	text-align : center; 
+	background-color :#ffffe6; 
+	color : #000044;
+}
+.blog-notes a {
+	background-color :#ffffe6; 
+	color : #000044;
+}
+h3.blogtitle {
+	/*font-family: palatino, georgia, times new roman, serif;*/
+	/*font-size: 1.17em; 	font-weight: bold; 	font-style: normal;  */
+}

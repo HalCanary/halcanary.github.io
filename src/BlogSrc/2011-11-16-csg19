@@ -1,0 +1,41 @@
+TITLE=Quick linear regression
+COPYRIGHT=Copyright 2011-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2011-11-16 12:00:00
+PERMALINK=http://halcanary.org/vv/2011/11/16/csg19/
+PERMALINKPART=vv/2011/11/16/csg19/
+YEAR=2011
+MONTH=11
+DAY=16
+POSTID=csg19
+MODE=htmldiv
+
+
+<p>Quick linear regression script</p>
+<pre>#!/usr/bin/env python
+#sudo yum &#0045;y install scipy
+# input is space&#0045;deleimited (x y) pairs.
+import scipy
+import numpy
+import sys
+
+inp = [map(float, l.split()[0:2]) for l in sys.stdin]
+x = numpy.array([t[0] for t in inp])
+y = numpy.array([t[1] for t in inp])
+fit = scipy.polyfit(x,y,1)
+print &#0039;y = (%f) x + (%f)&#0039; % tuple(fit)
+</pre>
+
+<p>power fit:</p>
+<pre>#!/usr/bin/env python
+#sudo yum &#0045;y install scipy
+# input is space&#0045;deleimited (x y) pairs.
+import scipy
+import numpy
+import sys
+import math
+inp = [map(math.log, map(float, l.split()[0:2]))
+	for l in sys.stdin]
+x = numpy.array([t[0] for t in inp])
+y = numpy.array([t[1] for t in inp])
+fit = scipy.polyfit(x,y,1)
+print &#0039;y = ({0[1]})e^({0[0]})&#0039;.format(tuple(fit))</pre>

@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Voder-Vocoder: using emacsclient</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" id="stylesheet" href="/styles/scrapple-from-the-apple.css">
+  </head>
+  <!-- Copyright 2010-2015 Hal Canary. ALL RIGHTS RESERVED. -->
+
+  <body style="padding:0;margin:0;">
+    <div class="column" style="max-width:640px;margin:0 auto;">
+
+      <h1 class="blogtitle">using emacsclient</h1>
+
+      <div class="byline">By Hal Canary,
+        2010-11-07 13:36:36
+        (<a href="http://halcanary.org/vv/2010/11/07/1062/">link</a>)
+    <br><a href="../../../../category/computers-code/" class="categorylink">#computers-code</a>
+        </div>
+      <!-- SRC= 2010-11-07-1062 -->
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <div class="content">
+
+<!-- BEGIN CONTENT -->
+<p>Attention Emacs users.  It took me a while to realize that new&#0045;style fonts can be enabled by adding this to the ~/.emacs file.</p>
+<pre>(set&#0045;face&#0045;attribute &#0039;default
+  nil :font &quot;Monospace&#0045;11&quot;)</pre>
+<p>So here&#0039;s how I set up the look of Emacs in my .emacs:</p>
+<pre>(require &#0039;color&#0045;theme)
+(color&#0045;theme&#0045;dark&#0045;laptop)
+(set&#0045;scroll&#0045;bar&#0045;mode &#0039;right)
+(tool&#0045;bar&#0045;mode nil)
+(menu&#0045;bar&#0045;mode nil)
+(set&#0045;face&#0045;attribute &#0039;default
+  nil :font &quot;Monospace&#0045;11&quot;)</pre>
+<p>And here&#0039;s my emacs startup script:</p>
+<pre>#!/bin/sh
+#DTPD#
+# ${HOME}/bin/e
+if test &quot;$DISPLAY&quot; ; then
+  nohup /usr/bin/emacsclient &#0092;
+    &#0045;a &#0039;&#0039; &#0045;n  &quot;$@&quot; &#0092;
+    &gt; /dev/null 2&gt;&amp;1 &amp;
+else
+  exec /usr/bin/emacs &quot;$@&quot;
+fi</pre>
+<p>This startes emacs in daemon mode if it&#0039;s not already running (there&#0039;s not a lot of harm in leaving a daemon going in the background all the time) and then the client tell the daemon to spawn a new window to open the files mentioned in the command&#0045;line arguments.  The &quot;nohup&quot; part deparents the server so you don&#0039;t get error messages hitting your console.</p>
+
+
+<!-- END CONTENT -->
+
+      </div>
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <p>(<a href="../../../../archives/">back</a>)</p>
+    </div>
+  </body>
+</html>

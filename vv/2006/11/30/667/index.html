@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Voder-Vocoder: telnet to port 80</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" id="stylesheet" href="/styles/scrapple-from-the-apple.css">
+  </head>
+  <!-- Copyright 2006-2015 Hal Canary. ALL RIGHTS RESERVED. -->
+
+  <body style="padding:0;margin:0;">
+    <div class="column" style="max-width:640px;margin:0 auto;">
+
+      <h1 class="blogtitle">telnet to port 80</h1>
+
+      <div class="byline">By Hal Canary,
+        2006-11-30 08:56:31
+        (<a href="http://halcanary.org/vv/2006/11/30/667/">link</a>)
+    <br><a href="../../../../category/computers-code/" class="categorylink">#computers-code</a>
+        </div>
+      <!-- SRC= 2006-11-30-667 -->
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <div class="content">
+
+<!-- BEGIN CONTENT -->
+<p>To check out http headers, you can use telnet, but I've found it easier to use <code>nc</code> (netcat):</p>
+<pre>H=&quot;en.wikipedia.org&quot;
+G=&quot;/&quot;
+echo -en &quot;GET $G HTTP/1.1&#0092;r&#0092;nHost: $H&#0092;r&#0092;n&#0092;r&#0092;n&quot; &#0092;
+    | nc $H 80
+</pre>
+<p>Here's a script:</p>
+<pre>#!/bin/sh
+#DTPD#
+if [ &quot;$#&quot; -ne 2 ] ;  then
+  echo -e &quot;useage:&#0092;n  $0 HOST RESOURCE&quot;
+  echo -e &quot;for example:&#0092;n  $0 www.google.com /&quot;
+  exit 1
+fi
+echo -en &quot;GET $2 HTTP/1.1&#0092;r&#0092;nHost: $1&#0092;r&#0092;n&#0092;r&#0092;n&quot;
+echo -en &quot;GET $2 HTTP/1.1&#0092;r&#0092;nHost: $1&#0092;r&#0092;n&#0092;r&#0092;n&quot; &#0092;
+  | nc $1 80</pre>
+
+
+<!-- END CONTENT -->
+
+      </div>
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <p>(<a href="../../../../archives/">back</a>)</p>
+    </div>
+  </body>
+</html>

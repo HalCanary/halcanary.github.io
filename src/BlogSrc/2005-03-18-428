@@ -1,0 +1,25 @@
+TITLE=Cheap Tech Manefesto
+COPYRIGHT=Copyright 2005-2013 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2005-03-18 13:15:05
+PERMALINK=http://halcanary.org/vv/2005/03/18/428/
+PERMALINKPART=vv/2005/03/18/428/
+YEAR=2005
+MONTH=03
+DAY=18
+POSTID=428
+CATEGORIES=computers-code;
+MODE=htmldiv
+
+<p>I've been thinking about cheap tech recently.  Why?  I'm a geek with little disposable income.</p>
+<p>What is <em>cheap tech</em>?  I define it as technology that does what you need, at minimal cost.  A lot of people drool over the newest, most expensive tech.  And a lot of people get excited about historically interesting tech (punch card readers and Apple ][s), but I like cheap tech.</p>
+<p>Cheap tech should</p>
+<ul>
+<li>be inexpensive or free.  If you can find old hardware on ebay, it will be cheap.  Software should be free (FOSS).</li>
+<li>satisfy some minimal set of usefulness.</li>
+<li>be replaceable.  If it breaks, buy another component.</li>
+<li>consist of upgradable, reusable components.</li>
+</ul>
+<p>For example, I am putting together a cheap travel laptop.  I have a P200 laptop my dad gave me a while ago.  That, combined with the latest linux distribution and some more modern pcmcia cards, will allow it to satisfy the useful category.  </p>
+<p>My criteria:  I need a laptop for traveling that can connect to the internet in three different ways: ethernet, modem, wireless.  Three pcmcia cards should do the trick.  It needs a CDROM for installing software.  It needs basic software (bash, ssh), a text editor and  typeseting system, a gui browser (firefox preferably, but dillo is acceptable).  Optional software include an office suite, instant messaging, mp3 player, video player, games, and an image editor.  Optional hardware include a large hdd and a mouse.</p>
+<p>Right now, I am bidding on ebay to get the last major component, a wireless card.  Next time I have some cash, I'll drop $50 on a newer laptop.</p>
+

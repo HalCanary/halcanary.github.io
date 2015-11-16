@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Voder-Vocoder: dynamic arrays</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" id="stylesheet" href="/styles/scrapple-from-the-apple.css">
+  </head>
+  <!-- Copyright 2010-2015 Hal Canary. ALL RIGHTS RESERVED. -->
+
+  <body style="padding:0;margin:0;">
+    <div class="column" style="max-width:640px;margin:0 auto;">
+
+      <h1 class="blogtitle">dynamic arrays</h1>
+
+      <div class="byline">By Hal Canary,
+        2010-03-17 09:00:38
+        (<a href="http://halcanary.org/vv/2010/03/17/953/">link</a>)
+    <br><a href="../../../../category/computer-science/" class="categorylink">#computer-science</a>;<a href="../../../../category/computers-code/" class="categorylink">#computers-code</a>
+        </div>
+      <!-- SRC= 2010-03-17-953 -->
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <div class="content">
+
+<!-- BEGIN CONTENT -->
+<p>About ten years ago, I wrote a C++ program to print out all the prime numbers less than a given number using trial division.  I recently went back and looked at the program and realized how little I knew at the time.  Even though my first CS class covered object-oriented programming in C++, we never really talked the about simply using the <code>new</code> keyword on arrays to make use of dynamic arrays.  The topic was covered in my second CS class, which I took three years later.</p>
+<pre>
+int *array;
+int array_size = 128;
+array = new int[array_size];
+
+/* do somthing to fill the array */
+
+int *temparray = new int[(array_size * 2)];
+for (int i = 0; i &lt; array_size; i++)
+    temparray[i] = array[i];
+array_size = array_size * 2;
+delete [] array;
+array = temparray;
+</pre>
+<p>In the last few years, I have realized that for the simplest progrmas, C is often more efficient and straightforward than C++.  In C, the code looks exactly the same, except that <code>new</code> is replaced by <code>malloc()</code> and <code>delete</code> is replaced by <code>free()</code>.</p>
+<pre>
+int *array;
+int *temparray;
+int array_size = 128;
+int i;
+array = malloc(array_size * sizeof(*array));
+
+/* do somthing to fill the array */
+
+temparray = malloc(array_size * 2 * sizeof(*temparray));
+for (i = 0; i &lt; array_size; i++)
+    temparray[i] = array[i];
+array_size = (array_size * 2);
+free(array);
+array = temparray;
+</pre>
+
+
+<!-- END CONTENT -->
+
+      </div>
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <p>(<a href="../../../../archives/">back</a>)</p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Voder-Vocoder: Random password generator</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" id="stylesheet" href="/styles/scrapple-from-the-apple.css">
+  </head>
+  <!-- Copyright 2008-2015 Hal Canary. ALL RIGHTS RESERVED. -->
+
+  <body style="padding:0;margin:0;">
+    <div class="column" style="max-width:640px;margin:0 auto;">
+
+      <h1 class="blogtitle">Random password generator</h1>
+
+      <div class="byline">By Hal Canary,
+        2008-02-03 23:56:27
+        (<a href="http://halcanary.org/vv/2008/02/03/718/">link</a>)
+    <br><a href="../../../../category/computers-code/" class="categorylink">#computers-code</a>
+        </div>
+      <!-- SRC= 2008-02-03-718 -->
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <div class="content">
+
+<!-- BEGIN CONTENT -->
+<p><img src="http://halcanary.org/images/randomness-app.png" alt="" /></p>
+<pre>#!/usr/bin/env python
+
+# Randoms - Copyright 2008 Hal Canary
+#
+# Permission is hereby granted, free of charge, to any person
+# obtaining a copy of this software and associated documentation
+# files (the 'Software'), to deal in the Software without
+# restriction, including without limitation the rights to use,
+# copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the
+# Software is furnished to do so, subject to the following
+# conditions:
+#
+# The above copyright notice and this permission notice shall be
+# included in all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
+# EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+# OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+# NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+# HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+# WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+# FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+# OTHER DEALINGS IN THE SOFTWARE.
+
+import Tkinter
+import os
+import base64
+
+def genrandint():
+    'Generates a random integer between 0 and (2^32)-1'
+    x = 0
+    for i in range(4):
+        x = (x &lt;&lt; 8)+ord(os.urandom(1))
+    return x
+
+def randstring():
+    'generate a 142-bit password consisting of A-Za-z0-9'
+    return base64.b64encode(os.urandom(18),'Zz')
+
+def genrand128int():
+    'Generates a random integer between 0 and (2^128)-1'
+    x = 0
+    for i in range(16):
+        x = (x &lt;&lt; 8)+ord(os.urandom(1))
+    return x
+
+def generaterandletts():
+    'generate a 131-bit password consisting of a-z'
+    s = ''
+    for i in range(28):
+        x = ''
+        while x == '' :
+            y = ord(os.urandom(1)) # 0-255
+            if y &lt; (256//26*26):
+                x = chr((y % 26) + 97)
+        s = s + x
+        if i%4 == 3:
+            s = s + ' '
+    return s
+
+class Application(Tkinter.Frame):
+    'a window that displays text'
+    def __init__(self, master=None):
+        Tkinter.Frame.__init__(self, master)
+        self.grid()
+        self.createWidgets()
+        self.winfo_toplevel().resizable(width=False, height=False)
+
+    def createWidgets(self):
+        self.textBox = Tkinter.Text(self,height=4,padx=5, pady=5)
+        self.textBox.grid()
+        self.textBox.configure(state='disabled')
+        self.quitButton = Tkinter.Button(self, text="Quit", command=self.quit)
+        self.quitButton.grid()        
+
+    def addText(self, pos, string):
+        self.textBox.configure(state='normal')
+        self.textBox.insert (pos, string)
+        self.textBox.configure(state='disabled')        
+
+app = Application()
+app.master.title('Randomness')
+app.addText('1.0', 'Integer: %d&#92;n' % genrandint())
+app.addText('2.0', 'Integer: %d&#92;n' % genrand128int())
+app.addText('3.0', 'String: %s&#92;n' % randstring())
+app.addText('4.0', 'String: %s' % generaterandletts())
+app.mainloop()</pre>
+<p><a href="http://halcanary.org/pub/Randoms.zip">Compiled version for windows</a></p>
+
+
+<!-- END CONTENT -->
+
+      </div>
+      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+
+      <p>(<a href="../../../../archives/">back</a>)</p>
+    </div>
+  </body>
+</html>

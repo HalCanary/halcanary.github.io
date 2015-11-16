@@ -1,0 +1,34 @@
+<pre>
+# Here is the radius equation.
+w := (x,y,z) -> simplify((x*y*z)/( (x*y) + (y*z) + (x*z) + 2 * ((x*y*z*(x+y+z))^(1/2)) ));
+
+# Clusterfy w into a 3-cluster.  
+f := (x,y,z) -> (w(x,y,z),y,z);
+g := (x,y,z) -> (x,w(x,y,z),z);
+h := (x,y,z) -> (x,y,w(x,y,z));
+
+
+f(1,1,1);
+g(f(1,1,1));
+f(g(f(1,1,1)));
+h(g(f(1,1,1)));
+f(f(h(g(f(1,1,1)))));
+ 
+# Here is the Curvature equation.
+solve(2*(a^2 + b^2 + c^2 + d^2) = (a+b+c+d)^2,d);
+ 
+w := (a,b,c) -> simplify(a+b+c + 2*(a*b+a*c+b*c)^(1/2));
+ 
+f(1,1,1);
+g(f(1,1,1));
+f(g(f(1,1,1)));
+h(g(f(1,1,1)));
+f(f(h(g(f(1,1,1)))));
+ 
+#What if one of the lines is staright (r==infty or curvature==0)???
+f(0,1,1);
+f(f(0,1,1));
+h(g(f(0,1,1)));
+</pre>
+
+
