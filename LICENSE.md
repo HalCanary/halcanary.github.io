@@ -1,2 +1,2 @@
-Copyright 2015 Hal Canary
+Copyright 2015-2017 Hal Canary
 ALL RIGHTS RESERVED.

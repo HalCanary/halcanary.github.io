@@ -1,0 +1,13 @@
+TITLE=EMRATIO(25-54)
+COPYRIGHT=Copyright 2017 Hal Canary. ALL RIGHTS RESERVED.
+DATE=2017-01-09 10:23:00 -0500(EST)
+POSTID=3006
+MODE=markdown
+CATEGORIES=economics;politics;
+SUMMARY=I use the current Civilian Employment-Population Ratio in the US as a measure of how productive our economy is.
+
+Some progress, but not enough.
+
+<a href="https://fred.stlouisfed.org/graph/?g=cjIW"><img
+src="https://fred.stlouisfed.org/graph/fredgraph.png?g=cjIW"
+alt="[graph]" class="maxy"></a>

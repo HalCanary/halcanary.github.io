@@ -6,7 +6,7 @@
     <meta name=viewport content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" id="stylesheet" href="/styles/scrapple-from-the-apple.css">
   </head>
-  <!-- Copyright 1997-2015 Hal Canary. ALL RIGHTS RESERVED. -->
+  <!-- Copyright 1997-2017 Hal Canary. ALL RIGHTS RESERVED. -->
 
   <body style="padding:0;margin:0;">
     <div class="column" style="max-width:640px;margin:0 auto;">
@@ -35,6 +35,29 @@
         </form>
       </div>
       <div style="margin-bottom:12px;">
+
+      <div style=";border-bottom: 6px solid #ddd; border-top: 6px solid #ddd; margin:0 -8px -6px; -8px; padding: 0 8px 0 8px">
+      <h2 class="blogtitle">EMRATIO(25-54)</h2>
+
+      <p class="byline">I use the current Civilian Employment-Population Ratio in the US as a measure of how productive our economy is.</p>
+
+      <div class="byline">By Hal Canary,
+        2017-01-09 10:23:00 -0500(EST)
+        (<a href="2017/01/09/3006/">link</a>)
+    <br><a href="../../../../category/economics/" class="categorylink">#economics</a>;<a href="../../../../category/politics/" class="categorylink">#politics</a>
+        </div>
+      <!-- SRC= 2017-01-09-3006 -->
+      <div class="content">
+<p>Some progress, but not enough.</p>
+
+<p><a href="https://fred.stlouisfed.org/graph/?g=cjIW"><img
+src="https://fred.stlouisfed.org/graph/fredgraph.png?g=cjIW"
+alt="[graph]" class="maxy"></a></p>
+
+      </div>
+      </div>
+
+      <!-- ************************************************************** -->
 
       <div style=";border-bottom: 6px solid #ddd; border-top: 6px solid #ddd; margin:0 -8px -6px; -8px; padding: 0 8px 0 8px">
       <h2 class="blogtitle">It's a girl!</h2>
@@ -218,6 +241,205 @@ fingerprint: B4E9 52DA 192C 4632 D772  0200 0670 403E 4499 ECF1</li>
 <ul>
 <li>skype: hal.canary</li>
 </ul>
+
+      </div>
+      </div>
+
+      <!-- ************************************************************** -->
+
+      <div style=";border-bottom: 6px solid #ddd; border-top: 6px solid #ddd; margin:0 -8px -6px; -8px; padding: 0 8px 0 8px">
+      <h2 class="blogtitle">EMRATIO</h2>
+
+      <p class="byline">I use the current Civilian Employment-Population Ratio in the US as a measure of how productive our economy is.</p>
+
+      <div class="byline">By Hal Canary,
+        2013-08-16 10:26:59
+        (<a href="2013/08/16/1331/">link</a>)
+    <br><a href="../../../../category/economics/" class="categorylink">#economics</a>;<a href="../../../../category/politics/" class="categorylink">#politics</a>;<a href="../../../../category/uncategorized/" class="categorylink">#uncategorized</a>
+        </div>
+      <!-- SRC= 2013-08-16-1331 -->
+      <div class="content">
+<p>Obviously, current fiscal and monitary policy isn't working:</p>
+<p><a href="http://goo.gl/p3G5nb"><img src="http://research.stlouisfed.org/fredgraph.png?g=lw7" alt="[]" class="maxy"></a></p>
+<p>I propose:  a larger deficit and a higher inflation target.</p>
+
+
+      </div>
+      </div>
+
+      <!-- ************************************************************** -->
+
+      <div style=";border-bottom: 6px solid #ddd; border-top: 6px solid #ddd; margin:0 -8px -6px; -8px; padding: 0 8px 0 8px">
+      <h2 class="blogtitle">Color in shell scripts (not prompts)</h2>
+
+      <p class="byline">Some shell-script macros for adding color to the output of your programs.</p>
+
+      <div class="byline">By Hal Canary,
+        2013-06-20 18:53:31
+        (<a href="2013/06/20/681/">link</a>)
+    <br><a href="../../../../category/computers-code/" class="categorylink">#computers-code</a>;<a href="../../../../category/shell-scripts/" class="categorylink">#shell-scripts</a>
+        </div>
+      <!-- SRC= 2013-06-20-681 -->
+      <div class="content">
+<p>&nbsp;</p>
+
+<pre><code>#!/bin/sh
+
+# ANSI Color -- use these variables to easily have
+# different color and format output. Make sure to
+# output the reset sequence after colors (f =
+# foreground, b = background), and use the 'off'
+# feature for anything you turn on.
+#
+# This function is: Copyright 2004 Dave Taylor
+# from book _Wicked_Cool_Shell_Scripts_,
+# ISBN 1593270127.
+# http://www.intuitive.com/wicked/showscript.cgi?011-colors.sh
+initializeANSI() {
+    esc=$(printf '\033')
+
+    blackf="${esc}[30m"; redf="${esc}[31m";
+    yellowf="${esc}[33m" bluef="${esc}[34m";
+    cyanf="${esc}[36m"; whitef="${esc}[37m";
+    greenf="${esc}[32m"; purplef="${esc}[35m";
+
+    blackb="${esc}[40m"; redb="${esc}[41m";
+    yellowb="${esc}[43m" blueb="${esc}[44m";
+    cyanb="${esc}[46m"; whiteb="${esc}[47m";
+    greenb="${esc}[42m"; purpleb="${esc}[45m";
+
+    boldon="${esc}[1m"; boldoff="${esc}[22m";
+    italicson="${esc}[3m"; italicsoff="${esc}[23m";
+    ulon="${esc}[4m"; uloff="${esc}[24m";
+    invon="${esc}[7m"; invoff="${esc}[27m";
+
+    reset="${esc}[0m";
+}
+##
+## The rest of the program is:
+## Copyright 2007 Hal Canary
+## Dedicated to the public domain.
+##
+initializeANSI
+COLORS="red green yellow blue purple cyan white black"
+for B in $COLORS; do
+    for F in $COLORS; do
+        eval FC=\${${F}f}
+        eval BC=\${${B}b}
+        echo -en "${FC}${BC}${F}f ${B}b${reset} \t"
+        echo -en "${boldon}${FC}${BC}${F}f ${B}b bold${reset} \t"
+        echo -e "${FC}${BC}${italicson}${F}f ${B}b italics${reset}"
+        echo -en "${ulon}${FC}${BC}${F}f ${B}b ul${reset} \t"
+        echo -en "${boldon}${ulon}${FC}${BC}${F}f ${B}b bol ul${reset}\t"
+        echo -en "${boldon}${ulon}${italicson}${FC}${BC}"
+        echo -e "${F}f ${B}b bold ul italics${reset}"
+    done
+    echo ""
+done
+exit 0
+</code></pre>
+
+      </div>
+      </div>
+
+      <!-- ************************************************************** -->
+
+      <div style=";border-bottom: 6px solid #ddd; border-top: 6px solid #ddd; margin:0 -8px -6px; -8px; padding: 0 8px 0 8px">
+      <h2 class="blogtitle">or just use xdg-open</h2>
+
+      <div class="byline">By Hal Canary,
+        2013-06-13 12:00:00
+        (<a href="2013/06/13/csg36/">link</a>)
+        </div>
+      <!-- SRC= 2013-06-13-csg36 -->
+      <div class="content">
+
+
+<p>How to ask the desktop to open a file from a shell script?  Define this function:</p>
+
+<pre><span class="function">getopencmd()</span><span class="normal"> {</span>
+<span class="normal">    </span><span class="keyword">case</span><span class="normal"> </span><span class="string">"$(uname -s)"</span><span class="normal"> </span><span class="keyword">in</span>
+<span class="normal">        </span><span class="symbol">*</span><span class="normal">WIN</span><span class="symbol">*|*</span><span class="normal">W32</span><span class="symbol">*)</span><span class="normal"> </span><span class="keyword">command</span><span class="normal"> -v </span><span class="string">"start"</span><span class="symbol">;;</span>
+<span class="normal">        Darwin</span><span class="symbol">)</span><span class="normal"> </span><span class="keyword">command</span><span class="normal"> -v </span><span class="string">"open"</span><span class="symbol">;;</span>
+<span class="normal">        </span><span class="symbol">*)</span><span class="normal">  </span><span class="keyword">command</span><span class="normal"> -v </span><span class="string">"xdg-open"</span><span class="normal"> </span><span class="symbol">||</span><span class="normal"> </span><span class="symbol">\</span>
+<span class="normal">            </span><span class="keyword">command</span><span class="normal"> -v </span><span class="string">"gvfs-open"</span><span class="normal"> </span><span class="symbol">||</span><span class="normal"> </span><span class="symbol">\</span>
+<span class="normal">            </span><span class="keyword">command</span><span class="normal"> -v </span><span class="string">"kde-open"</span><span class="normal"> </span><span class="symbol">||</span><span class="normal"> </span><span class="symbol">\</span>
+<span class="normal">            </span><span class="keyword">command</span><span class="normal"> -v </span><span class="string">"exo-open"</span><span class="normal"> </span><span class="symbol">;</span><span class="normal"> </span><span class="keyword">esac</span><span class="symbol">;</span><span class="normal"> }</span></pre>
+
+      </div>
+      </div>
+
+      <!-- ************************************************************** -->
+
+      <div style=";border-bottom: 6px solid #ddd; border-top: 6px solid #ddd; margin:0 -8px -6px; -8px; padding: 0 8px 0 8px">
+      <h2 class="blogtitle">spiral</h2>
+
+      <p class="byline">Your challenge: make a pretty postscript picture as one tweet</p>
+
+      <div class="byline">By Hal Canary,
+        2013-06-11 14:00:34
+        (<a href="2013/06/11/1322/">link</a>)
+    <br><a href="../../../../category/computers-code/" class="categorylink">#computers-code</a>
+        </div>
+      <!-- SRC= 2013-06-11-1322 -->
+      <div class="content">
+<p>Your challenge: make a pretty postscript picture as one tweet.  "%!\n"  is not necessary
+(<a href="https://twitter.com/halcanary/status/344530170532741120">tweet</a>)</p>
+
+<pre><code>%!
+300 300 translate newpath 3 0 2 copy moveto 604 { 5 add
+exch 1.01 mul exch 2 copy cos mul 3 copy pop sin mul
+lineto } repeat stroke showpage
+</code></pre>
+
+<p><img src="/images/postscriptChallenge_spiral.png" alt="" title="" /></p>
+
+<hr />
+
+<p><a href="https://twitter.com/gmfawcett/status/344891033202614272">gmfawcett:</a></p>
+
+<pre><code>%!
+/n 90 def 150 150 translate newpath n n moveto 36 { 170
+rotate n n lineto} repeat stroke showpage
+</code></pre>
+
+<p><img src="/images/postscriptChallenge_spirograph.png" alt="" title="" /></p>
+
+<hr />
+
+<p><a href="https://twitter.com/seanjensengrey/status/344825151264808961">seanjensengrey:</a></p>
+
+<pre><code>%!
+/box { newpath moveto 72 0 rlineto 0 72 rlineto -72 0
+rlineto closepath stroke } def 99 99 translate 0 1 5{60
+rotate -20 0 box}for showpage
+</code></pre>
+
+<p><img src="/images/postscriptChallenge_sixBoxes.png" alt="" title="" /></p>
+
+<hr />
+
+<p><a href="https://twitter.com/gmfawcett/status/344986403962253312">gmfawcett:</a></p>
+
+<pre><code>%!
+/Courier findfont 50 scalefont setfont 150 250 moveto
+(#postscriptchallenge) { 1 string dup 0 4 3 roll put
+show -18 rotate} forall
+showpage
+</code></pre>
+
+<p><img src="/images/postscriptChallenge_words.png" alt="" title="" /></p>
+
+<hr />
+
+<p>Note: to display these,m I used this command:</p>
+
+<pre><code>gs -sDEVICE=png16m -g500x500 -sOutputFile=out.png &lt;&lt;EOF
+300 300 translate newpath 3 0 2 copy moveto 604 { 5 add
+exch 1.01 mul exch 2 copy cos mul 3 copy pop sin mul
+lineto } repeat stroke showpage
+EOF
+</code></pre>
 
       </div>
       </div>
