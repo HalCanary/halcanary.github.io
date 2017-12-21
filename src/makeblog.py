@@ -22,18 +22,30 @@ footer = """
 </html>
 """
 
-archive_header = """<!doctype html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Voder-Vocoder Archive</title>
-    <meta name=viewport content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" id="stylesheet" href="/styles/scrapple-from-the-apple.css">
-  </head>
+archive_header = """<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Voder-Vocoder Archive</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {{
+font-family:sans-serif;
+}}
+.column {{
+max-width:35em;
+margin:0 auto;
+}}
+img {{
+max-width:100%;
+height:auto;
+}}
+</style>
+</head>
   <!-- Copyright 1997-{current_year} Hal Canary. ALL RIGHTS RESERVED. -->
 
-  <body style="padding:0;margin:0;">
-    <div class="column" style="max-width:640px;margin:0 auto;">
+  <body>
+    <div class="column">
 
       <h1><a href="/vv/" class="hiddenlink">Voder-Vocoder</a> Archive{name}</h1>
 
@@ -54,17 +66,29 @@ archive_footer = """
 """
 
 top_posts_header = """<!doctype html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Voder-Vocoder</title>
-    <meta name=viewport content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" id="stylesheet" href="/styles/scrapple-from-the-apple.css">
-  </head>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Voder-Vocoder</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {{
+font-family:sans-serif;
+}}
+.column {{
+max-width:35em;
+margin:0 auto;
+}}
+img {{
+max-width:100%;
+height:auto;
+}}
+</style>
+</head>
   <!-- Copyright 1997-{current_year} Hal Canary. ALL RIGHTS RESERVED. -->
 
-  <body style="padding:0;margin:0;">
-    <div class="column" style="max-width:640px;margin:0 auto;">
+  <body>
+    <div class="column">
 
       <h1>Voder-Vocoder</h1>
       <div class="byline centered">The Log of Hal Canary</div>
@@ -146,17 +170,30 @@ class UpdatingFile(object):
 
 
 post_header = """<!doctype html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Voder-Vocoder: {title}</title>
-    <meta name=viewport content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" id="stylesheet" href="/styles/scrapple-from-the-apple.css">
-  </head>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Voder-Vocoder: {title}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {{
+font-family:sans-serif;
+}}
+.column {{
+max-width:35em;
+margin:0 auto;
+}}
+img {{
+max-width:100%;
+height:auto;
+}}
+</style>
+</head>
+
   <!-- Copyright {year}-{current_year} Hal Canary. ALL RIGHTS RESERVED. -->
 
-  <body style="padding:0;margin:0;">
-    <div class="column" style="max-width:640px;margin:0 auto;">
+  <body>
+    <div class="column">
 
       <h1 class="blogtitle">{title}</h1>
 {summarypart}
