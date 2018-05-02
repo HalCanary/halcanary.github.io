@@ -3,7 +3,7 @@
 import sys, os, math, subprocess, re, datetime, tempfile, hashlib, shutil
 
 base_dir = 'vv'
-url_base = 'http://halcanary.org'
+url_base = 'https://halcanary.org'
 
 relurlfixer = re.compile('^{}/(.*)$'.format(base_dir))
 

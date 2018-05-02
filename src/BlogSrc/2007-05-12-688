@@ -1,7 +1,7 @@
 TITLE=TAOCP/1
 COPYRIGHT=Copyright 2007-2013 Hal Canary. ALL RIGHTS RESERVED.
 DATE=2007-05-12 12:19:20
-PERMALINK=http://halcanary.org/vv/2007/05/12/688/
+PERMALINK=https://halcanary.org/vv/2007/05/12/688/
 PERMALINKPART=vv/2007/05/12/688/
 YEAR=2007
 MONTH=05
@@ -31,7 +31,7 @@ MODE=htmldiv
 *	mixvm --run factorial.mix
 *
 * This program is dedicated to the public domain.
-*      ---Hal Canary, http://halcanary.org/
+*      ---Hal Canary, https://halcanary.org/
 *
 n	EQU	11	* Argument
 pp	EQU	1000	* pointer to a memory address.
@@ -74,7 +74,7 @@ error0	ALF	OVERF
 *	mmix factorial.mmo
 *
 * This program is dedicated to the public domain.
-*	---Hal Canary, http://halcanary.org/
+*	---Hal Canary, https://halcanary.org/
 
 NUMBER	IS	12
 

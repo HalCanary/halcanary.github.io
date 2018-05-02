@@ -1,7 +1,7 @@
 TITLE=manipulating filenames
 COPYRIGHT=Copyright 2004-2013 Hal Canary. ALL RIGHTS RESERVED.
 DATE=2004-03-04 12:27:41
-PERMALINK=http://halcanary.org/vv/2004/03/04/182/
+PERMALINK=https://halcanary.org/vv/2004/03/04/182/
 PERMALINKPART=vv/2004/03/04/182/
 YEAR=2004
 MONTH=03
@@ -10,7 +10,7 @@ POSTID=182
 CATEGORIES=computers-code;
 MODE=htmldiv
 
-<p>gphoto2 grabs images off of my camera and saves it as IMG_XXXX.JPG.  I use the <a href="http://halcanary.org/archives/000073.html">despacify script</a> to convert to lowercase img_XXXX.jpg.  Then I run this script to rename th file to include the date the photo was taken: 2003-11-06-img-XXXX.jpg. Then if the filesystem modification date is changed (e.g. if I rotate it.) I will still know when it originated.</p>
+<p>gphoto2 grabs images off of my camera and saves it as IMG_XXXX.JPG.  I use the <a href="https://halcanary.org/archives/000073.html">despacify script</a> to convert to lowercase img_XXXX.jpg.  Then I run this script to rename th file to include the date the photo was taken: 2003-11-06-img-XXXX.jpg. Then if the filesystem modification date is changed (e.g. if I rotate it.) I will still know when it originated.</p>
 <pre>
 #!/bin/sh
 ## $HOME/bin/rename-files ##

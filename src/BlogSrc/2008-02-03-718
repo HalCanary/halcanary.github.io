@@ -1,7 +1,7 @@
 TITLE=Random password generator
 COPYRIGHT=Copyright 2008-2013 Hal Canary. ALL RIGHTS RESERVED.
 DATE=2008-02-03 23:56:27
-PERMALINK=http://halcanary.org/vv/2008/02/03/718/
+PERMALINK=https://halcanary.org/vv/2008/02/03/718/
 PERMALINKPART=vv/2008/02/03/718/
 YEAR=2008
 MONTH=02
@@ -10,7 +10,7 @@ POSTID=718
 CATEGORIES=computers-code;
 MODE=htmldiv
 
-<p><img src="http://halcanary.org/images/randomness-app.png" alt="" /></p>
+<p><img src="https://halcanary.org/images/randomness-app.png" alt="" /></p>
 <pre>#!/usr/bin/env python
 
 # Randoms - Copyright 2008 Hal Canary
@@ -99,5 +99,5 @@ app.addText('2.0', 'Integer: %d&#92;n' % genrand128int())
 app.addText('3.0', 'String: %s&#92;n' % randstring())
 app.addText('4.0', 'String: %s' % generaterandletts())
 app.mainloop()</pre>
-<p><a href="http://halcanary.org/pub/Randoms.zip">Compiled version for windows</a></p>
+<p><a href="https://halcanary.org/pub/Randoms.zip">Compiled version for windows</a></p>
 

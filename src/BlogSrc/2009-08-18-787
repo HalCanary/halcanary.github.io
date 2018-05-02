@@ -1,7 +1,7 @@
 TITLE=timer.c
 COPYRIGHT=Copyright 2009-2013 Hal Canary. ALL RIGHTS RESERVED.
 DATE=2009-08-18 20:33:59
-PERMALINK=http://halcanary.org/vv/2009/08/18/787/
+PERMALINK=https://halcanary.org/vv/2009/08/18/787/
 PERMALINKPART=vv/2009/08/18/787/
 YEAR=2009
 MONTH=08
@@ -10,7 +10,7 @@ POSTID=787
 CATEGORIES=computers-code;
 MODE=htmldiv
 
-<pre>/* Copyright 2009 Hal Canary, http://halcanary.org/
+<pre>/* Copyright 2009 Hal Canary, https://halcanary.org/
    Dedicated to the Public Domain.
 
    cc -o timer timer.c

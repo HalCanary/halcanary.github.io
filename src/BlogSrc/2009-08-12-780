@@ -1,7 +1,7 @@
 TITLE=guitar chord charts
 COPYRIGHT=Copyright 2009-2013 Hal Canary. ALL RIGHTS RESERVED.
 DATE=2009-08-12 18:59:01
-PERMALINK=http://halcanary.org/vv/2009/08/12/780/
+PERMALINK=https://halcanary.org/vv/2009/08/12/780/
 PERMALINKPART=vv/2009/08/12/780/
 YEAR=2009
 MONTH=08
@@ -10,7 +10,7 @@ POSTID=780
 CATEGORIES=music;
 MODE=htmldiv
 
-<p>I'm fooling around with a guitar and wanted to take notes on a blank page of guitar chord charts, so I post-scripted this one: <a href="http://halcanary.org/pub/tablature.pdf">pdf file</a>.</p>
+<p>I'm fooling around with a guitar and wanted to take notes on a blank page of guitar chord charts, so I post-scripted this one: <a href="https://halcanary.org/pub/tablature.pdf">pdf file</a>.</p>
 <pre>%!
 %% Written 2009 Hal Canary
 %% Dedicated to the Public Domain

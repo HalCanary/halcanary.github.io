@@ -1,7 +1,7 @@
 TITLE=Linux Firewall Notes
 COPYRIGHT=Copyright 2004-2013 Hal Canary. ALL RIGHTS RESERVED.
 DATE=2004-07-07 19:16:43
-PERMALINK=http://halcanary.org/vv/2004/07/07/259/
+PERMALINK=https://halcanary.org/vv/2004/07/07/259/
 PERMALINKPART=vv/2004/07/07/259/
 YEAR=2004
 MONTH=07
@@ -11,5 +11,5 @@ CATEGORIES=computers-code;
 MODE=htmldiv
 
 <p>My<br />
-<a href="http://halcanary.org/p/firewall">Linux Firewall Notes</a></p>
+<a href="https://halcanary.org/p/firewall">Linux Firewall Notes</a></p>
 

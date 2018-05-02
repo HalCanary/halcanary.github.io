@@ -1,7 +1,7 @@
 TITLE=usb hub
 COPYRIGHT=Copyright 2005-2013 Hal Canary. ALL RIGHTS RESERVED.
 DATE=2005-09-21 12:50:53
-PERMALINK=http://halcanary.org/vv/2005/09/21/514/
+PERMALINK=https://halcanary.org/vv/2005/09/21/514/
 PERMALINKPART=vv/2005/09/21/514/
 YEAR=2005
 MONTH=09
@@ -14,7 +14,7 @@ MODE=htmldiv
 <p>I've been trying to limit my spending on computer hardware of late.  I have mostly been successful.  But that didn't stop me from spending $30 on a whim last night.</p>
 <p>I had been using my flash drive a lot recently, and was getting sick of reaching around my case to blindly fumble wityh the USB port. The same goes for every other USB perifrial, such as the external HDD or the camera.</p>
 <p>I either needed to get a case with front ports or a hub.  I bought a Belkin <a href="http://tinyurl.com/coug4">F5U233-APL</a> USB2 4-Port Hub.</p>
-<p><img src="http://halcanary.org/images/2005-09-21-belkin-hub.jpg" alt="[hub pic]" />  </p>
+<p><img src="https://halcanary.org/images/2005-09-21-belkin-hub.jpg" alt="[hub pic]" />  </p>
 <p>It was, I think, orignally designed to act as a dock for an ipod shuffle:  it has a port on the top of the device.  This port works well for any bulky USB device.</p>
 <p>Did I mention that I love the <em>concept</em> of USB? There is a limit on how many USB devices one computer can handle.  127 devices. Maybe you don't remember the bad old days, when computers had one paralell port and one serial port.  If you tried to add more devices, you ran into IRQ issues and had to start playing with jumpers. My family had two computers, networked using a paralell-port nullmodem.  But we also had two printers which used the paralell ports as well.  The system worked, but there were kludges involved.</p>
 

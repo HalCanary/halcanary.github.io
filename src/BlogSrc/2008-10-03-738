@@ -1,7 +1,7 @@
 TITLE=(defun remove-excess-whitespace...
 COPYRIGHT=Copyright 2008-2013 Hal Canary. ALL RIGHTS RESERVED.
 DATE=2008-10-03 21:02:56
-PERMALINK=http://halcanary.org/vv/2008/10/03/738/
+PERMALINK=https://halcanary.org/vv/2008/10/03/738/
 PERMALINKPART=vv/2008/10/03/738/
 YEAR=2008
 MONTH=10
@@ -10,7 +10,7 @@ POSTID=738
 CATEGORIES=computers-code;
 MODE=htmldiv
 
-<p>I always meant to go ahead and fix this function so it did what I want.  Now it uses proper regex.  See <a href="http://halcanary.org/vv/2004/02/18/176/">the old version, too</a>.</p>
+<p>I always meant to go ahead and fix this function so it did what I want.  Now it uses proper regex.  See <a href="https://halcanary.org/vv/2004/02/18/176/">the old version, too</a>.</p>
 <pre>;; ~/.emacs ;;
 (defun remove-excess-whitespace () (interactive)
   (auto-mega-replace  &quot;&#0092;&#0092;( &#0092;&#0092;|&#0092;t&#0092;&#0092;)$&quot; &quot;&quot;))

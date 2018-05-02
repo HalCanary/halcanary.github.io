@@ -1,7 +1,7 @@
 TITLE=gravatar
 COPYRIGHT=Copyright 2010-2013 Hal Canary. ALL RIGHTS RESERVED.
 DATE=2010-07-17 09:25:23
-PERMALINK=http://halcanary.org/vv/2010/07/17/1006/
+PERMALINK=https://halcanary.org/vv/2010/07/17/1006/
 PERMALINKPART=vv/2010/07/17/1006/
 YEAR=2010
 MONTH=07
@@ -16,7 +16,7 @@ MODE=htmldiv
 &lt;?php
 $gravlink = &quot;http://www.gravatar.com/avatar/&quot;;
 $gravlink .= md5(strtolower(trim(get_comment_author_email())));
-$gravlink .= &quot;?d=&quot;.urlencode(&quot;http://halcanary.org/images/q80.png&quot;);
+$gravlink .= &quot;?d=&quot;.urlencode(&quot;https://halcanary.org/images/q80.png&quot;);
 echo $gravlink; ?&gt;
 </pre>
 
