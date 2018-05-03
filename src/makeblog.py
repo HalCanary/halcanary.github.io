@@ -104,7 +104,7 @@ height:auto;
         <div style="text-align:right"><a href="" onclick="return search_hco();">search</a></div>
       </div>
       <div id="search-halcanary-org" style="display:none;">
-        <form method="get" action="http://www.google.com/search">
+        <form method="get" action="https://www.google.com/search">
           <div style="text-align:right">
             <input name="domains" value="halcanary.org" type="hidden" />
             <input name="sitesearch" value="halcanary.org" type="hidden" />
