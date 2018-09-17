@@ -10,6 +10,6 @@ POSTID=139
 CATEGORIES=meta;
 MODE=htmldiv
 
-<p>I went through and made a bunch of changes to wohc this weekend.  First, I finally switched over to movable type.  Then I marked all code on the site with a suitable license.  Then I added a <a href="/?p=faq">FAQ</a> and <a href="/?p=sitemap">site map</a>.</p>
+<p>I went through and made a bunch of changes to wohc this weekend.  First, I finally switched over to movable type.  Then I marked all code on the site with a suitable license.  Then I added a <a href="/p/faq/">FAQ</a> and <a href="/p/sitemap/">site map</a>.</p>
 <p><strong>Wonderfully</strong> wasted time.</p>
 

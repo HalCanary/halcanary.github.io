@@ -10,5 +10,5 @@ POSTID=143
 CATEGORIES=meta;
 MODE=htmldiv
 
-<p><a href="/?p=mt-templates">Here are the templates used by this site.</a></p>
+<p><a href="/p/mt-templates/">Here are the templates used by this site.</a></p>
 
