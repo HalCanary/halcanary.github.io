@@ -10,7 +10,7 @@ POSTID=738
 CATEGORIES=computers-code;
 MODE=htmldiv
 
-<p>I always meant to go ahead and fix this function so it did what I want.  Now it uses proper regex.  See <a href="https://halcanary.org/vv/2004/02/18/176/">the old version, too</a>.</p>
+<p>I always meant to go ahead and fix this function so it did what I want.  Now it uses proper regex.  See <a href="/vv/2004/02/18/176/">the old version, too</a>.</p>
 <pre>;; ~/.emacs ;;
 (defun remove-excess-whitespace () (interactive)
   (auto-mega-replace  &quot;&#0092;&#0092;( &#0092;&#0092;|&#0092;t&#0092;&#0092;)$&quot; &quot;&quot;))

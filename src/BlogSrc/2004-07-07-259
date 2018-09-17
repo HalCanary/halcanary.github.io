@@ -11,5 +11,5 @@ CATEGORIES=computers-code;
 MODE=htmldiv
 
 <p>My<br />
-<a href="https://halcanary.org/p/firewall">Linux Firewall Notes</a></p>
+<a href="/p/firewall">Linux Firewall Notes</a></p>
 

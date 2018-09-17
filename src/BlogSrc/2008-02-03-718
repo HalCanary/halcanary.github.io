@@ -99,5 +99,5 @@ app.addText('2.0', 'Integer: %d&#92;n' % genrand128int())
 app.addText('3.0', 'String: %s&#92;n' % randstring())
 app.addText('4.0', 'String: %s' % generaterandletts())
 app.mainloop()</pre>
-<p><a href="https://halcanary.org/pub/Randoms.zip">Compiled version for windows</a></p>
+<p><a href="/pub/Randoms.zip">Compiled version for windows</a></p>
 

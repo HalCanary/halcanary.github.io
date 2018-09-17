@@ -10,7 +10,7 @@ POSTID=780
 CATEGORIES=music;
 MODE=htmldiv
 
-<p>I'm fooling around with a guitar and wanted to take notes on a blank page of guitar chord charts, so I post-scripted this one: <a href="https://halcanary.org/pub/tablature.pdf">pdf file</a>.</p>
+<p>I'm fooling around with a guitar and wanted to take notes on a blank page of guitar chord charts, so I post-scripted this one: <a href="/pub/tablature.pdf">pdf file</a>.</p>
 <pre>%!
 %% Written 2009 Hal Canary
 %% Dedicated to the Public Domain

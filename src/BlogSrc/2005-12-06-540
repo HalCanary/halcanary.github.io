@@ -10,6 +10,6 @@ POSTID=540
 CATEGORIES=computers-code;
 MODE=htmldiv
 
-<p>My folks play <a href="http://en.wikipedia.org/wiki/Sudoku">Sudoku</a>.  I looked at the game and decided it was boring.  <a href="https://halcanary.org/p/sudoku-solver">So I wrote a program to solve it.</a></p>
+<p>My folks play <a href="http://en.wikipedia.org/wiki/Sudoku">Sudoku</a>.  I looked at the game and decided it was boring.  <a href="/p/sudoku-solver">So I wrote a program to solve it.</a></p>
 <p>Shouldn't humans stick to puzzles on which we can outperform computers?  Word games and such?</p>
 

@@ -10,5 +10,5 @@ POSTID=972
 CATEGORIES=photos;
 MODE=htmldiv
 
-<p><a href="https://halcanary.org/photos/2001-05-20-graduation.jpg"><img src="https://halcanary.org/photos/thumb/2001-05-20-graduation.jpg" alt="[Thumb]" width="120" height="90" /></a></p>
+<p><a href="/photos/2001-05-20-graduation.jpg"><img src="https://halcanary.org/photos/thumb/2001-05-20-graduation.jpg" alt="[Thumb]" width="120" height="90" /></a></p>
 
