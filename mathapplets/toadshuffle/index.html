@@ -202,53 +202,60 @@ class Tiling {
     }
 }
 
-var t;
+var tiling;
 var canvas;
 var scale = 10;
+var requestedSize = 1;
+
+function drawAll() {
+    tiling.draw(canvas, scale);
+    document.getElementById('size').innerHTML = tiling.n;
+}
+
+function iterateStep() {
+    switch (tiling.step) {
+        case 0: tiling.annihilateAll(); break;
+        case 1: tiling.moveAll();       break;
+        case 2: tiling.fillAll();       break;
+    }
+    drawAll();
+}
+
+function doAnimate(fn) {
+    window.requestAnimationFrame(fn);
+}
+
+function animate() {
+    if (tiling.n < requestedSize) {
+        iterateStep();
+        doAnimate(animate);
+    } else {
+        iterateStep();
+    }
+}
+
+function iterateStage() {
+    requestedSize = tiling.n + 1;
+    doAnimate(animate);
+}
+
+function newAD() {
+    var s = parseInt(initialSize.value);
+    if (s == s) {
+        tiling = new Tiling();
+        requestedSize = s;
+        doAnimate(animate);
+    } else {
+        initialSize.value = tiling.n;
+    }
+}
 
 function init() {
-    var limit = 1;
+    initialSize = document.getElementById('initialSize');
     canvas = document.getElementById('c');
     newAD();
 }
 
-function newAD() {
-    var s = document.getElementById('initialSize').value;
-    t = new Tiling();
-    while (t.n < s) {
-        t.annihilateAll();
-        t.moveAll();
-        t.fillAll();
-    }
-    drawAll();
-}
-
-function drawAll() {
-    t.draw(canvas, scale);
-    document.getElementById('size').innerHTML = t.n;
-}
-
-function iterateStage() {
-    t.annihilateAll();
-    t.moveAll();
-    t.fillAll();
-    drawAll();
-}
-
-function iterateStep() {
-    switch (t.step) {
-        case 0:
-            t.annihilateAll();
-            break;
-        case 1:
-            t.moveAll();
-            break;
-        case 2:
-            t.fillAll();
-            break;
-    }
-    drawAll();
-}
 
 </script>
 </head>
