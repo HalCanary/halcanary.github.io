@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!--
     TOAD Shuffler  v1.9.0
     Copyright  2001-2002,2018  Hal Canary
@@ -21,8 +22,7 @@
 -->
 <title>TOAD Shuffler</title>
 <style>
-body { margin: 0;
-       padding: 0; }
+body{margin:8px auto;max-width:602px;padding:0 8px;}
 h1 { margin: 0;
      padding: 0 8px;
      background-color: #e6e6e6;
@@ -31,6 +31,7 @@ p.canvascontainer { margin: 0; }
 div.help { padding: 0 8px; }
 p.reference{ padding-left: 2em;
              text-indent: -2em; }
+#c { width: 100%; height:100%; }
 </style>
 <script>
 class Tiling {
@@ -46,7 +47,7 @@ class Tiling {
         this.step = 2;
         this.fillAll();
     }
-    
+
     newA(asize) {
         var s = asize * (1 + asize);
         var a = new Uint8Array(s);
@@ -55,9 +56,9 @@ class Tiling {
         }
         return a;
     }
-    
+
     get(r, c) { return this.domArray[r * this.arraySize + c]; }
-    
+
     set(r, c, v) { this.domArray[r * this.arraySize + c] = v; }
 
     fillAll() {
@@ -92,7 +93,7 @@ class Tiling {
         }
         this.step = 1;
     }
-    
+
     moveAll() {
         if (this.step != 1) { return; }
         if (this.n + 1 > this.arraySize) {
@@ -129,17 +130,17 @@ class Tiling {
         this.n++;
         this.step = 2;
     }
-/*   (r,c)     (0,0)                
-        rows     N   columns  
-                N N           
+/*   (r,c)     (0,0)
+        rows     N   columns
+                N N
       <--r     N N N      c-->
-              N N N E  
+              N N N E
              S S S W E  (0,n-1)
-     (n,0)  W N S E N  
-             S W N S   
-              S S S    
-               S S            
-                S      
+     (n,0)  W N S E N
+             S W N S
+              S S S
+               S S
+                S
               (n,n-1)
 */
 
@@ -149,9 +150,9 @@ class Tiling {
         var h = Math.floor((canvas.height - 1) / 2) * 2;
         ctx.fillStyle = "#FFFFFF";
         ctx.fillRect(0, 0, canvas.width, canvas.height);
-        h = w = Math.min(w, h);
-        if (scale * 2 * this.n > h) {
-            scale = Math.max(2, Math.floor(h / (this.n * 2)));
+        var dim = Math.min(w, h);
+        if (scale * 2 * this.n > dim) {
+            scale = Math.max(2, Math.floor(dim / (this.n * 2)));
         }
         for(var r = 0 ; r < this.n + 1 ; r++) {
             for(var c = 0 ; c < this.n ; c++) {
@@ -253,7 +254,7 @@ function iterateStep() {
 </script>
 </head>
 <body onload="init();">
-<h1>TOAD Shuffler Applet v1.9.0</h1>
+<h1>TOAD Shuffler  v1.9.0</h1>
 
 <p class="canvascontainer">
 
@@ -263,7 +264,7 @@ Current Size: <span id='size'>1</span> &nbsp;
 <button onclick="newAD()">New Aztex Diamond</button> &nbsp;
 Initial Size: <input type="text" value="1" id="initialSize" size="4"></input>
 <br>
-<canvas id="c" width="813" height="602"></canvas> 
+<canvas id="c" width="602" height="602"></canvas>
 </p>
 
 <h1>TOAD Shuffler Help</h1>
@@ -288,31 +289,31 @@ uniform distribution of all such tilings.
 </p>
 
 <h2>What are the rules?</h2>
- 
+
 <p>
 There are three steps to &ldquo;growing&rdquo; a TOAD via the EKLP shuffling
 algorithm.  They are filling, destruction, and sliding.
 </p>
- 
+
 <p>
 <i>Rule for Filling:</i>
 <br>
 Divide the untiled area into squares.  Then randomly tile each square
 with either two horizontal dominoes or two vertical dominoes.
 </p>
- 
+
 <p>
 <i>Rule for Destruction:</i>
 <br>
 If a north-going domino is about to collide with a south-going domino,
 delete them both.  Same for east and west-going dominoes.
 </p>
- 
+
 <p>
 <i>Rule for Sliding:</i>
 <br>
 Move the horizontal dominoes north or south, depending on their color.
-Move the vertical dominoes east or west, depending on their color.  
+Move the vertical dominoes east or west, depending on their color.
 </p>
 
 <h2>What do the colors mean?</h2>
@@ -341,7 +342,7 @@ correspond to the two ASMs that correspond to the TOAD.
 
 <p>
 TOAD Shuffler is Copyright 2001-2004, 2018 Hal Canary, University of
-Wisconsin-Madison. 
+Wisconsin-Madison.
 </p>
 
 <p>Hal Canary <a href="#ref">[1]</a> wrote TOAD Shuffler in the Spring
@@ -358,7 +359,7 @@ SSL is sponsored by the National Science Foundation through their
 VIGRE (Vertical Integration of Graduate Research and Education)
 program, with supplemental support from the National Science
 Foundation's REU (Research Experiences for Undergraduates) program and
-from the National Security Agency.  
+from the National Security Agency.
 </p>
 
 <p>
@@ -375,20 +376,20 @@ License</a> as published by the Free Software Foundation.
 http://halcanary.org/</a>
 </p>
 <p class="reference">
-[2] 
+[2]
 <a href="http://www.math.wisc.edu/~propp/SSL/">
 http://www.math.wisc.edu/~propp/SSL/</a>
 </p>
 <p class="reference">
-[3] 
+[3]
 <a href="http://www.math.wisc.edu/~propp/software.html">
 http://www.math.wisc.edu/~propp/software.html</a>
 </p>
 <p class="reference">
-[4] 
-N. Elkies, G. Kuperberg, M. Larsen, and J. Propp. 
+[4]
+N. Elkies, G. Kuperberg, M. Larsen, and J. Propp.
 &ldquo;Alternating-Sign Matrices and Domino Tilings (Part I).&rdquo;
-<i>Journal of Algebraic Combinatorics</i> 1 (1992) 111-132. 
+<i>Journal of Algebraic Combinatorics</i> 1 (1992) 111-132.
 </p>
 
 <p class="reference">
@@ -401,7 +402,7 @@ N. Elkies, G. Kuperberg, M. Larsen, and J. Propp.
 </p>
 
 <p>&nbsp;</p>
-    
+
 </div>
 </body>
 </html>
