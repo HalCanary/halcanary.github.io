@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!--
-    TOAD Shuffler  v1.9.0
+    TOAD Shuffler  v2.0
     Copyright  2001-2002,2018  Hal Canary
 
     This program is free software; you can redistribute it and/or
@@ -22,16 +22,18 @@
 -->
 <title>TOAD Shuffler</title>
 <style>
-body{margin:0 auto 8px auto;max-width:602px;padding:0 8px;}
-h1 { margin: 0 -8px;
-     padding: 0 16px;
-     background-color: #e6e6e6;
-     border-top: 1px solid black }
-div.help { padding: 0 8px; }
-p.reference{ padding-left: 2em;
-             text-indent: -2em; }
+body{margin:0 auto 8px auto;max-width:70em;padding:0 8px;}
+h1 { margin:0 -8px;
+     padding:0 16px;
+     background-color:#e6e6e6;
+     border-top:1px solid black }
+div.help { padding:0 8px; }
+p.reference{ padding-left:2em;
+             text-indent:-2em; }
 span.ref { width:2em; display:inline-block; text-indent:0; }
-canvas#c { width: 100%; height:100%; }
+canvas#c { width:100%; height:100%; }
+blockquote { margin:1em 0; padding:0 1em; border:1px solid #DDD; }
+blockquote blockquote { border:none; border-left:1px solid #DDD; }
 </style>
 <script>
 class Tiling {
@@ -144,73 +146,80 @@ class Tiling {
               (n,n-1)
 */
 
+    addRect(ctx, x, y, w, h) {
+        ctx.moveTo(x, y);
+        ctx.lineTo(x + w, y);
+        ctx.lineTo(x + w, y + h);
+        ctx.lineTo(x, y + h);
+        ctx.lineTo(x, y);
+    }
+
+    makePath(ctx, dir, w, h, scale) {
+        ctx.beginPath();
+        var x0 = w;
+        var y0 = h - this.n * scale;
+        for(var r = 0 ; r < this.n + 1 ; r++) {
+            var x = x0;
+            var y = y0;
+            for(var c = 0 ; c < this.n ; c++) {
+                if (this.get(r, c) == dir) {
+                    switch (dir) {
+                        case this.N:    this.addRect(ctx, x - scale, y, 2 * scale, scale); break;
+                        case this.S:    this.addRect(ctx, x, y,         2 * scale, scale); break;
+                        case this.E:    this.addRect(ctx, x, y,         scale, 2 * scale); break;
+                        case this.W:    this.addRect(ctx, x, y - scale, scale, 2 * scale); break;
+                        case this.none: this.addRect(ctx, x, y,         scale, scale);
+                    }
+                }
+                x += scale;
+                y += scale;
+            }
+            x0 -= scale;
+            y0 += scale;
+        }
+    }
+
     draw(canvas, scale) {
         var ctx = canvas.getContext("2d");
-        var w = Math.floor((canvas.width  - 1) / 2) * 2;
-        var h = Math.floor((canvas.height - 1) / 2) * 2;
-        ctx.fillStyle = "#FFFFFF";
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        var w = Math.floor((canvas.width  - 1) / 2);
+        var h = Math.floor((canvas.height - 1) / 2);
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
         var dim = Math.min(w, h);
-        if (scale * 2 * this.n > dim) {
-            scale = Math.max(2, Math.floor(dim / (this.n * 2)));
+        if (scale * this.n > dim) {
+            scale = Math.max(2, Math.floor(dim / (this.n)));
         }
-        for(var r = 0 ; r < this.n + 1 ; r++) {
-            for(var c = 0 ; c < this.n ; c++) {
-                var x = w / 2 + (- r + c) * scale + 0.5;
-                var y = h / 2 + (r + c - this.n) * scale + 0.5;
-                var color = "";
-                var vert = false;
-                switch (this.get(r, c)) {
-                    case this.N:
-                        color = "#A6CEE3";
-                        x -= scale;
-                        break;
-                    case this.S:
-                        color = "#1F78B4";
-                        break;
-                    case this.E:
-                        color = "#B2DF8A";
-                        vert = true
-                        break;
-                    case this.W:
-                        color = "#33A02C";
-                        y -= scale;
-                        vert = true;
-                        break;
-                }
-                if (color) {
-                    ctx.fillStyle = color;
-                    ctx.fillRect(x + 0.5, y + 0.5,
-                                 scale * (vert ? 1 : 2) - 0.5,
-                                 scale * (vert ? 2 : 1) - 0.5);
-                    if (scale > 2) {
-                        ctx.fillRect(x + 0.5, y + 0.5,
-                                     scale * (vert ? 1 : 2) - 0.5,
-                                     scale * (vert ? 2 : 1) - 0.5);
-                        ctx.strokeRect(x, y, scale * (vert ? 1 : 2), scale * (vert ? 2 : 1));
-                    } else {
-                        ctx.fillRect(x + 0.5, y + 0.5,
-                                     scale * (vert ? 1 : 2) + 0.5,
-                                     scale * (vert ? 2 : 1) + 0.5);
-                    }
-                } else {
-                    ctx.fillStyle = "#DDDDDD";
-                    ctx.fillRect(x+0.5, y + 0.5, scale - 1, scale - 1);
-                }
-
+        scale = Math.floor(scale);
+        for (var dir = 0; dir < 5; ++dir) {
+            this.makePath(ctx, dir, w, h, scale);
+            switch (dir) {
+                case this.N:    ctx.fillStyle = "#A6CEE3"; break;
+                case this.S:    ctx.fillStyle = "#1F78B4"; break;
+                case this.E:    ctx.fillStyle = "#B2DF8A"; break;
+                case this.W:    ctx.fillStyle = "#33A02C"; break;
+                case this.none: ctx.fillStyle = "#DDDDDD"; break;
+            }
+            ctx.fill();
+        }
+        if (scale > 2) {
+            for (var dir = 1; dir < 5; ++dir) {
+                this.makePath(ctx, dir, w, h, scale);
+                ctx.stroke();
             }
         }
+
     }
 }
 
 var tiling;
 var canvas;
-var scale = 10;
+var img;
+var scale = 18;
 var requestedSize = 1;
 
 function drawAll() {
     tiling.draw(canvas, scale);
     document.getElementById('size').innerHTML = tiling.n;
+    img.style.display = "none";
 }
 
 function iterateStep() {
@@ -253,6 +262,7 @@ function newAD() {
 }
 
 function init() {
+    img = document.getElementById('img');
     canvas = document.getElementById('c');
     initialSize = document.getElementById('initialSize');
     var s = parseInt(window.location.hash.substring(1));
@@ -260,6 +270,7 @@ function init() {
         initialSize.value = s;
     }
     newAD();
+
 }
 
 function toggle() {
@@ -274,10 +285,17 @@ function toggle() {
     }
 }
 
+function toImage() {
+    img = document.getElementById('img');
+    img.src=canvas.toDataURL();
+    img.width=100;
+    img.width=100;
+    img.style.display = "inline-block";
+}
 </script>
 </head>
 <body onload="init();">
-<h1>TOAD Shuffler  v1.9.0</h1>
+<h1>TOAD Shuffler v2.0</h1>
 
 <p>
 <button onclick="iterateStep()">Iterate Step</button> &nbsp;
@@ -287,7 +305,10 @@ Current Size: <span id='size'>1</span> &nbsp;
 <button onclick="newAD()">New Aztex Diamond</button> &nbsp;
 Initial Size: <input type="text" value="1" id="initialSize" size="4"></input>
 <br>
-<canvas id="c" width="602" height="602"></canvas>
+<canvas id="c" width="1136" height="1136"></canvas>
+
+<br>
+<a href="javascript:toImage();">to image:</a> <img id="img">
 </p>
 
 <h1>TOAD Shuffler Help</h1>
@@ -396,7 +417,7 @@ Foundation.
 <a href="javascript:toggle()"><span id="toggler">[Show license.]</span></a>
 </p>
 
-<div id="license" style="display:none;border:1px solid #DDD">
+<div id="license" style="display:none;">
     <blockquote>
     <h3>GNU GENERAL PUBLIC LICENSE</h3>
 
@@ -730,7 +751,7 @@ Foundation.
       <p>Gnomovision version 69, Copyright (C) year name of author
       Gnomovision comes with ABSOLUTELY NO WARRANTY; for details
       type <code>show w'.  This is free software, and you are welcome
-      to redistribute it under certain conditions; type</code>show c' 
+      to redistribute it under certain conditions; type</code>show c'
       for details.</p>
     </blockquote>
 
@@ -747,7 +768,7 @@ Foundation.
     <blockquote>
       <p>Yoyodyne, Inc., hereby disclaims all copyright
       interest in the program `Gnomovision'
-      (which makes passes at compilers) written 
+      (which makes passes at compilers) written
       by James Hacker.</p>
 
     <p>signature of Ty Coon, 1 April 1989
