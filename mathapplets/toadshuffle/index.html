@@ -36,9 +36,23 @@ blockquote { margin:1em 0; padding:0 1em; border:1px solid #DDD; }
 blockquote blockquote { border:none; border-left:1px solid #DDD; }
 </style>
 <script>
+class Turtle {
+    constructor(ctx, x, y) {
+        this.ctx = ctx;
+        this.x = x;
+        this.y = y;
+        this.ctx.moveTo(this.x, this.y);
+    }
+    rLine(dx, dy) {
+        this.x += dx;
+        this.y += dy;
+        this.ctx.lineTo(this.x, this.y);
+    }
+}
+
 class Tiling {
     constructor() {
-        this.none = 0;
+        this.X = 0;
         this.N = 1;
         this.E = 2;
         this.W = 3;
@@ -54,7 +68,7 @@ class Tiling {
         var s = asize * (1 + asize);
         var a = new Uint8Array(s);
         for (var i = 0; i < s; ++i) {
-            a[i] = this.none;
+            a[i] = this.X;
         }
         return a;
     }
@@ -67,8 +81,8 @@ class Tiling {
         if (this.step != 2) { return; }
         for(var r = 0 ; r < this.n ; r++) {
             for(var c = 0 ; c < this.n ; c++) {
-                if (this.get(r, c) == this.none &&
-                    this.get(r+1, c) == this.none) {
+                if (this.get(r, c) == this.X &&
+                    this.get(r+1, c) == this.X) {
                     if (Math.floor(Math.random() * 2) == 1) {
                         this.set(r, c, this.N);
                         this.set(r+1, c, this.S);
@@ -88,8 +102,8 @@ class Tiling {
             for(var c = 0 ; c < this.n - 1 ; c++) {
                 if ( (this.get(r, c) ==this.E && this.get(r, c+1) ==this.W ) ||
                      (this.get(r, c) ==this.S && this.get(r, c+1) ==this.N ) ) {
-                    this.set(r, c, this.none);
-                    this.set(r, c+1, this.none);
+                    this.set(r, c, this.X);
+                    this.set(r, c+1, this.X);
                 }
             }
         }
@@ -115,15 +129,15 @@ class Tiling {
                     case this.N:
                         break;
                     case this.S:
-                        this.set(r, c, this.none);
+                        this.set(r, c, this.X);
                         this.set(r+1, c+1, this.S);
                         break;
                     case this.E:
-                        this.set(r, c, this.none);
+                        this.set(r, c, this.X);
                         this.set(r, c+1, this.E);
                         break;
                     case this.W:
-                        this.set(r, c, this.none);
+                        this.set(r, c, this.X);
                         this.set(r+1, c, this.W);
                         break;
                 }
@@ -164,11 +178,11 @@ class Tiling {
             for(var c = 0 ; c < this.n ; c++) {
                 if (this.get(r, c) == dir) {
                     switch (dir) {
-                        case this.N:    this.addRect(ctx, x - scale, y, 2 * scale, scale); break;
-                        case this.S:    this.addRect(ctx, x, y,         2 * scale, scale); break;
-                        case this.E:    this.addRect(ctx, x, y,         scale, 2 * scale); break;
-                        case this.W:    this.addRect(ctx, x, y - scale, scale, 2 * scale); break;
-                        case this.none: this.addRect(ctx, x, y,         scale, scale);
+                        case this.N: this.addRect(ctx, x - scale, y, 2 * scale, scale); break;
+                        case this.S: this.addRect(ctx, x, y,         2 * scale, scale); break;
+                        case this.E: this.addRect(ctx, x, y,         scale, 2 * scale); break;
+                        case this.W: this.addRect(ctx, x, y - scale, scale, 2 * scale); break;
+                        case this.X: this.addRect(ctx, x, y,         scale, scale);
                     }
                 }
                 x += scale;
@@ -177,6 +191,18 @@ class Tiling {
             x0 -= scale;
             y0 += scale;
         }
+    }
+
+
+    makeBackground(ctx, w, h, scale) {
+        var n = this.n;
+        var x = w;
+        ctx.beginPath();
+        var turtle = new Turtle(ctx, w, h - n * scale);
+        for (var i = 0; i < n; ++i) { turtle.rLine(scale, 0);  turtle.rLine(0, scale);  }
+        for (var i = 0; i < n; ++i) { turtle.rLine(0, scale);  turtle.rLine(-scale, 0); }
+        for (var i = 0; i < n; ++i) { turtle.rLine(-scale, 0); turtle.rLine(0, -scale); }
+        for (var i = 0; i < n; ++i) { turtle.rLine(0, -scale); turtle.rLine(scale, 0);  }
     }
 
     draw(canvas, scale) {
@@ -189,14 +215,19 @@ class Tiling {
             scale = Math.max(2, Math.floor(dim / (this.n)));
         }
         scale = Math.floor(scale);
+
+        this.makeBackground(ctx, w, h, scale);
+        ctx.fillStyle = "#FFFFFF";
+        ctx.fill();
+
         for (var dir = 0; dir < 5; ++dir) {
             this.makePath(ctx, dir, w, h, scale);
             switch (dir) {
-                case this.N:    ctx.fillStyle = "#A6CEE3"; break;
-                case this.S:    ctx.fillStyle = "#1F78B4"; break;
-                case this.E:    ctx.fillStyle = "#B2DF8A"; break;
-                case this.W:    ctx.fillStyle = "#33A02C"; break;
-                case this.none: ctx.fillStyle = "#DDDDDD"; break;
+                case this.N: ctx.fillStyle = "#A6CEE3"; break;
+                case this.S: ctx.fillStyle = "#1F78B4"; break;
+                case this.E: ctx.fillStyle = "#B2DF8A"; break;
+                case this.W: ctx.fillStyle = "#33A02C"; break;
+                case this.X: ctx.fillStyle = "#DDDDDD"; break;
             }
             ctx.fill();
         }
@@ -205,8 +236,9 @@ class Tiling {
                 this.makePath(ctx, dir, w, h, scale);
                 ctx.stroke();
             }
+            this.makeBackground(ctx, w, h, scale);
+            ctx.stroke();
         }
-
     }
 }
 
