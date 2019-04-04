@@ -35,9 +35,6 @@ img {{ max-width:100%; height:auto; }}
 </style>
 </head>
   <!-- Copyright {years} Hal Canary. ALL RIGHTS RESERVED. -->
-
-  <body>
-    <div class="column">
 """
 
 archive_header = """<!DOCTYPE html>
@@ -414,7 +411,7 @@ class Index(object):
         self.upwards = '../' * len(arg)
         self.loc = '{}/{}/index.html'.format(base_dir, '/'.join(arg))
         self.o = UpdatingFile(self.loc)
-        self.o.write(header.format(title='Voder-Vocoder Archive', years='1997-' + current_year))/
+        self.o.write(header.format(title='Voder-Vocoder Archive', years='1997-' + current_year))
         archive_header = """
   <body>
     <div class="column">
