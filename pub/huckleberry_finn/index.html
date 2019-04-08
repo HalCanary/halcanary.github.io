@@ -14,16 +14,18 @@ div p:first-child{text-indent:0;}
 <script>
 var color_toggle = 0;
 var font_toggle = 0;
-function update() {
+function set() {
   var s = document.body.style;
   s.backgroundColor = color_toggle ? "black" : "white";
   s.color = color_toggle ? "white" : "black";
   s.fontFamily = font_toggle ? "sans-serif" : "serif";
+}
+function update() {
   function tobit(v) { return v ? "1" : "0"; }
   document.cookie = "s=" + tobit(color_toggle) + tobit(font_toggle);
 }
-function toggle_color() { color_toggle = (color_toggle + 1) % 2; update(); }
-function toggle_font() { font_toggle = (font_toggle + 1) % 2; update();  }
+function toggle_color() { color_toggle = (color_toggle + 1) % 2; set(); update(); }
+function toggle_font()  { font_toggle  = (font_toggle  + 1) % 2; set(); update(); }
 (function() {
   var match = /;s=([^;]*);/.exec(";" + document.cookie + ";");
   if (match.length > 1) {
@@ -33,7 +35,10 @@ function toggle_font() { font_toggle = (font_toggle + 1) % 2; update();  }
 })();
 </script>
 </head>
-<body onload="update();">
+<body>
+<script>
+set();
+</script>
 <button onclick="toggle_color()">toggle night mode</button>
 <button onclick="toggle_font()">toggle font</button>
 <div>
