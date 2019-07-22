@@ -12,35 +12,38 @@ div p{text-indent:2em;margin-top:0;margin-bottom:0}
 div p:first-child{text-indent:0;}
 </style>
 <script>
-var color_toggle = 0;
-var font_toggle = 0;
-function set() {
-  var s = document.body.style;
-  s.backgroundColor = color_toggle ? "black" : "white";
-  s.color = color_toggle ? "white" : "black";
-  s.fontFamily = font_toggle ? "sans-serif" : "serif";
-}
-function update() {
-  function tobit(v) { return v ? "1" : "0"; }
-  document.cookie = "s=" + tobit(color_toggle) + tobit(font_toggle);
-}
-function toggle_color() { color_toggle = (color_toggle + 1) % 2; set(); update(); }
-function toggle_font()  { font_toggle  = (font_toggle  + 1) % 2; set(); update(); }
-(function() {
-  var match = /;s=([^;]*);/.exec(";" + document.cookie + ";");
-  if (match.length > 1) {
-    color_toggle = parseInt(match[1].charAt(0));
-    font_toggle = parseInt(match[1].charAt(1));
+////////////////////////////////////////////////////////////////////////////////
+class Toggle {
+  #toggles;
+  #fn;
+  constructor(fn) {
+    this.#fn = fn;
+    var match = /;s=([^;]*);/.exec(";" + document.cookie + ";");
+    this.#toggles = (match && match.length > 1) ? parseInt(match[1]) : 0;
+    this.update();
   }
-})();
+  update() { if (this.#fn) { this.#fn(this); } }
+  toggle(bit) { document.cookie = "s=" + (this.#toggles ^= (1 << bit)); this.update(); }
+  get(bit) { return this.#toggles & (1 << bit); }
+}
+////////////////////////////////////////////////////////////////////////////////
 </script>
 </head>
-<body>
+<body onload="tog.update();">
 <script>
-set();
+const COLOR_TOGGLE = 0;
+const FONT_TOGGLE = 1;
+var tog = new Toggle(function(toggle) {
+  var b = document.body;
+  if (b) {
+    b.style.backgroundColor = toggle.get(COLOR_TOGGLE) ? "black" : "white";
+    b.style.color           = toggle.get(COLOR_TOGGLE) ? "white" : "black";
+    b.style.fontFamily      = toggle.get(FONT_TOGGLE ) ? "sans-serif" : "serif";
+  }
+});
 </script>
-<button onclick="toggle_color()">toggle night mode</button>
-<button onclick="toggle_font()">toggle font</button>
+<button onclick="tog.toggle(COLOR_TOGGLE)">toggle night mode</button>
+<button onclick="tog.toggle(FONT_TOGGLE)">toggle font</button>
 <div>
 <h1 style="text-align:center">
 ADVENTURES
