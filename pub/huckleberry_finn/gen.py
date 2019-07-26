@@ -12,17 +12,12 @@ head = '''<!DOCTYPE html>
 </head>
 <body>
 <script>
-var tog = new Toggle();
-set_color(tog.get(COLOR_TOGGLE));
-set_font(tog.get(FONT_TOGGLE));
+init_toggle();
 </script>
-<p>
-<button onclick="set_color(tog.toggle(COLOR_TOGGLE));">toggle night mode</button>
-<button onclick="set_font( tog.toggle(FONT_TOGGLE ));">toggle font</button>
-</p>
+<!-- BEGIN CONTENT-->
 '''
 
-tail = '\n<hr>\n</body>\n</html>\n'
+tail = '\n<!-- END CONENT -->\n<hr>\n</body>\n</html>\n'
 
 
 b62 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
