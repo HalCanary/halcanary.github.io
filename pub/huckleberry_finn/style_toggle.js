@@ -23,7 +23,7 @@ function init_toggle() {
   window.toggle = new Toggle();
   set_color(window.toggle.get(COLOR_TOGGLE));
   set_font(window.toggle.get(FONT_TOGGLE));
-  document.body.onload = function() {
+  window.addEventListener("load", function() {
     var p = document.createElement("p");
     var b = document.createElement("button");
     b.appendChild(document.createTextNode("toggle night mode"));
@@ -34,5 +34,21 @@ function init_toggle() {
     b.onclick = function() { set_font(window.toggle.toggle(FONT_TOGGLE)); };
     p.appendChild(b);
     document.body.insertBefore(p, document.body.firstChild);
-  };
+  });
+}
+
+function init_chapter() {
+  function change_chapter() {
+    var x = document.getElementById(location.hash.substring(1));
+    if (x && x != window.chapter) {
+      x.style.display = 'block';
+      if (window.chapter) {
+        window.chapter.style.display = 'none';
+      }
+      window.chapter = x;
+    }
+  }
+  window.chapter = null;
+  window.addEventListener("hashchange", change_chapter);
+  window.addEventListener("load", change_chapter);
 }
