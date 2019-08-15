@@ -41,11 +41,13 @@ function init_chapter() {
   function change_chapter() {
     var x = document.getElementById(location.hash.substring(1));
     if (x && x != window.chapter) {
+      location.hash = '';
       x.style.display = 'block';
       if (window.chapter) {
         window.chapter.style.display = 'none';
       }
       window.chapter = x;
+      location.hash = '#' + x.id;
     }
   }
   window.chapter = null;

@@ -19,26 +19,39 @@ init_chapter();
 </script>
 '''
 
-tail = '\n<hr>\n</body>\n</html>\n'
+tail = '\n</body>\n</html>\n'
 
 with open('src.txt') as f:
     content = f.read()
 book_title = 'Adventures of Huckleberry Finn'
-
+h1 = ''
+m = re.search('<h1>.*?</h1>', content, flags=re.S)
+if m:
+    h1 = m.group(0)
+    content = re.sub('<h1>.*?</h1>', '', content, 1, re.S)
 content = content.split('<hr>')
 book = []
 for i, chapter in enumerate(content):
-    name = '%d' % i
     m = re.search('<h2>(.*?)</h2>', chapter, flags=re.S)
     assert m
     title = m.group(1)
-    chapter = re.sub('<div>', '<div style="display:none" id="%s">' % name, chapter, 1)
-    book.append((name, title, chapter))
+    book.append((title, chapter))
 
 with open('hf.html', 'w') as o:
     o.write(head.format(book_title))
-    for name, title, chapter in book:
-        o.write('<div><a href="#{}">{}</a></div>\n'.format(name, title))
+    o.write(h1)
+    o.write('<p>\n')
+    for i, (title, _) in enumerate(book):
+        if i > 0:
+            o.write('| ')
+        o.write('<a href="#{:d}">{}</a>\n'.format(i, title))
+    o.write('</p>\n<hr>\n')
+    for i, (title, chapter) in enumerate(book):
+        o.write('<div style="display:none" id="{:d}">'.format(i))
         o.write(chapter)
-        o.write('<hr>\n')
+        if i + 1 < len(book):
+            next_title, _ = book[i + 1]
+            o.write('\n<hr>\n<p class="next"><a href="#{:d}">Next: {}</a></p>\n'.format(
+                i + 1, next_title))
+        o.write('<hr>\n</div>\n\n')
     o.write(tail)
