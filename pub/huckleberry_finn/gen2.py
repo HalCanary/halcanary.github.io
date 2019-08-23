@@ -37,7 +37,7 @@ for i, chapter in enumerate(content):
     title = m.group(1)
     book.append((title, chapter))
 
-with open('hf.html', 'w') as o:
+with open('index.html', 'w') as o:
     o.write(head.format(book_title))
     o.write(h1)
     o.write('<p>\n')
