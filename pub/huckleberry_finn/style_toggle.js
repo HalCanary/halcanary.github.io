@@ -37,9 +37,13 @@ function init_toggle() {
   });
 }
 
-function init_chapter() {
+function init_chapter(default_id) {
   function change_chapter() {
-    var x = document.getElementById(location.hash.substring(1));
+    var h = location.hash.substring(1);
+    if (!h && default_id) {
+      h = default_id;
+    }
+    var x = document.getElementById(h);
     if (x && x != window.chapter) {
       location.hash = '';
       x.style.display = 'block';
