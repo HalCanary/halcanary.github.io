@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#000000">
+<title>White Noise</title>
+<style>
+body{margin:8px auto;max-width:32em;padding:0 8px;font-size:200%;
+     background-color:black;color:white;font-family:sans;}
+</style>
+<script>
+// https://codepen.io/2kool2/pen/xrLeMq
+
+var Noise = (function () {
+  "use strict";
+  let audioContext;  
+  let fadeOutTimer;
+  var audioSource;
+  var gainNode;
+  var canFade;
+  var buffer
+
+  function playNoise() {
+    stopNoise();
+    if (!audioContext) {
+      audioContext = new(window.AudioContext || window.webkitAudioContext);
+      gainNode = audioContext.createGain();
+      gainNode.connect(audioContext.destination);
+    }
+    if (!audioSource) {
+      audioSource = audioContext.createBufferSource();
+      audioSource.connect(gainNode);
+      if (!buffer) {
+        buffer = function() {
+          // https://noisehack.com/generate-noise-web-audio-api/
+          const sampleRate = audioContext.sampleRate;
+          const bufferSize = 2 * sampleRate;
+          const noiseBuffer = audioContext.createBuffer(1, bufferSize, sampleRate);
+          const output = noiseBuffer.getChannelData(0);
+          for (let i = 0; i < bufferSize; i++) {
+            output[i] = Math.random() * 2 - 1;
+          }
+          return noiseBuffer;
+        }();
+      }
+      audioSource.buffer = buffer;
+      audioSource.loop = true;
+      canFade = true; // used to prevent fadeOut firing twice
+    }
+    setVolume();
+    audioSource.start();
+    document.getElementById("play").disabled="disabled";
+  }
+
+  function setVolume() {
+    var volume = +document.getElementById("volume").value / 100;
+    gainNode.gain.setValueAtTime(volume, audioContext.currentTime);
+  }
+
+  function stopNoise() {
+    if (audioSource) {
+      clearTimeout(fadeOutTimer);
+      audioSource.stop();
+      audioSource = null;
+    }
+    document.getElementById("play").disabled="";
+  }
+  
+  function fadeNoise() {
+    if (canFade) {
+      var fadeOut = +document.getElementById("fade").value;
+      gainNode.gain.linearRampToValueAtTime(0, audioContext.currentTime + fadeOut);
+      canFade = false;
+      fadeOutTimer = setTimeout(() => { stopNoise(); }, fadeOut * 1000);
+    }
+    document.getElementById("play").disabled="";
+  }
+
+  // Expose functions:
+  return {
+    play : playNoise,
+    stop : stopNoise,
+    fade : fadeNoise,
+    setVolume : setVolume,
+  }
+}());
+
+</script>
+
+</head>
+<body>
+<h1>White Noise</h1>
+<p>
+Volume:<br>
+<input type="range" min="0" max="100" value="100" id="volume"
+       oninput="Noise.setVolume()" style="width:100%"><br>
+<button id="play" onclick="Noise.play()">Play noise</button><br>
+Fade time (seconds): <input type="text" id="fade" value=10></input><br>
+<button onclick="Noise.fade()">Fade noise</button><br>
+<button onclick="Noise.stop()">Stop noise</button><br>
+</p>
+
