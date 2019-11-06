@@ -118,4 +118,14 @@ Fade time (seconds): <input type="text" id="fade" value=10></input><br>
 <p>
 <button id="stop" onclick="Noise.stop()" disabled="disabled">Stop noise</button>
 </p>
-
+<script>
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+        navigator.serviceWorker.register('./sw.js').then(function(registration) {
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, function(err) {
+            console.log('ServiceWorker registration failed: ', err);
+        });
+    });
+}
+</script>
