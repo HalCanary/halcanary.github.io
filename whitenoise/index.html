@@ -4,10 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#000000">
+<link rel="manifest" href="./manifest.json">
 <title>White Noise</title>
 <style>
 body{margin:8px auto;max-width:32em;padding:0 8px;font-size:200%;
-     background-color:black;color:white;font-family:sans;}
+     background-color:black;color:white;font-family:sans-serif;}
+div.inv {background-color:white;color:black;}
+input {font-size:100%;}
+button{background-color:white;color:black;margin:4px 0;font-size:100%;}
 </style>
 <script>
 // https://codepen.io/2kool2/pen/xrLeMq
@@ -51,6 +55,8 @@ var Noise = (function () {
     setVolume();
     audioSource.start();
     document.getElementById("play").disabled="disabled";
+    document.getElementById("fadeb").disabled="";
+    document.getElementById("stop").disabled="";
   }
 
   function setVolume() {
@@ -65,6 +71,8 @@ var Noise = (function () {
       audioSource = null;
     }
     document.getElementById("play").disabled="";
+    document.getElementById("fadeb").disabled="disabled";
+    document.getElementById("stop").disabled="disabled";
   }
   
   function fadeNoise() {
@@ -75,6 +83,8 @@ var Noise = (function () {
       fadeOutTimer = setTimeout(() => { stopNoise(); }, fadeOut * 1000);
     }
     document.getElementById("play").disabled="";
+    document.getElementById("fadeb").disabled="disabled";
+    document.getElementById("stop").disabled="";
   }
 
   // Expose functions:
@@ -92,12 +102,20 @@ var Noise = (function () {
 <body>
 <h1>White Noise</h1>
 <p>
-Volume:<br>
+Volume:
+<div class="inv">
 <input type="range" min="0" max="100" value="100" id="volume"
-       oninput="Noise.setVolume()" style="width:100%"><br>
-<button id="play" onclick="Noise.play()">Play noise</button><br>
+       oninput="Noise.setVolume()" style="width:100%"></input>
+</div>
+</p>
+<p>
+<button id="play" onclick="Noise.play()">Play noise</button>
+</p>
+<p>
 Fade time (seconds): <input type="text" id="fade" value=10></input><br>
-<button onclick="Noise.fade()">Fade noise</button><br>
-<button onclick="Noise.stop()">Stop noise</button><br>
+<button id="fadeb" onclick="Noise.fade()" disabled="disabled">Fade noise</button>
+</p>
+<p>
+<button id="stop" onclick="Noise.stop()" disabled="disabled">Stop noise</button>
 </p>
 

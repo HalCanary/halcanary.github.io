@@ -1,0 +1,22 @@
+{
+  "short_name": "White Noise",
+  "name": "White Noise",
+  "icons": [
+    {
+      "src": "/whitenoise/icon192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/whitenoise/icon512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/whitenoise/",
+  "background_color": "#000000",
+  "display": "standalone",
+  "scope": "/whitenoise/",
+  "theme_color": "#000000"
+}
+
