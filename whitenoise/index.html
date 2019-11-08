@@ -9,30 +9,38 @@
 <style>
 body{margin:8px auto;max-width:32em;padding:0 8px;font-size:200%;
      background-color:black;color:white;font-family:sans-serif;}
-div.inv {background-color:white;color:black;}
+.inv {background-color:white;color:black;}
 input {font-size:100%;}
-button{background-color:white;color:black;margin:4px 0;font-size:100%;}
+button{margin:4px 0;font-size:100%;}
+button:enabled{background-color:#FFF;color:black;}
+button:disabled{background-color:#AAA;color:black;}
+input[type="range"]{width:90%;}
 </style>
 <script>
 // https://codepen.io/2kool2/pen/xrLeMq
+// White noise - Web Audio API
+// A PEN BY mike foskett
 
 var Noise = (function () {
   "use strict";
-  let audioContext;  
-  let fadeOutTimer;
+  var audioContext;
+  var fadeOutTimer;
   var audioSource;
   var gainNode;
   var canFade;
-  var buffer
+  var buffer;
 
-  function playNoise() {
-    stopNoise();
+  function setAudioContext(ctx) {
     if (!audioContext) {
-      audioContext = new(window.AudioContext || window.webkitAudioContext);
+      audioContext = ctx;
       gainNode = audioContext.createGain();
       gainNode.connect(audioContext.destination);
     }
-    if (!audioSource) {
+  }
+
+  function playNoise(volume) {
+   stopNoise();
+   if (!audioSource) {
       audioSource = audioContext.createBufferSource();
       audioSource.connect(gainNode);
       if (!buffer) {
@@ -52,15 +60,11 @@ var Noise = (function () {
       audioSource.loop = true;
       canFade = true; // used to prevent fadeOut firing twice
     }
-    setVolume();
+    setVolume(volume);
     audioSource.start();
-    document.getElementById("play").disabled="disabled";
-    document.getElementById("fadeb").disabled="";
-    document.getElementById("stop").disabled="";
   }
 
-  function setVolume() {
-    var volume = +document.getElementById("volume").value / 100;
+  function setVolume(volume) {
     gainNode.gain.setValueAtTime(volume, audioContext.currentTime);
   }
 
@@ -70,31 +74,62 @@ var Noise = (function () {
       audioSource.stop();
       audioSource = null;
     }
-    document.getElementById("play").disabled="";
-    document.getElementById("fadeb").disabled="disabled";
-    document.getElementById("stop").disabled="disabled";
   }
-  
-  function fadeNoise() {
+
+  function fadeNoise(fadeOut) {
     if (canFade) {
-      var fadeOut = +document.getElementById("fade").value;
       gainNode.gain.linearRampToValueAtTime(0, audioContext.currentTime + fadeOut);
       canFade = false;
       fadeOutTimer = setTimeout(() => { stopNoise(); }, fadeOut * 1000);
     }
-    document.getElementById("play").disabled="";
-    document.getElementById("fadeb").disabled="disabled";
-    document.getElementById("stop").disabled="";
   }
 
   // Expose functions:
   return {
+    setAudioContext : setAudioContext,
+    setVolume : setVolume,
     play : playNoise,
     stop : stopNoise,
     fade : fadeNoise,
-    setVolume : setVolume,
-  }
+  };
 }());
+
+function getVolume() { return +document.getElementById("volume").value / 100; }
+
+function disable(id) { document.getElementById(id).disabled="disabled"; }
+
+function enable(id)  { document.getElementById(id).disabled=""; }
+
+var aContext;
+
+function play() {
+  if (!aContext) {
+    aContext = new(window.AudioContext || window.webkitAudioContext);
+    Noise.setAudioContext(aContext);
+  }
+  Noise.play(getVolume());
+  disable("play");
+  enable("fadeb");
+  enable("stop");
+}
+
+function stop() {
+  Noise.stop();
+  enable("play");
+  disable("fadeb");
+  disable("stop");
+}
+
+function fade() {
+  Noise.fade(+document.getElementById("fade").value);
+  enable("play");
+  disable("fadeb");
+  enable("stop");
+}
+
+function setVolume() {
+  Noise.setVolume(getVolume());
+}
 
 </script>
 
@@ -103,30 +138,31 @@ var Noise = (function () {
 <h1>White Noise</h1>
 <p>
 Volume:
-<div class="inv">
-<input type="range" min="0" max="100" value="100" id="volume"
-       oninput="Noise.setVolume()" style="width:100%"></input>
-</div>
+<span class="inv">
+<input type="range" min="0" max="100" value="100" id="volume" oninput="setVolume();"></input>
+</span>
 </p>
 <p>
-<button id="play" onclick="Noise.play()">Play noise</button>
+<button id="play" onclick="play();">Play noise</button>
 </p>
 <p>
-Fade time (seconds): <input type="text" id="fade" value=10></input><br>
-<button id="fadeb" onclick="Noise.fade()" disabled="disabled">Fade noise</button>
+Fade time (seconds): <input type="text" id="fade" size="9" value="10"></input><br>
+<button id="fadeb" onclick="fade();" disabled="disabled">Fade noise</button>
 </p>
 <p>
-<button id="stop" onclick="Noise.stop()" disabled="disabled">Stop noise</button>
+<button id="stop" onclick="stop();" disabled="disabled">Stop noise</button>
 </p>
+
+
 <script>
 if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function() {
-        navigator.serviceWorker.register('./sw.js').then(function(registration) {
-            console.log('ServiceWorker registration successful with scope: ', registration.scope);
-        }, function(err) {
-            console.log('ServiceWorker registration failed: ', err);
-        });
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('./sw.js').then(function(registration) {
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      console.log('ServiceWorker registration failed: ', err);
     });
+  });
 }
 </script>
 </body>
