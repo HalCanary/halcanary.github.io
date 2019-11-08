@@ -65,7 +65,7 @@ var Noise = (function () {
   }
 
   function setVolume(volume) {
-    gainNode.gain.setValueAtTime(volume, audioContext.currentTime);
+    gainNode.gain.value = volume;
   }
 
   function stopNoise() {
@@ -121,10 +121,24 @@ function stop() {
 }
 
 function fade() {
-  Noise.fade(+document.getElementById("fade").value);
+  var fadeId = document.getElementById("fade");
+  var fadeTime = +fadeId.value;
+  Noise.fade(fadeTime);
   enable("play");
   disable("fadeb");
   enable("stop");
+  function f() {
+    setTimeout(function() {
+      if (+fadeId.value > 0) {
+        fadeId.value = +fadeId.value - 1;
+        f();
+      } else {
+        fadeId.value = fadeTime;
+        stop();
+      }
+    }, 1000);
+  }
+  f();
 }
 
 function setVolume() {
