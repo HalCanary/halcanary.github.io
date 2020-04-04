@@ -1,9 +1,19 @@
 #! /bin/sh
+DIR="$(dirname "$0")/BlogSrc"
+BIGGEST=0
+for x in $(sed -n 's/^POSTID=//p' "$DIR"/*); do
+  if [ "$x" -gt $BIGGEST ] 2> /dev/null; then
+     BIGGEST=$x
+  fi
+done
+POSTID=$(( $BIGGEST + 1 ))
 DATE="$(date '+%Y-%m-%d %H:%M:%S %z (%Z)')"
-cat << EOM
+FILE=$DIR/$(date '+%Y-%m-%d')-$POSTID
+echo $FILE
+cat << EOM > $FILE
 TITLE=
 DATE=$DATE
-POSTID=
+POSTID=$POSTID
 MODE=markdown
 CATEGORIES=
 SUMMARY=
