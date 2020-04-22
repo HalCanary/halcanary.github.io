@@ -67,7 +67,7 @@ function to_isbn13(n) {
     return n;
 }
 
-window.onload = function(){ 
+window.onload = function(){
     target = document.getElementById('target'); // global
     var search =  window.location.search;
     var isbn_regex = /\?([0-9xX-]*)/;
@@ -94,28 +94,14 @@ window.onload = function(){
         atb("ERROR: ISBN LENGTH IS WRONG");
         return;
     }
-
-    // var bn = "http://search.barnesandnoble.com/bookSearch/isbnInquiry.asp?isbn=" + isbn;
-    var bn = "https://www.barnesandnoble.com/w//?ean=" + to_isbn13(isbn);
-
-    var bn2 = "ISBN " + isbn + " @ barnesandnoble.com";
-
-    var amzn = "http://www.amazon.com/exec/obidos/ASIN/";
-
-    if (isbn.length == 10) {
-        amzn = amzn + isbn + "/ref=nosim/hrmcb-20";
-    } else {
-        amzn = amzn + isbn + "&index=books&linkCode=qs&tag=hrmcb-20";
-    }
-    var amzn2 = "ISBN " + isbn + " @ amazon.com";
-
-    var goog = "https://www.google.com/search?tbm=bks&q=isbn:"+ isbn;
-    
-    var goog2 = "ISBN " + isbn + " @ books.google.com";        
-
-    appendLinkPar(bn, bn2);
-    appendLinkPar(amzn, amzn2);
-    appendLinkPar(goog, goog2);
+    var isbn13 = to_isbn13(isbn);
+    appendLinkPar("https://www.barnesandnoble.com/w//?ean=" + isbn13,
+                  "ISBN " + isbn + " @ barnesandnoble.com");
+    appendLinkPar("http://www.amazon.com/exec/obidos/ASIN/" + isbn13 +
+                  "&index=books&linkCode=qs&tag=hrmcb-20",
+                  "ISBN " + isbn + " @ amazon.com");
+    appendLinkPar("https://www.google.com/search?tbm=bks&q=isbn:"+ isbn,
+                  "ISBN " + isbn + " @ books.google.com");
 }
 </script>
 </head>
