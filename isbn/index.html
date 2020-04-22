@@ -46,15 +46,25 @@ function is_isbn_valid(n) {
     check += (t == 'x' || t == 'X') ? 10 : (+ t);
     return ((check % 11) == 0);
 }
+function get_isbn13_check(n) {
+    var c = 0;
+    for (var i = 0; i < 12; i += 2) {
+        c += (+ n.substring(i, i + 1));
+    }
+    for (var i = 1; i < 12; i += 2) {
+        c += 3 * (+ n.substring(i, i + 1));
+    }
+    return (10 - (c % 10)) % 10;
+}
 function is_isbn_valid13(n) {
-    var check = 0;
-    for (var i = 0; i < 13; i+=2) {
-        check += (+ n.substring(i, i + 1));
+    return get_isbn13_check(n) == (+ n.substring(12, 13));
+}
+function to_isbn13(n) {
+    if (n.length == 10) {
+        var isbn12 = '978' + n.substring(0, 9);
+        return isbn12 + get_isbn13_check(isbn12 + '?');
     }
-    for (var i = 1; i < 12; i+=2) {
-        check += 3 * (+ n.substring(i, i + 1));
-    }
-    return ((check % 10) == 0);
+    return n;
 }
 
 window.onload = function(){ 
@@ -86,7 +96,7 @@ window.onload = function(){
     }
 
     // var bn = "http://search.barnesandnoble.com/bookSearch/isbnInquiry.asp?isbn=" + isbn;
-    var bn = "https://www.barnesandnoble.com/w//?ean=" + isbn;
+    var bn = "https://www.barnesandnoble.com/w//?ean=" + to_isbn13(isbn);
 
     var bn2 = "ISBN " + isbn + " @ barnesandnoble.com";
 
