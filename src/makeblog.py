@@ -228,8 +228,12 @@ height:auto;
 class Post(object):
     @staticmethod
     def markdown(inf):
-        subproc = subprocess.Popen(
-            ['markdown'], stdin=subprocess.PIPE, stdout=subprocess.PIPE)
+        try:
+            subproc = subprocess.Popen(
+                ['markdown'], stdin=subprocess.PIPE, stdout=subprocess.PIPE)
+        except OSError:
+            sys.stderr.write('\nMARKDOWN FAILED.\n\n')
+            sys.exit(1)
         shutil.copyfileobj(inf, subproc.stdin)
         subproc.stdin.close()
         s = subproc.stdout.read()
