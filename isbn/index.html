@@ -97,8 +97,7 @@ window.onload = function(){
     var isbn13 = to_isbn13(isbn);
     appendLinkPar("https://www.barnesandnoble.com/w//?ean=" + isbn13,
                   "ISBN " + isbn + " @ barnesandnoble.com");
-    appendLinkPar("http://www.amazon.com/exec/obidos/ASIN/" + isbn13 +
-                  "&index=books&linkCode=qs&tag=hrmcb-20",
+    appendLinkPar("https://www.amazon.com/s?k=" + isbn13 + "&tag=hrmcb-20",
                   "ISBN " + isbn + " @ amazon.com");
     appendLinkPar("https://www.google.com/search?tbm=bks&q=isbn:"+ isbn,
                   "ISBN " + isbn + " @ books.google.com");
