@@ -8,8 +8,7 @@
 <script>
 // Example:
 // https://halcanary.org/isbn/?034549752X/The+City+and+The+City
-var target = null;
-function atb(t) {
+function atb(target, t) {
     if (target == null) {
         alert("error"); return;
     }
@@ -17,7 +16,7 @@ function atb(t) {
     p.appendChild(document.createTextNode(t));
     target.appendChild(p);
 }
-function appendStrongPar(t) {
+function appendStrongPar(target, t) {
     if (target == null) {
         alert("error"); return;
     }
@@ -26,7 +25,7 @@ function appendStrongPar(t) {
     p.appendChild(document.createTextNode(t));
     target.appendChild(p);
 }
-function appendLinkPar(l,t) {
+function appendLinkPar(target, l, t) {
     if (target == null) {
         alert("error"); return;
     }
@@ -37,7 +36,7 @@ function appendLinkPar(l,t) {
     p.appendChild(a);
     target.appendChild(p);
 }
-function is_isbn_valid(n) {
+function is_isbn10_valid(n) {
     var check = 0;
     for (var i = 0; i < 9; i++) {
         check += (10 - i) * ( + n.substring(i, i + 1));
@@ -56,24 +55,31 @@ function get_isbn13_check(n) {
     }
     return (10 - (c % 10)) % 10;
 }
-function is_isbn_valid13(n) {
+function is_isbn13_valid(n) {
     return get_isbn13_check(n) == (+ n.substring(12, 13));
 }
 function to_isbn13(n) {
-    if (n.length == 10) {
-        var isbn12 = '978' + n.substring(0, 9);
-        return isbn12 + get_isbn13_check(isbn12 + '?');
-    }
-    return n;
+    if (n.length != 10) { return n; }
+    var isbn12 = '978' + n.substring(0, 9);
+    return isbn12 + get_isbn13_check(isbn12 + '?');
 }
-
-window.onload = function(){
-    target = document.getElementById('target'); // global
+function check_isbn_valid(n) {
+    switch (n.length) {
+        case 10:
+            return is_isbn10_valid(n) ? null : "ERROR: ISBN 10 FAILS VALIDITY CHECK";
+        case 13:
+            return is_isbn13_valid(n) ? null : "ERROR: ISBN 13 FAILS VALIDITY CHECK";
+        default:
+            return "ERROR: ISBN LENGTH IS WRONG";
+    }
+}
+window.addEventListener('load', () => {
+    var target = document.getElementById('target'); // global
     var search =  window.location.search;
     var isbn_regex = /\?([0-9xX-]*)/;
     var isbn = isbn_regex.exec(search);
     if (isbn == null) {
-        atb("ERROR: MISSING ISBN");
+        atb(target, "ERROR: MISSING ISBN");
         return;
     }
     isbn = isbn[1].replace("-","");
@@ -84,24 +90,22 @@ window.onload = function(){
         title = decodeURIComponent((title+'').replace(/\+/g, '%20'));
         appendStrongPar(title);
     }
-    if (isbn.length == 10) {
-        if (! is_isbn_valid(isbn))
-            atb("ERROR: ISBN 10 FAILS VALIDITY CHECK");
-    } else if (isbn.length == 13) {
-        if (! is_isbn_valid(isbn))
-            atb("ERROR: ISBN 13 FAILS VALIDITY CHECK");
-    } else {
-        atb("ERROR: ISBN LENGTH IS WRONG");
+    var validity_status = check_isbn_valid(isbn);
+    if (validity_status != null) {
+        atb(target, validity_status);
         return;
     }
     var isbn13 = to_isbn13(isbn);
-    appendLinkPar("https://www.barnesandnoble.com/w//?ean=" + isbn13,
+    appendLinkPar(target,
+                  "https://www.barnesandnoble.com/w//?ean=" + isbn13,
                   "ISBN " + isbn + " @ barnesandnoble.com");
-    appendLinkPar("https://www.amazon.com/s?k=" + isbn13 + "&tag=hrmcb-20",
+    appendLinkPar(target,
+                  "https://www.amazon.com/s?k=" + isbn13 + "&tag=hrmcb-20",
                   "ISBN " + isbn + " @ amazon.com");
-    appendLinkPar("https://www.google.com/search?tbm=bks&q=isbn:"+ isbn,
+    appendLinkPar(target,
+                  "https://www.google.com/search?tbm=bks&q=isbn:"+ isbn,
                   "ISBN " + isbn + " @ books.google.com");
-}
+});
 </script>
 </head>
   <body>

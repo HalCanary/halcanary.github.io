@@ -18,14 +18,13 @@ height:auto;
 </style>
 <script>
 function search_hco() {
-  document.getElementById("search-link-halcanary-org").style.display = "none";
-  document.getElementById("search-halcanary-org").style.display = "block";
-  return false;
+  const f = (i, d) => document.getElementById(i).style.display = d;
+  f("search-link-halcanary-org", "none");
+  f("search-halcanary-org", "block");
 }
 </script>
 </head>
 <body>
-
 
 <h1><a href="/" class="hiddenlink"><img src="images/Hal_W_Canary_3_hand.jpg" alt="Hal W Canary, III" width="400" height="91" style="border:0px"></a></h1>
 <div class="section">
@@ -49,7 +48,7 @@ function search_hco() {
 </div>
 <div class="section">
 <p class="centered">Copyright 1997-2020 by Hal Canary.</p>
-<div style="text-align:center"><pre style="text-align:left;display:inline-block;font-size:75%">
+<div style="text-align:center"><pre style="text-align:left;display:inline-block;">
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA512
 
@@ -58,7 +57,7 @@ mailto:halcanary@gmail.com
 tel:+1-919-724-2801
 http://halcanary.org/
 -----BEGIN PGP SIGNATURE-----
-
+<span style="font-size:75%;">
 iQGzBAEBCgAdFiEEnktWslK6VUQTWmFGvaILPbr3HuMFAl6XHAwACgkQvaILPbr3
 HuO6uAwAhPaNMFlypsrPKzCRPxOP0/ak+n1tOF4H1+GEfwMQX4ZYP+lYFXJe5Whn
 vM8aKJBrlT8TLYi/a0vDxWAjJ5Feq7gder3wItYILcSEVynbb3p1+IXKeN58YmU6
@@ -69,7 +68,7 @@ AEUCeYXK3ngIIwKhihHg4YOlsx0HGYyGQu0mwVgkknZvEKHkvhoni1WBelpt6Afp
 GVo51dttyKknZvaPU36rFBySe4JSvwvnAgf6yynjgdOjsOPI1EPLwGLu7XklMBJf
 40djiQdWl3dI8JyAUc7lAUN1WnfnrvrpU+qztYW7DYxiOnJYy/LoTcD1k7gLXLL9
 ULuBjY4w
-=EJp7
+=EJp7</span>
 -----END PGP SIGNATURE-----</pre></div>
 </div>
 </body></html>
