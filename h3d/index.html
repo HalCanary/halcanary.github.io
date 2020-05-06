@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<title>THREE-DEE</title>
+<style>body{margin:0;} canvas{display:block;}</style>
+<script type="module">
+import LoadPly from "./LoadPly.js"
+window.addEventListener('load', () => {
+    if (window.location.search) {
+        const s = window.location.search.replace("?", "");    
+        console.log(s);
+        LoadPly(document.body, s, window.innerWidth, window.innerHeight);
+    }
+});
+</script>
