@@ -1,0 +1,51 @@
+TITLE=Banking Manifesto
+DATE=2020-07-13 08:53:45 -0400 (EDT)
+POSTID=3016
+MODE=markdown
+CATEGORIES=economics
+SUMMARY=I lay out a proposal to change the US banking system for the better.
+
+
+Banks provide three essential services to the public:
+
+ 1. A place to keep money safe, with optional interest, allowing for 100% liquidity
+
+ 2. Long-term loans to households and small businesses.
+
+ 3. Mechanisms for transferring money between entities such as wire transfers, checks, money orders, and credit cards.
+
+Any change to the banking system should perform those services better than the existing system.
+
+Currently, depositors (those that put money into bank account) rely on government-guaranteed deposit insurance (the FDIC in America) to reduce risk to near zero.  Therefore, depositors don't choose between banks based on a risk-vs-interest calculation like an uninsured lender might. Instead, they only look at interest rates and the convenience that the bank offers.
+
+In a risk-based sense, the depositor is loaning money to the FDIC, and the FDIC is loaning money to the bank (which then, in turn, makes long-term loans). In theory, the FDIC can withhold deposit insurance or charge higher premiums for banks likely to default.  It is the FDIC's job to keep banks honest.
+
+Since there is no longer a connection between the bank's deposit business and its lending business, I propose spitting those into two businesses: deposit banks and lending banks.
+
+The deposit banks can be nationalized and combined into a new publicly-owned entity called the Deposit Bank of the United States: DBUSA.
+
+DEBUSA:
+
+  * provides deposit (savings + checking) accounts to all US citizens and legal entities that do business in the US.
+
+  * contracts with the Post Office for customer service tasks.
+
+  * provides ATMs across the country for cash withdrawals.  Fees would be as low as possible: ATMs in post office lobbies would have a flat 0.1% fee.  ATMs in remote locations would charge higher rates to reflect additional cost of moving cash around.
+
+  * provides cashier's checks with via ATMs with a built-in printer. The cashier's checks contain a digital signature, so stealing the printer and paper accomplishes nothing. The fee would be 0.1% plus the cost of the paper and ink.
+
+  * allows real-time payments between account-holders with a flat 0.1% fee.
+
+  * re-deposits all deposits (minus whatever amount they need for day-to-day operations) in a special interest-bearing account at the Federal Reserve Bank. The Fed can set the interest rate as another way to control the economy.
+
+All deposits in DBUSA are guaranteed by both the US Treasury and the Federal Reserve.
+
+The FDIC no longer guarantees deposit accounts. Instead, they act as a publicly-owned ratings agency for lending banks.  The Fed now, based on the information provided by the FDIC, buys large amounts of bonds from the lending banks.  The Fed can also decide a bank is too large to fail and insist that is split in half before the Fed will resume buying bonds.
+
+Nominally, the Fed can buy bank bonds in proportion to the amount of money in the DBUSA account.  But if the economy needs more money to be created, they can buy more bonds.  If inflation is a worry, they can buy fewer.
+
+Lending banks now only have two sources of money to lend: bonds and capital.  They no longer have to worry about a run on the bank.
+
+Lending banks may also provide a line of credit to back a credit card.  But the card's payment system is managed by the DBUSA.
+
+Over time, regular checks and the ACH system would be phased out in favor of cashier's checks (now more convient) and real-time payments.  Credit cards can also be phased out in favor of real-time payments.  For example, if your restaurtant server brings you the bill and it has a QR-code on the bottom linking to a "billing record" in the BDUSA database (which has an amount, a recieving account, and text metadata (your itemized reciept)).  You simply make a real-time payment into that billing record and your bill is paid.  The restaurant gets an instant notification that the bill is paid.
