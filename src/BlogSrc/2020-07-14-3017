@@ -1,0 +1,24 @@
+TITLE=Standard Space Habitats
+DATE=2020-07-14 13:06:25 -0400 (EDT)
+POSTID=3017
+MODE=markdown
+CATEGORIES=space
+SUMMARY=A refinement of O'Neill's colonies.
+
+<a href="https://settlement.arc.nasa.gov/70sArtHiRes/70sArt/art.html"><img src="/images/Spacecolony1.jpg" alt="[A pair of O'Neill cylinders. https://settlement.arc.nasa.gov/70sArtHiRes/70sArt/art.html Interior view looking out through large windows. Art work: Rick Guidice.  NASA ID Number AC75-1086"] width="1920" height="1512"></a>
+
+Start with the idea of an [O'Neill cylinder](https://en.wikipedia.org/wiki/O%27Neill_cylinder): a spinning cylindrical space habitat 8 km in diameter and 32 km long.  The frequency of revolution is about two minutes.  This is a good diameter for a space habitat: if it is an order of magnitude larger, the structure won't hold together when it spins; an order of magnitude smaller, the Coriolis force is more noticeable.
+
+The giant windows are a huge hazard for both radiation and meteor impacts.  Instead, make the cylinder a solid steel vessel, thick enough to block most radiation.  Make it out of many layers of steel sheeting, with a thick layer of ablative insulation on the outside that can absorb and redirect the kinetic energy of a meteor impact.  Construct it as several independent 8 km long segments, each with its own shielded endcaps, all sharing a common axis.  Each hab segment has airlocks at the axis, leading to rotating joints that connect the segment to two small non-rotating modules at the axis, where there are ports for visiting spacecraft to dock.  This is also where arrays of directional communication antennas are located.
+
+At one end of the axis, there is a massive array of solar panels (not rotating with the hab), at the other, there is an array of radiators.  If the hab is too far from a star for solar power, a nuclear power plant is located outside of the hab, along the axis, in its own shielded module, as far away as needed to minimize radiation hazards to humans entering and exiting the habitat at the docking port module.
+
+The ecology and economy of the hab is 99.9% closed - with energy as an input and heat as an output.  Occasionally, robots are sent out to mine asteroids or comets for material to replace material losses.  I expect that the solar power and radiator arrays will need constant maintenance and replacement to keep working at 100% capacity.  All of the habs in a star system exchange information, allowing the occupants of the habs to share and trade art, science, and culture.
+
+The inside of the hab segment is either completely open or is segmented into many smaller "cells" big enough to feel open but small enough to give the human population more room.  A cell might have a ceiling 100 meters tall that looks like Earth's sky and provides similar light.  Some of the interior volume is taken up by light industry and vertical-farm-based agriculture.
+
+This design is meant to be very robust and adaptable.  It doesn't matter if the hab is located in orbit around a red dwarf or a blue giant, as long as the solar panels work.  The hab can be sent on a thousand-year interstellar voyage as long as enough spare energy and material is taken along.  The occupants of the hab can remotely supervise robots to build new habs.  
+
+This is the future for humanity if we don't become post-human.  There aren't any planets out there that we can walk around in shirtsleeves on.  Terraforming projects would take many thousands of years at best, and might fall afoul of the law of unintended consequences.  Even Mars, one of the best possible places for humans to live outside of Earth, might not have enough gravity for standard humans to thrive.
+
+I'm not saying rocky planets and moons aren't useful.  After all, that's where a lot of the useable material is.  But if you need that material, why not supervise robot miners from orbit?  Especially if the planet has a surface gravity of 1.5g or a surface temperature of 700 K.

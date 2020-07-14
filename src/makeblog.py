@@ -162,6 +162,7 @@ class UpdatingFile(object):
 
     def __init__(self, path):
         self.path = path
+        self.o = None
         path_dir = os.path.dirname(path)
         UpdatingFile.mkdirs(path_dir)
         fd, self.tempfilepath = tempfile.mkstemp()
