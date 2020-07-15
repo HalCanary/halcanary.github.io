@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# coding=utf-8
 
 import sys, os, math, subprocess, re, datetime, tempfile, hashlib, shutil
 
@@ -10,14 +11,79 @@ relurlfixer = re.compile('^{}/(.*)$'.format(base_dir))
 first_year = '1997'
 current_year = '{:04d}'.format(datetime.date.today().year)
 
+style = """
+body{
+font-family:sans-serif;
+max-width:35em;
+margin:8px auto;
+padding:0 8px;
+}
+hr.black{
+border:0;
+height:1px;
+color:#000;
+background-color:#000;
+}
+img{
+max-width:100%;
+height:auto;
+}
+.content hr{
+padding:0;
+margin:0;
+border:none;
+text-align:center;
+color:black;
+}
+.content hr:after{
+content:"✶ \A0 ✶ \A0 ✶";
+display:block;
+position:relative;
+}
+.rightside{text-align:right}
+.centered{text-align:center}
+.postbox{
+border-bottom:6px solid #ddd;
+margin:0 -8px 6px -8px;
+padding:0 8px 0 8px;
+}
+pre{overflow-x:auto}
+.byline{
+background:#fff;
+color:#888;
+}
+.blogtitle{}
+.content{}
+.categorylink{}
+a.hiddenlink{}
+a.hiddenlink:link {
+  background: inherit;
+  color: inherit;
+  text-decoration: none;
+}
+a.hiddenlink:visited {
+  background: inherit;
+  color: inherit;
+  text-decoration: none;
+}
+a.hiddenlink:active {
+  background: inherit;
+  color: inherit;
+  text-decoration: none;
+}
+
+
+""".strip()
+
+
+
 footer = """
 <!-- END CONTENT -->
 
       </div>
-      <hr style="border:0;height:1px;color:#000;background-color:#000;">
+      <hr class="black">
 
       <p>(<a href="../../../../archives/">back</a>)</p>
-    </div>
   </body>
 </html>
 """
@@ -27,104 +93,33 @@ header = """<!DOCTYPE html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==">
 <title>{title}</title>
+<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==">
 <style>
-body {{ font-family:sans-serif; }}
-.column {{ max-width:35em; margin:0 auto; }}
-img {{ max-width:100%; height:auto; }}
+{style}
 </style>
 </head>
   <!-- Copyright {years} Hal Canary. ALL RIGHTS RESERVED. -->
 """
 
-archive_header = """<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<title>Voder-Vocoder Archive</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==">
-<style>
-body {{
-font-family:sans-serif;
-}}
-.column {{
-max-width:35em;
-margin:0 auto;
-}}
-img {{
-max-width:100%;
-height:auto;
-}}
-</style>
-</head>
-  <!-- Copyright 1997-{current_year} Hal Canary. ALL RIGHTS RESERVED. -->
-"""
-"""
+top_posts_header = """
   <body>
-    <div class="column">
-
-      <h1><a href="/vv/" class="hiddenlink">Voder-Vocoder</a> Archive{name}</h1>
-
-      <div class="content">
-      <ul>
-<!-- BEGIN CONTENT -->
-"""
-archive_footer = """
-<!-- END CONTENT -->
-
-      </ul>
-      </div>
-      <hr style="border:0;height:1px;color:#000;background-color:#000;">
-      <p class="centered"><a href="../">UP</a></p>
-    </div>
-  </body>
-</html>
-"""
-
-top_posts_header = """<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<title>Voder-Vocoder</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==">
-<style>
-body {{
-font-family:sans-serif;
-}}
-.column {{
-max-width:35em;
-margin:0 auto;
-}}
-img {{
-max-width:100%;
-height:auto;
-}}
-</style>
-</head>
-  <!-- Copyright 1997-{current_year} Hal Canary. ALL RIGHTS RESERVED. -->
-
-  <body>
-    <div class="column">
-
       <h1>Voder-Vocoder</h1>
       <div class="byline centered">The Log of Hal Canary</div>
 
       <script>
-        function search_hco() {{
+        function search_hco() {
           document.getElementById("search-link-halcanary-org").style.display = "none";
           document.getElementById("search-halcanary-org").style.display = "block";
           return false;
-        }}
+        }
       </script>
       <div id="search-link-halcanary-org">
-        <div style="text-align:right"><a href="" onclick="return search_hco();">search</a></div>
+        <div class="rightside"><a href="" onclick="return search_hco();">search</a></div>
       </div>
       <div id="search-halcanary-org" style="display:none;">
         <form method="get" action="https://www.google.com/search">
-          <div style="text-align:right">
+          <div class="rightside">
             <input name="domains" value="halcanary.org" type="hidden" />
             <input name="sitesearch" value="halcanary.org" type="hidden" />
             <input id="search" name="q" size="30" maxlength="255" />
@@ -132,13 +127,13 @@ height:auto;
           </div>
         </form>
       </div>
-      <div style="margin-bottom:12px;">
+      <div class="postbox">&nbsp;</div>
+      <div>
 """
 top_posts_footer = """
       </div>
       <div class="centered"><a href="archives/">MORE</a></div>
-      <div style="margin-bottom:12px;">&nbsp;</div>
-    </div>
+      <div>&nbsp;</div>
   </body>
 </html>
 """
@@ -188,34 +183,8 @@ class UpdatingFile(object):
         else:
             sys.stderr.write(*args, **kwargs)
 
-
-post_header = """<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<title>Voder-Vocoder: {title}</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==">
-<style>
-body {{
-font-family:sans-serif;
-}}
-.column {{
-max-width:35em;
-margin:0 auto;
-}}
-img {{
-max-width:100%;
-height:auto;
-}}
-</style>
-</head>
-
-  <!-- Copyright {year}-{current_year} Hal Canary. ALL RIGHTS RESERVED. -->
-
+post_header = """
   <body>
-    <div class="column">
-
       <h1 class="blogtitle">{title}</h1>
 {summarypart}
       <div class="byline">By Hal Canary,
@@ -223,8 +192,6 @@ height:auto;
         (<a href="{permalink}">link</a>)
 {category_links}        </div>
       <!-- SRC= {src} -->
-      <hr style="border:0;height:1px;color:#000;background-color:#000;">
-
       <div class="content">
 
 <!-- BEGIN CONTENT -->
@@ -275,6 +242,7 @@ class Post(object):
         self.summarypart = ''
         self.categories = ''
         self.mode = 'default'
+        self.style = style
 
         #self.values = {}
         with open(self.source_path,'r') as f:
@@ -317,7 +285,7 @@ class Post(object):
 
             if self.summary is not None:
                 self.summarypart = (
-                    '\n      <p class="byline">'
+                    '\n      <p>'
                     + self.summary + '</p>\n')
             else:
                 self.summarypart = ''
@@ -349,6 +317,7 @@ class Post(object):
                     self.category_links)
 
             o = UpdatingFile(self.target_file)
+            o.write(header.format(title='Voder-Vocoder: ' + self.title, style=style, years=self.year + '-' + self.current_year))
             o.write(post_header.format(**self.__dict__))
 
             if self.mode.lower() == 'markdown':
@@ -361,26 +330,27 @@ class Post(object):
                 print 'modified', self.target_file
 
 recent_post = """
-      <div style=";border-bottom: 6px solid #ddd; border-top: 6px solid #ddd; margin:0 -8px -6px; -8px; padding: 0 8px 0 8px">
+<div class="postbox">
       <h2 class="blogtitle">{title}</h2>
 {summarypart}
       <div class="byline">By Hal Canary,
         {date}
         (<a href="{link}">link</a>)
-{category_links}        </div>
-      <!-- SRC= {src} -->
+        {category_links}
+      </div>
+      <!-- SRC={src} -->
       <div class="content">
 {post}
       </div>
-      </div>
+</div>
 
-      <!-- ************************************************************** -->
 """
 class RecentPosts(object):
     def __init__(self):
         self.loc = '{}/index.html'.format(base_dir)
         self.o = UpdatingFile(self.loc)
-        self.o.write(top_posts_header.format(current_year=current_year))
+        self.o.write(header.format(style=style, title='Voder-Vocoder', years='1997-' + current_year))
+        self.o.write(top_posts_header)
     def close(self):
         self.o.write(top_posts_footer)
         if self.o.close():
@@ -420,19 +390,25 @@ class Index(object):
         self.upwards = '../' * len(arg)
         self.loc = '{}/{}/index.html'.format(base_dir, '/'.join(arg))
         self.o = UpdatingFile(self.loc)
-        self.o.write(header.format(title='Voder-Vocoder Archive', years='1997-' + current_year))
+        self.o.write(header.format(style=style, title='Voder-Vocoder Archive', years='1997-' + current_year))
         archive_header = """
   <body>
-    <div class="column">
-
-      <h1><a href="/vv/" class="hiddenlink">Voder-Vocoder</a> Archive{name}</h1>
-
-      <div class="content">
-      <ul>
+    <h1><a href="/vv/" class="hiddenlink">Voder-Vocoder</a> Archive{name}</h1>
+    <div class="content">
+    <ul>
 <!-- BEGIN CONTENT -->
 """
         self.o.write(archive_header.format(name=self.name))
     def close(self):
+        archive_footer = """
+<!-- END CONTENT -->
+    </ul>
+    </div>
+    <hr class="black">
+    <p class="centered"><a href="../">UP</a></p>
+  </body>
+</html>
+"""
         self.o.write(archive_footer)
         if self.o.close():
             print 'modified', self.loc
