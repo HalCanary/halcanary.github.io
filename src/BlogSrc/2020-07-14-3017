@@ -5,7 +5,7 @@ MODE=markdown
 CATEGORIES=space
 SUMMARY=A refinement of O'Neill's colonies.
 
-<a href="https://settlement.arc.nasa.gov/70sArtHiRes/70sArt/art.html"><img src="/images/Spacecolony1.jpg" alt="[A pair of O'Neill cylinders. https://settlement.arc.nasa.gov/70sArtHiRes/70sArt/art.html Interior view looking out through large windows. Art work: Rick Guidice.  NASA ID Number AC75-1086"] width="1920" height="1512"></a>
+<a href="https://settlement.arc.nasa.gov/70sArtHiRes/70sArt/art.html"><img src="/images/Spacecolony1.jpg" alt="[A pair of O'Neill cylinders. https://settlement.arc.nasa.gov/70sArtHiRes/70sArt/art.html Interior view looking out through large windows. Art work: Rick Guidice.  NASA ID Number AC75-1086]" width="1920" height="1512"></a>
 
 Start with the idea of an [O'Neill cylinder](https://en.wikipedia.org/wiki/O%27Neill_cylinder): a spinning cylindrical space habitat 8 km in diameter and 32 km long.  The frequency of revolution is about two minutes.  This is a good diameter for a space habitat: if it is an order of magnitude larger, the structure won't hold together when it spins; an order of magnitude smaller, the Coriolis force is more noticeable.
 

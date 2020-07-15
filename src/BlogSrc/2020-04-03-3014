@@ -6,5 +6,5 @@ MODE=markdown
 CATEGORIES=
 SUMMARY=US Employment-Population Ratio (ages 25-54 Yrs), last 25 Years
 
-<a href="https://fred.stlouisfed.org/graph/?g=qD5Q"><img src="https://fred.stlouisfed.org/graph/fredgraph.png?g=qD5Q" width="1168" height="470"></a>
+<a href="https://fred.stlouisfed.org/graph/?g=qD5Q"><img src="https://fred.stlouisfed.org/graph/fredgraph.png?g=qD5Q" width="1168" height="470" alt="[graph]></a>
 
