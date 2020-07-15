@@ -8,14 +8,21 @@ MONTH=05
 DAY=20
 POSTID=7
 CATEGORIES=life;
-MODE=htmldiv
+MODE=markdown
 
-<p>Yesterday I finished a E2 node I've been working on for a while: <a href="http://everything2.com/?node=From+Beirut+to+Jerusalem">http://everything2.com/?node=From+Beirut+to+Jerusalem</a>. Today I noded <a href="http://everything2.com/?node=Kyoto+Now%21">http://everything2.com/?node=Kyoto+Now%21</a>. </p>
-<p>Spending more money on CD's.</p>
-<p>Got these nifty thumb screws for my computer. They are the same size as the srews that you use to keep the covers on the case, but they have an oversized thumb knob to make access easier. For the first time in months, my case covers are screwed on!</p>
-<p>As of last weekend, I've been graduated for exactly one year. Crazy. </p>
-<p><a href="http://uw.physics.wisc.edu/~hal/art/devil-01.jpg">http://uw.physics.wisc.edu/~hal/art/devil-01.jpg</a><br />
-<a href="http://uw.physics.wisc.edu/~hal/art/devil-02.jpg">http://uw.physics.wisc.edu/~hal/art/devil-02.jpg</a><br />
-<a href="http://uw.physics.wisc.edu/~hal/art/devil-03.jpg">http://uw.physics.wisc.edu/~hal/art/devil-03.jpg</a></p>
-<p>Later.</p>
+Yesterday I finished a E2 node I've been working on for a while: [http://everything2.com/?node=From+Beirut+to+Jerusalem](http://everything2.com/?node=From+Beirut+to+Jerusalem). Today I noded [http://everything2.com/?node=Kyoto+Now%21](http://everything2.com/?node=Kyoto+Now%21).
+
+Spending more money on CD's.
+
+Got these nifty thumb screws for my computer. They are the same size as the srews that you use to keep the covers on the case, but they have an oversized thumb knob to make access easier. For the first time in months, my case covers are screwed on!
+
+As of last weekend, I've been graduated for exactly one year. Crazy.
+
+![/art/devil-01.jpg](/art/devil-01.jpg)
+
+![/art/devil-02.jpg](/art/devil-02.jpg)
+
+![/art/devil-03.jpg](/art/devil-03.jpg)
+
+Later.
 
