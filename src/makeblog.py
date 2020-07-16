@@ -263,18 +263,14 @@ class Post(object):
                     self.date = value
                 elif key == 'POSTID':
                     self.postid = value
-                elif key == 'PERMALINK':
-                    self.permalink = value
-                elif key == 'PERMALINKPART':
-                    self.permalinkpart = value
                 elif key == 'SUMMARY':
                     self.summary = value
                 elif key == 'CATEGORIES':
                     self.categories = value
                 elif key == 'MODE':
                     self.mode = value
-                # else:
-                #    self.values[key] = value
+                elif key != 'COPYRIGHT':
+                    print '%s: %r=%r' % (path, key, value)
 
             if self.date is None:
                 raise Exception('DATE missing ({})'.format(self.source_path))
@@ -289,22 +285,19 @@ class Post(object):
                     + self.summary + '</p>\n')
             else:
                 self.summarypart = ''
+
             timestamp = datetime.datetime.strptime(
                 self.date.split()[0],'%Y-%m-%d').date()
             self.year = '{:04d}'.format(timestamp.year)
             self.month = '{:02d}'.format(timestamp.month)
             self.day = '{:02d}'.format(timestamp.day)
-            if self.permalinkpart is None:
-                self.permalinkpart = '{}/{}/{}/{}/{}/'.format(
+
+            self.permalinkpart = '{}/{}/{}/{}/{}/'.format(
                     base_dir,self.year,self.month,self.day,
                     self.postid)
-            if self.permalink is None:
-                self.permalink = url_base + '/' + self.permalinkpart
 
-            if self.permalinkpart[-1] == '/':
-                self.target_file = self.permalinkpart + 'index.html'
-            else:
-                self.target_file = self.permalinkpart + '.html'
+            self.permalink = url_base + '/' + self.permalinkpart
+            self.target_file = self.permalinkpart + 'index.html'
 
             self.category_list = filter(len, self.categories.split(';'))
             self.category_links = ''
