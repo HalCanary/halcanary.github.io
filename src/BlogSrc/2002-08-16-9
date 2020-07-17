@@ -3,9 +3,10 @@ TITLE=MLP: Mindless Link Propagation
 DATE=2002-08-16 15:39:50
 POSTID=9
 CATEGORIES=mindless-link-propagation;
-MODE=htmldiv
+MODE=markdown
 
-<p><a href="http://slashdot.org/comments.pl?sid=38125&amp;cid=4084871">http://slashdot.org/comments.pl sid=38125&amp;cid=4084871</a><br />
-<a href="http://slashdot.org/comments.pl?sid=34833&amp;cid=3763482">http://slashdot.org/comments.pl sid=34833&amp;cid=3763482</a><br />
-<a href="http://www.kuro5hin.org/story/2002/6/14/13440/3767">http://www.kuro5hin.org/story/2002/6/14/13440/3767</a></p>
+[http://slashdot.org/comments.pl sid=38125&cid=4084871](http://slashdot.org/comments.pl?sid=38125&cid=4084871)
 
+[http://slashdot.org/comments.pl sid=34833&cid=3763482](http://slashdot.org/comments.pl?sid=34833&cid=3763482)
+
+[http://www.kuro5hin.org/story/2002/6/14/13440/3767](http://www.kuro5hin.org/story/2002/6/14/13440/3767)

@@ -3,14 +3,19 @@ TITLE=style preferences / prayers of the people
 DATE=2002-09-29 00:00:00
 POSTID=15
 CATEGORIES=life;
-MODE=htmldiv
+MODE=markdown
 
-<p>I got the style preferences to work under IE6. I still don't know why it was crashing, though. The fix is a bit of a kludge.</p>
-<p>Was bored this morning, so I went to church. They altered the prayers of the people. The new version:</p>
-<blockquote><p><em>We pray that our leaders may govern with humility,<br /> that they not be full of selfish ambition or conceit... </em></p>
-</blockquote>
-<p>The old version (form I):</p>
-<blockquote><p><em>For our President, for the leaders of the nations,<br />and for all in authority, let us pray to the Lord.<br />Lord, have mercy.</em></p>
-</blockquote>
-<p>I'm not sure what to make of the change. I think somebody's saying that our leaders are more evil today and that we no longer want the Lord to have mercy for them.</p>
+I got the style preferences to work under IE6. I still don't know why it was crashing, though. The fix is a bit of a kludge.
 
+Was bored this morning, so I went to church. They altered the prayers of the people. The new version:
+
+> _We pray that our leaders may govern with humility,  
+> that they not be full of selfish ambition or conceit..._
+
+The old version (form I):
+
+> _For our President, for the leaders of the nations,  
+> and for all in authority, let us pray to the Lord.  
+> Lord, have mercy._
+
+I'm not sure what to make of the change. I think somebody's saying that our leaders are more evil today and that we no longer want the Lord to have mercy for them.

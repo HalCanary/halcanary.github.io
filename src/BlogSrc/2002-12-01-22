@@ -3,13 +3,18 @@ TITLE=Photos
 DATE=2002-12-01 00:00:00
 POSTID=22
 CATEGORIES=life;
-MODE=htmldiv
+MODE=markdown
 
-<p><strong>New photos:</strong> from my trip to Ft. Meyers last week  <a href="/p/photo-2002-11-29/">here</a> and <a href="https://halcanary.org/?p=photo-2002-11-30">here</a>. I also put up some photos from a trip to Devil's Lake on  <a href="https://halcanary.org/?p=photo-2002-11-02">November 2</a>.</p>
-<p>Everyone needs family in Florida.</p>
-<p>After just getting back to town late this afternoon, I'm packing my bags for another trip early tomorrow morning. Pittsburgh on business. At least it's a direct flight. Let's check the  <a href="http://www.wunderground.com/cgi-bin/findweather/getForecast?query=Pittsburgh">weather  for Monday</a>:  &ldquo;Cloudy. Scattered snow showers mainly afternoon. An inch or less of snow accumulation. Highs in the lower 30s. Southwest then 10 to 20 mph then west during the afternoon. Chance of snow 50 percent&rdquo;.  Fun.</p>
-<hr />
-<p>Why do I listen to jazz music? Funny story. I detested jazz music. Couldn't stand it. My father used to play the Memphis jazz station after finally giving up on commercial radio, but I hated it. Then some girl happened by my house, tagging along with one of my friends. She made the assumption that I liked jazz music, and started discussing the topic with me. I played along as if I cared, then immediately after, went out and started learning something about jazz. By the next month, I owned three Miles Davis albums. Just to impress some girl.  Sounds like a bad sit-com episode. I was young and stupid then, now I'm old, stupid, and listen to jazz.</p>
-<hr />
-<p><em>Law &amp; Order: Criminal Intent</em> is not as good as the other <em>Law &amp; Orders</em>'s out there. It always ends the same way. The annoying, smart cop gets the criminal into the interrogation room and grilles them in a really scary, overacted way. The other cop says something every now and then. Eventually, the criminal confesses. It's usually the evil old lady who did it.</p>
+**New photos:** from my trip to Ft. Meyers last week [here](/p/photo-2002-11-29/) and [here](/p/photo-2002-11-30/). I also put up some photos from a trip to Devil's Lake on [November 2](/p/photo-2002-11-02/).
 
+Everyone needs family in Florida.
+
+After just getting back to town late this afternoon, I'm packing my bags for another trip early tomorrow morning. Pittsburgh on business. At least it's a direct flight. Let's check the [weather for Monday](http://www.wunderground.com/cgi-bin/findweather/getForecast?query=Pittsburgh): “Cloudy. Scattered snow showers mainly afternoon. An inch or less of snow accumulation. Highs in the lower 30s. Southwest then 10 to 20 mph then west during the afternoon. Chance of snow 50 percent”. Fun.
+
+* * *
+
+Why do I listen to jazz music? Funny story. I detested jazz music. Couldn't stand it. My father used to play the Memphis jazz station after finally giving up on commercial radio, but I hated it. Then some girl happened by my house, tagging along with one of my friends. She made the assumption that I liked jazz music, and started discussing the topic with me. I played along as if I cared, then immediately after, went out and started learning something about jazz. By the next month, I owned three Miles Davis albums. Just to impress some girl. Sounds like a bad sit-com episode. I was young and stupid then, now I'm old, stupid, and listen to jazz.
+
+* * *
+
+_Law & Order: Criminal Intent_ is not as good as the other _Law & Orders_'s out there. It always ends the same way. The annoying, smart cop gets the criminal into the interrogation room and grilles them in a really scary, overacted way. The other cop says something every now and then. Eventually, the criminal confesses. It's usually the evil old lady who did it.

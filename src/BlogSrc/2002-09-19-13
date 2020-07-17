@@ -3,18 +3,16 @@ TITLE=Update on my linux desktop
 DATE=2002-09-19 23:17:04
 POSTID=13
 CATEGORIES=computers-code;
-MODE=htmldiv
+MODE=markdown
 
-<ul>
-<li>Desktop environment: none (what for?)</li>
-<li>Window Manager: Windowmaker</li>
-<li>Number of apps in my dock: 12 (I need to pare this down to 8 or so)</li>
-<li>Terminal Emulator: Konsole (shift-rightarrow to switch tabs)</li>
-<li>Browser: Mozilla 1.1</li>
-<li>Editor: GNU Emacs 21</li>
-<li>PIM: Evolution (just for syncing with the Palm)</li>
-<li>mp3 player: mp3blaster (curses console app)</li>
-<li>File manager: konqueror $HOME (when bash is not enough)</li>
-</ul>
-<p>And, by the way, MACOSX sucks. It's too MACOSish.</p>
+*   Desktop environment: none (what for?)
+*   Window Manager: Windowmaker
+*   Number of apps in my dock: 12 (I need to pare this down to 8 or so)
+*   Terminal Emulator: Konsole (shift-rightarrow to switch tabs)
+*   Browser: Mozilla 1.1
+*   Editor: GNU Emacs 21
+*   PIM: Evolution (just for syncing with the Palm)
+*   mp3 player: mp3blaster (curses console app)
+*   File manager: konqueror $HOME (when bash is not enough)
 
+And, by the way, MACOSX sucks. It's too MACOSish.

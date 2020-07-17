@@ -3,7 +3,7 @@ TITLE=why particles have spin
 DATE=2002-08-20 13:36:23
 POSTID=10
 CATEGORIES=mindless-link-propagation;
-MODE=htmldiv
+MODE=markdown
 
-<p><a href="http://neilgaming.no-ip.com/stuff/quotes.txt">&ldquo;God does not play dice with the universe. He plays roulette; that's why particles have spin.&rdquo;</a> <br /> --Spamalamadingdong</p>
-
+[“God does not play dice with the universe. He plays roulette; that's why particles have spin.”](http://neilgaming.no-ip.com/stuff/quotes.txt)  
+\--Spamalamadingdong

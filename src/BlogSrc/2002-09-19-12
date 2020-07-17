@@ -3,13 +3,18 @@ TITLE=Books on JavaScript and Perl
 DATE=2002-09-19 23:16:04
 POSTID=12
 CATEGORIES=computers-code;
-MODE=htmldiv
+MODE=markdown
 
-<p>Last weekend, I picked up a couple of O'Reilly books at the store: <em>JavaScript: The Definitive Guide</em> by David Flanagan, and <em>Programming Perl</em> (the camel book) by Larry Wall, et all. </p>
-<p>I've found that JavaScript (js) is a much easier to grok if you think of it as a real language. And there's a lot of cool things that can be done with the W3C DOM. </p>
-<p>Perl, on the other hand, is cool, but it's syntax is too complicated. A comparason is in order. YOu can learn all there is to know about Java's syntax in a short time, but it would take years of effort to lean everything that can be done with the language. With Perl, it takes a long time to grok the eccentricies of the syntax, but as soon as you do, you know how to do anything with the language.  </p>
-<p>Is there a word for this concept? I guess that Java is a minimalistic OOP language, while Perl is a maxamalistic language that allows OOP structures. As a logician, I hate Perl. As a hacker, I have a lot of respect for anyone who has mastered it.</p>
-<hr />
-<p>I've played a bit with js and cookies. See <a href="preferences.cgi">the prefs page</a>. </p>
-<p>I've been taking photos. See  <a href="http://ups.physics.wisc.edu/~hal/powershot.html">this</a>,  <a href="http://ups.physics.wisc.edu/~hal/photos/2002-08-25-index.html"> this</a>, and  <a href="http://ups.physics.wisc.edu/~hal/photos/2002-08-31-index.html"> that</a>.</p>
+Last weekend, I picked up a couple of O'Reilly books at the store: _JavaScript: The Definitive Guide_ by David Flanagan, and _Programming Perl_ (the camel book) by Larry Wall, et all.
 
+I've found that JavaScript (js) is a much easier to grok if you think of it as a real language. And there's a lot of cool things that can be done with the W3C DOM.
+
+Perl, on the other hand, is cool, but it's syntax is too complicated. A comparason is in order. YOu can learn all there is to know about Java's syntax in a short time, but it would take years of effort to lean everything that can be done with the language. With Perl, it takes a long time to grok the eccentricies of the syntax, but as soon as you do, you know how to do anything with the language.
+
+Is there a word for this concept? I guess that Java is a minimalistic OOP language, while Perl is a maxamalistic language that allows OOP structures. As a logician, I hate Perl. As a hacker, I have a lot of respect for anyone who has mastered it.
+
+* * *
+
+I've played a bit with js and cookies. See [the prefs page](preferences.cgi).
+
+I've been taking photos. See [this](/p/a40/), [this](/p/photo-2002-08-25/), and [that](/p/photo-2002-08-31/).

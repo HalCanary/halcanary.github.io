@@ -3,7 +3,6 @@ TITLE=MLP
 DATE=2002-11-26 00:00:00
 POSTID=21
 CATEGORIES=mindless-link-propagation;
-MODE=htmldiv
+MODE=markdown
 
-<p><a href="http://www.xeni.net/images/boingboing/spiderwood.gif">A Moment of Zen</a></p>
-
+[A Moment of Zen](http://www.xeni.net/images/boingboing/spiderwood.gif)

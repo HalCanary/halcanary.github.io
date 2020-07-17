@@ -3,26 +3,43 @@ TITLE=Quiting!
 DATE=2002-11-25 00:00:00
 POSTID=20
 CATEGORIES=life;
-MODE=htmldiv
+MODE=markdown
 
-<p><strong>Time to move on.</strong> I've given notice at work that I'll be leaving. My last day is the friday before Christmas. I'll be taking some classes at the UW next semester. Right now I'm thinking of taking Combinatorics (475) and the second semester of Analysis (522).  Damnitall, Combinatorics is now closed. And I can't regester anytime soon. None of the classes I want to take have many open seats. On the other hand, seats will likely open up. They always do.</p>
-<p>I plan on feeding myself through hiring myself out as a tutor. Good luck to me. </p>
-<p>I'm excited about being a poor student again. I'm going to have to live on a strict budget. I've already made plans to write my own money-tracking software, like quicken, but without the bloat.</p>
-<hr />
-<p><strong>My Vaio</strong> I've been playing around with my new notebook. </p>
-<p>Still no linux.</p>
-<p>I've finally gotten around to organizing the start menu. Why does the start menu have such awful organization by default? It doesn't matter, because I put shortcuts to the apps that I use on the top level anyways.</p>
-<p>I've installed a bunch of software: cygwin, xfree86, gcc, two perl interpreters, a java jdk, two scheme interpreters, two versions of emacs, gpg, winamp, latex, xfig, gimp, Civilization 3, and the phoenix browser. Notice that I can do a large amount of development on this machine. To test out my complers and iterpreters, I've written &ldquo;hello world&rdquo; in: c, c++, perl, java, python, scheme, and bash. So far, that's all of the development I've done. What I need now is a large digital library of reference books on the hard drive. I suppose that's what the www is for.</p>
-<hr />
-<p> <strong>To do</strong>:  add a section to this site for code. Someone might be interested in my collection of hello worlds&mdash;I guess not. Well, how about the code that runs this site? I guess that's pretty trivial. How about the java chat applet Mark and I did? What about that ftpcopy program? I suppose I'd have to finish development first. Never mind.   </p>
-<hr />
-<p>Reading <em>This Modern World</em><a href="http://www.thismodernworld.com/pages/arc/arc_fr.html">archives</a>.  It's funny how much history repeats itself over the course of 12 years. Of course, I spent the early nineties in a reactionary fog, so I don't remember much about them.</p>
-<hr />
-<p> I finished reading the <em>Quenta Silmarillion</em> again. It was better the second time. I'd like to see them take the story of  T&uacute;rin Turambar and turn it into a movie. It's a great tragedy. </p>
-<hr />
-<p>Here's a link to the  <a href="http://www.scienceblog.com/community/"><em>Science Blog</em></a>.  It's like slashdot, except that noone posts comments. </p>
-<p>I'd also like to plug <a href="http://news.google.com/">Google News</a> as a good source of general news. We don't need no stinkin' editors. </p>
-<hr />
-<p>&ldquo;Tragically, as many as 9625 out of every 10,000 individuals may be neurotypical.&rdquo;<br />
----<a href="http://isnt.autistics.org/">Institute for the Study of the Neurologically Typical</a></p>
+**Time to move on.** I've given notice at work that I'll be leaving. My last day is the friday before Christmas. I'll be taking some classes at the UW next semester. Right now I'm thinking of taking Combinatorics (475) and the second semester of Analysis (522). Damnitall, Combinatorics is now closed. And I can't regester anytime soon. None of the classes I want to take have many open seats. On the other hand, seats will likely open up. They always do.
 
+I plan on feeding myself through hiring myself out as a tutor. Good luck to me.
+
+I'm excited about being a poor student again. I'm going to have to live on a strict budget. I've already made plans to write my own money-tracking software, like quicken, but without the bloat.
+
+* * *
+
+**My Vaio** I've been playing around with my new notebook.
+
+Still no linux.
+
+I've finally gotten around to organizing the start menu. Why does the start menu have such awful organization by default? It doesn't matter, because I put shortcuts to the apps that I use on the top level anyways.
+
+I've installed a bunch of software: cygwin, xfree86, gcc, two perl interpreters, a java jdk, two scheme interpreters, two versions of emacs, gpg, winamp, latex, xfig, gimp, Civilization 3, and the phoenix browser. Notice that I can do a large amount of development on this machine. To test out my complers and iterpreters, I've written “hello world” in: c, c++, perl, java, python, scheme, and bash. So far, that's all of the development I've done. What I need now is a large digital library of reference books on the hard drive. I suppose that's what the www is for.
+
+* * *
+
+**To do**: add a section to this site for code. Someone might be interested in my collection of hello worlds—I guess not. Well, how about the code that runs this site? I guess that's pretty trivial. How about the java chat applet Mark and I did? What about that ftpcopy program? I suppose I'd have to finish development first. Never mind.
+
+* * *
+
+Reading _This Modern World_ ([archives](http://www.thismodernworld.com/pages/arc/arc_fr.html)). It's funny how much history repeats itself over the course of 12 years. Of course, I spent the early nineties in a reactionary fog, so I don't remember much about them.
+
+* * *
+
+I finished reading the _Quenta Silmarillion_ again. It was better the second time. I'd like to see them take the story of Túrin Turambar and turn it into a movie. It's a great tragedy.
+
+* * *
+
+Here's a link to the [_Science Blog_](http://www.scienceblog.com/community/). It's like slashdot, except that noone posts comments.
+
+I'd also like to plug [Google News](http://news.google.com/) as a good source of general news. We don't need no stinkin' editors.
+
+* * *
+
+“Tragically, as many as 9625 out of every 10,000 individuals may be neurotypical.”  
+\---[Institute for the Study of the Neurologically Typical](http://isnt.autistics.org/)

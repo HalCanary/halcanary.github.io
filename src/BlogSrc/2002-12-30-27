@@ -3,9 +3,10 @@ TITLE=Florida photos
 DATE=2002-12-30 19:43:04
 POSTID=27
 CATEGORIES=photos;
-MODE=htmldiv
+MODE=markdown
 
-<p><a href="/photos/2002-12-26-sanibel02.jpg">  <img alt="" src="/photos/thumb/2002-12-26-sanibel02.jpg" /></a> There are more Florida photos to come, but it might be a few days.</p>
-<p>Today is my first day of unemployment that I'm not on vacation. I accompished nothing, aside from some nessisary apartment cleaning. </p>
-<p>So far I've got nothing done on my quest to simplify my life.</p>
+[![](/photos/thumb/2002-12-26-sanibel02.jpg)](/photos/2002-12-26-sanibel02.jpg) There are more Florida photos to come, but it might be a few days.
 
+Today is my first day of unemployment that I'm not on vacation. I accompished nothing, aside from some nessisary apartment cleaning.
+
+So far I've got nothing done on my quest to simplify my life.

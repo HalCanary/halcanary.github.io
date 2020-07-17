@@ -3,16 +3,18 @@ TITLE=Some cool things in my life
 DATE=2002-10-12 00:00:00
 POSTID=17
 CATEGORIES=life;
-MODE=htmldiv
+MODE=markdown
 
-<p>Some cool things in my life:</p>
-<ol>
-<li>I heard Stephen Wolfram talk. That was much cheaper than buying his book. And I don't need another thick book to work on at the moment. I'm currently trying to get through Dostoevsky's <em>The Brothers Karamazov</em>. It has taken me a year to get through 15% of the book.</li>
-<li>Last sunday I heard a live harpsichord performance of the first prelude &amp; fugue from <em>The Well-Tempered Klavier</em>. That was unexpected.</li>
-<li>I finally got the broken seat in my car fixed. I am no longer driving a wreck-waiting-to-happen.</li>
-</ol>
-<p>Cool Factoid of the week:  <a href="http://www.osnews.com/story.php?news_id=1901&amp;page=3">Owen Taylor says, <em>&ldquo;Support for changing resolutions on the fly was just added to XFree86 CVS a couple of days ago.&rdquo;</em></a> </p>
-<p>Inane Comment of the Week: <em>&ldquo;If cloning is banned then only bans will have  clones!&rdquo;</em></p>
-<p>Cool link of the week:  <a href="http://www-bcs.mit.edu/people/adelson/checkershadow_illusion.html"> Checker Shadow Illusion</a>.</p>
-<p>Coming soon: my review of Psyche.</p>
+Some cool things in my life:
 
+1.  I heard Stephen Wolfram talk. That was much cheaper than buying his book. And I don't need another thick book to work on at the moment. I'm currently trying to get through Dostoevsky's _The Brothers Karamazov_. It has taken me a year to get through 15% of the book.
+2.  Last sunday I heard a live harpsichord performance of the first prelude & fugue from _The Well-Tempered Klavier_. That was unexpected.
+3.  I finally got the broken seat in my car fixed. I am no longer driving a wreck-waiting-to-happen.
+
+Cool Factoid of the week: [Owen Taylor says, _“Support for changing resolutions on the fly was just added to XFree86 CVS a couple of days ago.”_](http://www.osnews.com/story.php?news_id=1901&page=3)
+
+Inane Comment of the Week: _“If cloning is banned then only bans will have clones!”_
+
+Cool link of the week: [Checker Shadow Illusion](http://www-bcs.mit.edu/people/adelson/checkershadow_illusion.html).
+
+Coming soon: my review of Psyche.
