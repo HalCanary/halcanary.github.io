@@ -2,9 +2,9 @@ COPYRIGHT=Copyright Hal Canary / ALL RIGHTS RESERVED
 TITLE=Color in shell scripts (not prompts)
 DATE=2013-06-20 18:53:31
 POSTID=681
-SUMMARY=Some shell-script macros for adding color to the output of your programs.
 CATEGORIES=computers-code;shell-scripts;
 MODE=markdown
+SUMMARY=Some shell-script macros for adding color to the output of your programs.
 
 &nbsp;
 

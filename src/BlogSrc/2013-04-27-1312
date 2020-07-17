@@ -3,8 +3,8 @@ TITLE=VTKViewer
 DATE=2013-04-27 14:30:21
 POSTID=1312
 CATEGORIES=computers-code;software-projects;
-SUMMARY=A small and fast application to quickly view several 3D file formats.  There is both a C++ and a Python version.
 MODE=markdown
+SUMMARY=A small and fast application to quickly view several 3D file formats.  There is both a C++ and a Python version.
 
 [VTKViewer](https://github.com/HalCanary/vtkviewer)  
 ![](https://halcanary.org/images/barbell.png)

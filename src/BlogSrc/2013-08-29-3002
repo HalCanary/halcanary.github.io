@@ -1,8 +1,8 @@
 TITLE=Current Location
 DATE=2013-08-29 09:48:42
 POSTID=3002
-MODE=htmldiv
 CATEGORIES=computers-code;
+MODE=htmldiv
 SUMMARY=The existing software on your phone makes it impossible to send someone precise latitude/longitude that you pinpoint on a map. Here's my solution, IF you are already standing where you want to pinpoint.
 
 <script>

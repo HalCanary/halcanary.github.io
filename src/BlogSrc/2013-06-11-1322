@@ -3,8 +3,8 @@ TITLE=spiral
 DATE=2013-06-11 14:00:34
 POSTID=1322
 CATEGORIES=computers-code;
-SUMMARY=Your challenge: make a pretty postscript picture as one tweet
 MODE=markdown
+SUMMARY=Your challenge: make a pretty postscript picture as one tweet
 
 Your challenge: make a pretty postscript picture as one tweet.  "%!\n"  is not necessary
 ([tweet](https://twitter.com/halcanary/status/344530170532741120))

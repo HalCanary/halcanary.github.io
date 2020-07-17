@@ -2,8 +2,8 @@ COPYRIGHT=Copyright Hal Canary / ALL RIGHTS RESERVED
 TITLE=EM Ratio, again
 DATE=2020-04-03 22:04:48 -0400 (EDT)
 POSTID=3014
-MODE=markdown
 CATEGORIES=
+MODE=markdown
 SUMMARY=US Employment-Population Ratio (ages 25-54 Yrs), last 25 Years
 
 <a href="https://fred.stlouisfed.org/graph/?g=qD5Q"><img src="https://fred.stlouisfed.org/graph/fredgraph.png?g=qD5Q" width="1168" height="470" alt="[graph]"></a>
