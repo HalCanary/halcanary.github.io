@@ -138,28 +138,28 @@ top_posts_footer = """
 </html>
 """
 
-class UpdatingFile(object):
-    @staticmethod
-    def mkdirs(path):
-        try:
-            os.makedirs(path)
-        except:
-            pass
-    @staticmethod
-    def hashpath(path):
-        h = hashlib.sha256()
-        with open(path,'r') as f:
+def hashpath(path):
+    if path is None:
+        return None
+    h = hashlib.sha256()
+    with open(path,'r') as f:
+        data = f.read(h.block_size)
+        while data != '':
+            h.update(data)
             data = f.read(h.block_size)
-            while data != '':
-                h.update(data)
-                data = f.read(h.block_size)
-        return h.digest()
-
+    return h.digest()
+def mkdirs(path):
+    try:
+        os.makedirs(path)
+    except:
+        pass
+class UpdatingFile(object):
     def __init__(self, path):
+        self.tempfilepath = None
         self.path = path
         self.o = None
         path_dir = os.path.dirname(path)
-        UpdatingFile.mkdirs(path_dir)
+        mkdirs(path_dir)
         fd, self.tempfilepath = tempfile.mkstemp()
         self.o = os.fdopen(fd, "w")
     def __del__(self):
@@ -169,13 +169,15 @@ class UpdatingFile(object):
             self.o.close()
             self.o = None
             if (not os.path.isfile(self.path)) or (
-                UpdatingFile.hashpath(self.tempfilepath) !=
-                UpdatingFile.hashpath(self.path)):
-                shutil.copyfile(self.tempfilepath, self.path)
+                hashpath(self.tempfilepath) !=
+                hashpath(self.path)):
+                if shutil:
+                    shutil.copyfile(self.tempfilepath, self.path)
                 os.remove(self.tempfilepath)
                 return True
             else:
-                os.remove(self.tempfilepath)
+                if self.tempfilepath is not None:
+                    os.remove(self.tempfilepath)
                 return False
     def write(self,*args, **kwargs):
         if self.o is not None:
@@ -388,27 +390,39 @@ class Index(object):
   <body>
     <h1><a href="/vv/" class="hiddenlink">Voder-Vocoder</a> Archive{name}</h1>
     <div class="content">
-    <ul>
 <!-- BEGIN CONTENT -->
 """
         self.o.write(archive_header.format(name=self.name))
+        self.lastyear = None
     def close(self):
         archive_footer = """
 <!-- END CONTENT -->
-    </ul>
     </div>
     <hr class="black">
     <p class="centered"><a href="../">UP</a></p>
   </body>
 </html>
 """
+        if self.lastyear is not None:
+            self.lastyear = post.year
+            self.o.write('    </ul>\n')
         self.o.write(archive_footer)
         if self.o.close():
             print 'modified', self.loc
-    def addPost(self,post):
+    def addPost(self,post, addyear = False):
         relurlfixer = re.compile('^{}/(.*)$'.format(base_dir))
         short = relurlfixer.match(post.permalinkpart).groups()[0]
         relurl = self.upwards + short
+        assert post.year is not None
+        if self.lastyear is not None and self.lastyear != post.year:
+            self.lastyear = None
+            self.o.write('    </ul>\n')
+        if self.lastyear is None:
+            self.lastyear = post.year
+            if addyear:
+                self.o.write('<h2>{year}</h2>'.format(year=post.year))
+            self.o.write('    <ul>\n')
+
         self.o.write(
             '<li>\n  <a href="{relurl}">{title}</a>\n  {date}\n'.format(
                 relurl=relurl,title=post.title,date=post.date))
@@ -449,7 +463,7 @@ if __name__ == '__main__':
             post = Post(path)
             if i < 10:
                 recentPosts.addPost(post)
-            findIndex(indices, ['archives'], '').addPost(post)
+            findIndex(indices, ['archives'], '').addPost(post, True)
             findIndex(indices, [post.year], post.year).addPost(post)
             findIndex(indices, [post.year, post.month],
                       post.year+'-'+post.month).addPost(post)

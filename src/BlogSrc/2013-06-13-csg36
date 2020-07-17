@@ -2,17 +2,20 @@ COPYRIGHT=Copyright Hal Canary / ALL RIGHTS RESERVED
 TITLE=or just use xdg-open
 DATE=2013-06-13 12:00:00
 POSTID=csg36
-MODE=htmldiv
+MODE=markdown
 
+How to ask the desktop to open a file from a shell script? Define this function:
 
-
-<p>How to ask the desktop to open a file from a shell script?  Define this function:</p>
-
-<pre><span class="function">getopencmd()</span><span class="normal"> {</span>
-<span class="normal">    </span><span class="keyword">case</span><span class="normal"> </span><span class="string">"$(uname -s)"</span><span class="normal"> </span><span class="keyword">in</span>
-<span class="normal">        </span><span class="symbol">*</span><span class="normal">WIN</span><span class="symbol">*|*</span><span class="normal">W32</span><span class="symbol">*)</span><span class="normal"> </span><span class="keyword">command</span><span class="normal"> -v </span><span class="string">"start"</span><span class="symbol">;;</span>
-<span class="normal">        Darwin</span><span class="symbol">)</span><span class="normal"> </span><span class="keyword">command</span><span class="normal"> -v </span><span class="string">"open"</span><span class="symbol">;;</span>
-<span class="normal">        </span><span class="symbol">*)</span><span class="normal">  </span><span class="keyword">command</span><span class="normal"> -v </span><span class="string">"xdg-open"</span><span class="normal"> </span><span class="symbol">||</span><span class="normal"> </span><span class="symbol">\</span>
-<span class="normal">            </span><span class="keyword">command</span><span class="normal"> -v </span><span class="string">"gvfs-open"</span><span class="normal"> </span><span class="symbol">||</span><span class="normal"> </span><span class="symbol">\</span>
-<span class="normal">            </span><span class="keyword">command</span><span class="normal"> -v </span><span class="string">"kde-open"</span><span class="normal"> </span><span class="symbol">||</span><span class="normal"> </span><span class="symbol">\</span>
-<span class="normal">            </span><span class="keyword">command</span><span class="normal"> -v </span><span class="string">"exo-open"</span><span class="normal"> </span><span class="symbol">;</span><span class="normal"> </span><span class="keyword">esac</span><span class="symbol">;</span><span class="normal"> }</span></pre>
+    getopencmd() {
+        case "$(uname -s)" in
+            *WIN*|*W32*)
+                command -v "start";;
+            Darwin)
+                command -v "open";;
+            *)
+                command -v "xdg-open"  || \
+                command -v "gvfs-open" || \
+                command -v "kde-open"  || \
+                command -v "exo-open";
+         esac;
+    }

@@ -80,36 +80,34 @@ a.hiddenlink:active {
       <div class="content">
 
 <!-- BEGIN CONTENT -->
+<pre><code>/*
+  a common idiom:
+ */
+void C::f() {
+  if (this-&gt;ptr != NULL) {
+    delete this-&gt;ptr;
+    this-&gt;ptr = NULL;
+  }
+}
+/*
+  proposed new syntax: a delete expression evaluates to reference to
+  the pointer that was deleted, to make it easer to remember to set
+  that pointer to NULL.
+ */
+void C::f() {
+  if (this-&gt;ptr != NULL)
+    (delete this-&gt;ptr) = NULL;
+}
+</code></pre>
 
-<pre>
-<span class="comment">/*</span>
-<span class="comment">  a common idiom:</span>
-<span class="comment"> */</span>
-<span class="type">void</span><span class="normal"> C</span><span class="symbol">::</span><span class="function">f</span><span class="symbol">()</span><span class="normal"> </span><span class="cbracket">{</span>
-<span class="normal">  </span><span class="keyword">if</span><span class="normal"> </span><span class="symbol">(</span><span class="keyword">this</span><span class="symbol">-&gt;</span><span class="normal">ptr </span><span class="symbol">!=</span><span class="normal"> NULL</span><span class="symbol">)</span><span class="normal"> </span><span class="cbracket">{</span>
-<span class="normal">    </span><span class="keyword">delete</span><span class="normal"> </span><span class="keyword">this</span><span class="symbol">-&gt;</span><span class="normal">ptr</span><span class="symbol">;</span>
-<span class="normal">    </span><span class="keyword">this</span><span class="symbol">-&gt;</span><span class="normal">ptr </span><span class="symbol">=</span><span class="normal"> NULL</span><span class="symbol">;</span>
-<span class="normal">  </span><span class="cbracket">}</span>
-<span class="cbracket">}</span>
-<span class="comment">/*</span>
-<span class="comment">  proposed new syntax: a delete expression evaluates to reference to</span>
-<span class="comment">  the pointer that was deleted, to make it easer to remember to set</span>
-<span class="comment">  that pointer to NULL.</span>
-<span class="comment"> */</span>
-<span class="type">void</span><span class="normal"> C</span><span class="symbol">::</span><span class="function">f</span><span class="symbol">()</span><span class="normal"> </span><span class="cbracket">{</span>
-<span class="normal">  </span><span class="keyword">if</span><span class="normal"> </span><span class="symbol">(</span><span class="keyword">this</span><span class="symbol">-&gt;</span><span class="normal">ptr </span><span class="symbol">!=</span><span class="normal"> NULL</span><span class="symbol">)</span>
-<span class="normal">    </span><span class="symbol">(</span><span class="keyword">delete</span><span class="normal"> </span><span class="keyword">this</span><span class="symbol">-&gt;</span><span class="normal">ptr</span><span class="symbol">)</span><span class="normal"> </span><span class="symbol">=</span><span class="normal"> NULL</span><span class="symbol">;</span>
-<span class="cbracket">}</span>
-</pre>
+<p><strong>UPDATE</strong> 2013-05-12: Stroustrup suggests an alternative:</p>
 
-<p><strong>UPDATE</strong> 2013-05-12:  Stroustrup suggests an alternative:</p>
-
-<pre>
-<span class="keyword">template</span><span class="symbol">&lt;</span><span class="keyword">class</span><span class="normal"> </span><span class="classname">T</span><span class="symbol">&gt;</span>
-<span class="keyword">inline</span><span class="normal"> </span><span class="type">void</span><span class="normal"> </span><span class="function">destroy</span><span class="symbol">(</span><span class="normal">T</span><span class="symbol">*&amp;</span><span class="normal"> p</span><span class="symbol">)</span><span class="normal"> </span><span class="cbracket">{</span>
-<span class="normal">  </span><span class="keyword">delete</span><span class="normal"> p</span><span class="symbol">;</span>
-<span class="normal">  p </span><span class="symbol">=</span><span class="normal"> NULL</span><span class="symbol">;</span>
-<span class="cbracket">}</span></pre>
+<pre><code>template&lt;class T&gt;
+inline void destroy(T*&amp; p) {
+  delete p;
+  p = NULL;
+}
+</code></pre>
 
 <!-- END CONTENT -->
 
