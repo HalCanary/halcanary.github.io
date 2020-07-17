@@ -5,6 +5,6 @@ POSTID=758
 CATEGORIES=photos;
 MODE=htmldiv
 
-<p><img src="https://halcanary.org/photos/2009-01-11_112610_Snailshell.jpg" alt="[]" /><br />
-<img src="https://halcanary.org/photos/2009-01-11_111725_Pine_Flatwoods.jpg" alt="[]" /></p>
+<p><img src="/photos/2009-01-11_112610_Snailshell.jpg" alt="[]" /><br />
+<img src="/photos/2009-01-11_111725_Pine_Flatwoods.jpg" alt="[]" /></p>
 

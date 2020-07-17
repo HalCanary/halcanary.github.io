@@ -5,5 +5,5 @@ POSTID=584
 CATEGORIES=life;
 MODE=htmldiv
 
-<p><img src="https://halcanary.org/photos/2006-04-24-my-hair.jpg" alt="[]" height="480" width="640" /><br />I gave myself a summertime haircut today.</p>
+<p><img src="/photos/2006-04-24-my-hair.jpg" alt="[]" height="480" width="640" /><br />I gave myself a summertime haircut today.</p>
 

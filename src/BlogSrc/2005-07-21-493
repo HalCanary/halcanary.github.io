@@ -6,6 +6,6 @@ CATEGORIES=tv;
 MODE=htmldiv
 
 <p>Recently, I've noticed a trend in TV scifi.  Helmets on pressure suits don't have headlamps on the outside, they have lamps on the <strong>inside</strong> of the helmet, illuminating the face.</p>
-<p><img src="https://halcanary.org/images/2005-07-21-headlamp.jpg" alt="[]" /></p>
+<p><img src="/images/2005-07-21-headlamp.jpg" alt="[]" /></p>
 <p>This makes sense from a TV point of view:  You can tell who is in the suit.  But in reality, a bright light inside the suit would turn the faceplate into a mirror.  The actors can't see a thing.</p>
 

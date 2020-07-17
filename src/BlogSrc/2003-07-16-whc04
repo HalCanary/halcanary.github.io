@@ -5,7 +5,7 @@ POSTID=whc04
 MODE=htmldiv
 SUMMARY=Getting my Canon PowerShot A40 working under RedHat Linux 7.3 with gphoto2
 
-<p class="centered"><img src="https://halcanary.org/images/A40.jpg" alt="pic of A40" /></p>
+<p class="centered"><img src="/images/A40.jpg" alt="pic of A40" /></p>
 
 <p>
 Before you start, glance through the gphoto2 man page.
