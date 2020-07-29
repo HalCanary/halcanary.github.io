@@ -3,26 +3,46 @@ TITLE=physics fun.
 DATE=2007-06-23 10:50:40
 POSTID=694
 CATEGORIES=physics;
-MODE=htmldiv
+MODE=markdown
 
-<p>What is the tension in a spinning ring, for example Bank's orbitals or a Niven Ring?</p>
-<p>Let us brake the ring into <i>N</i> sections. The angle (in radians) subtended by each section, d&theta;, is 2&pi; / <i>N</i>. Suppose the radius of the ring is <i>R</i> and the mass-per-unit-length of the ring is &lambda;; then the mass of a section is &lambda;<i>R</i>d&theta; and the mass of the whole ring <i>M</i> = 2&pi;<i>R</i>&lambda;.</p>
-<p>Ignoring gravity, there are two forces pulling on each small section: tension pulling to the left and tension pulling to the right. Because the ring is circularly symmetric, the magnitude of the two tensions are equal. The directions of the two forces are d&theta; from being opposite.</p>
-<p>If at some moment in time, the left tension is pointing in the <img class="tex" src="/images/2007-06-23-tension-ring_img1.png" alt="-\hat{x}" /> direction, then the right tension will be</p>
-<p><img class="tex" src="/images/2007-06-23-tension-ring_img2.png" alt="\vec{T}_{r} = T\sin({{\textrm{d}}\theta})\hat{y} + T\cos({\textrm{d}}\theta)\hat{x}," /></p>
-<p>where <i>T</i> is the magnatude of either tension.</p>
-<p>As <i>N</i> gets large and d&theta; gets small, <img class="tex" src="/images/2007-06-23-tension-ring_img3.png" alt="\cos({\textrm{d}}\theta)\rightarrow 1" /> and <img class="tex" src="/images/2007-06-23-tension-ring_img4.png" alt="\sin({\textrm{d}}\theta)\rightarrow {\textrm{d}}\theta" />. So:</p>
-<p><img class="tex" src="/images/2007-06-23-tension-ring_img5.png" alt="\vec{T}_{l} = -T\hat{x}" /><br />
-<img class="tex" src="/images/2007-06-23-tension-ring_img6.png" alt="\vec{T}_{r} = T\hat{x} + T{\textrm{d}}\theta\hat{y}" /></p>
-<p>Consequently, the centripital force on the small section is <i>T</i>d&theta;. From Newton's second law:</p>
-<p><i>T</i>d&theta; = (&lambda;<i>R</i>d&theta;)<i>a</i></p>
-<p>where <i>a</i> is the centripetal acceleration.</p>
-<p><i>T</i> = &lambda;<i>R</i><i>a</i></p>
-<hr />
-<p>Part B: Plug in some numbers.</p>
-<p>Let <em>P</em> be the period of revolution.  <em>P</em> = 2&pi;&#x221a;(<em>R</em>/<em>a</em>).</p>
-<p>If the ring is made of solid steel, <em>T</em> / &lambda; = 154000 N&middot;m/kg. Setting our centripetal acceleration to an earthly 10 m/s&sup2;, we find that the maximum radius for a ring of steel is 15 kilometers.   Period of revolution = 243 seconds = 4 minutes.  If you assume that half of the mass of your ring is structural material and the other half is nonstructural, then you get a diameter of 15 km.  Multiply the period by 1/&#x221a;2.</p>
-<p>Carbon nanotubes: maximum size of 4800 kilometers.  Period of revolution = 4353 seconds = 1.2 hours</p>
-<p>The period of revolution for a <a href="http://en.wikipedia.org/wiki/Orbital_(The_Culture)">Culture Orbital</a> is a convenient 24 hours.  The radius of a <a href="http://en.wikipedia.org/wiki/Ringworld">Niven Ring</a> is 1 AU.  Neither of these is feasible with today's understanding of physics.</p>
-<p>On the other hand, a <a href="http://en.wikipedia.org/wiki/Stanford_torus">Stanford Torus</a> with a radius of 893 meters and an orbital period of 60 seconds would need to have an average specific strength of 8745 N&middot;m/kg, so at least 6% of the mass would need to be steel structure.  (You would probably want a 4x fudge factor.  Say 25% structural steel.  Then sections of the ring could be replaced if they show signs of wear.)</p>
+What is the tension in a spinning ring, for example Bank's orbitals or a Niven Ring?
 
+Let us break the ring into _N_ sections. The angle (in radians) subtended by each section, dθ, is 2π / _N_. Suppose the radius of the ring is _R_ and the mass-per-unit-length of the ring is λ; then the mass of a section is λ_R_dθ and the mass of the whole ring _M_ = 2π_R_λ.
+
+Ignoring gravity, there are two forces pulling on each small section: tension pulling to the left and tension pulling to the right. Because the ring is circularly symmetric, the magnitude of the two tensions are equal. The directions of the two forces are dθ from being opposite.
+
+If at some moment in time, the left tension is pointing in the -_**x̂**_ direction, then the right tension will be
+
+>   _**Tr**_ = _T_ sin(dθ) _**ŷ**_ + _T_ cos(dθ) _**x̂**_
+
+where _T_ is the magnitude of either tension.
+
+As _N_ gets large: dθ gets small, cos(dθ) → 1, and sin(dθ) → dθ.  So:
+
+>   _**Tl**_ = -_T_ _**x̂**_
+>
+>   _**Tr**_ = +_T_ _**x̂**_ + _T_ dθ _**ŷ**_
+
+Consequently, the centripetal force on the small section is _T_dθ. From Newton's second law:
+
+>   ∑F = _m_ _a_
+
+>   _T_dθ = (λ_R_dθ)_a_
+
+where _a_ is the centripetal acceleration.
+
+>   _T_ = λ_R__a_
+
+* * *
+
+Part B: Plug in some numbers.
+
+Let _P_ be the period of revolution. _P_ = 2π√(_R_/_a_).
+
+If the ring is made of solid steel, _T_ / λ = 154000 N·m/kg. Setting our centripetal acceleration to an earthly 10 m/s², we find that the maximum radius for a ring of steel is 15 kilometers. Period of revolution = 243 seconds = 4 minutes. If you assume that half of the mass of your ring is structural material and the other half is nonstructural, then you get a diameter of 15 km. Multiply the period by 1/√2.
+
+Carbon nanotubes: maximum size of 4800 kilometers. Period of revolution = 4353 seconds = 1.2 hours
+
+The period of revolution for a [Culture Orbital](http://en.wikipedia.org/wiki/Orbital_(The_Culture)) is a convenient 24 hours. The radius of a [Niven Ring](http://en.wikipedia.org/wiki/Ringworld) is 1 AU. Neither of these is feasible with today's understanding of physics.
+
+On the other hand, a [Stanford Torus](http://en.wikipedia.org/wiki/Stanford_torus) with a radius of 893 meters and an orbital period of 60 seconds would need to have an average specific strength of 8745 N·m/kg, so at least 6% of the mass would need to be steel structure. (You would probably want a 4x fudge factor. Say 25% structural steel. Then sections of the ring could be replaced if they show signs of wear.)
