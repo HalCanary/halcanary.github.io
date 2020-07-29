@@ -1,17 +1,18 @@
 COPYRIGHT=Copyright Hal Canary / ALL RIGHTS RESERVED
-TITLE=physics fun.
+TITLE=Tension of a Spinning Ring
 DATE=2007-06-23 10:50:40
 POSTID=694
 CATEGORIES=physics;
 MODE=markdown
+SUMMARY=fun with physics
 
 What is the tension in a spinning ring, for example Bank's orbitals or a Niven Ring?
 
-Let us break the ring into _N_ sections. The angle (in radians) subtended by each section, dθ, is 2π / _N_. Suppose the radius of the ring is _R_ and the mass-per-unit-length of the ring is λ; then the mass of a section is λ_R_dθ and the mass of the whole ring _M_ = 2π_R_λ.
+Let us break the ring into _N_ sections. The angle (in radians) subtended by each section, dθ, is 2π / _N_. Suppose the radius of the ring is _R_ and the mass-per-unit-length of the ring is λ; then the mass of a section is λ _R_ dθ and the mass of the whole ring _M_ = 2π_R_λ.
 
 Ignoring gravity, there are two forces pulling on each small section: tension pulling to the left and tension pulling to the right. Because the ring is circularly symmetric, the magnitude of the two tensions are equal. The directions of the two forces are dθ from being opposite.
 
-If at some moment in time, the left tension is pointing in the -_**x̂**_ direction, then the right tension will be
+If at some moment in time, the left tension, _**Tl**_, is pointing in the -_**x̂**_ direction, then the right tension will be
 
 >   _**Tr**_ = _T_ sin(dθ) _**ŷ**_ + _T_ cos(dθ) _**x̂**_
 
@@ -25,24 +26,60 @@ As _N_ gets large: dθ gets small, cos(dθ) → 1, and sin(dθ) → dθ.  So:
 
 Consequently, the centripetal force on the small section is _T_dθ. From Newton's second law:
 
->   ∑F = _m_ _a_
+>   ∑**F** = _m_ **_a_**
 
->   _T_dθ = (λ_R_dθ)_a_
+>   _**Tl**_ + _**Tr**_ = _m_ **_a_**
 
-where _a_ is the centripetal acceleration.
+>   _T_ dθ _**ŷ**_ = _m_ **_a_**
 
->   _T_ = λ_R__a_
+Let _a_ = |_**a**_|, the centripetal acceleration.
+
+>   _T_ dθ = (λ _R_ dθ) _a_
+
+>   _T_ = λ _R_ _a_
 
 * * *
 
 Part B: Plug in some numbers.
 
-Let _P_ be the period of revolution. _P_ = 2π√(_R_/_a_).
+Let _S_ be the specific strength, which is the maximum tension divided by density: _T_ / λ.
 
-If the ring is made of solid steel, _T_ / λ = 154000 N·m/kg. Setting our centripetal acceleration to an earthly 10 m/s², we find that the maximum radius for a ring of steel is 15 kilometers. Period of revolution = 243 seconds = 4 minutes. If you assume that half of the mass of your ring is structural material and the other half is nonstructural, then you get a diameter of 15 km. Multiply the period by 1/√2.
+>   _S_ ≥ _R_ _a_
+
+>   _R_ ≤ _S_ / _a_
+
+Let _P_ be the period of revolution. Since centrepetal acceleration, _a_ = v² / _R_.
+
+>   _a_ = v² / _R_
+
+>   _a_ = (2π _R_ / _P_)² / R
+
+>   _a_ = 4π² _R_ / _P_²
+
+>   _a_ _P_² = 4π² _R_
+
+>   _a_ _P_² ≤ 4π² (_S_ / _a_)
+
+>   _P_² ≤ 4π² _S_ / _a_²
+
+>   _P_ ≤ 2π √(_S_) / _a_
+
+_Assume our desired centripetal acceleration is an Earthly 10 m/s²._
+
+If the ring is made of solid steel, _S_ = 154000 N·m/kg (specific strength). With _a_ = 10 m/s², we find that the maximum radius for a ring of steel is 15 kilometers. Period of revolution = 243 seconds = 4 minutes. If you assume that half of the mass of your ring is structural material and the other half is nonstructural, then you get a diameter of 15 km. Multiply the period by 1/√2.
+
+<table class="border">
+<tr><th>Average <em>T</em> / λ</th><th> Radius </th><th>  Period </th><th> Comments         </th></tr>
+<tr><td>     8 745 m²/s² </td><td>       893 m </td><td>   60 s  </td><td> Stanford Torus   </td></tr>
+<tr><td>    40 000 m²/s² </td><td>     4 000 m </td><td>  125 s  </td><td> O'Neill cylinder </td></tr>
+<tr><td>    77 000 m²/s² </td><td>     7 700 m </td><td>  174 s  </td><td> 50% steel        </td></tr>
+<tr><td>   154 000 m²/s² </td><td>    15 400 m </td><td>  246 s  </td><td> Pure steel       </td></tr>
+<tr><td>48 000 000 m²/s² </td><td> 4 800 000 m </td><td> 4353 s  </td><td> carbon nanotubes </td></tr>
+<tr><td>24 000 000 m²/s² </td><td> 2 400 000 m </td><td> 3078 s  </td><td> 50% carbon nanotubes </td></tr>
+</table>
 
 Carbon nanotubes: maximum size of 4800 kilometers. Period of revolution = 4353 seconds = 1.2 hours
 
-The period of revolution for a [Culture Orbital](http://en.wikipedia.org/wiki/Orbital_(The_Culture)) is a convenient 24 hours. The radius of a [Niven Ring](http://en.wikipedia.org/wiki/Ringworld) is 1 AU. Neither of these is feasible with today's understanding of physics.
+The period of revolution for a [Culture Orbital](http://en.wikipedia.org/wiki/Orbital_\(The_Culture\)) is a convenient 24 hours. The radius of a [Niven Ring](http://en.wikipedia.org/wiki/Ringworld) is 1 AU. Neither of these is feasible with today's understanding of physics.
 
 On the other hand, a [Stanford Torus](http://en.wikipedia.org/wiki/Stanford_torus) with a radius of 893 meters and an orbital period of 60 seconds would need to have an average specific strength of 8745 N·m/kg, so at least 6% of the mass would need to be steel structure. (You would probably want a 4x fudge factor. Say 25% structural steel. Then sections of the ring could be replaced if they show signs of wear.)

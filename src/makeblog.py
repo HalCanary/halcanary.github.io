@@ -74,6 +74,15 @@ text-decoration: none;
 ul,ol{
 padding-left:30px;
 }
+table.border {
+border-collapse:collapse;
+margin:8px auto;
+}
+table.border tr td, table.border tr th {
+border:1px solid black;
+padding:3px 8px;
+
+}
 """.strip()
 
 
