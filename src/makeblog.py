@@ -382,6 +382,7 @@ class Index(object):
     def __hash__(self):
         return hash(self.loc)
     def __init__(self, arg, name=''):
+        self.posts = []
         '''
         arg is in the format
             ['category','?*']
@@ -394,17 +395,46 @@ class Index(object):
             self.name = ''
         self.upwards = '../' * len(arg)
         self.loc = '{}/{}/index.html'.format(base_dir, '/'.join(arg))
-        self.o = UpdatingFile(self.loc)
-        self.o.write(header.format(style=style, title='Voder-Vocoder Archive', years='1997-' + current_year))
+        self.addyear = False
+
+    def addPost(self, post, addyear = False):
+        d = vars(post)
+        keys = [ 'permalinkpart', 'year', 'title', 'summary', 'date' ]
+        self.posts += [{k: d.get(k) for k in keys}]
+        self.addyear = addyear
+
+    def close(self):
+        o = UpdatingFile(self.loc)
+        o.write(header.format(style=style, title='Voder-Vocoder Archive', years='1997-' + current_year))
         archive_header = """
   <body>
     <h1><a href="/vv/" class="hiddenlink">Voder-Vocoder</a> Archive{name}</h1>
     <div class="content">
 <!-- BEGIN CONTENT -->
 """
-        self.o.write(archive_header.format(name=self.name))
-        self.lastyear = None
-    def close(self):
+        o.write(archive_header.format(name=self.name))
+        lastyear = None
+        for post in self.posts:
+            relurlfixer = re.compile('^{}/(.*)$'.format(base_dir))
+            short = relurlfixer.match(post['permalinkpart']).groups()[0]
+            relurl = self.upwards + short
+            assert post['year'] is not None
+            if lastyear is not None and lastyear != post['year']:
+                lastyear = None
+                o.write('    </ul>\n')
+            if lastyear is None:
+                lastyear = post['year']
+                if self.addyear:
+                    o.write('<h2>{year}</h2>'.format(year=post['year']))
+                o.write('    <ul>\n')
+
+            o.write(
+                '<li>\n  <a href="{relurl}">{title}</a>\n  {date}\n'.format(
+                    relurl=relurl,title=post['title'],date=post['date']))
+            if post['summary'] is not None:
+                o.write('  <br>{}\n'.format(post['summary']))
+            o.write('</li>\n')
+
         archive_footer = """
 <!-- END CONTENT -->
     </div>
@@ -413,32 +443,11 @@ class Index(object):
   </body>
 </html>
 """
-        if self.lastyear is not None:
-            self.lastyear = post.year
-            self.o.write('    </ul>\n')
-        self.o.write(archive_footer)
-        if self.o.close():
+        if lastyear is not None:
+            o.write('    </ul>\n')
+        o.write(archive_footer)
+        if o.close():
             print 'modified', self.loc
-    def addPost(self,post, addyear = False):
-        relurlfixer = re.compile('^{}/(.*)$'.format(base_dir))
-        short = relurlfixer.match(post.permalinkpart).groups()[0]
-        relurl = self.upwards + short
-        assert post.year is not None
-        if self.lastyear is not None and self.lastyear != post.year:
-            self.lastyear = None
-            self.o.write('    </ul>\n')
-        if self.lastyear is None:
-            self.lastyear = post.year
-            if addyear:
-                self.o.write('<h2>{year}</h2>'.format(year=post.year))
-            self.o.write('    <ul>\n')
-
-        self.o.write(
-            '<li>\n  <a href="{relurl}">{title}</a>\n  {date}\n'.format(
-                relurl=relurl,title=post.title,date=post.date))
-        if post.summary is not None:
-            self.o.write('  <br>{}\n'.format(post.summary))
-        self.o.write('</li>\n')
 
 def listdir(path, reverse=False):
     assert os.path.isdir(path)
