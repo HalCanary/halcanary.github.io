@@ -1,0 +1,44 @@
+#! /usr/bin/env python
+
+import os
+
+args = [
+  ('aztec-diamonds',            'https://www.combinatorics.org/ojs/index.php/eljc/article/view/v17i1r105'),
+  ('git-sync-deps',             'https://skia.googlesource.com/skia/+/70a4fd2dfaf8e66826a7a74abebecb75652f7aac/tools/git-sync-deps'),
+  ('hangout',                   'https://plus.google.com/hangouts/_/event/cho43mp4tp6lptj5khqgkhslh4s'),
+  ('madai-bench',               'https://github.com/MADAI/MADAIWorkbench'),
+  ('madai-dst',                 'https://github.com/MADAI/DistributionSampling'),
+  ('optimal-region-projection', 'https://www.csc2.ncsu.edu/faculty/healey/download/cg.14.pdf'),
+  ('p/contact',                 'https://halcanary.org/vv/2020/04/04/3015/'),
+  ('p/credits',                 'https://halcanary.org/'),
+  ('p/key',                     'https://halcanary.org/pub/9E4B56B252BA5544135A6146BDA20B3DBAF71EE3.txt'),
+  ('resume',                    'https://halcanary.org/Hal_Canary_Resume.html'),
+  ('skottie-ios-app',           'https://skia.googlesource.com/skia/+/4ca0dacbce515bcc1b96ac574b80a9d2386b9a15/tools/skottie_ios_app'),
+  ('vv/category',               'https://halcanary.org/vv/'),
+]
+
+template = '''<!doctype html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta http-equiv="refresh" content="0; url={0}">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+{1}
+</title>
+<a style="overflow-wrap:break-word"
+   href="{1}">
+{1}
+</a>
+</html>
+'''
+
+root = 'https://halcanary.org/'
+
+os.chdir(os.path.dirname(__file__) + '/..')
+
+for key, value in args:
+    if not os.path.exists(key):
+        os.mkdirs(key)
+    short = value.replace(root, '/', 1) if value.startswith(root) else value
+    with open(key + '/index.html', 'w') as o:
+        o.write(template.format(value, short))
