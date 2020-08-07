@@ -21,6 +21,16 @@ background-color:#000;
 img{
 max-width:100%;
 height:auto;
+background-color:#DDD;
+}
+img:before {
+content:"missing image\0A" attr(src);
+display:inline-block;
+padding:3px 8px;
+margin:8px 0;
+color:#000;
+background-color:#DDD;
+white-space:pre-line;
 }
 .content hr{
 padding:0;
@@ -51,19 +61,19 @@ color:#888;
 .categorylink{}
 a.hiddenlink{}
 a.hiddenlink:link {
-background: inherit;
-color: inherit;
-text-decoration: none;
+background:inherit;
+color:inherit;
+text-decoration:none;
 }
 a.hiddenlink:visited {
-background: inherit;
-color: inherit;
-text-decoration: none;
+background:inherit;
+color:inherit;
+text-decoration:none;
 }
 a.hiddenlink:active {
-background: inherit;
-color: inherit;
-text-decoration: none;
+background:inherit;
+color:inherit;
+text-decoration:none;
 }
 ul,ol{
 padding-left:30px;
@@ -75,7 +85,6 @@ margin:8px auto;
 table.border tr td, table.border tr th {
 border:1px solid black;
 padding:3px 8px;
-
 }
 </style>
 </head>
