@@ -142,7 +142,7 @@ class Post(object):
     def markdown(inf):
         try:
             subproc = subprocess.Popen(
-                ['markdown'], stdin=subprocess.PIPE, stdout=subprocess.PIPE)
+                ['cmark', '--unsafe'], stdin=subprocess.PIPE, stdout=subprocess.PIPE)
         except OSError:
             sys.stderr.write('\nMARKDOWN FAILED.\n\n')
             sys.exit(1)

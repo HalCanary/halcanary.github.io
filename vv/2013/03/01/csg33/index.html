@@ -120,9 +120,7 @@ void C::f() {
     (delete this-&gt;ptr) = NULL;
 }
 </code></pre>
-
 <p><strong>UPDATE</strong> 2013-05-12: Stroustrup suggests an alternative:</p>
-
 <pre><code>template&lt;class T&gt;
 inline void destroy(T*&amp; p) {
   delete p;

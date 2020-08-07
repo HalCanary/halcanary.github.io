@@ -103,12 +103,11 @@ padding:3px 8px;
 <!-- BEGIN CONTENT -->
 <p>GNU tar for win32 can't actually fork a process for gzip.  What
 century is it?  Here's my fix:</p>
-
 <pre><code>@echo off
 REM untargz.bat
 :AGAIN
-if "%1" == "" goto END
-gzip -d -c &lt; "%1" | tar -xv
+if &quot;%1&quot; == &quot;&quot; goto END
+gzip -d -c &lt; &quot;%1&quot; | tar -xv
 shift
 goto AGAIN
 :END

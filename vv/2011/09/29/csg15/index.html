@@ -104,7 +104,7 @@ padding:3px 8px;
 <pre>
 ;_____________________________________________________________________
 ;
-;    Look And Feel
+;	 Look And Feel
 ;_____________________________________________________________________
 (setq inhibit-startup-screen 't)
 (tool-bar-mode nil)
@@ -119,7 +119,7 @@ padding:3px 8px;
 
 ;_____________________________________________________________________
 ;
-;    Keyboard Bindings
+;	 Keyboard Bindings
 ;_____________________________________________________________________
 (setq x-select-enable-primary t)
 (setq x-select-enable-clipboard t)
@@ -127,8 +127,8 @@ padding:3px 8px;
 (global-unset-key (kbd &quot;M-z&quot;))
 (global-set-key (kbd &quot;M-z&quot;) 'suspend-emacs)
 (global-set-key (kbd &quot;C-h&quot;) 'backward-delete-char-untabify)
-(global-set-key [(control s)] 'save-buffer)
-(global-set-key [(control f)] 'isearch-forward)
+(global-set-key	[(control s)] 'save-buffer)
+(global-set-key	[(control f)] 'isearch-forward)
 (define-key isearch-mode-map [(control f)] 'isearch-repeat-forward)</pre>
 
 <!-- END CONTENT -->

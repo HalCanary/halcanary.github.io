@@ -103,28 +103,26 @@ padding:3px 8px;
 
 <!-- BEGIN CONTENT -->
 <p>Bash user? Be sure to install and use the package <code>bash-completion</code>.</p>
-
 <p>Write a lot of code? Don't forget <code>source-highlight</code></p>
-
 <pre><code># add to .bashrc
 if command -v source-highlight &gt; /dev/null ; then
 source-highlight-less() {
-    [ $# -eq 0 ] &amp;&amp; { echo "args?" &gt;&amp;2; return 1; }
+    [ $# -eq 0 ] &amp;&amp; { echo &quot;args?&quot; &gt;&amp;2; return 1; }
     for FILE ; do
-        if [ -f "$FILE" ] ; then
-            source-highlight -i "$FILE" -fesc
+        if [ -f &quot;$FILE&quot; ] ; then
+            source-highlight -i &quot;$FILE&quot; -fesc
         else
-            echo "${FILE} does not exist" &gt;&amp;2
+            echo &quot;${FILE} does not exist&quot; &gt;&amp;2
         fi
     done | less -R -x${TAB:-8}
 }
 source_to_html() {
-    [ $# -eq 0 ] &amp;&amp; { echo "args?" &gt;&amp;2; return 1; }
+    [ $# -eq 0 ] &amp;&amp; { echo &quot;args?&quot; &gt;&amp;2; return 1; }
     for FILE ; do
-        if [ -f "$FILE" ] ; then
-            source-highlight -i "$FILE" -fhtml-css
+        if [ -f &quot;$FILE&quot; ] ; then
+            source-highlight -i &quot;$FILE&quot; -fhtml-css
         else
-            echo "${FILE} does not exist" &gt;&amp;2
+            echo &quot;${FILE} does not exist&quot; &gt;&amp;2
         fi
     done | expand -t ${TAB:-8}
 }

@@ -102,18 +102,17 @@ padding:3px 8px;
 
 <!-- BEGIN CONTENT -->
 <p>How to ask the desktop to open a file from a shell script? Define this function:</p>
-
 <pre><code>getopencmd() {
-    case "$(uname -s)" in
+    case &quot;$(uname -s)&quot; in
         *WIN*|*W32*)
-            command -v "start";;
+            command -v &quot;start&quot;;;
         Darwin)
-            command -v "open";;
+            command -v &quot;open&quot;;;
         *)
-            command -v "xdg-open"  || \
-            command -v "gvfs-open" || \
-            command -v "kde-open"  || \
-            command -v "exo-open";
+            command -v &quot;xdg-open&quot;  || \
+            command -v &quot;gvfs-open&quot; || \
+            command -v &quot;kde-open&quot;  || \
+            command -v &quot;exo-open&quot;;
      esac;
 }
 </code></pre>

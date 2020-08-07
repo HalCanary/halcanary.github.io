@@ -101,25 +101,25 @@ padding:3px 8px;
       <div class="content">
 
 <!-- BEGIN CONTENT -->
-<p>#!/usr/bin/python
-    """Stopwatch program.</p>
+<pre><code>#!/usr/bin/python
+&quot;&quot;&quot;Stopwatch program.
 
-<pre><code>Hit 'Enter' to save a time.
+Hit 'Enter' to save a time.
 
 Hit 'Ctrl-c' to stop the script
-"""
+&quot;&quot;&quot;
 from datetime import datetime, date, time
 import time, sys
 start = datetime.now()
 print __doc__
 try:
-    while True:
-        time.sleep(0.071)
-        sys.stdout.write('\b'*22)
-        sys.stdout.write(str(datetime.now() - start))
-        sys.stdout.flush()
+	while True:
+		time.sleep(0.071)
+		sys.stdout.write('\b'*22)
+		sys.stdout.write(str(datetime.now() - start))
+		sys.stdout.flush()
 except KeyboardInterrupt:
-    sys.stdout.write('\n\n')
+	sys.stdout.write('\n\n')
 </code></pre>
 
 <!-- END CONTENT -->

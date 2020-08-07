@@ -104,28 +104,23 @@ padding:3px 8px;
 <!-- BEGIN CONTENT -->
 <pre><code>#!/bin/sh
 abspath () {
-    D7636=`/usr/bin/dirname "$1"`;
-    D7636=`(cd "$D7636"; pwd -P)`;
-    B7636=`/usr/bin/basename "$1"`;
-    echo "${D7636}/${B7636}";
+    D7636=`/usr/bin/dirname &quot;$1&quot;`;
+    D7636=`(cd &quot;$D7636&quot;; pwd -P)`;
+    B7636=`/usr/bin/basename &quot;$1&quot;`;
+    echo &quot;${D7636}/${B7636}&quot;;
 }
 PATH=$1
-echo "path = \"${PATH}\""
-ABSPATH=`abspath "$PATH"`
-echo "absolute path = \"${ABSPATH}\""
+echo &quot;path = \&quot;${PATH}\&quot;&quot;
+ABSPATH=`abspath &quot;$PATH&quot;`
+echo &quot;absolute path = \&quot;${ABSPATH}\&quot;&quot;
 </code></pre>
-
 <hr />
-
-<p>UPDATE: I just realised that <code>readlink -f "$FILE"</code> will do the trick.</p>
-
+<p>UPDATE: I just realised that <code>readlink -f &quot;$FILE&quot;</code> will do the trick.</p>
 <hr />
-
 <p>UPDATE 2: Even better, since it is concise and follows the POSIX standard:</p>
-
 <pre><code>#!/bin/sh
 abspath () {
-    echo "$(cd "$(dirname "$1")" ; pwd;)/$(basename "$1")"
+	echo &quot;$(cd &quot;$(dirname &quot;$1&quot;)&quot; ; pwd;)/$(basename &quot;$1&quot;)&quot;
 }
 </code></pre>
 

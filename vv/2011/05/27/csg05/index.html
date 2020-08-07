@@ -102,35 +102,26 @@ padding:3px 8px;
 
 <!-- BEGIN CONTENT -->
 <p>In high-school chemistry, you learn that the ideal gas law is</p>
-
 <div style="text-align:center;"><em>P</em>&middot;<em>V</em> =
 <em>n</em>&middot;<em>R</em>&middot;<em>T</em></div>
-
 <p>These letters are drilled into my head, but I realised yesterday that
 I am losing my intuitive understanding of the relation.  The physics
 version of it is</p>
-
 <div style="text-align:center;"><em>P</em>&middot;<em>V</em> =
 <em>N</em>&middot;<em>kT</em></div>
-
 <p>where <em>N</em> is now a dimensionless number and <em>k</em> is comes from the
-definition of <em>T</em>.  Let <em>&rho;</em> be our number density and the relation
+definition of <em>T</em>.  Let <em>ρ</em> be our number density and the relation
 simplifies to</p>
-
 <div style="text-align:center;"><em>P</em> =
 <em>&rho;</em>&middot;<em>kT</em></div>
-
 <p>Pressure is density times temperature.</p>
-
 <hr />
-
 <p>In the heterogeneous CS Unix environment, I may be executing emacs
 from a console as “<code>emacs -nw</code>” or from an icon on the desktop.  Some
 computers will have the emacs-color-theme package installed, others
 won't.  So in my .emacs file, I put the following lines:</p>
-
 <pre><code>;; from .emacs ...
-(setq emacs-style-file "~/.emacs-style")
+(setq emacs-style-file &quot;~/.emacs-style&quot;)
 (when
     (and window-system
          (require 'color-theme nil t)
