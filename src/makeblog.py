@@ -11,81 +11,9 @@ relurlfixer = re.compile('^{}/(.*)$'.format(base_dir))
 first_year = '1997'
 current_year = '{:04d}'.format(datetime.date.today().year)
 
-style = """
-body{
-font-family:sans-serif;
-max-width:35em;
-margin:8px auto;
-padding:0 8px;
-}
-hr.black{
-border:0;
-height:1px;
-color:#000;
-background-color:#000;
-}
-img{
-max-width:100%;
-height:auto;
-}
-.content hr{
-padding:0;
-margin:0;
-border:none;
-text-align:center;
-color:black;
-}
-.content hr:after{
-content:"✶ \A0 ✶ \A0 ✶";
-display:block;
-position:relative;
-}
-.rightside{text-align:right}
-.centered{text-align:center}
-.postbox{
-border-bottom:6px solid #ddd;
-margin:0 -8px 6px -8px;
-padding:0 8px 0 8px;
-}
-pre{overflow-x:auto}
-.byline{
-background:#fff;
-color:#888;
-}
-.blogtitle{}
-.content{}
-.categorylink{}
-a.hiddenlink{}
-a.hiddenlink:link {
-background: inherit;
-color: inherit;
-text-decoration: none;
-}
-a.hiddenlink:visited {
-background: inherit;
-color: inherit;
-text-decoration: none;
-}
-a.hiddenlink:active {
-background: inherit;
-color: inherit;
-text-decoration: none;
-}
-ul,ol{
-padding-left:30px;
-}
-table.border {
-border-collapse:collapse;
-margin:8px auto;
-}
-table.border tr td, table.border tr th {
-border:1px solid black;
-padding:3px 8px;
-
-}
-""".strip()
-
-
+thisdir  = os.path.dirname(__file__)
+with open(thisdir + '/style.css') as f:
+    style = re.sub(r'(^|:)  *', r'\1', f.read(), flags=re.M).strip()
 
 footer = """
 <!-- END CONTENT -->

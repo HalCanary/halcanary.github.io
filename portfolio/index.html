@@ -1,158 +1,343 @@
-<!doctype html>
-<html><head>
-<meta charset="UTF-8">
-<title>Hal Canary: Portfolio</title>
-<link rel="stylesheet" type="text/css" href="../styles/scrapple-from-the-apple.css">
-<link rel="icon" type="image/x-icon" href="/favicon.ico">
-<meta name="viewport" content="width=656">
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Copyright 1997-2020 Hal Canary. ALL RIGHTS RESERVED. -->
+<title>Hal Canary / Portfolio</title>
+<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==">
+<style>
+body{
+font-family:sans-serif;
+max-width:35em;
+margin:8px auto;
+padding:0 8px;
+}
+hr.black{
+border:0;
+height:1px;
+color:#000;
+background-color:#000;
+}
+img{
+max-width:100%;
+height:auto;
+background-color:#DDD;
+}
+img:before {
+content:"missing image\0A" attr(src);
+display:inline-block;
+padding:3px 8px;
+margin:8px 0;
+color:#000;
+background-color:#DDD;
+white-space:pre-line;
+}
+.content hr{
+padding:0;
+margin:0;
+border:none;
+text-align:center;
+color:black;
+}
+.content hr:after{
+content:"✶ \A0 ✶ \A0 ✶";
+display:block;
+position:relative;
+}
+.rightside{text-align:right}
+.centered{text-align:center}
+.postbox{
+border-bottom:6px solid #ddd;
+margin:0 -8px 6px -8px;
+padding:0 8px 0 8px;
+}
+pre{overflow-x:auto}
+.byline{
+background:#fff;
+color:#888;
+}
+.blogtitle{}
+.content{}
+.categorylink{}
+a.hiddenlink{}
+a.hiddenlink:link {
+background:inherit;
+color:inherit;
+text-decoration:none;
+}
+a.hiddenlink:visited {
+background:inherit;
+color:inherit;
+text-decoration:none;
+}
+a.hiddenlink:active {
+background:inherit;
+color:inherit;
+text-decoration:none;
+}
+ul,ol{
+padding-left:30px;
+}
+table.border {
+border-collapse:collapse;
+margin:8px auto;
+}
+table.border tr td, table.border tr th {
+border:1px solid black;
+padding:3px 8px;
+}
+</style>
 </head>
-<body><div class="column" style="width:640px;">
-<h1><a href="/" class="hiddenlink"><img src="../images/Hal_W_Canary_3_hand.jpg" alt="Hal W Canary, III" width="400" height="91" style="border:0px"></a></h1>
-<div class="section">
-<nav><p><a href="../">Home</a> | <a href="../vv/">The Log</a> | <a href="../vv/archives/">Log Archives</a> | <a href="../resume">Résumé</a> | <a href="p/contact">Contact Info</a> | <a href="../p/key">Public Key</a></p></nav>
+<body>
+<div style="text-align:center; margin:1ex 0 0 0">
+<svg aria-label="Hal W Canary, III" role="img"
+     viewBox="-200 0 800 91" max-width="100%" max-height="45">
+<rect style="fill:white" height="91" x="-200" width="800" />
+<rect style="fill:black" height="4" width="180" x="-200", y="43" />
+<rect style="fill:black" height="4" width="180" x="420", y="43" />
+<path d="M 34 0 C 30 6 28 13 27 20 C 26 23 27 28 25 31 C 21 35 13 34 9 35 C 12
+24 9 13 12 3 L 8 2 C 4 18 6 36 3 53 C 2 58 -1 66 5 70 C 6 59 8 49 9 39 C 14 39
+19 38 25 38 C 25 49 23 61 23 73 C 30 70 27 60 27 54 C 28 36 31 17 38 1 L 34 0 "
+style="fill:black" />
+<path d="M 50 31 C 46 38 44 45 41 53 C 40 56 39 60 40 64 L 42 64 C 44 59 45 54
+46 49 C 48 50 49 51 52 52 C 50 57 52 63 57 66 C 58 61 56 56 56 51 C 59 50 61 49
+64 47 C 61 46 58 46 56 45 C 53 42 53 34 52 31 L 50 31 z M 49 41 C 50 43 50 44
+51 47 L 47 49 C 47 46 48 43 49 41 z" style="fill:black" />
+<path d="M 83 61 C 79 59 74 60 71 57 C 68 53 70 41 71 37 C 64 39 66 46 65 52 C
+65 54 64 58 66 60 C 70 65 79 65 83 61 " style="fill:black" />
+<path d="M 107 13 C 104 23 104 36 108 47 C 111 54 114 63 121 54 C 122 52 123
+51 124 50 C 125 51 127 53 129 54 C 134 57 139 55 143 50 C 149 43 153 34 157 26
+C 159 21 162 17 163 13 L 158 13 C 154 23 149 34 142 43 C 141 46 138 48 137 52 C
+132 50 129 48 127 44 L 125 45 C 124 43 124 43 123 43 C 121 46 118 49 116 53 C
+114 48 112 45 111 41 C 109 31 109 22 110 13 L 107 13 " style="fill:black" />
+<path d="M 153 53 L 152 56 C 154 56 155 56 158 56 C 156 54 155 53 153 53  "
+style="fill:black" />
+<path d="M 211 55 C 206 56 203 58 199 57 C 189 57 180 46 182 36 C 183 27 190
+18 198 13 C 205 9 210 11 218 12 C 213 3 204 5 198 8 C 188 14 175 29 177 42 C
+178 51 187 60 196 62 C 201 63 212 63 211 55 " style="fill:black" />
+<path d="M 230.2793 37.738281 C 229.89349 37.729675 229.46875 37.8125 229 38 C
+226 39 224 42 223 45 C 220 50 218 57 220 64 C 223 61 223 58 224 54 C 232 54 231
+62 235 69 C 239 64 232 56 241 54 C 239 51 238 50 235 50 C 234.09375 46.375
+234.00873 37.821472 230.2793 37.738281 z M 228 44 C 229 45 230 47 231 50 L 226
+50 L 228 44 z" style="fill:black" />
+<path d="M 245 42 C 243 47 242 54 243 59 C 243 61 243 65 245 65 C 249 64 246
+52 247 50 C 252 55 253 73 263 72 C 261 66 261 61 260 56 C 263 53 263 47 263 43
+C 259 46 257 52 257 58 C 254 51 252 44 245 42 " style="fill:black" />
+<path d="M 286 43 C 273 43 274 64 274 74 C 283 72 274 61 284 60 L 285 74 L 290
+74 C 289 68 286 61 293 59 L 293 56 C 286 54 286 48 286 43 z M 282 49 C 283 51
+283 53 284 56 L 279 57 C 279 54 280 51 282 49 z" style="fill:black" />
+<path d="M 304.79297 41.806641 C 301.8125 41.765625 297.875 44.5 297 48 C 295
+54 295 64 297 71 C 300 68 300 66 301 62 C 303 65 306 70 310 73 C 315 76 316 69
+316 66 C 310 67 308 63 305 59 C 307 58 310 58 312 55 C 315 51 312 44 306 42 C
+305.625 41.875 305.21875 41.8125 304.79297 41.806641 z M 304.15039 47.570312 C
+306.09 47.667908 308.375 49.34375 310 53 L 301 56 C 299.21875 50.65625
+301.31558 47.427673 304.15039 47.570312 z" style="fill:black" />
+<path d="M 329 90 C 330 89 332 89 333 87 C 334 85 331 80 331 77 C 330 71 333
+65 332 60 C 337 56 342 50 341 44 C 337 45 333 53 330 53 C 325 53 326 47 325 45
+C 325 43 324 42 322 43 C 319 45 322 52 323 54 C 324 58 327 59 328 63 C 329 67
+327 71 327 74 C 326 80 327 84 329 90  " style="fill:black" />
+<path d="M 372 10 L 374 13 C 376 12 377 12 380 13 C 381 13 382 14 383 14 C 384
+15 386 15 386 16 C 394 24 373 25 375 34 C 377 40 390 43 389 51 C 387 59 375 62
+375 71 C 383 67 399 55 393 45 C 390 38 382 37 380 31 C 384 29 394 26 395 20 C
+395 17 392 15 389 13 C 384 9 378 6 372 10 " style="fill:black" />
+</svg>
 </div>
-<div class="section">
-<h2>portfolio:</h2>
+<h1>Hal Canary / Portfolio</h1>
 
-<section class="subsection" id="Visualizing_Likelihood_Density_Functions_via_Optimal_Region_Projection">
-<h3>Visualizing Likelihood Density Functions via Optimal Region Projection</h3>
-<p class="centered"><img src="../images/Optimal_Region_Projection_-_Gomez.png" alt="" width="640"></p>
-<p>Hal Canary, Russell M. Taylor II, Cory Quammen, Scott Pratt, Facundo A. Gómez, Brian O'Shea, Christopher G. Healey. “<a href="http://www.sciencedirect.com/science/article/pii/S0097849314000296">Visualizing Likelihood Density Functions via Optimal Region Projection</a>.”
-<em>Computers &amp; Graphics</em> 41 (2014): 62-71.</p>
+<p><a href="/">Home</a></p>
+
+<hr />
+
+<div id="Visualizing_Likelihood_Density_Functions_via_Optimal_Region_Projection"></div>
+
+<h2>Visualizing Likelihood Density Functions via Optimal Region Projection</h2>
+
+<p><img src="/images/Optimal_Region_Projection_-_Gomez.png" alt="" width="640" height="659"></p>
+
+<p>Hal Canary, Russell M. Taylor II, Cory Quammen, Scott Pratt, Facundo A. Gómez, Brian O'Shea, Christopher G. Healey. “<a href="http://www.sciencedirect.com/science/article/pii/S0097849314000296">Visualizing Likelihood Density Functions via Optimal Region Projection</a>.” <em>Computers &amp; Graphics</em> 41 (2014): 62-71.</p>
 
 <p><em>Abstract</em>: Effective visualization of high-likelihood regions of parameter space is severely hampered by the large number of parameter dimensions that many models have. We present a novel technique, Optimal Percentile Region Projection, to visualize a high-dimensional likelihood density function that enables the viewer to understand the shape of the high-likelihood region. Optimal Percentile Region Projection has three novel components: first, we select the region of high likelihood in the high-dimensional space before projecting its shadow into a lower-dimensional projected space. Second, we analyze features on the surface of the region in the projected space to select the projection direction that shows the most interesting parameter dependencies. Finally, we use a three-dimensional projection space to show features that are not salient in only two dimensions. The viewer can also choose sets of axes to project along to explore subsets of the parameter space, using either the original parameter axes or principal-component axes. The technique was evaluated by our domain-science collaborators, who found it to be superior to their existing workflow both when there were interesting dependencies between parameters and when there were not.</p>
 
 <p>(<a href="/optimal-region-projection">Full Paper</a>)</p>
-</section>
 
-<section class="subsection" id="Percentile_Surface_Filter">
-<h3>Percentile Surface Filter</h3>
-<p class="centered"><img src="../images/Percentile_Surface_Filter.png" alt="" width="640"></p>
-<p>Given a set of points in space with a scalar value, this filter will create a surface around the top <em>P</em> percentile of the points. In this example, the top 95% of the points (by logLikelihood) are used.  This VTK filter is included in the <a href="http://vis.madai.us/">MADAI Visualization Workbench</a></p>
-</section>
+<hr />
 
+<div id="Percentile_Surface_Filter"></div>
 
-<section class="subsection" id="Matplotlib_Scatterplot_Matrix_Script">
-<h3>Matplotlib Scatterplot Matrix Script</h3>
-<p class="centered"><img src="../images/Matplotlib_Scatterplot_Matrix_Script.png" alt="" width="640"></p>
-<p>One standard way to visualize a multi-dimensional dataset is the scatterplot matrix.  The datasets produced by Markov-chain Monte Carlo explorations of 3- to 20-dimensional space have millions of points — too many for a glyph at each point. <a href="http://cs.unc.edu/~hal/pub/madai_matplotlib_scatterplot_matrix">This script</a> displays the density at each projected point.  The upper-right side plots the log of the density to highlight low-density regions.
-</p>
-</section>
+<h2>Percentile Surface Filter</h2>
 
+<p><img src="/images/Percentile_Surface_Filter.png" alt="" width="1024" height="597"></p>
 
-<section class="subsection" id="VTK_Viewer">
-<h3>VTK Viewer</h3>
-<p class="centered"><img src="../images/VTK_Viewer.png" alt="" width="640"></p>
-<p>My VTK Viewer VTK/Qt/C++ program lets you quickly view several 3D file formats (VTK, PLY, OBJ, STL, or PDB).  I also have a VTK/Python version of the same program.  It can be found at <a href="https://github.com/HalCanary/vtkviewer">https://github.com/HalCanary/vtkviewer</a>.</p>
-</section>
+<p>Given a set of points in space with a scalar value, this filter will create a surface around the top <em>P</em> percentile of the points. In this example, the top 95% of the points (by logLikelihood) are used. This VTK filter is included in the <a href="http://vis.madai.us/">MADAI Visualization Workbench</a></p>
 
+<hr />
 
-<section class="subsection" id="Word_Count_Journal">
-<h3>Word Count Journal</h3>
-<p class="centered"><img src="../images/Word_Count_Journal.png" alt="" width="640"></p>
-<p>A Python/Qt single-file text editor that counts words.  I use it to write a journal entry each morning.  It can be found at <a href="https://github.com/HalCanary/WordCountJournal">https://github.com/HalCanary/WordCountJournal</a>.</p>
-</section>
+<div id="Matplotlib_Scatterplot_Matrix_Script"></div>
 
+<h2>Matplotlib Scatterplot Matrix Script</h2>
 
-<section class="subsection" id="Teardrop_Glyphs_as_3D_Arrows">
-<h3>Teardrop Glyphs as 3D Arrows</h3>
-<p class="centered"><img src="../images/Teardrop_Glyphs_as_3D_Arrows.png" alt="" width="640"></p>
-<p>Arrow Glyphs introduce a lot of visual clutter, especially when there are many of them.  The teardrops glyph is the 3D version of the "anisotropic splat."  Here is one frame from a movie depicting particles in a high-energy collision; glyph direction and size represent momentum. <a href="http://cs.unc.edu/~hal/pub/teardrop.obj">teardrop.obj</a></p>
-</section>
+<p><img src="/images/Matplotlib_Scatterplot_Matrix_Script.png" alt="" width="768" height="768"></p>
 
+<p>One standard way to visualize a multi-dimensional dataset is the scatterplot matrix. The datasets produced by Markov-chain Monte Carlo explorations of 3- to 20-dimensional space have millions of points — too many for a glyph at each point. <a href="http://cs.unc.edu/~hal/pub/madai_matplotlib_scatterplot_matrix">This script</a> displays the density at each projected point. The upper-right side plots the log of the density to highlight low-density regions.</p>
 
-<section class="subsection" id="Banded_Level_Colormap_ParaView_Macro">
-<h3>Banded Level Colormap ParaView Macro</h3>
-<p class="centered"><img src="../images/Banded_Level_Colormap_ParaView_Macro.png" alt="" width="640"></p>
-<p>My Banded_Level_Colormap ParaView macro was inspired by Van Wijk and Telea's Enridged Contour Maps.  This macro is included in the <a href="http://vis.madai.us/">MADAI Visualization Workbench</a>.
-</p>
-</section>
+<hr />
 
+<div id="VTK_Viewer"></div>
 
-<section class="subsection" id="3D_Frame_ParaView_Macro">
-<h3>3D Frame ParaView Macro</h3>
-<p class="centered"><img src="../images/3D_Frame_ParaView_Macro.png" alt="" width="640"></p>
-<p>Drawing a frame around objects in space can serve to add context to improve perception.  We know that the visual system is tuned to perceive shaded surfaces. Therefore, a frame built from polygons will help the most with the perception of depth. I wrote a <a href="http://cs.unc.edu/~hal/pub/Generate_Frame.py">ParaView macro that generates a frame based on the bounding box of the currently active dataset</a>.</p>
-</section>
+<h2>VTK Viewer</h2>
 
+<p><img src="/images/VTK_Viewer.png" alt="" width="751" height="539"></p>
 
-<section class="subsection" id="Hephaestus_Scanner">
-<h3>Hephaestus Scanner</h3>
-<p class="centered"><img src="../images/Hephaestus_Scanner.png" alt="" width="640"></p>
-<p>For a class project, I wrote a content acquisition application that makes use of the Microsoft Kinect and the Point Cloud Library to construct a digital representation of a scene in VTK format and uploads it to a MIDAS backend server that stores and manages the collection of scenes from users and organizations.  This project can be found at <a href="https://github.com/HephaestusVision/hephaestus/">github.com/HephaestusVision/</a>.</p>
-</section>
+<p>My VTK Viewer VTK/Qt/C++ program lets you quickly view several 3D file formats (VTK, PLY, OBJ, STL, or PDB). I also have a VTK/Python version of the same program. It can be found at <a href="https://github.com/HalCanary/vtkviewer">https://github.com/HalCanary/vtkviewer</a>.</p>
 
+<hr />
 
-<section class="subsection" id="Visualizing_the_QCD_Critical_Point">
-<h3>Visualizing the QCD Critical Point with the Gaussian Scalar Splatter</h3>
-<p class="centered"><img src="../images/Visualizing_the_QCD_Critical_Point_with_the_Gaussian_Scalar_Splatter.png" alt="" width="640"></p>
+<div id="Word_Count_Journal"></div>
+
+<h2>Word Count Journal</h2>
+
+<p><img src="/images/Word_Count_Journal.png" alt="" width="684" height="204"></p>
+
+<p>A Python/Qt single-file text editor that counts words. I use it to write a journal entry each morning. It can be found at <a href="https://github.com/HalCanary/WordCountJournal">https://github.com/HalCanary/WordCountJournal</a>.</p>
+
+<hr />
+
+<div id="Teardrop_Glyphs_as_3D_Arrows"></div>
+
+<h2>Teardrop Glyphs as 3D Arrows</h2>
+
+<p><img src="/images/Teardrop_Glyphs_as_3D_Arrows.png" alt="" width="1576" height="788"></p>
+
+<p>Arrow Glyphs introduce a lot of visual clutter, especially when there are many of them. The teardrops glyph is the 3D version of the "anisotropic splat." Here is one frame from a movie depicting particles in a high-energy collision; glyph direction and size represent momentum. <a href="http://cs.unc.edu/~hal/pub/teardrop.obj">teardrop.obj</a></p>
+
+<hr />
+
+<div id="Banded_Level_Colormap_ParaView_Macro"></div>
+
+<h2>Banded Level Colormap ParaView Macro</h2>
+
+<p><img src="/images/Banded_Level_Colormap_ParaView_Macro.png" alt="" width="1370" height="903"></p>
+
+<p>My Banded_Level_Colormap ParaView macro was inspired by Van Wijk and Telea's Enridged Contour Maps. This macro is included in the <a href="http://vis.madai.us/">MADAI Visualization Workbench</a>.</p>
+
+<hr />
+
+<div id="3D_Frame_ParaView_Macro"></div>
+
+<h2>3D Frame ParaView Macro</h2>
+
+<p><img src="/images/3D_Frame_ParaView_Macro.png" alt="" width="788" height="575"></p>
+
+<p>Drawing a frame around objects in space can serve to add context to improve perception. We know that the visual system is tuned to perceive shaded surfaces. Therefore, a frame built from polygons will help the most with the perception of depth. I wrote a <a href="http://cs.unc.edu/~hal/pub/Generate_Frame.py">ParaView macro that generates a frame based on the bounding box of the currently active dataset</a>.</p>
+
+<hr />
+
+<div id="Hephaestus_Scanner"></div>
+
+<h2>Hephaestus Scanner</h2>
+
+<p><img src="/images/Hephaestus_Scanner.png" alt="" width="860" height="574"></p>
+
+<p>For a class project, I wrote a content acquisition application that makes use of the Microsoft Kinect and the Point Cloud Library to construct a digital representation of a scene in VTK format and uploads it to a MIDAS backend server that stores and manages the collection of scenes from users and organizations. This project can be found at <a href="https://github.com/HephaestusVision/hephaestus/">github.com/HephaestusVision/</a>.</p>
+
+<hr />
+
+<div id="Visualizing_the_QCD_Critical_Point"></div>
+
+<h2>Visualizing the QCD Critical Point with the Gaussian Scalar Splatter</h2>
+
+<p><img src="/images/Visualizing_the_QCD_Critical_Point_with_the_Gaussian_Scalar_Splatter.png" alt="" width="2400" height="2400"></p>
+
 <p>My Gaussian Scalar Spatter Filter was used to visualize the critical point in the phase space of QCD matter in this paper.</p>
 
-<p><em>Caption</em>: Time evolution (top to bottom) of QCD matter created in central Au+Au collisions at 10 (left), 25 (center) and 40 (right) GeV/u beam energy projected into the T − μ<sub>q</sub> phase diagram. The gray shading represents the amount of matter present at the respective value of T and μ<sub>q</sub>.</p>
-<p>Steffen A. Bass, Hannah Petersen, Cory Quammen, Hal Canary, Christopher G. Healey, Russell M. Taylor II. "<a href="http://dx.doi.org/10.2478/s11534-012-0076-1">Probing the QCD Critical Point with Relativistic Heavy-Ion Collisions</a>." Central European Journal of  Physics (2012) 10, 1278-1281.</p>
+<p><em>Caption</em>: Time evolution (top to bottom) of QCD matter created in central Au+Au collisions at 10 (left), 25 (center) and 40 (right) GeV/u beam energy projected into the T − μq phase diagram. The gray shading represents the amount of matter present at the respective value of T and μq.</p>
+
+<p>Steffen A. Bass, Hannah Petersen, Cory Quammen, Hal Canary, Christopher G. Healey, Russell M. Taylor II. "<a href="http://dx.doi.org/10.2478/s11534-012-0076-1">Probing the QCD Critical Point with Relativistic Heavy-Ion Collisions</a>." Central European Journal of Physics (2012) 10, 1278-1281.</p>
 
 <p>My Gaussian Scalar Spatter Filter is included in the <a href="http://vis.madai.us/">MADAI Visualization Workbench</a>.</p>
-</section>
 
-<section class="subsection" id="2D_Gaussian_Spatter">
-<h3>2D Gaussian Spatter</h3>
-<p class="centered"><img src="../images/2D_Gaussian_Spatter.png" alt="" width="640"></p>
-<p>This is a comparison of two different ways to visualize a set of points in two dimensions.  By warping a surface by splatted density, it is easier to perceive relative densities.</p>
+<hr />
+
+<div id="2D_Gaussian_Spatter"></div>
+
+<h2>2D Gaussian Spatter</h2>
+
+<p><img src="/images/2D_Gaussian_Spatter.png" alt="" width="1344" height="576"></p>
+
+<p>This is a comparison of two different ways to visualize a set of points in two dimensions. By warping a surface by splatted density, it is easier to perceive relative densities.</p>
+
 <p>My Gaussian Scalar Spatter Filter is included in the <a href="http://vis.madai.us/">MADAI Visualization Workbench</a>.</p>
-</section>
 
+<hr />
 
-<section class="subsection" id="Visualizing_Significant_Differences">
-<h3>Visualizing Significant Differences</h3>
-<p class="centered"><img src="../images/Visualizing_Significant_Differences.jpg" alt="" width="640"></p>
+<div id="Visualizing_Significant_Differences"></div>
 
-<p>This shows the differences between two hydrodynamic simulations of gold-nucleus collisions developed by Hannah Petersen and Steffen Bass. The side images each depict energy levels within a single 3D simulation, with the remnants of two nuclei flying towards the top and bottom of the screen, leaving a quark-gluon plasma in between.  Wedges of the volume have been carved away, like removing a wedge from an onion to reveal internal structure.  The center image shows two surfaces, one where the energy from the left simulation is higher, and one where the energy from the right simulation is greater.  It also shows  one surface from the left-hand simulation as a wire-frame mesh for context.  Our collaborators want to understand the impact of changing simulation parameters on the resulting time-varying simulation.  These techniques, which have been implemented as plug-ins for the open-source ParaView visualization application, are used by our collaborators studying particle collisions and weather simulation to make their simulations better match experimental results and to improve comprehension of the underlying physics.</p>
+<h2>Visualizing Significant Differences</h2>
 
-<p>These two techniques (onion slices on the side images, wireframe/contours on the central) were developed specifically for this type of data analysis in the spring of 2011 in a course on scientific visualization at UNC.  This particular combination of occlusion and wire-frame transparency highlights the answers to the questions posed by the scientists in fresh ways that enable them to more easily gain insight into their science.</p>
-</section>
+<p><img src="/images/Visualizing_Significant_Differences.jpg" alt="" width="3840" height="2160"></p>
 
+<p>This shows the differences between two hydrodynamic simulations of gold-nucleus collisions developed by Hannah Petersen and Steffen Bass. The side images each depict energy levels within a single 3D simulation, with the remnants of two nuclei flying towards the top and bottom of the screen, leaving a quark-gluon plasma in between. Wedges of the volume have been carved away, like removing a wedge from an onion to reveal internal structure. The center image shows two surfaces, one where the energy from the left simulation is higher, and one where the energy from the right simulation is greater. It also shows one surface from the left-hand simulation as a wire-frame mesh for context. Our collaborators want to understand the impact of changing simulation parameters on the resulting time-varying simulation. These techniques, which have been implemented as plug-ins for the open-source ParaView visualization application, are used by our collaborators studying particle collisions and weather simulation to make their simulations better match experimental results and to improve comprehension of the underlying physics.</p>
 
-<section class="subsection" id="Ensemble_Surface_Slicing">
-<h3>Ensemble Surface Slicing</h3>
-<p class="centered"><img src="../images/Ensemble_Surface_Slicing.png" alt="" width="640"></p>
+<p>These two techniques (onion slices on the side images, wireframe/contours on the central) were developed specifically for this type of data analysis in the spring of 2011 in a course on scientific visualization at UNC. This particular combination of occlusion and wire-frame transparency highlights the answers to the questions posed by the scientists in fresh ways that enable them to more easily gain insight into their science.</p>
+
+<hr />
+
+<div id="Ensemble_Surface_Slicing"></div>
+
+<h2>Ensemble Surface Slicing</h2>
+
+<p><img src="/images/Ensemble_Surface_Slicing.png" alt="" width="804" height="630"></p>
+
 <p>This is an implementation of Ensemble Surface Slicing, a <a href="http://dx.doi.org/10.1117/12.908288">technique developed by Oluwafemi Alabi</a>.</p>
 
-<p>Ensemble_Surface_Slicing.py is a VTK+Python+QT program that enables a user to load several VTK surface files ﬁles and adjust the width of the slices, the direction of the slice plane, and the offset from the origin of the first slice.  For COMP770 (Computer Graphics), I wrote up a <a href="http://cs.unc.edu/~hal/class/comp770/ess_report.pdf">report detailing the development of this software</a>.</p>
+<p>Ensemble_Surface_Slicing.py is a VTK+Python+QT program that enables a user to load several VTK surface files ﬁles and adjust the width of the slices, the direction of the slice plane, and the offset from the origin of the first slice. For COMP770 (Computer Graphics), I wrote up a <a href="http://cs.unc.edu/~hal/class/comp770/ess_report.pdf">report detailing the development of this software</a>.</p>
 
 <p>This functionality has been incorporated into the <a href="http://vis.madai.us/">MADAI Visualization Workbench</a>.</p>
-</section>
 
-<section class="subsection" id="Ray_Tracer">
-<h3>Ray Tracer</h3>
-<p class="centered"><img src="../images/Ray_Tracer.png" alt="" width="640"></p>
+<hr />
+
+<div id="Ray_Tracer"></div>
+
+<h2>Ray Tracer</h2>
+
+<p><img src="/images/Ray_Tracer.png" alt="" width="1048" height="788"></p>
+
 <p>I implemented a ray tracer for COMP770 (Computer Graphics).</p>
-</section>
 
-<section class="subsection" id="ARPS_Weather_Visualization">
-<h3>ARPS Weather Visualization</h3>
-<p class="centered"><img src="../images/ARPS_Weather_Visualization.png" alt="" width="640"></p>
-<p>In 2011, I worked with meteorologists to develop tools for visualizing weather simulation data.  This is an example of <a href="http://wwwcaps.ou.edu/">ARPS</a> data visualized in ParaView.</p>
-</section>
+<hr />
 
+<div id="ARPS_Weather_Visualization"></div>
 
-<section class="subsection" id="WRF_Weather_Visualization">
-<h3>WRF Weather Visualization</h3>
-<p class="centered"><img src="../images/WRF_Weather_Visualization.png" alt="" width="640"></p>
-<p>In 2011, I worked with meteorologists to develop tools for visualizing weather simulation data.  This is an example of <a href="http://www.wrf-model.org/index.php">WRF</a> data visualized in ParaView.</p>
-</section>
+<h2>ARPS Weather Visualization</h2>
 
+<p><img src="/images/ARPS_Weather_Visualization.png" alt="" width="1483" height="808"></p>
 
-<section class="subsection" id="Aztec_Diamonds_and_Baxter_Permutations">
-<h3>Aztec Diamonds and Baxter Permutations</h3>
-<p class="centered"><img src="../images/Aztec_Diamonds_and_Baxter_Permutations.png" alt="" width="640"></p>
+<p>In 2011, I worked with meteorologists to develop tools for visualizing weather simulation data. This is an example of <a href="http://wwwcaps.ou.edu/">ARPS</a> data visualized in ParaView.</p>
+
+<hr />
+
+<div id="WRF_Weather_Visualization"></div>
+
+<h2>WRF Weather Visualization</h2>
+
+<p><img src="/images/WRF_Weather_Visualization.png" alt="" width="1370" height="903"></p>
+
+<p>In 2011, I worked with meteorologists to develop tools for visualizing weather simulation data. This is an example of <a href="http://www.wrf-model.org/index.php">WRF</a> data visualized in ParaView.</p>
+
+<hr />
+
+<div id="Aztec_Diamonds_and_Baxter_Permutations"></div>
+
+<h2>Aztec Diamonds and Baxter Permutations</h2>
+
+<p><img src="/images/Aztec_Diamonds_and_Baxter_Permutations.png" alt="" width="726" height="245"></p>
 
 <p>Hal Canary. "<a href="http://www.combinatorics.org/Volume_17/Abstracts/v17i1r105.html">Aztec Diamonds and Baxter Permutations</a>". <em>The Electronic Journal of Combinatorics</em> <strong>17</strong> (2010), #R105</p>
 
 <p><em>Abstract</em>: We present a proof of a conjecture about the relationship between Baxter permutations and pairs of alternating sign matrices that are produced from domino tilings of Aztec diamonds. It is shown that a tiling corresponds to a pair of ASMs that are both permutation matrices if and only if the larger permutation matrix corresponds to a Baxter permutation. There has been a thriving literature on both pattern-avoiding permutations of various kinds [Baxter 1964, Dulucq and Guibert 1988] and tilings of regions using dominoes or rhombuses as tiles [Elkies et al. 1992, Kuo 2004]. However, there have not as of yet been many links between these two areas of enumerative combinatorics. This paper gives one such link.</p>
-</section>
-</div>
-  </div>
+
+<hr />
+
 </body>
 </html>
-<!--  LocalWords:  O'Shea  -->

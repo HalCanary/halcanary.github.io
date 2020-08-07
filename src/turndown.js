@@ -1,3 +1,4 @@
+#! /usr/bin/env node
 var TurndownService = require('turndown');
 var fs = require("fs");
 
