@@ -22,9 +22,9 @@ In a risk-based sense, the depositor is loaning money to the FDIC, and the FDIC 
 
 Since there is no longer a connection between the bank's deposit business and its lending business, I propose spitting those into two businesses: deposit banks and lending banks.
 
-The deposit banks can be nationalized and combined into a new publicly-owned entity called the Deposit Bank of the United States: DBUSA.
+The deposit banks can be nationalized and combined into a new publicly-owned entity called the Deposit Bank of the United States: DBUS.
 
-DEBUSA:
+DBUS:
 
   * provides deposit (savings + checking) accounts to all US citizens and legal entities that do business in the US.
 
@@ -38,25 +38,27 @@ DEBUSA:
 
   * re-deposits all deposits (minus whatever amount they need for day-to-day operations) in a special interest-bearing account at the Federal Reserve Bank. The Fed can set the interest rate as another way to control the economy.
 
-All deposits in DBUSA are guaranteed by both the US Treasury and the Federal Reserve.
+All deposits in DBUS are guaranteed by both the US Treasury and the Federal Reserve.
 
 The FDIC no longer guarantees deposit accounts. Instead, they act as a publicly-owned ratings agency for lending banks.  The Fed now, based on the information provided by the FDIC, buys large amounts of bonds from the lending banks.  The Fed can also decide a bank is too large to fail and insist that is split in half before the Fed will resume buying bonds.
 
-Nominally, the Fed can buy bank bonds in proportion to the amount of money in the DBUSA account.  But if the economy needs more money to be created, they can buy more bonds.  If inflation is a worry, they can buy fewer.
+Nominally, the Fed can buy bank bonds in proportion to the amount of money in the DBUS account.  But if the economy needs more money to be created, they can buy more bonds.  If inflation is a worry, they can buy fewer.
 
 Lending banks now only have two sources of money to lend: bonds and capital.  They no longer have to worry about a run on the bank.
 
-Lending banks may also provide a line of credit to back a credit card.  But the card's payment system is managed by the DBUSA.
+Lending banks may also provide a line of credit to back a credit card.  But the card's payment system is managed by the DBUS.
 
-Over time, regular checks and the ACH system would be phased out in favor of cashier's checks (now more convenient) and real-time payments.  Credit cards can also be phased out in favor of real-time payments.  For example, if your restaurant server brings you the bill and it has a QR-code on the bottom linking to a "billing record" in the BDUSA database (which has an amount, a receiving account, and text metadata (your itemized receipt)).  You simply make a real-time payment into that billing record and your bill is paid.  The restaurant gets an instant notification that the bill is paid.
+Over time, regular checks and the ACH system would be phased out in favor of cashier's checks (now more convenient) and real-time payments.  Credit cards can also be phased out in favor of real-time payments.  For example, if your restaurant server brings you the bill and it has a QR-code on the bottom linking to a "billing record" in the DBUS database (which has an amount, a receiving account, and text metadata (your itemized receipt)).  You simply make a real-time payment into that billing record and your bill is paid.  The restaurant gets an instant notification that the bill is paid.
 
 * * *
 
 Addendum:
 
-In addition to providing deposit accounts that store US dollars, DBUSA could also provide accounts that store stocks, bonds, and other financial instruments.  Such a system would allow a bond-issuer to pay all bond-holders instantly at the time the payment is due, without having to keep track of who owns the bonds, since DBUSA's database can store that information.  Similarly for stocks and dividends.
+In addition to providing deposit accounts that store US dollars, DBUS could also provide accounts that store stocks, bonds, and other financial instruments.  Such a system would allow a bond-issuer to pay all bond-holders instantly at the time the payment is due, without having to keep track of who owns the bonds, since DBUS's database can store that information.  Similarly for stocks and dividends.
 
-DBUSA could even allow some sets of accounts to be marked as "tax-advantaged account groups" and would report transactions into and out of that group to the IRS. This would allow households to control their own retirement accounts without having to go through a third party.
+DBUS could even allow some sets of accounts to be marked as "tax-advantaged account groups" and would report transactions into and out of that group to the IRS. This would allow households to control their own retirement accounts without having to go through a third party.
+
+Finally, some transactions into a person's accounts can be marked as an "income transaction" and DBUS could use the records of those transactions to calculate that person's income tax obligation and even pay it automatically if the person chooses to.
 
 * * *
 
