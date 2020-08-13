@@ -11,11 +11,15 @@ SUMMARY=A list of things that we should be seriously working on
 
       * Secure, transparent voting systems with independent statistical tests for accuracy.
 
-      * Automatic, non-partisan electoral districting with the algorithm spelled out.
+      * Automatic, non-partisan electoral districting with the algorithm spelled out. (E.g.: Districts must be equal in polulation to within 0.5% and maximally compact (for some given definition of compact.))
 
-  - Eliminate Electoral College; all adult US citizens can vote for president.
+  - Eliminate Electoral College; all adult US citizens directly vote for President and Vice President, regardless of where they live.
 
-  - Uniform rules for election of elected federal officials.  Nonpartisan ranked-voting primaries for elected federal offices (President, VP, Senators, Representatives), to happen a fixed amount of time before the general election.  Primary elections eliminate all but two candidates for office.  Uniform rules for getting onto the primary ballot via a standardized petition process.  Limit on number of primary candidates, with priority given to those with the most petition signatures.
+  - Uniform rules for election of elected federal officials:
+
+      * Nonpartisan ranked-voting primaries for elected federal offices (President, VP, Senators, Representatives), to happen a fixed amount of time before the general election.  Primary elections eliminate all but two candidates for office using instant-runoff rules.
+
+      * Uniform rules for getting onto the primary ballot via a standardized petition process.  Limit on number of primary candidates, with priority given to those with the most petition signatures.
 
   - Clarify that non-person legal entities are not people.  The rights protected by the Constitution are the rights of natural persons only.
 
