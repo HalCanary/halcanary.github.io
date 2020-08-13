@@ -191,7 +191,7 @@ class Post(object):
                 if sline == '':
                     break
                 if '=' not in sline:
-                    print sline ## error
+                    sys.stderr.write(sline + '\n') # error
                     continue
                 key, value = sline.split('=',1)
                 value = value.strip()
@@ -210,7 +210,7 @@ class Post(object):
                 elif key == 'MODE':
                     self.mode = value
                 elif key != 'COPYRIGHT':
-                    print '%s: %r=%r' % (path, key, value)
+                    sys.stderr.write('%s: %r=%r\n' % (path, key, value))
 
             if self.date is None:
                 raise Exception('DATE missing ({})'.format(self.source_path))
@@ -260,7 +260,7 @@ class Post(object):
             o.write(self.post)
             o.write(footer)
             if o.close():
-                print 'modified', self.target_file
+                sys.stdout.write('modified %s\n' % self.target_file)
 
 recent_post = """
 <div class="postbox">
@@ -287,7 +287,7 @@ class RecentPosts(object):
     def close(self):
         self.o.write(top_posts_footer)
         if self.o.close():
-            print 'modified', self.loc
+            sys.stdout.write('modified %s\n' % self.loc)
     def addPost(self,post):
         relurlfixer = re.compile('^{}/(.*)$'.format(base_dir))
         relurl = relurlfixer.match(post.permalinkpart).groups()[0]
@@ -375,7 +375,7 @@ class Index(object):
             o.write('    </ul>\n')
         o.write(archive_footer)
         if o.close():
-            print 'modified', self.loc
+            sys.stdout.write('modified %s\n' % self.loc)
 
 def listdir(path, reverse=False):
     assert os.path.isdir(path)
@@ -420,7 +420,7 @@ if __name__ == '__main__':
                 findIndex(indices, ['category',cat],'#'+cat).addPost(post)
 
         else:
-            print "????", path
+            sys.stderr.write("???? %s\n" % path)
     recentPosts.close()
     for index in indices.itervalues():
         index.close()

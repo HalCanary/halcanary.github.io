@@ -3,24 +3,48 @@
 
 import sys, os, subprocess, datetime, base64, re
 
-def markdown(src):
+PY3 = sys.version_info > (3,)
+
+def to_str(src):
+    return str(src, encoding='utf-8') if PY3 else src
+
+def to_bytes(src):
+    return src.encode('utf-8') if PY3 else src
+
+def pipe_process(src, cmd):
     try:
-        subproc = subprocess.Popen(
-            ['markdown'], stdin=subprocess.PIPE, stdout=subprocess.PIPE)
+        subproc = subprocess.Popen(cmd, stdin=subprocess.PIPE, stdout=subprocess.PIPE)
     except OSError:
-        sys.stderr.write('\nMARKDOWN FAILED.\n\n')
+        sys.stderr.write('\n%r failed.\n\n' % cmd)
         sys.exit(1)
-    subproc.stdin.write(src)
+    subproc.stdin.write(to_bytes(src))
     subproc.stdin.close()
     result = subproc.stdout.read()
     subproc.wait()
-    return result
+    return to_str(result)
 
 def get_first_h1(s):
     m = re.search("(?s)<h1>(.*?)</h1>", s)
     return m.group(1) if m else None
 
-template = """<!DOCTYPE html>
+def write_file(filepath, filecontent):
+    directory = os.path.dirname(filepath)
+    if os.path.exists(filepath):
+        if filecontent == read_file(filepath):
+            return
+    if not os.path.exists(directory):
+        os.makedirs(directory)
+    kwargs = dict(encoding='utf-8') if PY3 else dict()
+    with open(filepath, 'w', **kwargs) as o:
+        o.write(filecontent)
+
+def read_file(filepath, binary=False):
+    assert os.path.exists(filepath)
+    kwargs = dict(encoding='utf-8') if PY3 and not binary else dict()
+    with open(filepath, 'rb' if binary else 'r', **kwargs) as f:
+        return f.read()
+
+page_template = """<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -33,7 +57,7 @@ template = """<!DOCTYPE html>
 </style>
 </head>
 <body>
-<div style="text-align:center; margin:1ex 0 0 0">
+<div class="tophead">
 {svg}
 </div>
 {content}
@@ -42,36 +66,30 @@ template = """<!DOCTYPE html>
 """
 
 pages = [
-    ('portfolio', 'src/portfolio.md'),
+    'portfolio'
 ]
 
 def main():
     root = os.path.dirname(__file__) + '/../'
-
-    with open(root + 'src/style.css') as f:
-        style = re.sub(r'(^|:)  *', r'\1', f.read(), flags=re.M).strip()
-
+    style = re.sub(r'(^|:)  *', r'\1', read_file(root + 'src/style.css'), flags=re.M).strip()
     years = '1997-{:04d}'.format(datetime.date.today().year)
+    icon = base64.b64encode(read_file(root + 'images/2020-HWC3-favicon.png', binary=True))
+    if (sys.version_info > (3, 0)):
+        icon = str(icon, encoding='us-ascii')
+    svg = read_file(root + 'src/hal_canary_3.svg').strip()
 
-    with open(root + 'images/2020-HWC3-favicon.png') as f:
-        icon = base64.b64encode(f.read())
-
-    with open(root + 'src/hal_canary_3.svg') as f:
-        svg = f.read().strip()
-    for dst, src in pages:
-        if not os.path.exists(root + dst):
-            os.makedirs(root + dst)
-        with open(root + src) as f:
-            content = markdown(f.read())
+    for dst in pages:
+        src = 'src/pages/%s.md' % dst
+        content = pipe_process(read_file(root + src), ['markdown'])
         title = get_first_h1(content)
         assert title
-        with open(root + dst + '/index.html', 'w') as o:
-            o.write(template.format(years=years,
-                                    title=title,
-                                    icon=icon,
-                                    style=style,
-                                    svg=svg,
-                                    content=content))
+        write_file(root + dst + '/index.html', page_template.format(
+            years=years,
+            title=title,
+            icon=icon,
+            style=style,
+            svg=svg,
+            content=content))
 
 if __name__ == '__main__':
     main()
