@@ -17,11 +17,11 @@ version of it is
 <em>N</em>&middot;<em>kT</em></div>
 
 where *N* is now a dimensionless number and *k* is comes from the
-definition of *T*.  Let *&rho;* be our number density and the relation
+definition of *T*.  Let *ρ* be our number density and the relation
 simplifies to
 
 <div style="text-align:center;"><em>P</em> =
-<em>&rho;</em>&middot;<em>kT</em></div>
+<em>ρ</em>&middot;<em>kT</em></div>
 
 Pressure is density times temperature.
 
