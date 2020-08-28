@@ -1,6 +1,8 @@
-#! /usr/bin/env python
+#! /usr/bin/env python3
 
 import os
+import sys
+import html
 
 args = [
   ('aztec-diamonds',            'https://www.combinatorics.org/ojs/index.php/eljc/article/view/v17i1r105'),
@@ -15,6 +17,7 @@ args = [
   ('resume',                    'https://halcanary.org/Hal_Canary_Resume.html'),
   ('skottie-ios-app',           'https://skia.googlesource.com/skia/+/4ca0dacbce515bcc1b96ac574b80a9d2386b9a15/tools/skottie_ios_app'),
   ('vv/category',               'https://halcanary.org/vv/'),
+  ('cal',                       'https://calendar.google.com/calendar/embed?mode=WEEK&height=600&wkst=1&bgcolor=%23FFFFFF&src=halcanary@gmail.com&color=%23A32929&src=ht3jlfaac5lfd6263ulfh4tql8@group.calendar.google.com&color=%232952A3&src=i_71.70.184.14%23sunrise@group.v.calendar.google.com&color=%230D7813&src=en.usa%23holiday@group.v.calendar.google.com&color=%23AB8B00&src=p%23weeknum@group.v.calendar.google.com&color=%23B1440E&ctz=America/New_York'),
 ]
 
 template = '''<!doctype html>
@@ -39,6 +42,8 @@ os.chdir(os.path.dirname(__file__) + '/..')
 for key, value in args:
     if not os.path.exists(key):
         os.mkdirs(key)
+    value = html.escape(value)
     short = value.replace(root, '/', 1) if value.startswith(root) else value
     with open(key + '/index.html', 'w') as o:
         o.write(template.format(value, short))
+    sys.stdout.write(key + '\n')
