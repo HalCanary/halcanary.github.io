@@ -8,6 +8,10 @@ url_base = 'https://halcanary.org'
 
 relurlfixer = re.compile('^{}/(.*)$'.format(base_dir))
 
+MARKDOWN_CMD = ['cmark']
+if float(re.sub(r'cmark (\d+\.\d+)\..*', r'\1', subprocess.check_output(['cmark', '--version']), flags=re.S)) >= 0.29:
+    MARKDOWN_CMD = ['cmark', '--unsafe']
+
 first_year = '1997'
 current_year = '{:04d}'.format(datetime.date.today().year)
 
@@ -141,13 +145,9 @@ class Post(object):
     @staticmethod
     def markdown(inf):
         try:
-            subproc = subprocess.Popen(
-                ['cmark'],
-                #['cmark', '--unsafe'],
-                stdin=subprocess.PIPE,
-                stdout=subprocess.PIPE)
+            subproc = subprocess.Popen(MARKDOWN_CMD, stdin=subprocess.PIPE, stdout=subprocess.PIPE)
         except OSError:
-            sys.stderr.write('\nMARKDOWN FAILED.\n\n')
+            sys.stderr.write('\n%r FAILED.\n\n' % MARKDOWN_CMD)
             sys.exit(1)
         shutil.copyfileobj(inf, subproc.stdin)
         subproc.stdin.close()

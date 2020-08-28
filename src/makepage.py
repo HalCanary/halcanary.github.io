@@ -5,6 +5,10 @@ import sys, os, subprocess, datetime, base64, re
 
 PY3 = sys.version_info > (3,)
 
+MARKDOWN_CMD = ['cmark']
+if float(re.sub(r'cmark (\d+\.\d+)\..*', r'\1', subprocess.check_output(['cmark', '--version']), flags=re.S)) >= 0.29:
+    MARKDOWN_CMD = ['cmark', '--unsafe']
+
 def to_str(src):
     return str(src, encoding='utf-8') if PY3 else src
 
@@ -22,6 +26,9 @@ def pipe_process(src, cmd):
     result = subproc.stdout.read()
     subproc.wait()
     return to_str(result)
+
+def find_files(d):
+    return (os.path.relpath(os.path.join(ds, n), d) for ds, _, ns in os.walk(d) for n in ns)
 
 def get_first_h1(s):
     m = re.search("(?s)<h1>(.*?)</h1>", s)
@@ -65,10 +72,6 @@ page_template = """<!DOCTYPE html>
 </html>
 """
 
-pages = [
-    'portfolio'
-]
-
 def main():
     root = os.path.dirname(__file__) + '/../'
     style = re.sub(r'(^|:)  *', r'\1', read_file(root + 'src/style.css'), flags=re.M).strip()
@@ -78,9 +81,15 @@ def main():
         icon = str(icon, encoding='us-ascii')
     svg = read_file(root + 'src/hal_canary_3.svg').strip()
 
-    for dst in pages:
+    suffix = '.md'
+    for path in find_files(root + 'src/pages'):
+        if not path.endswith(suffix):
+            continue
+        dst = path[:-len(suffix)]
+        sys.stdout.write(dst +'\n')
         src = 'src/pages/%s.md' % dst
-        content = pipe_process(read_file(root + src), ['markdown'])
+        assert os.path.exists(src)
+        content = pipe_process(read_file(root + src), MARKDOWN_CMD)
         title = get_first_h1(content)
         assert title
         write_file(root + dst + '/index.html', page_template.format(
