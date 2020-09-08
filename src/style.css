@@ -36,7 +36,8 @@ img:before {
     color: black;
 }
 .content hr: after{
-    content: "✶ \A0 ✶ \A0 ✶";
+    font-size: 150%;
+    content: "* \A0 * \A0 *";
     display: block;
     position: relative;
 }
