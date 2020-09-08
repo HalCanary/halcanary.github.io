@@ -1,0 +1,122 @@
+<style>
+@page {
+    size: auto;
+    margin: 0.25in 0.5in 0.5in 0.5in;
+}
+li ul li {
+    list-style-type: square;
+}
+h1, h2, p, ul {
+    margin: 1ex 0;
+}
+li ul {
+    margin: 0 0 0.5ex 0;
+}
+ul {
+    padding-left: 30px;
+}
+li {
+    margin: 0 0 0.5ex 0;
+}
+a:link, a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+a:link:active, a:visited:active, a:link:hover, a:visited:hover {
+    text-decoration: underline;
+}
+</style>
+
+<div style="display: none;">
+
+Hal W Canary III - 2020 Resume
+==============================
+
+</div>
+<div class="centered">
+
+[halcanary@gmail.com](mailto:halcanary@gmail.com)
+• [+1-919-724-2801](tel:+1-919-724-280)
+• 9 Upton Ct, Durham NC 27713
+• [https://halcanary.org/](https://halcanary.org/)
+
+</div>
+
+Technical Skills
+----------------
+
+*   Languages: C++, Python, C, Java, JavaScript, Go, Shell Scripting
+*   Software Tools: Clang, GCC, Make, CMake, OpenGL, Git, Gerrit
+*   Operating systems: Unix and Linux workstations and servers, Android and iOS.
+*   Specialties: scientific and numerical computing, computer graphics,
+    databases and database interfaces.
+
+Education
+---------
+
+*   University of North Carolina at Chapel Hill, M.S. Computer Science, August 2013.
+*   University of Wisconsin-Madison, B.S. Physics and Mathematics, May 2001.
+
+Experience
+----------
+
+*   Senior Software Engineer, Voith Digital. 2020–present
+    *   Full stack engineer for
+        [Voith OnCumulus](http://voith.com/corp-en/digital-solutions/oncumulus.html).
+*   Software Engineer, Google, Inc. 2013–2020
+    *   Member of the Skia 2D graphic library ([https://skia.org/](https://skia.org/)) team.
+    *   Created SkQP, a project to use Skia rendering tests to generate new
+        Android Compatibility Test Suite tests for OpenGLES and Vulkan drivers,
+        for Android Pie and Andoroid 10
+        ([https://skia.org/dev/testing/skqp](https://skia.org/dev/testing/skqp)).
+    *   Maintained SkPDF, Skia's PDF generator used by Chrome printing and
+        Android framework. Refactored entire code to use a fraction of the RAM,
+        execute faster, be threadsafe and optionally multithreaded
+        ([https://skia.org/user/sample/pdf](https://skia.org/user/sample/pdf)).
+    *   Experience running, testing, debugging Skia software library on Linux,
+        MacOS, Windows, Android and iOS.
+    *   Wrote example and testing applications for Android and iOS, linking a
+        native C++ library to Java (via JNI) or Objective-C (e.g.
+        [https://halcanary.org/skottie-ios-app](https://halcanary.org/skottie-ios-app)).
+    *   Contributed to API documentation and examples.
+    *   Created scripts in Python, Go, and Shell to automate tasks (e.g.
+        [https://halcanary.org/git-sync-deps](https://halcanary.org/git-sync-deps)).
+*   Research Assistant, UNC-Chapel Hill, Computer Science Department. 2011–2013
+    *   Created novel tools for visualizations of high-dimensional statistical distributions.
+    *   Built visualizations for scientific data (nuclear quantum-chromodynamic
+        plasma simulation, meteorologic simulation, and cosmological galactic
+        formation simulation datasets) using VTK and ParaView.
+    *   Iteratively designed and developed the MADAI Distribution Sampling Tools
+        ([https://halcanary.org/madai-dst](https://halcanary.org/madai-dst))
+        and the MADAI Visualization Workbench
+        ([https://halcanary.org/madai-bench](https://halcanary.org/madai-bench)).
+    *   Developed new VTK filters and ParaView macros.
+    *   Collaborated with domain scientists to develop visualization and
+        statistical product requirements.
+*   Receiving Manager, Barnes & Noble. 2006–2011
+*   College Math Tutor, Edgewood College. 2004–2005
+*   Programmer and Student Researcher, UW-Madison Math Department. 2001–2004
+*   Interface Analyst and Programmer, Epic Systems Corporation. 2001–2002
+    *   Developed database interface software in InterSystems Caché.
+    *   Installed and configured client’s software.
+    *   Resolved customer issues with troubleshooting.
+    *   Developed custom software for clients.
+*   System Administrator, UW-Madison Physics Department Computational Physics
+    Lab. 2000–2001
+*   Undergraduate Researcher, UW-Madison Physics Department. 1999–2000
+
+Publications
+------------
+
+*   Hal Canary, Russell M. Taylor II, Cory Quammen, Scott Pratt, Facundo A.
+    Gómez, Brian O'Shea, Christopher G. Healey. “Visualizing Likelihood Density
+    Functions via Optimal Region Projection.” _Computers & Graphics_ 41 (2014):
+    62–71.
+    ([https://halcanary.org/optimal-region-projection](https://halcanary.org/optimal-region-projection))
+*   Steffen A. Bass, Hannah Petersen, Cory Quammen, Hal Canary, Christopher G.
+    Healey, Russell M. Taylor II. “Probing the QCD Critical Point with
+    Relativistic Heavy-Ion Collisions.” _Central European Journal of Physics_
+    (2012) 10, 1278–1281.
+*   Hal Canary. “Aztec Diamonds and Baxter Permutations.” _The Electronic
+    Journal of Combinatorics_ 17 (2010), #R105
+    ([https://halcanary.org/aztec-diamonds](https://halcanary.org/aztec-diamonds))

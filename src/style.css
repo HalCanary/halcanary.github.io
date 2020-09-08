@@ -1,9 +1,13 @@
-body{
+@media print { body {
+    max-width:8in;
+    font-size:12px;
+}}
+@media screen { body{
     font-family: sans-serif;
     max-width: 35em;
     margin: 8px auto;
     padding: 0 8px;
-}
+}}
 hr.black{
     border: 0;
     height: 1px;
