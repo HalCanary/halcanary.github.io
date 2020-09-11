@@ -13,7 +13,7 @@ font-size:12px;
 @media screen { body{
 font-family:sans-serif;
 max-width:35em;
-margin:8px auto;
+margin:22px auto 64px auto;
 padding:0 8px;
 }}
 hr.black{
@@ -36,6 +36,9 @@ color:#000;
 background-color:#DDD;
 white-space:pre-line;
 }
+.content {
+margin:1em 0;
+}
 .content hr{
 padding:0;
 margin:0;
@@ -53,8 +56,8 @@ position:relative;
 .centered{text-align:center}
 .postbox{
 border-bottom:6px solid #ddd;
-margin:0 -8px 6px -8px;
-padding:0 8px 0 8px;
+margin:0 0 6px 0;
+padding:0 0 0 0;
 }
 pre{overflow-x:auto}
 .byline{
@@ -97,20 +100,22 @@ margin:1ex 0 0 0;
 }
 </style>
 </head>
-  <!-- Copyright 2004-2020 Hal Canary. ALL RIGHTS RESERVED. -->
+<!-- Copyright 2004-2020 Hal Canary. ALL RIGHTS RESERVED. -->
+<body>
 
-  <body>
-      <h1 class="blogtitle">Nimrod</h1>
-
-      <div class="byline">By Hal Canary,
-        2004-09-10 20:18:49
-        (<a href="https://halcanary.org/vv/2004/09/10/319/">link</a>)
-    <br><a href="../../../../category/computers-code/" class="categorylink">#computers-code</a>
-        </div>
-      <!-- SRC= 2004-09-10-319 -->
-      <div class="content">
-
-<!-- BEGIN CONTENT -->
+<article class="postbox">
+  <header>
+    <!-- SRC= 2004-09-10-319 -->
+    <h1 class="blogtitle">Nimrod</h1>
+    <p></p>
+    <div class="byline">
+      <div>by: Hal Canary</div>
+      <div>posted: 2004-09-10 20:18:49</div>
+      <div>link: <a href="/vv/2004/09/10/319/">https://halcanary.org/vv/2004/09/10/319/</a></div>
+      <div><a href="/vv/category/computers-code/" class="categorylink">#computers-code</a></div>
+    </div>
+  </header>
+  <div class="content">
 <p>The folks just sent me their old P200 laptop.  (It barely qualifies as a notebook, as its dimentions are 8.5 x 11 x 2.2 inches.) Thanks, guys.</p>
 <p>It's a Compaq Armada 1571DM.  I named him <em>nimrod</em>.</p>
 <p>He's a behemoth.  CD <strong>and</strong> floppy drive.  Integrated power supply. 12-inch 800x600 screen.  With all that, there is just one usb port and no ethernet jack.  And you can tell the previous owner (Dad) showed him some love: good condition, maxed out RAM (96 Megs), LCD in great shape.</p>
@@ -118,13 +123,9 @@ margin:1ex 0 0 0;
 <p>Due to the ancientness of the hardware, this became an excersize in minimalism.  Windowmaker is still good, if not user-friendly, so I didn't even bother trying something newer.  Back in the day, I would use netscape 4.x, but I'm going to give dillo a try this time around.  I considered forgoing the gui alltogether, but knew I would want it for browsing, if nothing else.</p>
 <p>Turns out that yum uses a lot of processor power when it resolves dependencies.  Or maybe it gets into infinite loops.</p>
 <p><strong>UPDATE 2004-09-12:</strong>The battery is quite dead, and I'll never get the winmodem to work. I may have to invest in a pcmcia modem at some point.  But everything else seems to work perfectly.</p>
+  </div>
+</article>
 
-
-<!-- END CONTENT -->
-
-      </div>
-      <hr class="black">
-
-      <p>(<a href="../../../../archives/">back</a>)</p>
-  </body>
+<p>(<a href="/vv/archives/">back</a>)</p>
+</body>
 </html>

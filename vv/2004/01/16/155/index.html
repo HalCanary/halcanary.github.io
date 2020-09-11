@@ -13,7 +13,7 @@ font-size:12px;
 @media screen { body{
 font-family:sans-serif;
 max-width:35em;
-margin:8px auto;
+margin:22px auto 64px auto;
 padding:0 8px;
 }}
 hr.black{
@@ -36,6 +36,9 @@ color:#000;
 background-color:#DDD;
 white-space:pre-line;
 }
+.content {
+margin:1em 0;
+}
 .content hr{
 padding:0;
 margin:0;
@@ -53,8 +56,8 @@ position:relative;
 .centered{text-align:center}
 .postbox{
 border-bottom:6px solid #ddd;
-margin:0 -8px 6px -8px;
-padding:0 8px 0 8px;
+margin:0 0 6px 0;
+padding:0 0 0 0;
 }
 pre{overflow-x:auto}
 .byline{
@@ -97,20 +100,22 @@ margin:1ex 0 0 0;
 }
 </style>
 </head>
-  <!-- Copyright 2004-2020 Hal Canary. ALL RIGHTS RESERVED. -->
+<!-- Copyright 2004-2020 Hal Canary. ALL RIGHTS RESERVED. -->
+<body>
 
-  <body>
-      <h1 class="blogtitle">Fedora Linux</h1>
-
-      <div class="byline">By Hal Canary,
-        2004-01-16 11:58:09
-        (<a href="https://halcanary.org/vv/2004/01/16/155/">link</a>)
-    <br><a href="../../../../category/computers-code/" class="categorylink">#computers-code</a>
-        </div>
-      <!-- SRC= 2004-01-16-155 -->
-      <div class="content">
-
-<!-- BEGIN CONTENT -->
+<article class="postbox">
+  <header>
+    <!-- SRC= 2004-01-16-155 -->
+    <h1 class="blogtitle">Fedora Linux</h1>
+    <p></p>
+    <div class="byline">
+      <div>by: Hal Canary</div>
+      <div>posted: 2004-01-16 11:58:09</div>
+      <div>link: <a href="/vv/2004/01/16/155/">https://halcanary.org/vv/2004/01/16/155/</a></div>
+      <div><a href="/vv/category/computers-code/" class="categorylink">#computers-code</a></div>
+    </div>
+  </header>
+  <div class="content">
 <p><img src="/images/fedora.gif" alt="[F]" width="64" height="64" /></p>
 <p>I've been using Fedora Linux on six computers I'm responsible for.  I like it a lot.  Here's why:</p>
 <ol>
@@ -123,13 +128,9 @@ margin:1ex 0 0 0;
 <li><a href="http://fedora.artoo.net/faq/">The Unofficial Fedora FAQ</a>: info on setting up yum repositorys (hint: use the mirror.kernel.org mirror), info on installing java jdk or sdk correctly. Maintained by Max Kanat-Alexander.</li>
 <li><a href="http://fedoranews.org/">FedoraNews</a>: news from the fedora-list mailing list, beginner hints, building RPM packages for your system. Maintained by Thomas Chung.</li>
 </ul>
+  </div>
+</article>
 
-
-<!-- END CONTENT -->
-
-      </div>
-      <hr class="black">
-
-      <p>(<a href="../../../../archives/">back</a>)</p>
-  </body>
+<p>(<a href="/vv/archives/">back</a>)</p>
+</body>
 </html>

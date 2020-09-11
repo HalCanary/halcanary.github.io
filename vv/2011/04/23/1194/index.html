@@ -13,7 +13,7 @@ font-size:12px;
 @media screen { body{
 font-family:sans-serif;
 max-width:35em;
-margin:8px auto;
+margin:22px auto 64px auto;
 padding:0 8px;
 }}
 hr.black{
@@ -36,6 +36,9 @@ color:#000;
 background-color:#DDD;
 white-space:pre-line;
 }
+.content {
+margin:1em 0;
+}
 .content hr{
 padding:0;
 margin:0;
@@ -53,8 +56,8 @@ position:relative;
 .centered{text-align:center}
 .postbox{
 border-bottom:6px solid #ddd;
-margin:0 -8px 6px -8px;
-padding:0 8px 0 8px;
+margin:0 0 6px 0;
+padding:0 0 0 0;
 }
 pre{overflow-x:auto}
 .byline{
@@ -97,20 +100,22 @@ margin:1ex 0 0 0;
 }
 </style>
 </head>
-  <!-- Copyright 2011-2020 Hal Canary. ALL RIGHTS RESERVED. -->
+<!-- Copyright 2011-2020 Hal Canary. ALL RIGHTS RESERVED. -->
+<body>
 
-  <body>
-      <h1 class="blogtitle">txt to html with hyperlink conversion</h1>
-
-      <div class="byline">By Hal Canary,
-        2011-04-23 20:19:44
-        (<a href="https://halcanary.org/vv/2011/04/23/1194/">link</a>)
-    <br><a href="../../../../category/computers-code/" class="categorylink">#computers-code</a>;<a href="../../../../category/uncategorized/" class="categorylink">#uncategorized</a>
-        </div>
-      <!-- SRC= 2011-04-23-1194 -->
-      <div class="content">
-
-<!-- BEGIN CONTENT -->
+<article class="postbox">
+  <header>
+    <!-- SRC= 2011-04-23-1194 -->
+    <h1 class="blogtitle">txt to html with hyperlink conversion</h1>
+    <p></p>
+    <div class="byline">
+      <div>by: Hal Canary</div>
+      <div>posted: 2011-04-23 20:19:44</div>
+      <div>link: <a href="/vv/2011/04/23/1194/">https://halcanary.org/vv/2011/04/23/1194/</a></div>
+      <div><a href="/vv/category/computers-code/" class="categorylink">#computers-code</a>; <a href="/vv/category/uncategorized/" class="categorylink">#uncategorized</a></div>
+    </div>
+  </header>
+  <div class="content">
 <p>I don't have time to be writing programs.</p>
 <pre>#!/bin/sed &#0045;f
 1 i&#0092;
@@ -129,13 +134,9 @@ s/&#0039;/&#0092;&amp;#0039;/g;
 s/&#0092;(http:&#0092;/&#0092;/[^ ]&#0092;+&#0092;)/&lt;a href=&quot;&#0092;1&quot;&gt;&#0092;1&lt;&#0092;/a&gt;/g
 1 s/^/&lt;pre&gt;/
 $ s/$/&lt;&#0092;/pre&gt;&lt;&#0092;/body&gt;&lt;&#0092;/html&gt;/</pre>
+  </div>
+</article>
 
-
-<!-- END CONTENT -->
-
-      </div>
-      <hr class="black">
-
-      <p>(<a href="../../../../archives/">back</a>)</p>
-  </body>
+<p>(<a href="/vv/archives/">back</a>)</p>
+</body>
 </html>

@@ -13,7 +13,7 @@ font-size:12px;
 @media screen { body{
 font-family:sans-serif;
 max-width:35em;
-margin:8px auto;
+margin:22px auto 64px auto;
 padding:0 8px;
 }}
 hr.black{
@@ -36,6 +36,9 @@ color:#000;
 background-color:#DDD;
 white-space:pre-line;
 }
+.content {
+margin:1em 0;
+}
 .content hr{
 padding:0;
 margin:0;
@@ -53,8 +56,8 @@ position:relative;
 .centered{text-align:center}
 .postbox{
 border-bottom:6px solid #ddd;
-margin:0 -8px 6px -8px;
-padding:0 8px 0 8px;
+margin:0 0 6px 0;
+padding:0 0 0 0;
 }
 pre{overflow-x:auto}
 .byline{
@@ -97,20 +100,22 @@ margin:1ex 0 0 0;
 }
 </style>
 </head>
-  <!-- Copyright 2004-2020 Hal Canary. ALL RIGHTS RESERVED. -->
+<!-- Copyright 2004-2020 Hal Canary. ALL RIGHTS RESERVED. -->
+<body>
 
-  <body>
-      <h1 class="blogtitle">RAM these days.</h1>
-
-      <div class="byline">By Hal Canary,
-        2004-08-15 16:51:49
-        (<a href="https://halcanary.org/vv/2004/08/15/301/">link</a>)
-    <br><a href="../../../../category/computers-code/" class="categorylink">#computers-code</a>
-        </div>
-      <!-- SRC= 2004-08-15-301 -->
-      <div class="content">
-
-<!-- BEGIN CONTENT -->
+<article class="postbox">
+  <header>
+    <!-- SRC= 2004-08-15-301 -->
+    <h1 class="blogtitle">RAM these days.</h1>
+    <p></p>
+    <div class="byline">
+      <div>by: Hal Canary</div>
+      <div>posted: 2004-08-15 16:51:49</div>
+      <div>link: <a href="/vv/2004/08/15/301/">https://halcanary.org/vv/2004/08/15/301/</a></div>
+      <div><a href="/vv/category/computers-code/" class="categorylink">#computers-code</a></div>
+    </div>
+  </header>
+  <div class="content">
 <p>Just did a reboot of my FC2 workstation, started a terminal emulator and a browser.</p>
 <pre>
 $ head -2 /proc/meminfo
@@ -122,13 +127,9 @@ $ echo $(( (1035692-686080)/1024 ))
 <p>Including buffers, the system takes 341 MB of RAM just to get going.  And you can still buy desktops with 256 MB!</p>
 <p>I must admit that Linux 2.6.x tends to be optimized more for lots of RAM, as compaired to 2.2.x or 2.4.x.</p>
 <p>Actually, if I was going to recomend a desktop for those who take no pleasure in building thier own system, I'd say go with something like  the HPQ <a href="http://tinyurl.com/4pczd">SR1000Z</a>. Take the slowest Athlon XP offered and 1GB of RAM.  I think this is what I reccomended to my father a year ago, and I think he's happy with that computer.</p>
+  </div>
+</article>
 
-
-<!-- END CONTENT -->
-
-      </div>
-      <hr class="black">
-
-      <p>(<a href="../../../../archives/">back</a>)</p>
-  </body>
+<p>(<a href="/vv/archives/">back</a>)</p>
+</body>
 </html>

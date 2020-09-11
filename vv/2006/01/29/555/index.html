@@ -13,7 +13,7 @@ font-size:12px;
 @media screen { body{
 font-family:sans-serif;
 max-width:35em;
-margin:8px auto;
+margin:22px auto 64px auto;
 padding:0 8px;
 }}
 hr.black{
@@ -36,6 +36,9 @@ color:#000;
 background-color:#DDD;
 white-space:pre-line;
 }
+.content {
+margin:1em 0;
+}
 .content hr{
 padding:0;
 margin:0;
@@ -53,8 +56,8 @@ position:relative;
 .centered{text-align:center}
 .postbox{
 border-bottom:6px solid #ddd;
-margin:0 -8px 6px -8px;
-padding:0 8px 0 8px;
+margin:0 0 6px 0;
+padding:0 0 0 0;
 }
 pre{overflow-x:auto}
 .byline{
@@ -97,20 +100,22 @@ margin:1ex 0 0 0;
 }
 </style>
 </head>
-  <!-- Copyright 2006-2020 Hal Canary. ALL RIGHTS RESERVED. -->
+<!-- Copyright 2006-2020 Hal Canary. ALL RIGHTS RESERVED. -->
+<body>
 
-  <body>
-      <h1 class="blogtitle">Wicked Palm</h1>
-
-      <div class="byline">By Hal Canary,
-        2006-01-29 11:58:00
-        (<a href="https://halcanary.org/vv/2006/01/29/555/">link</a>)
-    <br><a href="../../../../category/books/" class="categorylink">#books</a>
-        </div>
-      <!-- SRC= 2006-01-29-555 -->
-      <div class="content">
-
-<!-- BEGIN CONTENT -->
+<article class="postbox">
+  <header>
+    <!-- SRC= 2006-01-29-555 -->
+    <h1 class="blogtitle">Wicked Palm</h1>
+    <p></p>
+    <div class="byline">
+      <div>by: Hal Canary</div>
+      <div>posted: 2006-01-29 11:58:00</div>
+      <div>link: <a href="/vv/2006/01/29/555/">https://halcanary.org/vv/2006/01/29/555/</a></div>
+      <div><a href="/vv/category/books/" class="categorylink">#books</a></div>
+    </div>
+  </header>
+  <div class="content">
 <p>Convoluted Story:</p>
 <p>I had an hour or so to kill on the westside between shifts this week, so I stopped in the big bookstore they have.  Glancing through the new fiction paperbacks, I saw <a href="http://www.amazon.com/exec/obidos/ASIN/0060987103/ref=nosim/theworldofhalcan"><em>Wicked: The Life and Times of the Wicked Witch of the West</em></a>.  Someone had recommended it some time ago, saying "it's more political than I would have expected."  I forget who.</p>
 <p>So I picked it up, read the first two chapters, and fell asleep in the comfy chairs they have.  After they called me back into work, I bought the book.</p>
@@ -120,13 +125,9 @@ margin:1ex 0 0 0;
 <p>The m105 has some advantages and disadvantages.  It was relatively cheap at the time it was released, and made a nice graduation present from my parents.  It uses 2xAAA batteries, so I don't have to worry about the lifetime of a rechargeable.</p>
 <p>On the other hand, it uses old-fashioned RAM for its memory and when the batteries die, the memory is all lost.  So every time that happens, I have to reinstall databases and applications.  I've tried to make that as easy as possible:  The directories $HOME/Palm/Docs and $HOME/Palm/Apps contain PalmDoc ebooks and Palm applications.  The pilot-link tools make re-installing everything easy. <code>PILOTPORT=/dev/ttyS0 PILOTRATE=115200 pilot-xfer -i ~/Palm/Docs/* ~/Palm/Apps/*</code></p>
 <p>I do wish I had one of the models that relied on a removable Flash drive and not RAM.</p>
+  </div>
+</article>
 
-
-<!-- END CONTENT -->
-
-      </div>
-      <hr class="black">
-
-      <p>(<a href="../../../../archives/">back</a>)</p>
-  </body>
+<p>(<a href="/vv/archives/">back</a>)</p>
+</body>
 </html>

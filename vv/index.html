@@ -13,7 +13,7 @@ font-size:12px;
 @media screen { body{
 font-family:sans-serif;
 max-width:35em;
-margin:8px auto;
+margin:22px auto 64px auto;
 padding:0 8px;
 }}
 hr.black{
@@ -36,6 +36,9 @@ color:#000;
 background-color:#DDD;
 white-space:pre-line;
 }
+.content {
+margin:1em 0;
+}
 .content hr{
 padding:0;
 margin:0;
@@ -53,8 +56,8 @@ position:relative;
 .centered{text-align:center}
 .postbox{
 border-bottom:6px solid #ddd;
-margin:0 -8px 6px -8px;
-padding:0 8px 0 8px;
+margin:0 0 6px 0;
+padding:0 0 0 0;
 }
 pre{overflow-x:auto}
 .byline{
@@ -97,65 +100,58 @@ margin:1ex 0 0 0;
 }
 </style>
 </head>
-  <!-- Copyright 1997-2020 Hal Canary. ALL RIGHTS RESERVED. -->
+<!-- Copyright 1997-2020 Hal Canary. ALL RIGHTS RESERVED. -->
+<body>
 
-  <body>
-      <h1>Voder-Vocoder</h1>
-      <div class="byline centered">The Log of Hal Canary</div>
-
-      <script>
-        function search_hco() {
-          document.getElementById("search-link-halcanary-org").style.display = "none";
-          document.getElementById("search-halcanary-org").style.display = "block";
-          return false;
-        }
-      </script>
-      <div id="search-link-halcanary-org">
-        <div class="rightside"><a href="" onclick="return search_hco();">search</a></div>
-      </div>
-      <div id="search-halcanary-org" style="display:none;">
-        <form method="get" action="https://www.google.com/search">
-          <div class="rightside">
-            <input name="domains" value="halcanary.org" type="hidden" />
-            <input name="sitesearch" value="halcanary.org" type="hidden" />
-            <input id="search" name="q" size="30" maxlength="255" />
-            <input value="Search" type="submit" />
-          </div>
-        </form>
-      </div>
-      <div class="postbox">&nbsp;</div>
-      <div>
+<h1>Voder-Vocoder</h1>
+<div class="byline centered">The Log of Hal Canary</div>
 
 <div class="postbox">
-      <h2 class="blogtitle">A flag for the US Democratic Party</h2>
-
-      <p>a proposal</p>
-
-      <div class="byline">By Hal Canary,
-        2020-08-25 22:47:17 -0400 (EDT)
-        (<a href="2020/08/25/3020/">link</a>)
-        
+  <div id="search-link-halcanary-org">
+    <div class="rightside"><a href="" onclick="document.getElementById('search-link-halcanary-org').style.display='none'; document.getElementById('search-halcanary-org').style.display='block'; return false;">search</a></div>
+  </div>
+  <div id="search-halcanary-org" style="display:none;">
+    <form method="get" action="https://www.google.com/search">
+      <div class="rightside">
+        <input name="domains" value="halcanary.org" type="hidden" />
+        <input name="sitesearch" value="halcanary.org" type="hidden" />
+        <input id="search" name="q" size="30" maxlength="255" />
+        <input value="Search" type="submit" />
       </div>
-      <!-- SRC=2020-08-25-3020 -->
-      <div class="content">
-<img src="/images/dem.png">
-
-      </div>
+    </form>
+  </div>
 </div>
 
+<article class="postbox">
+  <header>
+    <!-- SRC= 2020-08-25-3020 -->
+    <h2 class="blogtitle">A flag for the US Democratic Party</h2>
+    <p>a proposal</p>
+    <div class="byline">
+      <div>by: Hal Canary</div>
+      <div>posted: 2020-08-25 22:47:17 -0400 (EDT)</div>
+      <div>link: <a href="/vv/2020/08/25/3020/">https://halcanary.org/vv/2020/08/25/3020/</a></div>
+      <div></div>
+    </div>
+  </header>
+  <div class="content">
+<img src="/images/dem.png">
+  </div>
+</article>
 
-<div class="postbox">
-      <h2 class="blogtitle">Randolph Warner Church Jr.</h2>
-
-      <p>Remembering my uncle.</p>
-
-      <div class="byline">By Hal Canary,
-        2020-08-07 16:35:38 -0400 (EDT)
-        (<a href="2020/08/07/3019/">link</a>)
-        
-      </div>
-      <!-- SRC=2020-08-07-3019 -->
-      <div class="content">
+<article class="postbox">
+  <header>
+    <!-- SRC= 2020-08-07-3019 -->
+    <h2 class="blogtitle">Randolph Warner Church Jr.</h2>
+    <p>Remembering my uncle.</p>
+    <div class="byline">
+      <div>by: Hal Canary</div>
+      <div>posted: 2020-08-07 16:35:38 -0400 (EDT)</div>
+      <div>link: <a href="/vv/2020/08/07/3019/">https://halcanary.org/vv/2020/08/07/3019/</a></div>
+      <div></div>
+    </div>
+  </header>
+  <div class="content">
 <p>My father's sister's husband, my Uncle Ranny, passed away earlier this year. Even though I never spent much time with him, when I did get to visit him, he was always kind and nice to talk to.</p>
 <p>When Ranny Church told me that his uncle was Alonzo Church of the Church-Turing thesis and the lambda calculus, I though he was joking about the fact that I was studying computer science and that he happened to share a last name with one of the fathers of theoretical computer science.  But in fact, he wasn't joking.  My uncle's uncle was <em>the</em> <a href="https://en.wikipedia.org/wiki/Alonzo_Church">Alonzo Church (1903-1995)</a>, son of Samuel Robbins Church and Mildred Hannah Parker Church, Ranny's grandparents.  I should take people at their word more often.</p>
 <p><a href="https://www.legacy.com/amp/obituaries/washingtonpost/196007855">Randolph Warner Church Jr. (1934-11-06 – 2020-03-24)</a></p>
@@ -181,24 +177,22 @@ function toggleElement(toggler, contentID, hideMsg, showMsg) {
 </div>
 <hr />
 <p>Discuss: <a href="https://twitter.com/halcanary/status/1292105093416984578">twitter</a>, <a href="https://www.reddit.com/user/hwc/comments/iftlk2/">reddit</a>.</p>
+  </div>
+</article>
 
-      </div>
-</div>
-
-
-<div class="postbox">
-      <h2 class="blogtitle">High Priority Constitutional Amendments</h2>
-
-      <p>A list of things that we should be seriously working on</p>
-
-      <div class="byline">By Hal Canary,
-        2020-07-17 12:42:25 -0400 (EDT)
-        (<a href="2020/07/17/3018/">link</a>)
-            <br><a href="../../../../category/politics/" class="categorylink">#politics</a>
-
-      </div>
-      <!-- SRC=2020-07-17-3018 -->
-      <div class="content">
+<article class="postbox">
+  <header>
+    <!-- SRC= 2020-07-17-3018 -->
+    <h2 class="blogtitle">High Priority Constitutional Amendments</h2>
+    <p>A list of things that we should be seriously working on</p>
+    <div class="byline">
+      <div>by: Hal Canary</div>
+      <div>posted: 2020-07-17 12:42:25 -0400 (EDT)</div>
+      <div>link: <a href="/vv/2020/07/17/3018/">https://halcanary.org/vv/2020/07/17/3018/</a></div>
+      <div><a href="/vv/category/politics/" class="categorylink">#politics</a></div>
+    </div>
+  </header>
+  <div class="content">
 <ul>
 <li>
 <p>Clarify and extend meaning of &quot;republican form of government&quot; in Article Four:</p>
@@ -237,24 +231,22 @@ function toggleElement(toggler, contentID, hideMsg, showMsg) {
 </ul>
 <hr />
 <p>Discuss: <a href="https://twitter.com/halcanary/status/1297950890100502528">twitter</a>, <a href="https://www.reddit.com/user/hwc/comments/iftnaw/">reddit</a>.</p>
+  </div>
+</article>
 
-      </div>
-</div>
-
-
-<div class="postbox">
-      <h2 class="blogtitle">Standard Space Habitats</h2>
-
-      <p>A refinement of O'Neill's colonies.</p>
-
-      <div class="byline">By Hal Canary,
-        2020-07-14 13:06:25 -0400 (EDT)
-        (<a href="2020/07/14/3017/">link</a>)
-            <br><a href="../../../../category/space/" class="categorylink">#space</a>
-
-      </div>
-      <!-- SRC=2020-07-14-3017 -->
-      <div class="content">
+<article class="postbox">
+  <header>
+    <!-- SRC= 2020-07-14-3017 -->
+    <h2 class="blogtitle">Standard Space Habitats</h2>
+    <p>A refinement of O'Neill's colonies.</p>
+    <div class="byline">
+      <div>by: Hal Canary</div>
+      <div>posted: 2020-07-14 13:06:25 -0400 (EDT)</div>
+      <div>link: <a href="/vv/2020/07/14/3017/">https://halcanary.org/vv/2020/07/14/3017/</a></div>
+      <div><a href="/vv/category/space/" class="categorylink">#space</a></div>
+    </div>
+  </header>
+  <div class="content">
 <p><a href="https://settlement.arc.nasa.gov/70sArtHiRes/70sArt/art.html"><img src="/images/Spacecolony1.jpg" alt="[A pair of O'Neill cylinders. https://settlement.arc.nasa.gov/70sArtHiRes/70sArt/art.html Interior view looking out through large windows. Art work: Rick Guidice.  NASA ID Number AC75-1086]" width="1920" height="1512"></a></p>
 <p>Start with the idea of an <a href="https://en.wikipedia.org/wiki/O%27Neill_cylinder">O'Neill cylinder</a>: a spinning cylindrical space habitat 8 km in diameter and 32 km long.  The frequency of revolution is about two minutes.  This is a good diameter for a space habitat: if it is an order of magnitude larger, the structure won't hold together when it spins; an order of magnitude smaller, the Coriolis force is more noticeable.</p>
 <p>The giant windows are a huge hazard for both radiation and meteor impacts.  Instead, make the cylinder a solid steel vessel, thick enough to block most radiation.  Make it out of many layers of steel sheeting, with a thick layer of ablative insulation on the outside that can absorb and redirect the kinetic energy of a meteor impact.  Construct it as several independent 8 km long segments, each with its own shielded endcaps, all sharing a common axis.  Each hab segment has airlocks at the axis, leading to rotating joints that connect the segment to two small non-rotating modules at the axis, where there are ports for visiting spacecraft to dock.  This is also where arrays of directional communication antennas are located.</p>
@@ -266,24 +258,22 @@ function toggleElement(toggler, contentID, hideMsg, showMsg) {
 <p>I'm not saying rocky planets and moons aren't useful.  After all, that's where a lot of the useable material is.  But if you need that material, why not supervise robot miners from orbit?  Especially if the planet has a surface gravity of 1.5g or a surface temperature of 700 K.</p>
 <hr />
 <p>Discuss: <a href="https://twitter.com/halcanary/status/1283090742852886528">twitter</a>, <a href="https://www.reddit.com/user/hwc/comments/hrmyxc/standard_space_habitats/">reddit</a>.</p>
+  </div>
+</article>
 
-      </div>
-</div>
-
-
-<div class="postbox">
-      <h2 class="blogtitle">Banking Manifesto</h2>
-
-      <p>I lay out a proposal to change the US banking system for the better.</p>
-
-      <div class="byline">By Hal Canary,
-        2020-07-13 08:53:45 -0400 (EDT)
-        (<a href="2020/07/13/3016/">link</a>)
-            <br><a href="../../../../category/economics/" class="categorylink">#economics</a>
-
-      </div>
-      <!-- SRC=2020-07-13-3016 -->
-      <div class="content">
+<article class="postbox">
+  <header>
+    <!-- SRC= 2020-07-13-3016 -->
+    <h2 class="blogtitle">Banking Manifesto</h2>
+    <p>I lay out a proposal to change the US banking system for the better.</p>
+    <div class="byline">
+      <div>by: Hal Canary</div>
+      <div>posted: 2020-07-13 08:53:45 -0400 (EDT)</div>
+      <div>link: <a href="/vv/2020/07/13/3016/">https://halcanary.org/vv/2020/07/13/3016/</a></div>
+      <div><a href="/vv/category/economics/" class="categorylink">#economics</a></div>
+    </div>
+  </header>
+  <div class="content">
 <p>Banks provide three essential services to the public:</p>
 <ol>
 <li>
@@ -337,23 +327,22 @@ function toggleElement(toggler, contentID, hideMsg, showMsg) {
 <p>Also, some of DBUS's full-service ATMs would allow bulk deposits of coins and bills.  If vending machines can do it, why can't an ATM?  Similarly, full-service ATMs should be able to give out currency in denominations other than 20 USD.</p>
 <hr />
 <p>Discuss: <a href="https://twitter.com/halcanary/status/1282663803990220803">twitter</a>, <a href="https://www.reddit.com/user/hwc/comments/hrn0uu/banking_manifesto/">reddit</a>.</p>
+  </div>
+</article>
 
-      </div>
-</div>
-
-
-<div class="postbox">
-      <h2 class="blogtitle">Updated Contact Info [2020]</h2>
-
-      <p>How can I contact Hal Canary?</p>
-
-      <div class="byline">By Hal Canary,
-        2020-04-04 08:51:58 -0400 (EDT)
-        (<a href="2020/04/04/3015/">link</a>)
-        
-      </div>
-      <!-- SRC=2020-04-04-3015 -->
-      <div class="content">
+<article class="postbox">
+  <header>
+    <!-- SRC= 2020-04-04-3015 -->
+    <h2 class="blogtitle">Updated Contact Info [2020]</h2>
+    <p>How can I contact Hal Canary?</p>
+    <div class="byline">
+      <div>by: Hal Canary</div>
+      <div>posted: 2020-04-04 08:51:58 -0400 (EDT)</div>
+      <div>link: <a href="/vv/2020/04/04/3015/">https://halcanary.org/vv/2020/04/04/3015/</a></div>
+      <div></div>
+    </div>
+  </header>
+  <div class="content">
 <ul>
 <li><a href="mailto:halcanary@gmail.com">mailto:halcanary@gmail.com</a></li>
 <li><a href="tel:+1-919-724-2801">tel:+1-919-724-2801</a></li>
@@ -361,42 +350,39 @@ function toggleElement(toggler, contentID, hideMsg, showMsg) {
 <li>(alternate) <a href="mailto:halcanary@yahoo.com">mailto:halcanary@yahoo.com</a></li>
 </ul>
 <p>PGP Key: <a href="https://halcanary.org/pub/9E4B56B252BA5544135A6146BDA20B3DBAF71EE3.txt">9E4B56B252BA5544135A​6146BDA20B3DBAF71EE3</a></p>
+  </div>
+</article>
 
-      </div>
-</div>
-
-
-<div class="postbox">
-      <h2 class="blogtitle">EM Ratio, again</h2>
-
-      <p>US Employment-Population Ratio (ages 25-54 Yrs), last 25 Years</p>
-
-      <div class="byline">By Hal Canary,
-        2020-04-03 22:04:48 -0400 (EDT)
-        (<a href="2020/04/03/3014/">link</a>)
-        
-      </div>
-      <!-- SRC=2020-04-03-3014 -->
-      <div class="content">
+<article class="postbox">
+  <header>
+    <!-- SRC= 2020-04-03-3014 -->
+    <h2 class="blogtitle">EM Ratio, again</h2>
+    <p>US Employment-Population Ratio (ages 25-54 Yrs), last 25 Years</p>
+    <div class="byline">
+      <div>by: Hal Canary</div>
+      <div>posted: 2020-04-03 22:04:48 -0400 (EDT)</div>
+      <div>link: <a href="/vv/2020/04/03/3014/">https://halcanary.org/vv/2020/04/03/3014/</a></div>
+      <div></div>
+    </div>
+  </header>
+  <div class="content">
 <p><a href="https://fred.stlouisfed.org/graph/?g=qD5Q"><img src="https://fred.stlouisfed.org/graph/fredgraph.png?g=qD5Q" width="1168" height="470" alt="[graph]"></a></p>
+  </div>
+</article>
 
-      </div>
-</div>
-
-
-<div class="postbox">
-      <h2 class="blogtitle">Electoral reform</h2>
-
-      <p>another proposed change to our constitution</p>
-
-      <div class="byline">By Hal Canary,
-        2019-04-06 18:24:00 -0400 (EDT)
-        (<a href="2019/04/06/3013/">link</a>)
-            <br><a href="../../../../category/politics/" class="categorylink">#politics</a>
-
-      </div>
-      <!-- SRC=2019-04-06-3013 -->
-      <div class="content">
+<article class="postbox">
+  <header>
+    <!-- SRC= 2019-04-06-3013 -->
+    <h2 class="blogtitle">Electoral reform</h2>
+    <p>another proposed change to our constitution</p>
+    <div class="byline">
+      <div>by: Hal Canary</div>
+      <div>posted: 2019-04-06 18:24:00 -0400 (EDT)</div>
+      <div>link: <a href="/vv/2019/04/06/3013/">https://halcanary.org/vv/2019/04/06/3013/</a></div>
+      <div><a href="/vv/category/politics/" class="categorylink">#politics</a></div>
+    </div>
+  </header>
+  <div class="content">
 <p>I'd like to propose a four-part election to replace our current system:</p>
 <ol>
 <li>
@@ -426,23 +412,22 @@ none-of-the-above voting is allowed. The polls should be open for a week.</p>
 </li>
 </ol>
 <p>The entire process takes four months.</p>
+  </div>
+</article>
 
-      </div>
-</div>
-
-
-<div class="postbox">
-      <h2 class="blogtitle">Obit</h2>
-
-      <p>This month marks a year since my father passed away.  For posterity, here is his obituary.</p>
-
-      <div class="byline">By Hal Canary,
-        2019-04-06 18:13:09 -0400 (EDT)
-        (<a href="2019/04/06/3012/">link</a>)
-        
-      </div>
-      <!-- SRC=2019-04-06-3012 -->
-      <div class="content">
+<article class="postbox">
+  <header>
+    <!-- SRC= 2019-04-06-3012 -->
+    <h2 class="blogtitle">Obit</h2>
+    <p>This month marks a year since my father passed away.  For posterity, here is his obituary.</p>
+    <div class="byline">
+      <div>by: Hal Canary</div>
+      <div>posted: 2019-04-06 18:13:09 -0400 (EDT)</div>
+      <div>link: <a href="/vv/2019/04/06/3012/">https://halcanary.org/vv/2019/04/06/3012/</a></div>
+      <div></div>
+    </div>
+  </header>
+  <div class="content">
 <blockquote>
 <p><strong>Hal Winchester Canary</strong><br />
 July 12, 1943 – April 25, 2018</p>
@@ -484,23 +469,22 @@ Memphis, Tennessee, on July 13.</p>
 <p>One may make a donation in Hal’s memory to the Leukemia &amp; Lymphoma Society
 (<a href="http://www.lls.org/">lls.org</a>).</p>
 </blockquote>
+  </div>
+</article>
 
-      </div>
-</div>
-
-
-<div class="postbox">
-      <h2 class="blogtitle">Writing Prompt</h2>
-
-      <p>time-traveling post-human nanotech robot</p>
-
-      <div class="byline">By Hal Canary,
-        2019-04-04 16:20:00 -0400 (EDT)
-        (<a href="2019/04/04/3011/">link</a>)
-        
-      </div>
-      <!-- SRC=2019-04-04-3011 -->
-      <div class="content">
+<article class="postbox">
+  <header>
+    <!-- SRC= 2019-04-04-3011 -->
+    <h2 class="blogtitle">Writing Prompt</h2>
+    <p>time-traveling post-human nanotech robot</p>
+    <div class="byline">
+      <div>by: Hal Canary</div>
+      <div>posted: 2019-04-04 16:20:00 -0400 (EDT)</div>
+      <div>link: <a href="/vv/2019/04/04/3011/">https://halcanary.org/vv/2019/04/04/3011/</a></div>
+      <div></div>
+    </div>
+  </header>
+  <div class="content">
 <p>[WP] A post-human nanotech robot (PHNR) from the future time-travels to sometime in the first half of the twentieth century. They want to change the world for the better, but sets strict rules on themself to prevent themself from dominating humanity:</p>
 <ol>
 <li>no disclosing their own existence.</li>
@@ -511,13 +495,9 @@ Memphis, Tennessee, on July 13.</p>
 <p>For example, if PHNR observes a conspiracy to commit a murder, they may choose to send an anonymous letter to the local police so they can attempt to prevent the crime.  If PHNR observes a crime, it can send a tip to the cops describeing the event and where evidence may be found.</p>
 <p>PHNR uses this power judiciously: they never snitch on victimless criminals, rarely on minor crimes, never when it would give away too much information about their abilities. PHNR never assists corrupt government officials. They also send tips to journalists occasionally, especially about corrupt politicians and officials.</p>
 <p>PHNR interferes in wars to give intelligence to the side it favors, if it favors one side. Otherwise it feeds information to civilian populations to help them avoid bombing and troop movements.</p>
+  </div>
+</article>
 
-      </div>
-</div>
-
-
-      </div>
-      <div class="centered"><a href="archives/">MORE</a></div>
-      <div>&nbsp;</div>
-  </body>
+<div class="centered"><a href="archives/">MORE</a></div>
+</body>
 </html>

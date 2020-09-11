@@ -13,7 +13,7 @@ font-size:12px;
 @media screen { body{
 font-family:sans-serif;
 max-width:35em;
-margin:8px auto;
+margin:22px auto 64px auto;
 padding:0 8px;
 }}
 hr.black{
@@ -36,6 +36,9 @@ color:#000;
 background-color:#DDD;
 white-space:pre-line;
 }
+.content {
+margin:1em 0;
+}
 .content hr{
 padding:0;
 margin:0;
@@ -53,8 +56,8 @@ position:relative;
 .centered{text-align:center}
 .postbox{
 border-bottom:6px solid #ddd;
-margin:0 -8px 6px -8px;
-padding:0 8px 0 8px;
+margin:0 0 6px 0;
+padding:0 0 0 0;
 }
 pre{overflow-x:auto}
 .byline{
@@ -97,20 +100,22 @@ margin:1ex 0 0 0;
 }
 </style>
 </head>
-  <!-- Copyright 2003-2020 Hal Canary. ALL RIGHTS RESERVED. -->
+<!-- Copyright 2003-2020 Hal Canary. ALL RIGHTS RESERVED. -->
+<body>
 
-  <body>
-      <h1 class="blogtitle">Rocket Science</h1>
-
-      <div class="byline">By Hal Canary,
-        2003-08-26 18:03:57
-        (<a href="https://halcanary.org/vv/2003/08/26/104/">link</a>)
-    <br><a href="../../../../category/computers-code/" class="categorylink">#computers-code</a>
-        </div>
-      <!-- SRC= 2003-08-26-104 -->
-      <div class="content">
-
-<!-- BEGIN CONTENT -->
+<article class="postbox">
+  <header>
+    <!-- SRC= 2003-08-26-104 -->
+    <h1 class="blogtitle">Rocket Science</h1>
+    <p></p>
+    <div class="byline">
+      <div>by: Hal Canary</div>
+      <div>posted: 2003-08-26 18:03:57</div>
+      <div>link: <a href="/vv/2003/08/26/104/">https://halcanary.org/vv/2003/08/26/104/</a></div>
+      <div><a href="/vv/category/computers-code/" class="categorylink">#computers-code</a></div>
+    </div>
+  </header>
+  <div class="content">
 <p>I've been playing  <a href="http://www.subspacehq.com/">SubSpace/Continuum</a>  (it's like a massively multiplayer Maelstrom) and it's gotten me thinking.  I'd like to see a cross between subspace and an rpg.  For lack of a better name, I'm calling it <em>rocket  science</em>.</p>
 <p>You start by building a 2-d model of the solar system. It would  consist of objects and artifacts. Objects are things like stars,  planets, moons, asteroids, and comets. Artifacts are things like communication satelites, telescopes, spaceships, missiles, space  stations, and asteroid settlements. The position and velocity of  each object are well known to all players. There may be thousands  of objects in the game.</p>
 <p>object atributes:</p>
@@ -141,13 +146,9 @@ margin:1ex 0 0 0;
 <p><strong>user interface</strong></p>
 <p>If course, if the ui is no good, this boat won't fly. First of all, you need to be able to zoom from 1 meter  resolution to 10^12 meter resolution. Second, you need  an autopilot that is capable of plotting a course to anywhere. Otherwise, players would always be crashing into the sun, or unable to find neptune.</p>
 <p>And fuel should not be free.</p>
+  </div>
+</article>
 
-
-<!-- END CONTENT -->
-
-      </div>
-      <hr class="black">
-
-      <p>(<a href="../../../../archives/">back</a>)</p>
-  </body>
+<p>(<a href="/vv/archives/">back</a>)</p>
+</body>
 </html>

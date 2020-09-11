@@ -13,7 +13,7 @@ font-size:12px;
 @media screen { body{
 font-family:sans-serif;
 max-width:35em;
-margin:8px auto;
+margin:22px auto 64px auto;
 padding:0 8px;
 }}
 hr.black{
@@ -36,6 +36,9 @@ color:#000;
 background-color:#DDD;
 white-space:pre-line;
 }
+.content {
+margin:1em 0;
+}
 .content hr{
 padding:0;
 margin:0;
@@ -53,8 +56,8 @@ position:relative;
 .centered{text-align:center}
 .postbox{
 border-bottom:6px solid #ddd;
-margin:0 -8px 6px -8px;
-padding:0 8px 0 8px;
+margin:0 0 6px 0;
+padding:0 0 0 0;
 }
 pre{overflow-x:auto}
 .byline{
@@ -97,31 +100,29 @@ margin:1ex 0 0 0;
 }
 </style>
 </head>
-  <!-- Copyright 2004-2020 Hal Canary. ALL RIGHTS RESERVED. -->
+<!-- Copyright 2004-2020 Hal Canary. ALL RIGHTS RESERVED. -->
+<body>
 
-  <body>
-      <h1 class="blogtitle">Xlib:  extension "GLX" missing</h1>
-
-      <div class="byline">By Hal Canary,
-        2004-05-30 23:14:29
-        (<a href="https://halcanary.org/vv/2004/05/30/249/">link</a>)
-    <br><a href="../../../../category/computers-code/" class="categorylink">#computers-code</a>
-        </div>
-      <!-- SRC= 2004-05-30-249 -->
-      <div class="content">
-
-<!-- BEGIN CONTENT -->
+<article class="postbox">
+  <header>
+    <!-- SRC= 2004-05-30-249 -->
+    <h1 class="blogtitle">Xlib:  extension "GLX" missing</h1>
+    <p></p>
+    <div class="byline">
+      <div>by: Hal Canary</div>
+      <div>posted: 2004-05-30 23:14:29</div>
+      <div>link: <a href="/vv/2004/05/30/249/">https://halcanary.org/vv/2004/05/30/249/</a></div>
+      <div><a href="/vv/category/computers-code/" class="categorylink">#computers-code</a></div>
+    </div>
+  </header>
+  <div class="content">
 <p>Odd issue in linux/x11.  I used to have the evil proprietary Nvidia drivers loaded.  I gave up on them recently, but once I installed a new kernel without them, glx (openGL for x) stopped working.  I got the error:</p>
 <p><code>Xlib:  extension "GLX" missing on display ":0.0"</code></p>
 <p>It should have worked, as the file <code>/usr/X11R6/lib/modules/extensions/libglx.a</code> should have provided this funtionality. </p>
 <p>But alas, Xorg X11 was using the file <code>/usr/X11R6/lib/modules/extensions/libglx.so.1.0.5336</code>, left over from the proprietary driver.  I deleted this file, restarted X11, and it all workes correctly!  I have a fast enough processor that most small openGL apps work fine without hardware acceleration.</p>
+  </div>
+</article>
 
-
-<!-- END CONTENT -->
-
-      </div>
-      <hr class="black">
-
-      <p>(<a href="../../../../archives/">back</a>)</p>
-  </body>
+<p>(<a href="/vv/archives/">back</a>)</p>
+</body>
 </html>

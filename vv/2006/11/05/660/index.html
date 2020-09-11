@@ -13,7 +13,7 @@ font-size:12px;
 @media screen { body{
 font-family:sans-serif;
 max-width:35em;
-margin:8px auto;
+margin:22px auto 64px auto;
 padding:0 8px;
 }}
 hr.black{
@@ -36,6 +36,9 @@ color:#000;
 background-color:#DDD;
 white-space:pre-line;
 }
+.content {
+margin:1em 0;
+}
 .content hr{
 padding:0;
 margin:0;
@@ -53,8 +56,8 @@ position:relative;
 .centered{text-align:center}
 .postbox{
 border-bottom:6px solid #ddd;
-margin:0 -8px 6px -8px;
-padding:0 8px 0 8px;
+margin:0 0 6px 0;
+padding:0 0 0 0;
 }
 pre{overflow-x:auto}
 .byline{
@@ -97,20 +100,22 @@ margin:1ex 0 0 0;
 }
 </style>
 </head>
-  <!-- Copyright 2006-2020 Hal Canary. ALL RIGHTS RESERVED. -->
+<!-- Copyright 2006-2020 Hal Canary. ALL RIGHTS RESERVED. -->
+<body>
 
-  <body>
-      <h1 class="blogtitle">Bandwidth of a Netflix account</h1>
-
-      <div class="byline">By Hal Canary,
-        2006-11-05 16:46:33
-        (<a href="https://halcanary.org/vv/2006/11/05/660/">link</a>)
-    <br><a href="../../../../category/life/" class="categorylink">#life</a>
-        </div>
-      <!-- SRC= 2006-11-05-660 -->
-      <div class="content">
-
-<!-- BEGIN CONTENT -->
+<article class="postbox">
+  <header>
+    <!-- SRC= 2006-11-05-660 -->
+    <h1 class="blogtitle">Bandwidth of a Netflix account</h1>
+    <p></p>
+    <div class="byline">
+      <div>by: Hal Canary</div>
+      <div>posted: 2006-11-05 16:46:33</div>
+      <div>link: <a href="/vv/2006/11/05/660/">https://halcanary.org/vv/2006/11/05/660/</a></div>
+      <div><a href="/vv/category/life/" class="categorylink">#life</a></div>
+    </div>
+  </header>
+  <div class="content">
 <p>Assume you watch a movie on day 0, mail it on day 1, it gets processed on day 2, and you get a new movie on day 3.  Ignore weekends.  That is 1 DVD for every 3 days.</p>
 <p>Your downspeed bandwidth is for a single-layer DVD is </p>
 <pre>4.7 x 10^9 bytes / 3 days
@@ -121,13 +126,9 @@ margin:1ex 0 0 0;
 <p>* * *</p>
 <p>A more favorable look:  I have a three-disc subscription.  435 kbit/s.  Assume all DVDs I get are double-layer.  787 kbit/s.  Let's also count the upstream return bandwidth.  1574 kbit/s.  Not too shaby.</p>
 <p>Conclusion: A significant percentage of the bandwidth to my house comes through the US Postal Service.</p>
+  </div>
+</article>
 
-
-<!-- END CONTENT -->
-
-      </div>
-      <hr class="black">
-
-      <p>(<a href="../../../../archives/">back</a>)</p>
-  </body>
+<p>(<a href="/vv/archives/">back</a>)</p>
+</body>
 </html>

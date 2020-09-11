@@ -13,7 +13,7 @@ font-size:12px;
 @media screen { body{
 font-family:sans-serif;
 max-width:35em;
-margin:8px auto;
+margin:22px auto 64px auto;
 padding:0 8px;
 }}
 hr.black{
@@ -36,6 +36,9 @@ color:#000;
 background-color:#DDD;
 white-space:pre-line;
 }
+.content {
+margin:1em 0;
+}
 .content hr{
 padding:0;
 margin:0;
@@ -53,8 +56,8 @@ position:relative;
 .centered{text-align:center}
 .postbox{
 border-bottom:6px solid #ddd;
-margin:0 -8px 6px -8px;
-padding:0 8px 0 8px;
+margin:0 0 6px 0;
+padding:0 0 0 0;
 }
 pre{overflow-x:auto}
 .byline{
@@ -97,20 +100,22 @@ margin:1ex 0 0 0;
 }
 </style>
 </head>
-  <!-- Copyright 2008-2020 Hal Canary. ALL RIGHTS RESERVED. -->
+<!-- Copyright 2008-2020 Hal Canary. ALL RIGHTS RESERVED. -->
+<body>
 
-  <body>
-      <h1 class="blogtitle">RTF</h1>
-
-      <div class="byline">By Hal Canary,
-        2008-11-02 08:27:52
-        (<a href="https://halcanary.org/vv/2008/11/02/752/">link</a>)
-    <br><a href="../../../../category/computers-code/" class="categorylink">#computers-code</a>
-        </div>
-      <!-- SRC= 2008-11-02-752 -->
-      <div class="content">
-
-<!-- BEGIN CONTENT -->
+<article class="postbox">
+  <header>
+    <!-- SRC= 2008-11-02-752 -->
+    <h1 class="blogtitle">RTF</h1>
+    <p></p>
+    <div class="byline">
+      <div>by: Hal Canary</div>
+      <div>posted: 2008-11-02 08:27:52</div>
+      <div>link: <a href="/vv/2008/11/02/752/">https://halcanary.org/vv/2008/11/02/752/</a></div>
+      <div><a href="/vv/category/computers-code/" class="categorylink">#computers-code</a></div>
+    </div>
+  </header>
+  <div class="content">
 <p>I was reading the other day the submission guidelines for a certain publishing house.  They wanted <a href="http://en.wikipedia.org/wiki/Rich_Text_Format">RTF</a> documents.  One would think plain text would be just as good, but it's easy enough to write a program that converts a utf8-encoded plain text document to a simple <a href="http://search.cpan.org/~sburke/RTF-Writer/lib/RTF/Cookbook.pod">RTF</a> document.  And the output is about a third of the size of the document that you would get from using oowriter.</p>
 <pre>#!/usr/bin/env python
 # txt2rtf.py
@@ -149,13 +154,9 @@ for line in fi:
 fo.write(&#0039;}&#0092;n&#0092;n&#0039;)
 </pre>
 <p>For a manuscript, you don't want to do any fancy formating, bold text, fonts, colors, curly quotes, et cetera.  This avoids all of that jazz.  One might want italic text, but that's not <a href="http://everything2.com/title/fASCIIst">fASCIIst</a> enough, is it?</p>
+  </div>
+</article>
 
-
-<!-- END CONTENT -->
-
-      </div>
-      <hr class="black">
-
-      <p>(<a href="../../../../archives/">back</a>)</p>
-  </body>
+<p>(<a href="/vv/archives/">back</a>)</p>
+</body>
 </html>

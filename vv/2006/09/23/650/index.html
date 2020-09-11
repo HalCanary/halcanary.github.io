@@ -13,7 +13,7 @@ font-size:12px;
 @media screen { body{
 font-family:sans-serif;
 max-width:35em;
-margin:8px auto;
+margin:22px auto 64px auto;
 padding:0 8px;
 }}
 hr.black{
@@ -36,6 +36,9 @@ color:#000;
 background-color:#DDD;
 white-space:pre-line;
 }
+.content {
+margin:1em 0;
+}
 .content hr{
 padding:0;
 margin:0;
@@ -53,8 +56,8 @@ position:relative;
 .centered{text-align:center}
 .postbox{
 border-bottom:6px solid #ddd;
-margin:0 -8px 6px -8px;
-padding:0 8px 0 8px;
+margin:0 0 6px 0;
+padding:0 0 0 0;
 }
 pre{overflow-x:auto}
 .byline{
@@ -97,20 +100,22 @@ margin:1ex 0 0 0;
 }
 </style>
 </head>
-  <!-- Copyright 2006-2020 Hal Canary. ALL RIGHTS RESERVED. -->
+<!-- Copyright 2006-2020 Hal Canary. ALL RIGHTS RESERVED. -->
+<body>
 
-  <body>
-      <h1 class="blogtitle">Apolonian Circle Inversion</h1>
-
-      <div class="byline">By Hal Canary,
-        2006-09-23 00:56:33
-        (<a href="https://halcanary.org/vv/2006/09/23/650/">link</a>)
-    <br><a href="../../../../category/mathematics/" class="categorylink">#mathematics</a>
-        </div>
-      <!-- SRC= 2006-09-23-650 -->
-      <div class="content">
-
-<!-- BEGIN CONTENT -->
+<article class="postbox">
+  <header>
+    <!-- SRC= 2006-09-23-650 -->
+    <h1 class="blogtitle">Apolonian Circle Inversion</h1>
+    <p></p>
+    <div class="byline">
+      <div>by: Hal Canary</div>
+      <div>posted: 2006-09-23 00:56:33</div>
+      <div>link: <a href="/vv/2006/09/23/650/">https://halcanary.org/vv/2006/09/23/650/</a></div>
+      <div><a href="/vv/category/mathematics/" class="categorylink">#mathematics</a></div>
+    </div>
+  </header>
+  <div class="content">
 <p>I was reading some old notes from some math research I did in 2004.  I was looking at the Soddy Equation---</p>
 <pre>(a + b + c + d)^2 = 2(a^2 + b^2 + c^2 + d^2)</pre>
 <p>---which relates the curvatures of four kissing circles (see <a href="http://en.wikipedia.org/wiki/Descartes%27_theorem">Descartes' theorem</a>).  Example of four kissing circles.</p>
@@ -123,13 +128,9 @@ margin:1ex 0 0 0;
 <p>I never came up with a decent way to program a computer to display such a set.</p>
 <p>I called this the <strong>Dionysian Gasket</strong>.</p>
 <p><img src="/images/dionysian-gasket.png" alt="" /></p>
+  </div>
+</article>
 
-
-<!-- END CONTENT -->
-
-      </div>
-      <hr class="black">
-
-      <p>(<a href="../../../../archives/">back</a>)</p>
-  </body>
+<p>(<a href="/vv/archives/">back</a>)</p>
+</body>
 </html>

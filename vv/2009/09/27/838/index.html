@@ -13,7 +13,7 @@ font-size:12px;
 @media screen { body{
 font-family:sans-serif;
 max-width:35em;
-margin:8px auto;
+margin:22px auto 64px auto;
 padding:0 8px;
 }}
 hr.black{
@@ -36,6 +36,9 @@ color:#000;
 background-color:#DDD;
 white-space:pre-line;
 }
+.content {
+margin:1em 0;
+}
 .content hr{
 padding:0;
 margin:0;
@@ -53,8 +56,8 @@ position:relative;
 .centered{text-align:center}
 .postbox{
 border-bottom:6px solid #ddd;
-margin:0 -8px 6px -8px;
-padding:0 8px 0 8px;
+margin:0 0 6px 0;
+padding:0 0 0 0;
 }
 pre{overflow-x:auto}
 .byline{
@@ -97,20 +100,22 @@ margin:1ex 0 0 0;
 }
 </style>
 </head>
-  <!-- Copyright 2009-2020 Hal Canary. ALL RIGHTS RESERVED. -->
+<!-- Copyright 2009-2020 Hal Canary. ALL RIGHTS RESERVED. -->
+<body>
 
-  <body>
-      <h1 class="blogtitle">software for ubuntu</h1>
-
-      <div class="byline">By Hal Canary,
-        2009-09-27 22:01:37
-        (<a href="https://halcanary.org/vv/2009/09/27/838/">link</a>)
-    <br><a href="../../../../category/computers-code/" class="categorylink">#computers-code</a>
-        </div>
-      <!-- SRC= 2009-09-27-838 -->
-      <div class="content">
-
-<!-- BEGIN CONTENT -->
+<article class="postbox">
+  <header>
+    <!-- SRC= 2009-09-27-838 -->
+    <h1 class="blogtitle">software for ubuntu</h1>
+    <p></p>
+    <div class="byline">
+      <div>by: Hal Canary</div>
+      <div>posted: 2009-09-27 22:01:37</div>
+      <div>link: <a href="/vv/2009/09/27/838/">https://halcanary.org/vv/2009/09/27/838/</a></div>
+      <div><a href="/vv/category/computers-code/" class="categorylink">#computers-code</a></div>
+    </div>
+  </header>
+  <div class="content">
 <p>If you are a LTS user like me and stuck on Hardy Heron, sometimes packages are availible that have the newest shiniest thing prepackaged for you.  Emacs 23 can be installed with a simple</p>
 <pre>sudo apt-get install emacs-snapshot-gtk</pre>
 <p>and then I wrote a little script to launch emacs with my favorite font:</p>
@@ -119,13 +124,9 @@ exec emacs&#0045;snapshot &#0092;
   &#0045;fn &quot;Monospace&#0045;11&quot; &quot;$@&quot; </pre>
 <p>* * *</p>
 <p>Another bleeding-edge thing to check out is Google Chrome's native Linux edition.  Go get it <a href="http://dev.chromium.org/getting-involved/dev-channel#TOC-Linux">from this page</a>.</p>
+  </div>
+</article>
 
-
-<!-- END CONTENT -->
-
-      </div>
-      <hr class="black">
-
-      <p>(<a href="../../../../archives/">back</a>)</p>
-  </body>
+<p>(<a href="/vv/archives/">back</a>)</p>
+</body>
 </html>

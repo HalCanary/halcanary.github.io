@@ -13,7 +13,7 @@ font-size:12px;
 @media screen { body{
 font-family:sans-serif;
 max-width:35em;
-margin:8px auto;
+margin:22px auto 64px auto;
 padding:0 8px;
 }}
 hr.black{
@@ -36,6 +36,9 @@ color:#000;
 background-color:#DDD;
 white-space:pre-line;
 }
+.content {
+margin:1em 0;
+}
 .content hr{
 padding:0;
 margin:0;
@@ -53,8 +56,8 @@ position:relative;
 .centered{text-align:center}
 .postbox{
 border-bottom:6px solid #ddd;
-margin:0 -8px 6px -8px;
-padding:0 8px 0 8px;
+margin:0 0 6px 0;
+padding:0 0 0 0;
 }
 pre{overflow-x:auto}
 .byline{
@@ -97,20 +100,22 @@ margin:1ex 0 0 0;
 }
 </style>
 </head>
-  <!-- Copyright 2006-2020 Hal Canary. ALL RIGHTS RESERVED. -->
+<!-- Copyright 2006-2020 Hal Canary. ALL RIGHTS RESERVED. -->
+<body>
 
-  <body>
-      <h1 class="blogtitle">Radeon 9200 + Compiz</h1>
-
-      <div class="byline">By Hal Canary,
-        2006-10-27 10:53:41
-        (<a href="https://halcanary.org/vv/2006/10/27/659/">link</a>)
-    <br><a href="../../../../category/computers-code/" class="categorylink">#computers-code</a>
-        </div>
-      <!-- SRC= 2006-10-27-659 -->
-      <div class="content">
-
-<!-- BEGIN CONTENT -->
+<article class="postbox">
+  <header>
+    <!-- SRC= 2006-10-27-659 -->
+    <h1 class="blogtitle">Radeon 9200 + Compiz</h1>
+    <p></p>
+    <div class="byline">
+      <div>by: Hal Canary</div>
+      <div>posted: 2006-10-27 10:53:41</div>
+      <div>link: <a href="/vv/2006/10/27/659/">https://halcanary.org/vv/2006/10/27/659/</a></div>
+      <div><a href="/vv/category/computers-code/" class="categorylink">#computers-code</a></div>
+    </div>
+  </header>
+  <div class="content">
 <blockquote><p>Some segments of the Linux user community, which prefer to avoid the IP-encumbered ATI drivers due to ideological choices, still prefer the R200-based chips, as they are among the fastest modern video cards with stable open source drivers. (<a href="http://en.wikipedia.org/wiki/Radeon_R200">source</a>)</p>
 </blockquote>
 <p>My ATI RV280 Radeon 9200 works great with The new Compiz window manager that comes with Fedora Core 6.  Using the <code>desktop-effects</code> program, you can replace the old window manager (Metacity) with Compiz.  Compiz makes use of neat effects such as the spinning cube and the scaler plugin (similar to OSX's expos&eacute;).</p>
@@ -120,13 +125,9 @@ margin:1ex 0 0 0;
   /apps/compiz/plugins/cube/screen0/options/in &#92;
   --set true</pre>
 <p>Compiz has more options.  It's a bit of a kludge ot change them.</p>
+  </div>
+</article>
 
-
-<!-- END CONTENT -->
-
-      </div>
-      <hr class="black">
-
-      <p>(<a href="../../../../archives/">back</a>)</p>
-  </body>
+<p>(<a href="/vv/archives/">back</a>)</p>
+</body>
 </html>

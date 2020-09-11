@@ -13,7 +13,7 @@ font-size:12px;
 @media screen { body{
 font-family:sans-serif;
 max-width:35em;
-margin:8px auto;
+margin:22px auto 64px auto;
 padding:0 8px;
 }}
 hr.black{
@@ -36,6 +36,9 @@ color:#000;
 background-color:#DDD;
 white-space:pre-line;
 }
+.content {
+margin:1em 0;
+}
 .content hr{
 padding:0;
 margin:0;
@@ -53,8 +56,8 @@ position:relative;
 .centered{text-align:center}
 .postbox{
 border-bottom:6px solid #ddd;
-margin:0 -8px 6px -8px;
-padding:0 8px 0 8px;
+margin:0 0 6px 0;
+padding:0 0 0 0;
 }
 pre{overflow-x:auto}
 .byline{
@@ -97,20 +100,22 @@ margin:1ex 0 0 0;
 }
 </style>
 </head>
-  <!-- Copyright 2007-2020 Hal Canary. ALL RIGHTS RESERVED. -->
+<!-- Copyright 2007-2020 Hal Canary. ALL RIGHTS RESERVED. -->
+<body>
 
-  <body>
-      <h1 class="blogtitle">SIG</h1>
-
-      <div class="byline">By Hal Canary,
-        2007-11-04 19:55:24
-        (<a href="https://halcanary.org/vv/2007/11/04/707/">link</a>)
-    <br><a href="../../../../category/new-standards/" class="categorylink">#new-standards</a>;<a href="../../../../category/physics/" class="categorylink">#physics</a>
-        </div>
-      <!-- SRC= 2007-11-04-707 -->
-      <div class="content">
-
-<!-- BEGIN CONTENT -->
+<article class="postbox">
+  <header>
+    <!-- SRC= 2007-11-04-707 -->
+    <h1 class="blogtitle">SIG</h1>
+    <p></p>
+    <div class="byline">
+      <div>by: Hal Canary</div>
+      <div>posted: 2007-11-04 19:55:24</div>
+      <div>link: <a href="/vv/2007/11/04/707/">https://halcanary.org/vv/2007/11/04/707/</a></div>
+      <div><a href="/vv/category/new-standards/" class="categorylink">#new-standards</a>; <a href="/vv/category/physics/" class="categorylink">#physics</a></div>
+    </div>
+  </header>
+  <div class="content">
 <p>A galactic system of measures used be several species to communicate with each other in a SF universe in my head.  This is an explicitly <em>designed</em> system of units.  Base 16 is used because of the importance of binary.  Aliens might find caesium-133 as easy to use as humans do.  I don't use multiples of the plank length&mdash;which might seem like the natural thing to do&mdash;because measuring the constant of gravitation accurately is harder than measuring the elementary charge, speed of light in vacuum, Planck's constant, or Boltzmann's constant.  But my unit of electrical charge is &radic;(2)&times;16^15 times the Planck charge.</p>
 <p>* * *</p>
 <p>L = length unit = wavelength of radiation from the transition between hyperfine ground states of caesium-133 atoms at absolute zero, as that radiation passes through a perfect vacuum = 3.26122557 centimeters = 0.0326122557 meters. (The length unit is exactly 299792458/9192631770 meters.)</p>
@@ -129,13 +134,9 @@ margin:1ex 0 0 0;
 <p>magnetic constant = vacuum permeability = 1 M&times;L/T&sup2;/C&sup2; (by definition)</p>
 <p>Boltzmann's constant = 16^-16 M&times;L&sup2;/T&sup2;/P (by definition)</p>
 <p>* * *</p>
+  </div>
+</article>
 
-
-<!-- END CONTENT -->
-
-      </div>
-      <hr class="black">
-
-      <p>(<a href="../../../../archives/">back</a>)</p>
-  </body>
+<p>(<a href="/vv/archives/">back</a>)</p>
+</body>
 </html>

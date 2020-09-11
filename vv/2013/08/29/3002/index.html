@@ -13,7 +13,7 @@ font-size:12px;
 @media screen { body{
 font-family:sans-serif;
 max-width:35em;
-margin:8px auto;
+margin:22px auto 64px auto;
 padding:0 8px;
 }}
 hr.black{
@@ -36,6 +36,9 @@ color:#000;
 background-color:#DDD;
 white-space:pre-line;
 }
+.content {
+margin:1em 0;
+}
 .content hr{
 padding:0;
 margin:0;
@@ -53,8 +56,8 @@ position:relative;
 .centered{text-align:center}
 .postbox{
 border-bottom:6px solid #ddd;
-margin:0 -8px 6px -8px;
-padding:0 8px 0 8px;
+margin:0 0 6px 0;
+padding:0 0 0 0;
 }
 pre{overflow-x:auto}
 .byline{
@@ -97,22 +100,22 @@ margin:1ex 0 0 0;
 }
 </style>
 </head>
-  <!-- Copyright 2013-2020 Hal Canary. ALL RIGHTS RESERVED. -->
+<!-- Copyright 2013-2020 Hal Canary. ALL RIGHTS RESERVED. -->
+<body>
 
-  <body>
-      <h1 class="blogtitle">Current Location</h1>
-
-      <p>The existing software on your phone makes it impossible to send someone precise latitude/longitude that you pinpoint on a map. Here's my solution, IF you are already standing where you want to pinpoint.</p>
-
-      <div class="byline">By Hal Canary,
-        2013-08-29 09:48:42
-        (<a href="https://halcanary.org/vv/2013/08/29/3002/">link</a>)
-    <br><a href="../../../../category/computers-code/" class="categorylink">#computers-code</a>
-        </div>
-      <!-- SRC= 2013-08-29-3002 -->
-      <div class="content">
-
-<!-- BEGIN CONTENT -->
+<article class="postbox">
+  <header>
+    <!-- SRC= 2013-08-29-3002 -->
+    <h1 class="blogtitle">Current Location</h1>
+    <p>The existing software on your phone makes it impossible to send someone precise latitude/longitude that you pinpoint on a map. Here's my solution, IF you are already standing where you want to pinpoint.</p>
+    <div class="byline">
+      <div>by: Hal Canary</div>
+      <div>posted: 2013-08-29 09:48:42</div>
+      <div>link: <a href="/vv/2013/08/29/3002/">https://halcanary.org/vv/2013/08/29/3002/</a></div>
+      <div><a href="/vv/category/computers-code/" class="categorylink">#computers-code</a></div>
+    </div>
+  </header>
+  <div class="content">
 <script>
 function nav() {
   if (! navigator.geolocation) {
@@ -136,12 +139,9 @@ function nav() {
 window.addEventListener('load', nav);
 </script>
 <div id="location"></div>
+  </div>
+</article>
 
-<!-- END CONTENT -->
-
-      </div>
-      <hr class="black">
-
-      <p>(<a href="../../../../archives/">back</a>)</p>
-  </body>
+<p>(<a href="/vv/archives/">back</a>)</p>
+</body>
 </html>

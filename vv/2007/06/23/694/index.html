@@ -13,7 +13,7 @@ font-size:12px;
 @media screen { body{
 font-family:sans-serif;
 max-width:35em;
-margin:8px auto;
+margin:22px auto 64px auto;
 padding:0 8px;
 }}
 hr.black{
@@ -36,6 +36,9 @@ color:#000;
 background-color:#DDD;
 white-space:pre-line;
 }
+.content {
+margin:1em 0;
+}
 .content hr{
 padding:0;
 margin:0;
@@ -53,8 +56,8 @@ position:relative;
 .centered{text-align:center}
 .postbox{
 border-bottom:6px solid #ddd;
-margin:0 -8px 6px -8px;
-padding:0 8px 0 8px;
+margin:0 0 6px 0;
+padding:0 0 0 0;
 }
 pre{overflow-x:auto}
 .byline{
@@ -97,22 +100,22 @@ margin:1ex 0 0 0;
 }
 </style>
 </head>
-  <!-- Copyright 2007-2020 Hal Canary. ALL RIGHTS RESERVED. -->
+<!-- Copyright 2007-2020 Hal Canary. ALL RIGHTS RESERVED. -->
+<body>
 
-  <body>
-      <h1 class="blogtitle">Tension of a Spinning Ring</h1>
-
-      <p>fun with physics</p>
-
-      <div class="byline">By Hal Canary,
-        2007-06-23 10:50:40
-        (<a href="https://halcanary.org/vv/2007/06/23/694/">link</a>)
-    <br><a href="../../../../category/physics/" class="categorylink">#physics</a>
-        </div>
-      <!-- SRC= 2007-06-23-694 -->
-      <div class="content">
-
-<!-- BEGIN CONTENT -->
+<article class="postbox">
+  <header>
+    <!-- SRC= 2007-06-23-694 -->
+    <h1 class="blogtitle">Tension of a Spinning Ring</h1>
+    <p>fun with physics</p>
+    <div class="byline">
+      <div>by: Hal Canary</div>
+      <div>posted: 2007-06-23 10:50:40</div>
+      <div>link: <a href="/vv/2007/06/23/694/">https://halcanary.org/vv/2007/06/23/694/</a></div>
+      <div><a href="/vv/category/physics/" class="categorylink">#physics</a></div>
+    </div>
+  </header>
+  <div class="content">
 <p>What is the tension in a spinning ring, for example Bank's orbitals or a Niven Ring?</p>
 <p>Let us break the ring into <em>N</em> sections. The angle (in radians) subtended by each section, dθ, is 2π / <em>N</em>. Suppose the radius of the ring is <em>R</em> and the mass-per-unit-length of the ring is λ; then the mass of a section is λ <em>R</em> dθ and the mass of the whole ring <em>M</em> = 2π_R_λ.</p>
 <p>Ignoring gravity, there are two forces pulling on each small section: tension pulling to the left and tension pulling to the right. Because the ring is circularly symmetric, the magnitude of the two tensions are equal. The directions of the two forces are dθ from being opposite.</p>
@@ -188,12 +191,9 @@ margin:1ex 0 0 0;
 <p>Carbon nanotubes: maximum size of 4800 kilometers. Period of revolution = 4353 seconds = 1.2 hours</p>
 <p>The period of revolution for a <a href="http://en.wikipedia.org/wiki/Orbital_(The_Culture)">Culture Orbital</a> is a convenient 24 hours. The radius of a <a href="http://en.wikipedia.org/wiki/Ringworld">Niven Ring</a> is 1 AU. Neither of these is feasible with today's understanding of physics.</p>
 <p>On the other hand, a <a href="http://en.wikipedia.org/wiki/Stanford_torus">Stanford Torus</a> with a radius of 893 meters and an orbital period of 60 seconds would need to have an average specific strength of 8745 N·m/kg, so at least 6% of the mass would need to be steel structure. (You would probably want a 4x fudge factor. Say 25% structural steel. Then sections of the ring could be replaced if they show signs of wear.)</p>
+  </div>
+</article>
 
-<!-- END CONTENT -->
-
-      </div>
-      <hr class="black">
-
-      <p>(<a href="../../../../archives/">back</a>)</p>
-  </body>
+<p>(<a href="/vv/archives/">back</a>)</p>
+</body>
 </html>
