@@ -28,7 +28,10 @@ function search_hco() {
       Zip Code:
       <input type="text" name="zip" value="53713" />
       <br />
-      <button name="B" type="button" value="" onclick="window.location='https://www.google.com/search?q=movie%3A'+document.gmf.mn.value+'&near='+document.gmf.zip.value;">Go to Google Movies</button>
+      <button name="B" type="button" value=""
+              onclick="window.location='https://www.google.com/search?q=movie%3A'+document.gmf.mn.value+'&' + 'near='+document.gmf.zip.value;">
+        Go to Google Movies
+      </button>
     </p>
   </form>
 </div>

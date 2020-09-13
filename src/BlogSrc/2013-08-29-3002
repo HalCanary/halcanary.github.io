@@ -12,15 +12,31 @@ function nav() {
     return;
   }
   document.getElementById("location").innerHTML = "....";
+  function ae(type, dst) {
+    var x = document.createElement(type);
+    dst.appendChild(x);
+    return x;
+  }
+  function at(content, dst) {
+    var x = document.createTextNode(content);
+    dst.appendChild(x);
+    return x;
+  }
   function posfunc(pos) {
     var c = pos.coords;
     var r = 6;
     var p = c.latitude.toFixed(r) + "," + c.longitude.toFixed(r);
-    document.getElementById("location").innerHTML =
-      "<p><strong>Your Current Location:</strong></p>" +
-      "<p><a href='https://maps.google.com/maps?q="
-      + p + "'>" + p + "</a></p><p>("+ c.accuracy + "m)</p>"
-      +"<p><a href='geo:"+p+"'>geo:"+p+"</a></p>";
+    var loc = document.getElementById("location");
+    var url = 'https://maps.google.com/maps?q=' + p;
+    loc.innerHTML = "";
+    at('Your Current Location:', ae('strong', ae('p', loc)))
+    var a = ae('a', ae('p', loc));
+    a.href = url;
+    at(p, a);
+    at("("+ c.accuracy + "m)", ae('p', loc));
+    a = ae('a', ae('p', loc));
+    a.href = "geo:" + p;
+    at("geo:" + p, a);
   };
   navigator.geolocation.getCurrentPosition(posfunc);
   return false;

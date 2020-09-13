@@ -294,7 +294,8 @@ function newAD() {
 }
 
 function init() {
-    img = document.getElementById('img');
+    img = document.createElement("img");
+    document.getElementById('imgdiv').appendChild(img);
     canvas = document.getElementById('c');
     initialSize = document.getElementById('initialSize');
     var s = parseInt(window.location.hash.substring(1));
@@ -318,7 +319,6 @@ function toggle() {
 }
 
 function toImage() {
-    img = document.getElementById('img');
     img.src=canvas.toDataURL();
     img.width=100;
     img.width=100;
@@ -335,12 +335,12 @@ function toImage() {
 Current Size: <span id='size'>1</span> &nbsp;
 <br>
 <button onclick="newAD()">New Aztex Diamond</button> &nbsp;
-Initial Size: <input type="text" value="1" id="initialSize" size="4"></input>
-<br>
+Initial Size: <input type="text" value="1" id="initialSize" size="4" />
+</p>
 <canvas id="c" width="1136" height="1136"></canvas>
 
-<br>
-<a href="javascript:toImage();">to image:</a> <img id="img">
+<p>
+<a href="javascript:toImage();">to image:</a> <span id="imgdiv"></span>
 </p>
 
 <h1>TOAD Shuffler Help</h1>

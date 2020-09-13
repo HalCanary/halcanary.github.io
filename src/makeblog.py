@@ -36,7 +36,7 @@ top_posts_header = """
 
 <div class="postbox">
   <div id="search-link-halcanary-org">
-    <div class="rightside"><a href="" onclick="document.getElementById('search-link-halcanary-org').style.display='none'; document.getElementById('search-halcanary-org').style.display='block'; return false;">search</a></div>
+    <div class="rightside"><a href="#" onclick="document.getElementById('search-link-halcanary-org').style.display='none'; document.getElementById('search-halcanary-org').style.display='block'; return false;">search</a></div>
   </div>
   <div id="search-halcanary-org" style="display:none;">
     <form method="get" action="https://www.google.com/search">
@@ -120,18 +120,22 @@ class Post(object):
 
     @staticmethod
     def write(o, post_info, level):
-        # keys = [ 'src', 'permalinkpart', 'title', 'summary', 'date', 'category_links', 'post' ]
+        category_fmt = '<a href="/{1}/category/{0}/" class="categorylink">#{0}</a>'
+        categories = '; '.join(category_fmt.format(cat, BASE_DIR) for cat in post_info['category_list'])
+        categories = '      <div>{}</div>'.format(categories) if categories else ''
+        # keys = [ 'src', 'permalinkpart', 'title', 'summary', 'date', 'category_list', 'post' ]
+        summ = '    <p>{}</p>'.format(post_info['summary']) if post_info['summary'] else ''
         post_template = """
 <article class="postbox">
   <header>
     <!-- SRC= {src} -->
     <h{level} class="blogtitle">{title}</h{level}>
-    <p>{summary}</p>
+{summ}
     <div class="byline">
       <div>by: Hal Canary</div>
       <div>posted: {date}</div>
       <div>link: <a href="/{permalinkpart}">{URL_BASE}/{permalinkpart}</a></div>
-      <div>{category_links}</div>
+{categories}
     </div>
   </header>
   <div class="content">
@@ -139,7 +143,8 @@ class Post(object):
   </div>
 </article>
 """
-        o.write(post_template.format(level=level, URL_BASE=URL_BASE, **post_info))
+        o.write(post_template.format(level=level, categories=categories, summ=summ,
+                                     URL_BASE=URL_BASE, **post_info))
 
     def __init__(self, path):
         # Required:
@@ -155,7 +160,6 @@ class Post(object):
             raise Exception(path + " is not a file")
 
         self.src = os.path.basename(path)
-        self.category_links = ''
         self.category_list = []
         self.summary = ''
         self.date = None
@@ -167,7 +171,7 @@ class Post(object):
         self.year = None
 
         postid = None
-        mode = None
+        mode = 'markdown'
         with open(path,'r') as f:
             while True:
                 sline = f.readline().strip()
@@ -212,8 +216,6 @@ class Post(object):
         self.month = '{:02d}'.format(timestamp.month)
         self.day   = '{:02d}'.format(timestamp.day)
 
-        category_fmt = '<a href="/{1}/category/{0}/" class="categorylink">#{0}</a>'
-        self.category_links = '; '.join(category_fmt.format(cat, BASE_DIR) for cat in self.category_list)
         self.permalinkpart = '{}/{}/{}/{}/{}/'.format(BASE_DIR, self.year, self.month, self.day, postid)
 
     def write_to_file(self, output_path):
@@ -258,8 +260,9 @@ def write_indices(indices):
                 o.write('<h2>{year}</h2>\n'.format(year=year))
             o.write('<ul>\n')
             for post in year_posts:
-                fmt = '<li>\n  <a href="/{permalinkpart}">{title}</a>\n  {date}\n  <div>{summary}</div>\n</li>\n'
-                o.write(fmt.format(**post))
+                s = '  <div>{}</div>'.format(post['summary']) if post['summary'] else ''
+                fmt = '<li>\n  <a href="/{permalinkpart}">{title}</a>\n  {date}\n>{s}\n</li>\n'
+                o.write(fmt.format(s=s, **post))
             o.write('</ul>\n\n')
         o.write('<hr class="black">\n' +
                 '<p class="centered"><a href="../">UP</a></p>\n' +

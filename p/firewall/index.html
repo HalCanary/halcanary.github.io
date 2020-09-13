@@ -25,7 +25,7 @@ function search_hco() {
     <h3>Quickstart:</h3>
     <p>Instructions for configuring a linux firewall for a simple
       non-routing workstaion.</p>
-    <p>Save this file as <tt>/usr/local/sbin/iptables-script.sh</tt> :</p>
+    <p>Save this file as <code>/usr/local/sbin/iptables-script.sh</code> :</p>
 <pre style="margin-left:2em;">
 #!/bin/sh
 PATH=/sbin:$PATH
@@ -51,7 +51,7 @@ iptables -A INPUT -j REJECT --reject-with icmp-host-prohibited
 /sbin/chkconfig iptables on
 </pre>
     <p>If that doesn't work, you could try calling the script from
-      <tt>/etc/rc.local</tt> .</p>
+      <code>/etc/rc.local</code> .</p>
 
   </div>
   <div class="subsection">
@@ -67,7 +67,7 @@ iptables -A INPUT -j REJECT --reject-with icmp-host-prohibited
       legitimate email).  <em>Trojans</em> pretend to be good
       information, but are not.</p>
     <p>This logwatch report shows 289 dropped packets in a day.  I
-      didn't log all dropped packets (<tt>-m limit --limit 1/min</tt>);
+      didn't log all dropped packets (<code>-m limit --limit 1/min</code>);
       one in three didn't get logged.  And I dropped another 10,000 or
       so sent to 255.255.255.255, the broadcast address.</p>
 
@@ -422,9 +422,9 @@ Dropped 289 packets on interface eth0
     <h3>The Default Firewall</h3>
     
     <p>On Redhat systems (In this case, Fedora Core 1), the
-      <tt>redhat-config-securitylevel</tt> program configures the
+      <code>redhat-config-securitylevel</code> program configures the
       firewall.  (In FC2, this command has been renamed
-      <tt>system-config-securitylevel</tt>.) 
+      <code>system-config-securitylevel</code>.) 
       That's all well and good, but it doesn't give you much
       flexibility.  Here's a screenshot:
     </p>
@@ -439,9 +439,9 @@ Dropped 289 packets on interface eth0
       23, and 25.  Good enough for Aunt Tillie, who only wants to run a
       subset of those five services.  But not good enough for me.</p>
     
-    <p>To find out that <tt>redhat-config-securitylevel</tt> really
-      does, you can check out <tt>/etc/sysconfig/iptables</tt>, or you
-      can run the command <tt>/sbin/iptables-save</tt>.  This will give you
+    <p>To find out that <code>redhat-config-securitylevel</code> really
+      does, you can check out <code>/etc/sysconfig/iptables</code>, or you
+      can run the command <code>/sbin/iptables-save</code>.  This will give you
       a file in the iptables-save/iptables-restore format.
       <b>Do not hand edit these type of files!</b>.  In this example,
       I'm opening all five ports. Normally, one would not do this.
@@ -511,8 +511,8 @@ iptables --delete-chain
 </pre>
 
     <p>These two lines clear out the filter table, deleting all rules
-      (<tt>--flush</tt>) and deleting all user-defined chains
-      (<tt>--delete-chain</tt>).  By default, <tt>iptables</tt> acts on
+      (<code>--flush</code>) and deleting all user-defined chains
+      (<code>--delete-chain</code>).  By default, <code>iptables</code> acts on
       the <em>filter</em> table, which contains the INPUT, FORWARD, and
       OUTPUT chains.</p>
 
@@ -553,7 +553,7 @@ iptables -A firewall -p icmp -m icmp --icmp-type 255 -j ACCEPT
 </pre>
 
     <p>Internet Control Message Protocol (icmp) type packets are used
-      for thins like <tt>ping</tt>.  Mostly innocuous, until you get a
+      for thins like <code>ping</code>.  Mostly innocuous, until you get a
       denial-of-service attack. We let these through.</p>
 
 <pre style="margin-left:2em;">
@@ -581,7 +581,7 @@ iptables -A firewall -p tcp -m state --state NEW -m tcp --dport 25 -j ACCEPT
 </pre>
 
     <p>These are the five services we enabled with
-      <tt>redhat-config-securitylevel</tt>.</p>
+      <code>redhat-config-securitylevel</code>.</p>
 
     <table class="p">
       <tr><th>name   </th><th>port </th>
@@ -609,7 +609,7 @@ iptables -A firewall -j REJECT --reject-with icmp-host-prohibited
     <h3>Changing things</h3>
     
     <p>Now that you understand what's going on, you can begin to make
-      changes.  I keep my firewall scripts in <tt>/usr/local/sbin</tt>.
+      changes.  I keep my firewall scripts in <code>/usr/local/sbin</code>.
       Begin by putting a script there that mimicks your preexisting
       setup.  Compare iptables-save outputs to verify.</p>
     
@@ -621,28 +621,28 @@ iptables -A firewall -j REJECT --reject-with icmp-host-prohibited
 
     <pre style="margin-left:2em;">/sbin/iptables-save > /etc/sysconfig/iptables</pre>
 
-    <p>to save the current setup to <tt>/etc/sysconfig/iptables</tt>,
+    <p>to save the current setup to <code>/etc/sysconfig/iptables</code>,
       where it will loaded upon next boot.</p>
 
 
     <p>The first thing I did when editing my firewall script was to
-      delete the &ldquo;<tt>-p esp</tt>&rdquo; and 
-      &ldquo;<tt>-p ah</tt>&rdquo; stuff that I don't use anyways.</p>
+      delete the &ldquo;<code>-p esp</code>&rdquo; and 
+      &ldquo;<code>-p ah</code>&rdquo; stuff that I don't use anyways.</p>
 
     <p>Then I open whatever ports I want open.  A CUPS print server
       needs port 631 (ipp service) open.  BitTorrent likes to have tcp
       ports 6881 through 6889 open.</p>
 
     <p>(ASIDE: You can choose another range of ports for BitTorrent.
-      Use the <tt>--minport</tt> and <tt>--maxport</tt> options to set
+      Use the <code>--minport</code> and <code>--maxport</code> options to set
       them.  Some suggest that everybody choose a different random
-      integer for their minport for security reasons. <tt>perl -e
-      'print int(rand(65536-1024)+1024),"\n"'</tt>)</p>
+      integer for their minport for security reasons. <code>perl -e
+      'print int(rand(65536-1024)+1024),"\n"'</code>)</p>
 
     <p>Port 443 is used for https.  Maybe a user wants to use port
       12345 for a custom server.</p>
 
-    <p>Remember that &ldquo;<tt>-p tcp --dport</tt>&rdquo; only opens
+    <p>Remember that &ldquo;<code>-p tcp --dport</code>&rdquo; only opens
       the tcp port.  To open a udp port, </p>
 
 <pre style="margin-left:2em;">
@@ -669,7 +669,7 @@ iptables -A firewall -j REJECT --reject-with icmp-host-prohibited
       ignore those that are broadcast to the world.</p>
 
     <p>Another option is logging. This will fill up
-      <tt>/var/log/messages</tt>.</p>
+      <code>/var/log/messages</code>.</p>
 
 <pre style="margin-left:2em;">
 iptables -A firewall -d 255.255.255.255 \
@@ -693,9 +693,9 @@ iptables -A firewall -j REJECT --reject-with icmp-host-prohibited
     <h3>Network address translation</h3>
 
     <p>Before you can route, you'll have to set the kernel variable
-      <tt>net.ipv4.ip_forward</tt> to <tt>1</tt>.  Do this by editing
-      <tt>/etc/sysctl.conf</tt> and then rereading that file with 
-      &ldquo;<tt>/sbin/sysctl -p</tt>&rdquo;.
+      <code>net.ipv4.ip_forward</code> to <code>1</code>.  Do this by editing
+      <code>/etc/sysctl.conf</code> and then rereading that file with 
+      &ldquo;<code>/sbin/sysctl -p</code>&rdquo;.
 
 <pre style="margin-left:2em;">
 ## line from /etc/sysctl.conf
@@ -819,7 +819,7 @@ iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
     <ul>
       <li>REJECT targets</li>
       <li>REJECT vs DROP</li>
-      <li><tt>-m limit</tt> rate limiting</li>
+      <li><code>-m limit</code> rate limiting</li>
     </ul>
     <p>Topics I want to learn about:</p>
     <ul>

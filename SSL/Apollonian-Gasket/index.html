@@ -52,7 +52,6 @@ body {
 <p>First, we deal with the function <i>w</i> that returns the radius
 of the inner kissing circle.  Maple Code:</p>
 
-<table class="code"><tr><td>
 <pre>
 # Here is the radius equation.
 w := (x,y,z) -> simplify((x*y*z)/( (x*y) + (y*z) + (x*z) + 2 * ((x*y*z*(x+y+z))^(1/2)) ));
@@ -62,22 +61,19 @@ f := (x,y,z) -> (w(x,y,z),y,z);
 g := (x,y,z) -> (x,w(x,y,z),z);
 h := (x,y,z) -> (x,y,w(x,y,z));
 
-
 f(1,1,1);
 g(f(1,1,1));
 f(g(f(1,1,1)));
 h(g(f(1,1,1)));
 f(f(h(g(f(1,1,1)))));
-
-
-</pre></td></tr></table>
+</pre>
 
 <p>&nbsp;</p>
 
 
 <p>Let's deal with curvature = 1/radius.</p>
 
-<table class="code"><tr><td><pre>
+<pre>
  
 # Here is the Curvature equation.
 solve(2*(a^2 + b^2 + c^2 + d^2) = (a+b+c+d)^2,d);
@@ -100,7 +96,7 @@ f(f(h(g(f(1,1,1)))));
 f(0,1,1);
 f(f(0,1,1));
 h(g(f(0,1,1)));
-</pre></td></tr></table>
+</pre>
 
 
 
@@ -128,10 +124,7 @@ cluster.  Now I can apply the methodology suggested by Jim in his
 
 
 <p>First, here's the Soddy Equation</p>
-<table class="code">
-<tr>
-<td><pre class="maplecode">2*(a^2 + b^2 + c^2 + d^2) = (a+b+c+d)^2;</pre>
-</td></tr></table>
+<pre class="maplecode">2*(a^2 + b^2 + c^2 + d^2) = (a+b+c+d)^2;</pre>
 
 <p class="centered">
 <img style="border:none" src="2003-10-30-apollonian/2003-10-30-apollonian_1.gif" width="262" height="21" alt="2*a^2+2*b^2+2*c^2+2*d^2 = (a+b+c+d)^2">
@@ -141,12 +134,10 @@ cluster.  Now I can apply the methodology suggested by Jim in his
 <p>Suppose that for a given (a,b,c), both d and d' are solutions this equation:</p>
 
 
-<table class="code"><tr><td>
 <pre class="maplecode">2*(a^2 + b^2 + c^2) + 2*d^2 = (a+b+c)^2 + 2*d*(a+b+c) + d^2;
 2*(a^2 + b^2 + c^2) + 2*d^2 - (a+b+c)^2 - 2*d*(a+b+c) - d^2 = 0;
 d^2 - (2*a + 2*b + 2*c)*d + 2*(a^2 + b^2 + c^2) - (a+b+c)^2 = 0;
 </pre>
-</td></tr></table>
 
 <p class="centered">
 <img style="border:none" src="2003-10-30-apollonian/2003-10-30-apollonian_2.gif" width="372" height="21" alt="2*a^2+2*b^2+2*c^2+2*d^2 = (a+b+c)^2+2*d*(a+b+c)+d^2">
@@ -164,10 +155,8 @@ d^2 - (2*a + 2*b + 2*c)*d + 2*(a^2 + b^2 + c^2) - (a+b+c)^2 = 0;
 <p>So then:</p>
 
 
-<table class="code"><tr><td>
 <pre class="maplecode">d + dprime = 2*a + 2*b + 2*c;
 d * dprime = 2*(a^2 + b^2 + c^2) - (a+b+c)^2;</pre>
-</td></tr></table>
 
 <p class="centered">
 <img style="border:none" src="2003-10-30-apollonian/2003-10-30-apollonian_5.gif" width="172" height="13" alt="d+dprime = 2*a+2*b+2*c">
@@ -181,9 +170,7 @@ d * dprime = 2*(a^2 + b^2 + c^2) - (a+b+c)^2;</pre>
 <p>Next define a function u which takes in four cluster variables and return the exchange for the fourth.</p>
 
 
-<table class="code"><tr><td>
 <pre class="maplecode">u := (a,b,c,d) -&gt; simplify(2*a + 2*b + 2*c - d);</pre>
-</td></tr></table>
 
 <p class="centered">
 <img style="border:none" src="2003-10-30-apollonian/2003-10-30-apollonian_7.gif" width="266" height="15" alt="u := proc (a, b, c, d) options operator, arrow; simplify(2*a+2*b+2*c-d) end proc">
@@ -191,13 +178,11 @@ d * dprime = 2*(a^2 + b^2 + c^2) - (a+b+c)^2;</pre>
 
 <p>Clusterfy u into a 4-cluster. </p>
 
-<table class="code"><tr><td>
 <pre class="maplecode">e := (w,x,y,z) -&gt; (u(x,y,z,w),x,y,z); 
 f := (w,x,y,z) -&gt; (w,u(w,y,z,x),y,z);
 g := (w,x,y,z) -&gt; (w,x,u(w,x,z,y),z);
 h := (w,x,y,z) -&gt; (w,x,y,u(w,x,y,z));
 </pre>
-</td></tr></table>
 
 <p class="centered">
 <img style="border:none" src="2003-10-30-apollonian/2003-10-30-apollonian_8.gif" width="209" height="15" alt="e := proc (w, x, y, z) options operator, arrow; u(x, y, z, w), x, y, z end proc">
@@ -219,9 +204,7 @@ h := (w,x,y,z) -&gt; (w,x,y,u(w,x,y,z));
 <p>Some things are downright meaingless: For instance:</p>
 
 
-<table class="code"><tr><td>
 <pre class="maplecode">e(x,x,x,x);</pre>
-</td></tr></table>
 
 <p class="centered">
 <img style="border:none" src="2003-10-30-apollonian/2003-10-30-apollonian_12.gif" width="56" height="13" alt="5*x, x, x, x">
@@ -231,10 +214,8 @@ h := (w,x,y,z) -&gt; (w,x,y,u(w,x,y,z));
 <p>doesn't mean anything. Can you imagine four circles that all have the same radius kissing? No. So we define.</p>
 
 
-<table class="code"><tr><td>
 <pre class="maplecode">v1 := (a,b,c) -&gt; simplify(a+b+c + 2*(a*b+a*c+b*c)^(1/2));
 v2 := (a,b,c) -&gt; simplify(a+b+c - 2*(a*b+a*c+b*c)^(1/2));</pre>
-</td></tr></table>
 
 <p class="centered">
 <img style="border:none" src="2003-10-30-apollonian/2003-10-30-apollonian_13.gif" width="331" height="17" alt="v1 := proc (a, b, c) options operator, arrow; simplify(a+b+c+2*(a*b+a*c+b*c)^(1/2)) end proc">
@@ -248,9 +229,7 @@ v2 := (a,b,c) -&gt; simplify(a+b+c - 2*(a*b+a*c+b*c)^(1/2));</pre>
 <p>So if we had three circles with radius x,y, and z, we can let w be the inner circle for the kiss of x, y, and z.</p>
 
 
-<table class="code"><tr><td>
 <pre class="maplecode">w := v1(x,y,z);</pre>
-</td></tr></table>
 
 <p class="centered">
 <img style="border:none" src="2003-10-30-apollonian/2003-10-30-apollonian_15.gif" width="212" height="16" alt="w := x+y+z+2*(x*y+x*z+y*z)^(1/2)">
@@ -260,9 +239,7 @@ v2 := (a,b,c) -&gt; simplify(a+b+c - 2*(a*b+a*c+b*c)^(1/2));</pre>
 <p>But we want simpler looking equations, so let M = (xy+xz+yz)^(1/2):</p>
 
 
-<table class="code"><tr><td>
 <pre class="maplecode">w := x+y+z+2*M;</pre>
-</td></tr></table>
 
 <p class="centered">
 <img style="border:none" src="2003-10-30-apollonian/2003-10-30-apollonian_16.gif" width="125" height="13" alt="w := x+y+z+2*M">
@@ -272,7 +249,6 @@ v2 := (a,b,c) -&gt; simplify(a+b+c - 2*(a*b+a*c+b*c)^(1/2));</pre>
 <p>Then we can look at some of the clusters that are accessible form this cluster.</p>
 
 
-<table class="code"><tr><td>
 <pre class="maplecode">(w,x,y,z);
 e(w,x,y,z);
 e(f((w,x,y,z)));
@@ -280,7 +256,6 @@ e(f(e(w,x,y,z)));
 e(e(f(e(w,x,y,z))));
 h(h(e(f(e(w,x,y,z)))));
 </pre>
-</td></tr></table>
 
 <p class="centered">
 <img style="border:none" src="2003-10-30-apollonian/2003-10-30-apollonian_17.gif" width="134" height="13" alt="x+y+z+2*M, x, y, z">
@@ -314,7 +289,6 @@ QUESTION: what do the coefficients count?</p>
 <p>But what if we start with 0,1,1? </p>
 
 
-<table class="code"><tr><td>
 <pre class="maplecode">z:=0;
 x:=1;
 y:=1;
@@ -328,7 +302,6 @@ e(e(h(e(w,x,y,z))));
 h(h(e(f(e(w,x,y,z)))));
 h(g(h(h(e(f(e(w,x,y,z)))))));
 </pre>
-</td></tr></table>
 
 <p class="centered">
 <img style="border:none" src="2003-10-30-apollonian/2003-10-30-apollonian_23.gif" width="34" height="13" alt="z := 0">
@@ -375,25 +348,20 @@ h(g(h(h(e(f(e(w,x,y,z)))))));
 </p>
 
 
-<table class="code"><tr><td>
 <pre class="maplecode">z:='z': x='x': y:='y': w:='w';</pre>
-</td></tr></table>
 
 <p class="centered">
 <img style="border:none" src="2003-10-30-apollonian/2003-10-30-apollonian_34.gif" width="41" height="13" alt="w := w">
 </p>
 
 
-<table class="code"><tr><td>
 <pre class="maplecode">x:='x':y:='y':z:='z':
 (w,x,y,z);
 e(w,x,y,z);
 f(w,x,y,z);
 g(w,x,y,z);
 h(w,x,y,z);
-
 </pre>
-</td></tr></table>
 
 <p class="centered">
 <img style="border:none" src="2003-10-30-apollonian/2003-10-30-apollonian_35.gif" width="50" height="13" alt="w, x, y, z">
@@ -416,9 +384,7 @@ h(w,x,y,z);
 </p>
 
 
-<table class="code"><tr><td>
 <pre class="maplecode">(x+y+z+2*(x*y+x*z+y*z)^(1/2), x, y, z);</pre>
-</td></tr></table>
 
 <p class="centered">
 <img style="border:none" src="2003-10-30-apollonian/2003-10-30-apollonian_40.gif" width="221" height="16" alt="x+y+z+2*(x*y+x*z+y*z)^(1/2), x, y, z">

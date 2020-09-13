@@ -196,7 +196,7 @@ exec date +%Y-%m-%dT%T%z</pre>
 # ~/bin/isodate
 exec date +%Y-%m-%d</pre>
 
-<p>Suppose you want to pipe something into a file as root using sudo.  For example: <tt>sudo echo 1 &gt; /proc/sys/net/ipv4/ip_forward</tt> ; this won't work.  Instead try the sud script like this: <tt>sud 'echo 1 &gt; /proc/sys/net/ipv4/ip_forward'</tt> . [Depends on: Bourne shell, coreutils, sudo]</p>
+<p>Suppose you want to pipe something into a file as root using sudo.  For example: <code>sudo echo 1 &gt; /proc/sys/net/ipv4/ip_forward</code> ; this won't work.  Instead try the sud script like this: <code>sud 'echo 1 &gt; /proc/sys/net/ipv4/ip_forward'</code> . [Depends on: Bourne shell, coreutils, sudo]</p>
 <pre>#!/bin/sh
 # ~/bin/sud
 sudo su -c &quot; $* &quot;</pre>
@@ -257,7 +257,7 @@ fi</pre>
 # ~/bin/ev
 evince &quot;$@&quot; &gt; /dev/null 2&gt;&amp;1 &amp;</pre>
 
-<p>Encrypt or decrypt with the ROT13 Cypher. Useage: <tt>rot13 Uryyb jbeyq.</tt> or <tt>echo Uryyb jbeyq. | rot13</tt> . [Depends on: Bourne shell, coreutils]</p>
+<p>Encrypt or decrypt with the ROT13 Cypher. Useage: <code>rot13 Uryyb jbeyq.</code> or <code>echo Uryyb jbeyq. | rot13</code> . [Depends on: Bourne shell, coreutils]</p>
 <pre>#!/bin/sh
 # ~/bin/rot13
 if [ &quot;$#&quot; -gt 0 ] ; then

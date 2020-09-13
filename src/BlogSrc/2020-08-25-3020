@@ -5,4 +5,4 @@ MODE=markdown
 CATEGORIES=
 SUMMARY=a proposal
 
-<img src="/images/dem.png">
+![](/images/dem.png)
