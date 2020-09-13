@@ -220,7 +220,7 @@ class Post(object):
         o = UpdatingFile(output_path)
         o.write(header.format(title='Voder-Vocoder: ' + self.title, style=style, years=self.year + '-' + current_year))
         Post.write(o, vars(self), 1)
-        o.write('\n<p>(<a href="/vv/archives/">back</a>)</p>\n</body>\n</html>\n')
+        o.write('\n<p>(<a href="/{}/archives/">back</a>)</p>\n</body>\n</html>\n'.format(BASE_DIR))
         if o.close():
             sys.stdout.write('modified %s\n' % o.path)
 
@@ -249,7 +249,9 @@ def write_indices(indices):
         loc = '{}/{}/index.html'.format(BASE_DIR, '/'.join(pathlist))
         o = UpdatingFile(loc)
         o.write(header.format(style=style, title='Voder-Vocoder Archive', years='1997-' + current_year))
-        o.write('<h1><a href="/vv/" class="hiddenlink">Voder-Vocoder</a> Archive<div>{name}</div></h1>'.format(name=name))
+        name = '<br>' + name if name else ''
+        o.write('<h1><a href="/{d}/" class="hiddenlink">Voder-Vocoder</a> Archive {name}</h1>'.format(
+            d=BASE_DIR, name=name))
         for year in sorted(posts.keys(), reverse=True):
             year_posts = posts[year]
             if len(posts) > 1:
@@ -259,7 +261,6 @@ def write_indices(indices):
                 fmt = '<li>\n  <a href="/{permalinkpart}">{title}</a>\n  {date}\n  <div>{summary}</div>\n</li>\n'
                 o.write(fmt.format(**post))
             o.write('</ul>\n\n')
-
         o.write('<hr class="black">\n' +
                 '<p class="centered"><a href="../">UP</a></p>\n' +
                 '</body>\n</html>\n')
