@@ -1,0 +1,39 @@
+#! /usr/bin/env python3
+# coding=utf-8
+
+import os
+import sys
+import html
+
+TEMPLATE = '''<!doctype html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta http-equiv="refresh" content="0; url={0}">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+{1}
+</title>
+<body>
+<a style="overflow-wrap:break-word"
+   href="{1}">
+{1}
+</a>
+</body>
+</html>
+'''
+
+ROOT = 'https://halcanary.org/'
+
+BASE_DIR = os.path.dirname(__file__) + '/../'
+
+with open('src/redirects.txt', 'r') as f:
+    for line in f:
+        key, value = line.split()
+        path = os.path.normpath(BASE_DIR + key)
+        if not os.path.exists(path):
+            os.makedirs(path)
+        value = html.escape(value)
+        short = value.replace(ROOT, '/', 1) if value.startswith(ROOT) else value
+        with open(path + '/index.html', 'w') as o:
+            o.write(TEMPLATE.format(value, short))
+        sys.stdout.write(key + '\n')
