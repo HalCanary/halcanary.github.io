@@ -10,15 +10,8 @@ TEMPLATE = '''<!doctype html>
 <meta charset="UTF-8">
 <meta http-equiv="refresh" content="0; url={0}">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>
-{1}
-</title>
-<body>
-<a style="overflow-wrap:break-word"
-   href="{1}">
-{1}
-</a>
-</body>
+<title>{1}</title>
+<body><a style="overflow-wrap:break-word" href="{1}">{1}</a></body>
 </html>
 '''
 
