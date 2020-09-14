@@ -1,38 +1,10 @@
-<style>
-@page {
-    size: auto;
-    margin: 0.25in 0.5in 0.5in 0.5in;
-}
-li ul li {
-    list-style-type: square;
-}
-h1, h2, p, ul {
-    margin: 1ex 0;
-}
-li ul {
-    margin: 0 0 0.5ex 0;
-}
-ul {
-    padding-left: 30px;
-}
-li {
-    margin: 0 0 0.5ex 0;
-}
-a:link, a:visited {
-    color: inherit;
-    text-decoration: none;
-}
-a:link:active, a:visited:active, a:link:hover, a:visited:hover {
-    text-decoration: underline;
-}
-</style>
-
 <div style="display: none;">
 
 Hal W Canary III - 2020 Resume
 ==============================
 
 </div>
+<div class="tightmargins nolink">
 <div class="centered">
 
 [halcanary@gmail.com](mailto:halcanary@gmail.com)
@@ -120,3 +92,5 @@ Publications
 *   Hal Canary. “Aztec Diamonds and Baxter Permutations.” _The Electronic
     Journal of Combinatorics_ 17 (2010), #R105
     ([https://halcanary.org/aztec-diamonds](https://halcanary.org/aztec-diamonds))
+
+</div>

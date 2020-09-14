@@ -8,6 +8,10 @@
     margin: 22px auto 64px auto;
     padding: 0 8px;
 }}
+@page {
+    size: auto;
+    margin: 0.25in 0.5in 0.5in 0.5in;
+}
 hr.black{
     border: 0;
     height: 1px;
@@ -89,4 +93,26 @@ table.border tr td, table.border tr th {
 .tophead {
     text-align: center;
     margin: 1ex 0 0 0;
+}
+.tightmargins li > ul > li {
+    list-style-type: square;
+}
+.tightmargins h1, .tightmargins h2, .tightmargins p, .tightmargins ul {
+    margin: 1ex 0;
+}
+.tightmargins li > ul {
+    margin: 0 0 0.5ex 0;
+}
+.tightmargins ul {
+    padding-left: 30px;
+}
+.tightmargins li {
+    margin: 0 0 0.5ex 0;
+}
+.nolink a:link, .nolink a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+.nolink a:link:active, .nolink a:visited:active, .nolink a:link:hover, .nolink a:visited:hover {
+    text-decoration: underline;
 }

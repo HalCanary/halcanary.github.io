@@ -1,5 +1,6 @@
 #!/bin/sh
-find "$@" -name '*.html' | while IFS= read -r line; do
+cd "$(dirname "$0")/.."
+git ls-files | grep '\.html$' | grep -v 'mathapplets/' | while IFS= read -r line; do
     if [ "$line" = SSL/Apollonian-Gasket/2003-10-30-apollonian/2003-10-30-apollonian.html ]; then
         continue
     fi
