@@ -1,0 +1,109 @@
+<!-- p/html -->
+
+<div class="section"> 
+<h2>Web Design Philosophy</h2>
+
+<h3>Basic Goals</h3>
+
+<ul>
+  <li>Keep content and markup seperate when possible.  Therefore, use
+  css, as well as dynamic templates.</li>
+  <li>Make it easy to administer</li>
+</ul>
+
+<h3>Three types of content</h3>
+
+<ol>
+  <li>Journal Content.  This can be abstracts that point to new content
+  elsewhere on the site, or a personal journal, or links to outside
+  content, or a combination of the above.  Ususally only the most
+  recent <i>n</i> entries are displayed.</li>
+  <li>Static Content.  For instance
+  <i>https://halcanary.org/?p=photos</i> is a static page that contains
+  links to each of my photo albums.  Paradoxicaly, a static page is
+  more likely to change than a journal type page.</li>
+  <li>Form based CGI's.  Usually only used if the reader needs to send
+  information back to the site.</li>
+</ol>
+
+<p>additionally, dynamically generated search results, <a 
+href="https://www.google.com/search?&amp;q=site%3Ahalcanary.org+devil%27s+lake">
+like this example</a>.  I'm not including this as one of the three,
+because I've never written a search engine.</p>
+
+<h3>Getting Started</h3>
+
+<p>Under most circumstances, a web page is an HTML Document.  Here is
+an example of a valid HTML document:</p>
+
+<table class="code"><tr><th>
+a html document</th></tr><tr><td><pre>
+&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01//EN&quot;&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+    &lt;meta http-equiv=&quot;Content-type&quot; 
+      content='text/html; charset=&quot;iso-8859-1&quot;'&gt;
+    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;style.css&quot;&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Heading&lt;/h1&gt;
+    &lt;p&gt;content&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre></td></tr></table>
+
+<p>Under most circumstances, you request a document, and the server
+feeds you back a stream of bytes that did not exist before that
+request.  The server calls another script or program to output the
+HTML document on the fly.  This is called a <i>dynamically generated
+web page</i>.  Here is an example of a perl script that might genetate
+such a page:</p>
+
+
+<table class="code"><tr><th>
+index.pl</th></tr><tr><td><pre>
+#/usr/bin/perl
+
+print &lt;&lt;"HERE";
+&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01//EN&quot;&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+    &lt;meta http-equiv=&quot;Content-type&quot; 
+      content='text/html; charset=&quot;iso-8859-1&quot;'&gt;
+    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;style.css&quot;&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Heading&lt;/h1&gt;
+HERE
+
+print '    &lt;p&gt;Current date and time: '.localtime().'.&lt;/p&gt;';
+
+print &lt;&lt;"HERE";
+  &lt;/body&gt;
+&lt;/html&gt;
+HERE
+
+</pre></td></tr></table>
+
+<h3>Look And Layout</h3>
+
+<p>The next thing to do is design the look and layout of your page.
+I'm not going to tell you how to do it, but I will give
+suggestions:</p>
+
+<ul>
+  <li>First decide on layout.  Try and keep it as simple as possible.
+  Don't use frames, only a single large table.  </li>
+  <li>Don't mess with the browser's default font.  I hate that.  Fonts
+  are largely a matter of personal preference.</li>
+  <li>Put all your color and paragraph formatting information in a 
+  <a href="http://www.w3.org/Style/CSS/">css</a> file.</li>
+  <li>Use subtle color shades to differentiate between logical parts
+  of a document.</li>
+  
+</ul>
+</div>
+
+<div class="section"><p class="rightside">file modification time: 2003-07-16 05:18:44</p></div>

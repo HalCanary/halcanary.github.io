@@ -1,0 +1,113 @@
+<!-- p/about-photography -->
+
+<div class="section">
+  <h2>About my Photography</h2>
+  
+  <p>
+    <a href="/photos/2002-08-25-curtis02.jpg">
+      <img src="https://halcanary.org/photos/thumb/2002-08-25-curtis02.jpg" alt="[]"></a>
+    Since August 2002, I've been using a Cannon Powershot A40.  (Other
+    users of this model include
+    <a href="http://nuclear.physics.wisc.edu/~chapman/pictures/">Mark
+    Chapman</a> and  
+    <a href="http://wwdn.textamerica.com/">Wil Wheaton</a>.)  From
+    January 2000 to 2002, I used an APS camera, which I was unhappy
+    with.  I didn't think the film quality was as good as 35mm, even
+    if the film canisters were convenient.</p>
+
+  <p>The A40 takes 1600x1200 photos.  I store photos on a 512 MB CF
+    card; I can hold about 800 jpegs on it.  I have two adapter lenses
+    for it: a wide angle and a telephoto.  If I bought a new camera,
+    I'd want one with improved optics (maybe an SLR) and more
+    megapixels.  Small cameras don't interest me.</p>
+
+  <p>I do all of my photo editing on my Linux desktop, using gphoto2
+    to transfer files off of the camera.  
+    (<a href="/p/a40/">Outdated info on
+    gphoto2</a>)  I edit photos using the Gimp and ImageMagick.
+
+  <p>My usual process it to dump the original 2 megapixel images in a
+    $HOME/Photos/Originals/ directory, 
+    <a href="/archives/000179.html"> prepend the
+    date</a>, and rotate if necessary.  
+  </p>
+  
+  <table class="code"><tr><th>$HOME/bin/rotate-counter</th></tr>
+    <tr><td><pre>#!/bin/sh
+for x in "$@"; do 
+    convert -rotate -90 $x tmp.jpg
+    mv $x unrotated_$x
+    mv tmp.jpg $x
+done</pre>
+  </td></tr></table>
+
+  <p>and</p>
+
+  <table class="code"><tr><th>$HOME/bin/rotate-clock</th></tr>
+    <tr><td><pre>#!/bin/sh
+for x in "$@"; do 
+    convert -rotate 90 $x tmp.jpg
+    mv $x unrotated_$x
+    mv tmp.jpg $x
+done</pre>
+  </td></tr></table>
+
+  <p>Then I copy the files into a working directory and make whatever
+    changes I want to make before publishing to the web.  Many photos
+    don't make it; about 30%--50% do.  At this point I'll crop and
+    resize.  If the photo is poor quality, I'll scale it down to
+    800x600.  If it is okay, I'll only scale it to 1024x768.  If it is
+    excellent, I'll leave it at full resolution.
+  </p>
+
+  <p>I usually crop and resize with <a href="http://gimp.org">the
+      Gimp</a>.  If no cropping is necessary, I'll just let imagemagick
+      to do the work:</p>
+
+  <table class="code"><tr><th>$HOME/bin/resize-1024</th></tr>
+    <tr><td><pre>#!/bin/sh
+SIZE="1024x1024"
+for x in "$@"; do 
+    convert -size $SIZE $x \
+        -resize $SIZE tmp.jpg
+    mv $x fullsize_$x
+    mv tmp.jpg $x
+done</pre>
+  </td></tr></table>
+
+
+  <p>Next, I make a thumbnail.  Again, imagemagick's convert is your
+    friend:</p>
+
+  <table class="code"><tr><th>$HOME/bin/thumb</th></tr>
+    <tr><td><pre>#!/bin/sh
+if [ &quot;$#&quot; -lt 1 ]; then
+    echo &quot;Usage: thumb sourcefile[s]&quot;;
+    exit 1
+fi
+PREFIX=&quot;/photos/&quot;
+THUMB_PREFIX=&quot;thumb/&quot;
+for file in &quot;$@&quot; ; do 
+    OUT=$THUMB_PREFIX$file
+    convert -size 120x120 $file \
+	-resize 120x120 +profile &quot;*&quot; $OUT
+    GEOM=`identify -format 'width=&quot;%w&quot; height=&quot;%h&quot;' $OUT`
+    echo &quot;&lt;p&gt;&quot;
+    echo &quot;  &lt;a href=\&quot;$PREFIX$file\&quot;&gt;&quot;
+    echo &quot;    &lt;img $GEOM alt=\&quot;[Thumb]\&quot; src=\&quot;$PREFIX$OUT\&quot; /&gt;&quot;
+    echo &quot;  &lt;/a&gt;&quot;
+    echo &quot;&lt;/p&gt;&quot;
+done</pre>
+  </td></tr></table>
+
+  <p>If I want to print a photo to hang on the wall, I'll go back to
+    the original image and crop out a 8:10 (1200x1500) portion.  Once
+    I get a enough to bother, I'll burn those images onto a CD and
+    take it to the grocery store for development.  I usually print out
+    8&quot;x10&quot;s.  At 2 megapixels, 8x10 is about as big as you
+    can go.  8x10s cost less than $2 at Woodmans or Walmart; Walgreens
+    will charge you $4.</p>
+
+</div>
+
+<div class="section"><p class="rightside">file modification time: 2004-07-15 20:30:12</p></div>

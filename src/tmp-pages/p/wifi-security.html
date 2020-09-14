@@ -1,0 +1,115 @@
+<!-- p/wifi-security -->
+
+<div class="section">
+<h2>Setting up a ssh tunnel/squid proxy for security.</h2>
+
+<p>
+  <img src="/images/wifi-security.png" class="fr" alt="[network diagram]"/>
+  The problem:  <b>Can I trust WiFi?</b>
+</p>
+<p>Assumptions:</p>
+<ol>
+  <li>I may as well trust my own ISP and the Internet itself.</li>
+  <li>Most public hotspots are the result of kindly gentlemen willing
+    to help out a stranger or not-so-kindly gentlemen who forget to
+    turn on security. [edit: s/gentlmen/gentlepersons/g ]</li>
+  <li>Every so often, there are malevolent hotspots who want to use a
+    man-in-the-middle attack on you.</li>
+  <li>More commonly, people just want to snoop on your HTTP traffic
+    and see where you are going.  They can break WEP to do this.</li>
+</ol>
+<p>Conclusions.</p>
+<ol>
+  <li>I want connectivity.  I trust ~/.ssh/known_hosts.  Use ssh
+    tunneling for everything. </li>
+  <li>The question is how to set that up.</li>
+
+</ol>
+
+<h3>The Plan</h3>
+<p>
+  Ssh from the laptop (<em>laptop</em>) to the trusted workstation
+  (<em>proxy</em>).  Use ssh port forwarding to forward local port
+  13128 to port 3128 on proxy.  Set up Squid on port 3128 (which
+  happens to be the default) on the proxy machine. 
+</p>
+<p>
+  Assume: proxy is a fedora/redhat machine.  Any other unix flavor
+  should work, but I use yum and /sbin/service.  Your mileage might
+  vary.  Assume: your browser (and other internet applications) allows
+  the use of proxies.  Assume:  you have ssh on your laptop. (Putty
+  or cygwin/openssh will work for win32.  I assume openssh.)
+</p>
+
+<h3>Prepare</h3>
+
+<p>
+  <b>Before you get started</b>, go to <em>proxy</em>, your proxy
+  server, and install squid if it is not installed:
+</p>
+<code class="indent">proxy$ sudo yum install squid</code>
+<p>
+  Set up your squid server.  In /etc/squid/squid.conf, add this line
+  AFTER "acl all src 0.0.0.0/0.0.0.0":
+</p>
+<code class="indent">http_access allow all</code>
+
+<p>This should be secure enough if you have your firewall set up.  No
+  need to punch holes in the firewall, as long as the ssh port is
+  open.</p>
+
+<h3>Putting it all together</h3>
+
+<p>
+  <b>When you are on the road</b>, on the client:</p>
+<code class="indent">
+laptop$ PROXY=nnn.nnn.nnn.nnn
+laptop$ ssh -L 13128:$PROXY:3128 $PROXY
+</code>
+
+<p>Note:  $PROXY must be the IP address of your proxy server.</p>
+<p>
+  <img src="/images/wifi-security-putty.png" class="fr" alt="[]" /> If
+  you use putty/windows instead of openssh, you can do the same with a
+  gui.  Here's what is should look like.
+  <br style="clear:both" />
+</p>
+
+<p>On proxy:</p>
+<code class="indent">
+proxy$ sudo /sbin/service squid start
+</code>
+
+<p>
+  <img src="/images/wifi-security-firefox.png" class="fr" alt="[]" />
+  In your proxy settings on your browser, use localhost/13128 as your
+  proxy. 
+  Here's what it should look like in firefox/windows.
+  <br style="clear:both" />
+</p>
+
+<p>Everything should work now.  When you are done:</p>
+
+<code class="indent">
+proxy$ sudo /sbin/service squid stop
+proxy$ logout
+laptop$ 
+</code>
+<p>Don't forget to fix your browser settings when you are done.</p>
+
+
+<blockquote>
+<p class="rightside">
+(C) 2005 Hal W. Canary
+<br />
+hal at ups dot physics dot wisc dot edu
+<br />
+This document available under the 
+<a href="http://creativecommons.org/licenses/by-sa/2.0/">
+  Creative Commons Attribution-ShareAlike License</a>.</p>
+</blockquote>
+</div>
+<!--  LocalWords:  WiFi ISP hotspots WEP redhat sudo localhost
+ -->
+
+<div class="section"><p class="rightside">file modification time: 2005-04-20 02:50:08</p></div>

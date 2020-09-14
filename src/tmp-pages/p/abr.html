@@ -1,0 +1,289 @@
+<!-- p/abr -->
+
+<div class="section"> 
+<h2>Address Book Reader</h2>
+
+    <p>written in <a href="http://www.python.org">Python</a></p>
+
+    <p> Here's a nice little program (two programs, in fact; does that
+    make it a suite?)  that searches an address book and displays 
+    entries.  There are two halves to the program.  <code>read.script</code>
+    is meant for use on the command line.  <code>read.cgi</code> is for the 
+    web.  <code>read.cgi</code> used not-so-secure password protection.</p>
+
+    </div>
+
+<div class="section"> 
+<h2>The address Book</h2>
+
+    <p>Here's an example address book:</p>
+
+    <table class="code"><tbody><tr><td>
+<pre>
+NAME: 
+Alfred Boxwell
+email: aboxwell@aol.com
+
+NAME: 
+Cal Donaldson
+email: cdonaldson@donaldson.net
+web: http://www.donaldson.net/~cdonaldson/
+phone: 123-456-7890
+phone: 123-237-9478 (cell)
+snail: 1234 Main St. \\ Townshire, IN 12345
+photo: http://www.donaldson.net/~cdonaldson/photo_of_me.jpg
+</pre>
+    </td></tr></tbody></table>
+
+    <p> I kind of made up the format as I went along.  The important things
+    are:  (1) it is easy to edit with your favorite text editor.  (2)
+    it's flexible.  Note that not every entry has to have every field, 
+    and any entriy can have two (or more) of the same field filled.
+    Feel free to add new fields to the formatt, or even comments.</p>
+
+    </div>
+
+<div class="section"> 
+<h2> the script: read.script</h2>
+
+    <p>Here it is:</p>
+    <table class="code"><tbody><tr><td>
+<pre>
+#!/usr/bin/python 
+#
+# ``Address Book Reader''
+# by Hal Canary
+# August 2000
+#
+# Use: 
+# read.script 
+#	will prompt you for the search pattern.	
+# read.script Hal
+#	will search for "Hal"
+# read.script Hal Canary
+#	will search for "Hal Canary"
+# read.script Hal Winchester Canary 
+#	will search for "Hal Winchester"
+# read.script "Hal Winchester Canary" 
+#	will search for "Hal Winchester Canary"
+#	
+addressbooklocal = '/home/hal/address.book' #where is my book?
+import sys
+import readline
+
+#A function to compare two strings:
+def check_strs(big_string, little_string):
+	if len(little_string) > len(big_string):
+		return 0
+	i = 0
+	while i &lt;= (len(big_string) - len(little_string)) :
+		if big_string[i:i+len(little_string)] ==little_string :
+			return 1
+		i = i+1
+	return 0
+
+#Find out what we're searching for:
+if len(sys.argv) == 2:
+	name = sys.argv[1]
+elif len(sys.argv) >= 3:
+	name = sys.argv[1] + " " + sys.argv[2]
+else:
+	name = raw_input("Pleas enter a name: ")
+print "Searching for ``" + name + "''\n" 
+
+#Main search procedure:
+file = open(addressbooklocal, 'r')
+line = file.readline()	
+while line != '':
+	if line == 'NAME: \012':
+		line = file.readline()	
+		if check_strs(line, name):
+			while line != 'NAME: \012' and line != '': 
+				print line,
+				line =  file.readline()	
+	else:
+		line = file.readline()	
+file.close()</pre>
+    </td></tr></tbody></table>
+
+    <p>You should get output like this:</p>
+
+    <table class="code"><tbody><tr><td>
+<pre>
+[hal@ups ~]>read.script Alfred
+Searching for ``Alfred''
+
+Alfred Boxwell
+email: aboxwell@aol.com
+
+[hal@ups ~]>read.script Don
+Searching for ``Don''
+
+Cal Donaldson
+email: cdonaldson@donaldson.net
+web: http://www.donaldson.net/~cdonaldson/
+phone: 123-456-7890
+phone: 123-237-9478 (cell)
+snail: 1234 Main St. \\ Townshire, IN 12345
+photo: http://www.donaldson.net/~cdonaldson/photo_of_me.jpg
+
+[hal@ups ~]></pre>
+    </td></tr></tbody></table>
+
+    <p>Any Questions?</p>
+
+    </div>
+
+<div class="section"> 
+<h2>The CGI Script</h2>
+
+    <p>Here it is.  Note the password protection!</p>
+
+    <table class="code"><tbody><tr><td>
+<pre>
+#!/usr/bin/python
+password = 'BadPassword'
+addressbooklocal = '/home/hal/address.book'
+print "Content-type: text/html \n"
+print "&lt;!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0 Transitional//EN\">"
+print "&lt;HTML>\n&lt;HEAD>\n&lt;TITLE>Address Book&lt;/TITLE>\n&lt;/HEAD>\n"
+print "&lt;BODY bgcolor=\"#ffff80\" text=\"black\">\n&lt;blockquote>\n"
+print "&lt;h1>Address Book&lt;/h1>\n "
+
+import cgi
+def check_strs(big_string, little_string):
+	if len(little_string) > len(big_string):
+		return 0
+	i = 0
+	while i &lt;= (len(big_string) - len(little_string)) :
+		if big_string[i:i+len(little_string)] ==little_string :
+			return 1
+		i = i+1
+	return 0
+
+def formatEntry(string, isname):
+	if isname==1:
+		return "&lt;b>&lt;big>" + string[:-1] + "&lt;/big>&lt;/b>&lt;br>\n"
+	elif string[0:7] == 'email: ':
+		return '&lt;i>email:&lt;/i> &lt;a href="mailto:' + string[7:-1] + '">'+string[7:-1] + '&lt;/a>' + "&lt;br>\n"
+	elif string[0:5] == 'web: ':
+		return '&lt;i>web:&lt;/i> &lt;a href="' + string[5:-1] + '">'+string[5:-1] + '&lt;/a>' + "&lt;br>\n"
+	elif string[0:7] == 'phone: ':
+		return '&lt;i>phone:&lt;/i> ' + string[7:-1] + "&lt;br>\n"
+	elif string[0:7] == 'snail: ':
+		return '&lt;i>snail:&lt;/i> ' + string[7:-1] + "&lt;br>\n"
+	elif string[0:7] == 'photo: ':
+		return '&lt;img src="' + string[7:-1] + '">' + "&lt;br>\n"
+	#	return '&lt;i>photo: &lt;/i> &lt;a href="' + string[7:-1] + '">'+string[7:-1] + '&lt;/a>' + "&lt;br>\n"
+	elif string[0:5] == 'ICQ: ':
+		return '&lt;i>ICQ:&lt;/i> ' + string[7:-1] + "&lt;br>\n"
+	else:
+		return string[:-1] + "&lt;br>\n"
+
+form = cgi.FieldStorage()
+form_ok = 0
+if form.has_key("data") and form.has_key("passwd"):
+	if form["passwd"].value == password:
+		form_ok=1
+if not form_ok:
+	print "ERROR!"
+	name = "ERROR!"
+else:
+	name = form["data"].value
+print "&lt;h2>Searching for ``" + name + "''&lt;/h2>" , 
+print '&lt;hr width="300" align="left">' + "\n" 
+file = open(addressbooklocal, 'r')
+line = file.readline()	
+isname=0
+while line != '' and  form_ok:
+	if line == 'NAME: \012':
+		line = file.readline()	
+		if check_strs(line, name):
+			isname=1
+			while line != '\012' and line != '': 
+				print formatEntry(line, isname), 
+				isname=0
+				line =  file.readline()
+			print '&lt;hr width="300" align="left"> \012'
+	else:
+		line = file.readline()	
+print "\n&lt;h2>Another Search?&lt;/h2>"
+print '&lt;FORM METHOD=POST ACTION="/cgi-bin/hal/book/read.cgi">'
+print '&lt;p>Enter Name:'
+print '&lt;br>&lt;INPUT TYPE=TEXT NAME="data" SIZE=25 MAXLENGTH=80>'
+print '&lt;!--&lt;p>Enter Password:-->'
+print '&lt;br>&lt;INPUT TYPE=hidden NAME="passwd" SIZE=25 MAXLENGTH=80 value="' + password + '">'
+print '&lt;br>&lt;INPUT TYPE=SUBMIT VALUE="Sumbit">'
+print '&lt;/FORM>'
+print "\n&lt;/blockquote>\n&lt;/body>\n&lt;/html>"
+file.close()</pre>
+
+    </td></tr></tbody></table>
+
+    <p> Here's the web page that acceses this cgi-script:</p>
+
+    <table class="code"><tbody><tr><td>
+<pre>
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+&lt;html>
+&lt;head>
+&lt;title>Address Book&lt;/title>
+&lt;/head>
+
+&lt;body bgcolor="#ffff80" text="black">
+&lt;blockquote>
+&lt;h1>Address Book&lt;/h1>
+&lt;form method="post" action="/cgi-bin/read.cgi">
+&lt;p>Enter Name:
+&lt;br>&lt;input type="text" name="data" size="25" maxlength="80">
+&lt;p>Enter Password:
+&lt;br>&lt;input type="password" name="passwd" size="25" maxlength="80">
+&lt;br>&lt;input type="submit" value="Sumbit">
+&lt;/form>
+&lt;/blockquote>
+&lt;/body>
+&lt;/html>
+
+</pre>
+    </td></tr></tbody></table>
+
+<p>And here's some sample output:</p>
+
+    <table class="code"><tbody><tr><td>
+<pre>
+&lt;h1>Address Book&lt;/h1>
+
+&lt;h2>Searching for ``Cal''&lt;/h2> 
+
+&lt;hr width="300" align="left" />
+
+&lt;b>&lt;big>Cal Donaldson&lt;/big>&lt;/b>&lt;br />
+&lt;i>email:&lt;/i> &lt;a
+href="mailto:cdonaldson@donaldson.net">cdonaldson@donaldson.net&lt;/a>&lt;br />
+&lt;i>web:&lt;/i> &lt;a href="http://www.donaldson.net/~cdonaldson/">http://www.donaldson.net/~cdonaldson/&lt;/a>&lt;br />
+&lt;i>phone:&lt;/i> 123-456-7890&lt;br />
+&lt;i>phone:&lt;/i> 123-237-9478 (cell)&lt;br />
+
+&lt;i>snail:&lt;/i> 1234 Main St. \\ Townshire, IN 12345&lt;br />
+&lt;img src="http://www.donaldson.net/~cdonaldson/photo_of_me.jpg" alt="" />&lt;br />
+&lt;hr width="300" align="left" /> 
+
+&lt;h2>Another Search?&lt;/h2>
+&lt;form method="post" action="/cgi-bin/read.cgi">
+&lt;p>Enter Name:
+&lt;br/>
+&lt;input type="text" name="data" size="25" maxlength="80" />
+&lt;!--&lt;p>Enter Password:-->
+&lt;br />
+&lt;input type="hidden" name="passwd" size="25" 
+    maxlength="80" value="BadPassword" />
+&lt;br />
+&lt;input type="submit" value="Sumbit" />
+
+&lt;/p>
+&lt;/form>
+</pre>
+    </td></tr></tbody></table>
+<hr /></div>
+
+<div class="section"><p class="rightside">file modification time: 2003-07-16 05:18:49</p></div>

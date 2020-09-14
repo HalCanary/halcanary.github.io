@@ -1,0 +1,103 @@
+<!-- p/helloworld -->
+
+<div class="section">
+<h2>&ldquo;Hello World,&rdquo; in many languages.</h2>
+<p>I use this as a test for installing compilers on a a new machine</p>
+
+<h3>c</h3>
+
+<table class="code"><tr><th>
+hello.c</th></tr><tr><td><pre>
+/*DTPD*/
+#include &lt;stdio.h>
+#include &lt;stdlib.h>
+
+int main(void) {
+  printf("hello world\n");
+  return 0;
+}
+</pre></td></tr></table>
+
+<h3>c++</h3>
+
+<table class="code"><tr><th>
+hello.cpp</th></tr><tr><td><pre>
+/*DTPD*/
+#include &lt;iostream.h>
+
+int main(int argc,char *argv[]) {
+  cout &lt;&lt; "hello world\n";
+  return 0;
+}
+</pre></td></tr></table>
+
+<h3>java</h3>
+
+<table class="code"><tr><th>
+hello.java</th></tr><tr><td><pre>
+/*DTPD*/
+/**  
+ * Hello World
+ **/
+import java.io.PrintStream;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+public class hello 
+{
+    static PrintStream cout = System.out ;
+    static PrintStream cerr = System.err ;
+    static BufferedReader cin =
+        new BufferedReader(new InputStreamReader(System.in));
+    public static void main(String[] args) 
+    {
+        cout.print("hello world\n");
+    }
+}
+</pre></td></tr></table>
+
+<h3>perl</h3>
+
+<table class="code"><tr><th>
+hello.pl</th></tr><tr><td><pre>
+#!/cygdrive/d/perl/bin/perl
+## hello world test script.
+#DTPD#
+print "hello world \n";
+</pre></td></tr></table>
+
+<h3>python</h3>
+
+<table class="code"><tr><th>
+hello.py</th></tr><tr><td><pre>
+#!/usr/bin/python
+#DTPD#
+print "hello world"
+</pre></td></tr></table>
+
+<h3>scheme</h3>
+
+<table class="code"><tr><th>
+hello.scm</th></tr><tr><td><pre>
+":"; exec /bin/guile.exe -s $0 "$@" 
+":"; exec /cygdrive/d/scheme/MzScheme.exe -r $0 "$@" 
+;DTPD;
+;; hello world testing program
+(begin 
+  (display "hello world")
+  (newline))
+</pre></td></tr></table>
+
+<h3>shell script</h3>
+
+<table class="code"><tr><th>
+hello.sh</th></tr><tr><td><pre>
+#!/bin/bash
+## hello world test script.
+#DTPD#
+echo "hello world"
+</pre></td></tr></table>
+
+</div>
+
+<div class="section"><p class="rightside">file modification time: 2003-12-08 00:50:23</p></div>

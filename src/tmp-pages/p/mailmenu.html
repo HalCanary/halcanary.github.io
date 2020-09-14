@@ -1,0 +1,201 @@
+<!-- p/mailmenu -->
+
+<div class="section"> 
+<h2>CGI Email Reader</h2>
+
+<p>This is a cool little mailreader I wrote.</p>
+
+<table class="code">
+<tr><th>mailmenu.py</th></tr>
+<tr><td>
+<pre>
+#!/usr/bin/python
+
+# (c) 2001-2003 Hal Canary
+# Not only is this code badly written, 
+# it is probably horribly insecure, so I 
+# provide ABSOLUTELY NO WARRANTY.
+# License:
+# 	http://www.gnu.org/licenses/gpl.txt
+
+import cgi
+import os
+import string
+
+mypassword="badpassword"
+cgilocation="/cgi-bin/cgiwrap/hal/mailmenu.py"
+defaulfile="/var/spool/mail/hal"
+mailfolderslist="/home/hal/mail/.ls"
+style="/~hal/hal.css"
+icon="/~hal/favicon.ico"
+
+def header():
+	print "Content-type: text/html \n"
+	print '&lt;?xml version="1.0" encoding="US-ASCII"?&gt;'
+	print '&lt;!DOCTYPE html '
+	print '     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" '
+	print '     "DTD/xhtml1-transitional.dtd"&gt;'
+	print '&lt;html xmlns="http://www.w3.org/1999/xhtml" ',
+	print 'xml:lang="en" lang="en"&gt;'
+	print '  &lt;head&gt;'
+	print '    &lt;title&gt;CGI Mail&lt;/title&gt;'
+	print '    &lt;link rel="SHORTCUT ICON" href="'+icon+'" /&gt;'
+	print '    &lt;link rel="stylesheet" type="text/css" href="'+style+'" /&gt;'
+	print '  &lt;/head&gt;'
+	print '  &lt;body&gt;'
+	print '    &lt;div class="small-center"&gt;'
+	print '      &lt;p&gt;'
+	print '        &lt;a href="/"&gt;MAIN&lt;/a&gt; '
+	print '      &lt;/p&gt;'
+	print '    &lt;/div&gt;'
+	print "    &lt;h1&gt;Hal's Mail&lt;/h1&gt;"
+
+def tailer():
+	print "    &lt;hr /&gt;\n  &lt;/body&gt;\n&lt;/html&gt;"
+
+def login():
+	print '    &lt;form method="post" action="'+cgilocation+'"&gt;'
+	print '      &lt;p&gt;Check a mail folder on ups. &lt;br /&gt;'
+	print '        &lt;input type="hidden" name="N" value="0" /&gt;'
+	print '        &lt;input type="hidden" name="file"',
+	print ' value="'+defaulfile+'" /&gt;'
+	print '        &lt;b&gt;Password:&lt;/b&gt;'
+	print '        &lt;input type="password" name="passwd" size="25" /&gt;'
+	print '        &lt;input type="submit" value="Login" /&gt;'
+	print '      &lt;/p&gt;'
+	print '    &lt;/form&gt;'
+
+def getmenu():
+	filename=form["file"].value
+	passwd=form["passwd"].value
+	print '    &lt;form method="post" action="'+cgilocation+'"&gt;'
+	print '      &lt;p&gt;'
+	print '        &lt;input type="hidden" name="N" value="0" /&gt;'
+	print '      &lt;input type="hidden"  name="file" value="'+filename+'" /&gt;'
+	print '       &lt;input type="hidden" name="passwd" value="'+passwd+'" /&gt;'
+	print '        &lt;input type="submit" value="Folder Index" /&gt;'
+	print "      &lt;/p&gt;\n    &lt;/form&gt;\n"
+	print '    &lt;form method="post" action="'+cgilocation+'"&gt;'
+	print '      &lt;p&gt;'
+	print '        &lt;input type="hidden" name="N" value="0" /&gt;'
+	print '        &lt;input type="hidden"  name="file" value=" " /&gt;'
+	print '       &lt;input type="hidden" name="passwd" value="'+passwd+'" /&gt;'
+	print '        &lt;input type="submit" value="Choose Folder" /&gt;'
+	print "      &lt;/p&gt;\n    &lt;/form&gt;\n"
+
+def choosefolder():
+	filename=form["file"].value
+	passwd=form["passwd"].value
+	file=open(mailfolderslist,'r')
+	print '    &lt;form method="post" action="'+cgilocation+'"&gt;'
+	print "      &lt;p&gt;"
+	print '        &lt;input type="hidden" name="N" value="'+str(0)+'" /&gt;'
+	print '        &lt;input type="hidden" name="passwd"',
+	print ' value="'+form["passwd"].value+'" /&gt;'
+	print "        &lt;select name=\"file\"&gt;"
+	print "          &lt;option&gt;/var/spool/mail/hal&lt;/option&gt;"
+	line= file.readline()
+	while line != '' :
+		print "          &lt;option&gt;"+line[:-1]+"&lt;/option&gt;"
+	        line= file.readline()
+	print '        &lt;/select&gt;'
+	print '        &lt;input type="submit" value="Get Folder" /&gt;'
+	print "      &lt;/p&gt;\n    &lt;/form&gt;"
+	file.close()
+	print '    &lt;form method="post" action="'+cgilocation+'"&gt;'
+	print "      &lt;p&gt;"
+	print '        &lt;input type="hidden" name="N" value="0" /&gt;'
+	print '    &lt;input type="hidden"  name="file" value="'+defaulfile+'" /&gt;'
+	print '       &lt;input type="hidden" name="passwd" value="'+passwd+'" /&gt;'
+	print '        &lt;input type="submit" value="Default" /&gt;'
+	print "      &lt;/p&gt;\n    &lt;/form&gt;\n"
+
+def writemailn():
+	filename=form["file"].value
+	passwd=form["passwd"].value
+	messagenumber=int(form["N"].value)
+	file = open(filename, 'r')
+	N=0
+	line= file.readline()
+	print '&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;pre&gt;'
+	while line != '':
+		if line[0:5]=="From ":
+			N=N+1
+		if messagenumber == N:
+			print string.replace(line,"&lt;","&amp;lt;"),
+			#print line,
+		line= file.readline()
+	print '&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;'
+	file.close()
+
+def folderindex():
+	filename=form["file"].value
+	passwd=form["passwd"].value
+	file = open(filename, 'r')
+	formstate="closed"
+	N=0
+	line= file.readline()
+	while line != '':
+		if line[0:5]=="From " and N==0:
+			N=1
+		elif line[0:5]=="From ":
+			N=N+1
+			if formstate=="open" :
+				print "      &lt;/p&gt;\n    &lt;/form&gt;"
+				print "\n    &lt;hr /&gt;"
+			formstate = "open"
+			print ''
+			print '    &lt;form method="post" ',
+			print 'action="'+cgilocation+'"&gt;'
+			print '      &lt;!--',line[:-1],'--&gt;'
+			print "      &lt;p&gt;"
+			print '        &lt;input type="hidden" name="N"',
+			print ' value="' + str(N) + '" /&gt;'
+			print '        &lt;input type="hidden" name="file"',
+			print ' value="'+filename+'" /&gt;'
+			print '        &lt;input type="hidden" name="passwd"',
+			print ' value="'+passwd+'" /&gt;'
+			print '       &lt;input type="submit" value="Get Mail" /&gt;'
+		if line[0:44]=="Subject: DON'T DELETE THIS MESSAGE -- FOLDER":
+			print '',
+		elif line[0:31]=="From: Mail System Internal Data":
+			print '',
+		elif line[0:9]=="Subject: " or line[0:6]=="From: " :
+			print '        &lt;br /&gt;',string.replace(line,"&lt;","&amp;lt;"),
+		elif line[0:4]=="To: " or line[0:6]=="Date: " :
+			if formstate=="open" :
+				print '        &lt;br /&gt;',
+				print string.replace(line,"&lt;","&amp;lt;"),
+		line= file.readline()
+	file.close()
+	if formstate=="open" :
+		print "      &lt;/p&gt;\n    &lt;/form&gt; \n\n    &lt;hr /&gt;\n"
+	formstate = "closed"
+
+
+form = cgi.FieldStorage()
+
+header()
+
+if not (form.has_key("passwd") and form.has_key("file") and form.has_key("N")):
+	login()
+elif form["passwd"].value != mypassword :
+	print "&lt;p&gt;Wrong Passwd&lt;/p&gt;"
+	login()
+elif form["file"].value == ' ':
+	choosefolder()
+elif form["N"].value == "0" :
+	folderindex()	
+	getmenu()
+else:
+	writemailn()
+	print '    &lt;hr /&gt;'
+	getmenu()
+tailer()
+
+</pre>
+</td></tr></table>
+
+</div>
+
+<div class="section"><p class="rightside">file modification time: 2003-12-07 22:23:26</p></div>

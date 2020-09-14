@@ -1,0 +1,172 @@
+<!-- p/fc6-install-notes -->
+
+<div class="section">
+<h2>Fedora Core 6 Install Notes</h2>
+
+<p>This is mostly for my own reference.</p>
+
+<h3>Before I Install</h3>
+
+<p>Get current information from <code>df</code> and <code>fdisk -l</code> .</p>
+
+<pre>
+----------------------------------------------------------------------
+Disk /dev/hda: 203.9 GB, 203928109056 bytes
+255 heads, 63 sectors/track, 24792 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+   Device Boot      Start         End      Blocks   Id  System
+/dev/hda1   *           1        6374    51199123+   7  HPFS/NTFS
+/dev/hda2            6375       24792   147942585    c  W95 FAT32 LBA
+
+----------------------------------------------------------------------
+Disk /dev/hdb: 120.0 GB, 120060444672 bytes
+255 heads, 63 sectors/track, 14596 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+   Device Boot      Start         End      Blocks   Id  System
+/dev/hdb1   *           1          25      200781   83  Linux
+/dev/hdb2              26        1247     9815715   83  Linux
+/dev/hdb3            1248       14347   105225748   83  Linux
+/dev/hdb4           14348       14596     2000092   82  Linux swap
+
+----------------------------------------------------------------------
+</pre><pre>
+Filesystem 1M-blocks Mounted on
+------------------------------------
+/dev/hda1            NTFS partition
+/dev/hda2     144405 /d
+------------------------------------
+/dev/hdb1        190 /boot
+/dev/hdb2       9286 /
+/dev/hdb3     101147 /home
+/dev/hdb4            SWAP
+------------------------------------
+</pre>
+
+<p>Tar up /etc to grab specific config files later.</p>
+<pre>sudo tar czf /home/etc-$(date +%Y-%m-%d).tgz /etc</pre>
+
+
+<p>As before, hardlink the iso of the install disc[s] into /home.</p>
+
+<pre>cd /home/files/Downloads/Zod-dvd-i386/
+ln FC-6-i386-DVD.iso /home/</pre>
+
+<p>Then you can use </p>
+
+<pre>linux askmethod</pre>
+
+<p>to install from the HDD.  This tends to be faster than installing from CD and less error-prone.</p>
+
+<h3>Post-Install</h3>
+
+<p> Log in tty1 as root:</p>
+
+<p>Set up sudoers file</p>
+
+<pre>EDITOR=nano /usr/sbin/visudo
+	hal ALL=(ALL) ALL
+	hal ALL=(ALL) NOPASSWD: /usr/bin/cdrecord
+</pre>
+
+<p>Set up /home partition.</p>
+
+<pre>mv /home /old.home
+mkdir /home
+nano /etc/fstab
+	/dev/hdb3 /home ext3 defaults 1 2
+mount /home</pre>
+
+<p>Login X11 as normal</p>
+
+<p> Remove &quot;<code>quiet rhgb</code>&quot; from kernel options.</p>
+
+<pre>sudo nano /etc/grub.conf</pre>
+
+<p>Install packages.</p>
+
+<pre>sudo yum -y update
+
+sudo yum -y install gstreamer-ffmpeg gstreamer-plugins-ugly
+sudo yum -y install gconf-editor
+sudo yum -y install mplayer
+sudo yum -y install bittorrent bittorrent-gui
+sudo yum -y install alltray
+sudo yum -y install inkscape emacs
+sudo yum -y install fortune-mod fortune-firefly
+sudo yum -y install fonts-japanese fonts-chinese fonts-korean
+
+sudo yum -y install bash-completion id3lib id3v2</pre>
+
+<p>Install Macromedia Flash.</p>
+
+<pre>sudo wget -O /etc/yum.repos.d/macromedia-i386.repo &#0092;
+	http://macromedia.mplug.org/macromedia-i386.repo
+sudo mkdir -p /usr/X11R6/lib/X11/fs/
+sudo ln -s /etc/X11/fs/config /usr/X11R6/lib/X11/fs/config
+sudo yum -y install flash-plugin</pre>
+
+<p>Why do I need to do this?</p>
+
+<pre>sudo yum remove totem-mozplugin</pre>
+
+<p>Config things.</p>
+
+<pre>sudo system-config-printer
+sudo system-config-network
+sudo system-config-display
+sudo system-config-securitylevel
+	Add port tcp/59147</pre>
+
+<p>Remove unnecessary services</p>
+
+<pre>sudo /sbin/chkconfig autofs off
+sudo /sbin/chkconfig apmd off
+sudo /sbin/chkconfig bluetooth off
+sudo /sbin/chkconfig hidd off
+sudo /sbin/chkconfig cpuspeed off
+sudo /sbin/chkconfig firstboot off
+sudo /sbin/chkconfig gpm off
+sudo /sbin/chkconfig irqbalance off
+sudo /sbin/chkconfig isdn off
+sudo /sbin/chkconfig mdmonitor off
+sudo /sbin/chkconfig netfs off
+sudo /sbin/chkconfig nfslock off
+sudo /sbin/chkconfig pcscd off
+sudo /sbin/chkconfig portmap off
+sudo /sbin/chkconfig rpcgssd off
+sudo /sbin/chkconfig rpcidmapd off</pre>
+
+<p>Add guest account</p>
+
+<pre>sudo system-config-users</pre>
+
+<p>Modify SSH Daemon Configuration.</p>
+
+<pre>sudo /sbin/service sshd stop
+sudo nano /etc/ssh/sshd_config
+	PermitRootLogin no
+	DenyUsers guest
+	Banner /etc/issue.ssh</pre>
+
+<p>assume we kept a copy of /etc/ssh/ssh_host_* in a tarball
+somewhere.</p>
+<pre>sudo rename ssh_host OLD_ssh_host /etc/ssh/ssh_host_*
+sudo cp --preserve=mode,timestamps ssh_host_* /etc/ssh/</pre>
+
+<pre>cd /etc/ssh/
+su -c 'for x in ssh*.pub;do ssh-keygen -l -f $x &gt;&gt;/etc/issue.ssh;done'
+cd -</pre>
+
+<p>Edit <code>/etc/issue.ssh</code> to look nice. Add line:</p>
+<pre>===== Unauthorized Access Prohibited =====</pre>
+
+<p>Restart the daemon</p>
+<pre>sudo /sbin/service sshd start</pre>
+
+<p><img src="/images/fc6-screenshot-cube.jpg" alt="[]" /></p>
+
+</div>
+
+<div class="section"><p class="rightside">file modification time: 2006-10-31 19:16:23</p></div>

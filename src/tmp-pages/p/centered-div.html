@@ -1,0 +1,222 @@
+<!-- p/centered-div -->
+
+<div class="section">
+      <h2>The Centered &lt;div&gt; Issue</h2>
+
+<p>The goal is to put text inside a box of a fixed width that is centered in the middle of the web page.  Right now, I use such a layout on <a href="/vv/">https://halcanary.org/vv/</a> .</p>
+
+<p>I had a problem doing this with non-deprecated HTML. This is how I solved that problem.</p>
+
+<hr />
+
+<p>This is a common enough way to layout
+  text on a web page.  The HTML 3 way of doing things: &lt;table&gt;s
+  and &lt;center&gt;s:</p>
+
+<pre>
+&lt;!DOCTYPE HTML PUBLIC
+	&quot;-//W3C//DTD HTML 3.2 Final//EN&quot;&gt;
+&lt;HTML&gt;&lt;HEAD&gt;&lt;TITLE&gt;&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;
+&lt;center&gt;
+&lt;table width=&quot;300px&quot; BORDER=&quot;1&quot; CELLSPACING=&quot;0&quot;&gt;
+&lt;tr&gt;&lt;td&gt;
+&lt;p&gt;
+TEST
+&lt;/p&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/center&gt;
+&lt;/BODY&gt;&lt;/HTML&gt;
+</pre>
+<p><img src="/images/centered-div-1.png" alt="[browser rendering]" /></p>
+
+<p>Let's replace that &lt;table&gt; with a
+  &lt;div&gt;.  &lt;table&gt;s should not be used for layout.  Notice
+  I have to use a &quot;text-align:left:&quot; to undo the
+  &lt;center&gt;.  This seems like a kludge.</p>
+
+<pre>
+&lt;!DOCTYPE HTML PUBLIC
+	&quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;
+        &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;
+&lt;HTML&gt;&lt;HEAD&gt;&lt;TITLE&gt;&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;
+&lt;center&gt;
+&lt;div style=&quot;border:1px solid; width:300px; text-align:left&quot;&gt;
+&lt;p&gt;
+TEST
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/center&gt;
+&lt;/BODY&gt;&lt;/HTML&gt;
+</pre>
+<p><img src="/images/centered-div-2.png" alt="[browser rendering]" /></p>
+
+<p>&lt;center&gt; is 
+  <a href="http://www.w3.org/TR/REC-html40/present/graphics.html#edef-CENTER">
+    deprecated</a>, so we can replace it with &lt;div
+  align=&quot;center&quot;&gt;</p> 
+
+<pre>
+&lt;!DOCTYPE HTML PUBLIC
+	&quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;
+        &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;
+&lt;HTML&gt;&lt;HEAD&gt;&lt;TITLE&gt;&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;
+&lt;div align=&quot;center&quot;&gt;
+&lt;div style=&quot;border:1px solid; width:300px; text-align:left&quot;&gt;
+&lt;p&gt;
+TEST
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/BODY&gt;&lt;/HTML&gt;
+</pre>
+<p><img src="/images/centered-div-3.png" alt="[browser rendering]" /></p>
+
+<p>But &lt;div align=&quot;???&quot;&gt; is
+  also 
+  <a href="http://www.w3.org/TR/REC-html40/present/graphics.html#h-15.1.2">
+    deprecated</a>, so lets use &lt;div
+  style=&quot;text-align:center&quot;&gt;</p>  
+
+<pre>
+&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01//EN&quot;
+   &quot;http://www.w3.org/TR/html4/strict.dtd&quot;&gt;
+&lt;HTML&gt;&lt;HEAD&gt;&lt;TITLE&gt;&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;
+&lt;div style=&quot;text-align:center&quot;&gt;
+&lt;div style=&quot;border:1px solid; width:300px; text-align:left&quot;&gt;
+&lt;p&gt;
+TEST
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/BODY&gt;&lt;/HTML&gt;
+</pre>
+<p><img src="/images/centered-div-4.png" alt="[browser rendering]" /></p>
+
+
+<p>But that <strong>doesn't work</strong>!  It no longer centers the &lt;div&gt;.  It looks like the text-align:center and the text-align:left are cancelling out.</p>
+
+<hr />
+<p><strong>Here's the solution:</strong></p>
+
+<pre>
+&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01//EN&quot;
+   &quot;http://www.w3.org/TR/html4/strict.dtd&quot;&gt;
+&lt;HTML&gt;&lt;HEAD&gt;&lt;TITLE&gt;&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;
+&lt;div style=&quot;margin:auto; border:1px solid; width:300px&quot;&gt;
+&lt;p&gt;
+TEST
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/BODY&gt;&lt;/HTML&gt;
+</pre>
+<p><img src="/images/centered-div-5.png" alt="[browser rendering]" /></p>
+
+<p>This is correct CSS and it reneders properly in Mozilla Firefox.</p>
+
+<hr />
+
+<p>Now let's try converting that file into a XHTML file.</p>
+
+<pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;!DOCTYPE html
+        PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot;
+        &quot;http://www.w3.org/TR/xhtml1/DTD/strict.dtd&quot;&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;
+        xml:lang=&quot;en&quot; lang=&quot;en&quot;&gt;
+&lt;head&gt;&lt;title&gt;&lt;/title&gt;&lt;/head&gt;&lt;body&gt;
+&lt;div style=&quot;width:300px; margin:auto; border:1px solid&quot;&gt;
+&lt;p&gt;
+TEST
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/body&gt;&lt;/html&gt;
+</pre>
+
+<p>Here is how it renders in IE6.</p>
+
+<p><img src="/images/centered-div-7-ie.png" alt="[browser rendering]" /></p>
+
+<p>Why does IE6 render Strict XHTML 1.0 differently from the equivilent Strict HTML 4.01?
+
+<p>Try this:</p>
+
+<pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;!DOCTYPE html
+        PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot;
+        &quot;http://www.w3.org/TR/xhtml1/DTD/strict.dtd&quot;&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;
+        xml:lang=&quot;en&quot; lang=&quot;en&quot;&gt;
+&lt;head&gt;&lt;title&gt;&lt;/title&gt;&lt;/head&gt;&lt;body&gt;
+&lt;div style=&quot;text-align:center;&quot;&gt;
+&lt;div style=&quot;width:300px; margin:auto;border:1px solid;
+        text-align:left;&quot;&gt;
+&lt;p&gt;
+TEST
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/body&gt;&lt;/html&gt;
+</pre>
+<p><img src="/images/centered-div-8-ie.png" alt="[browser rendering]" /></p>
+
+<p>That's a bit of a kludge, but it's valid html+css and it displays the same in IE6 and Mozilla.</p>
+
+<hr />
+<p>This is how I go about doing the css for this page:</p>
+
+<pre>
+/* the CSS file */
+body {
+	text-align: center;
+}
+div.column {
+	margin-left: auto;
+	margin-right: auto;
+	width: 640px;
+	text-align: left;
+}
+</pre>
+<p>and</p>
+<pre>
+&lt;!-- the HTML File --&gt;
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;!DOCTYPE html
+	PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot;
+	&quot;http://www.w3.org/TR/xhtml1/DTD/strict.dtd&quot;&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;
+	xml:lang=&quot;en&quot; lang=&quot;en&quot;&gt;
+ &lt;head&gt;
+    &lt;title&gt;&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot;
+	href=&quot;stylesheet.css&quot; /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class=&quot;column&quot;&gt;
+      CONTENT
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+    <div class="subsection">
+      <h3>Advanced Topics</h3>
+      <p>Using the max-width property from CSS2.  <a href="http://www.svendtofte.com/code/max_width_in_ie/">This is a good description of the problem and a solution</a>.</p>
+<pre>
+/* the CSS file */
+body {
+	text-align: center;
+}
+div.column {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 640px;
+	width:expression(640 + "px");
+	text-align: left;
+}
+</pre>
+
+    </div><!-- end div subsection -->
+      </div><!-- end div section -->
+
+<div class="section"><p class="rightside">file modification time: 2006-09-18 14:08:26</p></div>

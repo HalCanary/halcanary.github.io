@@ -1,0 +1,183 @@
+<!-- p/formmail -->
+
+<div class="section"> 
+<h2>A CGI program for processing HTML Forms</h2>
+
+<p>You'll want to change the $to, $from, $subject, and $redirect
+variables.</p> 
+
+<p>By the way, you can use this code in accordance with the 
+GNU GPL license.</p>
+
+<pre>
+#!/usr/bin/perl 
+
+## formmail
+##   CGI mailer.
+##
+## Version 1.0
+##
+## (c) 2002-2004 Hal Canary
+##   Concepts based on other cgi programs.
+##
+## License:
+##   This is free software, see
+##   http://www.gnu.org/licenses/gpl.txt
+##   This product is distributed
+##   WITHOUT ANY WARRANTY of any kind.
+
+use strict;
+use CGI;
+require Mail::Send;
+
+my $to       = 'Hal Canary &lt;insert@address.here&gt;';
+my $from     = 'formmail.cgi &lt;insert@address.here&gt;';
+my $subject  = 'WOHC Web Form';
+my $redirect = 'https://halcanary.org/';
+
+$ENV{PATH} = &quot;/bin:/usr/bin&quot;;
+$CGI::DISABLE_UPLOADS = 1;
+$CGI::POST_MAX=1024 * 100; 
+my $cgi = CGI-&gt;new();
+my $msg = new Mail::Send;
+$msg-&gt;to($to);
+$msg-&gt;subject($subject);
+$msg-&gt;add(&quot;From&quot;, $from);
+my $fh = $msg-&gt;open;
+foreach ($cgi-&gt;param) {
+    my $p = $_;
+    print $fh ($p.&quot; = &quot;.$cgi-&gt;param($p).&quot;\n\n&quot;); 
+}
+$fh-&gt;close;
+print &quot;Location: $redirect\n\n&quot;;
+</pre>
+
+<p>How to use it:</p>
+
+<pre>
+&lt;!-- form.html --&gt;
+
+&lt;form method=&quot;post&quot; action=&quot;/formmail.cgi&quot;&gt;
+
+&lt;p&gt;
+  What's your name?  
+  &lt;br /&gt;
+  &lt;input size=&quot;20&quot; value=&quot;&quot;
+  name=&quot;My_name_is&quot; type=&quot;text&quot;&gt;
+&lt;/p&gt;
+
+&lt;p&gt; 
+  Favorite Color?
+  &lt;br/&gt;
+  &lt;input value=&quot;yellow&quot; name=&quot;fav_color_is&quot;
+  type=&quot;radio&quot;&gt;yellow
+  &lt;br/&gt;
+  &lt;input value=&quot;red&quot; name=&quot;fav_color_is&quot;
+  type=&quot;radio&quot;&gt;blue
+  &lt;br/&gt;
+  &lt;input value=&quot;blue&quot; name=&quot;fav_color_is&quot;
+  type=&quot;radio&quot;&gt;blue
+&lt;/p&gt;
+
+&lt;p&gt;
+  Where do you live?
+  &lt;br /&gt;
+  &lt;input size=&quot;20&quot; value=&quot;&quot;
+  name=&quot;I_am_from&quot; type=&quot;text&quot;&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+  Do you want to say anything else?  
+  &lt;br /&gt;
+  &lt;textarea name=&quot;comments&quot; cols=&quot;50&quot;
+  rows=&quot;5&quot;&gt;&lt;/textarea&gt;
+&lt;/p&gt;
+
+&lt;p&gt;&lt;input value=&quot;SUBMIT&quot;
+type=&quot;submit&quot;&gt;&lt;/p&gt;
+
+&lt;/form&gt;
+</pre>
+
+<p><strong>Version 2:</strong></p>
+<pre>
+#!/usr/bin/perl 
+
+## formmail
+##   CGI mailer.
+##
+## Version 2.0
+##
+## (c) 2002-2006 Hal Canary
+##   Concepts based on other cgi programs.
+##
+## License:
+##   This is free software, see
+##   http://www.gnu.org/licenses/gpl.txt
+##   This product is distributed
+##   WITHOUT ANY WARRANTY of any kind.
+
+use strict;
+use CGI;
+require Mail::Send;
+
+## Modify these variables for your setup:
+
+my $to       = 'Name &lt;address@example.com&gt;';
+my $from     = 'Formmail &lt;noreply@example.com&gt;';
+my $subject  = 'example.com web form';
+my $redirect = 'http://example.com/';
+
+## Use the cgi stuff.
+
+$ENV{PATH} = &quot;/bin:/usr/bin&quot;;
+$CGI::DISABLE_UPLOADS = 1;
+$CGI::POST_MAX = 1024 * 100; 
+my $cgi = CGI-&gt;new();
+
+## Varify that you really came from a html form.
+
+if (!$cgi-&gt;param()) {
+  if ($cgi-&gt;referer()) {
+    print &quot;Location: &quot;.$cgi-&gt;referer().&quot;\n\n&quot;;
+  } else {
+    print &quot;Location: &quot;.$redirect.&quot;\n\n&quot;;
+  }
+  exit 0;
+}
+
+## Mail the information.
+
+my $msg = new Mail::Send;
+$msg-&gt;to($to);
+$msg-&gt;subject($subject);
+$msg-&gt;add(&quot;From&quot;, $from);
+my $fh = $msg-&gt;open;
+print $fh &quot;remote_host = &quot;.$cgi-&gt;remote_host().&quot;\n&quot;;
+print $fh &quot;referer = &quot;.$cgi-&gt;referer().&quot;\n\n&quot;;
+foreach my $p ($cgi-&gt;param) {
+  print $fh ($p.&quot; = &quot;.$cgi-&gt;param($p).&quot;\n\n&quot;); 
+}
+$fh-&gt;close;
+
+## Thank the user.
+
+print &quot;Content-type: text/html\n\n&quot;;
+print '&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01//EN&quot;
+&quot;http://www.w3.org/TR/html4/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;title&gt;&lt;/title&gt;&lt;/head&gt;&lt;body&gt;
+&lt;div&gt;Thank you for your submission.&lt;blockquote&gt;&lt;div&gt;';
+print &quot;remote_host = &quot;.$cgi-&gt;remote_host().&quot;&lt;br /&gt;&quot;;
+print &quot;referer = &quot;.$cgi-&gt;referer().&quot;&lt;br /&gt;&quot;;
+foreach my $p ($cgi-&gt;param) {
+  print ($p.&quot; = &quot;.$cgi-&gt;param($p).&quot;&lt;br /&gt;&quot;); 
+}
+print '&lt;/div&gt;&lt;/blockquote&gt;';
+print '&lt;a href=&quot;'.$redirect.'&quot;&gt;back&lt;/a&gt;';
+print '&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;';
+
+## That is all.
+</pre>
+</div>
+
+<div class="section"><p class="rightside">file modification time: 2006-09-16 03:19:45</p></div>
