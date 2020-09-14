@@ -5,7 +5,13 @@ import os
 import sys
 import html
 
-TEMPLATE = '''<!doctype html>
+def get_files(directory):
+    for subdir, _, filenames in os.walk(directory):
+        for filename in filenames:
+            yield os.path.join(subdir, filename)
+
+def main():
+    TEMPLATE = '''<!doctype html>
 <html lang="en">
 <meta charset="UTF-8">
 <meta http-equiv="refresh" content="0; url={0}">
@@ -14,14 +20,13 @@ TEMPLATE = '''<!doctype html>
 <body><a style="overflow-wrap:break-word" href="{1}">{1}</a></body>
 </html>
 '''
-
-ROOT = 'https://halcanary.org/'
-
-BASE_DIR = os.path.dirname(__file__) + '/../'
-
-with open('src/redirects.txt', 'r') as f:
-    for line in f:
-        key, value = line.split()
+    ROOT = 'https://halcanary.org/'
+    BASE_DIR = os.path.dirname(__file__) + '/../'
+    REDIRECTS_DIR = BASE_DIR + 'src/redirects'
+    for redirects_file in get_files(REDIRECTS_DIR):
+        key = os.path.relpath(redirects_file, REDIRECTS_DIR)
+        with open(redirects_file) as f:
+            value = f.read().strip()
         path = os.path.normpath(BASE_DIR + key)
         if not os.path.exists(path):
             os.makedirs(path)
@@ -30,3 +35,6 @@ with open('src/redirects.txt', 'r') as f:
         with open(path + '/index.html', 'w') as o:
             o.write(TEMPLATE.format(value, short))
         sys.stdout.write(key + '\n')
+
+if __name__ == '__main__':
+    main()
