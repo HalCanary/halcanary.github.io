@@ -26,25 +26,36 @@ def read_file(filepath, binary=False):
         return f.read()
 
 page_template = """<!doctype html>
-<html><head>
-<meta charset="UTF-8">
-<title>World of Hal Canary</title>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Copyright 1997-2020 Hal Canary. ALL RIGHTS RESERVED. -->
+<title>{title}</title>
+<link rel="icon" href="data:image/png;base64,{icon}">
 <link rel="stylesheet" type="text/css" href="/styles/scrapple-from-the-apple.css">
-<link rel="icon" type="image/x-icon" href="/favicon.ico">
-<meta name="viewport" content="width=532">
-<script>
-function search_hco() {{
-  document.getElementById("search-link-halcanary-org").style.display = "none";
-  document.getElementById("search-halcanary-org").style.display = "block";
-  return false;
-}}
-</script>
 </head>
-<body><div class="column" style="width:512px;">
-<h1><a href="/" class="hiddenlink"><img src="/images/Hal_W_Canary_3_hand.jpg" alt="Hal W Canary, III" width="400" height="91" style="border:0px"></a></h1>
-<div class="section">
-<nav><p><a href="/">Home</a></p></nav>
-</div>
+<style>
+@media screen {{ body{{
+    max-width: 35em;
+    margin: 22px auto 64px auto;
+    padding: 0 8px;
+}} }}
+body {{
+    color: #000000;
+    background-color: #ffffff;
+    background-image: none;
+    text-align: initial;
+}}
+</style>
+
+<body>
+
+<h1><a href="/" class="hiddenlink">
+{svg}
+</a></h1>
+
+<nav class="section"><p><a href="/">Home</a></p></nav>
 
 {content}
 
@@ -53,7 +64,7 @@ function search_hco() {{
 <i>mailto: halcanary at gmail dot com</i><br>
 <a href="https://halcanary.org"><i>http://halcanary.org</i></a></p>
 </div>
-</div>
+
 </body>
 </html>
 """
@@ -77,7 +88,10 @@ def main():
         assert os.path.exists(src)
         content = read_file(root + src).strip()
         write_file(root + dst + '/index.html', page_template.format(
-            content=content))
+            content=content,
+            title='World of Hal Canary',
+            svg=svg,
+            icon=icon))
 
 if __name__ == '__main__':
     main()
