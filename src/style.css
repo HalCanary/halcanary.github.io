@@ -92,7 +92,8 @@ table.border tr td, table.border tr th {
 }
 .tophead {
     text-align: center;
-    margin: 1ex 0 0 0;
+    margin: 1ex auto 0 auto;
+    max-width: 35em;
 }
 .tightmargins li > ul > li {
     list-style-type: square;
