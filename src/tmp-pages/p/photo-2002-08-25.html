@@ -43,7 +43,8 @@
     Useful scripts that helped me make this little page:
   </p>
 
-  <table class="code"><tr><th>thumb.sh</th></tr><tr><td>
+  <div class="code">
+<div class="codeheader">thumb.sh</div>
 <pre>
 #!/bin/sh
 
@@ -54,15 +55,14 @@ fi
 convert -size 120x120 $1 -resize 120x120 +profile "*" $2
 echo  "&lt;p>&lt;a href=\"$1\" >&lt;img alt=\"\" src=\"$2\" />&lt;/a>&lt;/p>"
 </pre>
-</td></tr>
-</table>
+</div>
 
 <p>Run this command:</p>
 
-<table class="code"><tr><td><pre>
+<pre>
 $ mkdir thumb
 $ for x in *.jpg ; do thumb.sh $x thumb/$x ; done
-</pre></td></tr></table>
+</pre>
 
 <p>
 And take the output and paste it into a html document.

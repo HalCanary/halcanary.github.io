@@ -34,7 +34,6 @@ page_template = """<!doctype html>
 <title>{title}</title>
 <link rel="icon" href="data:image/png;base64,{icon}">
 <link rel="stylesheet" type="text/css" href="/styles/scrapple-from-the-apple.css">
-</head>
 <style>
 @media screen {{ body{{
     max-width: 35em;
@@ -48,6 +47,7 @@ body {{
     text-align: initial;
 }}
 </style>
+</head>
 
 <body>
 

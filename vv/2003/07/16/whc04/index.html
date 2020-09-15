@@ -16,6 +16,10 @@ max-width:35em;
 margin:22px auto 64px auto;
 padding:0 8px;
 }}
+@page {
+size:auto;
+margin:0.25in 0.5in 0.5in 0.5in;
+}
 hr.black{
 border:0;
 height:1px;
@@ -98,6 +102,28 @@ padding:3px 8px;
 text-align:center;
 margin:1ex 0 0 0;
 }
+.tightmargins li > ul > li {
+list-style-type:square;
+}
+.tightmargins h1, .tightmargins h2, .tightmargins p, .tightmargins ul {
+margin:1ex 0;
+}
+.tightmargins li > ul {
+margin:0 0 0.5ex 0;
+}
+.tightmargins ul {
+padding-left:30px;
+}
+.tightmargins li {
+margin:0 0 0.5ex 0;
+}
+.nolink a:link, .nolink a:visited {
+color:inherit;
+text-decoration:none;
+}
+.nolink a:link:active, .nolink a:visited:active, .nolink a:link:hover, .nolink a:visited:hover {
+text-decoration:underline;
+}
 </style>
 </head>
 <!-- Copyright 2003-2020 Hal Canary. ALL RIGHTS RESERVED. -->
@@ -128,7 +154,7 @@ Before you start, glance through the gphoto2 man page.
 First of all, check the version of gphoto2
 </p>
 
-<table class="code"><tr><td><pre>
+<pre>
 $ /usr/bin/gphoto2 -v
 gPhoto (v2.0) - Cross-platform digital camera library.
 Copyright (C) 2000,2001 Scott Fritzinger and others
@@ -147,16 +173,16 @@ gphoto2 as follows:
     env LANG=C gphoto2 --debug -L
 
 Please make sure there is sufficient quoting around the arguments.
-</pre></td></tr></table>
+</pre>
 
 <p>
 Version 2.0 does not support the A40, so you'll have to try a command
 line that looks like this:
 </p>
 
-<table class="code"><tr><td><pre>
+<pre>
 $ gphoto2 --usbid 0x04a9:0x3058=0x04a9:0x304e -L
-</pre></td></tr></table>
+</pre>
 
 <p>
 But a better solution would be to download version 2.1 from
@@ -169,7 +195,7 @@ build from the source.
 Now, su to root, and try
 </p>
 
-<table class="code"><tr><td><pre>
+<pre>
 $ gphoto2 -v
 gPhoto (v2.1.0) - Cross-platform digital camera library.
 Copyright (C) 2000-2002 Scott Fritzinger and others
@@ -183,7 +209,7 @@ There are 2 files in folder '/DCIM/100CANON':
 #1     IMG_0020.JPG               rd   458 KB image/jpeg
 #2     IMG_0021.JPG               rd   429 KB image/jpeg
 There are no files in folder '/DCIM/CANONMSC'.
-</pre></td></tr></table>
+</pre>
 
 <h3>Permissions</h3>
 

@@ -7,7 +7,6 @@
 <title>World of Hal Canary</title>
 <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==">
 <link rel="stylesheet" type="text/css" href="/styles/scrapple-from-the-apple.css">
-</head>
 <style>
 @media screen { body{
     max-width: 35em;
@@ -21,6 +20,7 @@ body {
     text-align: initial;
 }
 </style>
+</head>
 
 <body>
 
@@ -100,7 +100,7 @@ Before you start, glance through the gphoto2 man page.
 First of all, check the version of gphoto2
 </p>
 
-<table class="code"><tr><td><pre>
+<pre>
 $ /usr/bin/gphoto2 -v
 gPhoto (v2.0) - Cross-platform digital camera library.
 Copyright (C) 2000,2001 Scott Fritzinger and others
@@ -119,16 +119,16 @@ gphoto2 as follows:
     env LANG=C gphoto2 --debug -L
 
 Please make sure there is sufficient quoting around the arguments.
-</pre></td></tr></table>
+</pre>
 
 <p>
 Version 2.0 does not support the A40, so you'll have to try a command
 line that looks like this:
 </p>
 
-<table class="code"><tr><td><pre>
+<pre>
 $ gphoto2 --usbid 0x04a9:0x3058=0x04a9:0x304e -L
-</pre></td></tr></table>
+</pre>
 
 <p>
 But a better solution would be to download version 2.1 from 
@@ -141,7 +141,7 @@ build from the source.
 Now, su to root, and try 
 </p>
 
-<table class="code"><tr><td><pre>
+<pre>
 $ gphoto2 -v
 gPhoto (v2.1.0) - Cross-platform digital camera library.
 Copyright (C) 2000-2002 Scott Fritzinger and others
@@ -155,7 +155,7 @@ There are 2 files in folder '/DCIM/100CANON':
 #1     IMG_0020.JPG               rd   458 KB image/jpeg
 #2     IMG_0021.JPG               rd   429 KB image/jpeg
 There are no files in folder '/DCIM/CANONMSC'.
-</pre></td></tr></table>
+</pre>
 
 <h3>Permissions</h3>
 

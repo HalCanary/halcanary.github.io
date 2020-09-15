@@ -32,25 +32,27 @@
     date</a>, and rotate if necessary.  
   </p>
   
-  <table class="code"><tr><th>$HOME/bin/rotate-counter</th></tr>
-    <tr><td><pre>#!/bin/sh
+  <div class="code">
+<div class="codeheader">$HOME/bin/rotate-counter</div>
+<pre>#!/bin/sh
 for x in "$@"; do 
     convert -rotate -90 $x tmp.jpg
     mv $x unrotated_$x
     mv tmp.jpg $x
 done</pre>
-  </td></tr></table>
+</div>
 
   <p>and</p>
 
-  <table class="code"><tr><th>$HOME/bin/rotate-clock</th></tr>
-    <tr><td><pre>#!/bin/sh
+  <div class="code">
+<div class="codeheader">$HOME/bin/rotate-clock</div>
+<pre>#!/bin/sh
 for x in "$@"; do 
     convert -rotate 90 $x tmp.jpg
     mv $x unrotated_$x
     mv tmp.jpg $x
 done</pre>
-  </td></tr></table>
+</div>
 
   <p>Then I copy the files into a working directory and make whatever
     changes I want to make before publishing to the web.  Many photos
@@ -64,8 +66,9 @@ done</pre>
       Gimp</a>.  If no cropping is necessary, I'll just let imagemagick
       to do the work:</p>
 
-  <table class="code"><tr><th>$HOME/bin/resize-1024</th></tr>
-    <tr><td><pre>#!/bin/sh
+  <div class="code">
+<div class="codeheader">$HOME/bin/resize-1024</div>
+<pre>#!/bin/sh
 SIZE="1024x1024"
 for x in "$@"; do 
     convert -size $SIZE $x \
@@ -73,14 +76,15 @@ for x in "$@"; do
     mv $x fullsize_$x
     mv tmp.jpg $x
 done</pre>
-  </td></tr></table>
+</div>
 
 
   <p>Next, I make a thumbnail.  Again, imagemagick's convert is your
     friend:</p>
 
-  <table class="code"><tr><th>$HOME/bin/thumb</th></tr>
-    <tr><td><pre>#!/bin/sh
+  <div class="code">
+<div class="codeheader">$HOME/bin/thumb</div>
+<pre>#!/bin/sh
 if [ &quot;$#&quot; -lt 1 ]; then
     echo &quot;Usage: thumb sourcefile[s]&quot;;
     exit 1
@@ -98,7 +102,7 @@ for file in &quot;$@&quot; ; do
     echo &quot;  &lt;/a&gt;&quot;
     echo &quot;&lt;/p&gt;&quot;
 done</pre>
-  </td></tr></table>
+</div>
 
   <p>If I want to print a photo to hang on the wall, I'll go back to
     the original image and crop out a 8:10 (1200x1500) portion.  Once

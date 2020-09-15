@@ -7,7 +7,6 @@
 <title>World of Hal Canary</title>
 <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==">
 <link rel="stylesheet" type="text/css" href="/styles/scrapple-from-the-apple.css">
-</head>
 <style>
 @media screen { body{
     max-width: 35em;
@@ -21,6 +20,7 @@ body {
     text-align: initial;
 }
 </style>
+</head>
 
 <body>
 
@@ -100,8 +100,7 @@ C 325 43 324 42 322 43 C 319 45 322 52 323 54 C 324 58 327 59 328 63 C 329 67
 
     <p>Here's an example address book:</p>
 
-    <table class="code"><tbody><tr><td>
-<pre>
+    <pre>
 NAME: 
 Alfred Boxwell
 email: aboxwell@aol.com
@@ -115,7 +114,6 @@ phone: 123-237-9478 (cell)
 snail: 1234 Main St. \\ Townshire, IN 12345
 photo: http://www.donaldson.net/~cdonaldson/photo_of_me.jpg
 </pre>
-    </td></tr></tbody></table>
 
     <p> I kind of made up the format as I went along.  The important things
     are:  (1) it is easy to edit with your favorite text editor.  (2)
@@ -129,8 +127,7 @@ photo: http://www.donaldson.net/~cdonaldson/photo_of_me.jpg
 <h2> the script: read.script</h2>
 
     <p>Here it is:</p>
-    <table class="code"><tbody><tr><td>
-<pre>
+    <pre>
 #!/usr/bin/python 
 #
 # ``Address Book Reader''
@@ -186,12 +183,10 @@ while line != '':
 	else:
 		line = file.readline()	
 file.close()</pre>
-    </td></tr></tbody></table>
 
     <p>You should get output like this:</p>
 
-    <table class="code"><tbody><tr><td>
-<pre>
+    <pre>
 [hal@ups ~]>read.script Alfred
 Searching for ``Alfred''
 
@@ -210,7 +205,6 @@ snail: 1234 Main St. \\ Townshire, IN 12345
 photo: http://www.donaldson.net/~cdonaldson/photo_of_me.jpg
 
 [hal@ups ~]></pre>
-    </td></tr></tbody></table>
 
     <p>Any Questions?</p>
 
@@ -221,8 +215,7 @@ photo: http://www.donaldson.net/~cdonaldson/photo_of_me.jpg
 
     <p>Here it is.  Note the password protection!</p>
 
-    <table class="code"><tbody><tr><td>
-<pre>
+    <pre>
 #!/usr/bin/python
 password = 'BadPassword'
 addressbooklocal = '/home/hal/address.book'
@@ -300,12 +293,9 @@ print '&lt;/FORM>'
 print "\n&lt;/blockquote>\n&lt;/body>\n&lt;/html>"
 file.close()</pre>
 
-    </td></tr></tbody></table>
-
     <p> Here's the web page that acceses this cgi-script:</p>
 
-    <table class="code"><tbody><tr><td>
-<pre>
+    <pre>
 &lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 &lt;html>
 &lt;head>
@@ -327,12 +317,10 @@ file.close()</pre>
 &lt;/html>
 
 </pre>
-    </td></tr></tbody></table>
 
 <p>And here's some sample output:</p>
 
-    <table class="code"><tbody><tr><td>
-<pre>
+    <pre>
 &lt;h1>Address Book&lt;/h1>
 
 &lt;h2>Searching for ``Cal''&lt;/h2> 
@@ -365,7 +353,6 @@ href="mailto:cdonaldson@donaldson.net">cdonaldson@donaldson.net&lt;/a>&lt;br />
 &lt;/p>
 &lt;/form>
 </pre>
-    </td></tr></tbody></table>
 <hr /></div>
 
 <div class="section"><p class="rightside">file modification time: 2003-07-16 05:18:49</p></div>
