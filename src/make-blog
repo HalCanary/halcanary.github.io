@@ -66,22 +66,29 @@ def hashpath(path):
             h.update(data)
             data = f.read(h.block_size)
     return h.digest()
+
 def mkdirs(path):
     try:
         os.makedirs(path)
     except:
         pass
+
 class UpdatingFile(object):
     def __init__(self, path):
-        self.tempfilepath = None
+        mkdirs(os.path.dirname(path))
         self.path = path
-        self.o = None
-        path_dir = os.path.dirname(path)
-        mkdirs(path_dir)
         fd, self.tempfilepath = tempfile.mkstemp()
         self.o = os.fdopen(fd, "w")
+
     def __del__(self):
         self.close()
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, type, value, traceback):
+        self.close()
+
     def close(self):
         if self.o is not None:
             self.o.close()
@@ -97,11 +104,9 @@ class UpdatingFile(object):
                 if self.tempfilepath is not None:
                     os.remove(self.tempfilepath)
                 return False
+
     def write(self,*args, **kwargs):
-        if self.o is not None:
-            self.o.write(*args, **kwargs)
-        else:
-            sys.stderr.write(*args, **kwargs)
+        (self.o if self.o is not None else sys.stderr).write(*args, **kwargs)
 
 
 class Post(object):
@@ -287,6 +292,8 @@ if __name__ == '__main__':
     assert os.path.isdir(directory)
     indices = {}
     recentPosts = RecentPosts()
+    categories = dict()
+    years = set()
     for i, path in enumerate(listdir(directory, reverse=True)):
         if path[-1] == '~':
             continue
@@ -297,13 +304,31 @@ if __name__ == '__main__':
             if i < 10:
                 recentPosts.addPost(post)
             ymd = [post.year, post.month, post.day]
+            years.add(int(post.year, 10))
             addPost(indices, tuple(ymd[0:1]),       '{}'.format(*ymd), post)
             addPost(indices, tuple(ymd[0:2]),    '{}-{}'.format(*ymd), post)
             addPost(indices, tuple(ymd[0:3]), '{}-{}-{}'.format(*ymd), post)
             addPost(indices, ('archives',), '', post)
             for cat in post.category_list:
                 addPost(indices, ('category', cat), '#' + cat, post)
+                categories[cat] = 1 + categories.get(cat, 0) 
         else:
             sys.stderr.write("???? %s\n" % path)
     recentPosts.close()
     write_indices(indices)
+
+
+    with UpdatingFile('{}/category/index.html'.format(BASE_DIR)) as o:
+        o.write(header.format(title='categories', style=style,
+                              years=str(min(years)) + '-' + current_year))
+        o.write(
+            '<h1><a href="/{}/" class="hiddenlink">Voder-Vocoder</a> Archive by Category</h1>'.format(
+            BASE_DIR))
+        o.write("\n\n<ul>\n") 
+        for cat, count in categories.items():
+            o.write('<li><a href="/{0}/category/{1}/">#{1} ({2})</a></li>\n'.format(
+                    BASE_DIR, cat, count))
+        o.write('</ul>\n<hr class="black">\n' +
+                '<p class="centered"><a href="/{}/">BACK</a></p>\n' +
+                '</body>\n</html>\n'.format(BASE_DIR))
+    
