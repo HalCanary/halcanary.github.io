@@ -2,7 +2,6 @@ COPYRIGHT=Copyright Hal Canary / ALL RIGHTS RESERVED
 TITLE=stopwatch
 DATE=2011-07-15 12:00:00
 POSTID=csg10
-MODE=markdown
 
 
     #!/usr/bin/python

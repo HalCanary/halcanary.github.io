@@ -2,7 +2,6 @@ COPYRIGHT=Copyright Hal Canary / ALL RIGHTS RESERVED
 TITLE=PyQt QInputDialog.get*() wrappers
 DATE=2012-01-17 12:00:00
 POSTID=csg22
-MODE=markdown
 
 ```
 #!/usr/bin/env python

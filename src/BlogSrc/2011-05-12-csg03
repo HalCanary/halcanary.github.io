@@ -2,7 +2,6 @@ COPYRIGHT=Copyright Hal Canary / ALL RIGHTS RESERVED
 TITLE=I'm not sure GNU takes windows ports seriously
 DATE=2011-05-12 12:00:00
 POSTID=csg03
-MODE=markdown
 
 GNU tar for win32 can't actually fork a process for gzip.  What
 century is it?  Here's my fix:

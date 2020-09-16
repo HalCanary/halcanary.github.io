@@ -2,7 +2,6 @@ COPYRIGHT=Copyright Hal Canary / ALL RIGHTS RESERVED
 TITLE=colapsing multiple for loops
 DATE=2012-03-16 12:00:00
 POSTID=csg25
-MODE=markdown
 
 #!/usr/bin/env python
 

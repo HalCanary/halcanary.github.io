@@ -3,7 +3,6 @@ TITLE=style preferences / prayers of the people
 DATE=2002-09-29 00:00:00
 POSTID=15
 CATEGORIES=life;
-MODE=markdown
 
 I got the style preferences to work under IE6. I still don't know why it was crashing, though. The fix is a bit of a kludge.
 

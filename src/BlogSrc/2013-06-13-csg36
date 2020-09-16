@@ -2,7 +2,6 @@ COPYRIGHT=Copyright Hal Canary / ALL RIGHTS RESERVED
 TITLE=or just use xdg-open
 DATE=2013-06-13 12:00:00
 POSTID=csg36
-MODE=markdown
 
 How to ask the desktop to open a file from a shell script? Define this function:
 

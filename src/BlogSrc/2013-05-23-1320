@@ -3,7 +3,6 @@ TITLE=packages
 DATE=2013-05-23 13:53:49
 POSTID=1320
 CATEGORIES=computers-code;
-MODE=markdown
 
 Bash user? Be sure to install and use the package `bash-completion`.
 

@@ -2,6 +2,5 @@ COPYRIGHT=Copyright Hal Canary / ALL RIGHTS RESERVED
 TITLE=diagnose
 DATE=2011-06-16 12:00:00
 POSTID=csg08
-MODE=markdown
 
 I'm only using one out of four processor cores for this batch job. Why is my computer slowing down?  Ohhh.  Memory leak.  That's easy to remedy.
