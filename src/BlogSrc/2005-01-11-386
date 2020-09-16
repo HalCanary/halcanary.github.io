@@ -5,7 +5,7 @@ POSTID=386
 CATEGORIES=books;
 MODE=htmldiv
 
-<p><a href="http://www.amazon.com/exec/obidos/ASIN/0060523875/ref=nosim/theworldofhalcan"><br />
+<p><a href="/isbn/?0060523875"><br />
 <img src="/images/book-system-of-the-world.jpg" width="130" height="192" alt="[BOOK COVER]" /><br />
 </a></p>
 <p>Finally finished Stephenson's trilogy.  The good news is: we know the secret of Enoch Root.  The bad news is that it's over.</p>

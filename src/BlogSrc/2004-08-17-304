@@ -5,12 +5,12 @@ POSTID=304
 CATEGORIES=books;
 MODE=htmldiv
 
-<p><a href="http://www.amazon.com/exec/obidos/ASIN/0201029189/ref=nosim/theworldofhalcan"><img src="/images/books-goldstein.jpg" alt="[book cover]" width="130" height="195" /></a><br />
+<p><a href="/isbn/?0201029189"><img src="/images/books-goldstein.jpg" alt="[book cover]" width="130" height="195" /></a><br />
 <strong><em>Goldstein</em></strong></p>
 <p>Herbert Goldstein. <em>Classical Mechanics</em> (2nd Edition) (1980).</p>
 <p>almost new</p>
 <p>$35.00 </p>
-<p><a href="http://www.amazon.com/exec/obidos/ASIN/0070518009/ref=nosim/theworldofhalcan"><img src="/images/books-reif.jpg" alt="[book cover]" width="130" height="200" /></a><br />
+<p><a href="/isbn/?0070518009"><img src="/images/books-reif.jpg" alt="[book cover]" width="130" height="200" /></a><br />
 <strong><em>Reif</em></strong></p>
 <p>F. Reif. <em>Fundamentals of Statistical and Thermal Physics</em>  (1965).</p>
 <p>good condition</p>
