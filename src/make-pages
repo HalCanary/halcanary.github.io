@@ -74,7 +74,7 @@ page_template = """<!DOCTYPE html>
 
 def main():
     root = os.path.dirname(__file__) + '/../'
-    style = re.sub(r'(^|:)  *', r'\1', read_file(root + 'src/style.css'), flags=re.M).strip()
+    style = re.sub(r'(^|:|;|{)\s+', r'\1', read_file(root + 'src/style.css'), flags=re.M).strip()
     years = '1997-{:04d}'.format(datetime.date.today().year)
     icon = base64.b64encode(read_file(root + 'images/2020-HWC3-favicon.png', binary=True))
     if (sys.version_info > (3, 0)):

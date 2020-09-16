@@ -13,7 +13,7 @@ if float(re.sub(r'cmark (\d+\.\d+)\..*', r'\1', subprocess.check_output(['cmark'
 current_year = '{:04d}'.format(datetime.date.today().year)
 
 with open(os.path.dirname(__file__) + '/style.css') as f:
-    style = re.sub(r'(^|:)  *', r'\1', f.read(), flags=re.M).strip()
+    style = re.sub(r'(^|:|;|{)\s+', r'\1', f.read(), flags=re.M).strip()
 
 header = """<!DOCTYPE html>
 <html lang="en">
