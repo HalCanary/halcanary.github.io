@@ -3,17 +3,213 @@ TITLE=POSIX #!/bin/sh
 DATE=2012-06-19 06:30:49
 POSTID=1289
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<p>When writing shell scripts to be executed on Linux, Unix, or Mac OS, one can target bash or tcsh.  I always reccomend targeting the standard Bourne Shell, since it is guaranteed to exist on POSIX-compatable systems.  Unforntunately, a lot of bash-specific documentation exists.  So we can go to the source for shell standard: the Single UNIX Specification, <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/sh.html">The Standard Command Language Interpreter</a> and <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/xcu_chap02.html">The Shell Command Language</a>.</p>
-<p><strong>Update</strong>: here's a list of all the shell utilities POSIX requires to exist:<br />
-<a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/admin.html">admin</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/alias.html">alias</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/ar.html">ar</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/asa.html">asa</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/at.html">at</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/awk.html">awk</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/basename.html">basename</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/batch.html">batch</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/bc.html">bc</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/bg.html">bg</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/break.html">break</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/c99.html">c99</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/cal.html">cal</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/cat.html">cat</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/cd.html">cd</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/cflow.html">cflow</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/chgrp.html">chgrp</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/chmod.html">chmod</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/chown.html">chown</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/cksum.html">cksum</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/cmp.html">cmp</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/colon.html">:</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/comm.html">comm</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/command.html">command</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/compress.html">compress</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/continue.html">continue</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/cp.html">cp</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/crontab.html">crontab</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/csplit.html">csplit</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/ctags.html">ctags</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/cut.html">cut</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/cxref.html">cxref</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/date.html">date</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/dd.html">dd</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/delta.html">delta</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/df.html">df</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/diff.html">diff</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/dirname.html">dirname</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/dot.html">dot</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/du.html">du</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/echo.html">echo</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/ed.html">ed</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/env.html">env</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/eval.html">eval</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/ex.html">ex</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/exec.html">exec</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/exit.html">exit</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/expand.html">expand</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/export.html">export</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/expr.html">expr</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/false.html">false</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/fc.html">fc</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/fg.html">fg</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/file.html">file</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/find.html">find</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/fold.html">fold</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/fort77.html">fort77</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/fuser.html">fuser</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/gencat.html">gencat</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/get.html">get</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/getconf.html">getconf</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/getopts.html">getopts</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/grep.html">grep</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/hash.html">hash</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/head.html">head</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/iconv.html">iconv</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/id.html">id</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/ipcrm.html">ipcrm</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/ipcs.html">ipcs</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/jobs.html">jobs</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/join.html">join</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/kill.html">kill</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/lex.html">lex</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/link.html">link</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/ln.html">ln</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/locale.html">locale</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/localedef.html">localedef</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/logger.html">logger</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/logname.html">logname</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/lp.html">lp</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/ls.html">ls</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/m4.html">m4</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/mailx.html">mailx</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/make.html">make</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/man.html">man</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/mesg.html">mesg</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/mkdir.html">mkdir</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/mkfifo.html">mkfifo</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/more.html">more</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/mv.html">mv</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/newgrp.html">newgrp</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/nice.html">nice</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/nl.html">nl</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/nm.html">nm</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/nohup.html">nohup</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/od.html">od</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/paste.html">paste</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/patch.html">patch</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/pathchk.html">pathchk</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/pax.html">pax</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/pr.html">pr</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/printf.html">printf</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/prs.html">prs</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/ps.html">ps</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/pwd.html">pwd</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/qalter.html">qalter</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/qdel.html">qdel</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/qhold.html">qhold</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/qmove.html">qmove</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/qmsg.html">qmsg</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/qrerun.html">qrerun</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/qrls.html">qrls</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/qselect.html">qselect</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/qsig.html">qsig</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/qstat.html">qstat</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/qsub.html">qsub</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/read.html">read</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/readonly.html">readonly</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/renice.html">renice</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/return.html">return</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/rm.html">rm</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/rmdel.html">rmdel</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/rmdir.html">rmdir</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/sact.html">sact</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/sccs.html">sccs</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/sed.html">sed</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/set.html">set</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/sh.html">sh</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/shift.html">shift</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/sleep.html">sleep</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/sort.html">sort</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/split.html">split</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/strings.html">strings</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/strip.html">strip</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/stty.html">stty</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/tabs.html">tabs</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/tail.html">tail</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/talk.html">talk</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/tee.html">tee</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/test.html">test</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/time.html">time</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/times.html">times</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/touch.html">touch</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/tput.html">tput</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/tr.html">tr</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/trap.html">trap</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/true.html">true</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/tsort.html">tsort</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/tty.html">tty</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/type.html">type</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/ulimit.html">ulimit</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/umask.html">umask</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/unalias.html">unalias</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/uname.html">uname</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/uncompress.html">uncompress</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/unexpand.html">unexpand</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/unget.html">unget</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/uniq.html">uniq</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/unlink.html">unlink</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/unset.html">unset</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/uucp.html">uucp</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/uudecode.html">uudecode</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/uuencode.html">uuencode</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/uustat.html">uustat</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/uux.html">uux</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/val.html">val</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/vi.html">vi</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/wait.html">wait</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/wc.html">wc</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/what.html">what</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/who.html">who</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/write.html">write</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/xargs.html">xargs</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/yacc.html">yacc</a> <a href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/zcat.html">zcat</a></p>
-<p>Of these utilities, on my Ubuntu 12.04 system:</p>
-<p>Shell builtin or keyword (bash):<br />
-: alias bg break cd command continue echo eval exec exit export false fc fg getopts hash jobs kill printf pwd read readonly return set shift test time times trap true type ulimit umask unalias unset wait</p>
-<p>Located in /bin or /usr/bin<br />
-ar at awk basename batch bc c99 cal cat chgrp chmod chown cksum cmp comm cp crontab csplit ctags cut date dd df diff dirname dot du ed env ex expand expr file find fold fuser gencat getconf head iconv id ipcrm ipcs join link ln locale localedef logger logname lp m4 make man mesg mkdir mkfifo more mv newgrp nice nl nm nohup od paste patch pathchk pr ps renice rm rmdir sed sh sleep sort split strings strip stty tabs tail tee touch tput tr tsort tty uname uncompress unexpand uniq unlink vi wc who write xargs zcat</p>
-<p>Not found:<br />
-admin asa cflow compress cxref delta fort77 get lex mailx pax prs qalter qdel qhold qmove qmsg qrerun qrls qselect qsig qstat qsub rmdel sact sccs talk unget uucp uudecode uuencode uustat uux val what yacc </p>
-<p>dash (/bin/sh) has a smaller set of builtins: it lacks fc and time.  /usr/bin/time exists, but there is no fc in dash.</p>
+When writing shell scripts to be executed on Linux, Unix, or Mac OS, one can
+target bash or tcsh. I always reccomend targeting the standard Bourne Shell,
+since it is guaranteed to exist on POSIX-compatable systems. Unforntunately, a
+lot of bash-specific documentation exists. So we can go to the source for shell
+standard: the Single UNIX Specification, [The Standard Command Language
+Interpreter](http://pubs.opengroup.org/onlinepubs/009695399/utilities/sh.html)
+and [The Shell Command
+Language](http://pubs.opengroup.org/onlinepubs/009695399/utilities/xcu_chap02.html).
 
+**Update**: here's a list of all the shell utilities POSIX requires to exist:  
+[admin](http://pubs.opengroup.org/onlinepubs/009695399/utilities/admin.html)
+[alias](http://pubs.opengroup.org/onlinepubs/009695399/utilities/alias.html)
+[ar](http://pubs.opengroup.org/onlinepubs/009695399/utilities/ar.html)
+[asa](http://pubs.opengroup.org/onlinepubs/009695399/utilities/asa.html)
+[at](http://pubs.opengroup.org/onlinepubs/009695399/utilities/at.html)
+[awk](http://pubs.opengroup.org/onlinepubs/009695399/utilities/awk.html)
+[basename](http://pubs.opengroup.org/onlinepubs/009695399/utilities/basename.html)
+[batch](http://pubs.opengroup.org/onlinepubs/009695399/utilities/batch.html)
+[bc](http://pubs.opengroup.org/onlinepubs/009695399/utilities/bc.html)
+[bg](http://pubs.opengroup.org/onlinepubs/009695399/utilities/bg.html)
+[break](http://pubs.opengroup.org/onlinepubs/009695399/utilities/break.html)
+[c99](http://pubs.opengroup.org/onlinepubs/009695399/utilities/c99.html)
+[cal](http://pubs.opengroup.org/onlinepubs/009695399/utilities/cal.html)
+[cat](http://pubs.opengroup.org/onlinepubs/009695399/utilities/cat.html)
+[cd](http://pubs.opengroup.org/onlinepubs/009695399/utilities/cd.html)
+[cflow](http://pubs.opengroup.org/onlinepubs/009695399/utilities/cflow.html)
+[chgrp](http://pubs.opengroup.org/onlinepubs/009695399/utilities/chgrp.html)
+[chmod](http://pubs.opengroup.org/onlinepubs/009695399/utilities/chmod.html)
+[chown](http://pubs.opengroup.org/onlinepubs/009695399/utilities/chown.html)
+[cksum](http://pubs.opengroup.org/onlinepubs/009695399/utilities/cksum.html)
+[cmp](http://pubs.opengroup.org/onlinepubs/009695399/utilities/cmp.html)
+[:](http://pubs.opengroup.org/onlinepubs/009695399/utilities/colon.html)
+[comm](http://pubs.opengroup.org/onlinepubs/009695399/utilities/comm.html)
+[command](http://pubs.opengroup.org/onlinepubs/009695399/utilities/command.html)
+[compress](http://pubs.opengroup.org/onlinepubs/009695399/utilities/compress.html)
+[continue](http://pubs.opengroup.org/onlinepubs/009695399/utilities/continue.html)
+[cp](http://pubs.opengroup.org/onlinepubs/009695399/utilities/cp.html)
+[crontab](http://pubs.opengroup.org/onlinepubs/009695399/utilities/crontab.html)
+[csplit](http://pubs.opengroup.org/onlinepubs/009695399/utilities/csplit.html)
+[ctags](http://pubs.opengroup.org/onlinepubs/009695399/utilities/ctags.html)
+[cut](http://pubs.opengroup.org/onlinepubs/009695399/utilities/cut.html)
+[cxref](http://pubs.opengroup.org/onlinepubs/009695399/utilities/cxref.html)
+[date](http://pubs.opengroup.org/onlinepubs/009695399/utilities/date.html)
+[dd](http://pubs.opengroup.org/onlinepubs/009695399/utilities/dd.html)
+[delta](http://pubs.opengroup.org/onlinepubs/009695399/utilities/delta.html)
+[df](http://pubs.opengroup.org/onlinepubs/009695399/utilities/df.html)
+[diff](http://pubs.opengroup.org/onlinepubs/009695399/utilities/diff.html)
+[dirname](http://pubs.opengroup.org/onlinepubs/009695399/utilities/dirname.html)
+[dot](http://pubs.opengroup.org/onlinepubs/009695399/utilities/dot.html)
+[du](http://pubs.opengroup.org/onlinepubs/009695399/utilities/du.html)
+[echo](http://pubs.opengroup.org/onlinepubs/009695399/utilities/echo.html)
+[ed](http://pubs.opengroup.org/onlinepubs/009695399/utilities/ed.html)
+[env](http://pubs.opengroup.org/onlinepubs/009695399/utilities/env.html)
+[eval](http://pubs.opengroup.org/onlinepubs/009695399/utilities/eval.html)
+[ex](http://pubs.opengroup.org/onlinepubs/009695399/utilities/ex.html)
+[exec](http://pubs.opengroup.org/onlinepubs/009695399/utilities/exec.html)
+[exit](http://pubs.opengroup.org/onlinepubs/009695399/utilities/exit.html)
+[expand](http://pubs.opengroup.org/onlinepubs/009695399/utilities/expand.html)
+[export](http://pubs.opengroup.org/onlinepubs/009695399/utilities/export.html)
+[expr](http://pubs.opengroup.org/onlinepubs/009695399/utilities/expr.html)
+[false](http://pubs.opengroup.org/onlinepubs/009695399/utilities/false.html)
+[fc](http://pubs.opengroup.org/onlinepubs/009695399/utilities/fc.html)
+[fg](http://pubs.opengroup.org/onlinepubs/009695399/utilities/fg.html)
+[file](http://pubs.opengroup.org/onlinepubs/009695399/utilities/file.html)
+[find](http://pubs.opengroup.org/onlinepubs/009695399/utilities/find.html)
+[fold](http://pubs.opengroup.org/onlinepubs/009695399/utilities/fold.html)
+[fort77](http://pubs.opengroup.org/onlinepubs/009695399/utilities/fort77.html)
+[fuser](http://pubs.opengroup.org/onlinepubs/009695399/utilities/fuser.html)
+[gencat](http://pubs.opengroup.org/onlinepubs/009695399/utilities/gencat.html)
+[get](http://pubs.opengroup.org/onlinepubs/009695399/utilities/get.html)
+[getconf](http://pubs.opengroup.org/onlinepubs/009695399/utilities/getconf.html)
+[getopts](http://pubs.opengroup.org/onlinepubs/009695399/utilities/getopts.html)
+[grep](http://pubs.opengroup.org/onlinepubs/009695399/utilities/grep.html)
+[hash](http://pubs.opengroup.org/onlinepubs/009695399/utilities/hash.html)
+[head](http://pubs.opengroup.org/onlinepubs/009695399/utilities/head.html)
+[iconv](http://pubs.opengroup.org/onlinepubs/009695399/utilities/iconv.html)
+[id](http://pubs.opengroup.org/onlinepubs/009695399/utilities/id.html)
+[ipcrm](http://pubs.opengroup.org/onlinepubs/009695399/utilities/ipcrm.html)
+[ipcs](http://pubs.opengroup.org/onlinepubs/009695399/utilities/ipcs.html)
+[jobs](http://pubs.opengroup.org/onlinepubs/009695399/utilities/jobs.html)
+[join](http://pubs.opengroup.org/onlinepubs/009695399/utilities/join.html)
+[kill](http://pubs.opengroup.org/onlinepubs/009695399/utilities/kill.html)
+[lex](http://pubs.opengroup.org/onlinepubs/009695399/utilities/lex.html)
+[link](http://pubs.opengroup.org/onlinepubs/009695399/utilities/link.html)
+[ln](http://pubs.opengroup.org/onlinepubs/009695399/utilities/ln.html)
+[locale](http://pubs.opengroup.org/onlinepubs/009695399/utilities/locale.html)
+[localedef](http://pubs.opengroup.org/onlinepubs/009695399/utilities/localedef.html)
+[logger](http://pubs.opengroup.org/onlinepubs/009695399/utilities/logger.html)
+[logname](http://pubs.opengroup.org/onlinepubs/009695399/utilities/logname.html)
+[lp](http://pubs.opengroup.org/onlinepubs/009695399/utilities/lp.html)
+[ls](http://pubs.opengroup.org/onlinepubs/009695399/utilities/ls.html)
+[m4](http://pubs.opengroup.org/onlinepubs/009695399/utilities/m4.html)
+[mailx](http://pubs.opengroup.org/onlinepubs/009695399/utilities/mailx.html)
+[make](http://pubs.opengroup.org/onlinepubs/009695399/utilities/make.html)
+[man](http://pubs.opengroup.org/onlinepubs/009695399/utilities/man.html)
+[mesg](http://pubs.opengroup.org/onlinepubs/009695399/utilities/mesg.html)
+[mkdir](http://pubs.opengroup.org/onlinepubs/009695399/utilities/mkdir.html)
+[mkfifo](http://pubs.opengroup.org/onlinepubs/009695399/utilities/mkfifo.html)
+[more](http://pubs.opengroup.org/onlinepubs/009695399/utilities/more.html)
+[mv](http://pubs.opengroup.org/onlinepubs/009695399/utilities/mv.html)
+[newgrp](http://pubs.opengroup.org/onlinepubs/009695399/utilities/newgrp.html)
+[nice](http://pubs.opengroup.org/onlinepubs/009695399/utilities/nice.html)
+[nl](http://pubs.opengroup.org/onlinepubs/009695399/utilities/nl.html)
+[nm](http://pubs.opengroup.org/onlinepubs/009695399/utilities/nm.html)
+[nohup](http://pubs.opengroup.org/onlinepubs/009695399/utilities/nohup.html)
+[od](http://pubs.opengroup.org/onlinepubs/009695399/utilities/od.html)
+[paste](http://pubs.opengroup.org/onlinepubs/009695399/utilities/paste.html)
+[patch](http://pubs.opengroup.org/onlinepubs/009695399/utilities/patch.html)
+[pathchk](http://pubs.opengroup.org/onlinepubs/009695399/utilities/pathchk.html)
+[pax](http://pubs.opengroup.org/onlinepubs/009695399/utilities/pax.html)
+[pr](http://pubs.opengroup.org/onlinepubs/009695399/utilities/pr.html)
+[printf](http://pubs.opengroup.org/onlinepubs/009695399/utilities/printf.html)
+[prs](http://pubs.opengroup.org/onlinepubs/009695399/utilities/prs.html)
+[ps](http://pubs.opengroup.org/onlinepubs/009695399/utilities/ps.html)
+[pwd](http://pubs.opengroup.org/onlinepubs/009695399/utilities/pwd.html)
+[qalter](http://pubs.opengroup.org/onlinepubs/009695399/utilities/qalter.html)
+[qdel](http://pubs.opengroup.org/onlinepubs/009695399/utilities/qdel.html)
+[qhold](http://pubs.opengroup.org/onlinepubs/009695399/utilities/qhold.html)
+[qmove](http://pubs.opengroup.org/onlinepubs/009695399/utilities/qmove.html)
+[qmsg](http://pubs.opengroup.org/onlinepubs/009695399/utilities/qmsg.html)
+[qrerun](http://pubs.opengroup.org/onlinepubs/009695399/utilities/qrerun.html)
+[qrls](http://pubs.opengroup.org/onlinepubs/009695399/utilities/qrls.html)
+[qselect](http://pubs.opengroup.org/onlinepubs/009695399/utilities/qselect.html)
+[qsig](http://pubs.opengroup.org/onlinepubs/009695399/utilities/qsig.html)
+[qstat](http://pubs.opengroup.org/onlinepubs/009695399/utilities/qstat.html)
+[qsub](http://pubs.opengroup.org/onlinepubs/009695399/utilities/qsub.html)
+[read](http://pubs.opengroup.org/onlinepubs/009695399/utilities/read.html)
+[readonly](http://pubs.opengroup.org/onlinepubs/009695399/utilities/readonly.html)
+[renice](http://pubs.opengroup.org/onlinepubs/009695399/utilities/renice.html)
+[return](http://pubs.opengroup.org/onlinepubs/009695399/utilities/return.html)
+[rm](http://pubs.opengroup.org/onlinepubs/009695399/utilities/rm.html)
+[rmdel](http://pubs.opengroup.org/onlinepubs/009695399/utilities/rmdel.html)
+[rmdir](http://pubs.opengroup.org/onlinepubs/009695399/utilities/rmdir.html)
+[sact](http://pubs.opengroup.org/onlinepubs/009695399/utilities/sact.html)
+[sccs](http://pubs.opengroup.org/onlinepubs/009695399/utilities/sccs.html)
+[sed](http://pubs.opengroup.org/onlinepubs/009695399/utilities/sed.html)
+[set](http://pubs.opengroup.org/onlinepubs/009695399/utilities/set.html)
+[sh](http://pubs.opengroup.org/onlinepubs/009695399/utilities/sh.html)
+[shift](http://pubs.opengroup.org/onlinepubs/009695399/utilities/shift.html)
+[sleep](http://pubs.opengroup.org/onlinepubs/009695399/utilities/sleep.html)
+[sort](http://pubs.opengroup.org/onlinepubs/009695399/utilities/sort.html)
+[split](http://pubs.opengroup.org/onlinepubs/009695399/utilities/split.html)
+[strings](http://pubs.opengroup.org/onlinepubs/009695399/utilities/strings.html)
+[strip](http://pubs.opengroup.org/onlinepubs/009695399/utilities/strip.html)
+[stty](http://pubs.opengroup.org/onlinepubs/009695399/utilities/stty.html)
+[tabs](http://pubs.opengroup.org/onlinepubs/009695399/utilities/tabs.html)
+[tail](http://pubs.opengroup.org/onlinepubs/009695399/utilities/tail.html)
+[talk](http://pubs.opengroup.org/onlinepubs/009695399/utilities/talk.html)
+[tee](http://pubs.opengroup.org/onlinepubs/009695399/utilities/tee.html)
+[test](http://pubs.opengroup.org/onlinepubs/009695399/utilities/test.html)
+[time](http://pubs.opengroup.org/onlinepubs/009695399/utilities/time.html)
+[times](http://pubs.opengroup.org/onlinepubs/009695399/utilities/times.html)
+[touch](http://pubs.opengroup.org/onlinepubs/009695399/utilities/touch.html)
+[tput](http://pubs.opengroup.org/onlinepubs/009695399/utilities/tput.html)
+[tr](http://pubs.opengroup.org/onlinepubs/009695399/utilities/tr.html)
+[trap](http://pubs.opengroup.org/onlinepubs/009695399/utilities/trap.html)
+[true](http://pubs.opengroup.org/onlinepubs/009695399/utilities/true.html)
+[tsort](http://pubs.opengroup.org/onlinepubs/009695399/utilities/tsort.html)
+[tty](http://pubs.opengroup.org/onlinepubs/009695399/utilities/tty.html)
+[type](http://pubs.opengroup.org/onlinepubs/009695399/utilities/type.html)
+[ulimit](http://pubs.opengroup.org/onlinepubs/009695399/utilities/ulimit.html)
+[umask](http://pubs.opengroup.org/onlinepubs/009695399/utilities/umask.html)
+[unalias](http://pubs.opengroup.org/onlinepubs/009695399/utilities/unalias.html)
+[uname](http://pubs.opengroup.org/onlinepubs/009695399/utilities/uname.html)
+[uncompress](http://pubs.opengroup.org/onlinepubs/009695399/utilities/uncompress.html)
+[unexpand](http://pubs.opengroup.org/onlinepubs/009695399/utilities/unexpand.html)
+[unget](http://pubs.opengroup.org/onlinepubs/009695399/utilities/unget.html)
+[uniq](http://pubs.opengroup.org/onlinepubs/009695399/utilities/uniq.html)
+[unlink](http://pubs.opengroup.org/onlinepubs/009695399/utilities/unlink.html)
+[unset](http://pubs.opengroup.org/onlinepubs/009695399/utilities/unset.html)
+[uucp](http://pubs.opengroup.org/onlinepubs/009695399/utilities/uucp.html)
+[uudecode](http://pubs.opengroup.org/onlinepubs/009695399/utilities/uudecode.html)
+[uuencode](http://pubs.opengroup.org/onlinepubs/009695399/utilities/uuencode.html)
+[uustat](http://pubs.opengroup.org/onlinepubs/009695399/utilities/uustat.html)
+[uux](http://pubs.opengroup.org/onlinepubs/009695399/utilities/uux.html)
+[val](http://pubs.opengroup.org/onlinepubs/009695399/utilities/val.html)
+[vi](http://pubs.opengroup.org/onlinepubs/009695399/utilities/vi.html)
+[wait](http://pubs.opengroup.org/onlinepubs/009695399/utilities/wait.html)
+[wc](http://pubs.opengroup.org/onlinepubs/009695399/utilities/wc.html)
+[what](http://pubs.opengroup.org/onlinepubs/009695399/utilities/what.html)
+[who](http://pubs.opengroup.org/onlinepubs/009695399/utilities/who.html)
+[write](http://pubs.opengroup.org/onlinepubs/009695399/utilities/write.html)
+[xargs](http://pubs.opengroup.org/onlinepubs/009695399/utilities/xargs.html)
+[yacc](http://pubs.opengroup.org/onlinepubs/009695399/utilities/yacc.html)
+[zcat](http://pubs.opengroup.org/onlinepubs/009695399/utilities/zcat.html)
+
+Of these utilities, on my Ubuntu 12.04 system:
+
+Shell builtin or keyword (bash):  
+: alias bg break cd command continue echo eval exec exit export false fc fg
+getopts hash jobs kill printf pwd read readonly return set shift test time
+times trap true type ulimit umask unalias unset wait
+
+Located in /bin or /usr/bin  
+ar at awk basename batch bc c99 cal cat chgrp chmod chown cksum cmp comm cp
+crontab csplit ctags cut date dd df diff dirname dot du ed env ex expand expr
+file find fold fuser gencat getconf head iconv id ipcrm ipcs join link ln
+locale localedef logger logname lp m4 make man mesg mkdir mkfifo more mv newgrp
+nice nl nm nohup od paste patch pathchk pr ps renice rm rmdir sed sh sleep sort
+split strings strip stty tabs tail tee touch tput tr tsort tty uname uncompress
+unexpand uniq unlink vi wc who write xargs zcat
+
+Not found:  
+admin asa cflow compress cxref delta fort77 get lex mailx pax prs qalter qdel
+qhold qmove qmsg qrerun qrls qselect qsig qstat qsub rmdel sact sccs talk unget
+uucp uudecode uuencode uustat uux val what yacc
+
+dash (/bin/sh) has a smaller set of builtins: it lacks fc and time.
+/usr/bin/time exists, but there is no fc in dash.

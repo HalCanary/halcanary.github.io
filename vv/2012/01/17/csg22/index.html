@@ -53,28 +53,27 @@ table.border tr td, table.border tr th {border:1px solid black;padding:3px 8px;}
     </div>
   </header>
   <div class="content">
-
-<pre>#!/usr/bin/env python
+<pre><code>#!/usr/bin/env python
 
 import PyQt4.QtGui
 
-def getInt(title, label, mini=&#0045;2147483647, maxa=2147483647):
+def getInt(title, label, mini=-2147483647, maxa=2147483647):
   assert mini &lt;= maxa
   default = min(max(0, mini), maxa)
   (ret, ok) = PyQt4.QtGui.QInputDialog.getInt(
     PyQt4.QtGui.QWidget(), title, label, default, mini, maxa)
   if not ok:
-    raise Exception(&#0039;select error&#0039;)
+    raise Exception('select error')
   return ret
 
 def getItem(title, label, items):
   (ret, ok) = PyQt4.QtGui.QInputDialog.getItem(
     PyQt4.QtGui.QWidget(), title, label, items)
   if not ok:
-    raise Exception(&#0039;select error&#0039;)
+    raise Exception('select error')
   return str(ret)
 
-def getFloat(title, label, mini=&#0045;2147483647, maxa=2147483647,
+def getFloat(title, label, mini=-2147483647, maxa=2147483647,
        default=None, decimals=1):
   assert mini &lt;= maxa
   if default is None:
@@ -82,32 +81,32 @@ def getFloat(title, label, mini=&#0045;2147483647, maxa=2147483647,
   (ret, ok) = PyQt4.QtGui.QInputDialog.getDouble(
     PyQt4.QtGui.QWidget(), title, label, default, mini, maxa, decimals)
   if not ok:
-    raise Exception(&#0039;select error&#0039;)
+    raise Exception('select error')
   return ret
 
 def getItem(title, label, items):
   (ret, ok) = PyQt4.QtGui.QInputDialog.getItem(
     PyQt4.QtGui.QWidget(), title, label, items)
   if not ok:
-    raise Exception(&#0039;select error&#0039;)
+    raise Exception('select error')
   return str(ret)
 
-def getText(title, label, default=&#0039;&#0039;):
+def getText(title, label, default=''):
   (ret, ok) = PyQt4.QtGui.QInputDialog.getText(
     PyQt4.QtGui.QWidget(), title, label,
     PyQt4.QtGui.QLineEdit.Normal, default)
   if not ok:
-    raise Exception(&#0039;select error&#0039;)
+    raise Exception('select error')
   return str(ret)
 
 qApplication = PyQt4.QtGui.QApplication([])
 
-print getItem(&#0039;getItem()&#0039;, &#0039;select a color&#0039;,
-  [&#0039;red&#0039;,&#0039;orange&#0039;,&#0039;yellow&#0039;,&#0039;green&#0039;,&#0039;blue&#0039;,&#0039;violet&#0039;])
-print getInt(&#0039;getInt()&#0039;, &#0039;give me a number&#0039;, 0, 100)
-print getFloat(&#0039;getFloat()&#0039;, &#0039;give me a number&#0039;, 0.0, 1.0, None, 2)
-print getText(&#0039;getText()&#0039;,&#0039;give me some text&#0039;,&#0039;string&#0039;)
-</pre>
+print getItem('getItem()', 'select a color',
+  ['red','orange','yellow','green','blue','violet'])
+print getInt('getInt()', 'give me a number', 0, 100)
+print getFloat('getFloat()', 'give me a number', 0.0, 1.0, None, 2)
+print getText('getText()','give me some text','string')
+</code></pre>
   </div>
 </article>
 

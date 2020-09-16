@@ -2,32 +2,32 @@ COPYRIGHT=Copyright Hal Canary / ALL RIGHTS RESERVED
 TITLE=generate image files
 DATE=2012-03-23 12:00:00
 POSTID=csg26
-MODE=htmldiv
 
-
-
-<pre>#!/usr/bin/python
+```
+#!/usr/bin/python
 
 import Image
 import numpy
 
 X = 1024
 Y = 768
-filename = &#0039;/tmp/x.png&#0039;
+filename = '/tmp/x.png'
 
 ima = numpy.zeros((Y,X,4), dtype=numpy.uint8)
 ima[:,:,3] = 255 # make opaque
-Image.fromarray(ima,mode=&#0039;RGBA&#0039;).save(filename)
-</pre>
+Image.fromarray(ima,mode='RGBA').save(filename)
+```
 
 For example:
-<pre><span class="comment">#!/usr/bin/env python</span>
-<span class="preproc">import</span><span class="normal"> Image</span>
-<span class="preproc">import</span><span class="normal"> numpy</span>
-<span class="normal">N</span><span class="symbol">,</span><span class="normal"> K </span><span class="symbol">=</span><span class="normal"> </span><span class="symbol">(</span><span class="number">16</span><span class="symbol">,</span><span class="number">16</span><span class="symbol">),</span><span class="normal"> </span><span class="symbol">(</span><span class="number">256</span><span class="symbol">,</span><span class="normal"> </span><span class="number">256</span><span class="symbol">)</span>
-<span class="normal">fn </span><span class="symbol">=</span><span class="normal"> </span><span class="string">'random_pixels.png'</span>
-<span class="normal">im </span><span class="symbol">=</span><span class="normal"> numpy</span><span class="symbol">.</span><span class="normal">random</span><span class="symbol">.</span><span class="function">random_integers</span><span class="symbol">(</span>
-<span class="normal">    </span><span class="number">0</span><span class="symbol">,</span><span class="number">255</span><span class="symbol">,(</span><span class="normal">N</span><span class="symbol">[</span><span class="number">0</span><span class="symbol">],</span><span class="normal">N</span><span class="symbol">[</span><span class="number">1</span><span class="symbol">],</span><span class="number">3</span><span class="symbol">)).</span><span class="function">astype</span><span class="symbol">(</span><span class="string">'uint8'</span><span class="symbol">)</span>
-<span class="normal">Image</span><span class="symbol">.</span><span class="function">fromarray</span><span class="symbol">(</span><span class="normal">im</span><span class="symbol">,</span><span class="normal">mode</span><span class="symbol">=</span><span class="string">'RGB'</span><span class="symbol">).</span><span class="function">resize</span><span class="symbol">(</span><span class="normal">K</span><span class="symbol">).</span><span class="function">save</span><span class="symbol">(</span><span class="normal">fn</span><span class="symbol">)</span>
-<span class="keyword">print</span><span class="normal"> </span><span class="string">'Wrote to'</span><span class="symbol">,</span><span class="normal"> fn</span></pre>
 
+```
+#!/usr/bin/env python
+import Image
+import numpy
+N, K = (16,16), (256, 256)
+fn = 'random_pixels.png'
+im = numpy.random.random_integers(
+    0,255,(N[0],N[1],3)).astype('uint8')
+Image.fromarray(im,mode='RGB').resize(K).save(fn)
+print 'Wrote to', fn
+```

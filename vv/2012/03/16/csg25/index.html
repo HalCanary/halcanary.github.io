@@ -53,16 +53,12 @@ table.border tr td, table.border tr th {border:1px solid black;padding:3px 8px;}
     </div>
   </header>
   <div class="content">
-<pre>#!/usr/bin/env python
-
-import glob, sys
-
-def globlist(l):
-    return (j for i in l for j in glob.iglob(i))
-
-for filename in globlist(sys.argv[1:]):
-    print filename
-</pre>
+<p>#!/usr/bin/env python</p>
+<p>import glob, sys</p>
+<p>def globlist(l):
+return (j for i in l for j in glob.iglob(i))</p>
+<p>for filename in globlist(sys.argv[1:]):
+print filename</p>
   </div>
 </article>
 

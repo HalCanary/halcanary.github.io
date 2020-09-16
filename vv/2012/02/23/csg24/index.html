@@ -53,20 +53,18 @@ table.border tr td, table.border tr th {border:1px solid black;padding:3px 8px;}
     </div>
   </header>
   <div class="content">
-
-<pre>
-# Example (GNU) Makefile for a C++ project.
+<pre><code># Example (GNU) Makefile for a C++ project.
 # Assume there is a .h file for each .cxx
 
 executable_file_name = program
-cxxfiles = &#0092;
-  file_one.cxx &#0092;
-  file_two.cxx &#0092;
-  file_three.cxx &#0092;
+cxxfiles = \
+  file_one.cxx \
+  file_two.cxx \
+  file_three.cxx \
   file_four.cxx
 
 CXX = g++
-CXXFLAGS = &#0045;g &#0045;Wall &#0045;std=c++0x
+CXXFLAGS = -g -Wall -std=c++0x
 objects := $(cxxfiles:.cxx=.o)
 headers := $(cxxfiles:.cxx=.h)
 
@@ -78,43 +76,43 @@ headers := $(cxxfiles:.cxx=.h)
 .PHONY : clean all
 all : $(executable_file_name)
 $(executable_file_name) : $(objects)
-	$(CXX) $(CXXFLAGS) $^ &#0045;o $@
+	$(CXX) $(CXXFLAGS) $^ -o $@
 %.o: %.cxx $(headers)
-	$(CXX) &#0045;c $(CXXFLAGS) $&lt; &#0045;o $@
+	$(CXX) -c $(CXXFLAGS) $&lt; -o $@
 clean:
-	rm &#0045;f &#0045;v $(objects)
-</pre>
-<hr>
-<pre>
-# Example (GNU) Makefile for a Java project.
+	rm -f -v $(objects)
+</code></pre>
+<hr />
+<pre><code># Example (GNU) Makefile for a Java project.
 # Constructs a JAR file with all of the classes.
 
 entrypointclass = Program
 jarfile = program.jar
-javafiles = &#0092;
-  file_one.java &#0092;
-  file_two.java &#0092;
-  file_three.java &#0092;
+javafiles = \
+  file_one.java \
+  file_two.java \
+  file_three.java \
   file_four.java
 
 JAVAC = javac
 JAVA = java
 JAR = jar
-RM = rm &#0045;f
-JCFLAGS = &#0045;Xlint &#0045;g
-JFLAGS = &#0045;enableassertions
+RM = rm -f
+JCFLAGS = -Xlint -g
+JFLAGS = -enableassertions
 classes := $(javafiles:.java=.class)
 
 .PHONY : clean all run
 all: $(jarfile)
 run: $(jarfile)
-	$(JAVA) $(JFLAGS) &#0045;jar $(jarfile)
+	$(JAVA) $(JFLAGS) -jar $(jarfile)
 clean:
-	$(RM) &#0045;v $(classes)
+	$(RM) -v $(classes)
 $(jarfile): $(classes)
 	$(JAR) cvfe $@ $(entrypointclass) $^
 %.class : %.java
-	$(JAVAC) $(JCFLAGS) $^</pre>
+	$(JAVAC) $(JCFLAGS) $^
+</code></pre>
   </div>
 </article>
 

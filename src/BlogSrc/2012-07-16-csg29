@@ -2,24 +2,15 @@ COPYRIGHT=Copyright Hal Canary / ALL RIGHTS RESERVED
 TITLE=validity
 DATE=2012-07-16 12:00:00
 POSTID=csg29
-MODE=htmldiv
 
-
-<pre><!--
-// Oddly enough, this is a 
+```
+// Oddly enough, this is a
 // valid c++ program
-#include &lt;iostream&gt;
+#include <iostream>
 using namespace std;
 int main(int, char**) {
   ; ; ; { } ; { } ;
-  cout &lt;&lt; &quot;hello world&#0092;n&quot;;
+  cout << "hello world\n";
   { { ; } { } }
-}--><span class="comment">// Oddly enough, this is a </span>
-<span class="comment">// valid c++ program</span>
-<span class="preproc">#include</span><span class="normal"> </span><span class="string">&lt;iostream&gt;</span>
-<span class="keyword">using</span><span class="normal"> </span><span class="keyword">namespace</span><span class="normal"> std</span><span class="symbol">;</span>
-<span class="type">int</span><span class="normal"> </span><span class="function">main</span><span class="symbol">(</span><span class="type">int</span><span class="symbol">,</span><span class="normal"> </span><span class="type">char</span><span class="symbol">**)</span><span class="normal"> </span><span class="cbracket">{</span>
-<span class="normal">  </span><span class="symbol">;</span><span class="normal"> </span><span class="symbol">;</span><span class="normal"> </span><span class="symbol">;</span><span class="normal"> </span><span class="cbracket">{</span><span class="normal"> </span><span class="cbracket">}</span><span class="normal"> </span><span class="symbol">;</span><span class="normal"> </span><span class="cbracket">{</span><span class="normal"> </span><span class="cbracket">}</span><span class="normal"> </span><span class="symbol">;</span>
-<span class="normal">  cout </span><span class="symbol">&lt;&lt;</span><span class="normal"> </span><span class="string">&quot;hello world</span><span class="specialchar">\n</span><span class="string">&quot;</span><span class="symbol">;</span>
-<span class="normal">  </span><span class="cbracket">{</span><span class="normal"> </span><span class="cbracket">{</span><span class="normal"> </span><span class="symbol">;</span><span class="normal"> </span><span class="cbracket">}</span><span class="normal"> </span><span class="cbracket">{</span><span class="normal"> </span><span class="cbracket">}</span><span class="normal"> </span><span class="cbracket">}</span>
-<span class="cbracket">}</span></pre>
+}
+```

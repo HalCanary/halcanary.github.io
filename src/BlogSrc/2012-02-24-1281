@@ -3,9 +3,9 @@ TITLE=generic viewer
 DATE=2012-02-24 08:38:00
 POSTID=1281
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<pre>#!/bin/sh
+```
+#!/bin/sh
 #${HOME}/bin/v
 #
 # Copyright 2012 Hal Canary
@@ -35,28 +35,28 @@ MODE=htmldiv
 # IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 # DEALINGS IN THE SOFTWARE.
 #
-for arg in &quot;$@&quot;; do
-  case &quot;${arg##*.}&quot; in
+for arg in "$@"; do
+  case "${arg##*.}" in
   png|jpg|jpeg|gif|bmp|tif|tiff|tga|targa)
-    { /usr/bin/gthumb &quot;$arg&quot; &gt; /dev/null 2&gt;&amp;1 &amp; } ;;
+    { /usr/bin/gthumb "$arg" > /dev/null 2>&1 & } ;;
   pdf|ps|eps)
-    { /usr/bin/evince &quot;$arg&quot; &gt; /dev/null 2&gt;&amp;1 &amp; } ;;
+    { /usr/bin/evince "$arg" > /dev/null 2>&1 & } ;;
   txt|tex|c|cxx|cpp|h|hh|cc|C|py|pl|java|hpp|hxx)
-    { /usr/bin/emacs &quot;$arg&quot; &#0092;
-        &#0045;&#0045;eval &#0039;(setq buffer&#0045;read&#0045;only t)&#0039; &#0092;
-        &gt; /dev/null 2&gt;&amp;1 &amp; } ;;
+    { /usr/bin/emacs "$arg" \
+        --eval '(setq buffer-read-only t)' \
+        > /dev/null 2>&1 & } ;;
   htm|html)
-    full=`readlink &#0045;&#0045;canonicalize &quot;$arg&quot;`
-    { /usr/bin/google&#0045;chrome &quot;file://${full}&quot; &#0092;
-        &gt; /dev/null 2&gt;&amp;1 &amp; } ;;
+    full=`readlink --canonicalize "$arg"`
+    { /usr/bin/google-chrome "file://${full}" \
+        > /dev/null 2>&1 & } ;;
   doc|docx|rtf|odt|odf|odp|ppt|ods|csv|tsv|xls)
-    { /usr/bin/ooffice &quot;$arg&quot; &gt; /dev/null 2&gt;&amp;1 &amp; } ;;
+    { /usr/bin/ooffice "$arg" > /dev/null 2>&1 & } ;;
   xcf)
-    { /usr/bin/gimp &quot;$arg&quot; &gt; /dev/null 2&gt;&amp;1 &amp; } ;;
+    { /usr/bin/gimp "$arg" > /dev/null 2>&1 & } ;;
   svg)
-    { /usr/bin/inkscape &quot;$arg&quot; &gt; /dev/null 2&gt;&amp;1 &amp; } ;;
+    { /usr/bin/inkscape "$arg" > /dev/null 2>&1 & } ;;
   *)
-    echo &quot;What do I do with &#0092;&quot;$arg&#0092;&quot;?&quot;;;
+    echo "What do I do with \"$arg\"?";;
   esac
-done</pre>
-
+done
+```

@@ -2,34 +2,32 @@ COPYRIGHT=Copyright Hal Canary / ALL RIGHTS RESERVED
 TITLE=an emacs macro
 DATE=2012-09-25 12:00:00
 POSTID=csg32
-MODE=htmldiv
 
-
-<pre>
-<span class="cbracket">(</span><span class="keyword">defun</span><span class="normal"> guard </span><span class="cbracket">()</span>
-<span class="normal">  </span><span class="string">&quot;<a href="http://en.wikipedia.org/wiki/Include_guard">http://en.wikipedia.org/wiki/Include_guard</a>&quot;</span>
-<span class="normal">  </span><span class="cbracket">(</span><span class="normal">interactive</span><span class="cbracket">)</span>
-<span class="normal">  </span><span class="cbracket">(</span><span class="keyword">if</span><span class="normal"> </span><span class="cbracket">(</span><span class="normal">buffer-file-name</span><span class="cbracket">)</span>
-<span class="normal">      </span><span class="cbracket">(</span><span class="keyword">let</span><span class="normal"> </span><span class="cbracket">((</span><span class="normal">macro-name </span>
-<span class="normal">	     </span><span class="cbracket">(</span><span class="normal">concat </span>
-<span class="normal">	      </span><span class="cbracket">(</span><span class="normal">upcase</span>
-<span class="normal">	       </span><span class="cbracket">(</span><span class="normal">file-name-sans-extension</span>
-<span class="normal">		</span><span class="cbracket">(</span><span class="normal">file-name-nondirectory</span>
-<span class="normal">		 </span><span class="cbracket">(</span><span class="normal">buffer-file-name</span><span class="cbracket">))))</span>
-<span class="normal">	      </span><span class="string">&quot;_H&quot;</span><span class="cbracket">)))</span>
-<span class="normal">	</span><span class="cbracket">(</span><span class="normal">save-excursion</span>
-<span class="normal">	  </span><span class="cbracket">(</span><span class="normal">goto-char </span><span class="cbracket">(</span><span class="normal">point-min</span><span class="cbracket">))</span>
-<span class="normal">	  </span><span class="cbracket">(</span><span class="normal">insert </span>
-<span class="normal">	   </span><span class="cbracket">(</span><span class="normal">concat </span>
-<span class="normal">	    </span><span class="string">&quot;#ifndef &quot;</span><span class="normal"> </span>
-<span class="normal">	    macro-name</span>
-<span class="normal">	    </span><span class="string">&quot;</span><span class="specialchar">\n</span><span class="string">#define &quot;</span>
-<span class="normal">	    macro-name</span>
-<span class="normal">	    </span><span class="string">&quot;</span><span class="specialchar">\n</span><span class="string">&quot;</span><span class="cbracket">))</span>
-<span class="normal">	  </span><span class="cbracket">(</span><span class="normal">goto-char </span><span class="cbracket">(</span><span class="normal">point-max</span><span class="cbracket">))</span>
-<span class="normal">	  </span><span class="cbracket">(</span><span class="normal">insert </span>
-<span class="normal">	   </span><span class="cbracket">(</span><span class="normal">concat</span>
-<span class="normal">	    </span><span class="string">&quot;</span><span class="specialchar">\n</span><span class="string">#endif /* &quot;</span><span class="normal"> </span>
-<span class="normal">	    macro-name</span>
-<span class="normal">	    </span><span class="string">&quot; */</span><span class="specialchar">\n</span><span class="string">&quot;</span><span class="cbracket">))))))</span>
-</pre>
+```
+(defun guard ()
+  "http://en.wikipedia.org/wiki/Include_guard"
+  (interactive)
+  (if (buffer-file-name)
+      (let ((macro-name
+	     (concat
+	      (upcase
+	       (file-name-sans-extension
+		(file-name-nondirectory
+		 (buffer-file-name))))
+	      "_H")))
+	(save-excursion
+	  (goto-char (point-min))
+	  (insert
+	   (concat
+	    "#ifndef "
+	    macro-name
+	    "\n#define "
+	    macro-name
+	    "\n"))
+	  (goto-char (point-max))
+	  (insert
+	   (concat
+	    "\n#endif /* "
+	    macro-name
+	    " */\n"))))))
+```

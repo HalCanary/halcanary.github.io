@@ -53,9 +53,7 @@ table.border tr td, table.border tr th {border:1px solid black;padding:3px 8px;}
     </div>
   </header>
   <div class="content">
-
-<pre><!--
-import math
+<pre><code>import math
 def generateContours(min_value, max_val, target):
     value_range = max_val - min_value
     x = int(round(3 * math.log10(value_range / target)))
@@ -68,19 +66,7 @@ def generateContours(min_value, max_val, target):
     low = math.ceil(min_value / x) * x
     return [low + (x * i)
         for i in xrange(1+int(value_range / x))]
---><span class="preproc">import</span><span class="normal"> math</span>
-<span class="keyword">def</span><span class="normal"> </span><span class="function">generateContours</span><span class="symbol">(</span><span class="normal">min_value</span><span class="symbol">,</span><span class="normal"> max_val</span><span class="symbol">,</span><span class="normal"> target</span><span class="symbol">):</span>
-<span class="normal">    value_range </span><span class="symbol">=</span><span class="normal"> max_val </span><span class="symbol">-</span><span class="normal"> min_value</span>
-<span class="normal">    x </span><span class="symbol">=</span><span class="normal"> </span><span class="function">int</span><span class="symbol">(</span><span class="function">round</span><span class="symbol">(</span><span class="number">3</span><span class="normal"> </span><span class="symbol">*</span><span class="normal"> math</span><span class="symbol">.</span><span class="function">log10</span><span class="symbol">(</span><span class="normal">value_range </span><span class="symbol">/</span><span class="normal"> target</span><span class="symbol">)))</span>
-<span class="normal">    </span><span class="keyword">if</span><span class="normal"> x </span><span class="symbol">%</span><span class="normal"> </span><span class="number">3</span><span class="normal"> </span><span class="symbol">==</span><span class="normal"> </span><span class="number">1</span><span class="symbol">:</span>
-<span class="normal">        x </span><span class="symbol">=</span><span class="normal"> </span><span class="number">2.5</span><span class="normal"> </span><span class="symbol">*</span><span class="normal"> math</span><span class="symbol">.</span><span class="function">pow</span><span class="symbol">(</span><span class="number">10</span><span class="symbol">,</span><span class="normal">math</span><span class="symbol">.</span><span class="function">floor</span><span class="symbol">(</span><span class="normal">x </span><span class="symbol">/</span><span class="normal"> </span><span class="number">3</span><span class="symbol">))</span>
-<span class="normal">    </span><span class="keyword">elif</span><span class="normal"> x </span><span class="symbol">%</span><span class="normal"> </span><span class="number">3</span><span class="normal"> </span><span class="symbol">==</span><span class="normal"> </span><span class="number">2</span><span class="symbol">:</span>
-<span class="normal">        x </span><span class="symbol">=</span><span class="normal"> </span><span class="number">5.0</span><span class="normal"> </span><span class="symbol">*</span><span class="normal"> math</span><span class="symbol">.</span><span class="function">pow</span><span class="symbol">(</span><span class="number">10</span><span class="symbol">,</span><span class="normal">math</span><span class="symbol">.</span><span class="function">floor</span><span class="symbol">(</span><span class="normal">x </span><span class="symbol">/</span><span class="normal"> </span><span class="number">3</span><span class="symbol">))</span>
-<span class="normal">    </span><span class="keyword">else</span><span class="symbol">:</span>
-<span class="normal">        x </span><span class="symbol">=</span><span class="normal"> math</span><span class="symbol">.</span><span class="function">pow</span><span class="symbol">(</span><span class="number">10</span><span class="symbol">,</span><span class="normal"> x </span><span class="symbol">/</span><span class="normal"> </span><span class="number">3</span><span class="symbol">)</span>
-<span class="normal">    low </span><span class="symbol">=</span><span class="normal"> math</span><span class="symbol">.</span><span class="function">ceil</span><span class="symbol">(</span><span class="normal">min_value </span><span class="symbol">/</span><span class="normal"> x</span><span class="symbol">)</span><span class="normal"> </span><span class="symbol">*</span><span class="normal"> x</span>
-<span class="normal">    </span><span class="keyword">return</span><span class="normal"> </span><span class="symbol">[</span><span class="normal">low </span><span class="symbol">+</span><span class="normal"> </span><span class="symbol">(</span><span class="normal">x </span><span class="symbol">*</span><span class="normal"> i</span><span class="symbol">)</span>
-<span class="normal">        </span><span class="keyword">for</span><span class="normal"> i </span><span class="keyword">in</span><span class="normal"> </span><span class="function">xrange</span><span class="symbol">(</span><span class="number">1</span><span class="symbol">+</span><span class="function">int</span><span class="symbol">(</span><span class="normal">value_range </span><span class="symbol">/</span><span class="normal"> x</span><span class="symbol">))]</span></pre>
+</code></pre>
   </div>
 </article>
 

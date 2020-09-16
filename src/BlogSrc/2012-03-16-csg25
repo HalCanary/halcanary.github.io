@@ -2,15 +2,14 @@ COPYRIGHT=Copyright Hal Canary / ALL RIGHTS RESERVED
 TITLE=colapsing multiple for loops
 DATE=2012-03-16 12:00:00
 POSTID=csg25
-MODE=htmldiv
+MODE=markdown
 
-<pre>#!/usr/bin/env python
+#!/usr/bin/env python
 
 import glob, sys
 
 def globlist(l):
     return (j for i in l for j in glob.iglob(i))
 
-for filename in globlist(sys.argv[1:]):
+for filename in globlist(sys.argv\[1:\]):
     print filename
-</pre>

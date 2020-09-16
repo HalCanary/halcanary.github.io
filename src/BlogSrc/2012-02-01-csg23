@@ -2,12 +2,11 @@ COPYRIGHT=Copyright Hal Canary / ALL RIGHTS RESERVED
 TITLE=rosetta stone
 DATE=2012-02-01 12:00:00
 POSTID=csg23
-MODE=htmldiv
 
-	<table>
-	  <tr><th>Language</th><th>Null Pointer</th></tr>
-	  <tr><td>C/C++</td><td>NULL</td></tr>
-	  <tr><td>Java</td><td>null</td></tr>
-	  <tr><td>Python</td><td>None</td></tr>
-	  <tr><td>Lisp</td><td>nill</td></tr>
-	</table>
+<table><tbody>
+<tr><th>Language</th><th>Null Pointer</th></tr>
+<tr><td>C/C++</td><td>NULL</td></tr>
+<tr><td>Java</td><td>null</td></tr>
+<tr><td>Python</td><td>None</td></tr>
+<tr><td>Lisp</td><td>nill</td></tr>
+</tbody></table>
