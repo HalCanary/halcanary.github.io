@@ -266,7 +266,7 @@ def write_indices(indices):
             o.write('<ul>\n')
             for post in year_posts:
                 s = '  <div>{}</div>'.format(post['summary']) if post['summary'] else ''
-                fmt = '<li>\n  <a href="/{permalinkpart}">{title}</a>\n  {date}\n>{s}\n</li>\n'
+                fmt = '<li>\n  <a href="/{permalinkpart}">{title}</a>\n  {date}\n{s}\n</li>\n'
                 o.write(fmt.format(s=s, **post))
             o.write('</ul>\n\n')
         o.write('<hr class="black">\n' +
