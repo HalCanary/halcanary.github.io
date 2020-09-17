@@ -2,8 +2,8 @@ Hal's SSL Stuff
 ===============
 
 This page contains a lot of my work for [Jim
-Propp](http://www.math.wisc.edu/~propp/)'s [Spatial Systems
-Laboratory](http://www.math.wisc.edu/~propp/SSL/) in Spring 2001, Fall 2003,
+Propp](http://faculty.uml.edu/jpropp/)'s [Spatial Systems
+Laboratory](http://faculty.uml.edu/jpropp/SSL/) in Spring 2001, Fall 2003,
 and Spring 2004.
 
 [by Hal Canary](https://halcanary.org/)
@@ -20,10 +20,11 @@ here: [arXiv:math.CO/0309135](http://arxiv.org/abs/math.CO/0309135). On
 2004-03-02, I submitted it to the _Electronic Journal of Combinatorics_.
 
 (Addendum: published as: [Hal Canary. “Aztec Diamonds and Baxter Permutations.” The
-Electronic Journal of Combinatorics 17 (2010),
-#R105](https://www.combinatorics.org/ojs/index.php/eljc/article/view/v17i1r105))
+Electronic Journal of Combinatorics 17 (2010), #R105](https://www.combinatorics.org/ojs/index.php/eljc/article/view/v17i1r105))
 
 ### Toad Shufler Applet
+
+[TOAD Shuffler Applet v2.0 (HTM5/Canvas)](../mathapplets/toadshuffle/)
 
 [Toad Shufler Version 1.0](../mathapplets/toadshuffle/toadshuffle-v1.0/) is from April 2001.  
 You may also download the source:

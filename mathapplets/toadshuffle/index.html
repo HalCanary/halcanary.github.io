@@ -21,6 +21,7 @@
     Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 -->
 <title>TOAD Shuffler</title>
+<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAADkUlEQVR42u3dz24SURiH4R9CK4xWcWMrCwrGtLEu7B0geg0ada9egra6818vQb2AmngPVZa6MGmiotTIWIwYdEOQziANjJt2o1Yw5wQHeJ9l2xwO05fJLL4cJAAAAAAAAIyFyJDue5+ktZDtKU8Ag1Nwpg7lZucWQrGZzVJRXrNRGMYIYsN668rMn9KtR09CsZfbV87r7cvnQ3srxRgjAAIAAYAAQAAgABAACAAEAAIAAYAAQAAgAIyqyH8IzsYkz+KBqcPJ2flwDIR8LL2R971Rl7RuYbn8KAdQiDrRXCIdN1rE3/QVn9iv7MljRuu4xaqkSaXHeLJo4BNBTjquuRtZozU2VlxlkjO6+/ia0TrLFx+o25ke68kingF4CAQBgABAACAAEAAIAAQAAgABgABAACAAEABG0r/MAzyz8Hqnw3YBNktF3bl6IRx72ShK0qKla523GUAh5kRziXSix58Ff/2tV/FD9wnwtzsqf2uaLxSYL9Fud3TwUCKZXUidMXkpt/hZW43Ws34i6PsOkEjHNXcjY/QGSytu6AKYPJrV9KX7odhLbXVJ2ZRnZdLp9YsyzwAgABAACAAEAAIAAYAAQAAgABAACAAEQAAgAIyvwZ4QEkj+p5Y2DOcCvEpLbrWqm5ceGq3jvv2i9o+oaqtL5m/Mwmk77VpZSs2McAAWee2o3lcds0WSJzRpYS/tmitnf1fZhZTROuV6d8TvAJHdySLzM4K2veOavnwvFDHanOThGQAEAAIAAYAAQAAgABAACAAEAAIAAYAAQAAgAFjQ9zyAXzGf5PErLTmGXxi1q/21bGGSR9b2YmuSxy3amXSyHcDZjt9da5Y8o40FQbAoKWnjQkWiviYc09EyX4nYZM9Jnp5n8lic5Gk2/Pqr5x/WJSkSifx6/X772V6XR9I5mwF0gyCw8VVmBUk500UC7Xz72PWM0Tql+66yR2bCNsmzrp3DnYIg+NOHiGcAEAAIAAQAAgABgABAACAAEAAIAAQAAgABgADQy8CPiPFsTRbNxkN1Id1iVct7TPL0e3rQv0zyDGsAZzteZ+37uy3TdaxNFtnSbPj11zuTPIbyoxxA19IbLMjCZJFl64P+5/EMAAIAAYAAQAAgABAACAAEAAIAAYAAQAAgABAA9hAZ0n0XYk40lzA8b8irtPo6IqaXcrGqrYZf0BDOAwxrAPskPQ3Zns5wPwEAAAAAAEBo/QRVvQQOoOpnHwAAAABJRU5ErkJggg==">
 <style>
 body{margin:0 auto 8px auto;max-width:70em;padding:0 8px;}
 h1 { margin:0 -8px;
@@ -36,20 +37,6 @@ blockquote { margin:1em 0; padding:0 1em; border:1px solid #DDD; }
 blockquote blockquote { border:none; border-left:1px solid #DDD; }
 </style>
 <script>
-class Turtle {
-    constructor(ctx, x, y) {
-        this.ctx = ctx;
-        this.x = x;
-        this.y = y;
-        this.ctx.moveTo(this.x, this.y);
-    }
-    rLine(dx, dy) {
-        this.x += dx;
-        this.y += dy;
-        this.ctx.lineTo(this.x, this.y);
-    }
-}
-
 class Tiling {
     constructor() {
         this.X = 0;
@@ -168,7 +155,18 @@ class Tiling {
         ctx.lineTo(x, y);
     }
 
+    getShape(direction, scale) {
+        switch (direction) {
+            case this.N: return [ -scale, 0,      2 * scale, scale     ];
+            case this.S: return [ 0,      0,      2 * scale, scale     ];
+            case this.E: return [ 0,      0,      scale,     2 * scale ];
+            case this.W: return [ 0,      -scale, scale,     2 * scale ];
+            case this.X: return [ 0,      0,      scale,     scale     ];
+        }
+    }
+
     makePath(ctx, dir, w, h, scale) {
+        const RECT = this.getShape(dir, scale);
         ctx.beginPath();
         var x0 = w;
         var y0 = h - this.n * scale;
@@ -177,13 +175,7 @@ class Tiling {
             var y = y0;
             for(var c = 0 ; c < this.n ; c++) {
                 if (this.get(r, c) == dir) {
-                    switch (dir) {
-                        case this.N: this.addRect(ctx, x - scale, y, 2 * scale, scale); break;
-                        case this.S: this.addRect(ctx, x, y,         2 * scale, scale); break;
-                        case this.E: this.addRect(ctx, x, y,         scale, 2 * scale); break;
-                        case this.W: this.addRect(ctx, x, y - scale, scale, 2 * scale); break;
-                        case this.X: this.addRect(ctx, x, y,         scale, scale);
-                    }
+                    this.addRect(ctx, x + RECT[0], y + RECT[1], RECT[2], RECT[3]);
                 }
                 x += scale;
                 y += scale;
@@ -195,14 +187,15 @@ class Tiling {
 
 
     makeBackground(ctx, w, h, scale) {
-        var n = this.n;
-        var x = w;
+        const n = this.n;
+        let x = w;
+        let y = h - this.n * scale;
         ctx.beginPath();
-        var turtle = new Turtle(ctx, w, h - n * scale);
-        for (var i = 0; i < n; ++i) { turtle.rLine(scale, 0);  turtle.rLine(0, scale);  }
-        for (var i = 0; i < n; ++i) { turtle.rLine(0, scale);  turtle.rLine(-scale, 0); }
-        for (var i = 0; i < n; ++i) { turtle.rLine(-scale, 0); turtle.rLine(0, -scale); }
-        for (var i = 0; i < n; ++i) { turtle.rLine(0, -scale); turtle.rLine(scale, 0);  }
+        for (var i = 0; i < n; ++i) { x +=  scale; ctx.lineTo(x, y); y +=  scale; ctx.lineTo(x, y); }
+        for (var i = 0; i < n; ++i) { y +=  scale; ctx.lineTo(x, y); x += -scale; ctx.lineTo(x, y); }
+        for (var i = 0; i < n; ++i) { x += -scale; ctx.lineTo(x, y); y += -scale; ctx.lineTo(x, y); }
+        for (var i = 0; i < n; ++i) { y += -scale; ctx.lineTo(x, y); x +=  scale; ctx.lineTo(x, y); }
+        ctx.closePath();
     }
 
     draw(canvas, scale) {
