@@ -1,164 +1,127 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-	"http://www.w3.org/TR/html4/loose.dtd">
-<html>
-  <head>
-    <title></title>
-    <style type="text/css"><!--
-div.column {
-	margin:auto; width:600px;
-	padding-left:20px;
-}
-.deemphasize {
-	color: #555555;
-	background-color: #ffffff;
-}
-.achtung {
-	color: #aa0000;
-	background-color: #ffffff;
-}
-.indent {
-	margin-left: 2em;
-}
-.centered {
-	text-align: center;
-}
-.rightside {
-	text-align: right;
-}
-blockquote {
-	border-left:2px #dddddd solid;
-	margin-left:19px;
-	padding-left:19px;
-	border-right:2px #dddddd solid;
-	margin-right:19px;
-	padding-right:19px;
-}
-pre {
-	overflow-x: auto;
-	margin-left: 2em;
-}
-body {
-	font-family: sans-serif;
-}
-h1 {	margin-left: -20px; }
-h2 {	margin-left: -15px; }
-h3 {	margin-left: -10px; }
-h4 {	margin-left: -5px; }
---></style>
-  </head>
-  <body>
-    <div class="column">
-	<h1>Hal's SSL Stuff</h1>
-	<p>This page contains a lot of my work for <a href="http://www.math.wisc.edu/~propp/">Jim Propp</a>'s <a href="http://www.math.wisc.edu/~propp/SSL/">Spatial Systems Laboratory</a> in Spring 2001, Fall 2003, and Spring 2004.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Copyright 1997-2020 Hal Canary. ALL RIGHTS RESERVED. -->
+<title>Hal's SSL Stuff</title>
+<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==">
+<style>
+@media print {body {max-width:8in;font-size:12px;}}
+@media screen {body {font-family:sans-serif;max-width:35em;margin:22px auto 64px auto;padding:0 8px;}}
+body {overflow-wrap:break-word;}
+@page {size:auto;margin:0.25in 0.5in 0.5in 0.5in;}
+hr.black {border:0;height:1px;color:#000;background-color:#000;}
+img {max-width:100%;height:auto;background-color:#DDD;}
+img:before {content:"missing image\0A" attr(src);display:inline-block;padding:3px 8px;margin:8px 0;color:#000;background-color:#DDD;white-space:pre-line;}
+.content {margin:1em 0;}
+.content hr {padding:0;margin:0;border:none;text-align:center;color:black;}
+.content hr:after {font-size:150%;content:"* \A0 * \A0 *";display:block;position:relative;}
+.rightside {text-align:right;}
+.centered {text-align:center;}
+.postbox {border-bottom:6px solid #ddd;margin:0 0 6px 0;padding:0 0 0 0;}
+pre {overflow-x:auto;}
+.byline {background:#fff;color:#888;}
+a.hiddenlink:link {background:inherit;color:inherit;text-decoration:none;}
+a.hiddenlink:visited {background:inherit;color:inherit;text-decoration:none;}
+a.hiddenlink:active {background:inherit;color:inherit;text-decoration:none;}
+ul,ol {padding-left:30px;}
+table.border {border-collapse:collapse;margin:8px auto;}
+table.border tr td, table.border tr th {border:1px solid black;padding:3px 8px;}
+.tophead {text-align:center;margin:1ex auto 0 auto;max-width:35em;}
+.tightmargins li > ul > li {list-style-type:square;}
+.tightmargins h1, .tightmargins h2, .tightmargins p, .tightmargins ul {margin:1ex 0;}
+.tightmargins li > ul {margin:0 0 0.5ex 0;}
+.tightmargins ul {padding-left:30px;}
+.tightmargins li {margin:0 0 0.5ex 0;}
+.nolink a:link, .nolink a:visited {color:inherit;text-decoration:none;}
+.nolink a:link:active, .nolink a:visited:active, .nolink a:link:hover, .nolink a:visited:hover {text-decoration:underline;}
+</style>
+</head>
+<body>
+<div class="tophead">
 
-	<p><a href="https://halcanary.org/">by Hal Canary</a></p>
+</div>
+<h1>Hal's SSL Stuff</h1>
+<p>This page contains a lot of my work for <a href="http://www.math.wisc.edu/%7Epropp/">Jim
+Propp</a>'s <a href="http://www.math.wisc.edu/%7Epropp/SSL/">Spatial Systems
+Laboratory</a> in Spring 2001, Fall 2003,
+and Spring 2004.</p>
+<p><a href="https://halcanary.org/">by Hal Canary</a></p>
+<p><a href="../mathapplets/">Mathapplets Page</a></p>
+<h2>Spring 2001 SSL Projects and Documents</h2>
+<h3>The Proof of the Baxter Permutation Conjecture</h3>
+<p>My paper, <em>Aztec Diamonds and Baxter Permutations</em> can be found on the ArXiv
+here: <a href="http://arxiv.org/abs/math.CO/0309135">arXiv:math.CO/0309135</a>. On
+2004-03-02, I submitted it to the <em>Electronic Journal of Combinatorics</em>.</p>
+<p>(Addendum: published as: <a href="https://www.combinatorics.org/ojs/index.php/eljc/article/view/v17i1r105">Hal Canary. “Aztec Diamonds and Baxter Permutations.” The
+Electronic Journal of Combinatorics 17 (2010),
+#R105</a>)</p>
+<h3>Toad Shufler Applet</h3>
+<p><a href="../mathapplets/toadshuffle/toadshuffle-v1.0/">Toad Shufler Version 1.0</a> is from April 2001.<br />
+You may also download the source:
+<a href="../mathapplets/toadshuffle/toadshuffle-v1.0.tgz">Gzipped-tar file</a> or
+<a href="../mathapplets/toadshuffle/toadshuffle-v1.0.zip">Zip file</a>.</p>
+<p><a href="../mathapplets/toadshuffle/toadshuffle-v1.1/">Toad Shufler Version 1.1</a> is from September 2003.<br />
+You may also download the source:
+<a href="../mathapplets/toadshuffle/toadshuffle-v1.1.tgz">Gzipped-tar file</a> or
+<a href="../mathapplets/toadshuffle/toadshuffle-v1.1.zip">Zip file</a>.</p>
+<p><a href="../mathapplets/toadshuffle/toadshuffle-v1.2/">Toad Shufler Version 1.2</a> is from October 2003.<br />
+You may also download the source:
+<a href="../mathapplets/toadshuffle/toadshuffle-v1.2.tgz">Gzipped-tar file</a> or
+<a href="../mathapplets/toadshuffle/toadshuffle-v1.2.zip">Zip file</a>.</p>
+<p><strong>Current Version:</strong> <a href="../mathapplets/toadshuffle/toadshuffle-v1.3/">Toad Shufler Version 1.3</a> is from March 2004.<br />
+You may also download the source:
+<a href="../mathapplets/toadshuffle/toadshuffle-v1.3.tgz">Gzipped-tar file</a> or
+<a href="../mathapplets/toadshuffle/toadshuffle-v1.3.zip">Zip file</a>.</p>
+<h3>Analysis of matching on a hexagonal grid</h3>
+<p><a href="Hexagon">hexagon.cpp</a></p>
+<hr />
+<h2>2003-2004 Mathapplets</h2>
+<h3>Rotor Router Modle Applets</h3>
+<p>The final version of my Rotor Router Applet incorporates all of the precursor
+applets that went by the names: PI-Computer, Rotor-Router Version 0.x,
+Finite-Graph Applet, 2D-Aggregation Applet, 2d-Walk Applet, and Rotor-Graphs
+Applet. The precursors can be found
+<a href="../mathapplets/rotor-router-archive/">here</a>.</p>
+<p><strong>Current Version:</strong> <a href="../mathapplets/rotor-router-model/">Rotor Router Applet
+v1.0</a>. This is the July 2004 version of the
+Applet.</p>
+<h3>Grove Shuffler</h3>
+<p>I haven't done much work with the grove system, but you can read about it in
+Carroll &amp; Speyer's article &quot;The Cube Recurrence&quot;
+(<a href="http://arxiv.org/abs/math.CO/0403417">arXiv:math.CO/0403417</a>).</p>
+<p>Kyle Petersen's Grove Shuffler Applet: <a href="../mathapplets/groveshuffler/groveshuffler-v03/">Grove Shuffler
+v0.3</a>. Version 0.3 was
+completed 2003-10-10. Looks Good. Source:
+<a href="../mathapplets/groveshuffler/groveshuffler-v03.tgz">tarball</a> and
+<a href="../mathapplets/groveshuffler/groveshuffler-v03.zip">zipfile</a>. And here is
+Grove Shuffler <a href="../mathapplets/groveshuffler/groveshuffler-v02.zip">v0.2 archived
+zipfile.</a></p>
+<hr />
+<h2>2003-2004 SSL Research</h2>
+<h3>2003</h3>
+<p>Notes on <a href="Polynomial-Solution-Graphs/">Polynomial Solution Graphs</a> for
+polynomials such as the Soddy or Markoff equations.</p>
+<p><a href="photos/">SSL Photographs</a>.</p>
+<p>October, 2003: Notes on <a href="Apollonian-Gasket/">Apollonian Gaskets</a>.</p>
+<p>September 15, 2003: Thoughts on <a href="Snake-Counting/">Snakes Counting</a>.</p>
+<p>Fall 2003 <a href="To-Do-List/">To Do</a> List.</p>
+<h3>2004 Open Questions that Intrest Me</h3>
+<p><a href="Newtons-Recurrance">Newton's Recurrance</a></p>
+<p><a href="Multivariable-Quadratics-Solution-Graphs">Multivariable Quadratics Solution Graphs</a></p>
+<p><a href="Integer-Sequences">Sequences that are integers for no good reason</a>.</p>
+<p><a href="Dionysian-Gasket">Dionysian &quot;Gasket&quot;s</a></p>
+<h3>Writeups</h3>
+<p><a href="writeups/newton-with-a-vengance.pdf">Newton's Method as a Formal Recurrance (non-commuting
+section)</a>
+(<a href="writeups/newton-with-a-vengance.tex">tex</a> &amp;
+<a href="writeups/newton-with-a-vengance.bib">bib</a>)</p>
+<p><a href="writeups/dana_scott.pdf">The Dana Scott Recurrance</a> (<a href="writeups/dana_scott.tex">tex</a>)</p>
+<p><a href="writeups/newtons-recurrence.pdf">Newton's Recurrence</a> (<a href="writeups/newtons-recurrence.tex">tex</a>)</p>
+<hr />
+<p><a href="images/">Random SSL-Related Images</a></p>
+<p><a href="diary/">Record of hours worked</a>.</p>
 
-	<p><a href="../mathapplets/">Mathapplets Page</a></p>
-
-	<h2>Spring 2001 SSL Projects and Documents</h2>
-	<h3>The Proof of the Baxter Permutation Conjecture</h3>
-	<p>My paper, <em>Aztec Diamonds and Baxter Permutations</em> can be found on the ArXiv here:
-<a href="http://arxiv.org/abs/math.CO/0309135">arXiv:math.CO/0309135</a>.
-	On 2004-03-02, I submitted it to the <em>Electronic Journal of Combinatorics</em>.
-	</p>
-
-	<h3>Toad Shufler Applet</h3>
-	<p><a href="../mathapplets/toadshuffle/toadshuffle-v1.0/">Toad Shufler Version 1.0</a>
-	is from April 2001.
-	<br>You may also download the source:
-	<a href="../mathapplets/toadshuffle/toadshuffle-v1.0.tgz">Gzipped-tar file</a> or 
-	<a href="../mathapplets/toadshuffle/toadshuffle-v1.0.zip">Zip file</a>.</p>
-	
-	<p><a href="../mathapplets/toadshuffle/toadshuffle-v1.1/">Toad Shufler Version 1.1</a>
-	 is from September 2003.
-	<br>You may also download the source:
-	<a href="../mathapplets/toadshuffle/toadshuffle-v1.1.tgz">Gzipped-tar file</a> or 
-	<a href="../mathapplets/toadshuffle/toadshuffle-v1.1.zip">Zip file</a>.</p>
-	
-	<p><a href="../mathapplets/toadshuffle/toadshuffle-v1.2/">Toad Shufler Version 1.2</a>
-	is from October 2003.
-	<br>You may also download the source:
-	<a href="../mathapplets/toadshuffle/toadshuffle-v1.2.tgz">Gzipped-tar file</a> or 
-	<a href="../mathapplets/toadshuffle/toadshuffle-v1.2.zip">Zip file</a>.</p>
-
-	<p><strong>Current Version:</strong> <a href="../mathapplets/toadshuffle/toadshuffle-v1.3/">Toad Shufler Version 1.3</a>
-	is from March 2004.
-	<br>You may also download the source:
-	<a href="../mathapplets/toadshuffle/toadshuffle-v1.3.tgz">Gzipped-tar file</a> or 
-	<a href="../mathapplets/toadshuffle/toadshuffle-v1.3.zip">Zip file</a>.</p>
-	
-	<h3>Analysis of matching on a hexagonal grid</h3>
-	<p><a href="Hexagon">hexagon.cpp</a></p>
-
-	<hr>
-
-	<h2>2003-2004 Mathapplets</h2>
-
-	<h3>Rotor Router Modle Applets</h3>
-
-	<p>The final version of my Rotor Router Applet incorporates all of the precursor applets that went by the names: PI-Computer, Rotor-Router Version 0.x, Finite-Graph Applet, 2D-Aggregation Applet, 2d-Walk Applet, and Rotor-Graphs Applet.  The precursors can be found <a href="../mathapplets/rotor-router-archive/">here</a>.</p>
-
-	<p><strong>Current Version:</strong> <a href="../mathapplets/rotor-router-model/">Rotor Router Applet v1.0</a>.  This is the July 2004 version of the Applet.</p>
-
-	<h3>Grove Shuffler</h3>
-
-	<p>I haven't done much work with the grove system, but you can read about
-	it in Carroll &amp; Speyer's article &quot;The Cube Recurrence&quot;
-	(<a href="http://arxiv.org/abs/math.CO/0403417">arXiv:math.CO/0403417</a>).</p>
-
-	<p>Kyle Petersen's Grove Shuffler Applet:
-	<a href="../mathapplets/groveshuffler/groveshuffler-v03/">Grove Shuffler v0.3</a>.
-	Version 0.3 was completed 2003-10-10.  Looks Good.
-	Source: <a href="../mathapplets/groveshuffler/groveshuffler-v03.tgz">tarball</a> and 
-	<a href="../mathapplets/groveshuffler/groveshuffler-v03.zip">zipfile</a>.  And here is 
-	Grove Shuffler <a href="../mathapplets/groveshuffler/groveshuffler-v02.zip">v0.2
-	archived zipfile.</a></p>  
-
-	<hr>
-
-	<h2>2003-2004 SSL Research</h2>
-	<h3>2003</h3>
-
-	<p>Notes on <a href="Polynomial-Solution-Graphs/">Polynomial Solution Graphs</a> for polynomials such as the Soddy or Markoff equations.</p>
-
-	<p><a href="photos/">SSL Photographs</a>.</p>
-
-	<p>October, 2003: Notes on <a href="Apollonian-Gasket/">Apollonian Gaskets</a>.</p>
-
-	<p>September 15, 2003: Thoughts on <a href="Snake-Counting/">Snakes Counting</a>.</p>
-
-	<p>Fall 2003 <a href="To-Do-List/">To Do</a> List.</p>
-
-	<h3>2004 Open Questions that Intrest Me</h3>
-
-	<p><a href="Newtons-Recurrance">Newton's Recurrance</a></p>
-
-	<p><a href="Multivariable-Quadratics-Solution-Graphs">Multivariable Quadratics Solution Graphs</a></p>
-
-	<p><a href="Integer-Sequences">Sequences that are integers for no good reason</a>.</p>
-
-	<p><a href="Dionysian-Gasket">Dionysian &quot;Gasket&quot;s</a></p>
-
-
-	<h3>Writeups</h3>
-
-	<p><a href="writeups/newton-with-a-vengance.pdf">Newton's Method as a Formal
-	    Recurrance (non-commuting section)</a>
-	  (<a href="writeups/newton-with-a-vengance.tex">tex</a> &amp;
-	  <a href="writeups/newton-with-a-vengance.bib">bib</a>)</p>
-
-	<p><a href="writeups/dana_scott.pdf">The Dana Scott Recurrance</a>
-	  (<a href="writeups/dana_scott.tex">tex</a>)</p>
-
-	<p><a href="writeups/newtons-recurrence.pdf">Newton's Recurrence</a>
-	  (<a href="writeups/newtons-recurrence.tex">tex</a>)</p>
-
-	<hr>	
-	<p><a href="images/">Random SSL-Related Images</a></p>
-
-	<p><a href="diary/">Record of hours worked</a>.</p>
-	<p>&nbsp;</p>
-	<p>&nbsp;</p>
-    </div>
-  </body>
+</body>
 </html>

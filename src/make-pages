@@ -38,12 +38,13 @@ def write_file(filepath, filecontent):
     directory = os.path.dirname(filepath)
     if os.path.exists(filepath):
         if filecontent == read_file(filepath):
-            return
+            return False
     if not os.path.exists(directory):
         os.makedirs(directory)
     kwargs = dict(encoding='utf-8') if PY3 else dict()
     with open(filepath, 'w', **kwargs) as o:
         o.write(filecontent)
+    return True
 
 def read_file(filepath, binary=False):
     assert os.path.exists(filepath)
@@ -86,19 +87,20 @@ def main():
         if not path.endswith(suffix):
             continue
         dst = path[:-len(suffix)]
-        sys.stdout.write(dst +'\n')
         src = 'src/pages/%s.md' % dst
         assert os.path.exists(src)
         content = pipe_process(read_file(root + src), MARKDOWN_CMD)
         title = get_first_h1(content)
         assert title
-        write_file(root + dst + '/index.html', page_template.format(
-            years=years,
-            title=title,
-            icon=icon,
-            style=style,
-            svg=svg,
-            content=content))
+        svg_value = '' if any(dst == d or dst.startswith(d + '/') for d in ['SSL', 'mathapplets', 'u']) else svg
+        if write_file(root + dst + '/index.html', page_template.format(
+                years=years,
+                title=title,
+                icon=icon,
+                style=style,
+                svg=svg_value,
+                content=content)):
+            sys.stdout.write(dst +'\n')
 
 if __name__ == '__main__':
     main()
