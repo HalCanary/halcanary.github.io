@@ -3,67 +3,98 @@ TITLE=Not another calendar reform
 DATE=2007-10-26 16:45:39
 POSTID=705
 CATEGORIES=new-standards;
-MODE=htmldiv
 
-<p>A proposal for a better calendar.  (If we didn't have the Gregorian calendar already and wanted to start from scratch.)</p>
-<pre>
-No      Name            Days
---      ----            ----
-01      January         30
-02      February        31
-03      March           30
-04      April           31
-05      May             30
-06      June            31
-07      July            30
-08      August          31
-09      September       30
-10      October         31
-11      November        30
-12      December        30 or 31
-</pre>
-<p>This would space out the months more equitably.  Almost all two-month periods would be exactly 61 days, the exception being December in non-leap years.  </p>
-<p>I would define January 1 to be the day after the Winter Solstice (at a fixed zero meridian).  So all dates would be around ten days off from the Gregorain calendar.</p>
-<p>As a result of this rule there would be around 8 leap days every 33 years, similar to how the Iranian/Persian/Jal&#0257;l&#0299; Calendar works.</p>
-<p>* * *</p>
-<p>Of course the final calendar we will all come to accept millennia from now will probably simply be <a href="http://en.wikipedia.org/wiki/International_Atomic_Time">TAI</a> with picosecond precision, expressed as a number of seconds since some <a href="http://en.wikipedia.org/wiki/Epoch_%28reference_date%29">fixed instant</a>.  Then calculating intervals become trivially simple, and we will just ignore where the sun is.</p>
-<p>* * *</p>
-<p>Additional, optional rules to make this a perpetual calendar:  January 1 is always a Saturday.  Then on 365-day years, you would get two Saturdays in a row:</p>
-<pre>12-29 12-30 | 01-01 01-02 01-03
- Fri   Sat  |  Sat   Sun   Mon</pre>
-<p>Or a double weekend on leap years:</p>
-<pre>12-29 12-30 12-31 | 01-01 01-02 01-03
- Fri   Sat   Sun  |  Sat   Sun   Mon</pre>
-<p>* * *</p>
-<p>Note that one could make the existing Gregorian Calendar into a perpetual calendar by defining March 1 as always a Saturday.</p>
-<pre>02-27 02-28 | 03-01 03-02 03-03
- Fri   Sat  |  Sat   Sun   Mon</pre>
-<pre>02-27 02-28 02-29 | 03-01 03-02 03-03
- Fri   Sat   Sun  |  Sat   Sun   Mon</pre>
-<p>* * *</p>
-<p><strong>UPDATE 2008-10-25:</strong> Here's very simple python code to give the month, day, and week, given the day of year.</p>
-<pre># returns (month, day&#0045;of&#0045;month, weekday)
-# given day&#0045;of&#0045;year
-def dayandmonth(yday):
-    assert (yday &gt; 0) and (yday &lt; 367)
-    da = ((yday &#0045; 1) % 61) + 1
-    mo = (((yday &#0045; 1) // 61 ) * 2) + 1
-    if (da &gt; 30):
-        da = da &#0045; 30
-        mo = mo + 1
-    wd = (yday &#0045; 1) % 7 +1
-    return (mo, da, wd)
-</pre>
-<p>And a leap year function:</p>
-<pre># offset is determined by solar
-# observations at the reference
-# longitude
-def isleapyear(y):
-   offset = 2
-   y = (y + offset) % 33
-   if (y != 32) and ((y % 4) == 0):
-        return True
-   else:
-        return False</pre>
-<p>Every 10,000 years, the offset may need to be changed.  After 100,000 years, a new algorithm will likely be necessary </p>
+A proposal for a better calendar. (If we didn't have the Gregorian calendar
+already and wanted to start from scratch.)
 
+    No      Name            Days
+    --      ----            ----
+    01      January         30
+    02      February        31
+    03      March           30
+    04      April           31
+    05      May             30
+    06      June            31
+    07      July            30
+    08      August          31
+    09      September       30
+    10      October         31
+    11      November        30
+    12      December        30 or 31
+
+This would space out the months more equitably. Almost all two-month periods
+would be exactly 61 days, the exception being December in non-leap years.
+
+I would define January 1 to be the day after the Winter Solstice (at a fixed
+zero meridian). So all dates would be around ten days off from the Gregorain
+calendar.
+
+As a result of this rule there would be around 8 leap days every 33 years,
+similar to how the Iranian/Persian/Jalālī Calendar works.
+
+* * *
+
+Of course the final calendar we will all come to accept millennia from now will
+probably simply be
+[TAI](http://en.wikipedia.org/wiki/International_Atomic_Time) with picosecond
+precision, expressed as a number of seconds since some [fixed
+instant](http://en.wikipedia.org/wiki/Epoch_%28reference_date%29). Then
+calculating intervals become trivially simple, and we will just ignore where
+the sun is.
+
+* * *
+
+Additional, optional rules to make this a perpetual calendar: January 1 is
+always a Saturday. Then on 365-day years, you would get two Saturdays in a row:
+
+    12-29 12-30 | 01-01 01-02 01-03
+     Fri   Sat  |  Sat   Sun   Mon
+
+Or a double weekend on leap years:
+
+    12-29 12-30 12-31 | 01-01 01-02 01-03
+     Fri   Sat   Sun  |  Sat   Sun   Mon
+
+* * *
+
+Note that one could make the existing Gregorian Calendar into a perpetual
+calendar by defining March 1 as always a Saturday.
+
+    02-27 02-28 | 03-01 03-02 03-03
+     Fri   Sat  |  Sat   Sun   Mon
+
+    02-27 02-28 02-29 | 03-01 03-02 03-03
+     Fri   Sat   Sun  |  Sat   Sun   Mon
+
+* * *
+
+**UPDATE 2008-10-25:** Here's very simple python code to give the month, day,
+and week, given the day of year.
+
+    # returns (month, day-of-month, weekday)
+    # given day-of-year
+    def dayandmonth(yday):
+        assert (yday > 0) and (yday < 367)
+        da = ((yday - 1) % 61) + 1
+        mo = (((yday - 1) // 61 ) \* 2) + 1
+        if (da > 30):
+            da = da - 30
+            mo = mo + 1
+        wd = (yday - 1) % 7 +1
+        return (mo, da, wd)
+
+And a leap year function:
+
+    # offset is determined by solar
+    # observations at the reference
+    # longitude
+    def isleapyear(y):
+       offset = 2
+       y = (y + offset) % 33
+       if (y != 32) and ((y % 4) == 0):
+            return True
+       else:
+            return False
+
+Every 10,000 years, the offset may need to be changed. After 100,000 years, a
+new algorithm will likely be necessary
