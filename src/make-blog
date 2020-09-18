@@ -323,7 +323,7 @@ if __name__ == '__main__':
             '<h1><a href="/{}/" class="hiddenlink">Voder-Vocoder</a> Archive by Category</h1>'.format(
             BASE_DIR))
         o.write("\n\n<ul>\n")
-        for cat, count in categories.items():
+        for cat, count in sorted(categories.items()):
             o.write('<li><a href="/{0}/category/{1}/">#{1} ({2})</a></li>\n'.format(
                     BASE_DIR, cat, count))
         o.write(('</ul>\n<hr class="black">\n' +
