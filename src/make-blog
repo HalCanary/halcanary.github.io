@@ -87,7 +87,8 @@ class UpdatingFile(object):
         return self
 
     def __exit__(self, type, value, traceback):
-        self.close()
+        if self.close():
+            sys.stdout.write('modified %s\n' % self.path)
 
     def close(self):
         if self.o is not None:
@@ -216,6 +217,9 @@ class Post(object):
         if self.title is None:
             raise Exception('TITLE missing ({})'.format(path))
 
+        if not self.category_list :
+            self.category_list.append('uncategorized')
+
         timestamp = datetime.datetime.strptime(self.date.split()[0], '%Y-%m-%d').date()
         self.year  = '{:04d}'.format(timestamp.year)
         self.month = '{:02d}'.format(timestamp.month)
@@ -224,12 +228,10 @@ class Post(object):
         self.permalinkpart = '{}/{}/{}/{}/{}/'.format(BASE_DIR, self.year, self.month, self.day, postid)
 
     def write_to_file(self, output_path):
-        o = UpdatingFile(output_path)
-        o.write(header.format(title='Voder-Vocoder: ' + self.title, style=style, years=self.year + '-' + current_year))
-        Post.write(o, vars(self), 1)
-        o.write('\n<p>(<a href="/{}/archives/">back</a>)</p>\n</body>\n</html>\n'.format(BASE_DIR))
-        if o.close():
-            sys.stdout.write('modified %s\n' % o.path)
+        with UpdatingFile(output_path) as o:
+            o.write(header.format(title='Voder-Vocoder: ' + self.title, style=style, years=self.year + '-' + current_year))
+            Post.write(o, vars(self), 1)
+            o.write('\n<p>(<a href="/{}/archives/">back</a>)</p>\n</body>\n</html>\n'.format(BASE_DIR))
 
 class RecentPosts(object):
     def __init__(self):
@@ -237,14 +239,12 @@ class RecentPosts(object):
     def addPost(self, post):
         self.posts.append(post)
     def close(self):
-        o = UpdatingFile('{}/index.html'.format(BASE_DIR))
-        o.write(header.format(style=style, title='Voder-Vocoder', years='1997-' + current_year))
-        o.write(top_posts_header)
-        for post in self.posts:
-            Post.write(o, vars(post), 2)
-        o.write(top_posts_footer)
-        if o.close():
-            sys.stdout.write('modified %s\n' % o.path)
+        with UpdatingFile('{}/index.html'.format(BASE_DIR)) as o:
+            o.write(header.format(style=style, title='Voder-Vocoder', years='1997-' + current_year))
+            o.write(top_posts_header)
+            for post in self.posts:
+                Post.write(o, vars(post), 2)
+            o.write(top_posts_footer)
 
 def addPost(indices, pathlist, name, post):
     info = {k: vars(post)[k] for k in ['permalinkpart', 'year', 'title', 'summary', 'date']}
@@ -254,26 +254,24 @@ def addPost(indices, pathlist, name, post):
 def write_indices(indices):
     for pathlist, (name, posts) in indices.items():
         loc = '{}/{}/index.html'.format(BASE_DIR, '/'.join(pathlist))
-        o = UpdatingFile(loc)
-        o.write(header.format(style=style, title='Voder-Vocoder Archive', years='1997-' + current_year))
-        name = '<br>' + name if name else ''
-        o.write('<h1><a href="/{d}/" class="hiddenlink">Voder-Vocoder</a> Archive {name}</h1>'.format(
-            d=BASE_DIR, name=name))
-        for year in sorted(posts.keys(), reverse=True):
-            year_posts = posts[year]
-            if len(posts) > 1:
-                o.write('<h2>{year}</h2>\n'.format(year=year))
-            o.write('<ul>\n')
-            for post in year_posts:
-                s = '  <div>{}</div>'.format(post['summary']) if post['summary'] else ''
-                fmt = '<li>\n  <a href="/{permalinkpart}">{title}</a>\n  {date}\n{s}\n</li>\n'
-                o.write(fmt.format(s=s, **post))
-            o.write('</ul>\n\n')
-        o.write('<hr class="black">\n' +
-                '<p class="centered"><a href="../">UP</a></p>\n' +
-                '</body>\n</html>\n')
-        if o.close():
-            sys.stdout.write('modified %s\n' % loc)
+        with UpdatingFile(loc) as o:
+            o.write(header.format(style=style, title='Voder-Vocoder Archive', years='1997-' + current_year))
+            name = '<br>' + name if name else ''
+            o.write('<h1><a href="/{d}/" class="hiddenlink">Voder-Vocoder</a> Archive {name}</h1>'.format(
+                d=BASE_DIR, name=name))
+            for year in sorted(posts.keys(), reverse=True):
+                year_posts = posts[year]
+                if len(posts) > 1:
+                    o.write('<h2>{year}</h2>\n'.format(year=year))
+                o.write('<ul>\n')
+                for post in year_posts:
+                    s = '  <div>{}</div>'.format(post['summary']) if post['summary'] else ''
+                    fmt = '<li>\n  <a href="/{permalinkpart}">{title}</a>\n  {date}\n{s}\n</li>\n'
+                    o.write(fmt.format(s=s, **post))
+                o.write('</ul>\n\n')
+            o.write('<hr class="black">\n' +
+                    '<p class="centered"><a href="../">UP</a></p>\n' +
+                    '</body>\n</html>\n')
 
 def listdir(path, reverse=False):
     assert os.path.isdir(path)
@@ -311,7 +309,7 @@ if __name__ == '__main__':
             addPost(indices, ('archives',), '', post)
             for cat in post.category_list:
                 addPost(indices, ('category', cat), '#' + cat, post)
-                categories[cat] = 1 + categories.get(cat, 0) 
+                categories[cat] = 1 + categories.get(cat, 0)
         else:
             sys.stderr.write("???? %s\n" % path)
     recentPosts.close()
@@ -324,11 +322,11 @@ if __name__ == '__main__':
         o.write(
             '<h1><a href="/{}/" class="hiddenlink">Voder-Vocoder</a> Archive by Category</h1>'.format(
             BASE_DIR))
-        o.write("\n\n<ul>\n") 
+        o.write("\n\n<ul>\n")
         for cat, count in categories.items():
             o.write('<li><a href="/{0}/category/{1}/">#{1} ({2})</a></li>\n'.format(
                     BASE_DIR, cat, count))
-        o.write('</ul>\n<hr class="black">\n' +
+        o.write(('</ul>\n<hr class="black">\n' +
                 '<p class="centered"><a href="/{}/">BACK</a></p>\n' +
-                '</body>\n</html>\n'.format(BASE_DIR))
-    
+                '</body>\n</html>\n').format(BASE_DIR))
+
