@@ -15,7 +15,7 @@ to sqrt(), s(), c(), a(), l(), and e().</p>
 <pre>a^b = e^( b * ln(a) ),</pre>
 <p>I can define a new fucntion---</p>
 <pre>define pow(a,b) { return e(b*l(a)); } </pre>
-<p>---for my power function.  While I was at it, I went ahead and created<br />
+<p> — for my power function.  While I was at it, I went ahead and created<br />
 defininitions for the most common trig functions:</p>
 <pre>
 #DTPD#

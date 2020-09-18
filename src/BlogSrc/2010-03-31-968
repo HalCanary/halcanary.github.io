@@ -2,7 +2,7 @@ COPYRIGHT=Copyright Hal Canary / ALL RIGHTS RESERVED
 TITLE=bourne shell absolute path
 DATE=2010-03-31 10:20:12
 POSTID=968
-CATEGORIES=uncategorized;
+CATEGORIES=
 
     #!/bin/sh
     abspath () {

@@ -94,7 +94,7 @@ writer.Write()
 print 'wrote to', outputName
 </code></pre>
 <p>The surface can be viewed in Paraview or <a href="https://github.com/HalCanary/vtkviewer">vtkviewer</a>.</p>
-<p><img src="https://halcanary.org/images/vtkviewer0.png" alt="[]" /></p>
+<p><img src="/images/vtkviewer0.png" alt="[]" /></p>
 <p>To make this surface look better, calculate the normals. The (unnormalized) normal direction is (-∂f/∂x,-∂f/∂y,1).</p>
 <pre><code>.......
 def partial(func,v,i):
@@ -122,7 +122,7 @@ normals.SetNumberOfTuples(resolution\*\*2)
 polyData.GetPointData().SetNormals(normals)
 .......
 </code></pre>
-<p><img src="https://halcanary.org/images/vtkviewer.png" alt="[]" /></p>
+<p><img src="/images/vtkviewer.png" alt="[]" /></p>
   </div>
 </article>
 

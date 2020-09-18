@@ -48,7 +48,7 @@ I wanted to get a better view at monge patch (a surface defined by (_x_,_y_,_f_(
 
 The surface can be viewed in Paraview or [vtkviewer](https://github.com/HalCanary/vtkviewer).
 
-![[]](https://halcanary.org/images/vtkviewer0.png)
+![[]](/images/vtkviewer0.png)
 
 To make this surface look better, calculate the normals. The (unnormalized) normal direction is (-∂f/∂x,-∂f/∂y,1).
 
@@ -78,4 +78,4 @@ To make this surface look better, calculate the normals. The (unnormalized) norm
     polyData.GetPointData().SetNormals(normals)
     .......
 
-![[]](https://halcanary.org/images/vtkviewer.png)
+![[]](/images/vtkviewer.png)
