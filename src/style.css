@@ -122,3 +122,7 @@ table.border tr td, table.border tr th {
 .nolink a:link:active, .nolink a:visited:active, .nolink a:link:hover, .nolink a:visited:hover {
     text-decoration: underline;
 }
+div.lcr {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
