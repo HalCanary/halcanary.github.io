@@ -99,5 +99,10 @@ window.addEventListener("load", () => {
     appendLinkPar(target,
                   "https://www.google.com/search?tbm=bks&q=isbn:"+ isbn,
                   "ISBN " + isbn + " @ books.google.com");
+    if (title) {
+        appendLinkPar(target,
+                      "https://en.wikipedia.org/w/index.php?search=" + encodeURI(title),
+                      "Wikipedia Search: \"" + title + "\"")
+    }
 });
 </script>

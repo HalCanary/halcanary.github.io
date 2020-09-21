@@ -137,7 +137,7 @@ class Post(object):
     <!-- SRC= {src} -->
     <h{level} class="blogtitle">{title}</h{level}>
 {summ}
-    <div class="byline">
+    <div class="byline nolink">
       <div>by: Hal Canary</div>
       <div>posted: {date}</div>
       <div>link: <a href="/{permalinkpart}">{URL_BASE}/{permalinkpart}</a></div>
@@ -175,6 +175,8 @@ class Post(object):
         self.post = None
         self.title = None
         self.year = None
+        self.next = None
+        self.prev = None
 
         postid = None
         mode = 'markdown'
@@ -228,10 +230,22 @@ class Post(object):
         self.permalinkpart = '{}/{}/{}/{}/{}/'.format(BASE_DIR, self.year, self.month, self.day, postid)
 
     def write_to_file(self, output_path):
+        def linker(post):
+            return '(<a href="/{}">{}</a>)'.format(post.permalinkpart, post.title) if post else ''
+
+        up = '(<a href="/{}/archives/">back</a>)'.format(BASE_DIR)
         with UpdatingFile(output_path) as o:
             o.write(header.format(title='Voder-Vocoder: ' + self.title, style=style, years=self.year + '-' + current_year))
             Post.write(o, vars(self), 1)
-            o.write('\n<p>(<a href="/{}/archives/">back</a>)</p>\n</body>\n</html>\n'.format(BASE_DIR))
+            o.write('''
+<div class="lcr">
+  <div><p>{prev}</p></div>
+  <div class="centered"><p>{up}</p></div>
+  <div class="rightside"><p>{next}</p></div>
+</div>
+</body>
+</html>
+'''.format(prev=linker(self.prev), next=linker(self.next), up=up))
 
 class RecentPosts(object):
     def __init__(self):
@@ -292,26 +306,32 @@ if __name__ == '__main__':
     recentPosts = RecentPosts()
     categories = dict()
     years = set()
-    for i, path in enumerate(listdir(directory, reverse=True)):
+    all_posts = []
+    for path in listdir(directory, reverse=True):
         if path[-1] == '~':
             continue
         if os.path.isfile(path):
-            post = Post(path)
-            post.write_to_file(post.permalinkpart + 'index.html')
-
-            if i < 10:
-                recentPosts.addPost(post)
-            ymd = [post.year, post.month, post.day]
-            years.add(int(post.year, 10))
-            addPost(indices, tuple(ymd[0:1]),       '{}'.format(*ymd), post)
-            addPost(indices, tuple(ymd[0:2]),    '{}-{}'.format(*ymd), post)
-            addPost(indices, tuple(ymd[0:3]), '{}-{}-{}'.format(*ymd), post)
-            addPost(indices, ('archives',), '', post)
-            for cat in post.category_list:
-                addPost(indices, ('category', cat), '#' + cat, post)
-                categories[cat] = 1 + categories.get(cat, 0)
+            all_posts.append(Post(path))
         else:
             sys.stderr.write("???? %s\n" % path)
+
+    for i, post in enumerate(all_posts):
+        post.next = all_posts[i - 1] if i > 0 else None
+        post.prev = all_posts[i + 1] if i + 1 < len(all_posts) else None
+
+    for i, post in enumerate(all_posts):
+        post.write_to_file(post.permalinkpart + 'index.html')
+        if i < 10:
+            recentPosts.addPost(post)
+        ymd = [post.year, post.month, post.day]
+        years.add(int(post.year, 10))
+        addPost(indices, tuple(ymd[0:1]),       '{}'.format(*ymd), post)
+        addPost(indices, tuple(ymd[0:2]),    '{}-{}'.format(*ymd), post)
+        addPost(indices, tuple(ymd[0:3]), '{}-{}-{}'.format(*ymd), post)
+        addPost(indices, ('archives',), '', post)
+        for cat in post.category_list:
+            addPost(indices, ('category', cat), '#' + cat, post)
+            categories[cat] = 1 + categories.get(cat, 0)
     recentPosts.close()
     write_indices(indices)
 
