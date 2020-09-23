@@ -151,7 +151,7 @@ class Post(object):
     <!-- SRC= {src} -->
     <h{level} class="blogtitle">{title}</h{level}>
 {summ}
-    <div class="byline nolink">
+    <div class="byline plainlink">
       <div>
           Hal Canary<br>
           {date}<br>
@@ -258,7 +258,7 @@ class Post(object):
             Post.write(o, vars(self), 1)
             o.write('<nav>\n')
             o.write(lcr(linker(self.prev), up, linker(self.next)))
-            o.write('\n</nav>\n</body>\n</html>a')
+            o.write('\n</nav>\n</body>\n</html>')
 
 class RecentPosts(object):
     def __init__(self):

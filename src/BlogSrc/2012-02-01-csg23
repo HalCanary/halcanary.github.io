@@ -3,7 +3,7 @@ TITLE=rosetta stone
 DATE=2012-02-01 12:00:00
 POSTID=csg23
 
-<table><tbody>
+<table class="border"><tbody>
 <tr><th>Language</th><th>Null Pointer</th></tr>
 <tr><td>C/C++</td><td>NULL</td></tr>
 <tr><td>Java</td><td>null</td></tr>

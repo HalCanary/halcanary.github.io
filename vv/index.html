@@ -18,24 +18,32 @@ hr {border-style:solid none;}
 .rightside {text-align:right;}
 .centered {text-align:center;}
 pre {overflow-x:auto;}
-.byline div {display:inline-block;border:1px solid black;padding:3px 8px;border-radius:5px;text-align:left;}
+.byline > * {display:inline-block;border-style:solid;border-width:thin;padding:3px 8px;border-radius:5px;text-align:initial;}
 .byline {text-align:right;}
 a.hiddenlink:link {background:inherit;color:inherit;text-decoration:none;}
 a.hiddenlink:visited {background:inherit;color:inherit;text-decoration:none;}
 a.hiddenlink:active {background:inherit;color:inherit;text-decoration:none;}
 ul,ol {padding-left:30px;}
 table.border {border-collapse:collapse;margin:8px auto;}
-table.border tr td, table.border tr th {border:1px solid black;padding:3px 8px;}
+table.border tr > * {border-style:solid;border-width:thin;padding:3px 8px;border-radius:5px;}
 .tophead {text-align:center;margin:1ex auto 0 auto;max-width:35em;}
 .tightmargins li > ul > li {list-style-type:square;}
-.tightmargins h1, .tightmargins h2, .tightmargins p, .tightmargins ul {margin:1ex 0;}
+.tightmargins h1,
+.tightmargins h2,
+.tightmargins p,
+.tightmargins ul {margin:1ex 0;}
 .tightmargins li > ul {margin:0 0 0.5ex 0;}
 .tightmargins ul {padding-left:30px;}
 .tightmargins li {margin:0 0 0.5ex 0;}
-.nolink a:link, .nolink a:visited {color:inherit;text-decoration:none;}
-.nolink a:link:active, .nolink a:visited:active, .nolink a:link:hover, .nolink a:visited:hover {text-decoration:underline;}
+.plainlink a:link,
+.plainlink a:visited,
+.plainlink a:hover,
+.plainlink a:active {color:inherit;text-decoration:underline;}
+.nolink a:link,
+.nolink a:visited,
+.nolink a:hover,
+.nolink a:active {color:inherit;text-decoration:none;}
 div.lcr {display:grid;grid-template-columns:auto auto auto;}
-.sro {position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden;}
 ul.flat {list-style-type:none;margin:16px 0;padding:0;}
 ul.flat li {display:inline;}
 ul.flat li::after {content:"]";}
@@ -86,7 +94,7 @@ ul.flat li::before {content:"[";}
     <!-- SRC= 2020-08-25-3020 -->
     <h2 class="blogtitle">A flag for the US Democratic Party</h2>
     <p>a proposal</p>
-    <div class="byline nolink">
+    <div class="byline plainlink">
       <div>
           Hal Canary<br>
           2020-08-25 22:47:17 -0400 (EDT)<br>
@@ -106,7 +114,7 @@ ul.flat li::before {content:"[";}
     <!-- SRC= 2020-08-07-3019 -->
     <h2 class="blogtitle">Randolph Warner Church Jr.</h2>
     <p>Remembering my uncle.</p>
-    <div class="byline nolink">
+    <div class="byline plainlink">
       <div>
           Hal Canary<br>
           2020-08-07 16:35:38 -0400 (EDT)<br>
@@ -150,7 +158,7 @@ function toggleElement(toggler, contentID, hideMsg, showMsg) {
     <!-- SRC= 2020-07-17-3018 -->
     <h2 class="blogtitle">High Priority Constitutional Amendments</h2>
     <p>A list of things that we should be seriously working on</p>
-    <div class="byline nolink">
+    <div class="byline plainlink">
       <div>
           Hal Canary<br>
           2020-07-17 12:42:25 -0400 (EDT)<br>
@@ -207,7 +215,7 @@ function toggleElement(toggler, contentID, hideMsg, showMsg) {
     <!-- SRC= 2020-07-14-3017 -->
     <h2 class="blogtitle">Standard Space Habitats</h2>
     <p>A refinement of O'Neill's colonies.</p>
-    <div class="byline nolink">
+    <div class="byline plainlink">
       <div>
           Hal Canary<br>
           2020-07-14 13:06:25 -0400 (EDT)<br>
@@ -237,7 +245,7 @@ function toggleElement(toggler, contentID, hideMsg, showMsg) {
     <!-- SRC= 2020-07-13-3016 -->
     <h2 class="blogtitle">Banking Manifesto</h2>
     <p>I lay out a proposal to change the US banking system for the better.</p>
-    <div class="byline nolink">
+    <div class="byline plainlink">
       <div>
           Hal Canary<br>
           2020-07-13 08:53:45 -0400 (EDT)<br>
@@ -309,7 +317,7 @@ function toggleElement(toggler, contentID, hideMsg, showMsg) {
     <!-- SRC= 2020-04-03-3014 -->
     <h2 class="blogtitle">EM Ratio, again</h2>
     <p>US Employment-Population Ratio (ages 25-54 Yrs), last 25 Years</p>
-    <div class="byline nolink">
+    <div class="byline plainlink">
       <div>
           Hal Canary<br>
           2020-04-03 22:04:48 -0400 (EDT)<br>
@@ -329,7 +337,7 @@ function toggleElement(toggler, contentID, hideMsg, showMsg) {
     <!-- SRC= 2019-04-06-3013 -->
     <h2 class="blogtitle">Electoral reform</h2>
     <p>another proposed change to our constitution</p>
-    <div class="byline nolink">
+    <div class="byline plainlink">
       <div>
           Hal Canary<br>
           2019-04-06 18:24:00 -0400 (EDT)<br>
@@ -377,7 +385,7 @@ none-of-the-above voting is allowed. The polls should be open for a week.</p>
     <!-- SRC= 2019-04-06-3012 -->
     <h2 class="blogtitle">Obit</h2>
     <p>This month marks a year since my father passed away.  For posterity, here is his obituary.</p>
-    <div class="byline nolink">
+    <div class="byline plainlink">
       <div>
           Hal Canary<br>
           2019-04-06 18:13:09 -0400 (EDT)<br>
@@ -437,7 +445,7 @@ Memphis, Tennessee, on July 13.</p>
     <!-- SRC= 2019-04-04-3011 -->
     <h2 class="blogtitle">Writing Prompt</h2>
     <p>time-traveling post-human nanotech robot</p>
-    <div class="byline nolink">
+    <div class="byline plainlink">
       <div>
           Hal Canary<br>
           2019-04-04 16:20:00 -0400 (EDT)<br>
@@ -466,7 +474,7 @@ Memphis, Tennessee, on July 13.</p>
     <!-- SRC= 2019-04-04-3010 -->
     <h2 class="blogtitle">Fixing the US Constitution</h2>
     <p>Proposals to think about when I get a chance to write them up.</p>
-    <div class="byline nolink">
+    <div class="byline plainlink">
       <div>
           Hal Canary<br>
           2019-04-04 16:17:00 -0400 (EDT)<br>

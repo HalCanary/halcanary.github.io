@@ -6,7 +6,7 @@ CATEGORIES=computers-code;
 MODE=htmldiv
 
 <p>I finally bought a DVD+-R/RW drive.  It even does dual-layer burning.  </p>
-<table>
+<table class="border">
 <tr>
 <th>Media	</th>
 <th>Cost	</th>
@@ -36,7 +36,7 @@ MODE=htmldiv
 <p>Additional research shows that I paid too much for that DVD-R spindel at the store.<br />
 <!--more--><br />
 <strong>UPDATE 2005-07-03:</strong>  Finding the cheapest source online, I get:</p>
-<table>
+<table class="border">
 <tr>
 <td colspan="6">(price includes shipping)</td>
 </tr>

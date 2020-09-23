@@ -11,7 +11,7 @@ MODE=htmldiv
      (population of this state) ) /
    ( (total number of electoral votes) / (total us pop) )
 </pre>
-<table>
+<table class="border">
 <tr>
 <th>State		</th>
 <th>votes/person</th>

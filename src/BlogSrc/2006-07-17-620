@@ -7,7 +7,7 @@ MODE=htmldiv
 
 <p>Same Population.</p>
 <p>But way too big.</p>
-<table>
+<table class="border">
 <tr>
 <th>				</th>
 <th>Population	</th>

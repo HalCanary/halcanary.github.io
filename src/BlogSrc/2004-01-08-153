@@ -6,7 +6,7 @@ CATEGORIES=computers-code;
 MODE=htmldiv
 
 <p>Here is a table of names I've given computers I've been responsible for:</p>
-<table>
+<table class="border">
 <tr>
 <th>Name</th>
 <th>CPU</th>

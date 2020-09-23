@@ -18,24 +18,32 @@ hr {border-style:solid none;}
 .rightside {text-align:right;}
 .centered {text-align:center;}
 pre {overflow-x:auto;}
-.byline div {display:inline-block;border:1px solid black;padding:3px 8px;border-radius:5px;text-align:left;}
+.byline > * {display:inline-block;border-style:solid;border-width:thin;padding:3px 8px;border-radius:5px;text-align:initial;}
 .byline {text-align:right;}
 a.hiddenlink:link {background:inherit;color:inherit;text-decoration:none;}
 a.hiddenlink:visited {background:inherit;color:inherit;text-decoration:none;}
 a.hiddenlink:active {background:inherit;color:inherit;text-decoration:none;}
 ul,ol {padding-left:30px;}
 table.border {border-collapse:collapse;margin:8px auto;}
-table.border tr td, table.border tr th {border:1px solid black;padding:3px 8px;}
+table.border tr > * {border-style:solid;border-width:thin;padding:3px 8px;border-radius:5px;}
 .tophead {text-align:center;margin:1ex auto 0 auto;max-width:35em;}
 .tightmargins li > ul > li {list-style-type:square;}
-.tightmargins h1, .tightmargins h2, .tightmargins p, .tightmargins ul {margin:1ex 0;}
+.tightmargins h1,
+.tightmargins h2,
+.tightmargins p,
+.tightmargins ul {margin:1ex 0;}
 .tightmargins li > ul {margin:0 0 0.5ex 0;}
 .tightmargins ul {padding-left:30px;}
 .tightmargins li {margin:0 0 0.5ex 0;}
-.nolink a:link, .nolink a:visited {color:inherit;text-decoration:none;}
-.nolink a:link:active, .nolink a:visited:active, .nolink a:link:hover, .nolink a:visited:hover {text-decoration:underline;}
+.plainlink a:link,
+.plainlink a:visited,
+.plainlink a:hover,
+.plainlink a:active {color:inherit;text-decoration:underline;}
+.nolink a:link,
+.nolink a:visited,
+.nolink a:hover,
+.nolink a:active {color:inherit;text-decoration:none;}
 div.lcr {display:grid;grid-template-columns:auto auto auto;}
-.sro {position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden;}
 ul.flat {list-style-type:none;margin:16px 0;padding:0;}
 ul.flat li {display:inline;}
 ul.flat li::after {content:"]";}
@@ -50,7 +58,7 @@ ul.flat li::before {content:"[";}
     <!-- SRC= 2005-01-12-387 -->
     <h1 class="blogtitle">Sorry to delve back into politics...</h1>
 
-    <div class="byline nolink">
+    <div class="byline plainlink">
       <div>
           Hal Canary<br>
           2005-01-12 19:15:49<br>
@@ -74,4 +82,4 @@ ul.flat li::before {content:"[";}
 </div>
 </nav>
 </body>
-</html>a
+</html>

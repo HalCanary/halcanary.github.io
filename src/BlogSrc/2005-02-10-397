@@ -3,31 +3,34 @@ TITLE=icky shiz ...or... burning audio in linux
 DATE=2005-02-10 14:27:10
 POSTID=397
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<p>I've used itunes at my parents house to burn audio CDs.  It works nicely.  At home, I use Rhythmbox, which has no such ability. Here's how I do it.</p>
-<p>Create a nice 80-minute playlist.  SAve it to /home/hal/tmp/x.</p>
-<p>Run this script:</p>
-<pre>
-#!/bin/sh
-# $HOME/bin/make-audio-cd-from-playlist.sh
-grep  '=file://' $1 | awk -F '//' '{print $2}' &gt; tmp-file
-i=1
-for LINE in $(cat tmp-file) ; do
-    if [ "$i" -lt 10 ] ; then
-	FILENAME="track_0${i}.wav"
-    else
-	FILENAME="track_${i}.wav"
-    fi
-    lame --decode "$LINE" $FILENAME
-    i=$(($i+1))
-done
-cdrecord dev=/dev/cdwriter -pad -v -audio track_??.wav
-</pre>
-<p>And then:</p>
-<pre>
-$ cd  /home/hal/tmp/
-$ make-audio-cd-from-playlist.sh x
-</pre>
-<p><span style="color:red">UPDATE</span>: Recent versions of Rhythmbox have the ability to burn audio CDs.</p>
+I've used itunes at my parents house to burn audio CDs. It works nicely. At
+home, I use Rhythmbox, which has no such ability. Here's how I do it.
 
+Create a nice 80-minute playlist. SAve it to /home/hal/tmp/x.
+
+Run this script:
+
+    #!/bin/sh
+    # $HOME/bin/make-audio-cd-from-playlist.sh
+    grep '=file://' $1 | awk -F '//' '{print $2}' > tmp-file
+    i=1
+    for LINE in $(cat tmp-file) ; do
+        if [ "$i" -lt 10 ] ; then
+        FILENAME="track_0${i}.wav"
+        else
+        FILENAME="track_${i}.wav"
+        fi
+        lame --decode "$LINE" $FILENAME
+        i=$(($i+1))
+    done
+    cdrecord dev=/dev/cdwriter -pad -v -audio track_??.wav
+
+And then:
+
+    $ cd  /home/hal/tmp/
+    $ make-audio-cd-from-playlist.sh x
+
+* * *
+
+**UPDATE**: Recent versions of Rhythmbox have the ability to burn audio CDs.
