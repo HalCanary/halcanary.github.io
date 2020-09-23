@@ -2,33 +2,50 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>World of Hal Canary</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Copyright 1997-2020 Hal Canary. ALL RIGHTS RESERVED. -->
+<title>Hal W. Canary, III</title>
 <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==">
 <style>
-body {
-font-family:sans-serif;
-max-width:35em;
-margin:8px auto;
-padding:0 8px; 
-}
-img {
-max-width:100%;
-height:auto;
-}
+@media print {body {max-width:8in;font-size:12px;}}
+@media screen {body {font-family:sans-serif;max-width:35em;margin:22px auto 64px auto;padding:0 8px;}}
+body {overflow-wrap:break-word;}
+@page {size:auto;margin:0.25in 0.5in 0.5in 0.5in;}
+img {max-width:100%;height:auto;}
+hr {border-style:solid none;}
+.content {margin:1em 0;}
+.content hr {padding:0;margin:0;border:none;text-align:center;}
+.content hr:after {font-size:150%;content:"* \A0 * \A0 *";display:block;position:relative;}
+.rightside {text-align:right;}
+.centered {text-align:center;}
+.postbox {border-bottom-style:solid;border-bottom-width:2px;margin:0 0 6px 0;padding:0 0 0 0;}
+pre {overflow-x:auto;}
+.byline div {display:inline-block;border:1px solid black;padding:3px 8px;border-radius:5px;text-align:left;}
+.byline {text-align:right;}
+a.hiddenlink:link {background:inherit;color:inherit;text-decoration:none;}
+a.hiddenlink:visited {background:inherit;color:inherit;text-decoration:none;}
+a.hiddenlink:active {background:inherit;color:inherit;text-decoration:none;}
+ul,ol {padding-left:30px;}
+table.border {border-collapse:collapse;margin:8px auto;}
+table.border tr td, table.border tr th {border:1px solid black;padding:3px 8px;}
+.tophead {text-align:center;margin:1ex auto 0 auto;max-width:35em;}
+.tightmargins li > ul > li {list-style-type:square;}
+.tightmargins h1, .tightmargins h2, .tightmargins p, .tightmargins ul {margin:1ex 0;}
+.tightmargins li > ul {margin:0 0 0.5ex 0;}
+.tightmargins ul {padding-left:30px;}
+.tightmargins li {margin:0 0 0.5ex 0;}
+.nolink a:link, .nolink a:visited {color:inherit;text-decoration:none;}
+.nolink a:link:active, .nolink a:visited:active, .nolink a:link:hover, .nolink a:visited:hover {text-decoration:underline;}
+div.lcr {display:grid;grid-template-columns:auto auto auto;}
+.sro {position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden;}
+ul.flat {list-style-type:none;margin:16px 0;padding:0;}
+ul.flat li {display:inline;}
+ul.flat li::after {content:"]";}
+ul.flat li::before {content:"[";}
 </style>
-<script>
-function search_hco() {
-  const f = (i, d) => document.getElementById(i).style.display = d;
-  f("search-link-halcanary-org", "none");
-  f("search-halcanary-org", "block");
-  return false;
-}
-</script>
 </head>
 <body>
-
-<h1><a href="/" class="hiddenlink">
+<div class="tophead" role="banner">
 <svg aria-label="Hal W Canary 3" role="img" viewBox="-200 0 800 91" width="100%">
 <title>Hal W Canary 3</title>
 <rect style="fill:white" height="91" x="-200" width="800" />
@@ -80,74 +97,37 @@ C 325 43 324 42 322 43 C 319 45 322 52 323 54 C 324 58 327 59 328 63 C 329 67
 375 71 C 383 67 399 55 393 45 C 390 38 382 37 380 31 C 384 29 394 26 395 20 C
 395 17 392 15 389 13 C 384 9 378 6 372 10 " style="fill:black" />
 </svg>
-</a></h1>
-
-<nav><p><a href="./">Home</a> |
-<a href="vv/">The Log</a> |
-<a href="vv/archives/">Log Archives</a> |
-<a href="resume">Résumé</a> |
-<a href="p/contact">Contact Info</a> |
-<a href="p/key">Public Key</a>
-<span id="search-link-halcanary-org"> |
-<button onclick="return search_hco();">Search</button></span></p>
-<div id="search-halcanary-org" style="display:none;text-align:right">
-<form method="get" action="https://www.google.com/search">
-<input name="domains" value="halcanary.org" type="hidden" />
-<input name="sitesearch" value="halcanary.org" type="hidden" />
-<input id="search" name="q" size="30" maxlength="255" />
-<input value="Search" type="submit" />
-</form>
-</div></nav>
-
-<p class="centered">
-<img src="/photos/2012-01-02_212724_dscn0815_LindsayHal_GrandCanyon0_939.jpg"
-     alt="[photo of me and wife, Grand Canyon, 2012-01-02]"
-     title="[photo of me and wife, Grand Canyon, 2012-01-02]"
-     width="939" height="704">
-</p>
+</div>
+<div role="main">
+<div style="display:none">
+<h1>Hal W. Canary, III</h1>
+</div>
+<p><img src="/photos/2012-01-02_212724_dscn0815_LindsayHal_GrandCanyon0_939.jpg" alt="[photo of me and wife, Grand Canyon, 2012-01-02]" title="[photo of me and wife, Grand Canyon, 2012-01-02]" /></p>
 <h2>current status:</h2>
 <p>I currently live in Durham, North Carolina, with my wife, two children, and dog.</p>
 <h2>index:</h2>
-<p>You should checkout my <a href="portfolio/">portfolio</a>.</p><p>Maybe you want <a href="vv/">my Web Log</a>.</p><p>Maybe you want <a href="resume">my resume</a>.</p><p>Maybe you want <a href="p/contact">my contact info</a>.</p><p>Maybe you want my <a href="mathapplets/">Math Applets</a> or <a href="SSL/">SSL</a> pages.</p>
+<p>You should checkout my <a href="/portfolio/">portfolio</a>.</p>
+<p>Maybe you want <a href="/vv/">my Web Log</a>.</p>
+<p>Maybe you want <a href="/resume/">my resume</a>.</p>
+<p>Maybe you want <a href="/p/contact/">my contact info</a>.</p>
+<p>Maybe you want my <a href="/mathapplets/">Math Applets</a> or <a href="/SSL/">SSL</a> pages.</p>
+<div role="search">
+<button onclick="this.style.display='none';document.getElementById('search-hco').style.display='block';">Search</button>
+<div id="search-hco" style="display:none;text-align:right">
+<form method="get" action="https://www.google.com/search">
+<input name="domains" value="halcanary.org" type="hidden">
+<input name="sitesearch" value="halcanary.org" type="hidden">
+<input id="search" name="q" size="30" maxlength="255">
+<input value="Search" type="submit">
+</form>
+</div>
+</div>
+<hr />
+<div class="rightside">
+<p><em>Copyright 1997-2020 Hal W Canary III</em><br />
+<em>All rights reserved</em></p>
+</div>
 
-<div style="text-align:center"><pre style="text-align:left;display:inline-block;">
-<span style="font-size:75%">-----BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA512</span><span style="font-family:sans-serif;">
-
-Hal W. Canary III
-
-<a href="mailto:halcanary@gmail.com">mailto:halcanary@gmail.com</a>
-<a href="tel:+1-919-724-2801">tel:+1-919-724-2801</a>
-<a href="https://halcanary.org/">https://halcanary.org/</a>
-
-he/him
-father, husband, software engineer
-1978
-Lives in: Durham, NC, US
-From: Memphis, TN, US
-PGP: 9E4B56B252BA5544135A6146BDA20B3DBAF71EE3
-
-<a href="https://github.com/halcanary">https://github.com/halcanary</a>
-<a href="https://gitlab.com/halcanary">https://gitlab.com/halcanary</a>
-<a href="https://twitter.com/halcanary">https://twitter.com/halcanary</a>
-<a href="https://www.facebook.com/hal.canary">https://www.facebook.com/hal.canary</a>
-<a href="https://www.linkedin.com/in/halcanary">https://www.linkedin.com/in/halcanary</a>
-</span><span style="font-size:75%;">-----BEGIN PGP SIGNATURE-----
-
-iQGzBAEBCgAdFiEEnktWslK6VUQTWmFGvaILPbr3HuMFAl7NHlUACgkQvaILPbr3
-HuNKJQv+ME30Iiv/MlrD+E84l90HthSaMLqDvOGBBY3vKPgKgERtfrmgawq6GE7s
-/95F+eDzfeeTVvkdnvC+D/7G6Npu1hvrn8w4GI4wjqrcUjnZZ3V5JkcQO08RQ+jv
-4/QBYbE3iHNhxWlka3QvGPixI/C3ho2l5saznM2Y+rE2+zwP5QrjMeP9CSwCWoE9
-fVPu5JIofKNxk17XWSwdm/JCFiULXEPdWYFoGmqa2iPYw1aY5RuMJoIobbWPRXMt
-2Hz0a3fEqkKSYfu11AbFFar7L7qaSNWC4zBoCqkxUNuiHLnGQCzyhYzRdOAIQ90+
-SAIzTQMq4rAUl+UqU9ez3TP4ncPxjPRpsZu+MsakiD7+zuDRgSBtb30GE+nSEloQ
-Mf4BiRqNKiEuAb3bQfkdc6Q754XDxJ5IqcuQsW8dmrDzREaWIiFSg1tYKXX9cJAc
-hHmQzFdoaAy+CxHdBJRGkow3UPYQ3XvDukBvFQuGosWioIm2rozAD/MiKaoP6Izt
-EAc9CVEN
-=zf/M
------END PGP SIGNATURE-----
-</span></pre></div>
-
-<p class="centered">Copyright 1997-2020 by Hal Canary.</p>
+</div>
 </body>
 </html>
