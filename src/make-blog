@@ -144,7 +144,7 @@ class Post(object):
         # keys = [ 'src', 'permalinkpart', 'title', 'summary', 'date', 'category_list', 'post' ]
         summ = '    <p>{}</p>'.format(post_info['summary']) if post_info['summary'] else ''
         post_template = """
-<article class="postbox" id="{fragment}">
+<article id="{fragment}">
   <header>
     <!-- SRC= {src} -->
     <h{level} class="blogtitle">{title}</h{level}>
@@ -162,6 +162,7 @@ class Post(object):
 {post}
   </div>
 </article>
+<hr>
 """
         o.write(post_template.format(level=level, categories=categories, summ=summ,
                                      URL_BASE=URL_BASE, **post_info))
@@ -266,10 +267,10 @@ class RecentPosts(object):
         with UpdatingFile('{}/index.html'.format(BASE_DIR)) as o:
             o.write(header.format(style=style, title='Voder-Vocoder', years=get_years()))
             o.write(top_posts_header)
-            o.write('<nav class="postbox">\n<ul class="flat">\n')
+            o.write('<nav>\n<ul class="flat">\n')
             for post in self.posts:
                 o.write('<li><a href="#{}">{}</a></li>\n'.format(post.fragment, post.title))
-            o.write('</ul>\n</nav>\n')
+            o.write('</ul>\n</nav>\n<hr>\n')
             for post in self.posts:
                 Post.write(o, vars(post), 2)
             o.write(top_posts_footer)

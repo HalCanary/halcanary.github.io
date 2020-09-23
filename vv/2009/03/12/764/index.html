@@ -17,7 +17,6 @@ hr {border-style:solid none;}
 .content hr:after {font-size:150%;content:"* \A0 * \A0 *";display:block;position:relative;}
 .rightside {text-align:right;}
 .centered {text-align:center;}
-.postbox {border-bottom-style:solid;border-bottom-width:2px;margin:0 0 6px 0;padding:0 0 0 0;}
 pre {overflow-x:auto;}
 .byline div {display:inline-block;border:1px solid black;padding:3px 8px;border-radius:5px;text-align:left;}
 .byline {text-align:right;}
@@ -46,7 +45,7 @@ ul.flat li::before {content:"[";}
 <!-- Copyright 2002-2020 Hal Canary. ALL RIGHTS RESERVED. -->
 <body>
 
-<article class="postbox" id="2009_03_12_764">
+<article id="2009_03_12_764">
   <header>
     <!-- SRC= 2009-03-12-764 -->
     <h1 class="blogtitle">fsck and tunefs</h1>
@@ -76,6 +75,7 @@ sudo tune2fs -c 150 /dev/sda1</pre>
 <p><strong>UPDATE (2011-04-11):</strong>  I later realized that the fscks were being triggered at mount time by /ets/fstab.  &ldquo;The sixth field, (fs_passno), is used by the fsck(8) program to determine the order in which filesystem checks are done at reboot time.&rdquo;</p>
   </div>
 </article>
+<hr>
 <nav>
 <div class="lcr">
   <div><p>(<a href="/vv/2009/03/12/763/">reading lately?</a>)</p></div>

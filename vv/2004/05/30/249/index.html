@@ -17,7 +17,6 @@ hr {border-style:solid none;}
 .content hr:after {font-size:150%;content:"* \A0 * \A0 *";display:block;position:relative;}
 .rightside {text-align:right;}
 .centered {text-align:center;}
-.postbox {border-bottom-style:solid;border-bottom-width:2px;margin:0 0 6px 0;padding:0 0 0 0;}
 pre {overflow-x:auto;}
 .byline div {display:inline-block;border:1px solid black;padding:3px 8px;border-radius:5px;text-align:left;}
 .byline {text-align:right;}
@@ -46,7 +45,7 @@ ul.flat li::before {content:"[";}
 <!-- Copyright 2002-2020 Hal Canary. ALL RIGHTS RESERVED. -->
 <body>
 
-<article class="postbox" id="2004_05_30_249">
+<article id="2004_05_30_249">
   <header>
     <!-- SRC= 2004-05-30-249 -->
     <h1 class="blogtitle">Xlib:  extension "GLX" missing</h1>
@@ -67,6 +66,7 @@ ul.flat li::before {content:"[";}
 <p>But alas, Xorg X11 was using the file <code>/usr/X11R6/lib/modules/extensions/libglx.so.1.0.5336</code>, left over from the proprietary driver.  I deleted this file, restarted X11, and it all workes correctly!  I have a fast enough processor that most small openGL apps work fine without hardware acceleration.</p>
   </div>
 </article>
+<hr>
 <nav>
 <div class="lcr">
   <div><p>(<a href="/vv/2004/05/26/248/">department of redundant redundant URL department.</a>)</p></div>
