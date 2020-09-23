@@ -270,9 +270,10 @@ class RecentPosts(object):
             o.write('<nav>\n<ul class="flat">\n')
             for post in self.posts:
                 o.write('<li><a href="#{}">{}</a></li>\n'.format(post.fragment, post.title))
-            o.write('</ul>\n</nav>\n<hr>\n')
+            o.write('</ul>\n</nav>\n<hr>\n<div role="main">\n')
             for post in self.posts:
                 Post.write(o, vars(post), 2)
+            o.write('</div>\n')
             o.write(top_posts_footer)
 
 def writeIndex(loc, title, post_list, prev_next):
