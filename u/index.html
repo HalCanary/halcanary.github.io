@@ -11,8 +11,7 @@
 @media screen {body {font-family:sans-serif;max-width:35em;margin:22px auto 64px auto;padding:0 8px;}}
 body {overflow-wrap:break-word;}
 @page {size:auto;margin:0.25in 0.5in 0.5in 0.5in;}
-img {max-width:100%;height:auto;background-color:#DDD;}
-img:before {content:"missing image\0A" attr(src);display:inline-block;padding:3px 8px;margin:8px 0;color:#000;background-color:#DDD;white-space:pre-line;}
+img {max-width:100%;height:auto;}
 hr {border-style:solid none;}
 .content {margin:1em 0;}
 .content hr {padding:0;margin:0;border:none;text-align:center;}
@@ -21,7 +20,8 @@ hr {border-style:solid none;}
 .centered {text-align:center;}
 .postbox {border-bottom-style:solid;border-bottom-width:2px;margin:0 0 6px 0;padding:0 0 0 0;}
 pre {overflow-x:auto;}
-.byline {background:#fff;color:#888;}
+.byline div {display:inline-block;border:1px solid black;padding:3px 8px;border-radius:5px;text-align:left;}
+.byline {text-align:right;}
 a.hiddenlink:link {background:inherit;color:inherit;text-decoration:none;}
 a.hiddenlink:visited {background:inherit;color:inherit;text-decoration:none;}
 a.hiddenlink:active {background:inherit;color:inherit;text-decoration:none;}
@@ -51,7 +51,7 @@ ul.flat li::before {content:"[";}
 <div role="main">
 <h1>Various Unicode Characters</h1>
 <p>– — • ‣</p>
-<p>← ↑ → ↓ ↔ ↕ ↤ ↥ ↦ ↧ ⇦ ⇧ ⇨ ⇩</p>
+<p>← ↑ → ↓ ↔ ↕ ↤ ↥ ↦ ↧ ⇦ ⇧ ⇨ ⇩ ⇒ ⇐ ⇑ ⇒ ⇓ ⇔</p>
 <p>⭑ ☐ ☑ ☒   ♠ ♥ ♦ ♣ ♤ ♡ ♢ ♧</p>
 <p>¬ ∧ ∨ ∩ ∪ ≤ ≥ ≪ ≫ ⊂ ⊃ ⊆ ⊇ ⊈ ⊄ ⊢ ⊅ ⊉ ≠ ≡ ≢ ∫ ∠ ∏ ∑ ∆ ∇ ∅ ∃ ∄ ∀
 ° ± · × ÷ ∖ ≔ ∈ ℝ ℕ ℤ ℂ ℚ ℍ ℧ √</p>
