@@ -3,7 +3,11 @@ TITLE=photos!
 DATE=2003-06-05 23:17:15
 POSTID=59
 CATEGORIES=photos;
-MODE=htmldiv
 
-<p><a href="/photos/2003-06-notebook-01.jpg">  <img alt="" src="/photos/thumb/2003-06-notebook-01.jpg" /></a> <a href="/photos/2003-06-notebook-02.jpg">  <img alt="" src="/photos/thumb/2003-06-notebook-02.jpg" /></a> <a href="/photos/2003-06-notebook-03.jpg">  <img alt="" src="/photos/thumb/2003-06-notebook-03.jpg" /></a> <a href="/photos/2003-06-notebook-04.jpg">  <img alt="" src="/photos/thumb/2003-06-notebook-04.jpg" /></a> <a href="/photos/2003-06-notebook-05.jpg">  <img alt="" src="/photos/thumb/2003-06-notebook-05.jpg" /></a> <a href="/photos/2003-06-notebook-06.jpg">  <img alt="" src="/photos/thumb/2003-06-notebook-06.jpg" /></a> <a href="/photos/2003-06-notebook-07.jpg">  <img alt="" src="/photos/thumb/2003-06-notebook-07.jpg" /></a></p>
-
+[![paper blog, page 1](/photos/thumb/2003-06-notebook-01.jpg)](/photos/2003-06-notebook-01.jpg)
+[![paper blog, page 2](/photos/thumb/2003-06-notebook-02.jpg)](/photos/2003-06-notebook-02.jpg)
+[![paper blog, page 3](/photos/thumb/2003-06-notebook-03.jpg)](/photos/2003-06-notebook-03.jpg)
+[![paper blog, page 4](/photos/thumb/2003-06-notebook-04.jpg)](/photos/2003-06-notebook-04.jpg)
+[![paper blog, page 5](/photos/thumb/2003-06-notebook-05.jpg)](/photos/2003-06-notebook-05.jpg)
+[![paper blog, page 6](/photos/thumb/2003-06-notebook-06.jpg)](/photos/2003-06-notebook-06.jpg)
+[![paper blog, page 7](/photos/thumb/2003-06-notebook-07.jpg)](/photos/2003-06-notebook-07.jpg)

@@ -13,7 +13,7 @@ Your challenge: make a pretty postscript picture as one tweet.  "%!\n"  is not n
     exch 1.01 mul exch 2 copy cos mul 3 copy pop sin mul
     lineto } repeat stroke showpage
 
-<img src="/images/postscriptChallenge_spiral.png" alt="" width="500" height="500">
+<img src="/images/postscriptChallenge_spiral.png" alt="program output" width="500" height="500">
 
 * * *
 
@@ -23,7 +23,7 @@ Your challenge: make a pretty postscript picture as one tweet.  "%!\n"  is not n
     /n 90 def 150 150 translate newpath n n moveto 36 { 170
     rotate n n lineto} repeat stroke showpage
 
-<img src="/images/postscriptChallenge_spirograph.png" alt="" width="300" height="300">
+<img src="/images/postscriptChallenge_spirograph.png" alt="program output" width="300" height="300">
 
 * * *
 
@@ -34,7 +34,7 @@ Your challenge: make a pretty postscript picture as one tweet.  "%!\n"  is not n
     rlineto closepath stroke } def 99 99 translate 0 1 5{60
     rotate -20 0 box}for showpage
 
-<img src="/images/postscriptChallenge_sixBoxes.png" alt="" width="200" height="200">
+<img src="/images/postscriptChallenge_sixBoxes.png" alt="program output" width="200" height="200">
 
 * * *
 
@@ -46,7 +46,7 @@ Your challenge: make a pretty postscript picture as one tweet.  "%!\n"  is not n
     show -18 rotate} forall
     showpage
 
-<img src="/images/postscriptChallenge_words.png" alt="" width="300" height="300">
+<img src="/images/postscriptChallenge_words.png" alt="program output" width="300" height="300">
 
 * * *
 

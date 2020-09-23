@@ -39,24 +39,22 @@ top_posts_header = """
 
 <div class="centered" roll="contentinfo">The Log of Hal Canary</div>
 
-<div class="postbox" roll="search">
-  <div id="search-link-halcanary-org">
-    <div class="rightside"><a href="#" onclick="document.getElementById('search-link-halcanary-org').style.display='none'; document.getElementById('search-halcanary-org').style.display='block'; return false;">search</a></div>
-  </div>
-  <div id="search-halcanary-org" style="display:none;">
-    <form method="get" action="https://www.google.com/search">
-      <div class="rightside">
-        <input name="domains" value="halcanary.org" type="hidden" />
-        <input name="sitesearch" value="halcanary.org" type="hidden" />
-        <input id="search" name="q" size="30" maxlength="255" />
-        <input value="Search" type="submit" />
-      </div>
-    </form>
-  </div>
+<div role="search">
+<button onclick="this.style.display='none';document.getElementById('search-hco').style.display='block';">Search</button>
+<div id="search-hco" style="display:none;text-align:right">
+<form method="get" action="https://www.google.com/search">
+<input name="domains" value="halcanary.org" type="hidden">
+<input name="sitesearch" value="halcanary.org" type="hidden">
+<input id="search" name="q" size="30" maxlength="255" aria-labelledby="submitter">
+<input value="Search" type="submit" id="submitter">
+</form>
 </div>
+</div>
+
+<hr>
 """
 top_posts_footer = """
-<nav class="centered"><a href="archives/">MORE</a></nav>
+<nav><p class="centered">(<a href="archives/">all posts</a>)</p></nav>
 </body>
 </html>
 """

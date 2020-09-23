@@ -3,7 +3,5 @@ TITLE=Business Card
 DATE=2003-10-19 14:36:12
 POSTID=128
 CATEGORIES=art;
-MODE=htmldiv
 
-<p><a href="/images/hal-business-card.png"> <img alt="" src="/images/hal-business-card-s.png" width="184" height="98" /></a> I made up new business cards this week.</p>
-
+[![hal canary business card 2003](/images/hal-business-card-s.png)](/images/hal-business-card.png) I made up new business cards this week.
