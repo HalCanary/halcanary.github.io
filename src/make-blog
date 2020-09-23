@@ -10,7 +10,11 @@ MARKDOWN_CMD = ['cmark']
 if float(re.sub(r'cmark (\d+\.\d+)\..*', r'\1', subprocess.check_output(['cmark', '--version']), flags=re.S)) >= 0.29:
     MARKDOWN_CMD = ['cmark', '--unsafe']
 
-current_year = '{:04d}'.format(datetime.date.today().year)
+current_year = datetime.date.today().year
+first_year = 1997
+
+def get_years():
+    return '{:04d}-{:04d}'.format(first_year, current_year)
 
 with open(os.path.dirname(__file__) + '/style.css') as f:
     style = re.sub(r'(^|:|;|{)\s+', r'\1', f.read(), flags=re.M).strip()
@@ -32,9 +36,10 @@ header = """<!DOCTYPE html>
 
 top_posts_header = """
 <h1>Voder-Vocoder</h1>
-<div class="byline centered">The Log of Hal Canary</div>
 
-<div class="postbox">
+<div class="centered" roll="contentinfo">The Log of Hal Canary</div>
+
+<div class="postbox" roll="search">
   <div id="search-link-halcanary-org">
     <div class="rightside"><a href="#" onclick="document.getElementById('search-link-halcanary-org').style.display='none'; document.getElementById('search-halcanary-org').style.display='block'; return false;">search</a></div>
   </div>
@@ -51,7 +56,7 @@ top_posts_header = """
 </div>
 """
 top_posts_footer = """
-<div class="centered"><a href="archives/">MORE</a></div>
+<nav class="centered"><a href="archives/">MORE</a></nav>
 </body>
 </html>
 """
@@ -72,6 +77,16 @@ def mkdirs(path):
         os.makedirs(path)
     except:
         pass
+
+def lcr(left, center, right):
+    left   = '<p>{}</p>'.format(left) if left else '&nbsp;'
+    center = '<p>{}</p>'.format(center) if center else '&nbsp;'
+    right  = '<p>{}</p>'.format(right) if right else '&nbsp;'
+    return '''<div class="lcr">
+  <div>{}</div>
+  <div class="centered">{}</div>
+  <div class="rightside">{}</div>
+</div>'''.format(left, center, right)
 
 class UpdatingFile(object):
     def __init__(self, path):
@@ -125,23 +140,24 @@ class Post(object):
         return s
 
     @staticmethod
-    def write(o, post_info, level):
-        category_fmt = '<a href="/{1}/category/{0}/" class="categorylink">#{0}</a>'
+    def write(o, post_info, level, identifier=None):
+        category_fmt = '<a href="/{1}/category/{0}/">#{0}</a>'
         categories = '; '.join(category_fmt.format(cat, BASE_DIR) for cat in post_info['category_list'])
-        categories = '      <div>{}</div>'.format(categories) if categories else ''
         # keys = [ 'src', 'permalinkpart', 'title', 'summary', 'date', 'category_list', 'post' ]
         summ = '    <p>{}</p>'.format(post_info['summary']) if post_info['summary'] else ''
         post_template = """
-<article class="postbox">
+<article class="postbox" id="{fragment}">
   <header>
     <!-- SRC= {src} -->
     <h{level} class="blogtitle">{title}</h{level}>
 {summ}
     <div class="byline nolink">
-      <div>by: Hal Canary</div>
-      <div>posted: {date}</div>
-      <div>link: <a href="/{permalinkpart}">{URL_BASE}/{permalinkpart}</a></div>
-{categories}
+      <div>
+          Hal Canary<br>
+          {date}<br>
+          <a href="/{permalinkpart}">{URL_BASE}/{permalinkpart}</a><br>
+          {categories}
+      </div>
     </div>
   </header>
   <div class="content">
@@ -223,29 +239,23 @@ class Post(object):
             self.category_list.append('uncategorized')
 
         timestamp = datetime.datetime.strptime(self.date.split()[0], '%Y-%m-%d').date()
-        self.year  = '{:04d}'.format(timestamp.year)
-        self.month = '{:02d}'.format(timestamp.month)
-        self.day   = '{:02d}'.format(timestamp.day)
+        self.year  = timestamp.year
+        self.month = timestamp.month
+        self.day   = timestamp.day
+        self.postid = postid
 
-        self.permalinkpart = '{}/{}/{}/{}/{}/'.format(BASE_DIR, self.year, self.month, self.day, postid)
+        self.permalinkpart = '{:s}/{:04d}/{:02d}/{:02d}/{:s}/'.format(BASE_DIR, self.year, self.month, self.day, postid)
+        self.fragment = '{:04d}_{:02d}_{:02d}_{:s}'.format(self.year, self.month, self.day, postid)
 
     def write_to_file(self, output_path):
         def linker(post):
-            return '(<a href="/{}">{}</a>)'.format(post.permalinkpart, post.title) if post else ''
+            return '(<a href="/{}">{}</a>)'.format(post.permalinkpart, post.title) if post else None
 
         up = '(<a href="/{}/archives/">back</a>)'.format(BASE_DIR)
         with UpdatingFile(output_path) as o:
-            o.write(header.format(title='Voder-Vocoder: ' + self.title, style=style, years=self.year + '-' + current_year))
+            o.write(header.format(title='Voder-Vocoder: ' + self.title, style=style, years=get_years()))
             Post.write(o, vars(self), 1)
-            o.write('''
-<div class="lcr">
-  <div><p>{prev}</p></div>
-  <div class="centered"><p>{up}</p></div>
-  <div class="rightside"><p>{next}</p></div>
-</div>
-</body>
-</html>
-'''.format(prev=linker(self.prev), next=linker(self.next), up=up))
+            o.write(lcr(linker(self.prev), up, linker(self.next)))
 
 class RecentPosts(object):
     def __init__(self):
@@ -254,38 +264,45 @@ class RecentPosts(object):
         self.posts.append(post)
     def close(self):
         with UpdatingFile('{}/index.html'.format(BASE_DIR)) as o:
-            o.write(header.format(style=style, title='Voder-Vocoder', years='1997-' + current_year))
+            o.write(header.format(style=style, title='Voder-Vocoder', years=get_years()))
             o.write(top_posts_header)
+            o.write('<nav class="postbox">\n<ul class="flat">\n')
+            for post in self.posts:
+                o.write('<li><a href="#{}">{}</a></li>\n'.format(post.fragment, post.title))
+            o.write('</ul>\n</nav>\n')
             for post in self.posts:
                 Post.write(o, vars(post), 2)
             o.write(top_posts_footer)
 
-def addPost(indices, pathlist, name, post):
-    info = {k: vars(post)[k] for k in ['permalinkpart', 'year', 'title', 'summary', 'date']}
-    _, posts = indices.setdefault(pathlist, (name, {}))
-    posts.setdefault(post.year, []).append(info)
+def writeIndex(loc, title, post_list, prev_next):
+    posts = index_by_keyfn(post_list, lambda p: [p.year])
+    with UpdatingFile(loc) as o:
+        o.write(header.format(style=style, title=title, years=get_years()))
+        o.write('\n<h1>{}</h1>\n\n'.format(title.replace('\n', '<br>')))
+        for year in sorted(posts.keys(), reverse=True):
+            year_posts = posts[year]
+            if len(posts) > 1:
+                o.write('<h2>{year:d}</h2>\n'.format(year=year))
+            o.write('<ul>\n')
+            for post in year_posts:
+                s = '  <div>{}</div>'.format(post.summary) if post.summary else ''
+                fmt = '<li>\n  <a href="/{permalinkpart}">{title}</a>\n  {date}\n{s}\n</li>\n'
+                o.write(fmt.format(s=s, **vars(post)))
+            o.write('</ul>\n\n')
+        previ, nexti = prev_next
+        o.write('<hr>\n')
+        up = '(<a href="../">UP</a>)'
 
-def write_indices(indices):
-    for pathlist, (name, posts) in indices.items():
-        loc = '{}/{}/index.html'.format(BASE_DIR, '/'.join(pathlist))
-        with UpdatingFile(loc) as o:
-            o.write(header.format(style=style, title='Voder-Vocoder Archive', years='1997-' + current_year))
-            name = '<br>' + name if name else ''
-            o.write('<h1><a href="/{d}/" class="hiddenlink">Voder-Vocoder</a> Archive {name}</h1>'.format(
-                d=BASE_DIR, name=name))
-            for year in sorted(posts.keys(), reverse=True):
-                year_posts = posts[year]
-                if len(posts) > 1:
-                    o.write('<h2>{year}</h2>\n'.format(year=year))
-                o.write('<ul>\n')
-                for post in year_posts:
-                    s = '  <div>{}</div>'.format(post['summary']) if post['summary'] else ''
-                    fmt = '<li>\n  <a href="/{permalinkpart}">{title}</a>\n  {date}\n{s}\n</li>\n'
-                    o.write(fmt.format(s=s, **post))
-                o.write('</ul>\n\n')
-            o.write('<hr class="black">\n' +
-                    '<p class="centered"><a href="../">UP</a></p>\n' +
-                    '</body>\n</html>\n')
+        def linker(key):
+            if not key:
+                return None
+            if not isinstance(key, tuple):
+                key = (key,)
+            k = tuple('{:02d}'.format(e) for e in key)
+            u, v = '/'.join(k), '-'.join(k)
+            return '(<a href="/{}/{}/">{}</a>)'.format(BASE_DIR, u, v)
+        o.write(lcr(linker(previ), up, linker(nexti)))
+        o.write('\n\n</body>\n</html>\n')
 
 def listdir(path, reverse=False):
     assert os.path.isdir(path)
@@ -293,6 +310,21 @@ def listdir(path, reverse=False):
     files.sort(reverse=reverse)
     for fn in files:
         yield os.path.join(path, fn)
+
+def makelinks(values):
+    result = dict()
+    sv = sorted(values)
+    for i, v in enumerate(sv):
+        result[v] = ( sv[i - 1] if i > 0 else None,
+                      sv[i + 1] if i + 1 < len(sv) else None )
+    return result
+
+def index_by_keyfn(posts, keys_fn):
+    result = dict()
+    for post in posts:
+        for key in keys_fn(post):
+            result.setdefault(key, []).append(post)
+    return result
 
 if __name__ == '__main__':
     src_dir = os.path.abspath(os.path.dirname(__file__))
@@ -302,10 +334,7 @@ if __name__ == '__main__':
     directory = source_location
     os.chdir(target_location)
     assert os.path.isdir(directory)
-    indices = {}
     recentPosts = RecentPosts()
-    categories = dict()
-    years = set()
     all_posts = []
     for path in listdir(directory, reverse=True):
         if path[-1] == '~':
@@ -318,35 +347,63 @@ if __name__ == '__main__':
     for i, post in enumerate(all_posts):
         post.next = all_posts[i - 1] if i > 0 else None
         post.prev = all_posts[i + 1] if i + 1 < len(all_posts) else None
-
-    for i, post in enumerate(all_posts):
-        post.write_to_file(post.permalinkpart + 'index.html')
         if i < 10:
             recentPosts.addPost(post)
-        ymd = [post.year, post.month, post.day]
-        years.add(int(post.year, 10))
-        addPost(indices, tuple(ymd[0:1]),       '{}'.format(*ymd), post)
-        addPost(indices, tuple(ymd[0:2]),    '{}-{}'.format(*ymd), post)
-        addPost(indices, tuple(ymd[0:3]), '{}-{}-{}'.format(*ymd), post)
-        addPost(indices, ('archives',), '', post)
-        for cat in post.category_list:
-            addPost(indices, ('category', cat), '#' + cat, post)
-            categories[cat] = 1 + categories.get(cat, 0)
-    recentPosts.close()
-    write_indices(indices)
 
+    posts_by_year     = index_by_keyfn(all_posts, lambda p: [p.year])
+    posts_by_month    = index_by_keyfn(all_posts, lambda p: [(p.year, p.month)])
+    posts_by_day      = index_by_keyfn(all_posts, lambda p: [(p.year, p.month, p.day)])
+    posts_by_category = index_by_keyfn(all_posts, lambda p: p.category_list)
+
+    first_year = min(posts_by_year.keys())
+
+    year_links = makelinks(posts_by_year.keys())
+    for year, posts in posts_by_year.items():
+        writeIndex('{}/{:04d}/index.html'.format(BASE_DIR, year),
+                   'Voder-Vocoder Archive\n{:04d}'.format(year),
+                   posts,
+                   year_links[year])
+
+    month_links = makelinks(posts_by_month.keys())
+    for (year, month), posts in posts_by_month.items():
+        writeIndex('{}/{:04d}/{:02d}/index.html'.format(BASE_DIR, year, month),
+                   'Voder-Vocoder Archive\n{:04d}-{:02d}'.format(year, month),
+                   posts,
+                   month_links[(year, month)])
+
+    day_links = makelinks(posts_by_day.keys())
+    for (year, month, day), posts in posts_by_day.items():
+        writeIndex('{}/{:04d}/{:02d}/{:02d}/index.html'.format(BASE_DIR, year, month, day),
+                   'Voder-Vocoder Archive\n{:04d}-{:02d}-{:02d}'.format(year, month, day),
+                   posts,
+                   day_links[(year, month, day)])
+
+    for cat, posts in posts_by_category.items():
+        writeIndex('{}/category/{}/index.html'.format(BASE_DIR, cat),
+                   'Voder-Vocoder Archive\n#{}'.format(cat),
+                   posts,
+                   (None, None))
+
+    writeIndex('{}/archives/index.html'.format(BASE_DIR),
+               'Voder-Vocoder Archives',
+                all_posts,
+                (None, None))
+
+    for post in all_posts:
+        post.write_to_file(post.permalinkpart + 'index.html')
+
+    recentPosts.close()
 
     with UpdatingFile('{}/category/index.html'.format(BASE_DIR)) as o:
-        o.write(header.format(title='categories', style=style,
-                              years=str(min(years)) + '-' + current_year))
+        o.write(header.format(title='categories', style=style, years=get_years()))
         o.write(
             '<h1><a href="/{}/" class="hiddenlink">Voder-Vocoder</a> Archive by Category</h1>'.format(
             BASE_DIR))
         o.write("\n\n<ul>\n")
-        for cat, count in sorted(categories.items()):
+        for cat, posts in sorted(posts_by_category.items()):
             o.write('<li><a href="/{0}/category/{1}/">#{1} ({2})</a></li>\n'.format(
-                    BASE_DIR, cat, count))
-        o.write(('</ul>\n<hr class="black">\n' +
+                    BASE_DIR, cat, len(posts)))
+        o.write(('</ul>\n<hr>\n' +
                 '<p class="centered"><a href="/{}/">BACK</a></p>\n' +
                 '</body>\n</html>\n').format(BASE_DIR))
 

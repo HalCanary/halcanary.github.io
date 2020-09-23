@@ -4,40 +4,4 @@ POSTID=3001
 CATEGORIES=
 SUMMARY=How can I contact Hal Canary?
 
-Phone
-
--   <tel:+1-919-724-2801>
-
-PGP Key
-
--   [4499ECF1](/p/key)   
-    fingerprint: B4E9 52DA 192C 4632 D772  0200 0670 403E 4499 ECF1
-
-HTTP
-
--   <https://halcanary.org/>
--   <http://cs.unc.edu/~hal/>
-
-Personal email
-
--   mailto: halcanary at gmail dot com
-
-Alternate email
-
--   mailto: hal at cs dot unc dot edu
--   mailto: canary at unc dot edu
--   mailto: halcanary at yahoo dot com
-
-Expired email
-
--   mailto: h3 at halcanary dot org
--   mailto: [*] at halcanary dot org
--   mailto: canary at email dot unc dot edu
--   mailto: big_geek at halcanary dot org
--   mailto: hwcanary at eagle dot fgcu dot edu
--   mailto: hal at ups dot physics dot wisc dot edu
--   mailto: hwcanary at students dot wisc dot edu
-
-Skype
-
--   skype: hal.canary
+See <https://halcanary.org/p/contact/>.

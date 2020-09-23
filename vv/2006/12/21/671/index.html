@@ -10,17 +10,17 @@
 @media screen {body {font-family:sans-serif;max-width:35em;margin:22px auto 64px auto;padding:0 8px;}}
 body {overflow-wrap:break-word;}
 @page {size:auto;margin:0.25in 0.5in 0.5in 0.5in;}
-hr.black {border:0;height:1px;color:#000;background-color:#000;}
-img {max-width:100%;height:auto;background-color:#DDD;}
-img:before {content:"missing image\0A" attr(src);display:inline-block;padding:3px 8px;margin:8px 0;color:#000;background-color:#DDD;white-space:pre-line;}
+img {max-width:100%;height:auto;}
+hr {border-style:solid none;}
 .content {margin:1em 0;}
-.content hr {padding:0;margin:0;border:none;text-align:center;color:black;}
+.content hr {padding:0;margin:0;border:none;text-align:center;}
 .content hr:after {font-size:150%;content:"* \A0 * \A0 *";display:block;position:relative;}
 .rightside {text-align:right;}
 .centered {text-align:center;}
-.postbox {border-bottom:6px solid #ddd;margin:0 0 6px 0;padding:0 0 0 0;}
+.postbox {border-bottom-style:solid;border-bottom-width:2px;margin:0 0 6px 0;padding:0 0 0 0;}
 pre {overflow-x:auto;}
-.byline {background:#fff;color:#888;}
+.byline div {display:inline-block;border:1px solid black;padding:3px 8px;border-radius:5px;text-align:left;}
+.byline {text-align:right;}
 a.hiddenlink:link {background:inherit;color:inherit;text-decoration:none;}
 a.hiddenlink:visited {background:inherit;color:inherit;text-decoration:none;}
 a.hiddenlink:active {background:inherit;color:inherit;text-decoration:none;}
@@ -36,21 +36,28 @@ table.border tr td, table.border tr th {border:1px solid black;padding:3px 8px;}
 .nolink a:link, .nolink a:visited {color:inherit;text-decoration:none;}
 .nolink a:link:active, .nolink a:visited:active, .nolink a:link:hover, .nolink a:visited:hover {text-decoration:underline;}
 div.lcr {display:grid;grid-template-columns:auto auto auto;}
+.sro {position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden;}
+ul.flat {list-style-type:none;margin:16px 0;padding:0;}
+ul.flat li {display:inline;}
+ul.flat li::after {content:"]";}
+ul.flat li::before {content:"[";}
 </style>
 </head>
-<!-- Copyright 2006-2020 Hal Canary. ALL RIGHTS RESERVED. -->
+<!-- Copyright 2002-2020 Hal Canary. ALL RIGHTS RESERVED. -->
 <body>
 
-<article class="postbox">
+<article class="postbox" id="2006_12_21_671">
   <header>
     <!-- SRC= 2006-12-21-671 -->
     <h1 class="blogtitle">Shavegeek.</h1>
 
     <div class="byline nolink">
-      <div>by: Hal Canary</div>
-      <div>posted: 2006-12-21 16:38:07</div>
-      <div>link: <a href="/vv/2006/12/21/671/">https://halcanary.org/vv/2006/12/21/671/</a></div>
-      <div><a href="/vv/category/life/" class="categorylink">#life</a></div>
+      <div>
+          Hal Canary<br>
+          2006-12-21 16:38:07<br>
+          <a href="/vv/2006/12/21/671/">https://halcanary.org/vv/2006/12/21/671/</a><br>
+          <a href="/vv/category/life/">#life</a>
+      </div>
     </div>
   </header>
   <div class="content">
@@ -64,11 +71,8 @@ div.lcr {display:grid;grid-template-columns:auto auto auto;}
 <p>I don't desire baby-smooth skin, which most shavegeeks go for.  The closer your shave is, the more irritation you will get.  So I shave in either one or two passes.  The first pass is with the grain and the second pass is perpendicular to the first.  I usually completely forgo the final against-the-grain pass that many shavegeeks seem to love.  When I am in a hurry I might even skip the second pass, too.</p>
   </div>
 </article>
-
 <div class="lcr">
   <div><p>(<a href="/vv/2006/12/18/670/">bedizened</a>)</p></div>
   <div class="centered"><p>(<a href="/vv/archives/">back</a>)</p></div>
   <div class="rightside"><p>(<a href="/vv/2006/12/27/672/">dealing with lots of arguments in bash</a>)</p></div>
 </div>
-</body>
-</html>

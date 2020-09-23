@@ -11,15 +11,15 @@
 @media screen {body {font-family:sans-serif;max-width:35em;margin:22px auto 64px auto;padding:0 8px;}}
 body {overflow-wrap:break-word;}
 @page {size:auto;margin:0.25in 0.5in 0.5in 0.5in;}
-hr.black {border:0;height:1px;color:#000;background-color:#000;}
 img {max-width:100%;height:auto;background-color:#DDD;}
 img:before {content:"missing image\0A" attr(src);display:inline-block;padding:3px 8px;margin:8px 0;color:#000;background-color:#DDD;white-space:pre-line;}
+hr {border-style:solid none;}
 .content {margin:1em 0;}
-.content hr {padding:0;margin:0;border:none;text-align:center;color:black;}
+.content hr {padding:0;margin:0;border:none;text-align:center;}
 .content hr:after {font-size:150%;content:"* \A0 * \A0 *";display:block;position:relative;}
 .rightside {text-align:right;}
 .centered {text-align:center;}
-.postbox {border-bottom:6px solid #ddd;margin:0 0 6px 0;padding:0 0 0 0;}
+.postbox {border-bottom-style:solid;border-bottom-width:2px;margin:0 0 6px 0;padding:0 0 0 0;}
 pre {overflow-x:auto;}
 .byline {background:#fff;color:#888;}
 a.hiddenlink:link {background:inherit;color:inherit;text-decoration:none;}
@@ -37,10 +37,15 @@ table.border tr td, table.border tr th {border:1px solid black;padding:3px 8px;}
 .nolink a:link, .nolink a:visited {color:inherit;text-decoration:none;}
 .nolink a:link:active, .nolink a:visited:active, .nolink a:link:hover, .nolink a:visited:hover {text-decoration:underline;}
 div.lcr {display:grid;grid-template-columns:auto auto auto;}
+.sro {position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden;}
+ul.flat {list-style-type:none;margin:16px 0;padding:0;}
+ul.flat li {display:inline;}
+ul.flat li::after {content:"]";}
+ul.flat li::before {content:"[";}
 </style>
 </head>
 <body>
-<div class="tophead">
+<div class="tophead" role="banner">
 <svg aria-label="Hal W Canary 3" role="img" viewBox="-200 0 800 91" width="100%">
 <title>Hal W Canary 3</title>
 <rect style="fill:white" height="91" x="-200" width="800" />
@@ -93,6 +98,7 @@ C 325 43 324 42 322 43 C 319 45 322 52 323 54 C 324 58 327 59 328 63 C 329 67
 395 17 392 15 389 13 C 384 9 378 6 372 10 " style="fill:black" />
 </svg>
 </div>
+<div role="main">
 <h1>How can I contact Hal Canary?</h1>
 <ul>
 <li>
@@ -126,6 +132,43 @@ C 325 43 324 42 322 43 C 319 45 322 52 323 54 C 324 58 327 59 328 63 C 329 67
 <p><a href="https://www.linkedin.com/in/halcanary">https://www.linkedin.com/in/halcanary</a></p>
 </li>
 </ul>
+<pre><code>-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
 
+Hal W. Canary III
+
+mailto:halcanary@gmail.com
+tel:+1-919-724-2801
+https://halcanary.org/
+
+he/him
+father, husband, software engineer
+1978
+Lives in: Durham, NC, US
+From: Memphis, TN, US
+PGP: 9E4B56B252BA5544135A6146BDA20B3DBAF71EE3
+
+https://github.com/halcanary
+https://gitlab.com/halcanary
+https://twitter.com/halcanary
+https://www.facebook.com/hal.canary
+https://www.linkedin.com/in/halcanary
+-----BEGIN PGP SIGNATURE-----
+
+iQGzBAEBCgAdFiEEnktWslK6VUQTWmFGvaILPbr3HuMFAl7NHlUACgkQvaILPbr3
+HuNKJQv+ME30Iiv/MlrD+E84l90HthSaMLqDvOGBBY3vKPgKgERtfrmgawq6GE7s
+/95F+eDzfeeTVvkdnvC+D/7G6Npu1hvrn8w4GI4wjqrcUjnZZ3V5JkcQO08RQ+jv
+4/QBYbE3iHNhxWlka3QvGPixI/C3ho2l5saznM2Y+rE2+zwP5QrjMeP9CSwCWoE9
+fVPu5JIofKNxk17XWSwdm/JCFiULXEPdWYFoGmqa2iPYw1aY5RuMJoIobbWPRXMt
+2Hz0a3fEqkKSYfu11AbFFar7L7qaSNWC4zBoCqkxUNuiHLnGQCzyhYzRdOAIQ90+
+SAIzTQMq4rAUl+UqU9ez3TP4ncPxjPRpsZu+MsakiD7+zuDRgSBtb30GE+nSEloQ
+Mf4BiRqNKiEuAb3bQfkdc6Q754XDxJ5IqcuQsW8dmrDzREaWIiFSg1tYKXX9cJAc
+hHmQzFdoaAy+CxHdBJRGkow3UPYQ3XvDukBvFQuGosWioIm2rozAD/MiKaoP6Izt
+EAc9CVEN
+=zf/M
+-----END PGP SIGNATURE-----
+</code></pre>
+
+</div>
 </body>
 </html>

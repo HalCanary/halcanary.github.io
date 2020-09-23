@@ -65,10 +65,12 @@ page_template = """<!DOCTYPE html>
 </style>
 </head>
 <body>
-<div class="tophead">
+<div class="tophead" role="banner">
 {svg}
 </div>
+<div role="main">
 {content}
+</div>
 </body>
 </html>
 """
