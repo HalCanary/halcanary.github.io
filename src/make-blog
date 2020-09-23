@@ -35,7 +35,9 @@ header = """<!DOCTYPE html>
 """
 
 top_posts_header = """
+<header>
 <h1>Voder-Vocoder</h1>
+</header>
 
 <div class="centered" role="contentinfo">The Log of Hal Canary</div>
 
@@ -54,7 +56,7 @@ top_posts_header = """
 <hr>
 """
 top_posts_footer = """
-<nav><p class="centered">(<a href="archives/">all posts</a>)</p></nav>
+<nav aria-label="External Navigation"><p class="centered">(<a href="archives/">all posts</a>)</p></nav>
 </body>
 </html>
 """
