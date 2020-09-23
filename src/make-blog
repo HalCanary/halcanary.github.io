@@ -37,7 +37,7 @@ header = """<!DOCTYPE html>
 top_posts_header = """
 <h1>Voder-Vocoder</h1>
 
-<div class="centered" roll="contentinfo">The Log of Hal Canary</div>
+<div class="centered" role="contentinfo">The Log of Hal Canary</div>
 
 <div role="search">
 <button onclick="this.style.display='none';document.getElementById('search-hco').style.display='block';">Search</button>
@@ -253,7 +253,9 @@ class Post(object):
         with UpdatingFile(output_path) as o:
             o.write(header.format(title='Voder-Vocoder: ' + self.title, style=style, years=get_years()))
             Post.write(o, vars(self), 1)
+            o.write('<nav>\n')
             o.write(lcr(linker(self.prev), up, linker(self.next)))
+            o.write('\n</nav>\n</body>\n</html>a')
 
 class RecentPosts(object):
     def __init__(self):
@@ -277,6 +279,7 @@ def writeIndex(loc, title, post_list, prev_next):
     with UpdatingFile(loc) as o:
         o.write(header.format(style=style, title=title, years=get_years()))
         o.write('\n<h1>{}</h1>\n\n'.format(title.replace('\n', '<br>')))
+        o.write('<div role="main">\n')
         for year in sorted(posts.keys(), reverse=True):
             year_posts = posts[year]
             if len(posts) > 1:
@@ -287,6 +290,7 @@ def writeIndex(loc, title, post_list, prev_next):
                 fmt = '<li>\n  <a href="/{permalinkpart}">{title}</a>\n  {date}\n{s}\n</li>\n'
                 o.write(fmt.format(s=s, **vars(post)))
             o.write('</ul>\n\n')
+        o.write('</div>\n')
         previ, nexti = prev_next
         o.write('<hr>\n')
         up = '(<a href="../">UP</a>)'
@@ -299,8 +303,9 @@ def writeIndex(loc, title, post_list, prev_next):
             k = tuple('{:02d}'.format(e) for e in key)
             u, v = '/'.join(k), '-'.join(k)
             return '(<a href="/{}/{}/">{}</a>)'.format(BASE_DIR, u, v)
+        o.write('<nav>\n')
         o.write(lcr(linker(previ), up, linker(nexti)))
-        o.write('\n\n</body>\n</html>\n')
+        o.write('\n</nav>\n\n</body>\n</html>\n')
 
 def listdir(path, reverse=False):
     assert os.path.isdir(path)

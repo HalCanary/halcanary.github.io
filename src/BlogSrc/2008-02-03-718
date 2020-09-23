@@ -5,7 +5,7 @@ POSTID=718
 CATEGORIES=computers-code;
 MODE=htmldiv
 
-<p><img src="/images/randomness-app.png" alt=iscreenshot of app" /></p>
+<p><img src="/images/randomness-app.png" alt="screenshot of app" /></p>
 <pre>#!/usr/bin/env python
 
 # Randoms - Copyright 2008 Hal Canary
