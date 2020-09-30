@@ -6,10 +6,17 @@
 <title>Voder-Vocoder</title>
 <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==">
 <style>
-@media print {body {max-width:8in;font-size:12px;}}
-@media screen {body {font-family:sans-serif;max-width:35em;margin:22px auto 64px auto;padding:0 8px;}}
+@media (prefers-color-scheme:dark) {body {background-color:#000;color:#FFF;}
+a:visited {color:#C0F;}
+a:link, a:hover, a:active {color:#0CF;}
+}
+@media print {body {max-width:8in;font-size:12px;}
+}
+@media screen {body {font-family:sans-serif;max-width:35em;margin:22px auto 64px auto;padding:0 8px;}
+}
 body {overflow-wrap:break-word;}
 @page {size:auto;margin:0.25in 0.5in 0.5in 0.5in;}
+svg {fill:currentColor;}
 img {max-width:100%;height:auto;}
 hr {border-style:solid none;}
 .content {margin:1em 0;}
@@ -74,6 +81,7 @@ ul.flat li::before {content:"[";}
 <hr>
 <nav>
 <ul class="flat">
+<li><a href="#2020_09_30_3021">Dark Mode</a></li>
 <li><a href="#2020_08_25_3020">A flag for the US Democratic Party</a></li>
 <li><a href="#2020_08_07_3019">Randolph Warner Church Jr.</a></li>
 <li><a href="#2020_07_17_3018">High Priority Constitutional Amendments</a></li>
@@ -83,11 +91,35 @@ ul.flat li::before {content:"[";}
 <li><a href="#2019_04_06_3013">Electoral reform</a></li>
 <li><a href="#2019_04_06_3012">Obit</a></li>
 <li><a href="#2019_04_04_3011">Writing Prompt</a></li>
-<li><a href="#2019_04_04_3010">Fixing the US Constitution</a></li>
 </ul>
 </nav>
 <hr>
 <div role="main">
+
+<article id="2020_09_30_3021">
+  <header>
+    <!-- SRC= 2020-09-30-3021 -->
+    <h2 class="blogtitle">Dark Mode</h2>
+    <p>adding dark mode to this site.</p>
+    <div class="byline plainlink">
+      <div>
+          Hal Canary<br>
+          2020-09-30 09:32:32 -0400 (EDT)<br>
+          <a href="/vv/2020/09/30/3021/">https://halcanary.org/vv/2020/09/30/3021/</a><br>
+          <a href="/vv/category/meta/">#meta</a>
+      </div>
+    </div>
+  </header>
+  <div class="content">
+<p>I added a <code>@media (prefers-color-scheme: dark) {...}</code> block to this site's CSS. The tough part was to make the SVG fill color respect that.  But it turns out that if you just style the svg element with</p>
+<pre><code>svg {
+    fill: currentColor;    
+}
+</code></pre>
+<p>and remove all style information in the SVG itself, then it works as expected.</p>
+  </div>
+</article>
+<hr>
 
 <article id="2020_08_25_3020">
   <header>
@@ -465,75 +497,6 @@ Memphis, Tennessee, on July 13.</p>
 <p>For example, if PHNR observes a conspiracy to commit a murder, they may choose to send an anonymous letter to the local police so they can attempt to prevent the crime.  If PHNR observes a crime, it can send a tip to the cops describeing the event and where evidence may be found.</p>
 <p>PHNR uses this power judiciously: they never snitch on victimless criminals, rarely on minor crimes, never when it would give away too much information about their abilities. PHNR never assists corrupt government officials. They also send tips to journalists occasionally, especially about corrupt politicians and officials.</p>
 <p>PHNR interferes in wars to give intelligence to the side it favors, if it favors one side. Otherwise it feeds information to civilian populations to help them avoid bombing and troop movements.</p>
-  </div>
-</article>
-<hr>
-
-<article id="2019_04_04_3010">
-  <header>
-    <!-- SRC= 2019-04-04-3010 -->
-    <h2 class="blogtitle">Fixing the US Constitution</h2>
-    <p>Proposals to think about when I get a chance to write them up.</p>
-    <div class="byline plainlink">
-      <div>
-          Hal Canary<br>
-          2019-04-04 16:17:00 -0400 (EDT)<br>
-          <a href="/vv/2019/04/04/3010/">https://halcanary.org/vv/2019/04/04/3010/</a><br>
-          <a href="/vv/category/politics/">#politics</a>
-      </div>
-    </div>
-  </header>
-  <div class="content">
-<ul>
-<li>
-<p>Affirmative right to vote and access.</p>
-</li>
-<li>
-<p>Secure voting systems with statistical tests for accuracy.</p>
-</li>
-<li>
-<p>Distinguish person vs legal entity.</p>
-</li>
-<li>
-<p>Nonpartisan ranked-voting primaries.</p>
-</li>
-<li>
-<p>Uniform ballot access rules for federal elections.</p>
-</li>
-<li>
-<p>Eliminate Electoral College.</p>
-</li>
-<li>
-<p>All US citizens over 18 can vote for president.</p>
-</li>
-<li>
-<p>Shorten time between primary and general election.</p>
-</li>
-<li>
-<p>20-year judicial terms.</p>
-</li>
-<li>
-<p>Automatic districting.</p>
-</li>
-<li>
-<p>House Districts cross state lines and include all incorporated territories.</p>
-</li>
-<li>
-<p>Senate districted same as house: 33 Senate districts with three senators per.</p>
-</li>
-<li>
-<p>Vice-congress-member elected: also sits on committees, but has no vote unless congress-member takes leave. Extra oversight.</p>
-</li>
-<li>
-<p>Senate has six months to vote on appointments before the appointment automatically goes into effect.</p>
-</li>
-<li>
-<p>Senate must have up-or-down vote on all passed house bills.</p>
-</li>
-<li>
-<p>Federal elected officials must use a true blind trust.</p>
-</li>
-</ul>
   </div>
 </article>
 <hr>
