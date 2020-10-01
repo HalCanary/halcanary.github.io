@@ -3,8 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Voder-Vocoder Archive
-#meta</title>
+<title>Voder-Vocoder: Blog/site update</title>
 <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==">
 <style>
 @media (prefers-color-scheme:dark) {body {background-color:#000;color:#FFF;}
@@ -61,137 +60,80 @@ ul.flat li::before {content:"[";}
 <!-- Copyright 2002-2020 Hal Canary. ALL RIGHTS RESERVED. -->
 <body>
 
-<h1>Voder-Vocoder Archive<br>#meta</h1>
-
-<div role="main">
-<h2>2020</h2>
+<article id="2020/10/01/3022">
+  <header>
+    <!-- SRC= 2020-10-01-3022 -->
+    <h1 class="blogtitle">Blog/site update</h1>
+    <p>summary of last few years of site changes.</p>
+    <div class="byline plainlink">
+      <div>
+          Hal Canary<br>
+          2020-10-01 10:41:46 -0400 (EDT)<br>
+          <a href="/vv/2020/10/01/3022/">https://halcanary.org/vv/2020/10/01/3022/</a><br>
+          <a href="/vv/category/meta/">#meta</a>
+      </div>
+    </div>
+  </header>
+  <div class="content">
+<p>I now host this site on Github, since it is free and fairly easy for me to use.
+I push the new version of the site with a simple <code>git push</code>.  I only pay for my
+domain name.</p>
+<p>I am still using the same blog builder Python script I wrote years ago, but
+I've refactored it a dozen times.  I also use a similar script to rebuild
+static pages from markdown source too.</p>
+<p>Other changes:</p>
 <ul>
 <li>
-  <a href="/vv/2020/10/01/3022/">Blog/site update</a>
-  2020-10-01 10:41:46 -0400 (EDT)
-  <div>summary of last few years of site changes.</div>
+<p>Colors are either default or white-on-black for dark mode.  Information
+that I used to de-emphasize with grey-on-white text is now put in a
+box.</p>
 </li>
 <li>
-  <a href="/vv/2020/09/30/3021/">Dark Mode</a>
-  2020-09-30 09:32:32 -0400 (EDT)
-  <div>adding dark mode to this site.</div>
-</li>
-</ul>
+<p>Switch from original-flavor Markdown to CommonMark.  Allows me to put
+markdown inside a <code>&lt;div&gt;</code>. For example:</p>
+<pre><code>&lt;div id=&quot;foobar&quot; style=&quot;display:none;&quot;&gt;
 
-<h2>2006</h2>
+&gt; Foo
+&gt; Bar
+
+&lt;/div&gt;
+&lt;button onclick=&quot;document.getElementById('foobar').style.display='block';&quot;&gt;
+SHOW
+&lt;/button&gt;
+</code></pre>
+</li>
+<li>
+<p>Reduce extra resources needed by a page:</p>
 <ul>
-<li>
-  <a href="/vv/2006/09/25/651/">#</a>
-  2006-09-25 13:06:50
-
+<li>The <code>&lt;link rel=&quot;icon&quot;&gt;</code> is now a <code>data:</code> URL.</li>
+<li>I inline all CSS.</li>
+<li>I also inline a SVG version of my written name on the static pages as a banner.
+Effort was made to minimize the size.  By vectorizing what was
+originally a scanned image, it is much smaller and looks really good on
+high-dpi screens.</li>
+</ul>
 </li>
 <li>
-  <a href="/vv/2006/09/14/637/">WordPress</a>
-  2006-09-14 00:44:24
-
+<p>Starting to try to meet accessibility standards.</p>
+</li>
+<li>
+<p>Replace <code>&lt;a href=&quot;&quot; onlick=&quot;....&quot;&gt;</code> with <code>&lt;button&gt;</code>, since that is less of
+an abuse of html.  It is more clear to the user that clicking that will
+change something on the page, not go to a new page.</p>
+</li>
+<li>
+<p>Remove extraneous content from main page.</p>
 </li>
 </ul>
-
-<h2>2005</h2>
-<ul>
-<li>
-  <a href="/vv/2005/08/23/504/">new email for hal.</a>
-  2005-08-23 15:32:01
-
-</li>
-<li>
-  <a href="/vv/2005/08/23/503/">how to fimd me</a>
-  2005-08-23 14:39:49
-
-</li>
-<li>
-  <a href="/vv/2005/05/26/466/">dumping mt?</a>
-  2005-05-26 13:08:56
-
-</li>
-<li>
-  <a href="/vv/2005/05/07/454/">X-posting</a>
-  2005-05-07 10:24:59
-
-</li>
-<li>
-  <a href="/vv/2005/01/04/384/">Stop</a>
-  2005-01-04 14:27:09
-
-</li>
-</ul>
-
-<h2>2004</h2>
-<ul>
-<li>
-  <a href="/vv/2004/08/11/290/">Tweak MT's RSS</a>
-  2004-08-11 15:02:42
-
-</li>
-</ul>
-
-<h2>2003</h2>
-<ul>
-<li>
-  <a href="/vv/2003/12/17/143/">Movabletype templates</a>
-  2003-12-17 17:22:34
-
-</li>
-<li>
-  <a href="/vv/2003/12/07/139/">(c) 2003 Hal Canary</a>
-  2003-12-07 21:36:56
-
-</li>
-<li>
-  <a href="/vv/2003/08/14/92/">Other Bloggers</a>
-  2003-08-14 01:08:46
-
-</li>
-<li>
-  <a href="/vv/2003/08/13/91/">RSS Feed</a>
-  2003-08-13 20:02:44
-
-</li>
-<li>
-  <a href="/vv/2003/08/13/90/">Blog Changes</a>
-  2003-08-13 18:48:42
-
-</li>
-<li>
-  <a href="/vv/2003/07/16/69/">Site Redesign</a>
-  2003-07-16 04:01:33
-
-</li>
-</ul>
-
-<h2>2002</h2>
-<ul>
-<li>
-  <a href="/vv/2002/12/15/24/">Site Update! / Hardware Standards!</a>
-  2002-12-15 16:50:27
-
-</li>
-<li>
-  <a href="/vv/2002/09/28/14/">halcanary.org</a>
-  2002-09-28 18:16:04
-
-</li>
-<li>
-  <a href="/vv/2002/05/09/4/">First Blog</a>
-  2002-05-09 08:29:05
-
-</li>
-</ul>
-
-</div>
+  </div>
+</article>
 <hr>
 <nav>
 <div class="lcr">
-  <div>&nbsp;</div>
-  <div class="centered"><p>(<a href="../">UP</a>)</p></div>
+  <div><p>(<a href="/vv/2020/09/30/3021/">Dark Mode</a>)</p></div>
+  <div class="centered"><p>(<a href="/vv/archives/">back</a>)</p></div>
   <div class="rightside">&nbsp;</div>
 </div>
 </nav>
-
 </body>
 </html>

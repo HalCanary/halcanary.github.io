@@ -1,0 +1,50 @@
+TITLE=Blog/site update
+DATE=2020-10-01 10:41:46 -0400 (EDT)
+POSTID=3022
+CATEGORIES=meta
+SUMMARY=summary of last few years of site changes.
+
+I now host this site on Github, since it is free and fairly easy for me to use.
+I push the new version of the site with a simple `git push`.  I only pay for my
+domain name.
+
+I am still using the same blog builder Python script I wrote years ago, but
+I've refactored it a dozen times.  I also use a similar script to rebuild
+static pages from markdown source too.
+
+Other changes:
+
+-   Colors are either default or white-on-black for dark mode.  Information
+    that I used to de-emphasize with grey-on-white text is now put in a
+    box.
+
+-   Switch from original-flavor Markdown to CommonMark.  Allows me to put
+    markdown inside a `<div>`. For example:
+    
+    ```
+    <div id="foobar" style="display:none;">
+
+    > Foo
+    > Bar
+
+    </div>
+    <button onclick="document.getElementById('foobar').style.display='block';">
+    SHOW
+    </button>
+    ```
+
+-   Reduce extra resources needed by a page:
+    -   The `<link rel="icon">` is now a `data:` URL.
+    -   I inline all CSS.
+    -   I also inline a SVG version of my written name on the static pages as a banner.
+        Effort was made to minimize the size.  By vectorizing what was
+        originally a scanned image, it is much smaller and looks really good on
+        high-dpi screens.
+
+-   Starting to try to meet accessibility standards.
+
+-   Replace `<a href="" onlick="....">` with `<button>`, since that is less of
+    an abuse of html.  It is more clear to the user that clicking that will
+    change something on the page, not go to a new page.
+
+-   Remove extraneous content from main page.
