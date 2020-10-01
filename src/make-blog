@@ -55,11 +55,6 @@ top_posts_header = """
 
 <hr>
 """
-top_posts_footer = """
-<nav aria-label="External Navigation"><p class="centered">(<a href="archives/">all posts</a>)</p></nav>
-</body>
-</html>
-"""
 
 def hashpath(path):
     if path is None:
@@ -246,7 +241,7 @@ class Post(object):
         self.postid = postid
 
         self.permalinkpart = '{:s}/{:04d}/{:02d}/{:02d}/{:s}/'.format(BASE_DIR, self.year, self.month, self.day, postid)
-        self.fragment = '{:04d}_{:02d}_{:02d}_{:s}'.format(self.year, self.month, self.day, postid)
+        self.fragment = '{:04d}/{:02d}/{:02d}/{:s}'.format(self.year, self.month, self.day, postid)
 
     def write_to_file(self, output_path):
         def linker(post):
@@ -266,6 +261,8 @@ class RecentPosts(object):
     def addPost(self, post):
         self.posts.append(post)
     def close(self):
+        def linker(post):
+            return '(<a href="/{}">{}</a>)'.format(post.permalinkpart, post.title) if post else None
         with UpdatingFile('{}/index.html'.format(BASE_DIR)) as o:
             o.write(header.format(style=style, title='Voder-Vocoder', years=get_years()))
             o.write(top_posts_header)
@@ -276,8 +273,10 @@ class RecentPosts(object):
             for post in self.posts:
                 Post.write(o, vars(post), 2)
             o.write('</div>\n')
-            o.write(top_posts_footer)
-
+            o.write('<nav aria-label="External Navigation">\n')
+            o.write(lcr(linker(self.posts[-1].prev), '(<a href="archives/">ALL POSTS</a>)', ''))
+            o.write('</nav>\n</body>\n</html>\n')
+ 
 def writeIndex(loc, title, post_list, prev_next):
     posts = index_by_keyfn(post_list, lambda p: [p.year])
     with UpdatingFile(loc) as o:
@@ -333,7 +332,7 @@ def index_by_keyfn(posts, keys_fn):
             result.setdefault(key, []).append(post)
     return result
 
-if __name__ == '__main__':
+def main():
     src_dir = os.path.abspath(os.path.dirname(__file__))
     target_location = os.path.join(src_dir, os.pardir)
     source_location = os.path.join(src_dir, 'BlogSrc')
@@ -362,6 +361,7 @@ if __name__ == '__main__':
     posts_by_day      = index_by_keyfn(all_posts, lambda p: [(p.year, p.month, p.day)])
     posts_by_category = index_by_keyfn(all_posts, lambda p: p.category_list)
 
+    global first_year
     first_year = min(posts_by_year.keys())
 
     year_links = makelinks(posts_by_year.keys())
@@ -414,3 +414,5 @@ if __name__ == '__main__':
                 '<p class="centered"><a href="/{}/">BACK</a></p>\n' +
                 '</body>\n</html>\n').format(BASE_DIR))
 
+if __name__ == '__main__':
+    main()
