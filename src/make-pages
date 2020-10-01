@@ -1,31 +1,12 @@
 #!/usr/bin/env python
 # coding=utf-8
 
-import sys, os, subprocess, datetime, base64, re
+import datetime
+import os
+import re
+import sys
 
-PY3 = sys.version_info > (3,)
-
-MARKDOWN_CMD = ['cmark']
-if float(re.sub(r'cmark (\d+\.\d+)\..*', r'\1', subprocess.check_output(['cmark', '--version']), flags=re.S)) >= 0.29:
-    MARKDOWN_CMD = ['cmark', '--unsafe']
-
-def to_str(src):
-    return str(src, encoding='utf-8') if PY3 else src
-
-def to_bytes(src):
-    return src.encode('utf-8') if PY3 else src
-
-def pipe_process(src, cmd):
-    try:
-        subproc = subprocess.Popen(cmd, stdin=subprocess.PIPE, stdout=subprocess.PIPE)
-    except OSError:
-        sys.stderr.write('\n%r failed.\n\n' % cmd)
-        sys.exit(1)
-    subproc.stdin.write(to_bytes(src))
-    subproc.stdin.close()
-    result = subproc.stdout.read()
-    subproc.wait()
-    return to_str(result)
+import wohc
 
 def find_files(d):
     return (os.path.relpath(os.path.join(ds, n), d) for ds, _, ns in os.walk(d) for n in ns)
@@ -34,36 +15,9 @@ def get_first_h1(s):
     m = re.search("(?s)<h1>(.*?)</h1>", s)
     return m.group(1) if m else None
 
-def write_file(filepath, filecontent):
-    directory = os.path.dirname(filepath)
-    if os.path.exists(filepath):
-        if filecontent == read_file(filepath):
-            return False
-    if not os.path.exists(directory):
-        os.makedirs(directory)
-    kwargs = dict(encoding='utf-8') if PY3 else dict()
-    with open(filepath, 'w', **kwargs) as o:
-        o.write(filecontent)
-    return True
-
-def read_file(filepath, binary=False):
-    assert os.path.exists(filepath)
-    kwargs = dict(encoding='utf-8') if PY3 and not binary else dict()
-    with open(filepath, 'rb' if binary else 'r', **kwargs) as f:
-        return f.read()
-
 page_template = """<!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Copyright {years} Hal Canary. ALL RIGHTS RESERVED. -->
-<title>{title}</title>
-<link rel="icon" href="data:image/png;base64,{icon}">
-<style>
-{style}
-</style>
-</head>
+{head}
 <body>
 <div class="tophead" role="banner">
 {svg}
@@ -74,35 +28,47 @@ page_template = """<!DOCTYPE html>
 </body>
 </html>
 """
+root_template = """<!DOCTYPE html>
+<html lang="en">
+{head}
+<body>
+<header>
+<h1>
+{svg}
+</h1>
+</header>
+<div role="main">
+{content}
+</div>
+</body>
+</html>
+"""
 
 def main():
-    root = os.path.dirname(__file__) + '/../'
-    style = re.sub(r'(^|:|;|{)\s+', r'\1', read_file(root + 'src/style.css'), flags=re.M).strip()
     years = '1997-{:04d}'.format(datetime.date.today().year)
-    icon = base64.b64encode(read_file(root + 'images/2020-HWC3-favicon.png', binary=True))
-    if (sys.version_info > (3, 0)):
-        icon = str(icon, encoding='us-ascii')
-    svg = read_file(root + 'src/hal_canary_3.svg').strip()
-
     suffix = '.md'
-    for path in find_files(root + 'src/pages'):
+    src_directory = wohc.SRC + '/pages'
+    for path in find_files(src_directory):
         if not path.endswith(suffix):
             continue
-        dst = path[:-len(suffix)]
-        src = 'src/pages/%s.md' % dst
-        assert os.path.exists(src)
-        content = pipe_process(read_file(root + src), MARKDOWN_CMD)
-        title = get_first_h1(content)
-        assert title
-        svg_value = '' if any(dst == d or dst.startswith(d + '/') for d in ['SSL', 'mathapplets', 'u']) else svg
-        if write_file(root + dst + '/index.html', page_template.format(
-                years=years,
-                title=title,
-                icon=icon,
-                style=style,
-                svg=svg_value,
-                content=content)):
-            sys.stdout.write(dst +'\n')
+        dst = '/{}/index.html'.format(path[:-len(suffix)])
+        process(os.path.join(src_directory, path), dst, years)
+    process(wohc.SRC + '/index.md', '/index.html', years, True)
+    process(wohc.SRC + '/resume.md', '/Hal_Canary_Resume.html', years)
+
+def process(src, dst, years, root=False):
+    assert os.path.exists(src)
+    content = wohc.pipe_process(wohc.read_file(src), wohc.MARKDOWN_CMD)
+    title = 'Hal W. Canary, III' if root else get_first_h1(content)
+    assert title
+    svg_value = wohc.SVG
+    if any(dst.startswith(d) for d in ['/SSL/', '/mathapplets/', '/u/']):
+        svg_value = ''
+    head = wohc.HEAD.format(icon=wohc.ICON, style=wohc.STYLE, title=title, years=years)
+    template = root_template if root else page_template
+    page = template.format(head=head, svg=svg_value, content=content)
+    if wohc.write_file(wohc.ROOT + dst, page):
+        sys.stdout.write(dst +'\n')
 
 if __name__ == '__main__':
     main()

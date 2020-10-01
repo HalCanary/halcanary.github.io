@@ -1,9 +1,3 @@
-<div style="display:none">
-
-# Hal W. Canary, III
-
-</div>
-
 ![photo of me and wife, Grand Canyon, 2012-01-02](/photos/2012-01-02_212724_dscn0815_LindsayHal_GrandCanyon0_939.jpg)
 
 ## current status:
