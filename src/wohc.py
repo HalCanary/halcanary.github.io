@@ -61,12 +61,12 @@ SVG = read_file(SRC + '/hal_canary_3.svg').strip()
 HEAD = """<head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Copyright {years} Hal Canary. ALL RIGHTS RESERVED. -->
 <title>{title}</title>
 <link rel="icon" href="data:image/png;base64,{icon}">
 <style>
 {style}
 </style>
-</head>"""
+</head>
+<!-- Copyright {years} Hal Canary. ALL RIGHTS RESERVED. -->"""
 
 

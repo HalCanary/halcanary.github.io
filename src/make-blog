@@ -1,14 +1,14 @@
 #!/usr/bin/env python
 # coding=utf-8
 
-import sys, os, math, subprocess, re, datetime, tempfile, hashlib, shutil
+import datetime
+import os
+import sys
+
+import wohc
 
 BASE_DIR = 'vv'
 URL_BASE = 'https://halcanary.org'
-
-MARKDOWN_CMD = ['cmark']
-if float(re.sub(r'cmark (\d+\.\d+)\..*', r'\1', subprocess.check_output(['cmark', '--version']), flags=re.S)) >= 0.29:
-    MARKDOWN_CMD = ['cmark', '--unsafe']
 
 current_year = datetime.date.today().year
 first_year = 1997
@@ -16,23 +16,8 @@ first_year = 1997
 def get_years():
     return '{:04d}-{:04d}'.format(first_year, current_year)
 
-with open(os.path.dirname(__file__) + '/style.css') as f:
-    style = re.sub(r'(^|:|;|{)\s+', r'\1', f.read(), flags=re.M).strip()
-
-header = """<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{title}</title>
-<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==">
-<style>
-{style}
-</style>
-</head>
-<!-- Copyright {years} Hal Canary. ALL RIGHTS RESERVED. -->
-<body>
-"""
+def head(title, years):
+    return wohc.HEAD.format(icon=wohc.ICON, style=wohc.STYLE, title=title, years=years)
 
 top_posts_header = """
 <header>
@@ -56,23 +41,6 @@ top_posts_header = """
 <hr>
 """
 
-def hashpath(path):
-    if path is None:
-        return None
-    h = hashlib.sha256()
-    with open(path,'r') as f:
-        data = f.read(h.block_size)
-        while data != '':
-            h.update(data)
-            data = f.read(h.block_size)
-    return h.digest()
-
-def mkdirs(path):
-    try:
-        os.makedirs(path)
-    except:
-        pass
-
 def lcr(left, center, right):
     left   = '<p>{}</p>'.format(left) if left else '&nbsp;'
     center = '<p>{}</p>'.format(center) if center else '&nbsp;'
@@ -85,55 +53,18 @@ def lcr(left, center, right):
 
 class UpdatingFile(object):
     def __init__(self, path):
-        mkdirs(os.path.dirname(path))
-        self.path = path
-        fd, self.tempfilepath = tempfile.mkstemp()
-        self.o = os.fdopen(fd, "w")
-
-    def __del__(self):
-        self.close()
-
+        self._path = path
     def __enter__(self):
+        self._o = []
         return self
-
     def __exit__(self, type, value, traceback):
-        if self.close():
-            sys.stdout.write('modified %s\n' % self.path)
-
-    def close(self):
-        if self.o is not None:
-            self.o.close()
-            self.o = None
-            if (not os.path.isfile(self.path)) or (
-                hashpath(self.tempfilepath) !=
-                hashpath(self.path)):
-                if shutil:
-                    shutil.copyfile(self.tempfilepath, self.path)
-                os.remove(self.tempfilepath)
-                return True
-            else:
-                if self.tempfilepath is not None:
-                    os.remove(self.tempfilepath)
-                return False
-
-    def write(self,*args, **kwargs):
-        (self.o if self.o is not None else sys.stderr).write(*args, **kwargs)
-
+        if wohc.write_file(self._path, ''.join(self._o)):
+            sys.stdout.write('modified %s\n' % self._path)
+        del self._o
+    def write(self, s):
+        self._o.append(s)
 
 class Post(object):
-    @staticmethod
-    def markdown(inf):
-        try:
-            subproc = subprocess.Popen(MARKDOWN_CMD, stdin=subprocess.PIPE, stdout=subprocess.PIPE)
-        except OSError:
-            sys.stderr.write('\n%r FAILED.\n\n' % MARKDOWN_CMD)
-            sys.exit(1)
-        shutil.copyfileobj(inf, subproc.stdin)
-        subproc.stdin.close()
-        s = subproc.stdout.read()
-        subproc.wait()
-        return s
-
     @staticmethod
     def write(o, post_info, level, identifier=None):
         category_fmt = '<a href="/{1}/category/{0}/">#{0}</a>'
@@ -220,7 +151,7 @@ class Post(object):
                     sys.stderr.write('%s: %r=%r\n' % (path, key, value))
 
             if mode.lower() == 'markdown':
-                self.post = Post.markdown(f).rstrip()
+                self.post = wohc.pipe_process(f.read(), wohc.MARKDOWN_CMD).rstrip()
             else:
                 self.post = f.read().rstrip()
 
@@ -249,7 +180,9 @@ class Post(object):
 
         up = '(<a href="/{}/archives/">back</a>)'.format(BASE_DIR)
         with UpdatingFile(output_path) as o:
-            o.write(header.format(title='Voder-Vocoder: ' + self.title, style=style, years=get_years()))
+            o.write('<!DOCTYPE html>\n<html lang="en">\n')
+            o.write(head(title='Voder-Vocoder: ' + self.title, years=get_years()))
+            o.write('\n<body>\n')
             Post.write(o, vars(self), 1)
             o.write('<nav>\n')
             o.write(lcr(linker(self.prev), up, linker(self.next)))
@@ -264,7 +197,9 @@ class RecentPosts(object):
         def linker(post):
             return '(<a href="/{}">{}</a>)'.format(post.permalinkpart, post.title) if post else None
         with UpdatingFile('{}/index.html'.format(BASE_DIR)) as o:
-            o.write(header.format(style=style, title='Voder-Vocoder', years=get_years()))
+            o.write('<!DOCTYPE html>\n<html lang="en">\n')
+            o.write(head(title='Voder-Vocoder', years=get_years()))
+            o.write('\n<body>\n')
             o.write(top_posts_header)
             o.write('<nav>\n<ul class="flat">\n')
             for post in self.posts:
@@ -280,7 +215,9 @@ class RecentPosts(object):
 def writeIndex(loc, title, post_list, prev_next):
     posts = index_by_keyfn(post_list, lambda p: [p.year])
     with UpdatingFile(loc) as o:
-        o.write(header.format(style=style, title=title, years=get_years()))
+        o.write('<!DOCTYPE html>\n<html lang="en">\n')
+        o.write(head(title=title, years=get_years()))
+        o.write('\n<body>\n')
         o.write('\n<h1>{}</h1>\n\n'.format(title.replace('\n', '<br>')))
         o.write('<div role="main">\n')
         for year in sorted(posts.keys(), reverse=True):
@@ -402,7 +339,9 @@ def main():
     recentPosts.close()
 
     with UpdatingFile('{}/category/index.html'.format(BASE_DIR)) as o:
-        o.write(header.format(title='categories', style=style, years=get_years()))
+        o.write('<!DOCTYPE html>\n<html lang="en">\n')
+        o.write(head(title='categories', years=get_years()))
+        o.write('\n<body>\n')
         o.write(
             '<h1><a href="/{}/" class="hiddenlink">Voder-Vocoder</a> Archive by Category</h1>'.format(
             BASE_DIR))
