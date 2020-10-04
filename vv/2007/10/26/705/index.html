@@ -134,7 +134,7 @@ and week, given the day of year.</p>
 def dayandmonth(yday):
     assert (yday &gt; 0) and (yday &lt; 367)
     da = ((yday - 1) % 61) + 1
-    mo = (((yday - 1) // 61 ) \* 2) + 1
+    mo = (((yday - 1) // 61 ) * 2) + 1
     if (da &gt; 30):
         da = da - 30
         mo = mo + 1
@@ -145,13 +145,9 @@ def dayandmonth(yday):
 <pre><code># offset is determined by solar
 # observations at the reference
 # longitude
-def isleapyear(y):
-   offset = 2
-   y = (y + offset) % 33
-   if (y != 32) and ((y % 4) == 0):
-        return True
-   else:
-        return False
+def isleapyear2(y, offset=6):
+    n = (y + offset) % 33
+    return n and not (n % 4)
 </code></pre>
 <p>Every 10,000 years, the offset may need to be changed. After 100,000 years, a
 new algorithm will likely be necessary</p>
