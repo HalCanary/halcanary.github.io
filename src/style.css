@@ -76,6 +76,12 @@ pre {
 .byline {
     text-align: right;
 }
+.box {
+    border-style: solid;
+    border-width: thin;
+    margin: 8px 0;
+    padding: 0 8px;
+}
 a.hiddenlink: link {
     background: inherit;
     color: inherit;

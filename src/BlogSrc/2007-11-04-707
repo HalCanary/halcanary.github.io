@@ -14,7 +14,7 @@ T = time unit = 16<sup>^8</sup> × (Length unit / speed of light in a vacuum) = 
 
 M = unit of mass = 16<sup>^32</sup> × Planck's constant / (speed of light × length unit) = 0.0230618313 kg, which makes plank's constant 16<sup>^-24</sup>. \[I'm not sure of a nice way to state this definition.\] (This unit is only as good as our measurement of Planck's constant, currently with an uncertainty of around 5×10<sup>^-8</sup>. But we're still arguing about how to define the kilogram.) \[In the galaxy, the simplest way to realize this definition is to ask the most scientifically advanced species you can find to make a measurement of Planck's constant with minimal uncertainty and manufacture a few 1-unit-of-mass artifacts.\]
 
-<div style="border:2px solid #DDD;margin:8px 0; padding:0 8px;">
+<div class="box">
 
 **Update 2020-09-18**: note that the kilogram was redefined in terms of  Planck's constant in 2019:
 

@@ -28,7 +28,9 @@ Other changes:
     > Bar
 
     </div>
-    <button onclick="document.getElementById('foobar').style.display='block';">
+    <button onclick="document.getElementById('foobar')
+                             .style
+                             .display = 'block';">
     SHOW
     </button>
     ```

@@ -55,7 +55,7 @@ Or a double weekend on leap years:
     12-29 12-30 12-31 | 01-01 01-02 01-03
      Fri   Sat   Sun  |  Sat   Sun   Mon
 
-* * *
+<div class="box">
 
 Note that one could make the existing Gregorian Calendar into a perpetual
 calendar by defining March 1 as always a Saturday.
@@ -65,6 +65,8 @@ calendar by defining March 1 as always a Saturday.
 
     02-27 02-28 02-29 | 03-01 03-02 03-03
      Fri   Sat   Sun  |  Sat   Sun   Mon
+
+</div>
 
 * * *
 

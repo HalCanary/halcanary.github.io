@@ -27,6 +27,7 @@ hr {border-style:solid none;}
 pre {overflow-x:auto;}
 .byline > * {display:inline-block;border-style:solid;border-width:thin;padding:3px 8px;border-radius:5px;text-align:initial;}
 .byline {text-align:right;}
+.box {border-style:solid;border-width:thin;margin:8px 0;padding:0 8px;}
 a.hiddenlink:link {background:inherit;color:inherit;text-decoration:none;}
 a.hiddenlink:visited {background:inherit;color:inherit;text-decoration:none;}
 a.hiddenlink:active {background:inherit;color:inherit;text-decoration:none;}
@@ -117,7 +118,7 @@ always a Saturday. Then on 365-day years, you would get two Saturdays in a row:<
 <pre><code>12-29 12-30 12-31 | 01-01 01-02 01-03
  Fri   Sat   Sun  |  Sat   Sun   Mon
 </code></pre>
-<hr />
+<div class="box">
 <p>Note that one could make the existing Gregorian Calendar into a perpetual
 calendar by defining March 1 as always a Saturday.</p>
 <pre><code>02-27 02-28 | 03-01 03-02 03-03
@@ -126,6 +127,7 @@ calendar by defining March 1 as always a Saturday.</p>
 02-27 02-28 02-29 | 03-01 03-02 03-03
  Fri   Sat   Sun  |  Sat   Sun   Mon
 </code></pre>
+</div>
 <hr />
 <p><strong>UPDATE 2008-10-25:</strong> Here's very simple python code to give the month, day,
 and week, given the day of year.</p>
