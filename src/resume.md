@@ -33,9 +33,13 @@ Education
 Experience
 ----------
 
-*   Senior Software Engineer, Voith Digital. 2020–present
+*   Senior Software Engineer, Voith Digital. 2020
     *   Full stack engineer for
-        [Voith OnCumulus](http://voith.com/corp-en/digital-solutions/oncumulus.html).
+        Voith OnCumulus Industrial Internet-of-Things project
+        (<http://voith.com/corp-en/digital-solutions/oncumulus.html>).
+    *   Full stack development: frontend in JavaScript/React, backend in Go.
+    *   Agile development on a remote team.
+
 *   Software Engineer, Google, Inc. 2013–2020
     *   Member of the Skia 2D graphic library (<https://skia.org/>) team.
     *   Created SkQP, a project to use Skia rendering tests to generate new
@@ -74,8 +78,6 @@ Experience
     *   Installed and configured client’s software.
     *   Resolved customer issues with troubleshooting.
     *   Developed custom software for clients.
-*   System Administrator, UW-Madison Physics Department Computational Physics
-    Lab. 2000–2001
 *   Undergraduate Researcher, UW-Madison Physics Department. 1999–2000
 
 Publications
@@ -89,7 +91,7 @@ Publications
 *   Steffen A. Bass, Hannah Petersen, Cory Quammen, Hal Canary, Christopher G.
     Healey, Russell M. Taylor II. “Probing the QCD Critical Point with
     Relativistic Heavy-Ion Collisions.” _Central European Journal of Physics_
-    (2012) 10, 1278–1281.
+    (2012) 10, 1278–1281.  (<https://doi.org/10.2478/s11534-012-0076-1>)
 *   Hal Canary. “Aztec Diamonds and Baxter Permutations.” _The Electronic
     Journal of Combinatorics_ 17 (2010), #R105
     (<https://halcanary.org/aztec-diamonds>)

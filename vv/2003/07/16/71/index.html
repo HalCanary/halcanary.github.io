@@ -39,7 +39,7 @@ table.border tr > * {border-style:solid;border-width:thin;padding:3px 8px;border
 .tightmargins h1,
 .tightmargins h2,
 .tightmargins p,
-.tightmargins ul {margin:1ex 0;}
+.tightmargins ul {margin:0.5ex 0;}
 .tightmargins li > ul {margin:0 0 0.5ex 0;}
 .tightmargins ul {padding-left:30px;}
 .tightmargins li {margin:0 0 0.5ex 0;}
@@ -76,7 +76,7 @@ ul.flat li::before {content:"[";}
     </div>
   </header>
   <div class="content">
-<p>90% of the time you use a &lt;hr&gt; you are putting a divider between sections or subsections that are already (or should already) be divided by &lt;h2&gt;'s or &lt;h3&gt;'s. Instead use &lt;div&gt;'s to break up sections and subsections. So</p>
+<p>90% of the time you use a &amp;lt;hr&gt; you are putting a divider between sections or subsections that are already (or should already) be divided by &amp;lt;h2&gt;'s or &amp;lt;h3&gt;'s. Instead use &amp;lt;div&gt;'s to break up sections and subsections. So</p>
 <pre><code>&lt;!--document.html--&gt;
 &lt;h2&gt;Welcome&lt;/h2&gt;
 &lt;p&gt;Paragraph&lt;/p&gt;
@@ -98,14 +98,14 @@ ul.flat li::before {content:"[";}
   &lt;p&gt;Paragraph&lt;/p&gt;
 &lt;/div&gt;
 </code></pre>
-<p>The following css will produce a &lt;hr&gt; style border:</p>
+<p>The following css will produce a &amp;lt;hr&gt; style border:</p>
 <pre><code>/* style.css */
 div.section {
    border-bottom:
     solid 3px #000000 ;
  }
 </code></pre>
-<p>At this point you can have more fun with the css, without touching the html any more. (Isn't that the point?) Try putting each &lt;div class=&quot;section&quot;&gt; in its own little colorful box.</p>
+<p>At this point you can have more fun with the css, without touching the html any more. (Isn't that the point?) Try putting each &amp;lt;div class=&quot;section&quot;&gt; in its own little colorful box.</p>
   </div>
 </article>
 <hr>
