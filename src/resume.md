@@ -18,11 +18,11 @@ Hal W. Canary, III
 Technical Skills
 ----------------
 
-*   Languages: C++, Python, C, Java, JavaScript, Go, Shell Scripting
-*   Software Tools: Clang, GCC, Make, CMake, OpenGL, Git, Gerrit
+*   Languages: C++, Python, JavaScript, Go, C, Java, Shell Scripting
+*   Software Tools: NPM, Clang, GCC, Make, CMake, OpenGL, Git, Gerrit
 *   Operating systems: Unix and Linux workstations and servers, Android and iOS.
 *   Specialties: scientific and numerical computing, computer graphics,
-    databases and database interfaces.
+    full-stack web development, databases and database interfaces.
 
 Education
 ---------
@@ -39,7 +39,6 @@ Experience
         (<http://voith.com/corp-en/digital-solutions/oncumulus.html>).
     *   Full stack development: frontend in JavaScript/React, backend in Go.
     *   Agile development on a remote team.
-
 *   Software Engineer, Google, Inc. 2013–2020
     *   Member of the Skia 2D graphic library (<https://skia.org/>) team.
     *   Created SkQP, a project to use Skia rendering tests to generate new
@@ -54,19 +53,19 @@ Experience
         MacOS, Windows, Android and iOS.
     *   Wrote example and testing applications for Android and iOS, linking a
         native C++ library to Java (via JNI) or Objective-C (e.g.
-        <https://halcanary.org/skottie-ios-app>).
+        <https://halcanary.org/skottie-ios-app/>).
     *   Contributed to API documentation and examples.
     *   Created scripts in Python, Go, and Shell to automate tasks (e.g.
-        <https://halcanary.org/git-sync-deps>).
+        <https://halcanary.org/git-sync-deps/>).
 *   Research Assistant, UNC-Chapel Hill, Computer Science Department. 2011–2013
     *   Created novel tools for visualizations of high-dimensional statistical distributions.
     *   Built visualizations for scientific data (nuclear quantum-chromodynamic
         plasma simulation, meteorologic simulation, and cosmological galactic
         formation simulation datasets) using VTK and ParaView.
     *   Iteratively designed and developed the MADAI Distribution Sampling Tools
-        (<https://halcanary.org/madai-dst>)
+        (<https://halcanary.org/madai-dst/>)
         and the MADAI Visualization Workbench
-        (<https://halcanary.org/madai-bench>).
+        (<https://halcanary.org/madai-bench/>).
     *   Developed new VTK filters and ParaView macros.
     *   Collaborated with domain scientists to develop visualization and
         statistical product requirements.
@@ -87,13 +86,13 @@ Publications
     Gómez, Brian O'Shea, Christopher G. Healey. “Visualizing Likelihood Density
     Functions via Optimal Region Projection.” _Computers & Graphics_ 41 (2014):
     62–71.
-    (<https://halcanary.org/optimal-region-projection>)
+    (<https://halcanary.org/optimal-region-projection/>)
 *   Steffen A. Bass, Hannah Petersen, Cory Quammen, Hal Canary, Christopher G.
     Healey, Russell M. Taylor II. “Probing the QCD Critical Point with
     Relativistic Heavy-Ion Collisions.” _Central European Journal of Physics_
     (2012) 10, 1278–1281.  (<https://doi.org/10.2478/s11534-012-0076-1>)
 *   Hal Canary. “Aztec Diamonds and Baxter Permutations.” _The Electronic
     Journal of Combinatorics_ 17 (2010), #R105
-    (<https://halcanary.org/aztec-diamonds>)
+    (<https://halcanary.org/aztec-diamonds/>)
 
 </div>
