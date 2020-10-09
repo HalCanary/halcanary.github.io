@@ -38,6 +38,7 @@ def main():
         process(os.path.join(src_directory, path), dst, years)
     process(wohc.SRC + '/index.md', '/index.html', years, True)
     process(wohc.SRC + '/resume.md', '/Hal_Canary_Resume.html', years)
+    process(wohc.SRC + '/resume.md', '/Hal_Canary_Resume_20201009.html', years)
 
 def process(src, dst, years, root=False):
     assert os.path.exists(src)

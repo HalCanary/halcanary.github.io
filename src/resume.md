@@ -1,7 +1,7 @@
 <div style="display: none;">
 
-Hal W Canary III - 2020 Resume
-==============================
+Hal W Canary III - 2020-10-09 Resume
+====================================
 
 </div>
 <div class="tightmargins nolink">
@@ -77,10 +77,10 @@ Experience
 *   College Math Tutor, Edgewood College. 2004–2005
 *   Programmer and Student Researcher, UW-Madison Math Department. 2001–2004
 *   Interface Analyst and Programmer, Epic Systems Corporation. 2001–2002
-    *   Developed database interface software in InterSystems Caché.
-    *   Installed and configured client’s software.
-    *   Resolved customer issues with troubleshooting.
-    *   Developed custom software for clients.
+    *   Developed database interface software in InterSystems Caché;
+        Installed and configured client’s software;.
+        Resolved customer issues with troubleshootingr;
+        Developed custom software for clients.
 *   Undergraduate Researcher, UW-Madison Physics Department. 1999–2000
 
 Publications
