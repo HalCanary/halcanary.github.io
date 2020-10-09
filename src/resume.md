@@ -18,8 +18,8 @@ Hal W. Canary, III
 Technical Skills
 ----------------
 
-*   Languages: C++, Python, JavaScript, Go, C, Java, Shell Scripting
-*   Software Tools: NPM, Clang, GCC, Make, CMake, OpenGL, Git, Gerrit
+*   Languages: Go, C++, JavaScript, Python, C, Java, Shell Scripting
+*   Software Tools: React, NPM, Kubernetes, CMake, OpenGL, Git, Gerrit
 *   Operating systems: Unix and Linux workstations and servers, Android and iOS.
 *   Specialties: scientific and numerical computing, computer graphics,
     full-stack web development, databases and database interfaces.
@@ -34,11 +34,15 @@ Experience
 ----------
 
 *   Senior Software Engineer, Voith Digital. 2020
-    *   Full stack engineer for
+    *   Full-stack software engineer for
         Voith OnCumulus Industrial Internet-of-Things project
         (<http://voith.com/corp-en/digital-solutions/oncumulus.html>).
-    *   Full stack development: frontend in JavaScript/React, backend in Go.
-    *   Agile development on a remote team.
+    *   Worked on creating the Voith Paper Break Protector tool: using machine
+        learning to predict potential industrial problems and display these
+        risks to machine operators.
+    *   React/JavaScript frontend.
+    *   Go microservices backend.
+    *   Agile development on a distributed, remote team.
 *   Software Engineer, Google, Inc. 2013–2020
     *   Member of the Skia 2D graphic library (<https://skia.org/>) team.
     *   Created SkQP, a project to use Skia rendering tests to generate new
