@@ -26,7 +26,8 @@ _Abstract_: Effective visualization of high-likelihood regions of parameter spac
 
 <img src="/images/Percentile_Surface_Filter.png" alt="" width="1024" height="597">
 
-Given a set of points in space with a scalar value, this filter will create a surface around the top _P_ percentile of the points. In this example, the top 95% of the points (by logLikelihood) are used. This VTK filter is included in the [MADAI Visualization Workbench](http://vis.madai.us/)
+Given a set of points in space with a scalar value, this filter will create a surface around the top _P_ percentile of the points. In this example, the top 95% of the points (by logLikelihood) are used. This VTK filter is included in the
+MADAI Visualization Workbench (<https://github.com/MADAI/MADAIWorkbench>).
 
 * * *
 
@@ -76,7 +77,8 @@ Arrow Glyphs introduce a lot of visual clutter, especially when there are many o
 
 <img src="/images/Banded_Level_Colormap_ParaView_Macro.png" alt="" width="1370" height="903">
 
-My Banded\_Level\_Colormap ParaView macro was inspired by Van Wijk and Telea's Enridged Contour Maps. This macro is included in the [MADAI Visualization Workbench](http://vis.madai.us/).
+My Banded\_Level\_Colormap ParaView macro was inspired by Van Wijk and Telea's Enridged Contour Maps. This macro is included in the
+MADAI Visualization Workbench (<https://github.com/MADAI/MADAIWorkbench>).
 
 * * *
 
@@ -112,7 +114,8 @@ _Caption_: Time evolution (top to bottom) of QCD matter created in central Au+Au
 
 Steffen A. Bass, Hannah Petersen, Cory Quammen, Hal Canary, Christopher G. Healey, Russell M. Taylor II. "[Probing the QCD Critical Point with Relativistic Heavy-Ion Collisions](http://dx.doi.org/10.2478/s11534-012-0076-1)." Central European Journal of Physics (2012) 10, 1278-1281.
 
-My Gaussian Scalar Spatter Filter is included in the [MADAI Visualization Workbench](http://vis.madai.us/).
+My Gaussian Scalar Spatter Filter is included in the
+MADAI Visualization Workbench (<https://github.com/MADAI/MADAIWorkbench>).
 
 * * *
 
@@ -124,7 +127,8 @@ My Gaussian Scalar Spatter Filter is included in the [MADAI Visualization Workbe
 
 This is a comparison of two different ways to visualize a set of points in two dimensions. By warping a surface by splatted density, it is easier to perceive relative densities.
 
-My Gaussian Scalar Spatter Filter is included in the [MADAI Visualization Workbench](http://vis.madai.us/).
+My Gaussian Scalar Spatter Filter is included in the
+MADAI Visualization Workbench (<https://github.com/MADAI/MADAIWorkbench>).
 
 * * *
 
@@ -150,7 +154,8 @@ This is an implementation of Ensemble Surface Slicing, a [technique developed by
 
 Ensemble\_Surface\_Slicing.py is a VTK+Python+QT program that enables a user to load several VTK surface files ﬁles and adjust the width of the slices, the direction of the slice plane, and the offset from the origin of the first slice. For COMP770 (Computer Graphics), I wrote up a [report detailing the development of this software](http://cs.unc.edu/~hal/class/comp770/ess_report.pdf).
 
-This functionality has been incorporated into the [MADAI Visualization Workbench](http://vis.madai.us/).
+This functionality has been incorporated into the
+[MADAI Visualization Workbench](https://github.com/MADAI/MADAIWorkbench).
 
 * * *
 

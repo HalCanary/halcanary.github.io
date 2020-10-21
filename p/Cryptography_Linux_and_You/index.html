@@ -119,7 +119,7 @@ C 325 43 324 42 322 43 C 319 45 322 52 323 54 C 324 58 327 59 328 63 C 329 67
 <p>Abstract:</p>
 <blockquote>
 <p>This 30 to 60 minute talk will deal with cryptography tools that commonly
-come with modern Linux distributions. The &quot;You&quot; part of the title refers to
+come with modern Linux distributions. The "You" part of the title refers to
 the fact that this will not be an overly technical talk and that these are
 tools you can use in your daily life and work. Some of these tools you are
 already using.</p>
@@ -149,11 +149,13 @@ const slide = (x) => {
 };
 window.addEventListener("load", () => { slide(1); });
 </script>
+
 <div id="slide-1"><img src="/images/ev0001.png" alt="[slide]"></div>
 <div><button onclick="slide(1)">SLIDE 1</button></div>
-<p>The title of this talk is &quot;Cryptography, Linux, and You&quot;. We will be dealing
+
+<p>The title of this talk is "Cryptography, Linux, and You". We will be dealing
 with cryptography tools that commonly come with modern Linux distributions. The
-&quot;You&quot; part of the title refers to (1) the fact that this will not be an overly
+"You" part of the title refers to (1) the fact that this will not be an overly
 technical talk. It also refers to (2) the fact that these are tools you can use
 in your daily life and work. Some of these tools you are already using.</p>
 <p>Assumptions: You know that Linux is an operating system and you know that many
@@ -165,17 +167,19 @@ cypher, Cryptoquips, Enigma machines and Bletchley Park, Shannon security, et
 cetera. Because I won't touch on any of this history.</p>
 <div id="slide-2"><img src="/images/ev0002.png" alt="[slide]"></div>
 <div><button onclick="slide(2)">SLIDE 2</button></div>
+
 <p>We are going to talk about three broad topics: hash functions, symmetric
 cryptography, and asymmetric encryption. Strictly speaking, cryptographic hash
 functions are not a form of cryptography, since cryptography literally means as
-&quot;secret writing&quot;. On the other hand, cryptographic hash functions are
+"secret writing". On the other hand, cryptographic hash functions are
 incredibly useful for cryptographic applications.</p>
 <p>Another thing we are going to touch on is digital signatures. These are not
-&quot;secret writing&quot; either, but but they are (1) useful for securing encrypted
+"secret writing" either, but but they are (1) useful for securing encrypted
 channels of communication, (2) make use of algorithms related to cryptography,
 and (3) useful in themselves.</p>
 <div id="slide-3"><img src="/images/ev0003.png" alt="[slide]"></div>
 <div><button onclick="slide(3)">SLIDE 3</button></div>
+
 <p>A checksum is a mathematical function that can be used to verify that an input
 has not been accidentally changed.</p>
 <p>For example, the 10 digit ISBN (International Standard Book Number) that every
@@ -189,14 +193,15 @@ hash functions have a large but finite range, larger than 2^128 elements.</p>
 <p>Here's a list of four common cryptographic hash functions---md5, sha1, and sha2
 (sha256 and sha512)---and the size of their range. Md5 and sha1 are broken,
 which means that there is an attack on them that is faster than a brute force
-attack. These attacks still take some processing power, so they are only &quot;kind
-of&quot; broken. Any new application should be designed to use the sha2 family of
+attack. These attacks still take some processing power, so they are only "kind
+of" broken. Any new application should be designed to use the sha2 family of
 functions.</p>
 <p>The NSA and NIST have announced that they plan on creating a new family of
 cryptographic hash functions to replace sha2. It may be some years before this
 happens.</p>
 <div id="slide-4"><img src="/images/ev0004.png" alt="[slide]"></div>
 <div><button onclick="slide(4)">SLIDE 4</button></div>
+
 <p>Here's an example of how a you might make use of a hash function. These
 functions take in a stream of bits---for example a file on a computer--- and
 output a N-bit binary number. That number is usually represented as a
@@ -207,44 +212,49 @@ digits gives 160 bits, which is what we expected form the information that I
 gave you before!</p>
 <p>Here I create two files test1 and test2. These two files differ by only one
 character---a single period.</p>
-<p>Aside: the echo command outputs the string &quot;hello world&quot;. The &quot;&gt;&quot; symbol
+<p>Aside: the echo command outputs the string "hello world". The "&gt;" symbol
 redirects the output of echo into a file, in this case into the file test1</p>
 <p>When I use the sha1sum program and tell it to give me a checksum on these two
 files, it outputs two checksums, one for each file. Notice how different the
 two sums are, even if the inputs were very much alike!</p>
 <p>So I don't have to remember these checksums, I can store them in a file, which
-I'll call &quot;SHA1SUM.txt&quot;. Later, I'm going to come along and check to see that
-these two files haven't accidentally changed. to do that I'll use &quot;sha1sum -c&quot;.
-The &quot;-c&quot; means check and reads input in a form identical to the output of
-sha1sum. With &quot;-c&quot; I don't have to manually check the sums with my own
+I'll call "SHA1SUM.txt". Later, I'm going to come along and check to see that
+these two files haven't accidentally changed. to do that I'll use "sha1sum -c".
+The "-c" means check and reads input in a form identical to the output of
+sha1sum. With "-c" I don't have to manually check the sums with my own
 eyeballs.</p>
 <div id="slide-5"><img src="/images/ev0005.png" alt="[slide]"></div>
 <div><button onclick="slide(5)">SLIDE 5</button></div>
+
 <p>Here I use some fancy commands to add a newline character to the end of the
 file test2. Now it should give a different checksum because the file has
-changed This time, &quot;sha1sum -c&quot; gave an error message!</p>
+changed This time, "sha1sum -c" gave an error message!</p>
 <div id="slide-6"><img src="/images/ev0006.png" alt="[slide]"></div>
 <div><button onclick="slide(6)">SLIDE 6</button></div>
+
 <p>Now we finally get to some real encryption!</p>
 <div id="slide-7"><img src="/images/ev0007.png" alt="[slide]"></div>
 <div><button onclick="slide(7)">SLIDE 7</button></div>
+
 <p>For this example I want to encrypt these two files test1 and test2. The easiest
 way to do that is to put them in a new directory by themselves than archive the
-directory with the &quot;tar -cz&quot; command. This creates the compressed Tar archive
+directory with the "tar -cz" command. This creates the compressed Tar archive
 secretstuff.tgz. I then encrypt it with a program called GPG. I'm going to use
-GPG in &quot;symmetric mode&quot; so I use the command &quot;gpg -c&quot; Here &quot;-c&quot; means
-&quot;symmetric&quot;. I think &quot;-s&quot; was already taken.</p>
+GPG in "symmetric mode" so I use the command "gpg -c" Here "-c" means
+"symmetric". I think "-s" was already taken.</p>
 <p>It asks for a passphrase twice---to make sure I entered it correctly.</p>
 <p>This creates a file called secretstuff.tgz.gpg</p>
 <div id="slide-8"><img src="/images/ev0008.png" alt="[slide]"></div>
 <div><button onclick="slide(8)">SLIDE 8</button></div>
+
 <p>To be secure, I'm going to use the shred program to securely delete the
 original archive file. To recover the original file, I simply run the command
-&quot;gpg secretstuff.tgz.gpg&quot;. It asks for the passphrase and if I enter it
+"gpg secretstuff.tgz.gpg". It asks for the passphrase and if I enter it
 correctly, it will spit out the original file.</p>
 <div id="slide-9"><img src="/images/ev0009.png" alt="[slide]"></div>
 <div><button onclick="slide(9)">SLIDE 9</button></div>
-<p>Why did I use the term &quot;passphrase&quot; and not &quot;password&quot;. There is a subtle
+
+<p>Why did I use the term "passphrase" and not "password". There is a subtle
 difference. Passwords are short, while passphrases can be very long. If I knew
 that your password was only eight characters long, I could try every eight
 combination of eight letters - that would only take me a few days if I could
@@ -258,7 +268,7 @@ of tries that can be allowed.</p>
 <p>If an attacker gets a hold of the file secretstuff.tgz.gpg, that attacker could
 try to crack that file as many times a second as he wants to. So you need to
 pick a much harder to guess passphrase. Here's a table that lists the relative
-&quot;hardness to guess&quot; of several passphrases. On this scale, a 1.0 is
+"hardness to guess" of several passphrases. On this scale, a 1.0 is
 approximately equals the security of a 128 bit number. If you guessed one
 number every femptosecond (10^-15) it would take almost a million times the age
 of the universe before you've exhausted all the 128 bit numbers out there. So
@@ -267,6 +277,7 @@ of the universe before you've exhausted all the 128 bit numbers out there. So
 for a year).</p>
 <div id="slide-10"><img src="/images/ev0010.png" alt="[slide]"></div>
 <div><button onclick="slide(10)">SLIDE 10</button></div>
+
 <p>If I want a 128 bit random number, that's 16 bytes. Let's grab 16 byes out of
 /dev/random --- Linux's random device. We'll use the head program to grab the
 first 16 bytes it gives us. Then we'll that that and pipe it into the the
@@ -289,24 +300,22 @@ generator.</p>
 <p>Just to see how /dev/random collects randomness from keystrokes, here's a
 little program I wrote, timeinmicroseconds, that prints out the current time to
 microsecond resolution. If I run it like this:</p>
-<pre><code>while read -s -n 1 x ; do timeinmicroseconds ; done
-</code></pre>
+<pre><code>while read -s -n 1 x ; do timeinmicroseconds ; done</code></pre>
 <p>it will print out the time on every keystroke, until I hit Ctrl-C. Notice that
 the current time in seconds is not very random, but the microseconds part of
 the number is very random looking. Now you will think twice before doing this:</p>
 <pre><code>srand(time(0));
-int num = rand();
-</code></pre>
+int num = rand();</code></pre>
 <p>which only looks at the current time in seconds. Here's a much better way of
 getting a random number in C:</p>
 <pre><code>FILE \*devrandom;
 int num;
 devrandom = fopen(&quot;/dev/random&quot;, &quot;rb&quot;);
 fread(&amp;num, sizeof(num), 1, devrandom);
-close(devrandom);
-</code></pre>
+close(devrandom);</code></pre>
 <div id="slide-11"><img src="/images/ev0011.png" alt="[slide]"></div>
 <div><button onclick="slide(11)">SLIDE 11</button></div>
+
 <p>Aespipe is a simple program that does one thing and does it well---it
 implements the AES (Advanced Encryption Standard) block cypher. Aespipe can be
 found in the Ubuntu universe or can be downloaded form this URL.</p>
@@ -315,22 +324,24 @@ found in the Ubuntu universe or can be downloaded form this URL.</p>
 128-bit keys. It always gets these keys by applying a cryptographic hash
 function to your passphrase(s). You can give it a passphrase in three different
 ways. (1) You can type it in at the prompt (2) you can leave it in a file and
-use the &quot;-P file&quot; option to read that file in (3) you can gpg-encrypt a file
-and use the &quot;-K&quot; option to access that file.</p>
+use the "-P file" option to read that file in (3) you can gpg-encrypt a file
+and use the "-K" option to access that file.</p>
 <div id="slide-12"><img src="/images/ev0012.png" alt="[slide]"></div>
 <div><button onclick="slide(12)">SLIDE 12</button></div>
+
 <p>We first create an excessively long passphrase (more entropy than we will need,
 but why not?) and leave it in a ﬁle pass.txt</p>
 <p>In the second step, we will use the pipeline to take the output of tar and
 input it into aespipe. We redirect the final output into the file
 secretstuff.tgz.aes.</p>
 <p>In the next sequence, we add a passphrase to secure the keyfile!</p>
-<p>When decrypting, use the &quot;-d&quot; option!</p>
+<p>When decrypting, use the "-d" option!</p>
 <p>I recently backed up 58 GB of data through aespipe and onto an external drive.
 The bottleneck seemed to be the aespipe program, but I was able to write about
 5MB of data a second.</p>
 <div id="slide-13"><img src="/images/ev0013.png" alt="[slide]"></div>
 <div><button onclick="slide(13)">SLIDE 13</button></div>
+
 <p>Public Key, or Asymmetric, Cryptography is relatively new. It was first made
 public in the 1970s but was in use by governments for some years before that.
 Before public-key cryptography, if N people want to communicate secretly among
@@ -338,6 +349,7 @@ themselves, they would need N*(N-1)/2 separate keys. Without Public Key
 Crypto, Internet commerce would never have happened, among other things.</p>
 <div id="slide-14"><img src="/images/ev0014.png" alt="[slide]"></div>
 <div><button onclick="slide(14)">SLIDE 14</button></div>
+
 <p>Public-key cryptography (PKC) uses different keys to encrypt and decrypt your
 message! These two keys are mathematically related and must be generated at the
 same time.</p>
@@ -359,9 +371,10 @@ computer.</p>
 encrypts the key to that cypher with PKE. This is considered faster and safer.</p>
 <div id="slide-15"><img src="/images/ev0015.png" alt="[slide]"></div>
 <div><button onclick="slide(15)">SLIDE 15</button></div>
+
 <p>Let's start by generating a new keypairs. If you forget the command-line
-options to GPG, use the command &quot;man gpg&quot; to get the full documentation. the
-&quot;--gen-key&quot; option lets you create a new keypair.</p>
+options to GPG, use the command "man gpg" to get the full documentation. the
+"--gen-key" option lets you create a new keypair.</p>
 <p>Let's take the default options here. The key is going to have a copy of your
 name and email address for easy searching online. When it's done reading from
 the random device, it generates the key and drops the key in the ~/.gnupg/
@@ -369,20 +382,21 @@ directory. Each key has an ID---an 8 digit hexadecimal number, and a
 fingerprint, a 40 digit hexadecimal number. The fingerprint is just a
 cryptographic hash of the public key and can be used to verify that two copies
 of a key are the same key. This is used to prevent a man-in-the middle attack.</p>
-<p>You can get the fingerprint later by &quot;gpg --fingerprint&quot;.</p>
+<p>You can get the fingerprint later by "gpg --fingerprint".</p>
 <p>There are two ways of getting someone's key. They can give you a keyfile they
-create with &quot;gpg -a --export KEYID &gt; KEYID.txt&quot;. You could import it with &quot;gpg
---import KEYID.txt&quot;.</p>
+create with "gpg -a --export KEYID &gt; KEYID.txt". You could import it with "gpg
+--import KEYID.txt".</p>
 <p>Another option is to search a keyserver for a key, either over the web or using
-GPG's &quot;gpg --search-keys 'real name'&quot; or &quot;gpg --recv-keys KEYID&quot;. A key can be
-uploaded via the web or &quot;gpg --send-keys KEYID&quot;.</p>
+GPG's "gpg --search-keys 'real name'" or "gpg --recv-keys KEYID". A key can be
+uploaded via the web or "gpg --send-keys KEYID".</p>
 <p>Once I've generated my own key pair and acquired and verified someone else's
-public key, I can encrypt a file to send to them with &quot;gpg --sign --encrypt
---recipient 'NAME' FILE&quot;.</p>
-<p>If you receive a file, you can usually process it with &quot;gpg FILE&quot;.</p>
+public key, I can encrypt a file to send to them with "gpg --sign --encrypt
+--recipient 'NAME' FILE".</p>
+<p>If you receive a file, you can usually process it with "gpg FILE".</p>
 <p>Ask for volunteers to send some files back and forth.</p>
 <div id="slide-16"><img src="/images/ev0016.png" alt="[slide]"></div>
 <div><button onclick="slide(16)">SLIDE 16</button></div>
+
 <p>Digital Signatures are kind of like the opposite of Public Key Encryption. They
 are used to verify that the signed file has not changed since they were signed
 by someone who possessed the private key. Strictly speaking, you sign the
@@ -395,33 +409,38 @@ intended to facilitate Internet commerce.</p>
 Algorithm). I will show five applications of Digital Signatures.</p>
 <div id="slide-17"><img src="/images/ev0017.png" alt="[slide]"></div>
 <div><button onclick="slide(17)">SLIDE 17</button></div>
+
 <p>The first application is signing a plain text document. This is used a lot for
 a plain file on posted on a newsgroup or a web page where it is not feasible to
 attach a second file with a signature file. Before email clients learned to
 recognize attached signatures, this format was often used to sign emailed
 messages as well.</p>
 <p>Let's go through an example of signing something and verifying it. The commands
-are &quot;gpg --clearsign&quot; and &quot;gpg --verify&quot;.</p>
+are "gpg --clearsign" and "gpg --verify".</p>
 <div id="slide-18"><img src="/images/ev0018.png" alt="[slide]"></div>
 <div><button onclick="slide(18)">SLIDE 18</button></div>
+
 <p>The next way that this is often done is to clearsign a SHA1SUM file. This
 became popular in situations where a person was already producing SHA1SUM files
-and it was trivial to add a &quot;gpg --clearsign&quot; step to their routine. Then users
-who were accustomed to checking files with &quot;sha1sum -c&quot; can continue with no
-change to their routines and users who want to &quot;gpg --verify&quot; as well can do
+and it was trivial to add a "gpg --clearsign" step to their routine. Then users
+who were accustomed to checking files with "sha1sum -c" can continue with no
+change to their routines and users who want to "gpg --verify" as well can do
 that for added security.</p>
 <p>Power users will insist on combining the two processes with a pipeline.</p>
 <div id="slide-19"><img src="/images/ev0019.png" alt="[slide]"></div>
 <div><button onclick="slide(19)">SLIDE 19</button></div>
+
 <p>Here's a real-life example: Red Hat already was providing checksums for
 downloaded files. It was trivial for them to begin signing those checksums.</p>
 <div id="slide-20"><img src="/images/ev0020.png" alt="[slide]"></div>
 <div><button onclick="slide(20)">SLIDE 20</button></div>
-<p>Signing a random binary file. The &quot;gpg --detach-sign&quot; command creates a
+
+<p>Signing a random binary file. The "gpg --detach-sign" command creates a
 separate signature. Your email client probably does a similar thing when it
 GPG-signs an email and sends the signature as an attachment.</p>
 <div id="slide-21"><img src="/images/ev0021.png" alt="[slide]"></div>
 <div><button onclick="slide(21)">SLIDE 21</button></div>
+
 <p>For example, if I use Evolution or Thunderbird, both popular GUI email clients
 for Linux, then it is easy to enable encryption and digital signatures. In
 Evolution, you can get to this screen from the Account Editor from Preferences.
@@ -432,36 +451,25 @@ time you use it.</p>
 signatures; it will serve as notice to everyone else that you use GPG!</p>
 <div id="slide-22"><img src="/images/ev0022.png" alt="[slide]"></div>
 <div><button onclick="slide(22)">SLIDE 22</button></div>
+
 <p>Secure Sockets Layer (SSL) or TLS (Transport Layer Security) is a layer of
 encryption that can be applied to any TCP/IP connection. When it is applied to
 HTTP (the web's transfer protocol) the result is HTTPS, usually denoted by the
 https:// URL scheme and the little lock icon in your browser window. SSL makes
 use of PKE like something this: (I may be glossing over details)</p>
-<ol>
-<li>
-<p>Client (Web Browser) opens *clear* connection to server (Web Server).</p>
-</li>
-<li>
-<p>Server responds by sending its public key.</p>
-</li>
-<li>
-<p>Client looks at the key and sees that it has been digitally signed by a
-Certificate Authority.</p>
-</li>
-<li>
-<p>If the client ALREADY has a public key for that Certificate Authority, it
-checks the signature. If not valid, it throws an error message.</p>
-</li>
-<li>
-<p>If everything is on the up-and-up, the client generates a random session key
+<ol type="1">
+<li><p>Client (Web Browser) opens *clear* connection to server (Web Server).</p></li>
+<li><p>Server responds by sending its public key.</p></li>
+<li><p>Client looks at the key and sees that it has been digitally signed by a
+Certificate Authority.</p></li>
+<li><p>If the client ALREADY has a public key for that Certificate Authority, it
+checks the signature. If not valid, it throws an error message.</p></li>
+<li><p>If everything is on the up-and-up, the client generates a random session key
 and asymmetrically encrypts it with the server's key. It then responds to the
-server with this encrypted message.</p>
-</li>
-<li>
-<p>The server uses its private key to decrypt the session key. From here on
+server with this encrypted message.</p></li>
+<li><p>The server uses its private key to decrypt the session key. From here on
 out, both the client and the server will encrypt everything they send each
-other with this session key.</p>
-</li>
+other with this session key.</p></li>
 </ol>
 <p>Before any of this can happen, the following must happen behind the scene:</p>
 <p>A) The server must generate a keypair.</p>
@@ -471,11 +479,13 @@ say they are in exchange for a signature on the public key.</p>
 public key with the web browser.</p>
 <div id="slide-23"><img src="/images/ev0023.png" alt="[slide]"></div>
 <div><button onclick="slide(23)">SLIDE 23</button></div>
+
 <p>You can go to this page in Mozilla Firefox and get a list of all the CA's that
 it trusts.</p>
 <div id="slide-24"><img src="/images/ev0024.png" alt="[slide]"></div>
 <div><button onclick="slide(24)">SLIDE 24</button></div>
-<p>Here's a screenshot from the &quot;Page Info&quot; box when I visit my bank's website.
+
+<p>Here's a screenshot from the "Page Info" box when I visit my bank's website.
 Bank of America paid VeriSign to sign its key.</p>
 <p>Why go through all this rigmarole? To prevent a Man-in-the-Middle attack. If a
 malicious person intercepted my original connection to the bank and gave me a
@@ -484,6 +494,7 @@ the bank's own key.</p>
 <p>Draw a picture.</p>
 <div id="slide-25"><img src="/images/ev0025.png" alt="[slide]"></div>
 <div><button onclick="slide(25)">SLIDE 25</button></div>
+
 <p>SSH (Secure Shell) was originally designed to replace rsh and telnet, programs
 which allowed remote logins to servers *without* any encryption. Even the
 passwords were sent in cleartext. On an ethernet, it was ridiculously easy to
@@ -496,39 +507,30 @@ server's public key. When installing the SSH daemon, you generate a keypair.</p>
 <p>In order to prevent a man-in-the-middle attack, you'll need to manually check
 the fingerprint on the server's key. You'll only need to do this the first time
 your client connects to a server or if a server gets a new keypair.</p>
-<p>To find the fingerprints on a server, you can use the command &quot;ssh-keygen -lf&quot;.
+<p>To find the fingerprints on a server, you can use the command "ssh-keygen -lf".
 The public keys are kept in the files /etc/ssh/ssh_host_*key.pub</p>
 <p>First and foremost, SSH is used to remotely log into a command-line environment
 on a remote machine. For those who do a lot of work on the command line
 already, the utility of this is obvious. For example, I have used remote logins
 to:</p>
-<ol>
-<li>
-<p>log into a web server and make changes to the files there directly---without
-the need to make local copies and ftp them over to the server.</p>
-</li>
-<li>
-<p>Log into a Linux machine that I was using as a router so I can modify the
-firewall rules using iptables.</p>
-</li>
-<li>
-<p>Remotely long into a workstation to run mathematical or physical simulations
-that might take a lot of computational power and time to run.</p>
-</li>
-<li>
-<p>Log into a email server and run Mutt or Pine to locally read and respond to
-my email.</p>
-</li>
-<li>
-<p>Use &quot;wall&quot; to talk to other users on the same machine.</p>
-</li>
+<ol type="1">
+<li><p>log into a web server and make changes to the files there directly---without
+the need to make local copies and ftp them over to the server.</p></li>
+<li><p>Log into a Linux machine that I was using as a router so I can modify the
+firewall rules using iptables.</p></li>
+<li><p>Remotely long into a workstation to run mathematical or physical simulations
+that might take a lot of computational power and time to run.</p></li>
+<li><p>Log into a email server and run Mutt or Pine to locally read and respond to
+my email.</p></li>
+<li><p>Use "wall" to talk to other users on the same machine.</p></li>
 </ol>
 <p>But that's not all!</p>
 <div id="slide-26"><img src="/images/ev0026.png" alt="[slide]"></div>
 <div><button onclick="slide(26)">SLIDE 26</button></div>
-<p>SSH can be used to copy files or even whole directories with the &quot;scp&quot; or
-&quot;sftp&quot; commands. I am especially fond of the scp command, which has beautiful
-syntax, stolen from the old &quot;rcp&quot; command. In my opinion, scp has more of the
+
+<p>SSH can be used to copy files or even whole directories with the "scp" or
+"sftp" commands. I am especially fond of the scp command, which has beautiful
+syntax, stolen from the old "rcp" command. In my opinion, scp has more of the
 Unix Philosophy than sftp does.</p>
 <p>In the rsync example, we use the rsync command to manage the actual copying of
 files, but we *connect* to the ssh daemon and don't need to run a rsync
@@ -548,6 +550,7 @@ configure an application to make use of this port. But first let's draw a
 picture:</p>
 <div id="slide-27"><img src="/images/ev0027.png" alt="[slide]"></div>
 <div><button onclick="slide(27)">SLIDE 27</button></div>
+
 <p>Here is a graphic which shows the relevant parts of a hypothetical situation I
 find myself in all the time. I'm at a coffee shop and have my laptop with me. I
 want to browse the web off the free WiFi someone has provided, but since it is
@@ -558,27 +561,19 @@ of problem with any connection to the Internet, but with your ISP, you pay them
 money to give you Internet service. It is in their best intre$t to respect your
 privacy.</p>
 <p>Beforehand, I have</p>
-<ol>
-<li>
-<p>Figured out how to open port 22 (or other port) on my DSL or cable modem and
-how to forward that port to my Linux workstation on my home network.</p>
-</li>
-<li>
-<p>Run sshd on my workstation, opened port 22 on my iptables firewall, and left
-my computer running while I'm out.</p>
-</li>
-<li>
-<p>Gone to dyndns.org and set up a free account so example.dyndns.org now
+<ol type="1">
+<li><p>Figured out how to open port 22 (or other port) on my DSL or cable modem and
+how to forward that port to my Linux workstation on my home network.</p></li>
+<li><p>Run sshd on my workstation, opened port 22 on my iptables firewall, and left
+my computer running while I'm out.</p></li>
+<li><p>Gone to dyndns.org and set up a free account so example.dyndns.org now
 points at my home machine. I run the ddclient daemon that periodically updates
-the dyndns dns server on my current DHCPed IP address.</p>
-</li>
-<li>
-<p>Have a copy of my home machine's SSH key fingerprint either with me printed
+the dyndns dns server on my current DHCPed IP address.</p></li>
+<li><p>Have a copy of my home machine's SSH key fingerprint either with me printed
 on a piece of paper, on a computer file, or in my laptop's ~/.ssh/known_hosts
-file.</p>
-</li>
+file.</p></li>
 </ol>
-<p>Now all I need to do is &quot;ssh -D 12345 example.dyndns.org&quot;. The hypothetical
+<p>Now all I need to do is "ssh -D 12345 example.dyndns.org". The hypothetical
 malevolent ISP *will* know that you have opened a ssh connection to
 example.dyndns.org, and will see a bunch of encrypted information going back
 and forth, but if you trust the SSH encryption, then there is no way for him to
@@ -590,22 +585,24 @@ the ssh tunnel to my workstation, then out to the Internet at large,
 unencrypted.</p>
 <div id="slide-28"><img src="/images/ev0028.png" alt="[slide]"></div>
 <div><button onclick="slide(28)">SLIDE 28</button></div>
+
 <p>I need to tell my web browser to use the SOCKS proxy at localhost:12345. Here's
-how I do it in Firefox 2.0.0.x. I use the &quot;MM3 ProxySwitch&quot; Add-On to quickly
+how I do it in Firefox 2.0.0.x. I use the "MM3 ProxySwitch" Add-On to quickly
 switch back and forth between proxied and unproxied modes. My configuration
 file looks this:</p>
 <pre><code>\[socksproxy
   socks=127.0.0.1:12345
   noProxy=127.0.0.1
-\]
-</code></pre>
+\]</code></pre>
 <p>And that's all there is. I'd like to bust out Ethereal to show how http traffic
 is encrypted now, but that's out of the scope of this talk.</p>
 <div id="slide-29"><img src="/images/ev0029.png" alt="[slide]"></div>
 <div><button onclick="slide(29)">SLIDE 29</button></div>
+
 <p>Conclusions: There's a lot more to this subject than just picking the right algorithm!</p>
 <hr />
 <div class="rightside">
+
 <p>file modification time: 2007-04-11 18:22:13</p>
 </div>
 
