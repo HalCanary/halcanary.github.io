@@ -1,7 +1,6 @@
 <div style="display: none;">
 
-Hal W Canary III - 2020-10-09 Resume
-====================================
+# Hal W Canary III - 2020-10-31 Resume
 
 </div>
 <div class="tightmargins nolink">
@@ -15,23 +14,20 @@ Hal W. Canary, III
 
 </div>
 
-Technical Skills
-----------------
+## Technical Skills
 
 *   Languages: Go, C++, JavaScript, Python, C, Java, Shell Scripting
-*   Software Tools: React, NPM, Kubernetes, CMake, OpenGL, Git, Gerrit
+*   Software Tools: React, NPM, Docker, Kubernetes, Git, CMake, OpenGL
 *   Operating systems: Unix and Linux workstations and servers, Android and iOS.
-*   Specialties: scientific and numerical computing, computer graphics,
-    full-stack web development, databases and database interfaces.
+*   Specialties: scientific and numerical computing, scientific visualization,
+    computer graphics, full-stack web development, microservices, databases.
 
-Education
----------
+## Education
 
 *   University of North Carolina at Chapel Hill, M.S. Computer Science, August 2013.
 *   University of Wisconsin-Madison, B.S. Physics and Mathematics, May 2001.
 
-Experience
-----------
+## Experience
 
 *   Senior Software Engineer, Voith Digital. 2020
     *   Full-stack software engineer for
@@ -83,8 +79,7 @@ Experience
         Developed custom software for clients.
 *   Undergraduate Researcher, UW-Madison Physics Department. 1999–2000
 
-Publications
-------------
+## Publications
 
 *   Hal Canary, Russell M. Taylor II, Cory Quammen, Scott Pratt, Facundo A.
     Gómez, Brian O'Shea, Christopher G. Healey. “Visualizing Likelihood Density

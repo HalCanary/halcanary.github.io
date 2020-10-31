@@ -5,6 +5,8 @@ import os
 import sys
 import html
 
+import wohc
+
 def get_files(directory):
     for subdir, _, filenames in os.walk(directory):
         for filename in filenames:
@@ -14,10 +16,11 @@ def main():
     TEMPLATE = '''<!doctype html>
 <html lang="en">
 <meta charset="UTF-8">
-<meta http-equiv="refresh" content="0; url={0}">
+<meta http-equiv="refresh" content="0; url={url0}">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{1}</title>
-<body><a style="overflow-wrap:break-word" href="{1}">{1}</a></body>
+<title>{url1}</title>
+<link rel="icon" href="data:image/png;base64,{icon}">
+<body><a style="overflow-wrap:break-word" href="{url1}">{url1}</a></body>
 </html>
 '''
     ROOT = 'https://halcanary.org/'
@@ -33,7 +36,7 @@ def main():
         value = html.escape(value)
         short = value.replace(ROOT, '/', 1) if value.startswith(ROOT) else value
         with open(path + '/index.html', 'w') as o:
-            o.write(TEMPLATE.format(value, short))
+            o.write(TEMPLATE.format(url0=value, url1=short, icon=wohc.ICON))
         sys.stdout.write(key + '\n')
 
 if __name__ == '__main__':
