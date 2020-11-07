@@ -10,10 +10,13 @@
 svg line {
     stroke: black;
     stroke-width: 1;
+    stroke-linecap: round;
+    fill: none;
 }
-@page { margin: 0.5in; }
+svg { margin: 0; }
+@page { margin: 0.5in 0.5in 0.25in 0.5in; }
 @media print {
-    body { margin: 0; }
+    body { margin: 0; padding: 0; }
 }
 </style>
 <script>
@@ -88,14 +91,17 @@ window.addEventListener('load', () => {
     lines.push([0, h, w - 1, h]);
     lines.push([w, 0, w, h]);
     var svg = document.getElementById('s');
+    var g = document.createElementNS("http://www.w3.org/2000/svg", "g");
+    g.setAttribute('transform', `scale(${scale/10} ${scale/10})`);
     lines.forEach(([x1, y1, x2, y2]) => {
         var l = document.createElementNS("http://www.w3.org/2000/svg", "line");
-        l.setAttribute('x1', x1 * scale);
-        l.setAttribute('y1', y1 * scale);
-        l.setAttribute('x2', x2 * scale);
-        l.setAttribute('y2', y2 * scale);
-        svg.appendChild(l);
+        l.setAttribute('x1', x1 * 10);
+        l.setAttribute('y1', y1 * 10);
+        l.setAttribute('x2', x2 * 10);
+        l.setAttribute('y2', y2 * 10);
+        g.appendChild(l);
     });
+    svg.appendChild(g);
 });
 </script>
 </head>
