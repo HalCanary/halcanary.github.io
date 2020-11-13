@@ -17,29 +17,55 @@ svg { margin: 0; }
 @page { margin: 0.5in 0.5in 0.25in 0.5in; }
 @media print {
     body { margin: 0; padding: 0; }
+    #controls { display: none; }
 }
+#controls { margin: 1em; }
 </style>
 <script>
-window.addEventListener('load', () => {
-    const match = /\?size=([0-9]*)/.exec(window.location.search);
-    const w = match === null ? 20 : match[1];
-    const h = Math.floor(w * 4 / 3);
-    const scale = 690 / w;
+const makeRand = (seed = 0) => {
+    function mult32u(n, m) {
+        n >>>= 0;
+        m >>>= 0;
+        var nlo = n & 0xffff;
+        return ( ((n - nlo) * m >>> 0) + (nlo * m) ) >>> 0;
+    }
+    let value = seed >>> 0;
+    return () => {
+        value = (mult32u(value, 1103515245) + 12345) >>> 0;
+        return ((value >> 16) % 32768) >>> 0;
+    };
+};
+
+const makeMaze = (width, height, w, seed = 0) => {
+    const h = Math.floor(w * (height / width));
     const up = 1 << 0;
     const down = 1 << 1;
     const left = 1 << 2;
     const right = 1 << 3;
-    let maze = new Array(w * h).fill(0);
-    let stack = [];
-    const addToStack = (x, y) => {
-        if (x > 0) { stack.push([ x, y, x - 1, y, left ]); }
-        if (y > 0) { stack.push([ x, y, x, y - 1, up   ]); }
-        if (x + 1 < w) { stack.push([ x, y, x + 1, y, right ]); }
-        if (y + 1 < h) { stack.push([ x, y, x, y + 1, down  ]); }
+    const opposite = (dir) => {
+        switch (dir) {
+            case up:    return down;
+            case down:  return up;
+            case left:  return right;
+            case right: return left;
+            default:    return 0;
+        }
     };
-    const getRandom = (a) => {
+    let random = makeRand(seed);
+    let maze = new Uint8Array(w * h);
+    let stack = [];
+    const stackPush = (x, y, nx, ny, d) => {
+        if (maze[nx + w * ny] == 0) { stack.push([x, y, nx, ny, d]); }
+    };
+    const addToStack = (x, y) => {
+        if (x > 0)     { stackPush( x, y, x - 1, y, left  ); }
+        if (y > 0)     { stackPush( x, y, x, y - 1, up    ); }
+        if (x + 1 < w) { stackPush( x, y, x + 1, y, right ); }
+        if (y + 1 < h) { stackPush( x, y, x, y + 1, down  ); }
+    };
+    const getRandom = (a, rand) => {
         const l = a.length;
-        const i = Math.floor(Math.random() * l);  
+        const i = rand() % l;
         const r = a[i];
         a[i] = a[l - 1];
         a.pop();
@@ -47,31 +73,14 @@ window.addEventListener('load', () => {
     }
     addToStack(0, 0);
     while (stack.length > 0) {
-        let [x, y, nx, ny, dir] = getRandom(stack);
+        let [x, y, nx, ny, dir] = getRandom(stack, random);
         let n = nx + w * ny;
-        if (maze[n] != 0) {
+        if (maze[n] != 0) {  // if alreadhy connected, skip.
             continue;
         }
-        let p = x + w * y;
-        switch (dir) {
-            case up:
-                maze[p] |= up;
-                maze[n] |= down;
-                break;
-            case down:
-                maze[p] |= down;
-                maze[n] |= up;
-                break;
-            case left:
-                maze[p] |= left;
-                maze[n] |= right;
-                break;
-            case right:
-                maze[p] |= right;
-                maze[n] |= left;
-                break;
-        }
-        addToStack(nx, ny); 
+        maze[x + (w * y)] |= dir;
+        maze[n] |= opposite(dir);
+        addToStack(nx, ny);
     };
     const s = 32;
     lines = [];
@@ -84,33 +93,65 @@ window.addEventListener('load', () => {
            if (y < h - 1 && (v & down) == 0) {
                 lines.push([x, y + 1, x + 1, y + 1]);
            }
-        }  
+        }
     }
     lines.push([0, 0, 0, h]);
     lines.push([1, 0, w, 0]);
     lines.push([0, h, w - 1, h]);
     lines.push([w, 0, w, h]);
-    var svg = document.getElementById('s');
-    var g = document.createElementNS("http://www.w3.org/2000/svg", "g");
-    g.setAttribute('transform', `scale(${scale/10} ${scale/10})`);
+    const SVGNS = "http://www.w3.org/2000/svg";
+    var g = document.createElementNS(SVGNS, "g");
+    const scale = width / (w * 10 + 1);
+    g.setAttribute('transform',
+         `scale(${scale} ${scale}) translate(0.5 0.5)`);
     lines.forEach(([x1, y1, x2, y2]) => {
-        var l = document.createElementNS("http://www.w3.org/2000/svg", "line");
+        var l = document.createElementNS(SVGNS, "line");
         l.setAttribute('x1', x1 * 10);
         l.setAttribute('y1', y1 * 10);
         l.setAttribute('x2', x2 * 10);
         l.setAttribute('y2', y2 * 10);
         g.appendChild(l);
     });
+    var svg = document.createElementNS(SVGNS, "svg");
+    svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
+    svg.setAttribute('preserveAspectRatio' , "xMidYMid meet");
     svg.appendChild(g);
+    return svg;
+};
+
+window.addEventListener('load', () => {
+    let params = (new URL(document.location)).searchParams;
+    let size = params.get('size');
+    let seed = params.get('seed');
+    size = size ? parseInt(size) : 20;
+    seed = seed !== null && seed !== ""
+         ? parseInt(seed)
+         : Math.floor(Math.random() * 0x10000);
+    document.getElementById('size').value = size;
+    document.getElementById('seed').value = seed;
+
+    const width = 690;
+    const height = 920;
+    let maze = document.getElementById('maze');
+    maze.innerHTML = '';
+    maze.appendChild(makeMaze(width, height, size, seed));
+    document.title = `Maze ${size}|${seed}`;
 });
+
+const updateSizeSeed = () => {
+    const size = document.getElementById('size').value;
+    const seed = document.getElementById('seed').value;
+    document.location.search = `?size=${size}&seed=${seed}`;
+};
+
 </script>
 </head>
 <body>
-<svg xmlns="http://www.w3.org/2000/svg"
-     xmlns:xlink="http://www.w3.org/1999/xlink" 
-     viewBox="-1 -1 691 921"
-     preserveAspectRatio="xMidYMid meet"
-     id='s'>
-</svg>
+<div id="controls"><p>
+Size: <input type="text" id="size" onChange="updateSizeSeed()">
+Seed: <input type="text" id="seed" onChange="updateSizeSeed()">
+<button onclick="updateSizeSeed()">Update</button>
+</p></div>
+<div id="maze"></div>
 </body>
 </html>
