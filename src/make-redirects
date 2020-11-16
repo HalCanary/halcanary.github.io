@@ -16,9 +16,9 @@ def main():
     TEMPLATE = '''<!doctype html>
 <html lang="en">
 <meta charset="UTF-8">
-<meta http-equiv="refresh" content="0; url={url0}">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{url1}</title>
+<script>window.location.replace("{url0}");</script>
 <link rel="icon" href="data:image/png;base64,{icon}">
 <body><a style="overflow-wrap:break-word" href="{url1}">{url1}</a></body>
 </html>
