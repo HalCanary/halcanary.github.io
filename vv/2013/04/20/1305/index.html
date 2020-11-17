@@ -10,7 +10,7 @@
 a:visited {color:#C0F;}
 a:link, a:hover, a:active {color:#0CF;}
 }
-@media print {body {max-width:8in;font-size:12px;}
+@media print {body {max-width:8in;font-size:12px;margin:0;}
 }
 @media screen {body {font-family:sans-serif;max-width:35em;margin:22px auto 64px auto;padding:0 8px;}
 }
@@ -82,7 +82,7 @@ ul.flat li::before {content:"[";}
 import vtk
 
 function = lambda x,y: x**2 - y**2
-outputName = '/tmp/monge.vtp'
+outputName = &#39;/tmp/monge.vtp&#39;
 resolution = 50
 xmin, xmax = -1.0, 1.0
 ymin, ymax = -1.0, 1.0
@@ -114,8 +114,7 @@ writer = vtk.vtkXMLPolyDataWriter()
 writer.SetInput(polyData)
 writer.SetFileName(outputName)
 writer.Write()
-print 'wrote to', outputName
-</code></pre>
+print &#39;wrote to&#39;, outputName</code></pre>
 <p>The surface can be viewed in Paraview or <a href="https://github.com/HalCanary/vtkviewer">vtkviewer</a>.</p>
 <p><img src="/images/vtkviewer0.png" alt="[]" /></p>
 <p>To make this surface look better, calculate the normals. The (unnormalized) normal direction is (-∂f/∂x,-∂f/∂y,1).</p>
@@ -143,8 +142,7 @@ normals.SetNumberOfTuples(resolution\*\*2)
         .......
 .......
 polyData.GetPointData().SetNormals(normals)
-.......
-</code></pre>
+.......</code></pre>
 <p><img src="/images/vtkviewer.png" alt="[]" /></p>
   </div>
 </article>

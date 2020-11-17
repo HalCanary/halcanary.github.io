@@ -10,7 +10,7 @@
 a:visited {color:#C0F;}
 a:link, a:hover, a:active {color:#0CF;}
 }
-@media print {body {max-width:8in;font-size:12px;}
+@media print {body {max-width:8in;font-size:12px;margin:0;}
 }
 @media screen {body {font-family:sans-serif;max-width:35em;margin:22px auto 64px auto;padding:0 8px;}
 }
@@ -82,7 +82,7 @@ ul.flat li::before {content:"[";}
 # ANSI Color -- use these variables to easily have
 # different color and format output. Make sure to
 # output the reset sequence after colors (f =
-# foreground, b = background), and use the 'off'
+# foreground, b = background), and use the &#39;off&#39;
 # feature for anything you turn on.
 #
 # This function is: Copyright 2004 Dave Taylor
@@ -90,7 +90,7 @@ ul.flat li::before {content:"[";}
 # ISBN 1593270127.
 # http://www.intuitive.com/wicked/showscript.cgi?011-colors.sh
 initializeANSI() {
-    esc=$(printf '\033')
+    esc=$(printf &#39;\033&#39;)
 
     blackf=&quot;${esc}[30m&quot;; redf=&quot;${esc}[31m&quot;;
     yellowf=&quot;${esc}[33m&quot; bluef=&quot;${esc}[34m&quot;;
@@ -130,8 +130,7 @@ for B in $COLORS; do
     done
     echo &quot;&quot;
 done
-exit 0
-</code></pre>
+exit 0</code></pre>
   </div>
 </article>
 <hr>

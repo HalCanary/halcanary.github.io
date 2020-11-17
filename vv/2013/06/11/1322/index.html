@@ -10,7 +10,7 @@
 a:visited {color:#C0F;}
 a:link, a:hover, a:active {color:#0CF;}
 }
-@media print {body {max-width:8in;font-size:12px;}
+@media print {body {max-width:8in;font-size:12px;margin:0;}
 }
 @media screen {body {font-family:sans-serif;max-width:35em;margin:22px auto 64px auto;padding:0 8px;}
 }
@@ -76,46 +76,45 @@ ul.flat li::before {content:"[";}
     </div>
   </header>
   <div class="content">
-<p>Your challenge: make a pretty postscript picture as one tweet.  &quot;%!\n&quot;  is not necessary
+<p>Your challenge: make a pretty postscript picture as one tweet. "%!\n" is not necessary
 (<a href="https://twitter.com/halcanary/status/344530170532741120">tweet</a>)</p>
 <pre><code>%!
 300 300 translate newpath 3 0 2 copy moveto 604 { 5 add
 exch 1.01 mul exch 2 copy cos mul 3 copy pop sin mul
-lineto } repeat stroke showpage
-</code></pre>
+lineto } repeat stroke showpage</code></pre>
 <img src="/images/postscriptChallenge_spiral.png" alt="program output" width="500" height="500">
+
 <hr />
 <p><a href="https://twitter.com/gmfawcett/status/344891033202614272">gmfawcett:</a></p>
 <pre><code>%!
 /n 90 def 150 150 translate newpath n n moveto 36 { 170
-rotate n n lineto} repeat stroke showpage
-</code></pre>
+rotate n n lineto} repeat stroke showpage</code></pre>
 <img src="/images/postscriptChallenge_spirograph.png" alt="program output" width="300" height="300">
+
 <hr />
 <p><a href="https://twitter.com/seanjensengrey/status/344825151264808961">seanjensengrey:</a></p>
 <pre><code>%!
 /box { newpath moveto 72 0 rlineto 0 72 rlineto -72 0
 rlineto closepath stroke } def 99 99 translate 0 1 5{60
-rotate -20 0 box}for showpage
-</code></pre>
+rotate -20 0 box}for showpage</code></pre>
 <img src="/images/postscriptChallenge_sixBoxes.png" alt="program output" width="200" height="200">
+
 <hr />
 <p><a href="https://twitter.com/gmfawcett/status/344986403962253312">gmfawcett:</a></p>
 <pre><code>%!
 /Courier findfont 50 scalefont setfont 150 250 moveto
 (#postscriptchallenge) { 1 string dup 0 4 3 roll put
 show -18 rotate} forall
-showpage
-</code></pre>
+showpage</code></pre>
 <img src="/images/postscriptChallenge_words.png" alt="program output" width="300" height="300">
+
 <hr />
 <p>Note: to display these,m I used this command:</p>
 <pre><code>gs -sDEVICE=png16m -g500x500 -sOutputFile=out.png &lt;&lt;EOF
 300 300 translate newpath 3 0 2 copy moveto 604 { 5 add
 exch 1.01 mul exch 2 copy cos mul 3 copy pop sin mul
 lineto } repeat stroke showpage
-EOF
-</code></pre>
+EOF</code></pre>
   </div>
 </article>
 <hr>

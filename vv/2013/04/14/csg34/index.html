@@ -10,7 +10,7 @@
 a:visited {color:#C0F;}
 a:link, a:hover, a:active {color:#0CF;}
 }
-@media print {body {max-width:8in;font-size:12px;}
+@media print {body {max-width:8in;font-size:12px;margin:0;}
 }
 @media screen {body {font-family:sans-serif;max-width:35em;margin:22px auto 64px auto;padding:0 8px;}
 }
@@ -151,8 +151,7 @@ public:
   T * operator-&gt;() const { return m_ptr; }
 };
 
-#endif /* POINTER_H */
-</code></pre>
+#endif /* POINTER_H */</code></pre>
 <p>And the main funtion, as promised:</p>
 <pre><code>// compile with &quot;-lcrypto&quot;
 #include &lt;iostream&gt; // cout
@@ -168,10 +167,9 @@ int main(int, char **) {
   if (! BN_hex2bn(&amp;(bn), hexnumber))
     throw std::exception();
   Pointer&lt; char, Pointers::free&lt; char &gt; &gt; dec(BN_bn2dec(bn));
-  std::cout &lt;&lt; dec &lt;&lt; '\n';
+  std::cout &lt;&lt; dec &lt;&lt; &#39;\n&#39;;
   return 0;
-}
-</code></pre>
+}</code></pre>
   </div>
 </article>
 <hr>

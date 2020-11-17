@@ -10,7 +10,7 @@
 a:visited {color:#C0F;}
 a:link, a:hover, a:active {color:#0CF;}
 }
-@media print {body {max-width:8in;font-size:12px;}
+@media print {body {max-width:8in;font-size:12px;margin:0;}
 }
 @media screen {body {font-family:sans-serif;max-width:35em;margin:22px auto 64px auto;padding:0 8px;}
 }
@@ -91,8 +91,7 @@ already and wanted to start from scratch.)</p>
 09      September       30
 10      October         31
 11      November        30
-12      December        30 or 31
-</code></pre>
+12      December        30 or 31</code></pre>
 <p>This would space out the months more equitably. Almost all two-month periods
 would be exactly 61 days, the exception being December in non-leap years.</p>
 <p>I would define January 1 to be the day after the Winter Solstice (at a fixed
@@ -112,22 +111,21 @@ the sun is.</p>
 <p>Additional, optional rules to make this a perpetual calendar: January 1 is
 always a Saturday. Then on 365-day years, you would get two Saturdays in a row:</p>
 <pre><code>12-29 12-30 | 01-01 01-02 01-03
- Fri   Sat  |  Sat   Sun   Mon
-</code></pre>
+ Fri   Sat  |  Sat   Sun   Mon</code></pre>
 <p>Or a double weekend on leap years:</p>
 <pre><code>12-29 12-30 12-31 | 01-01 01-02 01-03
- Fri   Sat   Sun  |  Sat   Sun   Mon
-</code></pre>
+ Fri   Sat   Sun  |  Sat   Sun   Mon</code></pre>
 <div class="box">
+
 <p>Note that one could make the existing Gregorian Calendar into a perpetual
 calendar by defining March 1 as always a Saturday.</p>
 <pre><code>02-27 02-28 | 03-01 03-02 03-03
  Fri   Sat  |  Sat   Sun   Mon
 
 02-27 02-28 02-29 | 03-01 03-02 03-03
- Fri   Sat   Sun  |  Sat   Sun   Mon
-</code></pre>
+ Fri   Sat   Sun  |  Sat   Sun   Mon</code></pre>
 </div>
+
 <hr />
 <p><strong>UPDATE 2008-10-25:</strong> Here's very simple python code to give the month, day,
 and week, given the day of year.</p>
@@ -141,16 +139,14 @@ def dayandmonth(yday):
         da = da - 30
         mo = mo + 1
     wd = (yday - 1) % 7 +1
-    return (mo, da, wd)
-</code></pre>
+    return (mo, da, wd)</code></pre>
 <p>And a leap year function:</p>
 <pre><code># offset is determined by solar
 # observations at the reference
 # longitude
 def isleapyear2(y, offset=6):
     n = (y + offset) % 33
-    return n and not (n % 4)
-</code></pre>
+    return n and not (n % 4)</code></pre>
 <p>Every 10,000 years, the offset may need to be changed. After 100,000 years, a
 new algorithm will likely be necessary</p>
   </div>

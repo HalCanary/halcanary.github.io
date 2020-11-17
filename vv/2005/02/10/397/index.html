@@ -10,7 +10,7 @@
 a:visited {color:#C0F;}
 a:link, a:hover, a:active {color:#0CF;}
 }
-@media print {body {max-width:8in;font-size:12px;}
+@media print {body {max-width:8in;font-size:12px;margin:0;}
 }
 @media screen {body {font-family:sans-serif;max-width:35em;margin:22px auto 64px auto;padding:0 8px;}
 }
@@ -82,7 +82,7 @@ home, I use Rhythmbox, which has no such ability. Here's how I do it.</p>
 <p>Run this script:</p>
 <pre><code>#!/bin/sh
 # $HOME/bin/make-audio-cd-from-playlist.sh
-grep '=file://' $1 | awk -F '//' '{print $2}' &gt; tmp-file
+grep &#39;=file://&#39; $1 | awk -F &#39;//&#39; &#39;{print $2}&#39; &gt; tmp-file
 i=1
 for LINE in $(cat tmp-file) ; do
     if [ &quot;$i&quot; -lt 10 ] ; then
@@ -93,12 +93,10 @@ for LINE in $(cat tmp-file) ; do
     lame --decode &quot;$LINE&quot; $FILENAME
     i=$(($i+1))
 done
-cdrecord dev=/dev/cdwriter -pad -v -audio track_??.wav
-</code></pre>
+cdrecord dev=/dev/cdwriter -pad -v -audio track_??.wav</code></pre>
 <p>And then:</p>
 <pre><code>$ cd  /home/hal/tmp/
-$ make-audio-cd-from-playlist.sh x
-</code></pre>
+$ make-audio-cd-from-playlist.sh x</code></pre>
 <hr />
 <p><strong>UPDATE</strong>: Recent versions of Rhythmbox have the ability to burn audio CDs.</p>
   </div>

@@ -1,0 +1,14 @@
+TITLE=Javascript SVG printable maze generator
+DATE=2020-11-17 14:05:08 -0500 (EST)
+POSTID=3023
+MODE=markdown
+CATEGORIES=
+SUMMARY=
+
+![Size 20 Maze](/images/maze20.svg)
+
+Examples:
+
+<https://halcanary.org/maze/?size=64>  
+<https://halcanary.org/maze/?size=32>  
+<https://halcanary.org/maze/?size=128>

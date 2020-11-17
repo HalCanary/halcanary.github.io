@@ -10,7 +10,7 @@
 a:visited {color:#C0F;}
 a:link, a:hover, a:active {color:#0CF;}
 }
-@media print {body {max-width:8in;font-size:12px;}
+@media print {body {max-width:8in;font-size:12px;margin:0;}
 }
 @media screen {body {font-family:sans-serif;max-width:35em;margin:22px auto 64px auto;padding:0 8px;}
 }
@@ -79,7 +79,7 @@ ul.flat li::before {content:"[";}
 <pre>
 ;_____________________________________________________________________
 ;
-;	 Look And Feel
+;    Look And Feel
 ;_____________________________________________________________________
 (setq inhibit-startup-screen 't)
 (tool-bar-mode nil)
@@ -94,7 +94,7 @@ ul.flat li::before {content:"[";}
 
 ;_____________________________________________________________________
 ;
-;	 Keyboard Bindings
+;    Keyboard Bindings
 ;_____________________________________________________________________
 (setq x-select-enable-primary t)
 (setq x-select-enable-clipboard t)
@@ -102,8 +102,8 @@ ul.flat li::before {content:"[";}
 (global-unset-key (kbd &quot;M-z&quot;))
 (global-set-key (kbd &quot;M-z&quot;) 'suspend-emacs)
 (global-set-key (kbd &quot;C-h&quot;) 'backward-delete-char-untabify)
-(global-set-key	[(control s)] 'save-buffer)
-(global-set-key	[(control f)] 'isearch-forward)
+(global-set-key [(control s)] 'save-buffer)
+(global-set-key [(control f)] 'isearch-forward)
 (define-key isearch-mode-map [(control f)] 'isearch-repeat-forward)</pre>
   </div>
 </article>

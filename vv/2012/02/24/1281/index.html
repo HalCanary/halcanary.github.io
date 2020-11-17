@@ -10,7 +10,7 @@
 a:visited {color:#C0F;}
 a:link, a:hover, a:active {color:#0CF;}
 }
-@media print {body {max-width:8in;font-size:12px;}
+@media print {body {max-width:8in;font-size:12px;margin:0;}
 }
 @media screen {body {font-family:sans-serif;max-width:35em;margin:22px auto 64px auto;padding:0 8px;}
 }
@@ -114,7 +114,7 @@ for arg in &quot;$@&quot;; do
     { /usr/bin/evince &quot;$arg&quot; &gt; /dev/null 2&gt;&amp;1 &amp; } ;;
   txt|tex|c|cxx|cpp|h|hh|cc|C|py|pl|java|hpp|hxx)
     { /usr/bin/emacs &quot;$arg&quot; \
-        --eval '(setq buffer-read-only t)' \
+        --eval &#39;(setq buffer-read-only t)&#39; \
         &gt; /dev/null 2&gt;&amp;1 &amp; } ;;
   htm|html)
     full=`readlink --canonicalize &quot;$arg&quot;`
@@ -129,8 +129,7 @@ for arg in &quot;$@&quot;; do
   *)
     echo &quot;What do I do with \&quot;$arg\&quot;?&quot;;;
   esac
-done
-</code></pre>
+done</code></pre>
   </div>
 </article>
 <hr>

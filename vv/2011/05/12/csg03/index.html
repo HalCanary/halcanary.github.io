@@ -10,7 +10,7 @@
 a:visited {color:#C0F;}
 a:link, a:hover, a:active {color:#0CF;}
 }
-@media print {body {max-width:8in;font-size:12px;}
+@media print {body {max-width:8in;font-size:12px;margin:0;}
 }
 @media screen {body {font-family:sans-serif;max-width:35em;margin:22px auto 64px auto;padding:0 8px;}
 }
@@ -76,8 +76,8 @@ ul.flat li::before {content:"[";}
     </div>
   </header>
   <div class="content">
-<p>GNU tar for win32 can't actually fork a process for gzip.  What
-century is it?  Here's my fix:</p>
+<p>GNU tar for win32 can't actually fork a process for gzip. What
+century is it? Here's my fix:</p>
 <pre><code>@echo off
 REM untargz.bat
 :AGAIN
@@ -85,8 +85,7 @@ if &quot;%1&quot; == &quot;&quot; goto END
 gzip -d -c &lt; &quot;%1&quot; | tar -xv
 shift
 goto AGAIN
-:END
-</code></pre>
+:END</code></pre>
   </div>
 </article>
 <hr>

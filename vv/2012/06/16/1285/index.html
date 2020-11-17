@@ -10,7 +10,7 @@
 a:visited {color:#C0F;}
 a:link, a:hover, a:active {color:#0CF;}
 }
-@media print {body {max-width:8in;font-size:12px;}
+@media print {body {max-width:8in;font-size:12px;margin:0;}
 }
 @media screen {body {font-family:sans-serif;max-width:35em;margin:22px auto 64px auto;padding:0 8px;}
 }
@@ -81,20 +81,17 @@ ul.flat li::before {content:"[";}
 <p>Get the necesary packages:</p>
 <pre><code>$ sudo /usr/bin/apt-get --yes install \
     build-essential cups libcups2-dev \
-    libcupsimage2-dev libcupsdriver1-dev
-</code></pre>
+    libcupsimage2-dev libcupsdriver1-dev</code></pre>
 <p>Go to <a href="http://sourceforge.net/projects/cupsdriverkodak/files/">http://sourceforge.net/projects/cupsdriverkodak/files/</a> and get the file <code>c2esp24.tar.gz</code> .</p>
 <pre><code>$ cd `mktemp -d`
 $ tar --extract --gzip --file ((...path to...))/c2esp24.tar.gz
 $ cd c2esp24/
 $ make
-$ find . -iname \*.ppd
-</code></pre>
+$ find . -iname \*.ppd</code></pre>
 <p>Copy the apropriate PPD file to /usr/local/share/ppd/</p>
 <pre><code>$ sudo mkdir /usr/local/share/ppd
 $ sudo cp ppd/Kodak_ESP_C31x_Series.ppd /usr/local/share/ppd/
-$ system-config-printer
-</code></pre>
+$ system-config-printer</code></pre>
 <p>Then enter <code>/usr/local/share/ppd/Kodak_ESP_C31x_Series.ppd</code> where the CUPS configuration program asks for a PPD file.</p>
   </div>
 </article>

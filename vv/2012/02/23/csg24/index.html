@@ -10,7 +10,7 @@
 a:visited {color:#C0F;}
 a:link, a:hover, a:active {color:#0CF;}
 }
-@media print {body {max-width:8in;font-size:12px;}
+@media print {body {max-width:8in;font-size:12px;margin:0;}
 }
 @media screen {body {font-family:sans-serif;max-width:35em;margin:22px auto 64px auto;padding:0 8px;}
 }
@@ -99,12 +99,11 @@ headers := $(cxxfiles:.cxx=.h)
 .PHONY : clean all
 all : $(executable_file_name)
 $(executable_file_name) : $(objects)
-	$(CXX) $(CXXFLAGS) $^ -o $@
+    $(CXX) $(CXXFLAGS) $^ -o $@
 %.o: %.cxx $(headers)
-	$(CXX) -c $(CXXFLAGS) $&lt; -o $@
+    $(CXX) -c $(CXXFLAGS) $&lt; -o $@
 clean:
-	rm -f -v $(objects)
-</code></pre>
+    rm -f -v $(objects)</code></pre>
 <hr />
 <pre><code># Example (GNU) Makefile for a Java project.
 # Constructs a JAR file with all of the classes.
@@ -128,14 +127,13 @@ classes := $(javafiles:.java=.class)
 .PHONY : clean all run
 all: $(jarfile)
 run: $(jarfile)
-	$(JAVA) $(JFLAGS) -jar $(jarfile)
+    $(JAVA) $(JFLAGS) -jar $(jarfile)
 clean:
-	$(RM) -v $(classes)
+    $(RM) -v $(classes)
 $(jarfile): $(classes)
-	$(JAR) cvfe $@ $(entrypointclass) $^
+    $(JAR) cvfe $@ $(entrypointclass) $^
 %.class : %.java
-	$(JAVAC) $(JCFLAGS) $^
-</code></pre>
+    $(JAVAC) $(JCFLAGS) $^</code></pre>
   </div>
 </article>
 <hr>

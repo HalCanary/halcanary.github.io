@@ -10,7 +10,7 @@
 a:visited {color:#C0F;}
 a:link, a:hover, a:active {color:#0CF;}
 }
-@media print {body {max-width:8in;font-size:12px;}
+@media print {body {max-width:8in;font-size:12px;margin:0;}
 }
 @media screen {body {font-family:sans-serif;max-width:35em;margin:22px auto 64px auto;padding:0 8px;}
 }
@@ -88,8 +88,7 @@ def generateContours(min_value, max_val, target):
         x = math.pow(10, x / 3)
     low = math.ceil(min_value / x) * x
     return [low + (x * i)
-        for i in xrange(1+int(value_range / x))]
-</code></pre>
+        for i in xrange(1+int(value_range / x))]</code></pre>
   </div>
 </article>
 <hr>

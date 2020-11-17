@@ -10,7 +10,7 @@
 a:visited {color:#C0F;}
 a:link, a:hover, a:active {color:#0CF;}
 }
-@media print {body {max-width:8in;font-size:12px;}
+@media print {body {max-width:8in;font-size:12px;margin:0;}
 }
 @media screen {body {font-family:sans-serif;max-width:35em;margin:22px auto 64px auto;padding:0 8px;}
 }
@@ -76,7 +76,7 @@ ul.flat li::before {content:"[";}
     </div>
   </header>
   <div class="content">
-<p>90% of the time you use a &amp;lt;hr&gt; you are putting a divider between sections or subsections that are already (or should already) be divided by &amp;lt;h2&gt;'s or &amp;lt;h3&gt;'s. Instead use &amp;lt;div&gt;'s to break up sections and subsections. So</p>
+<p>90% of the time you use a &lt;hr&gt; you are putting a divider between sections or subsections that are already (or should already) be divided by &lt;h2&gt;'s or &lt;h3&gt;'s. Instead use &lt;div&gt;'s to break up sections and subsections. So</p>
 <pre><code>&lt;!--document.html--&gt;
 &lt;h2&gt;Welcome&lt;/h2&gt;
 &lt;p&gt;Paragraph&lt;/p&gt;
@@ -84,8 +84,7 @@ ul.flat li::before {content:"[";}
 
 &lt;h2&gt;Blog&lt;/h2&gt;
 &lt;p&gt;Paragraph&lt;/p&gt;
-&lt;hr /&gt;
-</code></pre>
+&lt;hr /&gt;</code></pre>
 <p>becomes</p>
 <pre><code>&lt;!--document.html--&gt;
 &lt;div class=&quot;section&quot;&gt;
@@ -96,16 +95,14 @@ ul.flat li::before {content:"[";}
 &lt;div class=&quot;section&quot;&gt;
   &lt;h2&gt;Blog&lt;/h2&gt;
   &lt;p&gt;Paragraph&lt;/p&gt;
-&lt;/div&gt;
-</code></pre>
-<p>The following css will produce a &amp;lt;hr&gt; style border:</p>
+&lt;/div&gt;</code></pre>
+<p>The following css will produce a &lt;hr&gt; style border:</p>
 <pre><code>/* style.css */
 div.section {
    border-bottom:
     solid 3px #000000 ;
- }
-</code></pre>
-<p>At this point you can have more fun with the css, without touching the html any more. (Isn't that the point?) Try putting each &amp;lt;div class=&quot;section&quot;&gt; in its own little colorful box.</p>
+ }</code></pre>
+<p>At this point you can have more fun with the css, without touching the html any more. (Isn't that the point?) Try putting each &lt;div class="section"&gt; in its own little colorful box.</p>
   </div>
 </article>
 <hr>

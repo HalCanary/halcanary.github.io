@@ -10,7 +10,7 @@
 a:visited {color:#C0F;}
 a:link, a:hover, a:active {color:#0CF;}
 }
-@media print {body {max-width:8in;font-size:12px;}
+@media print {body {max-width:8in;font-size:12px;margin:0;}
 }
 @media screen {body {font-family:sans-serif;max-width:35em;margin:22px auto 64px auto;padding:0 8px;}
 }
@@ -83,10 +83,9 @@ import sys
 for line in sys.stdin:
     line = line.strip()
     if len(line) == 0:
-        sys.stdout.write('\n\n')
+        sys.stdout.write(&#39;\n\n&#39;)
     else:
-        sys.stdout.write(line+' ')
-</code></pre>
+        sys.stdout.write(line+&#39; &#39;)</code></pre>
   </div>
 </article>
 <hr>

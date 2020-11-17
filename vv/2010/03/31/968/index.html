@@ -10,7 +10,7 @@
 a:visited {color:#C0F;}
 a:link, a:hover, a:active {color:#0CF;}
 }
-@media print {body {max-width:8in;font-size:12px;}
+@media print {body {max-width:8in;font-size:12px;margin:0;}
 }
 @media screen {body {font-family:sans-serif;max-width:35em;margin:22px auto 64px auto;padding:0 8px;}
 }
@@ -86,17 +86,15 @@ abspath () {
 PATH=$1
 echo &quot;path = \&quot;${PATH}\&quot;&quot;
 ABSPATH=`abspath &quot;$PATH&quot;`
-echo &quot;absolute path = \&quot;${ABSPATH}\&quot;&quot;
-</code></pre>
+echo &quot;absolute path = \&quot;${ABSPATH}\&quot;&quot;</code></pre>
 <hr />
-<p>UPDATE: I just realised that <code>readlink -f &quot;$FILE&quot;</code> will do the trick.</p>
+<p>UPDATE: I just realised that <code>readlink -f "$FILE"</code> will do the trick.</p>
 <hr />
 <p>UPDATE 2: Even better, since it is concise and follows the POSIX standard:</p>
 <pre><code>#!/bin/sh
 abspath () {
-	echo &quot;$(cd &quot;$(dirname &quot;$1&quot;)&quot; ; pwd;)/$(basename &quot;$1&quot;)&quot;
-}
-</code></pre>
+    echo &quot;$(cd &quot;$(dirname &quot;$1&quot;)&quot; ; pwd;)/$(basename &quot;$1&quot;)&quot;
+}</code></pre>
   </div>
 </article>
 <hr>
