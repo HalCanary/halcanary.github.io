@@ -7,13 +7,6 @@
 <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==">
 <!-- Copyright 2020 Hal Canary. ALL RIGHTS RESERVED. -->
 <style>
-svg line {
-    stroke: black;
-    stroke-width: 1;
-    stroke-linecap: round;
-    fill: none;
-}
-svg { margin: 0; }
 @page { margin: 0.5in 0.5in 0.25in 0.5in; }
 @media print {
     body { margin: 0; padding: 0; }
@@ -36,7 +29,7 @@ const makeRand = (seed = 0) => {
     };
 };
 
-const makeMaze = (width, height, w, seed = 0) => {
+const makeMaze = (width, height, w, seed, strokeWidth, strokeColor) => {
     const h = Math.floor(w * (height / width));
     const up = 1 << 0;
     const down = 1 << 1;
@@ -101,15 +94,18 @@ const makeMaze = (width, height, w, seed = 0) => {
     lines.push([w, 0, w, h]);
     const SVGNS = "http://www.w3.org/2000/svg";
     var g = document.createElementNS(SVGNS, "g");
-    const scale = width / (w * 10 + 1);
+    const scale = width / (w + strokeWidth);
     g.setAttribute('transform',
-         `scale(${scale} ${scale}) translate(0.5 0.5)`);
+        `scale(${scale} ${scale}) translate(${strokeWidth * 0.5} ${strokeWidth * 0.5})`);
+    g.setAttribute("style",
+        `stroke-width: ${strokeWidth}; stroke-linecap: round; fill: none; stroke: ${strokeColor};`);
+
     lines.forEach(([x1, y1, x2, y2]) => {
         var l = document.createElementNS(SVGNS, "line");
-        l.setAttribute('x1', x1 * 10);
-        l.setAttribute('y1', y1 * 10);
-        l.setAttribute('x2', x2 * 10);
-        l.setAttribute('y2', y2 * 10);
+        l.setAttribute('x1', x1);
+        l.setAttribute('y1', y1);
+        l.setAttribute('x2', x2);
+        l.setAttribute('y2', y2);
         g.appendChild(l);
     });
     var svg = document.createElementNS(SVGNS, "svg");
@@ -132,9 +128,12 @@ window.addEventListener('load', () => {
 
     const width = 690;
     const height = 920;
+    const strokeWidth = 0.1;
+    const strokeColor = "black";
+
     let maze = document.getElementById('maze');
     maze.innerHTML = '';
-    maze.appendChild(makeMaze(width, height, size, seed));
+    maze.appendChild(makeMaze(width, height, size, seed, strokeWidth, strokeColor));
     document.title = `Maze ${size}|${seed}`;
 });
 
