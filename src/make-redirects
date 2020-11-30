@@ -18,7 +18,7 @@ def main():
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{url1}</title>
-<script>window.location.replace("{url0}");</script>
+<script>window.location.replace("{url2}");</script>
 <link rel="icon" href="data:image/png;base64,{icon}">
 <body><a style="overflow-wrap:break-word" href="{url1}">{url1}</a></body>
 </html>
@@ -33,10 +33,10 @@ def main():
         path = os.path.normpath(BASE_DIR + key)
         if not os.path.exists(path):
             os.makedirs(path)
-        value = html.escape(value)
-        short = value.replace(ROOT, '/', 1) if value.startswith(ROOT) else value
+        escaped_value = html.escape(value)
+        short = escaped_value.replace(ROOT, '/', 1) if escaped_value.startswith(ROOT) else escaped_value
         with open(path + '/index.html', 'w') as o:
-            o.write(TEMPLATE.format(url0=value, url1=short, icon=wohc.ICON))
+            o.write(TEMPLATE.format(url1=short, url2=value, icon=wohc.ICON))
         sys.stdout.write(key + '\n')
 
 if __name__ == '__main__':
