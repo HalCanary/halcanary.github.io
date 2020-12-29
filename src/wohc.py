@@ -12,7 +12,7 @@ PY3 = sys.version_info > (3,)
 #if float(re.sub(r'cmark (\d+\.\d+)\..*', r'\1', subprocess.check_output(['cmark', '--version']), flags=re.S)) >= 0.29:
 #    MARKDOWN_CMD = ['cmark', '--unsafe']
 
-MARKDOWN_CMD = [os.path.expanduser('~/homebrew/bin/pandoc'),
+MARKDOWN_CMD = ['pandoc',
                 '--from=commonmark',
                 '--to=html',
                 '--wrap=preserve']

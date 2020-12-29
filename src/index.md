@@ -1,4 +1,8 @@
-![photo of me and wife, Grand Canyon, 2012-01-02](/photos/2012-01-02_212724_dscn0815_LindsayHal_GrandCanyon0_939.jpg)
+<div class="centered">
+
+# Hal W Canary, III
+
+</div>
 
 ## current status:
 
@@ -8,11 +12,13 @@ I currently live in Durham, North Carolina, with my wife, two children, and dog.
 
 You should checkout my [portfolio](/portfolio/).
 
-Maybe you want [my Web Log](/vv/).
-
 Maybe you want [my resume](/resume/).
 
+Maybe you want [my calendar](/cal/).
+
 Maybe you want [my contact info](/p/contact/).
+
+Maybe you want [my Web Log](/vv/).
 
 Maybe you want my [Math Applets](/mathapplets/) or [SSL](/SSL/) pages.
 
