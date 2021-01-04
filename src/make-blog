@@ -175,8 +175,8 @@ class Post(object):
         self.fragment = '{:04d}/{:02d}/{:02d}/{:s}'.format(self.year, self.month, self.day, postid)
 
     def write_to_file(self, output_path):
-        def linker(post):
-            return '(<a href="/{}">{}</a>)'.format(post.permalinkpart, post.title) if post else None
+        def linker(post, s):
+            return '({}<a href="/{}">{}</a>)'.format(s, post.permalinkpart, post.title) if post else None
 
         up = '(<a href="/{}/archives/">back</a>)'.format(BASE_DIR)
         with UpdatingFile(output_path) as o:
@@ -185,7 +185,7 @@ class Post(object):
             o.write('\n<body>\n')
             Post.write(o, vars(self), 1)
             o.write('<nav>\n')
-            o.write(lcr(linker(self.prev), up, linker(self.next)))
+            o.write(lcr(linker(self.prev, 'older: '), up, linker(self.next, 'newer: ')))
             o.write('\n</nav>\n</body>\n</html>')
 
 class RecentPosts(object):
@@ -194,8 +194,8 @@ class RecentPosts(object):
     def addPost(self, post):
         self.posts.append(post)
     def close(self):
-        def linker(post):
-            return '(<a href="/{}">{}</a>)'.format(post.permalinkpart, post.title) if post else None
+        def linker(post, s):
+            return '({}<a href="/{}">{}</a>)'.format(s, post.permalinkpart, post.title) if post else None
         with UpdatingFile('{}/index.html'.format(BASE_DIR)) as o:
             o.write('<!DOCTYPE html>\n<html lang="en">\n')
             o.write(head(title='Voder-Vocoder', years=get_years()))
@@ -209,7 +209,7 @@ class RecentPosts(object):
                 Post.write(o, vars(post), 2)
             o.write('</div>\n')
             o.write('<nav aria-label="External Navigation">\n')
-            o.write(lcr(linker(self.posts[-1].prev), '(<a href="archives/">ALL POSTS</a>)', ''))
+            o.write(lcr(linker(self.posts[-1].prev, 'older: '), '(<a href="archives/">ALL POSTS</a>)', ''))
             o.write('</nav>\n</body>\n</html>\n')
  
 def writeIndex(loc, title, post_list, prev_next):
