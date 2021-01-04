@@ -21,7 +21,7 @@ page_template = """<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Copyright 1997-2020 Hal Canary. ALL RIGHTS RESERVED. -->
+<!-- Copyright {years} Hal Canary. ALL RIGHTS RESERVED. -->
 <title>{title}</title>
 <link rel="icon" href="data:image/png;base64,{icon}">
 <link rel="stylesheet" type="text/css" href="/styles/scrapple-from-the-apple.css">
@@ -68,7 +68,8 @@ def main():
     if (sys.version_info > (3, 0)):
         icon = str(icon, encoding='us-ascii')
     svg = read_file(root + 'src/hal_canary_3.svg').strip()
-
+    title='World of Hal Canary'
+    years = '1997-{}'.format(datetime.date.today().year)
     suffix = '.html'
     for path in find_files(root + 'src/tmp-pages'):
         if not path.endswith(suffix):
@@ -78,11 +79,12 @@ def main():
         assert os.path.exists(src)
         content = read_file(root + src).strip()
         page = page_template.format(
+            years=years,
             content=content,
-            title='World of Hal Canary',
+            title=title,
             svg=svg,
             icon=icon)
-        if wohc.write_file(root + dst  + '\n'+ '/index.html', page):
+        if wohc.write_file(root + dst + '/index.html', page):
             sys.stdout.write(dst + '\n')
 
 if __name__ == '__main__':
