@@ -33,9 +33,9 @@ def main():
         path = os.path.normpath(BASE_DIR + key)
         if not os.path.exists(path):
             os.makedirs(path)
-        with open(path + '/index.html', 'w') as o:
-            o.write(TEMPLATE.format(escaped_url=html.escape(value), url=value, icon=wohc.ICON))
-        sys.stdout.write(key + '\n')
+        page = TEMPLATE.format(escaped_url=html.escape(value), url=value, icon=wohc.ICON)
+        if wohc.write_file(path + '/index.html', page):
+            sys.stdout.write(key + '\n')
 
 if __name__ == '__main__':
     main()

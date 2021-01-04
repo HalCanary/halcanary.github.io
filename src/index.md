@@ -22,7 +22,6 @@ Maybe you want [my Web Log](/vv/).
 
 Maybe you want my [Math Applets](/mathapplets/) or [SSL](/SSL/) pages.
 
-
 <div role="search">
 <button onclick="this.style.display='none';document.getElementById('search-hco').style.display='block';">Search</button>
 <div id="search-hco" style="display:none;text-align:right">
@@ -39,7 +38,8 @@ Maybe you want my [Math Applets](/mathapplets/) or [SSL](/SSL/) pages.
 
 <div class="rightside">
 
-_Copyright 1997-2020 Hal W Canary III_  
+_halcanary.org_  
+_Copyright 1997-2021 Hal W Canary III_  
 _All rights reserved_
 
 </div>

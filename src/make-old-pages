@@ -3,21 +3,12 @@
 
 import sys, os, subprocess, datetime, base64, re
 
+import wohc
+
 PY3 = sys.version_info > (3,)
 
 def find_files(d):
     return (os.path.relpath(os.path.join(ds, n), d) for ds, _, ns in os.walk(d) for n in ns)
-
-def write_file(filepath, filecontent):
-    directory = os.path.dirname(filepath)
-    if os.path.exists(filepath):
-        if filecontent == read_file(filepath):
-            return
-    if not os.path.exists(directory):
-        os.makedirs(directory)
-    kwargs = dict(encoding='utf-8') if PY3 else dict()
-    with open(filepath, 'w', **kwargs) as o:
-        o.write(filecontent)
 
 def read_file(filepath, binary=False):
     assert os.path.exists(filepath)
@@ -83,15 +74,16 @@ def main():
         if not path.endswith(suffix):
             continue
         dst = path[:-len(suffix)]
-        sys.stdout.write(dst +'\n')
         src = 'src/tmp-pages/%s.html' % dst
         assert os.path.exists(src)
         content = read_file(root + src).strip()
-        write_file(root + dst + '/index.html', page_template.format(
+        page = page_template.format(
             content=content,
             title='World of Hal Canary',
             svg=svg,
-            icon=icon))
+            icon=icon)
+        if wohc.write_file(root + dst  + '\n'+ '/index.html', page):
+            sys.stdout.write(dst + '\n')
 
 if __name__ == '__main__':
     main()
