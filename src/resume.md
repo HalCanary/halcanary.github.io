@@ -9,7 +9,7 @@
 
 [halcanary@gmail.com](mailto:halcanary@gmail.com)
 • [+1-919-724-2801](tel:+1-919-724-280)
-• 9 Upton Ct, Durham NC 27713, USA
+• Durham, NC, USA
 • [https://halcanary.org/](https://halcanary.org/)
 
 </div>
