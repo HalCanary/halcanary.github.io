@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASCII Table</title>
+<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==">
+<style>
+@media (prefers-color-scheme:dark) {body {background-color:#000;color:#FFF;}
+a:visited {color:#C0F;}
+a:link, a:hover, a:active {color:#0CF;}
+}
+@media print {body {max-width:8in;font-size:12px;margin:0;}
+}
+@media screen {body {font-family:sans-serif;max-width:35em;margin:22px auto 64px auto;padding:0 8px;}
+}
+body {overflow-wrap:break-word;}
+@page {size:auto;margin:0.25in 0.5in 0.5in 0.5in;}
+svg {fill:currentColor;}
+img {max-width:100%;height:auto;}
+hr {border-style:solid none;}
+.content {margin:1em 0;}
+.content hr {padding:0;margin:0;border:none;text-align:center;}
+.content hr:after {font-size:150%;content:"* \A0 * \A0 *";display:block;position:relative;}
+.rightside {text-align:right;}
+.centered {text-align:center;}
+pre {overflow-x:auto;}
+.byline > * {display:inline-block;border-style:solid;border-width:thin;padding:3px 8px;border-radius:5px;text-align:initial;}
+.byline {text-align:right;}
+.box {border-style:solid;border-width:thin;margin:8px 0;padding:0 8px;}
+a.hiddenlink:link {background:inherit;color:inherit;text-decoration:none;}
+a.hiddenlink:visited {background:inherit;color:inherit;text-decoration:none;}
+a.hiddenlink:active {background:inherit;color:inherit;text-decoration:none;}
+ul,ol {padding-left:30px;}
+table.border {border-collapse:collapse;margin:8px auto;}
+table.border tr > * {border-style:solid;border-width:thin;padding:3px 8px;border-radius:5px;}
+.tophead {text-align:center;margin:1ex auto 0 auto;max-width:35em;}
+.tightmargins li > ul > li {list-style-type:square;}
+.tightmargins h1,
+.tightmargins h2,
+.tightmargins p,
+.tightmargins ul {margin:0.5ex 0;}
+.tightmargins li > ul {margin:0 0 0.5ex 0;}
+.tightmargins ul {padding-left:30px;}
+.tightmargins li {margin:0 0 0.5ex 0;}
+.plainlink a:link,
+.plainlink a:visited,
+.plainlink a:hover,
+.plainlink a:active {color:inherit;text-decoration:underline;}
+.nolink a:link,
+.nolink a:visited,
+.nolink a:hover,
+.nolink a:active {color:inherit;text-decoration:none;}
+div.lcr {display:grid;grid-template-columns:auto auto auto;}
+ul.flat {list-style-type:none;margin:16px 0;padding:0;}
+ul.flat li {display:inline;}
+ul.flat li::after {content:"]";}
+ul.flat li::before {content:"[";}
+</style>
+</head>
+<!-- Copyright 1997-2021 Hal Canary. ALL RIGHTS RESERVED. -->
+<body>
+
+<div role="main">
+<h1>ASCII Table</h1>
+<pre><code>00   0 nul    10  16 dle    20  32 sp    30  48  0     40  64  @     50  80  P     60  96  `    70 112  p
+01   1 soh    11  17 dc1    21  33  !    31  49  1     41  65  A     51  81  Q     61  97  a    71 113  q
+02   2 stx    12  18 dc2    22  34  &quot;    32  50  2     42  66  B     52  82  R     62  98  b    72 114  r
+03   3 etx    13  19 dc3    23  35  #    33  51  3     43  67  C     53  83  S     63  99  c    73 115  s
+04   4 eot    14  20 dc4    24  36  $    34  52  4     44  68  D     54  84  T     64 100  d    74 116  t
+05   5 enq    15  21 nak    25  37  %    35  53  5     45  69  E     55  85  U     65 101  e    75 117  u
+06   6 ack    16  22 syn    26  38  &amp;    36  54  6     46  70  F     56  86  V     66 102  f    76 118  v
+07   7 bel    17  23 etb    27  39  &#39;    37  55  7     47  71  G     57  87  W     67 103  g    77 119  w
+08   8 bs     18  24 can    28  40  (    38  56  8     48  72  H     58  88  X     68 104  h    78 120  x
+09   9 ht     19  25 em     29  41  )    39  57  9     49  73  I     59  89  Y     69 105  i    79 121  y
+0a  10 nl     1a  26 sub    2a  42  *    3a  58  :     4a  74  J     5a  90  Z     6a 106  j    7a 122  z
+0b  11 vt     1b  27 esc    2b  43  +    3b  59  ;     4b  75  K     5b  91  [     6b 107  k    7b 123  {
+0c  12 np     1c  28 fs     2c  44  ,    3c  60  &lt;     4c  76  L     5c  92  \     6c 108  l    7c 124  |
+0d  13 cr     1d  29 gs     2d  45  -    3d  61  =     4d  77  M     5d  93  ]     6d 109  m    7d 125  }
+0e  14 so     1e  30 rs     2e  46  .    3e  62  &gt;     4e  78  N     5e  94  ^     6e 110  n    7e 126  ~
+0f  15 si     1f  31 us     2f  47  /    3f  63  ?     4f  79  O     5f  95  _     6f 111  o    7f 127 del</code></pre>
+
+</div>
+</body>
+</html>
