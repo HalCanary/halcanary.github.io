@@ -64,7 +64,7 @@ def main():
     root = os.path.dirname(__file__) + '/../'
     style = re.sub(r'(^|:)  *', r'\1', read_file(root + 'src/style.css'), flags=re.M).strip()
     years = '1997-{:04d}'.format(datetime.date.today().year)
-    icon = base64.b64encode(read_file(root + 'images/2020-HWC3-favicon.png', binary=True))
+    icon = base64.b64encode(read_file(root + 'docs/images/2020-HWC3-favicon.png', binary=True))
     if (sys.version_info > (3, 0)):
         icon = str(icon, encoding='us-ascii')
     svg = read_file(root + 'src/hal_canary_3.svg').strip()
@@ -76,7 +76,7 @@ def main():
             continue
         dst = path[:-len(suffix)]
         src = 'src/tmp-pages/%s.html' % dst
-        assert os.path.exists(src)
+        assert os.path.exists(root + src)
         content = read_file(root + src).strip()
         page = page_template.format(
             years=years,
@@ -84,7 +84,7 @@ def main():
             title=title,
             svg=svg,
             icon=icon)
-        if wohc.write_file(root + dst + '/index.html', page):
+        if wohc.write_file(root + 'docs/' + dst + '/index.html', page):
             sys.stdout.write(dst + '\n')
 
 if __name__ == '__main__':

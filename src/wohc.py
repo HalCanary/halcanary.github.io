@@ -55,7 +55,7 @@ def write_file(filepath, filecontent):
 
 SRC = os.path.dirname(__file__)
 
-ROOT = os.path.relpath(SRC + '/..')
+ROOT = os.path.relpath(SRC + '/../docs')
 
 STYLE = re.sub(r'(^|:|;|{)\s+', r'\1', read_file(SRC + '/style.css'), flags=re.M).strip()
 

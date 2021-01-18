@@ -9,6 +9,7 @@ import wohc
 
 BASE_DIR = 'vv'
 URL_BASE = 'https://halcanary.org'
+OUTPUT_DIR = 'docs'
 
 current_year = datetime.date.today().year
 first_year = 1997
@@ -179,7 +180,7 @@ class Post(object):
             return '({}<a href="/{}">{}</a>)'.format(s, post.permalinkpart, post.title) if post else None
 
         up = '(<a href="/{}/archives/">back</a>)'.format(BASE_DIR)
-        with UpdatingFile(output_path) as o:
+        with UpdatingFile(OUTPUT_DIR + '/' + output_path) as o:
             o.write('<!DOCTYPE html>\n<html lang="en">\n')
             o.write(head(title='Voder-Vocoder: ' + self.title, years=get_years()))
             o.write('\n<body>\n')
@@ -196,7 +197,7 @@ class RecentPosts(object):
     def close(self):
         def linker(post, s):
             return '({}<a href="/{}">{}</a>)'.format(s, post.permalinkpart, post.title) if post else None
-        with UpdatingFile('{}/index.html'.format(BASE_DIR)) as o:
+        with UpdatingFile('{}/{}/index.html'.format(OUTPUT_DIR, BASE_DIR)) as o:
             o.write('<!DOCTYPE html>\n<html lang="en">\n')
             o.write(head(title='Voder-Vocoder', years=get_years()))
             o.write('\n<body>\n')
@@ -214,7 +215,7 @@ class RecentPosts(object):
  
 def writeIndex(loc, title, post_list, prev_next):
     posts = index_by_keyfn(post_list, lambda p: [p.year])
-    with UpdatingFile(loc) as o:
+    with UpdatingFile(OUTPUT_DIR + '/' + loc) as o:
         o.write('<!DOCTYPE html>\n<html lang="en">\n')
         o.write(head(title=title, years=get_years()))
         o.write('\n<body>\n')
@@ -338,7 +339,7 @@ def main():
 
     recentPosts.close()
 
-    with UpdatingFile('{}/category/index.html'.format(BASE_DIR)) as o:
+    with UpdatingFile('{}/{}/category/index.html'.format(OUTPUT_DIR, BASE_DIR)) as o:
         o.write('<!DOCTYPE html>\n<html lang="en">\n')
         o.write(head(title='categories', years=get_years()))
         o.write('\n<body>\n')
