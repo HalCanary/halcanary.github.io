@@ -54,7 +54,6 @@ def process(src, dst, years, root=False):
         svg = '<header>\n<h1>\n{}\n</h1>\n</header>'.format(wohc.SVG)
     else:
         svg = '<div class="tophead" role="banner">\n{}\n</div>'.format(wohc.SVG)
-    svg = ''
     head = wohc.HEAD.format(icon=wohc.ICON, style=wohc.STYLE, title=title, years=years)
     page = page_template.format(head=head, svg=svg, content=content)
     if wohc.write_file(wohc.ROOT + dst, page):

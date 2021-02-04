@@ -1,4 +1,4 @@
-<div class="centered">
+<div style="display:none;">
 
 # Hal W Canary III — Resume
 
