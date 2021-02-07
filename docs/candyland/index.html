@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Candyland Spinner</title>
+<style>
+body {font-family:sans-serif;max-width:35em;margin:22px auto 64px auto;padding:0;}
+</style>
+<script>
+var canvas;
+const f = () => {
+    let W = canvas.width;
+    let H = canvas.height;
+    let S = (Math.min(W, H) - 30) / 2;
+    let ctx = canvas.getContext("2d");
+    ctx.fillStyle = "white";
+    ctx.fillRect(0, 0, W, H);
+    let N = Math.floor(Math.random() * 66);
+    if (N >= 60) {
+        ctx.fillStyle = "black";
+        ctx.font = "" + S + "px sans";
+        ctx.fillText(" " + (N - 59), 10, 10 + S);
+    } else {
+        let color = Math.floor(N / 10);
+        let k = N % 10;
+        const colorlist = [
+            "green", "blue", "red", "orange", "yellow", "purple"
+        ];
+        ctx.fillStyle = colorlist[color];
+        ctx.fillRect(10 + S / 2, 10, S, S);
+        if (k >= 6) {
+            ctx.fillRect(10 + S / 2, S + 20, S, S);
+        }
+    }
+};
+window.addEventListener('load', () => {
+    canvas = document.getElementById('canvas');
+    canvas.width = document.body.clientWidth; //document.width is obsolete
+    canvas.height = document.body.clientWidth; //document.height is obsolete
+    f();
+});
+</script>
+</head>
+<body>
+<canvas id="canvas" onclick="f()"></canvas>
+</body>
+</html>
