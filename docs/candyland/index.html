@@ -5,22 +5,36 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Candyland Spinner</title>
 <style>
-body {font-family:sans-serif;max-width:35em;margin:22px auto 64px auto;padding:0;}
+body {font-family:sans-serif;max-width:35em;margin:0 auto 0 auto;padding:0;background-color:black;}
 </style>
 <script>
-var canvas;
+var canvas, W, H, images;
 const f = () => {
-    let W = canvas.width;
-    let H = canvas.height;
-    let S = (Math.min(W, H) - 30) / 2;
     let ctx = canvas.getContext("2d");
     ctx.fillStyle = "white";
     ctx.fillRect(0, 0, W, H);
-    let N = Math.floor(Math.random() * 66);
+    setTimeout(g, 50);
+}; 
+const g = () => {
+    console.log({W, H});
+    let S = (Math.min(W, H) - 30) / 4;
+    let ctx = canvas.getContext("2d");
+    let N = Math.floor(Math.random() * 60 + images.length);
     if (N >= 60) {
-        ctx.fillStyle = "black";
-        ctx.font = "" + S + "px sans";
-        ctx.fillText(" " + (N - 59), 10, 10 + S);
+        let img = images[N - 60];
+        if (img && img.complete) {
+            scale = Math.min(H / img.width, W / img.height);
+            ctx.save();
+            ctx.translate(W / 2, H / 2);
+            ctx.scale(scale, scale);
+            ctx.rotate(-Math.PI / 2);
+            ctx.drawImage(img, -img.width / 2, -img.height / 2);
+            ctx.restore();
+        } else {
+            ctx.fillStyle = "black";
+            ctx.font = "" + (2 * S) + "px sans";
+            ctx.fillText(" " + (N - 59), 10, 10 + 2 * S);
+        }
     } else {
         let color = Math.floor(N / 10);
         let k = N % 10;
@@ -28,21 +42,39 @@ const f = () => {
             "green", "blue", "red", "orange", "yellow", "purple"
         ];
         ctx.fillStyle = colorlist[color];
-        ctx.fillRect(10 + S / 2, 10, S, S);
-        if (k >= 6) {
-            ctx.fillRect(10 + S / 2, S + 20, S, S);
+        ctx.save();
+        ctx.translate(W / 2, H / 2);
+        if (k < 6) {
+            ctx.fillRect(-S, -S,         2 * S, 2 * S);
+        } else {
+            ctx.fillRect(-S, -5 - 2 * S, 2 * S, 2 * S);
+            ctx.fillRect(-S, 5,          2 * S, 2 * S);
         }
+        ctx.restore();
     }
 };
 window.addEventListener('load', () => {
     canvas = document.getElementById('canvas');
-    canvas.width = document.body.clientWidth; //document.width is obsolete
-    canvas.height = document.body.clientWidth; //document.height is obsolete
+    canvas.width = document.body.clientWidth;
+    canvas.height = window.innerHeight;
+    W = canvas.width;
+    H = canvas.height;
+    images = new Array(7);
+    for (var i = 0; i < 7; ++i) {
+        images[i] = document.getElementById("i" + (i + 1));;
+    }
     f();
 });
 </script>
 </head>
 <body>
 <canvas id="canvas" onclick="f()"></canvas>
+<img src="./1.png" alt="" style="display:none" id="i1">
+<img src="./2.png" alt="" style="display:none" id="i2">
+<img src="./3.png" alt="" style="display:none" id="i3">
+<img src="./4.png" alt="" style="display:none" id="i4">
+<img src="./5.png" alt="" style="display:none" id="i5">
+<img src="./6.png" alt="" style="display:none" id="i6">
+<img src="./7.png" alt="" style="display:none" id="i7">
 </body>
 </html>
