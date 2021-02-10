@@ -29,6 +29,8 @@
 
 ## Experience
 
+*   Senior Software Engineer, Aternity LLC. 2021–present
+    *   MacOS software engineer for MacOS Digital Experience Management Agent. <https://www.aternity.com/>
 *   Senior Software Engineer, Voith Digital. 2020
     *   Full-stack software engineer for
         Voith OnCumulus Industrial Internet-of-Things project
