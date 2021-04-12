@@ -127,9 +127,9 @@ C 325 43 324 42 322 43 C 319 45 322 52 323 54 C 324 58 327 59 328 63 C 329 67
 <p>Maybe you want <a href="/contact/">my contact info</a>.</p>
 <p>Maybe you want <a href="/vv/">my Web Log</a>.</p>
 <p>Maybe you want my <a href="/mathapplets/">Math Applets</a> or <a href="/SSL/">SSL</a> pages.</p>
-<div role="search">
-<button onclick="this.style.display='none';document.getElementById('search-hco').style.display='block';">Search</button>
-<div id="search-hco" style="display:none;text-align:right">
+<details role="search" class="rightside">
+<summary>Search</summary>
+<div>
 <form method="get" action="https://www.google.com/search">
 <input name="domains" value="halcanary.org" type="hidden">
 <input name="sitesearch" value="halcanary.org" type="hidden">
@@ -137,7 +137,7 @@ C 325 43 324 42 322 43 C 319 45 322 52 323 54 C 324 58 327 59 328 63 C 329 67
 <input value="Search" type="submit" id="submitter">
 </form>
 </div>
-</div>
+</details>
 
 <hr />
 <div class="rightside">

@@ -27,9 +27,9 @@ top_posts_header = """
 
 <div class="centered" role="contentinfo">The Log of Hal Canary</div>
 
-<div role="search">
-<button onclick="this.style.display='none';document.getElementById('search-hco').style.display='block';">Search</button>
-<div id="search-hco" style="display:none;text-align:right">
+<details role="search" class="rightside">
+<summary>Search</summary>
+<div>
 <form method="get" action="https://www.google.com/search">
 <input name="domains" value="halcanary.org" type="hidden">
 <input name="sitesearch" value="halcanary.org" type="hidden">
@@ -37,7 +37,7 @@ top_posts_header = """
 <input value="Search" type="submit" id="submitter">
 </form>
 </div>
-</div>
+</details>
 
 <hr>
 """

@@ -22,9 +22,9 @@ Maybe you want [my Web Log](/vv/).
 
 Maybe you want my [Math Applets](/mathapplets/) or [SSL](/SSL/) pages.
 
-<div role="search">
-<button onclick="this.style.display='none';document.getElementById('search-hco').style.display='block';">Search</button>
-<div id="search-hco" style="display:none;text-align:right">
+<details role="search" class="rightside">
+<summary>Search</summary>
+<div>
 <form method="get" action="https://www.google.com/search">
 <input name="domains" value="halcanary.org" type="hidden">
 <input name="sitesearch" value="halcanary.org" type="hidden">
@@ -32,7 +32,7 @@ Maybe you want my [Math Applets](/mathapplets/) or [SSL](/SSL/) pages.
 <input value="Search" type="submit" id="submitter">
 </form>
 </div>
-</div>
+</details>
 
 * * *
 
