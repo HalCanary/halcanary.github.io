@@ -5,73 +5,89 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#000000">
 <title>Adventures of Huckleberry Finn</title>
-<link rel="stylesheet" href="style.css">
-<script src="style_toggle.js"></script>
+<script>
+window.addEventListener('load', () => {
+  const ontoggle = (evt) => {
+    if (evt.currentTarget.open) {
+      location.hash = '#' + evt.currentTarget.id;
+      for (var det of dets) {
+        if (evt.currentTarget != det) {
+          det.open = false;
+        }
+      }
+    }
+  };
+  const dets = document.getElementsByClassName("det");
+  for (var det of dets) { det.addEventListener("toggle", ontoggle); }
+  let h = location.hash.substring(1);
+  if (h) {
+    var x = document.getElementById(h);
+    if (x) {
+      x.open = "true"
+    }
+  }
+  document.body.style.fontFamily = "sans-serif";
+});
+const toggleFontStyle = () => {
+  const s = document.body.style;
+  s.fontFamily = (s.fontFamily == "sans-serif") ? "serif" : "sans-serif";
+};
+</script>
+<style>
+body{font-family:sans-serif;}
+@media screen{body{max-width:35em;margin:1em auto;padding:0 0.5em;}}
+@media print{summary,button{display:none;}}
+pre{overflow-x:auto;}
+p{text-indent:1.25em;margin-top:0;margin-bottom:0;line-height:1.5;}
+p:first-of-type{text-indent:0;}
+details{margin:0.5em 0;}
+h1{text-align:center;}
+@media(prefers-color-scheme:dark){
+body{background-color:#000;color:#FFF;}
+a:visited{color:#C0F;}
+a:link,a:hover,a:active{color:#0CF;}}
+</style>
 </head>
 <body>
-<script>
-init_toggle();
-</script>
+<button onclick="toggleFontStyle()">Toggle Font Style</button>
 <h1>
-ADVENTURES
-<br>
-OF
-<br>
+ADVENTURES OF<br>
 HUCKLEBERRY FINN
-<br>
-(Tom Sawyer's Comrade)
-<br>
-By Mark Twain
-</h1><p>
-<a href="#0">EXPLANATORY</a>
-| <a href="#1">CHAPTER I.</a>
-| <a href="#2">CHAPTER II.</a>
-| <a href="#3">CHAPTER III.</a>
-| <a href="#4">CHAPTER IV.</a>
-| <a href="#5">CHAPTER V.</a>
-| <a href="#6">CHAPTER VI.</a>
-| <a href="#7">CHAPTER VII.</a>
-| <a href="#8">CHAPTER VIII.</a>
-| <a href="#9">CHAPTER IX.</a>
-| <a href="#10">CHAPTER X.</a>
-| <a href="#11">CHAPTER XI.</a>
-| <a href="#12">CHAPTER XII.</a>
-| <a href="#13">CHAPTER XIII.</a>
-| <a href="#14">CHAPTER XIV.</a>
-| <a href="#15">CHAPTER XV.</a>
-| <a href="#16">CHAPTER XVI.</a>
-| <a href="#17">CHAPTER XVII.</a>
-| <a href="#18">CHAPTER XVIII.</a>
-| <a href="#19">CHAPTER XIX.</a>
-| <a href="#20">CHAPTER XX.</a>
-| <a href="#21">CHAPTER XXI.</a>
-| <a href="#22">CHAPTER XXII.</a>
-| <a href="#23">CHAPTER XXIII.</a>
-| <a href="#24">CHAPTER XXIV.</a>
-| <a href="#25">CHAPTER XXV.</a>
-| <a href="#26">CHAPTER XXVI.</a>
-| <a href="#27">CHAPTER XXVII.</a>
-| <a href="#28">CHAPTER XXVIII.</a>
-| <a href="#29">CHAPTER XXIX.</a>
-| <a href="#30">CHAPTER XXX.</a>
-| <a href="#31">CHAPTER XXXI.</a>
-| <a href="#32">CHAPTER XXXII.</a>
-| <a href="#33">CHAPTER XXXIII.</a>
-| <a href="#34">CHAPTER XXXIV.</a>
-| <a href="#35">CHAPTER XXXV.</a>
-| <a href="#36">CHAPTER XXXVI.</a>
-| <a href="#37">CHAPTER XXXVII.</a>
-| <a href="#38">CHAPTER XXXVIII.</a>
-| <a href="#39">CHAPTER XXXIX.</a>
-| <a href="#40">CHAPTER XL.</a>
-| <a href="#41">CHAPTER XLI.</a>
-| <a href="#42">CHAPTER XLII.</a>
-| <a href="#43">CHAPTER THE LAST</a>
-</p>
-<hr>
-<div style="display:none" id="0"><div>
+</h1><hr>
+<details class="det" id="0"  open>
+<summary>FRONT MATTER</summary>
+<div>
+<div style="text-align:center">
 
-<h2>EXPLANATORY</h2>
+<div style="display:none">
+<h2>FRONT MATTER</h2>
+</div>
+<div>(TOM SAWYER'S COMRADE)</div>
+<p>&nbsp;</p>
+<div>Scene: The Mississippi Valley.</div>
+<div>Time: Forty to Fifty Years Ago.</div>
+<p>&nbsp;</p>
+<div>BY</div>
+<div>MARK TWAIN.</div>
+<div style="text-align:center;margin:1em;">* * *</div>
+<div>NEW YORK:</div>
+<div>CHARLES L. WEBSTER AND COMPANY.</div>
+<div>1885.</div>
+</div>
+<div style="text-align:center;margin:1em;">* * *</div>
+<h2>NOTICE.</h2>
+<div>
+<p>
+Persons attempting to find a motive in this narrative will be prosecuted;
+persons attempting to find a moral in it will be banished; persons attempting
+to find a plot in it will be shot.
+</p>
+<div style="text-align:center">BY ORDER OF THE AUTHOR</div>
+<div style="text-align:right">Per G. G., CHIEF OF ORDNANCE.</div>
+</div>
+<div style="text-align:center;margin:1em;">* * *</div>
+<h2>EXPLANATORY.</h2>
+<div>
 <p>
 IN this book a number of dialects are used, to wit:  the Missouri negro
 dialect; the extremest form of the backwoods Southwestern dialect; the
@@ -85,21 +101,15 @@ I make this explanation for the reason that without it many readers
 would suppose that all these characters were trying to talk alike and
 not succeeding.
 </p>
-<p>
-THE AUTHOR.
-</p>
-<div><strong>HUCKLEBERRY FINN</strong></div>
-<p>
-Scene:  The Mississippi Valley Time:  Forty to fifty years ago
-</p>
+<div style="text-align:right">THE AUTHOR.</div>
 </div>
-
-<hr>
-<p class="next"><a href="#1">Next: CHAPTER I.</a></p>
-<hr>
 </div>
+<hr>
+</details>
 
-<div style="display:none" id="1">
+<details class="det" id="1" >
+<summary>CHAPTER I.</summary>
+
 <div>
 <h2>CHAPTER I.</h2>
 <p>
@@ -225,13 +235,12 @@ down to the ground and crawled in among the trees, and, sure enough,
 there was Tom Sawyer waiting for me.
 </p>
 </div>
-
 <hr>
-<p class="next"><a href="#2">Next: CHAPTER II.</a></p>
-<hr>
-</div>
+</details>
 
-<div style="display:none" id="2">
+<details class="det" id="2" >
+<summary>CHAPTER II.</summary>
+
 <div>
 <h2>CHAPTER II.</h2>
 <p>
@@ -511,13 +520,12 @@ breaking. My new clothes was all greased up and clayey, and I was
 dog-tired.
 </p>
 </div>
-
 <hr>
-<p class="next"><a href="#3">Next: CHAPTER III.</a></p>
-<hr>
-</div>
+</details>
 
-<div style="display:none" id="3">
+<details class="det" id="3" >
+<summary>CHAPTER III.</summary>
+
 <div>
 <h2>CHAPTER III.</h2>
 <p>
@@ -685,13 +693,12 @@ A-rabs and the elephants, but as for me I think different.  It had all
 the marks of a Sunday-school.
 </p>
 </div>
-
 <hr>
-<p class="next"><a href="#4">Next: CHAPTER IV.</a></p>
-<hr>
-</div>
+</details>
 
-<div style="display:none" id="4">
+<details class="det" id="4" >
+<summary>CHAPTER IV.</summary>
+
 <div>
 <h2>CHAPTER IV.</h2>
 <p>
@@ -851,13 +858,12 @@ When I lit my candle and went up to my room that night there sat pap his
 own self!
 </p>
 </div>
-
 <hr>
-<p class="next"><a href="#5">Next: CHAPTER V.</a></p>
-<hr>
-</div>
+</details>
 
-<div style="display:none" id="5">
+<details class="det" id="5" >
+<summary>CHAPTER V.</summary>
+
 <div>
 <h2>CHAPTER V.</h2>
 <p>
@@ -1065,13 +1071,12 @@ The judge he felt kind of sore.  He said he reckoned a body could reform
 the old man with a shotgun, maybe, but he didn't know no other way.
 </p>
 </div>
-
 <hr>
-<p class="next"><a href="#6">Next: CHAPTER VI.</a></p>
-<hr>
-</div>
+</details>
 
-<div style="display:none" id="6">
+<details class="det" id="6" >
+<summary>CHAPTER VI.</summary>
+
 <div>
 <h2>CHAPTER VI.</h2>
 <p>
@@ -1326,13 +1331,12 @@ behind it to wait for him to stir.  And how slow and still the time did
 drag along.
 </p>
 </div>
-
 <hr>
-<p class="next"><a href="#7">Next: CHAPTER VII.</a></p>
-<hr>
-</div>
+</details>
 
-<div style="display:none" id="7">
+<details class="det" id="7" >
+<summary>CHAPTER VII.</summary>
+
 <div>
 <h2>CHAPTER VII.</h2>
 <p>
@@ -1598,13 +1602,12 @@ There was a little gray in the sky now; so I stepped into the woods, and
 laid down for a nap before breakfast.
 </p>
 </div>
-
 <hr>
-<p class="next"><a href="#8">Next: CHAPTER VIII.</a></p>
-<hr>
-</div>
+</details>
 
-<div style="display:none" id="8">
+<details class="det" id="8" >
+<summary>CHAPTER VIII.</summary>
+
 <div>
 <h2>CHAPTER VIII.</h2>
 <p>
@@ -2141,13 +2144,12 @@ some time or other.”
 eight hund'd dollars.  I wisht I had de money, I wouldn' want no mo'.”
 </p>
 </div>
-
 <hr>
-<p class="next"><a href="#9">Next: CHAPTER IX.</a></p>
-<hr>
-</div>
+</details>
 
-<div style="display:none" id="9">
+<details class="det" id="9" >
+<summary>CHAPTER IX.</summary>
+
 <div>
 <h2>CHAPTER IX.</h2>
 <p>
@@ -2315,13 +2317,12 @@ a half a mile doing it.  I crept up the dead water under the bank, and
 hadn't no accidents and didn't see nobody.  We got home all safe.
 </p>
 </div>
-
 <hr>
-<p class="next"><a href="#10">Next: CHAPTER X.</a></p>
-<hr>
-</div>
+</details>
 
-<div style="display:none" id="10">
+<details class="det" id="10" >
+<summary>CHAPTER X.</summary>
+
 <div>
 <h2>CHAPTER X.</h2>
 <p>
@@ -2458,13 +2459,12 @@ know; so I knocked at the door, and made up my mind I wouldn't forget I
 was a girl.
 </p>
 </div>
-
 <hr>
-<p class="next"><a href="#11">Next: CHAPTER XI.</a></p>
-<hr>
-</div>
+</details>
 
-<div style="display:none" id="11">
+<details class="det" id="11" >
+<summary>CHAPTER XI.</summary>
+
 <div>
 <h2>CHAPTER XI.</h2>
 <p>
@@ -2845,13 +2845,12 @@ in the shade, past the foot of the island dead still—never saying a
 word.
 </p>
 </div>
-
 <hr>
-<p class="next"><a href="#12">Next: CHAPTER XII.</a></p>
-<hr>
-</div>
+</details>
 
-<div style="display:none" id="12">
+<details class="det" id="12" >
+<summary>CHAPTER XII.</summary>
+
 <div>
 <h2>CHAPTER XII.</h2>
 <p>
@@ -3179,13 +3178,12 @@ start at the raft, and—”
 loose en gone I—en here we is!”
 </p>
 </div>
-
 <hr>
-<p class="next"><a href="#13">Next: CHAPTER XIII.</a></p>
-<hr>
-</div>
+</details>
 
-<div style="display:none" id="13">
+<details class="det" id="13" >
+<summary>CHAPTER XIII.</summary>
+
 <div>
 <h2>CHAPTER XIII.</h2>
 <p>
@@ -3467,13 +3465,12 @@ struck for an island, and hid the raft, and sunk the skiff, and turned
 in and slept like dead people.
 </p>
 </div>
-
 <hr>
-<p class="next"><a href="#14">Next: CHAPTER XIV.</a></p>
-<hr>
-</div>
+</details>
 
-<div style="display:none" id="14">
+<details class="det" id="14" >
+<summary>CHAPTER XIV.</summary>
+
 <div>
 <h2>CHAPTER XIV.</h2>
 <p>
@@ -3732,13 +3729,12 @@ I see it warn't no use wasting words—you can't learn a nigger to argue.
 So I quit.
 </p>
 </div>
-
 <hr>
-<p class="next"><a href="#15">Next: CHAPTER XV.</a></p>
-<hr>
-</div>
+</details>
 
-<div style="display:none" id="15">
+<details class="det" id="15" >
+<summary>CHAPTER XV.</summary>
+
 <div>
 <h2>CHAPTER XV.</h2>
 <p>
@@ -4034,13 +4030,12 @@ afterwards, neither.  I didn't do him no more mean tricks, and I
 wouldn't done that one if I'd a knowed it would make him feel that way.
 </p>
 </div>
-
 <hr>
-<p class="next"><a href="#16">Next: CHAPTER XVI.</a></p>
-<hr>
-</div>
+</details>
 
-<div style="display:none" id="16">
+<details class="det" id="16" >
+<summary>CHAPTER XVI.</summary>
+
 <div>
 <h2>CHAPTER XVI.</h2>
 <p>
@@ -4475,13 +4470,12 @@ rush by and get away, but a lot of dogs jumped out and went to howling
 and barking at me, and I knowed better than to move another peg.
 </p>
 </div>
-
 <hr>
-<p class="next"><a href="#17">Next: CHAPTER XVII.</a></p>
-<hr>
-</div>
+</details>
 
-<div style="display:none" id="17">
+<details class="det" id="17" >
+<summary>CHAPTER XVII.</summary>
+
 <div>
 <h2>CHAPTER XVII.</h2>
 <p>
@@ -4905,13 +4899,12 @@ day, and it was a cool, comfortable place.  Nothing couldn't be better.
  And warn't the cooking good, and just bushels of it too!
 </p>
 </div>
-
 <hr>
-<p class="next"><a href="#18">Next: CHAPTER XVIII.</a></p>
-<hr>
-</div>
+</details>
 
-<div style="display:none" id="18">
+<details class="det" id="18" >
+<summary>CHAPTER XVIII.</summary>
+
 <div>
 <h2>CHAPTER XVIII.</h2>
 <p>
@@ -5463,13 +5456,12 @@ raft, after all.  Other places do seem so cramped up and smothery, but a
 raft don't.  You feel mighty free and easy and comfortable on a raft.
 </p>
 </div>
-
 <hr>
-<p class="next"><a href="#19">Next: CHAPTER XIX.</a></p>
-<hr>
-</div>
+</details>
 
-<div style="display:none" id="19">
+<details class="det" id="19" >
+<summary>CHAPTER XIX.</summary>
+
 <div>
 <h2>CHAPTER XIX.</h2>
 <p>
@@ -5851,13 +5843,12 @@ that the best way to get along with his kind of people is to let them
 have their own way.
 </p>
 </div>
-
 <hr>
-<p class="next"><a href="#20">Next: CHAPTER XX.</a></p>
-<hr>
-</div>
+</details>
 
-<div style="display:none" id="20">
+<details class="det" id="20" >
+<summary>CHAPTER XX.</summary>
+
 <div>
 <h2>CHAPTER XX.</h2>
 <p>
@@ -6237,13 +6228,12 @@ what it was like; but he said he had been in this country so long, and
 had so much trouble, he'd forgot it.
 </p>
 </div>
-
 <hr>
-<p class="next"><a href="#21">Next: CHAPTER XXI.</a></p>
-<hr>
-</div>
+</details>
 
-<div style="display:none" id="21">
+<details class="det" id="21" >
+<summary>CHAPTER XXI.</summary>
+
 <div>
 <h2>CHAPTER XXI.</h2>
 <p>
@@ -6704,13 +6694,12 @@ minute everybody was saying it; so away they went, mad and yelling, and
 snatching down every clothes-line they come to to do the hanging with.
 </p>
 </div>
-
 <hr>
-<p class="next"><a href="#22">Next: CHAPTER XXII.</a></p>
-<hr>
-</div>
+</details>
 
-<div style="display:none" id="22">
+<details class="det" id="22" >
+<summary>CHAPTER XXII.</summary>
+
 <div>
 <h2>CHAPTER XXII.</h2>
 <p>
@@ -6902,13 +6891,12 @@ some big sheets of wrapping paper and some black paint, and drawed off
 some handbills, and stuck them up all over the village.  The bills said:
 </p>
 </div>
-
 <hr>
-<p class="next"><a href="#23">Next: CHAPTER XXIII.</a></p>
-<hr>
-</div>
+</details>
 
-<div style="display:none" id="23">
+<details class="det" id="23" >
+<summary>CHAPTER XXIII.</summary>
+
 <div>
 <h2>CHAPTER XXIII.</h2>
 <p>
@@ -7170,13 +7158,12 @@ hisself as long's he live!'  Oh, she was plumb deef en dumb, Huck, plumb
 deef en dumb—en I'd ben a-treat'n her so!”
 </p>
 </div>
-
 <hr>
-<p class="next"><a href="#24">Next: CHAPTER XXIV.</a></p>
-<hr>
-</div>
+</details>
 
-<div style="display:none" id="24">
+<details class="det" id="24" >
+<summary>CHAPTER XXIV.</summary>
+
 <div>
 <h2>CHAPTER XXIV.</h2>
 <p>
@@ -7472,13 +7459,12 @@ like it, I'm a nigger. It was enough to make a body ashamed of the human
 race.
 </p>
 </div>
-
 <hr>
-<p class="next"><a href="#25">Next: CHAPTER XXV.</a></p>
-<hr>
-</div>
+</details>
 
-<div style="display:none" id="25">
+<details class="det" id="25" >
+<summary>CHAPTER XXV.</summary>
+
 <div>
 <h2>CHAPTER XXV.</h2>
 <p>
@@ -7811,13 +7797,12 @@ get 'em to send for you;” which made them all laugh, and they said it
 was a prime good hit.
 </p>
 </div>
-
 <hr>
-<p class="next"><a href="#26">Next: CHAPTER XXVI.</a></p>
-<hr>
-</div>
+</details>
 
-<div style="display:none" id="26">
+<details class="det" id="26" >
+<summary>CHAPTER XXVI.</summary>
+
 <div>
 <h2>CHAPTER XXVI.</h2>
 <p>
@@ -8281,13 +8266,12 @@ So I held on till all the late sounds had quit and the early ones hadn't
 begun yet; and then I slipped down the ladder.
 </p>
 </div>
-
 <hr>
-<p class="next"><a href="#27">Next: CHAPTER XXVII.</a></p>
-<hr>
-</div>
+</details>
 
-<div style="display:none" id="27">
+<details class="det" id="27" >
+<summary>CHAPTER XXVII.</summary>
+
 <div>
 <h2>CHAPTER XXVII.</h2>
 <p>
@@ -8604,13 +8588,12 @@ dreadful glad I'd worked it all off on to the niggers, and yet hadn't
 done the niggers no harm by it.
 </p>
 </div>
-
 <hr>
-<p class="next"><a href="#28">Next: CHAPTER XXVIII.</a></p>
-<hr>
-</div>
+</details>
 
-<div style="display:none" id="28">
+<details class="det" id="28" >
+<summary>CHAPTER XXVIII.</summary>
+
 <div>
 <h2>CHAPTER XXVIII.</h2>
 <p>
@@ -9105,13 +9088,12 @@ and yelling and laughing and carrying on, and singing out:
 Peter Wilks—and you pays your money and you takes your choice!”
 </p>
 </div>
-
 <hr>
-<p class="next"><a href="#29">Next: CHAPTER XXIX.</a></p>
-<hr>
-</div>
+</details>
 
-<div style="display:none" id="29">
+<details class="det" id="29" >
+<summary>CHAPTER XXIX.</summary>
+
 <div>
 <h2>CHAPTER XXIX.</h2>
 <p>
@@ -9603,13 +9585,12 @@ So I wilted right down on to the planks then, and give up; and it was
 all I could do to keep from crying.
 </p>
 </div>
-
 <hr>
-<p class="next"><a href="#30">Next: CHAPTER XXX.</a></p>
-<hr>
-</div>
+</details>
 
-<div style="display:none" id="30">
+<details class="det" id="30" >
+<summary>CHAPTER XXX.</summary>
+
 <div>
 <h2>CHAPTER XXX.</h2>
 <p>
@@ -9811,13 +9792,12 @@ again.  That made me feel easy and satisfied.  Of course when they got
 to snoring we had a long gabble, and I told Jim everything.
 </p>
 </div>
-
 <hr>
-<p class="next"><a href="#31">Next: CHAPTER XXXI.</a></p>
-<hr>
-</div>
+</details>
 
-<div style="display:none" id="31">
+<details class="det" id="31" >
+<summary>CHAPTER XXXI.</summary>
+
 <div>
 <h2>CHAPTER XXXI.</h2>
 <p>
@@ -10222,13 +10202,12 @@ get away.  I didn't want no trouble with their kind.  I'd seen all I
 wanted to of them, and wanted to get entirely shut of them.
 </p>
 </div>
-
 <hr>
-<p class="next"><a href="#32">Next: CHAPTER XXXII.</a></p>
-<hr>
-</div>
+</details>
 
-<div style="display:none" id="32">
+<details class="det" id="32" >
+<summary>CHAPTER XXXII.</summary>
+
 <div>
 <h2>CHAPTER XXXII.</h2>
 <p>
@@ -10533,13 +10512,12 @@ going along with me, but I said no, I could drive the horse myself, and
 I druther he wouldn't take no trouble about me.
 </p>
 </div>
-
 <hr>
-<p class="next"><a href="#33">Next: CHAPTER XXXIII.</a></p>
-<hr>
-</div>
+</details>
 
-<div style="display:none" id="33">
+<details class="det" id="33" >
+<summary>CHAPTER XXXIII.</summary>
+
 <div>
 <h2>CHAPTER XXXIII.</h2>
 <p>
@@ -10917,13 +10895,12 @@ It takes up more room than all the rest of a person's insides, and yet
 ain't no good, nohow.  Tom Sawyer he says the same.
 </p>
 </div>
-
 <hr>
-<p class="next"><a href="#34">Next: CHAPTER XXXIV.</a></p>
-<hr>
-</div>
+</details>
 
-<div style="display:none" id="34">
+<details class="det" id="34" >
+<summary>CHAPTER XXXIV.</summary>
+
 <div>
 <h2>CHAPTER XXXIV.</h2>
 <p>
@@ -11266,13 +11243,12 @@ witches went for him mostly in the dark, and it was good to have folks
 around then.
 </p>
 </div>
-
 <hr>
-<p class="next"><a href="#35">Next: CHAPTER XXXV.</a></p>
-<hr>
-</div>
+</details>
 
-<div style="display:none" id="35">
+<details class="det" id="35" >
+<summary>CHAPTER XXXV.</summary>
+
 <div>
 <h2>CHAPTER XXXV.</h2>
 <p>
@@ -11645,13 +11621,12 @@ He looked kind of weary and discouraged-like, and says:
 smouch the knives—three of them.”  So I done it.
 </p>
 </div>
-
 <hr>
-<p class="next"><a href="#36">Next: CHAPTER XXXVI.</a></p>
-<hr>
-</div>
+</details>
 
-<div style="display:none" id="36">
+<details class="det" id="36" >
+<summary>CHAPTER XXXVI.</summary>
+
 <div>
 <h2>CHAPTER XXXVI.</h2>
 <p>
@@ -11894,13 +11869,12 @@ lay de weight er my finger on um, not f'r ten hund'd thous'n billion
 dollars, I wouldn't.”
 </p>
 </div>
-
 <hr>
-<p class="next"><a href="#37">Next: CHAPTER XXXVII.</a></p>
-<hr>
-</div>
+</details>
 
-<div style="display:none" id="37">
+<details class="det" id="37" >
+<summary>CHAPTER XXXVII.</summary>
+
 <div>
 <h2>CHAPTER XXXVII.</h2>
 <p>
@@ -12217,13 +12191,12 @@ and scratched some marks on a tin plate and throwed it out of the
 window-hole.
 </p>
 </div>
-
 <hr>
-<p class="next"><a href="#38">Next: CHAPTER XXXVIII.</a></p>
-<hr>
-</div>
+</details>
 
-<div style="display:none" id="38">
+<details class="det" id="38" >
+<summary>CHAPTER XXXVIII.</summary>
+
 <div>
 <h2>CHAPTER XXXVIII.</h2>
 <p>
@@ -12569,13 +12542,12 @@ just about wasted on him.  So Jim he was sorry, and said he wouldn't
 behave so no more, and then me and Tom shoved for bed.
 </p>
 </div>
-
 <hr>
-<p class="next"><a href="#39">Next: CHAPTER XXXIX.</a></p>
-<hr>
-</div>
+</details>
 
-<div style="display:none" id="39">
+<details class="det" id="39" >
+<summary>CHAPTER XXXIX.</summary>
+
 <div>
 <h2>CHAPTER XXXIX.</h2>
 <p>
@@ -12801,13 +12773,12 @@ they will suspicion something and raise whoop-jamboreehoo. I do not wish
 any reward but to know I have done the right thing. <em>Unknown Friend.</em>
 </p>
 </div>
-
 <hr>
-<p class="next"><a href="#40">Next: CHAPTER XL.</a></p>
-<hr>
-</div>
+</details>
 
-<div style="display:none" id="40">
+<details class="det" id="40" >
+<summary>CHAPTER XL.</summary>
+
 <div>
 <h2>CHAPTER XL.</h2>
 <p>
@@ -13102,13 +13073,12 @@ So I said I would, and left, and Jim was to hide in the woods when he
 see the doctor coming till he was gone again.
 </p>
 </div>
-
 <hr>
-<p class="next"><a href="#41">Next: CHAPTER XLI.</a></p>
-<hr>
-</div>
+</details>
 
-<div style="display:none" id="41">
+<details class="det" id="41" >
+<summary>CHAPTER XLI.</summary>
+
 <div>
 <h2>CHAPTER XLI.</h2>
 <p>
@@ -13422,13 +13392,12 @@ dawn, and slid down, and she was there yet, and her candle was most out,
 and her old gray head was resting on her hand, and she was asleep.
 </p>
 </div>
-
 <hr>
-<p class="next"><a href="#42">Next: CHAPTER XLII.</a></p>
-<hr>
-</div>
+</details>
 
-<div style="display:none" id="42">
+<details class="det" id="42" >
+<summary>CHAPTER XLII.</summary>
+
 <div>
 <h2>CHAPTER XLII.</h2>
 <p>
@@ -13835,13 +13804,12 @@ I wanted to offer to bet two dollars she hadn't, but I reckoned maybe it
 was just as safe to not to.  So I never said nothing.
 </p>
 </div>
-
 <hr>
-<p class="next"><a href="#43">Next: CHAPTER THE LAST</a></p>
-<hr>
-</div>
+</details>
 
-<div style="display:none" id="43">
+<details class="det" id="43" >
+<summary>CHAPTER THE LAST</summary>
+
 <div>
 <h2>CHAPTER THE LAST</h2>
 <p>
@@ -13926,11 +13894,8 @@ THE END. YOURS TRULY, <em>HUCK FINN</em>.
 </p>
 </div>
 <hr>
-</div>
+</details>
 
-<script>
-init_chapter('0');
-</script>
 
 </body>
 </html>
