@@ -2,6 +2,8 @@
 
 -   <mailto:halcanary@gmail.com>
 
+-   <mailto:h3@halcanary.org>
+
 -   <tel:+1-919-724-2801>
 
 -   <https://halcanary.org/>
