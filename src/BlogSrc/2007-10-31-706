@@ -12,6 +12,8 @@ also give us an opportunity to throw out the base 360/60/60 system
 (degrees/minutes/seconds) and 24/60/60 (hours/minutes/seconds) that the
 Babylonians saddled us with.
 
+## Numbers
+
 The proposal: The sixteen digits 0123456789abcdef. Integers would be written
 
     dd,dddd,dddd
@@ -31,13 +33,27 @@ or
 
 where "_x_&NoBreak;P&NoBreak;_y_" means "_x_ × 16<sup>_y_</sup>" (P for exPonent.)
 
+## Time
+
 The new minute would be 1/256 th of an average day. (5.625 old-minutes) The new
 second would be 1/ 65536 th of a day (1.318 old-seconds).
+
+(Note that you could always specify meeting times with only new-minutes, since
+one never wants to be more specific than 1 new-minute for such things.
+Therefore, "meet me at 1:15 p.m." becomes "meet me at :8D".  Days and time can
+be specified simpler:  "2007-10-31 13:46:45" becomes "7D7-A-1F:930" (Year
+_7D7_, month _A_, day _1F_, minute _93_, second _0_.))
+
+## Length
 
 The new standard length would be around 9.202 centimeters. that would make the
 speed of light equal to an even 16^8 (new standard lengths/new seconds)
 
+## Angles
+
 The new degree would simply be 1/256th of a circle.
+
+* * *
 
 Translating to and from binary would of course be trivial.
 
