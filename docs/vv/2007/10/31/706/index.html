@@ -76,22 +76,30 @@ ul.flat li::before {content:"[";}
     </div>
   </header>
   <div class="content">
-<p>Well, if we were really starting from scratch, I would go with a base 16 numbering system (already in use by programmers everywhere).</p>
-<p>One would have to throw out SI units, which would cease to make sense.  It would also give us an opportunity to throw out the base 360/60/60 system (degrees/minutes/seconds) and 24/60/60 (hours/minutes/seconds) that the Babylonians saddled us with.</p>
-<p>The proposal:  The sixteen digits 0123456789abcdef.  Integers would be written</p>
-<pre>dd,dddd,dddd</pre>
-<p>with four digit groups (16 bits each).  Mixed numbers would be witten</p>
-<pre>dd,dddd,dddd.ddd</pre>
-<p>and a decimal separating fractions.  Floating-point numbers (or numbers in scientific notation) would always be written</p>
-<pre>d.dddPdd</pre>
+<p>Well, if we were really starting from scratch, I would go with a base 16
+numbering system (already in use by programmers everywhere).</p>
+<p>One would have to throw out SI units, which would cease to make sense. It would
+also give us an opportunity to throw out the base 360/60/60 system
+(degrees/minutes/seconds) and 24/60/60 (hours/minutes/seconds) that the
+Babylonians saddled us with.</p>
+<p>The proposal: The sixteen digits 0123456789abcdef. Integers would be written</p>
+<pre><code>dd,dddd,dddd</code></pre>
+<p>with four digit groups (16 bits each). Mixed numbers would be witten</p>
+<pre><code>dd,dddd,dddd.ddd</code></pre>
+<p>and a decimal separating fractions. Floating-point numbers (or numbers in
+scientific notation) would always be written</p>
+<pre><code>d.dddPdd</code></pre>
 <p>or</p>
-<pre>d.dddP-dd</pre>
-<p>where &ldquo;<em>x</em>P<em>y</em>&rdquo; means &ldquo;<em>x</em> &times; 16<sup><em>y</em></sup>&rdquo;  (P for exPonent.)</p>
-<p>The new minute would be 1/256 th of an average day.  (5.625 old-minutes)  The new second would be 1/65536 th of a day (1.318 old-seconds).  </p>
-<p>The new standard length would be around 9.202 centimeters.  that would make the speed of light equal to an even 16^8 (new standard lengths/new seconds)</p>
+<pre><code>d.dddP-dd</code></pre>
+<p>where "<em>x</em>⁠P⁠<em>y</em>" means "<em>x</em> × 16<sup><em>y</em></sup>" (P for exPonent.)</p>
+<p>The new minute would be 1/256 th of an average day. (5.625 old-minutes) The new
+second would be 1/ 65536 th of a day (1.318 old-seconds).</p>
+<p>The new standard length would be around 9.202 centimeters. that would make the
+speed of light equal to an even 16^8 (new standard lengths/new seconds)</p>
 <p>The new degree would simply be 1/256th of a circle.</p>
 <p>Translating to and from binary would of course be trivial.</p>
-<p>One would have to come up with new prefixes which mean "256 times", "1/256 times", "1/65536 times", and "65536 times"&mdash;like "kilo" means "1000 times".</p>
+<p>One would have to come up with new prefixes which mean "256 times", "1/256
+times", "1/65536 times", and "65536 times"—like "kilo" means "1000 times".</p>
   </div>
 </article>
 <hr>
