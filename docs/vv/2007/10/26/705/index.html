@@ -149,6 +149,34 @@ def isleapyear2(y, offset=6):
     return n and not (n % 4)</code></pre>
 <p>Every 10,000 years, the offset may need to be changed. After 100,000 years, a
 new algorithm will likely be necessary</p>
+<hr />
+<p><strong>UPDATE 2020-04-22:</strong></p>
+<p>Here's another common option for a perpetual calendar. Insert one or two
+non-weekdays into the year. With this option, each quarter is always exactly
+13 weeks, and starts on a Sunday. Many businesses use a <a href="https://en.wikipedia.org/wiki/4-4-5_calendar">4–4–5
+calendar</a> because this property
+is so convienent.</p>
+<pre><code>No   Name         Days     Starts With  Quarter
+--   ----         ----     -----------  -------
+01   January      30       Sunday       QⅠ
+02   February     31       Tuesday
+03   March        30       Friday
+
+04   April        31       Sunday       QⅡ
+05   May          30       Wednesday
+06   June         31       Friday
+
+     [June 31 is not a weekday]
+
+07   July         30       Sunday       QⅢ
+08   August       31       Tuesday
+09   September    30       Friday
+
+10   October      31       Sunday       QⅣ
+11   November     30       Wednesday
+12   December     30 or 31 Friday
+
+     [December 31 is not a weekday]</code></pre>
   </div>
 </article>
 <hr>
