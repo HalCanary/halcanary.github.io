@@ -1,2 +1,3 @@
-User-agent: *
-Allow: /
+user-agent: *
+allow: /
+sitemap: https://halcanary.org/sitemap.txt
