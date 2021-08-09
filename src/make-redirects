@@ -20,6 +20,7 @@ def main():
 <title>{escaped_url}</title>
 <script>window.location.replace("{url}");</script>
 <link rel="icon" href="data:image/png;base64,{icon}">
+<style>body{{font-family:sans-serif;}}</style>
 <body><a style="overflow-wrap:break-word" href="{escaped_url}">{escaped_url}</a></body>
 </html>
 '''
