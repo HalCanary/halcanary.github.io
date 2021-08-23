@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Next!</title>
+<style>
+body { margin:0; padding: 0; }
+.head { padding:5px; color:white; background-color:black; }
+iframe { width:100%; height:calc(100% - 29px); position:absolute; top:29px; left:0px;
+border:0; overflow:hidden; }
+</style>
+<script>
+const next = () => {
+  const m = fr.src.match(/^(.*[^0-9])([0-9]+)$/);
+  if (m) { sc = f.src = m[1] + (1 + parseInt(m[2])); }
+};
+const change = () => { fr.src = sc.value; };
+var fr;
+var src;
+window.addEventListener("load", () => {
+  fr = document.getElementById("fr");
+  sc = document.getElementById("sc")
+});
+</script>
+<body>
+<div class="head">
+<button onclick="next()">NEXT</button>
+<input type="text" id="sc" size="24" value="" onchange="change()">
+</div>
+<iframe id="fr" src=""></iframe>
+</body>
+</html>
+ 
