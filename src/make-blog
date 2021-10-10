@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # coding=utf-8
 
 import datetime
@@ -7,9 +7,12 @@ import sys
 
 import wohc
 
+import xml.dom.minidom, email.utils 
+
 BASE_DIR = 'vv'
 URL_BASE = 'https://halcanary.org'
 OUTPUT_DIR = 'docs'
+IMAGE = 'https://halcanary.org/images/HAL_CANARY_20191008_512.jpg'
 
 current_year = datetime.date.today().year
 first_year = 1997
@@ -18,7 +21,7 @@ def get_years():
     return '{:04d}-{:04d}'.format(first_year, current_year)
 
 def head(title, years):
-    return wohc.HEAD.format(icon=wohc.ICON, style=wohc.STYLE, title=title, years=years)
+    return wohc.head(title, years=years)
 
 top_posts_header = """
 <header>
@@ -41,6 +44,47 @@ top_posts_header = """
 
 <hr>
 """
+
+def makeRSS(out, posts):
+    dtnow = datetime.datetime.now().astimezone().replace(microsecond=0)
+    dom = xml.dom.minidom.getDOMImplementation()
+    doc = dom.createDocument(None, "rss", None)
+    def add(el, key, value):
+        el.appendChild(doc.createElement(key)).appendChild(doc.createTextNode(value))
+    link = URL_BASE + '/' + BASE_DIR + '/'
+    channel = doc.documentElement.appendChild(doc.createElement('channel'))
+    doc.documentElement.setAttribute('version', '2.0')
+    ATOM = 'http://www.w3.org/2005/Atom'
+    doc.documentElement.setAttributeNS(xml.dom.XMLNS_NAMESPACE, 'xmlns:atom', ATOM)
+    alink = channel.appendChild(doc.createElementNS(ATOM, 'atom:link'))
+    alink.setAttribute('href', URL_BASE + '/vv/feed.rss')
+    alink.setAttribute('rel', 'self')
+    alink.setAttribute('type', 'application/rss+xml')
+
+    add(channel, 'title', 'Voder-Vocoder')
+    add(channel, 'link', link)
+    add(channel, 'description', 'The Log of Hal Canary')
+    add(channel, 'language', 'en-US')
+    add(channel, 'copyright',
+            'Copyright %d-%d Hal W. Canary. ALL RIGHTS RESERVED.' % (first_year, current_year))
+    add(channel, 'pubDate', email.utils.format_datetime(dtnow))
+    add(channel, 'lastBuildDate', email.utils.format_datetime(dtnow))
+    image = channel.appendChild(doc.createElement('image'))
+    add(image, 'url', IMAGE)
+    add(image, 'title', 'Voder-Vocoder')
+    add(image, 'link', link)
+    for post in posts:
+        date = datetime.datetime.fromisoformat(post.date[:25])
+        item = channel.appendChild(doc.createElement('item'))
+        add(item, 'title', post.title)
+        link = URL_BASE + '/' + post.permalinkpart
+        add(item, 'link', link)
+        add(item, 'guid', link)
+        add(item, 'pubDate', email.utils.format_datetime(date)) 
+        add(item, 'description', post.summary)
+        if post.category_list:
+            add(item, 'category', ','.join(post.category_list))
+    doc.writexml(out, addindent='\t', newl='\n', encoding='UTF-8')
 
 def lcr(left, center, right):
     left   = '<p>{}</p>'.format(left) if left else '&nbsp;'
@@ -145,7 +189,7 @@ class Post(object):
                 elif key == 'SUMMARY':
                     self.summary = value
                 elif key == 'CATEGORIES':
-                    self.category_list = filter(len, value.split(';'))
+                    self.category_list = [x for x in filter(len, value.split(';'))]
                 elif key == 'MODE':
                     mode = value
                 elif key != 'COPYRIGHT':
@@ -302,6 +346,10 @@ def main():
     global first_year
     first_year = min(posts_by_year.keys())
 
+
+    with UpdatingFile('{}/{}/feed.rss'.format(OUTPUT_DIR, BASE_DIR)) as o:
+        makeRSS(o, all_posts)
+
     year_links = makelinks(posts_by_year.keys())
     for year, posts in posts_by_year.items():
         writeIndex('{}/{:04d}/index.html'.format(BASE_DIR, year),
@@ -333,6 +381,7 @@ def main():
                'Voder-Vocoder Archives',
                 all_posts,
                 (None, None))
+    
 
     for post in all_posts:
         post.write_to_file(post.permalinkpart + 'index.html')

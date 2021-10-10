@@ -1,11 +1,18 @@
 
 import base64
+import datetime
 import os
 import re
 import subprocess
 import sys
 
-PY3 = sys.version_info > (3,)
+assert sys.version_info > (3,)
+try:
+    import lxml.html, lxml.html.builder
+except ModuleNotFoundError:
+    import subprocess
+    subprocess.check_call([sys.executable, '-m', 'pip', 'install', 'lxml'])
+    import lxml.html, lxml.html.builder
 
 #MARKDOWN_CMD = ['cmark']
 #
@@ -18,10 +25,10 @@ MARKDOWN_CMD = ['pandoc',
                 '--wrap=preserve']
 
 def to_str(src):
-    return str(src, encoding='utf-8') if PY3 else src
+    return str(src, encoding='utf-8')
 
 def to_bytes(src):
-    return src.encode('utf-8') if PY3 else src
+    return src.encode('utf-8')
 
 def pipe_process(src, cmd):
     try:
@@ -37,7 +44,7 @@ def pipe_process(src, cmd):
 
 def read_file(filepath, binary=False):
     assert os.path.exists(filepath)
-    kwargs = dict(encoding='utf-8') if PY3 and not binary else dict()
+    kwargs = dict(encoding='utf-8') if not binary else dict()
     with open(filepath, 'rb' if binary else 'r', **kwargs) as f:
         return f.read()
 
@@ -48,7 +55,7 @@ def write_file(filepath, filecontent):
             return False
     if not os.path.exists(directory):
         os.makedirs(directory)
-    kwargs = dict(encoding='utf-8') if PY3 else dict()
+    kwargs = dict(encoding='utf-8')
     with open(filepath, 'w', **kwargs) as o:
         o.write(filecontent)
     return True
@@ -74,4 +81,28 @@ HEAD = """<head>
 </head>
 <!-- Copyright {years} Hal Canary. ALL RIGHTS RESERVED. -->"""
 
+YEARS = '{:04d}-{:04d}'.format(1997, datetime.date.today().year)
 
+#def head(title, icon=ICON, style=STYLE, years=YEARS):
+#    return HEAD.format(title=title, icon=ICON, style=STYLE, years=years)
+
+def head(title, icon=ICON, style=STYLE, years=YEARS):
+    E = lxml.html.builder
+    ICON = 'data:image/png;base64,' + to_str(base64.b64encode(read_file(ROOT + '/images/2020-HWC3-favicon.png', binary=True)))
+    return lxml.html.tostring(E.HEAD(
+        '\n',
+        E.META(charset='utf-8'),
+        '\n',
+        E.META(name='viewport', content='width=device-width, initial-scale=1.0'),
+        '\n',
+        E.TITLE(title),
+        '\n',
+        E.LINK(rel='icon', href=ICON),
+        '\n',
+        E.STYLE('\n' + STYLE + '\n'),
+        '\n',
+        E.LINK(rel="alternate", type="application/atom+xml", title="/vv/", href="/vv/feed.rss"),
+        '\n',
+        lxml.html.HtmlComment(' Copyright {} Hal Canary. ALL RIGHTS RESERVED. '.format(years)),
+        '\n',
+    ), encoding='unicode')
