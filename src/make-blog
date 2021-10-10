@@ -81,7 +81,8 @@ def makeRSS(out, posts):
         add(item, 'link', link)
         add(item, 'guid', link)
         add(item, 'pubDate', email.utils.format_datetime(date)) 
-        add(item, 'description', post.summary)
+        #add(item, 'description', post.summary)
+        add(item, 'description', post.post)
         if post.category_list:
             add(item, 'category', ','.join(post.category_list))
     doc.writexml(out, addindent='\t', newl='\n', encoding='UTF-8')
