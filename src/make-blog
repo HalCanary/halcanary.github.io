@@ -48,6 +48,15 @@ top_posts_header = """
 <hr>
 """
 
+def clean(src):
+    content = lxml.html.fragment_fromstring(src, True)
+    content.make_links_absolute(URL_BASE + '/')
+    for element in content.iter():
+        if element.tag == 'img':
+            style = element.attrib.get('style', '')
+            element.set('style', 'max-width:100%;height:auto;' + style)
+    return lxml.html.tostring(content, encoding='unicode')
+
 def makeRSS(out, posts):
     dtnow = datetime.datetime.now().astimezone().replace(microsecond=0)
     dom = xml.dom.minidom.getDOMImplementation()
@@ -77,9 +86,7 @@ def makeRSS(out, posts):
     add(image, 'title', 'Voder-Vocoder')
     add(image, 'link', link)
     for post in posts:
-        content = lxml.html.fragment_fromstring(post.post, True)
-        content.make_links_absolute(URL_BASE + '/')
-        contentstring = lxml.html.tostring(content, encoding='unicode')
+        contentstring = clean(post.post)
         date = datetime.datetime.fromisoformat(post.date[:25])
         item = channel.appendChild(doc.createElement('item'))
         add(item, 'title', post.title)
