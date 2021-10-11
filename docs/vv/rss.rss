@@ -7,13 +7,23 @@
 		<description>The Log of Hal Canary</description>
 		<language>en-US</language>
 		<copyright>Copyright 2002-2021 Hal W. Canary. ALL RIGHTS RESERVED.</copyright>
-		<pubDate>Mon, 11 Oct 2021 11:00:44 -0400</pubDate>
-		<lastBuildDate>Mon, 11 Oct 2021 11:00:44 -0400</lastBuildDate>
+		<pubDate>Mon, 11 Oct 2021 11:09:55 -0400</pubDate>
+		<lastBuildDate>Mon, 11 Oct 2021 11:09:55 -0400</lastBuildDate>
 		<image>
 			<url>https://halcanary.org/images/HAL_CANARY_20191008_512.jpg</url>
 			<title>Voder-Vocoder</title>
 			<link>https://halcanary.org/vv/</link>
 		</image>
+		<item>
+			<title>RSS Feed</title>
+			<link>https://halcanary.org/vv/2021/10/11/3024/</link>
+			<guid isPermaLink="false">43429cf0-cc9c-2665-dee9-0da3c10d7390</guid>
+			<pubDate>Mon, 11 Oct 2021 11:04:26 -0400</pubDate>
+			<description>&lt;div&gt;&lt;p&gt;I add a RSS feed to the custom blog generator.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://halcanary.org/images/rss.svg&quot; alt=&quot;rss logo&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://halcanary.org/vv/rss.rss&quot;&gt;https://halcanary.org/vv/rss.rss&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description>
+			<category>meta</category>
+		</item>
 		<item>
 			<title>Javascript SVG printable maze generator</title>
 			<link>https://halcanary.org/vv/2020/11/17/3023/</link>
