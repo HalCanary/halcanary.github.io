@@ -59,10 +59,11 @@ def clean(src):
 
 def makeRSS(out, posts):
     dtnow = datetime.datetime.now().astimezone().replace(microsecond=0)
-    dom = xml.dom.minidom.getDOMImplementation()
-    doc = dom.createDocument(None, "rss", None)
+    doc = xml.dom.minidom.getDOMImplementation().createDocument(None, "rss", None)
     def add(el, key, value):
-        el.appendChild(doc.createElement(key)).appendChild(doc.createTextNode(value))
+        n = el.appendChild(doc.createElement(key))
+        n.appendChild(doc.createTextNode(value))
+        return n
     link = URL_BASE + '/' + BASE_DIR + '/'
     channel = doc.documentElement.appendChild(doc.createElement('channel'))
     doc.documentElement.setAttribute('version', '2.0')
@@ -94,7 +95,7 @@ def makeRSS(out, posts):
         add(item, 'link', link)
         m = hashlib.sha256()
         m.update((link + contentstring).encode('utf-8'))
-        add(item, 'guid', str(uuid.UUID(m.hexdigest()[:32])))
+        add(item, 'guid', str(uuid.UUID(m.hexdigest()[:32]))).setAttribute('isPermaLink', 'false')
         add(item, 'pubDate', email.utils.format_datetime(date))
         #add(item, 'description', post.summary)
         add(item, 'description', contentstring)
