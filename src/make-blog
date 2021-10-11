@@ -2,12 +2,15 @@
 # coding=utf-8
 
 import datetime
+import email.utils
+import hashlib
+import lxml.html
 import os
 import sys
+import uuid
+import xml.dom.minidom
 
 import wohc
-
-import xml.dom.minidom, email.utils 
 
 BASE_DIR = 'vv'
 URL_BASE = 'https://halcanary.org'
@@ -74,15 +77,20 @@ def makeRSS(out, posts):
     add(image, 'title', 'Voder-Vocoder')
     add(image, 'link', link)
     for post in posts:
+        content = lxml.html.fragment_fromstring(post.post, True)
+        content.make_links_absolute(URL_BASE + '/')
+        contentstring = lxml.html.tostring(content, encoding='unicode')
         date = datetime.datetime.fromisoformat(post.date[:25])
         item = channel.appendChild(doc.createElement('item'))
         add(item, 'title', post.title)
         link = URL_BASE + '/' + post.permalinkpart
         add(item, 'link', link)
-        add(item, 'guid', link)
-        add(item, 'pubDate', email.utils.format_datetime(date)) 
+        m = hashlib.sha256()
+        m.update((link + contentstring).encode('utf-8'))
+        add(item, 'guid', str(uuid.UUID(m.hexdigest()[:32])))
+        add(item, 'pubDate', email.utils.format_datetime(date))
         #add(item, 'description', post.summary)
-        add(item, 'description', post.post)
+        add(item, 'description', contentstring)
         if post.category_list:
             add(item, 'category', ','.join(post.category_list))
     doc.writexml(out, addindent='\t', newl='\n', encoding='UTF-8')
@@ -257,7 +265,7 @@ class RecentPosts(object):
             o.write('<nav aria-label="External Navigation">\n')
             o.write(lcr(linker(self.posts[-1].prev, 'older: '), '(<a href="archives/">ALL POSTS</a>)', ''))
             o.write('</nav>\n</body>\n</html>\n')
- 
+
 def writeIndex(loc, title, post_list, prev_next):
     posts = index_by_keyfn(post_list, lambda p: [p.year])
     with UpdatingFile(OUTPUT_DIR + '/' + loc) as o:
@@ -382,7 +390,7 @@ def main():
                'Voder-Vocoder Archives',
                 all_posts,
                 (None, None))
-    
+
 
     for post in all_posts:
         post.write_to_file(post.permalinkpart + 'index.html')
