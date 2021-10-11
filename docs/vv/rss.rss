@@ -7,8 +7,8 @@
 		<description>The Log of Hal Canary</description>
 		<language>en-US</language>
 		<copyright>Copyright 2002-2021 Hal W. Canary. ALL RIGHTS RESERVED.</copyright>
-		<pubDate>Mon, 11 Oct 2021 10:32:42 -0400</pubDate>
-		<lastBuildDate>Mon, 11 Oct 2021 10:32:42 -0400</lastBuildDate>
+		<pubDate>Mon, 11 Oct 2021 11:00:44 -0400</pubDate>
+		<lastBuildDate>Mon, 11 Oct 2021 11:00:44 -0400</lastBuildDate>
 		<image>
 			<url>https://halcanary.org/images/HAL_CANARY_20191008_512.jpg</url>
 			<title>Voder-Vocoder</title>
@@ -29,9 +29,10 @@
 		<item>
 			<title>Blog/site update</title>
 			<link>https://halcanary.org/vv/2020/10/01/3022/</link>
-			<guid isPermaLink="false">0aca4074-92a4-822e-f2e6-eae2f5e1ea52</guid>
+			<guid isPermaLink="false">c1caea10-9b3c-919b-0e54-bdd2647fcab6</guid>
 			<pubDate>Thu, 01 Oct 2020 10:41:46 -0400</pubDate>
-			<description>&lt;div&gt;&lt;p&gt;I now host this site on Github, since it is free and fairly easy for me to use.
+			<description>&lt;div&gt;&lt;p&gt;summary of last few years of site changes.&lt;/p&gt;
+&lt;p&gt;I now host this site on Github, since it is free and fairly easy for me to use.
 I push the new version of the site with a simple &lt;code&gt;git push&lt;/code&gt;. I only pay for my
 domain name.&lt;/p&gt;
 &lt;p&gt;I am still using the same blog builder Python script I wrote years ago, but
@@ -75,9 +76,10 @@ change something on the page, not go to a new page.&lt;/p&gt;&lt;/li&gt;
 		<item>
 			<title>Dark Mode</title>
 			<link>https://halcanary.org/vv/2020/09/30/3021/</link>
-			<guid isPermaLink="false">a0e28baf-1e8f-f075-ec2b-221caac116a0</guid>
+			<guid isPermaLink="false">ded4b3a8-7b7e-5408-65f8-c318249f3936</guid>
 			<pubDate>Wed, 30 Sep 2020 09:32:32 -0400</pubDate>
-			<description>&lt;div&gt;&lt;p&gt;I added a &lt;code&gt;@media (prefers-color-scheme: dark) {...}&lt;/code&gt; block to this site's CSS. The tough part was to make the SVG fill color respect that. But it turns out that if you just style the svg element with&lt;/p&gt;
+			<description>&lt;div&gt;&lt;p&gt;adding dark mode to this site.&lt;/p&gt;
+&lt;p&gt;I added a &lt;code&gt;@media (prefers-color-scheme: dark) {...}&lt;/code&gt; block to this site's CSS. The tough part was to make the SVG fill color respect that. But it turns out that if you just style the svg element with&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;svg {
     fill: currentColor;    
 }&lt;/code&gt;&lt;/pre&gt;
@@ -87,17 +89,19 @@ change something on the page, not go to a new page.&lt;/p&gt;&lt;/li&gt;
 		<item>
 			<title>A flag for the US Democratic Party</title>
 			<link>https://halcanary.org/vv/2020/08/25/3020/</link>
-			<guid isPermaLink="false">4d6b5858-f023-2541-3cb8-f34e6dc6774c</guid>
+			<guid isPermaLink="false">44e85e67-860a-9bc5-de1d-15d1e8786b87</guid>
 			<pubDate>Tue, 25 Aug 2020 22:47:17 -0400</pubDate>
-			<description>&lt;div&gt;&lt;p&gt;&lt;img src=&quot;https://halcanary.org/images/dem.png&quot; alt=&quot;Barry of thirteen gules and argent, a jackass kicking azure&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/p&gt;&lt;/div&gt;</description>
+			<description>&lt;div&gt;&lt;p&gt;a proposal&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://halcanary.org/images/dem.png&quot; alt=&quot;Barry of thirteen gules and argent, a jackass kicking azure&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/p&gt;&lt;/div&gt;</description>
 			<category>politics</category>
 		</item>
 		<item>
 			<title>Randolph Warner Church Jr.</title>
 			<link>https://halcanary.org/vv/2020/08/07/3019/</link>
-			<guid isPermaLink="false">ecb8f563-9227-b3ce-2fa2-e2a7ec1c4cf9</guid>
+			<guid isPermaLink="false">c8d38390-db3f-e00c-d786-a5e8d50086f5</guid>
 			<pubDate>Fri, 07 Aug 2020 16:35:38 -0400</pubDate>
-			<description>&lt;div&gt;&lt;p&gt;My father's sister's husband, my Uncle Ranny, passed away earlier this year. Even though I never spent much time with him, when I did get to visit him, he was always kind and nice to talk to.&lt;/p&gt;
+			<description>&lt;div&gt;&lt;p&gt;Remembering my uncle.&lt;/p&gt;
+&lt;p&gt;My father's sister's husband, my Uncle Ranny, passed away earlier this year. Even though I never spent much time with him, when I did get to visit him, he was always kind and nice to talk to.&lt;/p&gt;
 &lt;p&gt;When Ranny Church told me that his uncle was Alonzo Church of the Church-Turing thesis and the lambda calculus, I though he was joking about the fact that I was studying computer science and that he happened to share a last name with one of the fathers of theoretical computer science. But in fact, he wasn't joking. My uncle's uncle was &lt;em&gt;the&lt;/em&gt; &lt;a href=&quot;https://en.wikipedia.org/wiki/Alonzo_Church&quot;&gt;Alonzo Church (1903-1995)&lt;/a&gt;, son of Samuel Robbins Church and Mildred Hannah Parker Church, Ranny's grandparents. I should take people at their word more often.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.legacy.com/amp/obituaries/washingtonpost/196007855&quot;&gt;Randolph Warner Church Jr. (1934-11-06 – 2020-03-24)&lt;/a&gt;&lt;/p&gt;
 &lt;details&gt;
@@ -115,9 +119,10 @@ change something on the page, not go to a new page.&lt;/p&gt;&lt;/li&gt;
 		<item>
 			<title>High Priority Constitutional Amendments</title>
 			<link>https://halcanary.org/vv/2020/07/17/3018/</link>
-			<guid isPermaLink="false">09a61c3c-fece-64a6-9ffc-77d56b71b7f1</guid>
+			<guid isPermaLink="false">fb7ebbc3-7124-e9cd-3f48-98a8c42c0913</guid>
 			<pubDate>Fri, 17 Jul 2020 12:42:25 -0400</pubDate>
-			<description>&lt;div&gt;&lt;ul&gt;
+			<description>&lt;div&gt;&lt;p&gt;A list of things that we should be seriously working on&lt;/p&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Clarify and extend meaning of &quot;republican form of government&quot; in Article Four:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Affirmative right to vote and access to voting systems for all adult citizens.&lt;/p&gt;&lt;/li&gt;
@@ -140,9 +145,10 @@ change something on the page, not go to a new page.&lt;/p&gt;&lt;/li&gt;
 		<item>
 			<title>Standard Space Habitats</title>
 			<link>https://halcanary.org/vv/2020/07/14/3017/</link>
-			<guid isPermaLink="false">5828decd-be1f-dd6d-c580-c7e569fa4066</guid>
+			<guid isPermaLink="false">220210b8-1817-6f53-d9a5-83ea5869277d</guid>
 			<pubDate>Tue, 14 Jul 2020 13:06:25 -0400</pubDate>
-			<description>&lt;div&gt;&lt;p&gt;&lt;a href=&quot;https://settlement.arc.nasa.gov/70sArtHiRes/70sArt/art.html&quot;&gt;&lt;img src=&quot;https://halcanary.org/images/Spacecolony1.jpg&quot; alt=&quot;[Interior view, O'Neill cylinder, looking out through large windows. NASA ID# AC75-1086]&quot; width=&quot;1920&quot; height=&quot;1512&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+			<description>&lt;div&gt;&lt;p&gt;A refinement of O'Neill's colonies.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://settlement.arc.nasa.gov/70sArtHiRes/70sArt/art.html&quot;&gt;&lt;img src=&quot;https://halcanary.org/images/Spacecolony1.jpg&quot; alt=&quot;[Interior view, O'Neill cylinder, looking out through large windows. NASA ID# AC75-1086]&quot; width=&quot;1920&quot; height=&quot;1512&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Start with the idea of an &lt;a href=&quot;https://en.wikipedia.org/wiki/O%27Neill_cylinder&quot;&gt;O'Neill cylinder&lt;/a&gt;: a spinning cylindrical space habitat 8 km in diameter and 32 km long. The frequency of revolution is about two minutes. This is a good diameter for a space habitat: if it is an order of magnitude larger, the structure won't hold together when it spins; an order of magnitude smaller, the Coriolis force is more noticeable.&lt;/p&gt;
 &lt;p&gt;The giant windows are a huge hazard for both radiation and meteor impacts. Instead, make the cylinder a solid steel vessel, thick enough to block most radiation. Make it out of many layers of steel sheeting, with a thick layer of ablative insulation on the outside that can absorb and redirect the kinetic energy of a meteor impact. Construct it as several independent 8 km long segments, each with its own shielded endcaps, all sharing a common axis. Each hab segment has airlocks at the axis, leading to rotating joints that connect the segment to two small non-rotating modules at the axis, where there are ports for visiting spacecraft to dock. This is also where arrays of directional communication antennas are located.&lt;/p&gt;
 &lt;p&gt;At one end of the axis, there is a massive array of solar panels (not rotating with the hab), at the other, there is an array of radiators. If the hab is too far from a star for solar power, a nuclear power plant is located outside of the hab, along the axis, in its own shielded module, as far away as needed to minimize radiation hazards to humans entering and exiting the habitat at the docking port module.&lt;/p&gt;
@@ -158,9 +164,10 @@ change something on the page, not go to a new page.&lt;/p&gt;&lt;/li&gt;
 		<item>
 			<title>Banking Manifesto</title>
 			<link>https://halcanary.org/vv/2020/07/13/3016/</link>
-			<guid isPermaLink="false">71063f02-bb07-2670-f561-3e7bd5bc1631</guid>
+			<guid isPermaLink="false">3f5e9135-b623-6e1d-478a-f589846c07b9</guid>
 			<pubDate>Mon, 13 Jul 2020 08:53:45 -0400</pubDate>
-			<description>&lt;div&gt;&lt;p&gt;Banks provide three essential services to the public:&lt;/p&gt;
+			<description>&lt;div&gt;&lt;p&gt;I lay out a proposal to change the US banking system for the better.&lt;/p&gt;
+&lt;p&gt;Banks provide three essential services to the public:&lt;/p&gt;
 &lt;ol type=&quot;1&quot;&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;Deposits.&lt;/strong&gt; A place to keep money safe, with optional interest, allowing for 100% liquidity&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;Lending.&lt;/strong&gt; Long-term loans to households and small businesses.&lt;/p&gt;&lt;/li&gt;
@@ -200,17 +207,19 @@ change something on the page, not go to a new page.&lt;/p&gt;&lt;/li&gt;
 		<item>
 			<title>EM Ratio, again</title>
 			<link>https://halcanary.org/vv/2020/04/03/3014/</link>
-			<guid isPermaLink="false">cc507324-def0-eeb1-9d02-161c3a43848d</guid>
+			<guid isPermaLink="false">3caef7f6-2646-7169-59f3-5e8d8150d1f8</guid>
 			<pubDate>Fri, 03 Apr 2020 22:04:48 -0400</pubDate>
-			<description>&lt;div&gt;&lt;p&gt;&lt;a href=&quot;https://fred.stlouisfed.org/graph/?g=qD5Q&quot;&gt;&lt;img src=&quot;https://fred.stlouisfed.org/graph/fredgraph.png?g=qD5Q&quot; width=&quot;1168&quot; height=&quot;470&quot; alt=&quot;[graph]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description>
+			<description>&lt;div&gt;&lt;p&gt;US Employment-Population Ratio (ages 25-54 Yrs), last 25 Years&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://fred.stlouisfed.org/graph/?g=qD5Q&quot;&gt;&lt;img src=&quot;https://fred.stlouisfed.org/graph/fredgraph.png?g=qD5Q&quot; width=&quot;1168&quot; height=&quot;470&quot; alt=&quot;[graph]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description>
 			<category>economics</category>
 		</item>
 		<item>
 			<title>Electoral reform</title>
 			<link>https://halcanary.org/vv/2019/04/06/3013/</link>
-			<guid isPermaLink="false">fa4b97fa-b777-8bac-26bd-69a675ba667b</guid>
+			<guid isPermaLink="false">d12500d1-16a3-d060-6eda-7de8f6970c03</guid>
 			<pubDate>Sat, 06 Apr 2019 18:24:00 -0400</pubDate>
-			<description>&lt;div&gt;&lt;p&gt;I'd like to propose a four-part election to replace our current system:&lt;/p&gt;
+			<description>&lt;div&gt;&lt;p&gt;another proposed change to our constitution&lt;/p&gt;
+&lt;p&gt;I'd like to propose a four-part election to replace our current system:&lt;/p&gt;
 &lt;ol type=&quot;1&quot;&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;Application&lt;/strong&gt; On day one of the campaign, eligible citizens can apply for
 the office, at the local, state, or federal board of elections (depending on
@@ -236,9 +245,10 @@ none-of-the-above voting is allowed. The polls should be open for a week.&lt;/p&
 		<item>
 			<title>Obit</title>
 			<link>https://halcanary.org/vv/2019/04/06/3012/</link>
-			<guid isPermaLink="false">5c22cfdd-bc24-8f53-97ff-a1745eacf5d1</guid>
+			<guid isPermaLink="false">8c79f97d-3a71-ded0-ec1c-72f30eed9fc6</guid>
 			<pubDate>Sat, 06 Apr 2019 18:13:09 -0400</pubDate>
-			<description>&lt;div&gt;&lt;blockquote&gt;
+			<description>&lt;div&gt;&lt;p&gt;This month marks a year since my father passed away.  For posterity, here is his obituary.&lt;/p&gt;
+&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Hal Winchester Canary&lt;/strong&gt;&lt;br&gt;
 July 12, 1943 – April 25, 2018&lt;/p&gt;
 &lt;p&gt;Hal Winchester Canary, 73, of Raleigh, North Carolina, and originally from
@@ -284,9 +294,10 @@ Memphis, Tennessee, on July 13.&lt;/p&gt;
 		<item>
 			<title>Writing Prompt</title>
 			<link>https://halcanary.org/vv/2019/04/04/3011/</link>
-			<guid isPermaLink="false">bc532fec-81d9-1784-9c5a-bb2711f0d7b2</guid>
+			<guid isPermaLink="false">3cd1e3b6-273a-241f-6f50-41b3256e1cd3</guid>
 			<pubDate>Thu, 04 Apr 2019 16:20:00 -0400</pubDate>
-			<description>&lt;div&gt;&lt;p&gt;[WP] A post-human nanotech robot (PHNR) from the future time-travels to sometime in the first half of the twentieth century. They want to change the world for the better, but sets strict rules on themself to prevent themself from dominating humanity:&lt;/p&gt;
+			<description>&lt;div&gt;&lt;p&gt;time-traveling post-human nanotech robot&lt;/p&gt;
+&lt;p&gt;[WP] A post-human nanotech robot (PHNR) from the future time-travels to sometime in the first half of the twentieth century. They want to change the world for the better, but sets strict rules on themself to prevent themself from dominating humanity:&lt;/p&gt;
 &lt;ol type=&quot;1&quot;&gt;
 &lt;li&gt;no disclosing their own existence.&lt;/li&gt;
 &lt;li&gt;no disclosing information or technology from the future.&lt;/li&gt;
@@ -301,9 +312,10 @@ Memphis, Tennessee, on July 13.&lt;/p&gt;
 		<item>
 			<title>Fixing the US Constitution</title>
 			<link>https://halcanary.org/vv/2019/04/04/3010/</link>
-			<guid isPermaLink="false">70b40c2e-42e3-aee3-cbe1-0db6595afde4</guid>
+			<guid isPermaLink="false">728c794f-f846-0787-530f-6cf1fc767a87</guid>
 			<pubDate>Thu, 04 Apr 2019 16:17:00 -0400</pubDate>
-			<description>&lt;div&gt;&lt;ul&gt;
+			<description>&lt;div&gt;&lt;p&gt;Proposals to think about when I get a chance to write them up.&lt;/p&gt;
+&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Affirmative right to vote and access.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Secure voting systems with statistical tests for accuracy.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Distinguish person vs legal entity.&lt;/p&gt;&lt;/li&gt;
@@ -326,9 +338,10 @@ Memphis, Tennessee, on July 13.&lt;/p&gt;
 		<item>
 			<title>The Great Archive</title>
 			<link>https://halcanary.org/vv/2019/04/04/3009/</link>
-			<guid isPermaLink="false">e3492880-c176-3882-b979-f0aab246783a</guid>
+			<guid isPermaLink="false">0deb895d-cc3f-ce74-e3e2-f34028e3f594</guid>
 			<pubDate>Thu, 04 Apr 2019 16:15:00 -0400</pubDate>
-			<description>&lt;div&gt;&lt;p&gt;All of the world's librarians should collaborate on a giant electronic archive of humanity's written work.&lt;/p&gt;
+			<description>&lt;div&gt;&lt;p&gt;a giant electronic archive of humanity's written work: a proposal&lt;/p&gt;
+&lt;p&gt;All of the world's librarians should collaborate on a giant electronic archive of humanity's written work.&lt;/p&gt;
 &lt;p&gt;If our civilization collapses, this archive can provide a somewhat complete record of human knowledge and works for the future.&lt;/p&gt;
 &lt;p&gt;Copies of the archive would be stored by anyone who wishes to make a copy.&lt;/p&gt;
 &lt;p&gt;It would be updated continuously, with annual releases.&lt;/p&gt;
@@ -341,9 +354,10 @@ Memphis, Tennessee, on July 13.&lt;/p&gt;
 		<item>
 			<title>Architectural Marvels</title>
 			<link>https://halcanary.org/vv/2019/04/04/3008/</link>
-			<guid isPermaLink="false">15727057-44b1-cd6a-c79f-2cd563337e6b</guid>
+			<guid isPermaLink="false">c370471a-a086-50ba-d99e-6da403b958d2</guid>
 			<pubDate>Thu, 04 Apr 2019 16:09:37 -0400</pubDate>
-			<description>&lt;div&gt;&lt;p&gt;A city center built in an excavated cavern under the Appalachian mountains. Five miles wide, fifteen miles long, a quarter-mile tall. The roof of the cavern is supported by narrow towers made of super-strong composite material.&lt;/p&gt;
+			<description>&lt;div&gt;&lt;p&gt;I answer r/worldbuilding's question: &quot;What are some of your world's architectural marvels?&quot;&lt;/p&gt;
+&lt;p&gt;A city center built in an excavated cavern under the Appalachian mountains. Five miles wide, fifteen miles long, a quarter-mile tall. The roof of the cavern is supported by narrow towers made of super-strong composite material.&lt;/p&gt;
 &lt;p&gt;The floor of the cavern is covered with tall buildings and parkland, with a street layout reminiscent of Manhattan. The population of the city center is about 3 million.&lt;/p&gt;
 &lt;p&gt;The walls and ceiling of the cavern are covered with screens that show a perfect stereo image of the sky.&lt;/p&gt;
 &lt;p&gt;Surrounding this city center are smaller caverns containing suburbs, industry, and agriculture. All are connected by thousands of transportation tunnels that autonomous cars and trucks move through. The total population is around 20 million.&lt;/p&gt;
@@ -353,27 +367,30 @@ Memphis, Tennessee, on July 13.&lt;/p&gt;
 		<item>
 			<title>EMRATIO(25-54)</title>
 			<link>https://halcanary.org/vv/2017/01/09/3006/</link>
-			<guid isPermaLink="false">b9442483-51cf-1aeb-083c-4c22a0cc3e33</guid>
+			<guid isPermaLink="false">3fa126bb-fd13-5975-007b-85ad4d90236b</guid>
 			<pubDate>Mon, 09 Jan 2017 10:23:00 -0500</pubDate>
-			<description>&lt;div&gt;&lt;p&gt;Some progress, but not enough.&lt;/p&gt;
+			<description>&lt;div&gt;&lt;p&gt;I use the current Civilian Employment-Population Ratio in the US as a measure of how productive our economy is.&lt;/p&gt;
+&lt;p&gt;Some progress, but not enough.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://fred.stlouisfed.org/graph/?g=cjIW&quot;&gt;&lt;img src=&quot;https://fred.stlouisfed.org/graph/fredgraph.png?g=cjIW&quot; alt=&quot;[graph]&quot; width=&quot;1168&quot; height=&quot;470&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description>
 			<category>economics,politics</category>
 		</item>
 		<item>
 			<title>It's a girl!</title>
 			<link>https://halcanary.org/vv/2014/08/28/3005/</link>
-			<guid isPermaLink="false">d3d4202b-1b4d-74dc-fce0-a29f92a35243</guid>
+			<guid isPermaLink="false">fedcdbaa-7ae2-1022-9c44-8f6e865e46d1</guid>
 			<pubDate>Thu, 28 Aug 2014 23:36:00 -0000</pubDate>
-			<description>&lt;div&gt;&lt;p&gt;Margaret (Peggy) Rose Canary was born at 1:16 p.m on Thursday, August 28, after a little more than four hours of intervention-free, unmedicated labor (three and a half hours at home and a half hour in the hospital). She weighed six pounds and fifteen ounces and was nineteen and three quarters inches long.&lt;/p&gt;
+			<description>&lt;div&gt;&lt;p&gt;I have a daughter!&lt;/p&gt;
+&lt;p&gt;Margaret (Peggy) Rose Canary was born at 1:16 p.m on Thursday, August 28, after a little more than four hours of intervention-free, unmedicated labor (three and a half hours at home and a half hour in the hospital). She weighed six pounds and fifteen ounces and was nineteen and three quarters inches long.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://halcanary.org/images/2014-08-28_DSC_2209_1024.jpg&quot;&gt;&lt;img src=&quot;https://halcanary.org/images/2014-08-28_DSC_2209_1024.jpg&quot; alt=&quot;Lindsay &amp;amp; Peggy&quot; class=&quot;maxy&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description>
 			<category>life</category>
 		</item>
 		<item>
 			<title>Optimal Region Projection</title>
 			<link>https://halcanary.org/vv/2014/03/27/3004/</link>
-			<guid isPermaLink="false">90daeca4-1036-6421-7c72-df5b09e53925</guid>
+			<guid isPermaLink="false">f36a5eb8-b20a-ff8d-1135-cab812f7233c</guid>
 			<pubDate>Thu, 27 Mar 2014 18:53:12 -0000</pubDate>
-			<description>&lt;div&gt;&lt;p&gt;I am published again!&lt;/p&gt;
+			<description>&lt;div&gt;&lt;p&gt;I've been published in _Computers &amp;amp; Graphics_&lt;/p&gt;
+&lt;p&gt;I am published again!&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Hal Canary, Russell M. Taylor II, Cory Quammen, Scott Pratt, Facundo
 A. Gómez, Brian O'Shea, Christopher G. Healey. “&lt;a href=&quot;https://www.sciencedirect.com/science/article/pii/S0097849314000296&quot;&gt;Visualizing
@@ -387,18 +404,20 @@ Projection&lt;/a&gt;.”
 		<item>
 			<title>Meta-news</title>
 			<link>https://halcanary.org/vv/2013/09/29/3003/</link>
-			<guid isPermaLink="false">b20ce09d-cf31-3bd3-443b-bf784b2faf1b</guid>
+			<guid isPermaLink="false">4552567b-80ca-7fd9-ebc2-2e84ef0d41ef</guid>
 			<pubDate>Sun, 29 Sep 2013 19:56:02 -0000</pubDate>
-			<description>&lt;div&gt;&lt;p&gt;When I started this site around ten years ago, I wanted something more reliable than a computer sitting in my bedroom, but still affordable. I ended up going with a service that provided a LAMP stack (Linux, Apache, MySQL, PHP). I blogged with Movable Type until Wordpress came along.&lt;/p&gt;
+			<description>&lt;div&gt;&lt;p&gt;Over the past months I've moved this site twice.  Learn why.&lt;/p&gt;
+&lt;p&gt;When I started this site around ten years ago, I wanted something more reliable than a computer sitting in my bedroom, but still affordable. I ended up going with a service that provided a LAMP stack (Linux, Apache, MySQL, PHP). I blogged with Movable Type until Wordpress came along.&lt;/p&gt;
 &lt;p&gt;Now, I've simply uploaded the site to cloud storage and wrote some scripts to generate the site and automate uploads.&lt;/p&gt;&lt;/div&gt;</description>
 			<category>computers-code,www</category>
 		</item>
 		<item>
 			<title>Current Location</title>
 			<link>https://halcanary.org/vv/2013/08/29/3002/</link>
-			<guid isPermaLink="false">b0978125-44fb-c18c-ae5f-0cfd15cf5160</guid>
+			<guid isPermaLink="false">784aaeef-2ac7-ad38-09cc-75492a5c7b59</guid>
 			<pubDate>Thu, 29 Aug 2013 09:48:42 -0000</pubDate>
-			<description>&lt;div&gt;&lt;script&gt;
+			<description>&lt;div&gt;&lt;p&gt;The existing software on your phone makes it impossible to send someone precise latitude/longitude that you pinpoint on a map. Here's my solution, IF you are already standing where you want to pinpoint.&lt;/p&gt;
+&lt;script&gt;
 function nav() {
   if (! navigator.geolocation) {
     document.getElementById(&quot;location&quot;).innerHTML = &quot;Sorry :(&quot;;
@@ -443,17 +462,19 @@ window.addEventListener('load', nav);
 		<item>
 			<title>Updated Contact Info</title>
 			<link>https://halcanary.org/vv/2013/08/27/3001/</link>
-			<guid isPermaLink="false">ef6f4236-59f1-1b9a-2712-e3f658075b44</guid>
+			<guid isPermaLink="false">a52b4511-4a40-3366-3968-e41e5d4d2c4b</guid>
 			<pubDate>Tue, 27 Aug 2013 17:33:12 -0000</pubDate>
-			<description>&lt;div&gt;&lt;p&gt;See &lt;a href=&quot;https://halcanary.org/contact/&quot;&gt;https://halcanary.org/contact/&lt;/a&gt;.&lt;/p&gt;&lt;/div&gt;</description>
+			<description>&lt;div&gt;&lt;p&gt;How can I contact Hal Canary?&lt;/p&gt;
+&lt;p&gt;See &lt;a href=&quot;https://halcanary.org/contact/&quot;&gt;https://halcanary.org/contact/&lt;/a&gt;.&lt;/p&gt;&lt;/div&gt;</description>
 			<category>uncategorized</category>
 		</item>
 		<item>
 			<title>EMRATIO</title>
 			<link>https://halcanary.org/vv/2013/08/16/1331/</link>
-			<guid isPermaLink="false">50886119-4c91-68f1-2db3-46f61d01edfb</guid>
+			<guid isPermaLink="false">dfc3f9cb-6719-7b8d-a5da-84e6999be4be</guid>
 			<pubDate>Fri, 16 Aug 2013 10:26:59 -0000</pubDate>
-			<description>&lt;div&gt;&lt;p&gt;Obviously, current fiscal and monitary policy isn't working:&lt;/p&gt;
+			<description>&lt;div&gt;&lt;p&gt;I use the current Civilian Employment-Population Ratio in the US as a measure of how productive our economy is.&lt;/p&gt;
+&lt;p&gt;Obviously, current fiscal and monitary policy isn't working:&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;http://goo.gl/p3G5nb&quot;&gt;&lt;img src=&quot;https://halcanary.org/images/7b71b0d857c3768c851d9958eeb7f2b3bfbf0b82.png&quot; alt=&quot;[]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;I propose: a larger deficit and a higher inflation target.&lt;/p&gt;&lt;/div&gt;</description>
 			<category>economics,politics</category>
@@ -461,9 +482,10 @@ window.addEventListener('load', nav);
 		<item>
 			<title>Color in shell scripts (not prompts)</title>
 			<link>https://halcanary.org/vv/2013/06/20/681/</link>
-			<guid isPermaLink="false">f0375b18-0ce0-47e7-dd2f-302264bfb57a</guid>
+			<guid isPermaLink="false">a4600653-5b56-5d01-c1e1-4f4bc78a9f9f</guid>
 			<pubDate>Thu, 20 Jun 2013 18:53:31 -0000</pubDate>
-			<description>&lt;div&gt;&lt;p&gt; &lt;/p&gt;
+			<description>&lt;div&gt;&lt;p&gt;Some shell-script macros for adding color to the output of your programs.&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;#!/bin/sh
 
 # ANSI Color -- use these variables to easily have
@@ -544,9 +566,10 @@ exit 0&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
 		<item>
 			<title>spiral</title>
 			<link>https://halcanary.org/vv/2013/06/11/1322/</link>
-			<guid isPermaLink="false">e04d0ea4-705f-0138-0862-360d219bfa57</guid>
+			<guid isPermaLink="false">15e8c056-6de2-43a9-cd9c-8b7de9623505</guid>
 			<pubDate>Tue, 11 Jun 2013 14:00:34 -0000</pubDate>
-			<description>&lt;div&gt;&lt;p&gt;Your challenge: make a pretty postscript picture as one tweet. &quot;%!\n&quot; is not necessary
+			<description>&lt;div&gt;&lt;p&gt;Your challenge: make a pretty postscript picture as one tweet&lt;/p&gt;
+&lt;p&gt;Your challenge: make a pretty postscript picture as one tweet. &quot;%!\n&quot; is not necessary
 (&lt;a href=&quot;https://twitter.com/halcanary/status/344530170532741120&quot;&gt;tweet&lt;/a&gt;)&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;%!
 300 300 translate newpath 3 0 2 copy moveto 604 { 5 add
@@ -622,9 +645,10 @@ fi&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
 		<item>
 			<title>VTKViewer</title>
 			<link>https://halcanary.org/vv/2013/04/27/1312/</link>
-			<guid isPermaLink="false">dbcd08c2-ec6a-44f4-f31c-367613da23bb</guid>
+			<guid isPermaLink="false">eef43546-63c9-36ef-8546-bee77937a24d</guid>
 			<pubDate>Sat, 27 Apr 2013 14:30:21 -0000</pubDate>
-			<description>&lt;div&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/HalCanary/vtkviewer&quot;&gt;VTKViewer&lt;/a&gt;&lt;br&gt;
+			<description>&lt;div&gt;&lt;p&gt;A small and fast application to quickly view several 3D file formats.  There is both a C++ and a Python version.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/HalCanary/vtkviewer&quot;&gt;VTKViewer&lt;/a&gt;&lt;br&gt;
 &lt;img src=&quot;https://halcanary.org/images/barbell.png&quot; alt=&quot;Screenshot of VTKViewer&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/p&gt;&lt;/div&gt;</description>
 			<category>computers-code,software-projects</category>
 		</item>
@@ -5296,9 +5320,10 @@ Undeliverable - account closed &lt;/pre&gt;
 		<item>
 			<title>fcp (FTP copy)</title>
 			<link>https://halcanary.org/vv/2008/01/13/714/</link>
-			<guid isPermaLink="false">3398fbf5-dbe0-384f-f0ae-37b3337e6171</guid>
+			<guid isPermaLink="false">01e328c9-22aa-3d9b-338d-145419476a4c</guid>
 			<pubDate>Sun, 13 Jan 2008 00:05:28 -0000</pubDate>
-			<description>&lt;div&gt;&lt;p&gt;My XO-1  has gotten me interested in hacking in python again, since that is the XO's primary programming environment.&lt;/p&gt;
+			<description>&lt;div&gt;&lt;p&gt;A ftp client that uses rcp/scp syntax&lt;/p&gt;
+&lt;p&gt;My XO-1  has gotten me interested in hacking in python again, since that is the XO's primary programming environment.&lt;/p&gt;
 &lt;p&gt;I quickly hacked out an ftp script in python since the default install lacked an ftp client.  &quot;My next project will be to finally write version 1.0 of my fcp (FTP copy) program --- a ftp client that uses rcp/scp syntax.&lt;/p&gt;
 &lt;p&gt;Here's the first script:&lt;/p&gt;
 &lt;pre&gt;#!/usr/bin/env python2.5
@@ -5818,9 +5843,10 @@ RewriteRule ^(.*)$           $1.html&lt;/pre&gt;&lt;/div&gt;</description>
 		<item>
 			<title>Tension of a Spinning Ring</title>
 			<link>https://halcanary.org/vv/2007/06/23/694/</link>
-			<guid isPermaLink="false">7ef08416-2ce8-8e73-b64c-0856c1f5697b</guid>
+			<guid isPermaLink="false">913fd2c4-c3e6-c007-0174-e83e3b304a1d</guid>
 			<pubDate>Sat, 23 Jun 2007 10:50:40 -0000</pubDate>
-			<description>&lt;div&gt;&lt;p&gt;What is the tension in a spinning ring, for example Bank's orbitals or a Niven Ring?&lt;/p&gt;
+			<description>&lt;div&gt;&lt;p&gt;fun with physics&lt;/p&gt;
+&lt;p&gt;What is the tension in a spinning ring, for example Bank's orbitals or a Niven Ring?&lt;/p&gt;
 &lt;p&gt;Let us break the ring into &lt;em&gt;N&lt;/em&gt; sections. The angle (in radians) subtended by each section, dθ, is 2π / &lt;em&gt;N&lt;/em&gt;. Suppose the radius of the ring is &lt;em&gt;R&lt;/em&gt; and the mass-per-unit-length of the ring is λ; then the mass of a section is λ &lt;em&gt;R&lt;/em&gt; dθ and the mass of the whole ring &lt;em&gt;M&lt;/em&gt; = 2π_R_λ.&lt;/p&gt;
 &lt;p&gt;Ignoring gravity, there are two forces pulling on each small section: tension pulling to the left and tension pulling to the right. Because the ring is circularly symmetric, the magnitude of the two tensions are equal. The directions of the two forces are dθ from being opposite.&lt;/p&gt;
 &lt;p&gt;If at some moment in time, the left tension, &lt;em&gt;&lt;strong&gt;Tl&lt;/strong&gt;&lt;/em&gt;, is pointing in the -&lt;em&gt;&lt;strong&gt;x̂&lt;/strong&gt;&lt;/em&gt; direction, then the right tension will be&lt;/p&gt;
@@ -5924,9 +5950,11 @@ RewriteRule ^(.*)$           $1.html&lt;/pre&gt;&lt;/div&gt;</description>
 		<item>
 			<title>Unix Utility Scripts</title>
 			<link>https://halcanary.org/vv/2007/06/12/691/</link>
-			<guid isPermaLink="false">775e42b5-2438-4ac7-e8fe-8649615a8134</guid>
+			<guid isPermaLink="false">a3623737-d01c-b3f6-6501-815d7e5f92ab</guid>
 			<pubDate>Tue, 12 Jun 2007 10:26:46 -0000</pubDate>
-			<description>&lt;div&gt;&lt;p&gt;execute a program in the background, redirect stdout and stderr to null, and keep it from being hungup. [Depends on: Bourne shell, coreutils]&lt;/p&gt;
+			<description>&lt;div&gt;&lt;p&gt;Utility Scripts for Unix-compatible systems (id est GNU/Linux). This page collects several of the scripts I've written for Linux over the years. Maybe someone else will find them useful.&lt;/p&gt;
+
+&lt;p&gt;execute a program in the background, redirect stdout and stderr to null, and keep it from being hungup. [Depends on: Bourne shell, coreutils]&lt;/p&gt;
 &lt;pre&gt;#!/bin/sh
 # ~/bin/amp
 nohup &quot;$@&quot; &amp;gt; /dev/null 2&amp;gt;&amp;amp;1 &amp;amp;
@@ -6398,9 +6426,10 @@ exec info $1 2&amp;gt; /dev/null | less
 		<item>
 			<title>Presentation last night: Cryptography, Linux, and You</title>
 			<link>https://halcanary.org/vv/2007/04/11/685/</link>
-			<guid isPermaLink="false">8359e83b-3ff6-9e12-33c2-29c2a4f75cb8</guid>
+			<guid isPermaLink="false">bdf8f0c0-a8fa-b34b-bbdf-498cad2e51cc</guid>
 			<pubDate>Wed, 11 Apr 2007 14:25:35 -0000</pubDate>
-			<description>&lt;div&gt;&lt;p&gt;It would have been better had there been more people show up at LUG, but that happens.&lt;/p&gt;
+			<description>&lt;div&gt;&lt;p&gt;a presentation I gave at SWLUG&lt;/p&gt;
+&lt;p&gt;It would have been better had there been more people show up at LUG, but that happens.&lt;/p&gt;
 &lt;p&gt;Check out the fancy javascript on this page!&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://halcanary.org/p/Cryptography_Linux_and_You/&quot;&gt;Cryptography, Linux, and You&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description>
 			<category>computers-code</category>
@@ -7211,9 +7240,10 @@ $ sha1sum /dev/hdc&lt;/pre&gt;&lt;/div&gt;</description>
 		<item>
 			<title>Art</title>
 			<link>https://halcanary.org/vv/2006/09/19/whc02/</link>
-			<guid isPermaLink="false">0735dd07-264e-9371-82b0-e9a5c185d760</guid>
+			<guid isPermaLink="false">dc3a6195-ea94-5b63-438c-7e10c6b59be2</guid>
 			<pubDate>Tue, 19 Sep 2006 23:21:33 -0000</pubDate>
-			<description>&lt;div&gt;&lt;h2&gt;Art by Hal Canary&lt;/h2&gt;
+			<description>&lt;div&gt;&lt;p&gt;old art of mine that I scanned at one point; also art by some others.&lt;/p&gt;
+  &lt;h2&gt;Art by Hal Canary&lt;/h2&gt;
   &lt;div class=&quot;subsection&quot;&gt;
     &lt;h3&gt;Watercolors&lt;/h3&gt;
     &lt;p&gt;
@@ -12912,9 +12942,11 @@ foreach $file (@files) {
 		<item>
 			<title>Tiny Vaio Laptop</title>
 			<link>https://halcanary.org/vv/2004/04/28/whc03/</link>
-			<guid isPermaLink="false">04d175c1-8a4a-868b-78be-38cc9e857ca9</guid>
+			<guid isPermaLink="false">c16a83a2-92ae-fb0b-5e37-9c06bd99af70</guid>
 			<pubDate>Wed, 28 Apr 2004 17:07:07 -0000</pubDate>
-			<description>&lt;div&gt;&lt;p&gt;
+			<description>&lt;div&gt;&lt;p&gt;Notes on my Sony VAIO PCG-SRX87 laptop, purchased in 2002.&lt;/p&gt;
+
+  &lt;p&gt;
     &lt;img alt=&quot;[]&quot; src=&quot;https://halcanary.org/photos/2002-12-15-vaio-w-kbd.jpg&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;
   &lt;/p&gt;
 
@@ -13614,9 +13646,10 @@ sub padnum {
 		<item>
 			<title>Books</title>
 			<link>https://halcanary.org/vv/2004/03/13/1171/</link>
-			<guid isPermaLink="false">a9a6ccf1-c196-4c05-bd24-c1da77621946</guid>
+			<guid isPermaLink="false">b01b2621-a0a0-c673-0764-083d4547bd5f</guid>
 			<pubDate>Sat, 13 Mar 2004 00:00:07 -0000</pubDate>
-			<description>&lt;div&gt;&lt;p&gt;This is a list that I produced when I was 19 years old of some of my favorite books. It is horribly out of date.&lt;/p&gt;
+			<description>&lt;div&gt;&lt;p&gt;A horribly out-of-date list of some of my favorite books that I produced when I was 19 years old.&lt;/p&gt;
+&lt;p&gt;This is a list that I produced when I was 19 years old of some of my favorite books. It is horribly out of date.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Science/Speculative Fiction:&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Robert A. Heinlein:&lt;br&gt;
 &lt;a href=&quot;https://halcanary.org/isbn/?0441790348/Stranger+in+a+Strange+Land&quot;&gt;&lt;em&gt;Stranger in a Strange Land&lt;/em&gt;&lt;/a&gt; — Everyone should read this one&lt;br&gt;
@@ -15253,9 +15286,10 @@ foreach my $file (glob &quot;*&quot;) {
 		<item>
 			<title>PowerShot A40 + Linux</title>
 			<link>https://halcanary.org/vv/2003/07/16/whc04/</link>
-			<guid isPermaLink="false">e5b00459-4bb3-7ef5-3da4-30bf4d43f08e</guid>
+			<guid isPermaLink="false">2d0d7a6a-3b2f-5c91-d5f3-22a47c5c3c30</guid>
 			<pubDate>Wed, 16 Jul 2003 01:18:43 -0000</pubDate>
-			<description>&lt;div&gt;&lt;p class=&quot;centered&quot;&gt;&lt;img src=&quot;https://halcanary.org/images/A40.jpg&quot; alt=&quot;pic of A40&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/p&gt;
+			<description>&lt;div&gt;&lt;p&gt;Getting my Canon PowerShot A40 working under RedHat Linux 7.3 with gphoto2&lt;/p&gt;
+&lt;p class=&quot;centered&quot;&gt;&lt;img src=&quot;https://halcanary.org/images/A40.jpg&quot; alt=&quot;pic of A40&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/p&gt;
 
 &lt;p&gt;
 Before you start, glance through the gphoto2 man page.

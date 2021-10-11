@@ -90,7 +90,10 @@ def makeRSS(out, posts):
     add(image, 'title', 'Voder-Vocoder')
     add(image, 'link', link)
     for post in posts:
-        contentstring = clean(post.post)
+        if post.summary:
+            contentstring = clean('<p>' + cleanText(post.summary) + '</p>\n' + post.post)
+        else:
+            contentstring = clean(post.post)
         date = datetime.datetime.fromisoformat(post.date[:25])
         item = channel.appendChild(doc.createElement('item'))
         add(item, 'title', cleanText(post.title))
@@ -100,7 +103,6 @@ def makeRSS(out, posts):
         m.update((link + contentstring).encode('utf-8'))
         add(item, 'guid', str(uuid.UUID(m.hexdigest()[:32]))).setAttribute('isPermaLink', 'false')
         add(item, 'pubDate', email.utils.format_datetime(date))
-        #add(item, 'description', post.summary)
         add(item, 'description', contentstring)
         if post.category_list:
             add(item, 'category', ','.join(post.category_list))
