@@ -57,6 +57,9 @@ def clean(src):
             element.set('style', 'max-width:100%;height:auto;' + style)
     return lxml.html.tostring(content, encoding='unicode')
 
+def cleanText(src):
+    return lxml.html.fragment_fromstring(src, True).text_content()
+
 def makeRSS(out, posts):
     dtnow = datetime.datetime.now().astimezone().replace(microsecond=0)
     doc = xml.dom.minidom.getDOMImplementation().createDocument(None, "rss", None)
@@ -90,7 +93,7 @@ def makeRSS(out, posts):
         contentstring = clean(post.post)
         date = datetime.datetime.fromisoformat(post.date[:25])
         item = channel.appendChild(doc.createElement('item'))
-        add(item, 'title', post.title)
+        add(item, 'title', cleanText(post.title))
         link = URL_BASE + '/' + post.permalinkpart
         add(item, 'link', link)
         m = hashlib.sha256()

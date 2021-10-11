@@ -7,8 +7,13 @@
 		<description>The Log of Hal Canary</description>
 		<language>en-US</language>
 		<copyright>Copyright 2002-2021 Hal W. Canary. ALL RIGHTS RESERVED.</copyright>
+<<<<<<< HEAD
 		<pubDate>Mon, 11 Oct 2021 10:31:24 -0400</pubDate>
 		<lastBuildDate>Mon, 11 Oct 2021 10:31:24 -0400</lastBuildDate>
+=======
+		<pubDate>Mon, 11 Oct 2021 10:27:25 -0400</pubDate>
+		<lastBuildDate>Mon, 11 Oct 2021 10:27:25 -0400</lastBuildDate>
+>>>>>>> 8c0a0fa5e (cleantext)
 		<image>
 			<url>https://halcanary.org/images/HAL_CANARY_20191008_512.jpg</url>
 			<title>Voder-Vocoder</title>
@@ -7426,7 +7431,7 @@ $ sha1sum /dev/hdc&lt;/pre&gt;&lt;/div&gt;</description>
 			<category>books</category>
 		</item>
 		<item>
-			<title>The Centered &amp;lt;div&amp;gt; Issue</title>
+			<title>The Centered &lt;div&gt; Issue</title>
 			<link>https://halcanary.org/vv/2006/09/18/642/</link>
 			<guid isPermaLink="false">991bc3c6-6370-2179-748e-3003e8481636</guid>
 			<pubDate>Mon, 18 Sep 2006 00:53:51 -0000</pubDate>
@@ -15356,7 +15361,7 @@ I think that's all I had to do.
 			<category>uncategorized</category>
 		</item>
 		<item>
-			<title>&amp;lt;hr&amp;gt; considered harmful.</title>
+			<title>&lt;hr&gt; considered harmful.</title>
 			<link>https://halcanary.org/vv/2003/07/16/71/</link>
 			<guid isPermaLink="false">fd3bdd46-2fa7-f68b-8e8d-1da446fd8ae3</guid>
 			<pubDate>Wed, 16 Jul 2003 19:20:59 -0000</pubDate>
