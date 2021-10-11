@@ -101,7 +101,7 @@ def head(title, icon=ICON, style=STYLE, years=YEARS):
         '\n',
         E.STYLE('\n' + STYLE + '\n'),
         '\n',
-        E.LINK(rel="alternate", type="application/atom+xml", title="/vv/", href="/vv/feed.rss"),
+        E.LINK(rel="alternate", type="application/atom+xml", title="/vv/", href="/vv/rss.rss"),
         '\n',
         lxml.html.HtmlComment(' Copyright {} Hal Canary. ALL RIGHTS RESERVED. '.format(years)),
         '\n',

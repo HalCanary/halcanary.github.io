@@ -69,7 +69,7 @@ def makeRSS(out, posts):
     ATOM = 'http://www.w3.org/2005/Atom'
     doc.documentElement.setAttributeNS(xml.dom.XMLNS_NAMESPACE, 'xmlns:atom', ATOM)
     alink = channel.appendChild(doc.createElementNS(ATOM, 'atom:link'))
-    alink.setAttribute('href', URL_BASE + '/vv/feed.rss')
+    alink.setAttribute('href', URL_BASE + '/vv/rss.rss')
     alink.setAttribute('rel', 'self')
     alink.setAttribute('type', 'application/rss+xml')
 
@@ -363,7 +363,7 @@ def main():
     first_year = min(posts_by_year.keys())
 
 
-    with UpdatingFile('{}/{}/feed.rss'.format(OUTPUT_DIR, BASE_DIR)) as o:
+    with UpdatingFile('{}/{}/rss.rss'.format(OUTPUT_DIR, BASE_DIR)) as o:
         makeRSS(o, all_posts)
 
     year_links = makelinks(posts_by_year.keys())
