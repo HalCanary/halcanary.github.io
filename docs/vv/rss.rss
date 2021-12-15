@@ -7,8 +7,8 @@
 		<description>The Log of Hal Canary</description>
 		<language>en-US</language>
 		<copyright>Copyright 2002-2021 Hal W. Canary. ALL RIGHTS RESERVED.</copyright>
-		<pubDate>Mon, 11 Oct 2021 11:09:55 -0400</pubDate>
-		<lastBuildDate>Mon, 11 Oct 2021 11:09:55 -0400</lastBuildDate>
+		<pubDate>Wed, 15 Dec 2021 10:28:07 -0500</pubDate>
+		<lastBuildDate>Wed, 15 Dec 2021 10:28:07 -0500</lastBuildDate>
 		<image>
 			<url>https://halcanary.org/images/HAL_CANARY_20191008_512.jpg</url>
 			<title>Voder-Vocoder</title>
@@ -99,10 +99,10 @@ change something on the page, not go to a new page.&lt;/p&gt;&lt;/li&gt;
 		<item>
 			<title>A flag for the US Democratic Party</title>
 			<link>https://halcanary.org/vv/2020/08/25/3020/</link>
-			<guid isPermaLink="false">44e85e67-860a-9bc5-de1d-15d1e8786b87</guid>
+			<guid isPermaLink="false">1a6186a6-13c5-1120-b800-f3c1cc358374</guid>
 			<pubDate>Tue, 25 Aug 2020 22:47:17 -0400</pubDate>
 			<description>&lt;div&gt;&lt;p&gt;a proposal&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://halcanary.org/images/dem.png&quot; alt=&quot;Barry of thirteen gules and argent, a jackass kicking azure&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/p&gt;&lt;/div&gt;</description>
+&lt;p&gt;&lt;img src=&quot;https://halcanary.org/images/dem.svg&quot; alt=&quot;Barry of thirteen gules and argent, a jackass kicking azure&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/p&gt;&lt;/div&gt;</description>
 			<category>politics</category>
 		</item>
 		<item>
@@ -5853,7 +5853,7 @@ RewriteRule ^(.*)$           $1.html&lt;/pre&gt;&lt;/div&gt;</description>
 		<item>
 			<title>Tension of a Spinning Ring</title>
 			<link>https://halcanary.org/vv/2007/06/23/694/</link>
-			<guid isPermaLink="false">913fd2c4-c3e6-c007-0174-e83e3b304a1d</guid>
+			<guid isPermaLink="false">5c0436cd-e073-687e-9c6b-823c370632ed</guid>
 			<pubDate>Sat, 23 Jun 2007 10:50:40 -0000</pubDate>
 			<description>&lt;div&gt;&lt;p&gt;fun with physics&lt;/p&gt;
 &lt;p&gt;What is the tension in a spinning ring, for example Bank's orbitals or a Niven Ring?&lt;/p&gt;
@@ -5861,13 +5861,13 @@ RewriteRule ^(.*)$           $1.html&lt;/pre&gt;&lt;/div&gt;</description>
 &lt;p&gt;Ignoring gravity, there are two forces pulling on each small section: tension pulling to the left and tension pulling to the right. Because the ring is circularly symmetric, the magnitude of the two tensions are equal. The directions of the two forces are dθ from being opposite.&lt;/p&gt;
 &lt;p&gt;If at some moment in time, the left tension, &lt;em&gt;&lt;strong&gt;Tl&lt;/strong&gt;&lt;/em&gt;, is pointing in the -&lt;em&gt;&lt;strong&gt;x̂&lt;/strong&gt;&lt;/em&gt; direction, then the right tension will be&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;Tr&lt;/strong&gt;&lt;/em&gt; = &lt;em&gt;T&lt;/em&gt; sin(dθ) &lt;em&gt;&lt;strong&gt;ŷ&lt;/strong&gt;&lt;/em&gt; + &lt;em&gt;T&lt;/em&gt; cos(dθ) &lt;em&gt;&lt;strong&gt;x̂&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Tr&lt;/strong&gt;&lt;/em&gt; = &lt;em&gt;T&lt;/em&gt; sin(dθ) &lt;em&gt;&lt;strong&gt;ŷ&lt;/strong&gt;&lt;/em&gt; + &lt;em&gt;T&lt;/em&gt; cos(dθ) &lt;em&gt;&lt;strong&gt;x̂&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;where &lt;em&gt;T&lt;/em&gt; is the magnitude of either tension.&lt;/p&gt;
 &lt;p&gt;As &lt;em&gt;N&lt;/em&gt; gets large: dθ gets small, cos(dθ) → 1, and sin(dθ) → dθ. So:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;Tl&lt;/strong&gt;&lt;/em&gt; = -&lt;em&gt;T&lt;/em&gt; &lt;em&gt;&lt;strong&gt;x̂&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;Tr&lt;/strong&gt;&lt;/em&gt; = +&lt;em&gt;T&lt;/em&gt; &lt;em&gt;&lt;strong&gt;x̂&lt;/strong&gt;&lt;/em&gt; + &lt;em&gt;T&lt;/em&gt; dθ &lt;em&gt;&lt;strong&gt;ŷ&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Tr&lt;/strong&gt;&lt;/em&gt; = +&lt;em&gt;T&lt;/em&gt; &lt;em&gt;&lt;strong&gt;x̂&lt;/strong&gt;&lt;/em&gt; + &lt;em&gt;T&lt;/em&gt; dθ &lt;em&gt;&lt;strong&gt;ŷ&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Consequently, the centripetal force on the small section is _T_dθ. From Newton's second law:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -5877,7 +5877,7 @@ RewriteRule ^(.*)$           $1.html&lt;/pre&gt;&lt;/div&gt;</description>
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;Tl&lt;/strong&gt;&lt;/em&gt; + &lt;em&gt;&lt;strong&gt;Tr&lt;/strong&gt;&lt;/em&gt; = &lt;em&gt;m&lt;/em&gt; &lt;strong&gt;&lt;em&gt;a&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;T&lt;/em&gt; dθ &lt;em&gt;&lt;strong&gt;ŷ&lt;/strong&gt;&lt;/em&gt; = &lt;em&gt;m&lt;/em&gt; &lt;strong&gt;&lt;em&gt;a&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;T&lt;/em&gt; dθ &lt;em&gt;&lt;strong&gt;ŷ&lt;/strong&gt;&lt;/em&gt; = &lt;em&gt;m&lt;/em&gt; &lt;strong&gt;&lt;em&gt;a&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Let &lt;em&gt;a&lt;/em&gt; = |&lt;em&gt;&lt;strong&gt;a&lt;/strong&gt;&lt;/em&gt;|, the centripetal acceleration.&lt;/p&gt;
 &lt;blockquote&gt;
