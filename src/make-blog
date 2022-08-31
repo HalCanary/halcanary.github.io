@@ -137,23 +137,23 @@ class Post(object):
         category_fmt = '<a href="/{1}/category/{0}/">#{0}</a>'
         categories = '; '.join(category_fmt.format(cat, BASE_DIR) for cat in post_info['category_list'])
         # keys = [ 'src', 'permalinkpart', 'title', 'summary', 'date', 'category_list', 'post' ]
-        summ = '    <p>{}</p>'.format(post_info['summary']) if post_info['summary'] else ''
+        summ = '    <p class="p-summary">{}</p>'.format(post_info['summary']) if post_info['summary'] else ''
         post_template = """
-<article id="{fragment}">
+<article id="{fragment}" class="h-entry">
   <header>
     <!-- SRC= {src} -->
-    <h{level} class="blogtitle">{title}</h{level}>
+    <h{level} class="blogtitle p-name">{title}</h{level}>
 {summ}
     <div class="byline plainlink">
       <div>
-          Hal Canary<br>
-          {date}<br>
-          <a href="/{permalinkpart}">{URL_BASE}/{permalinkpart}</a><br>
-          {categories}
+          <span class="p-author">Hal Canary</span><br>
+          <span class="dt-published">{date}</span><br>
+          <a href="/{permalinkpart}" class="u-url u-uid">{URL_BASE}/{permalinkpart}</a><br>
+          <span class="p-category">{categories}</span>
       </div>
     </div>
   </header>
-  <div class="content">
+  <div class="content e-content">
 {post}
   </div>
 </article>

@@ -62,21 +62,21 @@ ul.flat li::before {content:"[";}
 </head>
 <body>
 
-<article id="2004/02/18/176">
+<article id="2004/02/18/176" class="h-entry">
   <header>
     <!-- SRC= 2004-02-18-176 -->
-    <h1 class="blogtitle">search and replace for elisp.</h1>
+    <h1 class="blogtitle p-name">search and replace for elisp.</h1>
 
     <div class="byline plainlink">
       <div>
-          Hal Canary<br>
-          2004-02-18 13:56:59<br>
-          <a href="/vv/2004/02/18/176/">https://halcanary.org/vv/2004/02/18/176/</a><br>
-          <a href="/vv/category/computers-code/">#computers-code</a>
+          <span class="p-author">Hal Canary</span><br>
+          <span class="dt-published">2004-02-18 13:56:59</span><br>
+          <a href="/vv/2004/02/18/176/" class="u-url u-uid">https://halcanary.org/vv/2004/02/18/176/</a><br>
+          <span class="p-category"><a href="/vv/category/computers-code/">#computers-code</a></span>
       </div>
     </div>
   </header>
-  <div class="content">
+  <div class="content e-content">
 <p>When mutt is told to <a href="http://gnupg.org/">gpg</a> sign an email, it will use <a href="http://www.freesoft.org/CIE/RFC/1521/6.htm">Quoted-Printable Content-Transfer-Encoding</a>, which will replace <code>&quot;&nbsp;&#0092;n&quot;</code> with <code>&quot;=20&#0092;n&quot;</code>, an escape sequence of some sort. (ASCII &quot;&nbsp;&quot; is 0x20.)</p>
 <p>I'd rather replace <code>&quot;&nbsp;&#0092;n&quot;</code> with <code>&quot;&#0092;n&quot;</code> anyways.   Here's some elisp code to do just that:</p>
 <pre>

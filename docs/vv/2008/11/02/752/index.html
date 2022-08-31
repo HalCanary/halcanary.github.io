@@ -62,21 +62,21 @@ ul.flat li::before {content:"[";}
 </head>
 <body>
 
-<article id="2008/11/02/752">
+<article id="2008/11/02/752" class="h-entry">
   <header>
     <!-- SRC= 2008-11-02-752 -->
-    <h1 class="blogtitle">RTF</h1>
+    <h1 class="blogtitle p-name">RTF</h1>
 
     <div class="byline plainlink">
       <div>
-          Hal Canary<br>
-          2008-11-02 08:27:52<br>
-          <a href="/vv/2008/11/02/752/">https://halcanary.org/vv/2008/11/02/752/</a><br>
-          <a href="/vv/category/computers-code/">#computers-code</a>
+          <span class="p-author">Hal Canary</span><br>
+          <span class="dt-published">2008-11-02 08:27:52</span><br>
+          <a href="/vv/2008/11/02/752/" class="u-url u-uid">https://halcanary.org/vv/2008/11/02/752/</a><br>
+          <span class="p-category"><a href="/vv/category/computers-code/">#computers-code</a></span>
       </div>
     </div>
   </header>
-  <div class="content">
+  <div class="content e-content">
 <p>I was reading the other day the submission guidelines for a certain publishing house.  They wanted <a href="http://en.wikipedia.org/wiki/Rich_Text_Format">RTF</a> documents.  One would think plain text would be just as good, but it's easy enough to write a program that converts a utf8-encoded plain text document to a simple <a href="http://search.cpan.org/~sburke/RTF-Writer/lib/RTF/Cookbook.pod">RTF</a> document.  And the output is about a third of the size of the document that you would get from using oowriter.</p>
 <pre>#!/usr/bin/env python
 # txt2rtf.py

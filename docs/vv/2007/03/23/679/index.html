@@ -62,21 +62,21 @@ ul.flat li::before {content:"[";}
 </head>
 <body>
 
-<article id="2007/03/23/679">
+<article id="2007/03/23/679" class="h-entry">
   <header>
     <!-- SRC= 2007-03-23-679 -->
-    <h1 class="blogtitle">makecdrfiles</h1>
+    <h1 class="blogtitle p-name">makecdrfiles</h1>
 
     <div class="byline plainlink">
       <div>
-          Hal Canary<br>
-          2007-03-23 11:52:20<br>
-          <a href="/vv/2007/03/23/679/">https://halcanary.org/vv/2007/03/23/679/</a><br>
-          <a href="/vv/category/computers-code/">#computers-code</a>
+          <span class="p-author">Hal Canary</span><br>
+          <span class="dt-published">2007-03-23 11:52:20</span><br>
+          <a href="/vv/2007/03/23/679/" class="u-url u-uid">https://halcanary.org/vv/2007/03/23/679/</a><br>
+          <span class="p-category"><a href="/vv/category/computers-code/">#computers-code</a></span>
       </div>
     </div>
   </header>
-  <div class="content">
+  <div class="content e-content">
 <p>Some years ago, cdrecord gained the ability to convert .wav files to an audio CD on the fly.  No more messing around with sox!  But I've found that it's better to feed files through sox anyways, just to make sure that the file format is correct and the sampling rate is correct:</p>
 <pre>
 #!/bin/sh

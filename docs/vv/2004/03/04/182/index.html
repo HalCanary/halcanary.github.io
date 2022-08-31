@@ -62,21 +62,21 @@ ul.flat li::before {content:"[";}
 </head>
 <body>
 
-<article id="2004/03/04/182">
+<article id="2004/03/04/182" class="h-entry">
   <header>
     <!-- SRC= 2004-03-04-182 -->
-    <h1 class="blogtitle">manipulating filenames</h1>
+    <h1 class="blogtitle p-name">manipulating filenames</h1>
 
     <div class="byline plainlink">
       <div>
-          Hal Canary<br>
-          2004-03-04 12:27:41<br>
-          <a href="/vv/2004/03/04/182/">https://halcanary.org/vv/2004/03/04/182/</a><br>
-          <a href="/vv/category/computers-code/">#computers-code</a>
+          <span class="p-author">Hal Canary</span><br>
+          <span class="dt-published">2004-03-04 12:27:41</span><br>
+          <a href="/vv/2004/03/04/182/" class="u-url u-uid">https://halcanary.org/vv/2004/03/04/182/</a><br>
+          <span class="p-category"><a href="/vv/category/computers-code/">#computers-code</a></span>
       </div>
     </div>
   </header>
-  <div class="content">
+  <div class="content e-content">
 <p>gphoto2 grabs images off of my camera and saves it as IMG_XXXX.JPG.  I use the <a href="/archives/000073.html">despacify script</a> to convert to lowercase img_XXXX.jpg.  Then I run this script to rename th file to include the date the photo was taken: 2003-11-06-img-XXXX.jpg. Then if the filesystem modification date is changed (e.g. if I rotate it.) I will still know when it originated.</p>
 <pre>
 #!/bin/sh

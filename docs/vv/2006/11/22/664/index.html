@@ -62,21 +62,21 @@ ul.flat li::before {content:"[";}
 </head>
 <body>
 
-<article id="2006/11/22/664">
+<article id="2006/11/22/664" class="h-entry">
   <header>
     <!-- SRC= 2006-11-22-664 -->
-    <h1 class="blogtitle">postponing ntpd start</h1>
+    <h1 class="blogtitle p-name">postponing ntpd start</h1>
 
     <div class="byline plainlink">
       <div>
-          Hal Canary<br>
-          2006-11-22 09:28:16<br>
-          <a href="/vv/2006/11/22/664/">https://halcanary.org/vv/2006/11/22/664/</a><br>
-          <a href="/vv/category/computers-code/">#computers-code</a>
+          <span class="p-author">Hal Canary</span><br>
+          <span class="dt-published">2006-11-22 09:28:16</span><br>
+          <a href="/vv/2006/11/22/664/" class="u-url u-uid">https://halcanary.org/vv/2006/11/22/664/</a><br>
+          <span class="p-category"><a href="/vv/category/computers-code/">#computers-code</a></span>
       </div>
     </div>
   </header>
-  <div class="content">
+  <div class="content e-content">
 <p>Yet another Linux hint:</p>
 <p>Because ntpd (Network Time Protocol Daemon) takes some time to synchronize with the time server, I don't start it on boot:</p>
 <pre>$ sudo /sbin/chkconfig ntpd off</pre>

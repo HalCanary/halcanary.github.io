@@ -62,21 +62,21 @@ ul.flat li::before {content:"[";}
 </head>
 <body>
 
-<article id="2003/10/15/126">
+<article id="2003/10/15/126" class="h-entry">
   <header>
     <!-- SRC= 2003-10-15-126 -->
-    <h1 class="blogtitle">ssh discovery.</h1>
+    <h1 class="blogtitle p-name">ssh discovery.</h1>
 
     <div class="byline plainlink">
       <div>
-          Hal Canary<br>
-          2003-10-15 23:41:36<br>
-          <a href="/vv/2003/10/15/126/">https://halcanary.org/vv/2003/10/15/126/</a><br>
-          <a href="/vv/category/computers-code/">#computers-code</a>
+          <span class="p-author">Hal Canary</span><br>
+          <span class="dt-published">2003-10-15 23:41:36</span><br>
+          <a href="/vv/2003/10/15/126/" class="u-url u-uid">https://halcanary.org/vv/2003/10/15/126/</a><br>
+          <span class="p-category"><a href="/vv/category/computers-code/">#computers-code</a></span>
       </div>
     </div>
   </header>
-  <div class="content">
+  <div class="content e-content">
 <p>The biggest problem with ssh is the vulnerability to a man-in-the-middle attack. This is why you should always check your host-key's fingerprint when logging on for the first time from a new box. To aquire these keys, do this:</p>
 <pre>
 for x in /etc/ssh/*pub; do

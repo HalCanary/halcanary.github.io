@@ -62,21 +62,21 @@ ul.flat li::before {content:"[";}
 </head>
 <body>
 
-<article id="2009/08/20/793">
+<article id="2009/08/20/793" class="h-entry">
   <header>
     <!-- SRC= 2009-08-20-793 -->
-    <h1 class="blogtitle">Version 2.4 id3 tags</h1>
+    <h1 class="blogtitle p-name">Version 2.4 id3 tags</h1>
 
     <div class="byline plainlink">
       <div>
-          Hal Canary<br>
-          2009-08-20 14:17:59<br>
-          <a href="/vv/2009/08/20/793/">https://halcanary.org/vv/2009/08/20/793/</a><br>
-          <a href="/vv/category/computers-code/">#computers-code</a>; <a href="/vv/category/music/">#music</a>
+          <span class="p-author">Hal Canary</span><br>
+          <span class="dt-published">2009-08-20 14:17:59</span><br>
+          <a href="/vv/2009/08/20/793/" class="u-url u-uid">https://halcanary.org/vv/2009/08/20/793/</a><br>
+          <span class="p-category"><a href="/vv/category/computers-code/">#computers-code</a>; <a href="/vv/category/music/">#music</a></span>
       </div>
     </div>
   </header>
-  <div class="content">
+  <div class="content e-content">
 <p>Since id3lib is incompatable with version 2.4 id3 tags produced by Sound Juicer, you need to use gstreamer and id3mux to grab the tag info to--for example--renormalize your filenames.  Tags can themselves be edited in Rhythmbox.</p>
 <pre>#!/bin/sh
 #~/bin/id3v24-info.sh

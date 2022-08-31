@@ -62,21 +62,21 @@ ul.flat li::before {content:"[";}
 </head>
 <body>
 
-<article id="2006/10/16/656">
+<article id="2006/10/16/656" class="h-entry">
   <header>
     <!-- SRC= 2006-10-16-656 -->
-    <h1 class="blogtitle">goodbye partition table</h1>
+    <h1 class="blogtitle p-name">goodbye partition table</h1>
 
     <div class="byline plainlink">
       <div>
-          Hal Canary<br>
-          2006-10-16 09:55:40<br>
-          <a href="/vv/2006/10/16/656/">https://halcanary.org/vv/2006/10/16/656/</a><br>
-          <a href="/vv/category/computers-code/">#computers-code</a>
+          <span class="p-author">Hal Canary</span><br>
+          <span class="dt-published">2006-10-16 09:55:40</span><br>
+          <a href="/vv/2006/10/16/656/" class="u-url u-uid">https://halcanary.org/vv/2006/10/16/656/</a><br>
+          <span class="p-category"><a href="/vv/category/computers-code/">#computers-code</a></span>
       </div>
     </div>
   </header>
-  <div class="content">
+  <div class="content e-content">
 <p>Hard Drive A starts making loud clicking noises yesterday. I suspect it has finally died and I unplug it. Hard Drive B is newer, larger, and containes my day-to-day OS of choice. Tho only problem is that HDB contains no bootloader. So I need to install one. So I boot up knoppix from a CD and fool around trying to install grub. Then I figure I'll just try this:</p>
 <pre>dd if=boot/grub/stage1 of=/dev/hdb bs=512 count=1</pre>
 <p>Of course what I should have done was:</p>
