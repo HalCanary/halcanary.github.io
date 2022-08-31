@@ -156,6 +156,7 @@ class Post(object):
     </div>
   </header>
   <div class="content e-content">
+<div style="display:none;">{summary}</div>
 {post}
   </div>
 </article>
