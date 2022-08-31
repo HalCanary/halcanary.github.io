@@ -134,8 +134,10 @@ class UpdatingFile(object):
 class Post(object):
     @staticmethod
     def write(o, post_info, level, identifier=None):
-        category_fmt = '<a href="/{1}/category/{0}/">#{0}</a>'
+        category_fmt = '<a href="/{1}/category/{0}/" class="p-category">#{0}</a>'
         categories = '; '.join(category_fmt.format(cat, BASE_DIR) for cat in post_info['category_list'])
+        if categories:
+            categories = '<div>%s</div>' % categories
         # keys = [ 'src', 'permalinkpart', 'title', 'summary', 'date', 'category_list', 'post' ]
         summ = '    <p class="p-summary">{}</p>'.format(post_info['summary']) if post_info['summary'] else ''
         post_template = """
@@ -146,10 +148,10 @@ class Post(object):
 {summ}
     <div class="byline plainlink">
       <div>
-          <span class="p-author">Hal Canary</span><br>
-          <span class="dt-published">{date}</span><br>
-          <a href="/{permalinkpart}" class="u-url u-uid">{URL_BASE}/{permalinkpart}</a><br>
-          <span class="p-category">{categories}</span>
+          <div class="p-author">Hal Canary</div>
+          <div class="dt-published">{date}</div>
+          <div><a href="/{permalinkpart}" class="u-url u-uid">{URL_BASE}/{permalinkpart}</a></div>
+          {categories}
       </div>
     </div>
   </header>
