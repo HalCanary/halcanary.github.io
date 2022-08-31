@@ -1,26 +1,30 @@
 # How can I contact Hal Canary?
 
--   <mailto:halcanary@gmail.com>
+<div class="h-card">
 
--   <mailto:h3@halcanary.org>
+-   <span class="u-email"><mailto:halcanary@gmail.com></span>
 
--   <tel:+1-919-724-2801>
+-   <span class="u-email"><mailto:h3@halcanary.org></span>
 
--   <https://halcanary.org/>
+-   <span class="p-tel"><tel:+1-919-724-2801></span>
+
+-   <span class="u-url"><https://halcanary.org/></span>
 
 -   (alternate) <mailto:halcanary@yahoo.com>
 
--   PGP Key: [9E4B56B252BA5544135A&#x200B;6146BDA20B3DBAF71EE3](/pub/9E4B56B252BA5544135A6146BDA20B3DBAF71EE3.txt)
+-   PGP Key: <span class="u-key">[9E4B56B252BA5544135A 6146BDA20B3DBAF71EE3](/pub/9E4B56B252BA5544135A6146BDA20B3DBAF71EE3.txt)</span>
 
--   <https://github.com/halcanary>
+-   <span class="u-url"><https://github.com/halcanary></span>
 
--   <https://gitlab.com/halcanary>
+-   <span class="u-url"><https://gitlab.com/halcanary></span>
 
--   <https://twitter.com/halcanary>
+-   <span class="u-url"><https://twitter.com/halcanary></span>
 
--   <https://www.facebook.com/hal.canary>
+-   <span class="u-url"><https://www.facebook.com/hal.canary></span>
 
--   <https://www.linkedin.com/in/halcanary>
+-   <span class="u-url"><https://www.linkedin.com/in/halcanary></span>
+
+</div>
 
 
 ```
