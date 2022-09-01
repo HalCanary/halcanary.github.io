@@ -23,6 +23,8 @@ keys = [
 ]
 
 def htmlToMarkdown(src):
+    ## sudo /usr/bin/apt install -y nodejs npm
+    ## sudo npm install turndown
     proc = subprocess.Popen(
         ['node', 'src/turndown.js'],
         stdout=subprocess.PIPE,
@@ -36,9 +38,10 @@ def htmlToMarkdown(src):
 def proc(path):
     head, tail = headtail(path)
     d = todict(head)
-    if d['MODE'] != 'htmldiv':
+    if d.get('MODE', '') != 'htmldiv':
         return
-    markdown = htmlToMarkdown(''.join(tail))
+    html = ''.join(tail)
+    markdown = htmlToMarkdown(html)
     if not markdown:
         return
     d['MODE'] = 'markdown'   
