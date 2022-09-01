@@ -78,16 +78,15 @@ ul.flat li::before {content:"[";}
   </header>
   <div class="content e-content">
 <div style="display:none;"></div>
-
-<pre>(defun diary () (interactive)
+<pre><code>(defun diary () (interactive)
   (let ((ddir &quot;d:/&quot;)
-        (year (format&#0045;time&#0045;string &quot;%Y&quot;))
-        (ymd (format&#0045;time&#0045;string &quot;%Y&#0045;%m&#0045;%d&quot;))
-	(ymdt (format&#0045;time&#0045;string &quot;%Y&#0045;%m&#0045;%d %H:%M:%S %z&quot;)))
-    (make&#0045;directory (concat ddir year ) &#0039;t)
-    (find&#0045;file (concat ddir year &quot;/&quot; ymd &quot;.txt&quot;))
-    (goto&#0045;char (point&#0045;max)) (newline)
-    (insert  ymdt) (newline) (newline)))</pre>
+        (year (format-time-string &quot;%Y&quot;))
+        (ymd (format-time-string &quot;%Y-%m-%d&quot;))
+    (ymdt (format-time-string &quot;%Y-%m-%d %H:%M:%S %z&quot;)))
+    (make-directory (concat ddir year ) &#39;t)
+    (find-file (concat ddir year &quot;/&quot; ymd &quot;.txt&quot;))
+    (goto-char (point-max)) (newline)
+    (insert  ymdt) (newline) (newline)))</code></pre>
   </div>
 </article>
 <hr>

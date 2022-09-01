@@ -3,13 +3,15 @@ TITLE=HTML/CSS for Ipod Touch
 DATE=2011-03-05 21:20:35
 POSTID=1090
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<p>I added these lines to the CSS for this page</p>
-<pre>pre { overflow:auto;
-      overflow-y:visible; }</pre>
-<p>and this line to the (X)HTML</p>
-<pre>&lt;meta name=&quot;viewport&quot;
-    content=&quot;width=device-width&quot; /&gt;</pre>
-<p>which seems to make the site render much much better on my Ipod Touch's small screen.</p>
+I added these lines to the CSS for this page
 
+    pre { overflow:auto;
+          overflow-y:visible; }
+
+and this line to the (X)HTML
+
+    <meta name="viewport"
+          content="width=device-width">
+
+which seems to make the site render much much better on my Ipod Touch's small screen.

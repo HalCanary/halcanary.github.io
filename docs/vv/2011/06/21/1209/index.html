@@ -78,16 +78,16 @@ ul.flat li::before {content:"[";}
   </header>
   <div class="content e-content">
 <div style="display:none;"></div>
-<pre>#!/bin/sh
+<pre><code>#!/bin/sh
 #DTPD#
 DICT=/usr/share/dict/words
 test &quot;$1&quot; || { cat &quot;$0&quot;; exit 1; }
-exec grep &#0045;i &quot;$@&quot; &quot;$DICT&quot; | less
+exec grep -i &quot;$@&quot; &quot;$DICT&quot; | less
 #
 # Useage:
 #   scrabble.sh PATTERN
 # Example:
-#   scrabble.sh &#0039;^a[lonrchl]&#0092;{4,7&#0092;}$&#0039;</pre>
+#   scrabble.sh &#39;^a[lonrchl]\{4,7\}$&#39;</code></pre>
   </div>
 </article>
 <hr>

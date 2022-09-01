@@ -7,8 +7,8 @@
 		<description>The Log of Hal Canary</description>
 		<language>en-US</language>
 		<copyright>Copyright 2002-2022 Hal W. Canary. ALL RIGHTS RESERVED.</copyright>
-		<pubDate>Thu, 01 Sep 2022 16:03:33 -0400</pubDate>
-		<lastBuildDate>Thu, 01 Sep 2022 16:03:33 -0400</lastBuildDate>
+		<pubDate>Thu, 01 Sep 2022 16:15:33 -0400</pubDate>
+		<lastBuildDate>Thu, 01 Sep 2022 16:15:33 -0400</lastBuildDate>
 		<image>
 			<url>https://halcanary.org/images/HAL_CANARY_20191008_512.jpg</url>
 			<title>Voder-Vocoder</title>
@@ -1690,57 +1690,38 @@ exec /usr/sbin/service gdm restart&lt;/pre&gt;&lt;/div&gt;</description>
 		<item>
 			<title>spam rules</title>
 			<link>https://halcanary.org/vv/2011/10/26/1252/</link>
-			<guid isPermaLink="false">7e5f8f94-acf5-4ed2-bcb0-803b369b0311</guid>
+			<guid isPermaLink="false">f501dce7-a4f6-7129-d97f-87e1bd9a2697</guid>
 			<pubDate>Wed, 26 Oct 2011 15:01:41 -0000</pubDate>
-			<description>&lt;div&gt;&lt;p&gt;These are my new spamassassin rules.  If your configured email client fails to have a valid DKIM or DK signature or SPF record, I'm probably going to mark you as spam.&lt;/p&gt;
-&lt;pre&gt;
-#### .spamassassin/user_prefs
+			<description>&lt;div&gt;&lt;p&gt;These are my new spamassassin rules. If your configured email client fails to have a valid DKIM or DK signature or SPF record, I'm probably going to mark you as spam.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#### .spamassassin/user_prefs
 required_score -1.0
 score DKIM_VALID_AU -10.0
-score SPF_PASS -5.0
-&lt;/pre&gt;
+score SPF_PASS -5.0&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;99% of my legitimate correspondents are okay already.&lt;/p&gt;&lt;/div&gt;</description>
 			<category>computers-code,life</category>
 		</item>
 		<item>
 			<title>restart gdm under ubuntu</title>
 			<link>https://halcanary.org/vv/2011/10/14/csg16/</link>
-			<guid isPermaLink="false">ebce5983-2afd-322a-2a0f-c80eaeb9fbf9</guid>
+			<guid isPermaLink="false">f3c6089a-f6cf-feeb-df72-de434bee8faf</guid>
 			<pubDate>Fri, 14 Oct 2011 12:00:00 -0000</pubDate>
-			<description>&lt;div&gt;&lt;pre&gt;&lt;!--(defun next&amp;#0045;good&amp;#0045;buffer () &amp;quot;HWC&amp;quot; (interactive)
-  (next&amp;#0045;buffer)
-  (while (and (not (string= (buffer&amp;#0045;name) &amp;quot;*scratch*&amp;quot;))
-	      (equal (buffer&amp;#0045;file&amp;#0045;name) nil))
-    (next&amp;#0045;buffer)))
-(defun previous&amp;#0045;good&amp;#0045;buffer () &amp;quot;HWC&amp;quot; (interactive)
-  (previous&amp;#0045;buffer)
-  (while (and (not (string= (buffer&amp;#0045;name) &amp;quot;*scratch*&amp;quot;))
-	      (equal (buffer&amp;#0045;file&amp;#0045;name) nil))
-    (previous&amp;#0045;buffer)))
+			<description>&lt;div&gt;&lt;pre&gt;&lt;code&gt;(defun next-good-buffer () &quot;HWC&quot; (interactive)
+  (next-buffer)
+  (while (and (not (string= (buffer-name) &quot;*scratch*&quot;))
+          (equal (buffer-file-name) nil))
+    (next-buffer)))
+(defun previous-good-buffer () &quot;HWC&quot; (interactive)
+  (previous-buffer)
+  (while (and (not (string= (buffer-name) &quot;*scratch*&quot;))
+          (equal (buffer-file-name) nil))
+    (previous-buffer)))
 
-(global&amp;#0045;set&amp;#0045;key [(control next)] &amp;#0039;next&amp;#0045;good&amp;#0045;buffer)
-(global&amp;#0045;set&amp;#0045;key [(control prior)] &amp;#0039;previous&amp;#0045;good&amp;#0045;buffer)
-(global&amp;#0045;set&amp;#0045;key [(control tab)] &amp;#0039;next&amp;#0045;good&amp;#0045;buffer)
-(global&amp;#0045;set&amp;#0045;key [(control shift tab)] &amp;#0039;previous&amp;#0045;good&amp;#0045;buffer)
-(global&amp;#0045;set&amp;#0045;key [(control iso&amp;#0045;lefttab)] &amp;#0039;next&amp;#0045;good&amp;#0045;buffer)
-(global&amp;#0045;set&amp;#0045;key [(control shift iso&amp;#0045;lefttab)] &amp;#0039;previous&amp;#0045;good&amp;#0045;buffer)
---&gt;&lt;span class=&quot;symbol&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt;defun next&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt;good&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;function&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt; &lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt; &lt;/span&gt;&lt;span class=&quot;string&quot;&gt;&quot;HWC&quot;&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt; &lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt;interactive&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;normal&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;normal&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt; &lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;keyword&quot;&gt;and&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt; &lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;keyword&quot;&gt;not&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt; &lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt; &lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt; &lt;/span&gt;&lt;span class=&quot;string&quot;&gt;&quot;*scratch*&quot;&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;))&lt;/span&gt;
-&lt;span class=&quot;normal&quot;&gt;	      &lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;function&quot;&gt;equal&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt; &lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt; nil&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;))&lt;/span&gt;
-&lt;span class=&quot;normal&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;)))&lt;/span&gt;
-&lt;span class=&quot;symbol&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt;defun previous&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt;good&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;function&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt; &lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt; &lt;/span&gt;&lt;span class=&quot;string&quot;&gt;&quot;HWC&quot;&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt; &lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt;interactive&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;normal&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt;previous&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;normal&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt; &lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;keyword&quot;&gt;and&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt; &lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;keyword&quot;&gt;not&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt; &lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt; &lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt; &lt;/span&gt;&lt;span class=&quot;string&quot;&gt;&quot;*scratch*&quot;&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;))&lt;/span&gt;
-&lt;span class=&quot;normal&quot;&gt;	      &lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;function&quot;&gt;equal&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt; &lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt;file&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt; nil&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;))&lt;/span&gt;
-&lt;span class=&quot;normal&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt;previous&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;)))&lt;/span&gt;
-
-&lt;span class=&quot;symbol&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;keyword&quot;&gt;global&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt;key &lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;[(&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt;control next&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;)]&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt; 'next&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt;good&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;symbol&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;keyword&quot;&gt;global&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt;key &lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;[(&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt;control prior&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;)]&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt; 'previous&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt;good&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;symbol&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;keyword&quot;&gt;global&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt;key &lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;[(&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt;control tab&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;)]&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt; 'next&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt;good&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;symbol&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;keyword&quot;&gt;global&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt;key &lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;[(&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt;control shift tab&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;)]&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt; 'previous&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt;good&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;symbol&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;keyword&quot;&gt;global&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt;key &lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;[(&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt;control iso&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt;lefttab&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;)]&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt; 'next&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt;good&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;symbol&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;keyword&quot;&gt;global&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt;key &lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;[(&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt;control shift iso&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt;lefttab&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;)]&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt; 'previous&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt;good&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;normal&quot;&gt;buffer&lt;/span&gt;&lt;span class=&quot;symbol&quot;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+(global-set-key [(control next)] 'next-good-buffer)
+(global-set-key [(control prior)] 'previous-good-buffer)
+(global-set-key [(control tab)] 'next-good-buffer)
+(global-set-key [(control shift tab)] 'previous-good-buffer)
+(global-set-key [(control iso-lefttab)] 'next-good-buffer)
+(global-set-key [(control shift iso-lefttab)] 'previous-good-buffer)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
 			<category>uncategorized</category>
 		</item>
 		<item>
@@ -1782,13 +1763,13 @@ score SPF_PASS -5.0
 		<item>
 			<title>ssh hostname alias</title>
 			<link>https://halcanary.org/vv/2011/09/10/csg14/</link>
-			<guid isPermaLink="false">bafb81f5-d12f-812a-d712-bb08ab961170</guid>
+			<guid isPermaLink="false">dc4881b3-4b54-0f1c-7098-c8da6995e543</guid>
 			<pubDate>Sat, 10 Sep 2011 12:00:00 -0000</pubDate>
 			<description>&lt;div&gt;&lt;p&gt;One can make a hostname alias for SSH and SCP by adding to the the SSH config file:&lt;/p&gt;
-&lt;pre&gt;##  ~/.ssh/config
+&lt;pre&gt;&lt;code&gt;##  ~/.ssh/config
 Host cs
-	HostName = login.cs.unc.edu
-	User = hal&lt;/pre&gt;&lt;/div&gt;</description>
+    HostName = login.cs.unc.edu
+    User = hal&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
 			<category>uncategorized</category>
 		</item>
 		<item>
@@ -1812,16 +1793,15 @@ Host cs
 		<item>
 			<title>make -j</title>
 			<link>https://halcanary.org/vv/2011/08/18/csg13/</link>
-			<guid isPermaLink="false">b00c5dea-d179-b7a7-9366-8e5aa990d733</guid>
+			<guid isPermaLink="false">7b74ce19-1f62-71b6-15ec-a5f4f43ed8f5</guid>
 			<pubDate>Thu, 18 Aug 2011 12:00:00 -0000</pubDate>
 			<description>&lt;div&gt;&lt;p&gt;Update: Russ reccomends 2&lt;em&gt;N&lt;/em&gt; threads.&lt;/p&gt;
-
-&lt;pre&gt;#!/bin/sh
+&lt;pre&gt;&lt;code&gt;#!/bin/sh
 ## {$HOME}/bin/makej
 renice 1 $$ &amp;gt; /dev/null
 N_CPUS=`grep processor /proc/cpuinfo | wc -l`
 N_THRDS=`expr ${N_CPUS:-1} &quot;*&quot; 2`
-exec /usr/bin/make -j &quot;$N_THRDS&quot; &quot;$@&quot;&lt;/pre&gt;&lt;/div&gt;</description>
+exec /usr/bin/make -j &quot;$N_THRDS&quot; &quot;$@&quot;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
 			<category>uncategorized</category>
 		</item>
 		<item>
@@ -1855,11 +1835,11 @@ exec /usr/bin/make -j &quot;$N_THRDS&quot; &quot;$@&quot;&lt;/pre&gt;&lt;/div&gt
 		<item>
 			<title>make -j</title>
 			<link>https://halcanary.org/vv/2011/08/08/csg12/</link>
-			<guid isPermaLink="false">04b3dfc2-4816-875c-d5f4-69d244beb174</guid>
+			<guid isPermaLink="false">435fdde6-34b5-4d23-d753-e60c879c966f</guid>
 			<pubDate>Mon, 08 Aug 2011 12:00:00 -0000</pubDate>
-			<description>&lt;div&gt;&lt;pre&gt;#!/bin/sh
+			<description>&lt;div&gt;&lt;pre&gt;&lt;code&gt;#!/bin/sh
 N_CPUS=`grep processor /proc/cpuinfo | wc -l`
-exec /usr/bin/make -j &quot;$N_CPUS&quot; &quot;$@&quot;&lt;/pre&gt;&lt;/div&gt;</description>
+exec /usr/bin/make -j &quot;$N_CPUS&quot; &quot;$@&quot;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
 			<category>uncategorized</category>
 		</item>
 		<item>
@@ -1874,17 +1854,17 @@ exec /usr/bin/make -j &quot;$N_CPUS&quot; &quot;$@&quot;&lt;/pre&gt;&lt;/div&gt;
 		<item>
 			<title>yet another emacs function</title>
 			<link>https://halcanary.org/vv/2011/07/18/csg11/</link>
-			<guid isPermaLink="false">93b7ae54-c1bd-4dce-ab40-8420b2cb561b</guid>
+			<guid isPermaLink="false">09ca22e2-3cd8-0cc0-7451-25a5fb013faa</guid>
 			<pubDate>Mon, 18 Jul 2011 12:00:00 -0000</pubDate>
-			<description>&lt;div&gt;&lt;pre&gt;(defun diary () (interactive)
+			<description>&lt;div&gt;&lt;pre&gt;&lt;code&gt;(defun diary () (interactive)
   (let ((ddir &quot;d:/&quot;)
         (year (format-time-string &quot;%Y&quot;))
         (ymd (format-time-string &quot;%Y-%m-%d&quot;))
-	(ymdt (format-time-string &quot;%Y-%m-%d %H:%M:%S %z&quot;)))
+    (ymdt (format-time-string &quot;%Y-%m-%d %H:%M:%S %z&quot;)))
     (make-directory (concat ddir year ) 't)
     (find-file (concat ddir year &quot;/&quot; ymd &quot;.txt&quot;))
     (goto-char (point-max)) (newline)
-    (insert  ymdt) (newline) (newline)))&lt;/pre&gt;&lt;/div&gt;</description>
+    (insert  ymdt) (newline) (newline)))&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
 			<category>uncategorized</category>
 		</item>
 		<item>
@@ -1950,9 +1930,9 @@ except KeyboardInterrupt:
 		<item>
 			<title>change-epub-formatting.py</title>
 			<link>https://halcanary.org/vv/2011/06/24/1211/</link>
-			<guid isPermaLink="false">b1fc1d5a-019a-7e6d-686f-09017af26e3e</guid>
+			<guid isPermaLink="false">ca16056a-17bd-dc8e-c740-e3b32caaaa7a</guid>
 			<pubDate>Fri, 24 Jun 2011 15:28:54 -0000</pubDate>
-			<description>&lt;div&gt;&lt;pre&gt;#!/usr/bin/python
+			<description>&lt;div&gt;&lt;pre&gt;&lt;code&gt;#!/usr/bin/python
 #DTPD#
 import subprocess
 import os.path
@@ -1987,15 +1967,15 @@ if __name__ == '__main__':
   for arg in sys.argv[1:]:
     for filen in glob.glob(arg):
       fixfile(filen)
-  exit(0)&lt;/pre&gt;&lt;/div&gt;</description>
+  exit(0)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
 			<category>books,computers-code</category>
 		</item>
 		<item>
 			<title>scrabble.sh</title>
 			<link>https://halcanary.org/vv/2011/06/21/1209/</link>
-			<guid isPermaLink="false">4b9bdcf8-4b7d-1dde-aae2-fced3bf1718f</guid>
+			<guid isPermaLink="false">e76794ee-75d9-1928-72d3-73ddb98c099f</guid>
 			<pubDate>Tue, 21 Jun 2011 06:27:46 -0000</pubDate>
-			<description>&lt;div&gt;&lt;pre&gt;#!/bin/sh
+			<description>&lt;div&gt;&lt;pre&gt;&lt;code&gt;#!/bin/sh
 #DTPD#
 DICT=/usr/share/dict/words
 test &quot;$1&quot; || { cat &quot;$0&quot;; exit 1; }
@@ -2004,7 +1984,7 @@ exec grep -i &quot;$@&quot; &quot;$DICT&quot; | less
 # Useage:
 #   scrabble.sh PATTERN
 # Example:
-#   scrabble.sh '^a[lonrchl]\{4,7\}$'&lt;/pre&gt;&lt;/div&gt;</description>
+#   scrabble.sh '^a[lonrchl]\{4,7\}$'&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
 			<category>computers-code</category>
 		</item>
 		<item>
@@ -2158,10 +2138,10 @@ knows to expect these sort of shenanigans.&lt;/p&gt;&lt;/div&gt;</description>
 		<item>
 			<title>txt to html with hyperlink conversion</title>
 			<link>https://halcanary.org/vv/2011/04/23/1194/</link>
-			<guid isPermaLink="false">6e9e026e-8281-c538-cdb9-223d0fb97220</guid>
+			<guid isPermaLink="false">3a389bb3-296a-8c38-3d3d-9d821e7ca90e</guid>
 			<pubDate>Sat, 23 Apr 2011 20:19:44 -0000</pubDate>
 			<description>&lt;div&gt;&lt;p&gt;I don't have time to be writing programs.&lt;/p&gt;
-&lt;pre&gt;#!/bin/sed -f
+&lt;pre&gt;&lt;code&gt;#!/bin/sed -f
 1 i\
 &amp;lt;!DOCTYPE HTML PUBLIC \
 &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; \
@@ -2177,7 +2157,7 @@ s/&amp;gt;/\&amp;amp;gt;/g;
 s/'/\&amp;amp;#0039;/g;
 s/\(http:\/\/[^ ]\+\)/&amp;lt;a href=&quot;\1&quot;&amp;gt;\1&amp;lt;\/a&amp;gt;/g
 1 s/^/&amp;lt;pre&amp;gt;/
-$ s/$/&amp;lt;\/pre&amp;gt;&amp;lt;\/body&amp;gt;&amp;lt;\/html&amp;gt;/&lt;/pre&gt;&lt;/div&gt;</description>
+$ s/$/&amp;lt;\/pre&amp;gt;&amp;lt;\/body&amp;gt;&amp;lt;\/html&amp;gt;/&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
 			<category>computers-code</category>
 		</item>
 		<item>
@@ -2208,17 +2188,17 @@ $ s/$/&amp;lt;\/pre&amp;gt;&amp;lt;\/body&amp;gt;&amp;lt;\/html&amp;gt;/&lt;/pre
 		<item>
 			<title>/bin/coin</title>
 			<link>https://halcanary.org/vv/2011/04/10/1180/</link>
-			<guid isPermaLink="false">0610efc5-bf09-eeb6-36b8-2729c7bda1bd</guid>
+			<guid isPermaLink="false">13289c8d-3041-e75a-55af-97aa645912a6</guid>
 			<pubDate>Sun, 10 Apr 2011 22:21:24 -0000</pubDate>
-			<description>&lt;div&gt;&lt;pre&gt;#!/usr/bin/env python
+			<description>&lt;div&gt;&lt;pre&gt;&lt;code&gt;#!/usr/bin/env python
 # ~/bin/coin
 #DTPD#
 if (ord(open('/dev/random').read(1)) % 2):
  print &quot;heads&quot;
 else:
- print &quot;tails&quot;&lt;/pre&gt;
+ print &quot;tails&quot;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;But why throw away seven bits of entropy?&lt;/p&gt;
-&lt;pre&gt;#!/usr/bin/env python
+&lt;pre&gt;&lt;code&gt;#!/usr/bin/env python
 #DTPD#
 n=ord(open('/dev/random').read(1))
 for i in xrange(8):
@@ -2227,7 +2207,7 @@ for i in xrange(8):
  else:
   print &quot;tails&quot;,
  n &amp;gt;&amp;gt;= 1
-print&lt;/pre&gt;&lt;/div&gt;</description>
+print&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
 			<category>computers-code</category>
 		</item>
 		<item>
@@ -2251,14 +2231,14 @@ print&lt;/pre&gt;&lt;/div&gt;</description>
 		<item>
 			<title>convert asterisks to html-bold via sed</title>
 			<link>https://halcanary.org/vv/2011/03/07/1096/</link>
-			<guid isPermaLink="false">13671975-8342-3a33-c752-e93dcb81090d</guid>
+			<guid isPermaLink="false">e0b9383f-41a2-485a-a2f3-53b41b061441</guid>
 			<pubDate>Mon, 07 Mar 2011 20:37:44 -0000</pubDate>
-			<description>&lt;div&gt;&lt;pre&gt;#!/bin/sed -f
+			<description>&lt;div&gt;&lt;pre&gt;&lt;code&gt;#!/bin/sed -f
 #DTPD#
 #convert *bold* text to *html bold*
 # also converts /italic/ text to html em
 s/\*\([^\*]*\)\*/&amp;lt;strong&amp;gt;\1&amp;lt;\/strong&amp;gt;/g;
-s/\/\([^\/]*\)\//&amp;lt;em&amp;gt;\1&amp;lt;\/em&amp;gt;/g;&lt;/pre&gt;&lt;/div&gt;</description>
+s/\/\([^\/]*\)\//&amp;lt;em&amp;gt;\1&amp;lt;\/em&amp;gt;/g;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
 			<category>computers-code</category>
 		</item>
 		<item>
@@ -2272,14 +2252,14 @@ s/\/\([^\/]*\)\//&amp;lt;em&amp;gt;\1&amp;lt;\/em&amp;gt;/g;&lt;/pre&gt;&lt;/div
 		<item>
 			<title>HTML/CSS for Ipod Touch</title>
 			<link>https://halcanary.org/vv/2011/03/05/1090/</link>
-			<guid isPermaLink="false">d9d43f8e-f42f-5b30-a47c-80b08b6f997a</guid>
+			<guid isPermaLink="false">8c4d52a7-1e1d-b706-bf67-cd6ab4f328b5</guid>
 			<pubDate>Sat, 05 Mar 2011 21:20:35 -0000</pubDate>
 			<description>&lt;div&gt;&lt;p&gt;I added these lines to the CSS for this page&lt;/p&gt;
-&lt;pre&gt;pre { overflow:auto;
-      overflow-y:visible; }&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;pre { overflow:auto;
+      overflow-y:visible; }&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;and this line to the (X)HTML&lt;/p&gt;
-&lt;pre&gt;&amp;lt;meta name=&quot;viewport&quot;
-    content=&quot;width=device-width&quot; /&amp;gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;meta name=&quot;viewport&quot;
+      content=&quot;width=device-width&quot;&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;which seems to make the site render much much better on my Ipod Touch's small screen.&lt;/p&gt;&lt;/div&gt;</description>
 			<category>computers-code</category>
 		</item>

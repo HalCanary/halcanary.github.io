@@ -2,13 +2,12 @@ COPYRIGHT=Copyright Hal Canary / ALL RIGHTS RESERVED
 TITLE=make -j
 DATE=2011-08-18 12:00:00
 POSTID=csg13
-MODE=htmldiv
 
-<p>Update: Russ reccomends 2<em>N</em> threads.</p>
+Update: Russ reccomends 2<em>N</em> threads.
 
-<pre>#!/bin/sh
-## {$HOME}/bin/makej
-renice 1 $$ &gt; /dev/null
-N_CPUS=`grep processor /proc/cpuinfo | wc &#0045;l`
-N_THRDS=`expr ${N_CPUS:&#0045;1} &quot;*&quot; 2`
-exec /usr/bin/make &#0045;j &quot;$N_THRDS&quot; &quot;$@&quot;</pre>
+    #!/bin/sh
+    ## {$HOME}/bin/makej
+    renice 1 $$ > /dev/null
+    N_CPUS=`grep processor /proc/cpuinfo | wc -l`
+    N_THRDS=`expr ${N_CPUS:-1} "*" 2`
+    exec /usr/bin/make -j "$N_THRDS" "$@"

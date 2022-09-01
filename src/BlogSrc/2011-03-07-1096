@@ -3,12 +3,10 @@ TITLE=convert asterisks to html-bold via sed
 DATE=2011-03-07 20:37:44
 POSTID=1096
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<pre>#!/bin/sed &#0045;f
-#DTPD#
-#convert *bold* text to *html bold*
-# also converts /italic/ text to html em
-s/&#0092;*&#0092;([^&#0092;*]*&#0092;)&#0092;*/&lt;strong&gt;&#0092;1&lt;&#0092;/strong&gt;/g;
-s/&#0092;/&#0092;([^&#0092;/]*&#0092;)&#0092;//&lt;em&gt;&#0092;1&lt;&#0092;/em&gt;/g;</pre>
-
+    #!/bin/sed -f
+    #DTPD#
+    #convert *bold* text to *html bold*
+    # also converts /italic/ text to html em
+    s/\*\([^\*]*\)\*/<strong>\1<\/strong>/g;
+    s/\/\([^\/]*\)\//<em>\1<\/em>/g;

@@ -3,16 +3,14 @@ TITLE=scrabble.sh
 DATE=2011-06-21 06:27:46
 POSTID=1209
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<pre>#!/bin/sh
-#DTPD#
-DICT=/usr/share/dict/words
-test &quot;$1&quot; || { cat &quot;$0&quot;; exit 1; }
-exec grep &#0045;i &quot;$@&quot; &quot;$DICT&quot; | less
-#
-# Useage:
-#   scrabble.sh PATTERN
-# Example:
-#   scrabble.sh &#0039;^a[lonrchl]&#0092;{4,7&#0092;}$&#0039;</pre>
-
+    #!/bin/sh
+    #DTPD#
+    DICT=/usr/share/dict/words
+    test "$1" || { cat "$0"; exit 1; }
+    exec grep -i "$@" "$DICT" | less
+    #
+    # Useage:
+    #   scrabble.sh PATTERN
+    # Example:
+    #   scrabble.sh '^a[lonrchl]\{4,7\}$'

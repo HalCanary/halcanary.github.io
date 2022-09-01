@@ -2,8 +2,7 @@ COPYRIGHT=Copyright Hal Canary / ALL RIGHTS RESERVED
 TITLE=make -j
 DATE=2011-08-08 12:00:00
 POSTID=csg12
-MODE=htmldiv
 
-<pre>#!/bin/sh
-N_CPUS=`grep processor /proc/cpuinfo | wc &#0045;l`
-exec /usr/bin/make &#0045;j &quot;$N_CPUS&quot; &quot;$@&quot;</pre>
+    #!/bin/sh
+    N_CPUS=`grep processor /proc/cpuinfo | wc -l`
+    exec /usr/bin/make -j "$N_CPUS" "$@"

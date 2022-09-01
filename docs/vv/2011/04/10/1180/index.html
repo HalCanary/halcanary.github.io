@@ -78,24 +78,24 @@ ul.flat li::before {content:"[";}
   </header>
   <div class="content e-content">
 <div style="display:none;"></div>
-<pre>#!/usr/bin/env python
+<pre><code>#!/usr/bin/env python
 # ~/bin/coin
 #DTPD#
-if (ord(open(&#0039;/dev/random&#0039;).read(1)) % 2):
+if (ord(open(&#39;/dev/random&#39;).read(1)) % 2):
  print &quot;heads&quot;
 else:
- print &quot;tails&quot;</pre>
+ print &quot;tails&quot;</code></pre>
 <p>But why throw away seven bits of entropy?</p>
-<pre>#!/usr/bin/env python
+<pre><code>#!/usr/bin/env python
 #DTPD#
-n=ord(open(&#0039;/dev/random&#0039;).read(1))
+n=ord(open(&#39;/dev/random&#39;).read(1))
 for i in xrange(8):
  if  (n % 2):
   print &quot;heads&quot;,
  else:
   print &quot;tails&quot;,
  n &gt;&gt;= 1
-print</pre>
+print</code></pre>
   </div>
 </article>
 <hr>

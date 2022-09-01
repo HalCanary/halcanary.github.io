@@ -78,12 +78,12 @@ ul.flat li::before {content:"[";}
   </header>
   <div class="content e-content">
 <div style="display:none;"></div>
-<pre>#!/bin/sed &#0045;f
+<pre><code>#!/bin/sed -f
 #DTPD#
 #convert *bold* text to *html bold*
 # also converts /italic/ text to html em
-s/&#0092;*&#0092;([^&#0092;*]*&#0092;)&#0092;*/&lt;strong&gt;&#0092;1&lt;&#0092;/strong&gt;/g;
-s/&#0092;/&#0092;([^&#0092;/]*&#0092;)&#0092;//&lt;em&gt;&#0092;1&lt;&#0092;/em&gt;/g;</pre>
+s/\*\([^\*]*\)\*/&lt;strong&gt;\1&lt;\/strong&gt;/g;
+s/\/\([^\/]*\)\//&lt;em&gt;\1&lt;\/em&gt;/g;</code></pre>
   </div>
 </article>
 <hr>

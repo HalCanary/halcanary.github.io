@@ -79,23 +79,23 @@ ul.flat li::before {content:"[";}
   <div class="content e-content">
 <div style="display:none;"></div>
 <p>I don't have time to be writing programs.</p>
-<pre>#!/bin/sed &#0045;f
-1 i&#0092;
-&lt;!DOCTYPE HTML PUBLIC &#0092;
-&quot;&#0045;//W3C//DTD HTML 4.01 Transitional//EN&quot; &#0092;
-&quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;&#0092;
-&lt;html&gt;&lt;head&gt;&#0092;
-&lt;meta http&#0045;equiv=&quot;Content&#0045;Type&quot; &#0092;
-content=&quot;text/html; charset=utf&#0045;8&quot;&gt;&#0092;
+<pre><code>#!/bin/sed -f
+1 i\
+&lt;!DOCTYPE HTML PUBLIC \
+&quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; \
+&quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;\
+&lt;html&gt;&lt;head&gt;\
+&lt;meta http-equiv=&quot;Content-Type&quot; \
+content=&quot;text/html; charset=utf-8&quot;&gt;\
 &lt;title&gt;&lt;/title&gt;&lt;/head&gt;&lt;body&gt;
-s/&#0092;&amp;/&#0092;&amp;amp;/g;
-s/&#0092;&quot;/&#0092;&amp;quot;/g;
-s/&lt;/&#0092;&amp;lt;/g;
-s/&gt;/&#0092;&amp;gt;/g;
-s/&#0039;/&#0092;&amp;#0039;/g;
-s/&#0092;(http:&#0092;/&#0092;/[^ ]&#0092;+&#0092;)/&lt;a href=&quot;&#0092;1&quot;&gt;&#0092;1&lt;&#0092;/a&gt;/g
+s/\&amp;/\&amp;amp;/g;
+s/\&quot;/\&amp;quot;/g;
+s/&lt;/\&amp;lt;/g;
+s/&gt;/\&amp;gt;/g;
+s/&#39;/\&amp;#0039;/g;
+s/\(http:\/\/[^ ]\+\)/&lt;a href=&quot;\1&quot;&gt;\1&lt;\/a&gt;/g
 1 s/^/&lt;pre&gt;/
-$ s/$/&lt;&#0092;/pre&gt;&lt;&#0092;/body&gt;&lt;&#0092;/html&gt;/</pre>
+$ s/$/&lt;\/pre&gt;&lt;\/body&gt;&lt;\/html&gt;/</code></pre>
   </div>
 </article>
 <hr>
