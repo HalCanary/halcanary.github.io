@@ -78,16 +78,14 @@ ul.flat li::before {content:"[";}
   </header>
   <div class="content e-content">
 <div style="display:none;"></div>
-<pre>#!/bin/sh
+<pre><code>#!/bin/sh
 ## test.sh ##
-for x in  $*  ; do echo $x; done ; echo "" ;
-for x in "$*" ; do echo $x; done ; echo "" ;
-for x in  $@  ; do echo $x; done ; echo "" ;
-for x in "$@" ; do echo $x; done ; echo "" ;
-</pre>
+for x in  $*  ; do echo $x; done ; echo &quot;&quot; ;
+for x in &quot;$*&quot; ; do echo $x; done ; echo &quot;&quot; ;
+for x in  $@  ; do echo $x; done ; echo &quot;&quot; ;
+for x in &quot;$@&quot; ; do echo $x; done ; echo &quot;&quot; ;</code></pre>
 <p>Output:</p>
-<pre>
-$ code/test.sh 1 "2 3"
+<pre><code>$ code/test.sh 1 &quot;2 3&quot;
 1
 2
 3
@@ -99,8 +97,7 @@ $ code/test.sh 1 "2 3"
 3
 
 1
-2 3
-</pre>
+2 3</code></pre>
   </div>
 </article>
 <hr>

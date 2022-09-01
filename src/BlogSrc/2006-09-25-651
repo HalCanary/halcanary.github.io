@@ -3,8 +3,7 @@ TITLE=#
 DATE=2006-09-25 13:06:50
 POSTID=651
 CATEGORIES=life;meta;
-MODE=htmldiv
 
-<p><strong>New phone number as of now</strong>:</p>
-<pre>239-313-9375</pre>
+**New phone number as of now**:
 
+    239-313-9375

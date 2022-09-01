@@ -3,188 +3,269 @@ TITLE=Email2
 DATE=2008-01-25 14:34:12
 POSTID=715
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<p>== Email2 ==</p>
-<p>Here's a proposal for new e-mail protocols to completely replace existing SMTP/MIME/IMAP/POP protocols.  There would be a phase-in period, lasting about 5-10 years, during which two systems would exist in paralel and servers would fall back to old protocols where the new ones aren't availible yet.</p>
-<p>The name of the new protocols would be Email2.  It would contain the following protocols:</p>
-<pre>
-Email2 E-Mail Client Protocol
-	* client-server connections
-	* replaces SMTP, IMAP, POP
-	* Specifies how the client sends and
-	  recieves messages from the server.
-	* Client configuration is simplified:
-	  user ONLY specifies e-mail address
-	  and password.  No seperate inbound
-	  and outbound configurations.
-	* Use of TLS strongly recommended.
-Email2 E-Mail Server Protocol
-	* server-server connections
-	* replaces SMTP
-	* meant to discourage spam
-	* Use of TLS strongly recommended.
-	* servers must verfy dns records of
-	  sending server before accepting e-mail.
-Email2 E-Mail File Format
-	* replaces MIME
-	* 8-bit
-	* unicode (UTF-8) for all text,
-	  including headers
-	* mesage is compressed with DEFLATE
-	  algorithm
-Email2 E-Mail Storage Protocol
-	* replaces maildir, mbox, et cetera
-	* Can be used by all major OSes
-	* similar to maildir
-	* allows user to switch clients seamlessly</pre>
-<p>== Email2 E-Mail File Format ==</p>
-<p>First of all, we need to get rid of 7-bit and linelength limitations that are part of SMTP.</p>
-<p>The message is composed of three parts:</p>
-<pre>
-Head
-Body
-Attachments</pre>
-<p>Specifically, we would have the following:</p>
-<pre>
-Magic number representing this file format.
-0x0a
-UTF-8 data (the head) with each field
-	seperated by a single unix-style endline.
-0x0a0a (two endlines to specify the end of the head)
-a gziped file containing the body
-the attachemnts, somehow.</pre>
-<p>The head is similar to SMTP headers, but is encoded in UTF-8.  There are more restrictions on what can be in the headers, for instance "From:" must be identical to the email sending the message, or it will not be accepted.  Mailing lists have their own specific headers.</p>
-<p>Since the body may be long and the server won't need to read it (except for spam filtering), it will be compressed.</p>
-<p>The body should *not* be HTML, since that introduces several security & spam risks.  I suggest UTF-8 text with a minimal markup syntax to allow for "slightly rich" text.  The text of the body may have long lines intended to be wrapped to whatever screen is availible.  It is not assumed that this plain text is monospaced or wrapped at 70 characters.</p>
-<p>All printable Unicode characters are acceptable in the body.</p>
-<p>Because plain text is so unacceptable to most people, we allow text to be transformed to italics, bold, monospaced, subscript, superscript, strikethrough, and underline.</p>
-<p>Whole paragraphs (seperated by newlines) can be modified with indention, center, and rightjustify.</p>
-<p>The minimal markup syntax would use the "\" backslash character as an escape character.  The following codes would be used for text modifications:</p>
-<pre>
-\{ec} = escape character, a literal "\"
-\{bi} = begin italics
-\{ei} = end italics
-\{bb} = begin bold
-\{eb} = end bold
-\{bm} = begin monospaced
-\{em} = end monospaced
-\{bp} = begin subscriPt
-\{ep} = end subscriPt
-\{bt} = begin superscripT
-\{et} = end superscripT
-\{bs} = begin strikethrough
-\{es} = end strikethrough
-\{bu} = begin underline
-\{eu} = end underline
-\{bi} = begin indentation (this one *stacks*)
-\{ei} = end indentation (only end one level)
-\{cj} = begin center justification on this line
-\{lj} = go back to left justification on this line
-\{rj} = begin right justification on this line</pre>
-<p>The backslash character *must* be followed by one of those two-character escape codes to be a conforming document.</p>
-<p>All conforming email clients should display this markup to the user in a consistant way and not expose the underlying escape characters.  </p>
-<p>Maformed escape syntax should always throw up an error.  No conforming client can ever produce malfomerd syntax, so this might be spam.</p>
-<p>Quoting previous email would always use the indentation markup, like a HTML blockquote element.</p>
-<p>Additionally, whitespace characters like spaces, tabs, and newlines would be rendered just like they would in a plain-text document.  One newline standard (such as CRLF or LF) would be chosen and all conforming clients would use it.<br />
-Tabs would be rendered in a consistant way---for example one could put a tab-stop every 8 ems. (1 em is the width of a single "m" glyph.)  Or base the tabs off of the width of the client's monospaced font.</p>
-<p>Note that the following things are *banned* from this markup language:  specifying fonts, specifying font types (other than monospace), specifying font size, specifying font color, specifying background color, blinking text, scrolling text, tables, embedded scripts, embedded images, or embedded documents.  If you want any of that, you must attach an attachment. </p>
-<p>Additionally, all conforming mail clinets *must* recognize IANA-registered URI schemes and make them into clickable (or otherwise selectable) links.  But those links will look like URIs, to keep the process *transparent* to the user.  URI's can be imbedded in the text in the form "[whitespace]URI[whitespace]", "(URI)", "[URI]", "{URI}", or "&lt;URI&gt;".  This should be recognizable by the client since URIs generally do not contain whitespace characters or &lt;[({})]&gt;.</p>
-<p>The header has none of this markup.</p>
-<p>For the N attachemtns, the Internet media type, the preferred document name, whether it is compressed, a checksum or cryptographic hash, and file length is specified.  For security purposes, the client mut not open these attachments automatically and should call a virus scanner before opening them.  It is recommended that all email clients attempt to compress the attachements with DEFLATE before attaching them.  If the compression results are good, then they will be attached like that.  (For example, the ZIP file format can include files either compressed or uncompressed.) a checksum for each attachment would be included in the email file format.  The exact format would be part of the standard, but I don't have an opinion on how it should work.</p>
-<p>== Email2 E-Mail Storage Protocol ==</p>
-<p>The new standard would specify a standard way of storing email in a filesystem, similar to Maildir.   This way, a user can *always* switch email clients seamlessly.  Furthermore, a default place to store email would be used, specifed for each operating system.  For example, under Windows it would be something like </p>
-<pre>	%HOMEDRIVE%%HOMEPATH%\\Application Data\\email\\</pre>
-<p>and *NIX would use</p>
-<pre>	$HOME/.email/</pre>
-<p>== Email2 E-Mail Client Protocol & Server Protocol ==</p>
-<p>Email2 is a Client-Server-Server-Client protocol. No more forwarding email through a chain of servers.  No more faking addresses.</p>
-<p>Suppose bannana@orange.com wants to email mango@plum.com.</p>
-<p>Bannana's client must connect to mail.orange.com directly, using a TLS encrypted session and verfying his creditions with a password (or optionally some other identifer, like a PKE key).</p>
-<p>The connection is *not* SMTP, since we are throwing that protocol out the window.  we'll call it a "client-server" connection.</p>
-<p>mail.orange.com verifies that the e-mail is well-formed and that the "From" address matches the address that Bannana used to log in with.</p>
-<p>mail.orange.com then connects directly to mail.plum.com using a TLS-encrypted "server-server" connection and identifies itself as mail.orange.com.  mail.plum.com *MUST* verify that mail.orange.com is who they say they are through checking (1) dns entries AND (2) TLS encryption keys.  mail.orange.com has already verified mail.plum.com.</p>
-<p>mail.orange.com then hands over the e-mail to mango@plum.com.  Before terminating the session, mail.plum.com (1) checks to see that the e-mail is from an address at @orange.com (2) tells mail.orange.com whether there is a mango@ this address  (3) checks to see if the message is well-formed.  If not, then orange knows that the e-mail is undeliverable and will tell the sending client that.  (There is an undeliverable folder on the server just for that purpose.)</p>
-<p>Next, (this is an optional step that awesome mail servers will be able to do) mail.plum.com consults a series of rules that Mango specified earlier and  sorts the mail into a subfolder of the Inbox folder.  For example, if the subject contains a specific keyword, it might go in a subfolder for that keyword.  The server might run Spamasasain on the message and sort it into a Inbox/Spam folder.  Why does the server do this and not the client?  Becasue whe user might use two clients on two different machines to connect to the server and doesn't wat to repeat a bunch of rules!</p>
-<p>Ideally, the rule format will be specified in the protocol.</p>
-<p>Later, mango@plum.com creates a client-server connection with mail.plum.com  This is a TLS-encrypted, fully authenticated connection.  The first thing mango's client does is check the Inbox folder and all it's subfolders for new messages.  It retrieves a few headers for each message (From, Subject, Date, Number of attachments, message length).</p>
-<p>The client could be configured several different ways.  If it is POP-style, it will immediately download all the messages and delete them off the server.  If it is configured IMAP-style, it will leave messages on the server unless they are specifially deleted by ther user.  It could also be configured mirror-style where it leaves a copy on the server but also mirrors each email lcoally.  IMAP-style should be the default.</p>
-<p>The user will see a heirarchy of folders:</p>
-<pre>
-plum.com/
-	Inbox/
-		Spam/
-		Knitting_Circle/
-	Old/
-		Bannana/
-		Apple/
-		Nectarine/
-	Sent/
-	Undeliverable/
-	Outbox/
-	Drafts/
-	Trash/
-Local Folders/
-	Drafts
-	Outbox/
-	Trash/
-	Bannana/
-	Apple/
-	Nectarine/</pre>
-<p>The user could drag-and-drop the new email from Bannana from plum.com/Inbox/ to plum.com/Old/Bannana .  This would be an atomic operation that the server could perform without copying the email, just moving some pointers around.  </p>
-<p>I am no human-interface guru, so this could probably use some refining.</p>
-<p>The client also has a way of changing the delivery rules on the server in some standard way.</p>
-<p>== Mailing Lists ===</p>
-<p>Client-Server-Server-Server-Client Proticol would exist for mailing lists.</p>
-<p>Suppose that  bannana@orange.com wants to send a email to the Fruits mailing list, which has an email address of fruits%pear.com.  mango@plum.com is on that list.</p>
-<p>First of all, notice that mailing list addresses have a different syntax, replaceing the "@" with a "%".  the "%" is supposed to too like mutliple "@"s. [Is that going to be a problem with URI syntax?  maybe we should use fruits#pear.com.]</p>
-<p>For the first server-server connection, mail.orange.com connects to mail.pear.com, using the same authentication system.  mail.pear.com then checks to see if there is a fruits mailing list and (this is important) if bannana@orange.com is authorized to email that list.  mail.pear.com might be configured to reject anyone that is not on the list, or to reject anyone who isn't a list owner, or to allow anyone to post to the list (which is a *BAD* idea).</p>
-<p>mail.pear.com looks through the mailing list and sorts it by domain name, then connects sequentially all the domains to deliver the email.  These connections are again authenticated both ways.  When mango@plum.com gets the message it looks like this:</p>
-<pre>
-From: Bannana &lt;bannana@orange.com&gt;
-To: Fruits &lt;fruits%pear.com&gt;
-Delivered To: mango &lt;mango@plum.com&gt;</pre>
-<p>The "Delivered To" header was inserted by mail.plum.com (mail software are allowed to insert but not delete headers, but in general do less of this than the current generation of clients)</p>
-<p>(*) A note about BCC (blind carbon copy).  Assume that Bannana BCCed Mango on an email to Apple.  Then Mango would see a header that says that.</p>
-<pre>
-From: Bannana &lt;bannana@orange.com&gt;
-To: Apple &lt;apple@pear.com&gt;
-BCC: mango &lt;mango@plum.com&gt;</pre>
-<p>If one BCC's a mailing list then:</p>
-<pre>
-From: Bannana &lt;bannana@orange.com&gt;
-To: Apple &lt;apple@pear.com&gt;
-BCC: Fruits &lt;fruits%pear.com&gt;
-Delivered To: mango &lt;mango@plum.com&gt;</pre>
-<p>is what Mango would see.  Everyone on that list knows what list was BCCed.  Apple, however, is in the dark.</p>
-<p>There is no way to see who is on a mailing list unless you are an owner of that list.  Of course the owner might make that information availible some other way.</p>
-<p>== Timestamps ==</p>
-<p>All timestamps in the email header should use ISO 8601 in the following way: 2007-12-21 17:47:01-05:00.  Clients can convert to local timezone if they wish.  Clients may diplay dates using local conventions as well.</p>
-<p>There are multiple timestamps in the header</p>
-<pre>
-Date = when the client started to transmit
-DateS = when the Sending server recieved the message
-DateL = when the listsrev recieved the messafe
-DateR = when the recieving server recieved the message
-DateC = when the recieving client first noticed it</pre>
-<p>Client machines often have incorrect clocks.  Servers are encouraged to use NTP to keep thier clocks up to date, so maybe a client could be configured to use DateS to timestamp the real message.</p>
-<p>== Dead addresses ==</p>
-<p>Since mail can no longer be forwarded, what happens when you get a new email address?  </p>
-<p>All email servers should keep a list of no-longer active email addresses and give an apropriate error code for undeliverable mail.</p>
-<p>Delivery status: </p>
-<pre>
-Deliverable
-Undeliverable - no such address
-Undeliverable - account closed </pre>
-<p>When a mail account is closed, the user or administrator can add a 1kb plain text (UTF-8) message explaining why it is closed and maybe another address to try.</p>
-<p>This message should get back to the sender somehow, but not in the form of another email.  </p>
-<p>== Problems with this approach ==</p>
-<p>A lot of coding.  But most of it is really simple stuff.</p>
-<p>Clients will need to be able to connect to both kinds of email servers for the interum.</p>
-<p>Mail-sorting rules might be difficult to stadardize.</p>
-<p>The standard needs to specify EVERYTHING, so that various implementations are fully compatable.</p>
-<p>The NSA will find it much more difficlt to spy on your email.  Servers could be designed with a wiretap mode where all emails to and from a particular address are automatically forwarded to the apropriate law enforcement.</p>
-<p>It will be much simpler to fight spam:  simply delete the offending dns entries.</p>
-<p>This gives too much power to the DNS servers and the certificate authorities.</p>
-<p>What about servers that aren't connected to the internet 99+% of the time (most are)?</p>
+\== Email2 ==
 
+Here's a proposal for new e-mail protocols to completely replace existing SMTP/MIME/IMAP/POP protocols. There would be a phase-in period, lasting about 5-10 years, during which two systems would exist in paralel and servers would fall back to old protocols where the new ones aren't availible yet.
+
+The name of the new protocols would be Email2. It would contain the following protocols:
+
+    
+    Email2 E-Mail Client Protocol
+    	* client-server connections
+    	* replaces SMTP, IMAP, POP
+    	* Specifies how the client sends and
+    	  recieves messages from the server.
+    	* Client configuration is simplified:
+    	  user ONLY specifies e-mail address
+    	  and password.  No seperate inbound
+    	  and outbound configurations.
+    	* Use of TLS strongly recommended.
+    Email2 E-Mail Server Protocol
+    	* server-server connections
+    	* replaces SMTP
+    	* meant to discourage spam
+    	* Use of TLS strongly recommended.
+    	* servers must verfy dns records of
+    	  sending server before accepting e-mail.
+    Email2 E-Mail File Format
+    	* replaces MIME
+    	* 8-bit
+    	* unicode (UTF-8) for all text,
+    	  including headers
+    	* mesage is compressed with DEFLATE
+    	  algorithm
+    Email2 E-Mail Storage Protocol
+    	* replaces maildir, mbox, et cetera
+    	* Can be used by all major OSes
+    	* similar to maildir
+    	* allows user to switch clients seamlessly
+
+\== Email2 E-Mail File Format ==
+
+First of all, we need to get rid of 7-bit and linelength limitations that are part of SMTP.
+
+The message is composed of three parts:
+
+    
+    Head
+    Body
+    Attachments
+
+Specifically, we would have the following:
+
+    
+    Magic number representing this file format.
+    0x0a
+    UTF-8 data (the head) with each field
+    	seperated by a single unix-style endline.
+    0x0a0a (two endlines to specify the end of the head)
+    a gziped file containing the body
+    the attachemnts, somehow.
+
+The head is similar to SMTP headers, but is encoded in UTF-8. There are more restrictions on what can be in the headers, for instance "From:" must be identical to the email sending the message, or it will not be accepted. Mailing lists have their own specific headers.
+
+Since the body may be long and the server won't need to read it (except for spam filtering), it will be compressed.
+
+The body should \*not\* be HTML, since that introduces several security & spam risks. I suggest UTF-8 text with a minimal markup syntax to allow for "slightly rich" text. The text of the body may have long lines intended to be wrapped to whatever screen is availible. It is not assumed that this plain text is monospaced or wrapped at 70 characters.
+
+All printable Unicode characters are acceptable in the body.
+
+Because plain text is so unacceptable to most people, we allow text to be transformed to italics, bold, monospaced, subscript, superscript, strikethrough, and underline.
+
+Whole paragraphs (seperated by newlines) can be modified with indention, center, and rightjustify.
+
+The minimal markup syntax would use the "\\" backslash character as an escape character. The following codes would be used for text modifications:
+
+    
+    \{ec} = escape character, a literal "\"
+    \{bi} = begin italics
+    \{ei} = end italics
+    \{bb} = begin bold
+    \{eb} = end bold
+    \{bm} = begin monospaced
+    \{em} = end monospaced
+    \{bp} = begin subscriPt
+    \{ep} = end subscriPt
+    \{bt} = begin superscripT
+    \{et} = end superscripT
+    \{bs} = begin strikethrough
+    \{es} = end strikethrough
+    \{bu} = begin underline
+    \{eu} = end underline
+    \{bi} = begin indentation (this one *stacks*)
+    \{ei} = end indentation (only end one level)
+    \{cj} = begin center justification on this line
+    \{lj} = go back to left justification on this line
+    \{rj} = begin right justification on this line
+
+The backslash character \*must\* be followed by one of those two-character escape codes to be a conforming document.
+
+All conforming email clients should display this markup to the user in a consistant way and not expose the underlying escape characters.
+
+Maformed escape syntax should always throw up an error. No conforming client can ever produce malfomerd syntax, so this might be spam.
+
+Quoting previous email would always use the indentation markup, like a HTML blockquote element.
+
+Additionally, whitespace characters like spaces, tabs, and newlines would be rendered just like they would in a plain-text document. One newline standard (such as CRLF or LF) would be chosen and all conforming clients would use it.  
+Tabs would be rendered in a consistant way---for example one could put a tab-stop every 8 ems. (1 em is the width of a single "m" glyph.) Or base the tabs off of the width of the client's monospaced font.
+
+Note that the following things are \*banned\* from this markup language: specifying fonts, specifying font types (other than monospace), specifying font size, specifying font color, specifying background color, blinking text, scrolling text, tables, embedded scripts, embedded images, or embedded documents. If you want any of that, you must attach an attachment.
+
+Additionally, all conforming mail clinets \*must\* recognize IANA-registered URI schemes and make them into clickable (or otherwise selectable) links. But those links will look like URIs, to keep the process \*transparent\* to the user. URI's can be imbedded in the text in the form "\[whitespace\]URI\[whitespace\]", "(URI)", "\[URI\]", "{URI}", or "<URI>". This should be recognizable by the client since URIs generally do not contain whitespace characters or <\[({})\]>.
+
+The header has none of this markup.
+
+For the N attachemtns, the Internet media type, the preferred document name, whether it is compressed, a checksum or cryptographic hash, and file length is specified. For security purposes, the client mut not open these attachments automatically and should call a virus scanner before opening them. It is recommended that all email clients attempt to compress the attachements with DEFLATE before attaching them. If the compression results are good, then they will be attached like that. (For example, the ZIP file format can include files either compressed or uncompressed.) a checksum for each attachment would be included in the email file format. The exact format would be part of the standard, but I don't have an opinion on how it should work.
+
+\== Email2 E-Mail Storage Protocol ==
+
+The new standard would specify a standard way of storing email in a filesystem, similar to Maildir. This way, a user can \*always\* switch email clients seamlessly. Furthermore, a default place to store email would be used, specifed for each operating system. For example, under Windows it would be something like
+
+    	%HOMEDRIVE%%HOMEPATH%\\Application Data\\email\\
+
+and \*NIX would use
+
+    	$HOME/.email/
+
+\== Email2 E-Mail Client Protocol & Server Protocol ==
+
+Email2 is a Client-Server-Server-Client protocol. No more forwarding email through a chain of servers. No more faking addresses.
+
+Suppose bannana@orange.com wants to email mango@plum.com.
+
+Bannana's client must connect to mail.orange.com directly, using a TLS encrypted session and verfying his creditions with a password (or optionally some other identifer, like a PKE key).
+
+The connection is \*not\* SMTP, since we are throwing that protocol out the window. we'll call it a "client-server" connection.
+
+mail.orange.com verifies that the e-mail is well-formed and that the "From" address matches the address that Bannana used to log in with.
+
+mail.orange.com then connects directly to mail.plum.com using a TLS-encrypted "server-server" connection and identifies itself as mail.orange.com. mail.plum.com \*MUST\* verify that mail.orange.com is who they say they are through checking (1) dns entries AND (2) TLS encryption keys. mail.orange.com has already verified mail.plum.com.
+
+mail.orange.com then hands over the e-mail to mango@plum.com. Before terminating the session, mail.plum.com (1) checks to see that the e-mail is from an address at @orange.com (2) tells mail.orange.com whether there is a mango@ this address (3) checks to see if the message is well-formed. If not, then orange knows that the e-mail is undeliverable and will tell the sending client that. (There is an undeliverable folder on the server just for that purpose.)
+
+Next, (this is an optional step that awesome mail servers will be able to do) mail.plum.com consults a series of rules that Mango specified earlier and sorts the mail into a subfolder of the Inbox folder. For example, if the subject contains a specific keyword, it might go in a subfolder for that keyword. The server might run Spamasasain on the message and sort it into a Inbox/Spam folder. Why does the server do this and not the client? Becasue whe user might use two clients on two different machines to connect to the server and doesn't wat to repeat a bunch of rules!
+
+Ideally, the rule format will be specified in the protocol.
+
+Later, mango@plum.com creates a client-server connection with mail.plum.com This is a TLS-encrypted, fully authenticated connection. The first thing mango's client does is check the Inbox folder and all it's subfolders for new messages. It retrieves a few headers for each message (From, Subject, Date, Number of attachments, message length).
+
+The client could be configured several different ways. If it is POP-style, it will immediately download all the messages and delete them off the server. If it is configured IMAP-style, it will leave messages on the server unless they are specifially deleted by ther user. It could also be configured mirror-style where it leaves a copy on the server but also mirrors each email lcoally. IMAP-style should be the default.
+
+The user will see a heirarchy of folders:
+
+    
+    plum.com/
+    	Inbox/
+    		Spam/
+    		Knitting_Circle/
+    	Old/
+    		Bannana/
+    		Apple/
+    		Nectarine/
+    	Sent/
+    	Undeliverable/
+    	Outbox/
+    	Drafts/
+    	Trash/
+    Local Folders/
+    	Drafts
+    	Outbox/
+    	Trash/
+    	Bannana/
+    	Apple/
+    	Nectarine/
+
+The user could drag-and-drop the new email from Bannana from plum.com/Inbox/ to plum.com/Old/Bannana . This would be an atomic operation that the server could perform without copying the email, just moving some pointers around.
+
+I am no human-interface guru, so this could probably use some refining.
+
+The client also has a way of changing the delivery rules on the server in some standard way.
+
+\== Mailing Lists ===
+
+Client-Server-Server-Server-Client Proticol would exist for mailing lists.
+
+Suppose that bannana@orange.com wants to send a email to the Fruits mailing list, which has an email address of fruits%pear.com. mango@plum.com is on that list.
+
+First of all, notice that mailing list addresses have a different syntax, replaceing the "@" with a "%". the "%" is supposed to too like mutliple "@"s. \[Is that going to be a problem with URI syntax? maybe we should use fruits#pear.com.\]
+
+For the first server-server connection, mail.orange.com connects to mail.pear.com, using the same authentication system. mail.pear.com then checks to see if there is a fruits mailing list and (this is important) if bannana@orange.com is authorized to email that list. mail.pear.com might be configured to reject anyone that is not on the list, or to reject anyone who isn't a list owner, or to allow anyone to post to the list (which is a \*BAD\* idea).
+
+mail.pear.com looks through the mailing list and sorts it by domain name, then connects sequentially all the domains to deliver the email. These connections are again authenticated both ways. When mango@plum.com gets the message it looks like this:
+
+    
+    From: Bannana <bannana@orange.com>
+    To: Fruits <fruits%pear.com>
+    Delivered To: mango <mango@plum.com>
+
+The "Delivered To" header was inserted by mail.plum.com (mail software are allowed to insert but not delete headers, but in general do less of this than the current generation of clients)
+
+(\*) A note about BCC (blind carbon copy). Assume that Bannana BCCed Mango on an email to Apple. Then Mango would see a header that says that.
+
+    
+    From: Bannana <bannana@orange.com>
+    To: Apple <apple@pear.com>
+    BCC: mango <mango@plum.com>
+
+If one BCC's a mailing list then:
+
+    
+    From: Bannana <bannana@orange.com>
+    To: Apple <apple@pear.com>
+    BCC: Fruits <fruits%pear.com>
+    Delivered To: mango <mango@plum.com>
+
+is what Mango would see. Everyone on that list knows what list was BCCed. Apple, however, is in the dark.
+
+There is no way to see who is on a mailing list unless you are an owner of that list. Of course the owner might make that information availible some other way.
+
+\== Timestamps ==
+
+All timestamps in the email header should use ISO 8601 in the following way: 2007-12-21 17:47:01-05:00. Clients can convert to local timezone if they wish. Clients may diplay dates using local conventions as well.
+
+There are multiple timestamps in the header
+
+    
+    Date = when the client started to transmit
+    DateS = when the Sending server recieved the message
+    DateL = when the listsrev recieved the messafe
+    DateR = when the recieving server recieved the message
+    DateC = when the recieving client first noticed it
+
+Client machines often have incorrect clocks. Servers are encouraged to use NTP to keep thier clocks up to date, so maybe a client could be configured to use DateS to timestamp the real message.
+
+\== Dead addresses ==
+
+Since mail can no longer be forwarded, what happens when you get a new email address?
+
+All email servers should keep a list of no-longer active email addresses and give an apropriate error code for undeliverable mail.
+
+Delivery status:
+
+    
+    Deliverable
+    Undeliverable - no such address
+    Undeliverable - account closed 
+
+When a mail account is closed, the user or administrator can add a 1kb plain text (UTF-8) message explaining why it is closed and maybe another address to try.
+
+This message should get back to the sender somehow, but not in the form of another email.
+
+\== Problems with this approach ==
+
+A lot of coding. But most of it is really simple stuff.
+
+Clients will need to be able to connect to both kinds of email servers for the interum.
+
+Mail-sorting rules might be difficult to stadardize.
+
+The standard needs to specify EVERYTHING, so that various implementations are fully compatable.
+
+The NSA will find it much more difficlt to spy on your email. Servers could be designed with a wiretap mode where all emails to and from a particular address are automatically forwarded to the apropriate law enforcement.
+
+It will be much simpler to fight spam: simply delete the offending dns entries.
+
+This gives too much power to the DNS servers and the certificate authorities.
+
+What about servers that aren't connected to the internet 99+% of the time (most are)?

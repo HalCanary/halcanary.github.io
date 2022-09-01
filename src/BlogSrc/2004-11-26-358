@@ -3,140 +3,175 @@ TITLE=FC3
 DATE=2004-11-26 17:16:23
 POSTID=358
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<p>I installed Fedora Core 3 on my workstaion at home this month. It works fine; I get slightly more up to date versions of the software I use, no big deal.  For those who care (really, for my own reference), here's how I set things up.<br />
-<!--more--><br />
-<strong>FILESYSTEM</strong></p>
-<p>This is how I set up my hard drive.  I planned on formatting every partition except for /home.  /home also contained a copy of the four CDs, aquired from a torrent. FC3-i386-disc{1,2,3,4}.iso. I only burnt the first CD.  The others could live on disc. (Use &ldquo;linux askmethod&ldquo; at the boot prompt to make this work.)</p>
-<pre>
-Filesystem	1M-blocks	Mounted on
-/dev/hdb1	      190	/boot
-/dev/hdb2	     7706	/
-/dev/hdb3	    18122	/home
-/dev/hdb5	      471	/waste
-/dev/hdb6	    ~2048	[SWAP]
-</pre>
-<p><strong>PREPARE</strong></p>
-<p>Save a copy of /etc onto /home partition.  If I wanted, I could save all or part of /var as well.</p>
-<pre>cp -r /etc /home/etc-$(date +%Y-%m-%d)</pre>
-<p><strong>FSTAB</strong></p>
-<p>I went ahead and installed.  After installing, I had to get my /home partition mounted correctly and then link /usr/local to /home/local . I did all of this before I logged in.</p>
-<pre>
-echo '/dev/hdb3 /home ext3 defaults 1 2' &#0092;
-	&gt; /etc/fstab
-mv /home /OLD.home
-mkdir /home
-mount /home
-mv /usr/local /usr/OLD.local
-ln -s /home/local/ /usr/local
-</pre>
-<p><strong>SUDOERS</strong></p>
-<p>Add myself to the wheel group.  Give that group sudoers access. Do everything else with suders.</p>
-<pre>
-system-config-users
-emacs /etc/sudoers
-</pre>
-<p><strong>PACKAGES</strong></p>
-<p>Import keys for rpm/yum.</p>
-<pre>
-rpm --import /usr/share/doc/fedora-release-3/RPM-GPG-KEY*
-rpm --import http://www.fedora.us/FEDORA-GPG-KEY
-rpm --import http://rpm.livna.org/RPM-LIVNA-GPG-KEY
-rpm --import http://freshrpms.net/packages/RPM-GPG-KEY.txt
-rpm --import http://dag.wieers.com/packages/RPM-GPG-KEY.dag.txt
-rpm --import http://atrpms.net/RPM-GPG-KEY.atrpms
-rpm --import http://newrpms.sunsite.dk/gpg-pubkey-newrpms.txt
-rpm --import http://www.jpackage.org/jpackage.asc
-</pre>
-<p>Do my first update:</p>
-<pre>
-yum update
-</pre>
-<p>Reboot if I got a new kernel.</p>
-<p>I keep useful packages in /usr/local/packages.  Install them.</p>
-<pre>
-rpm -Uvh /usr/local/packages/gqview-1.4.1-2.i386.rpm
-rpm -Uvh /usr/local/packages/RealPlayer10GOLD.rpm
-rpm -Uvh /usr/local/packages/acroread-5.0.8-1.1.fc2.dag.i386.rpm
-rpm -Uvh /usr/local/packages/jdk-1_5_0-linux-i586.rpm
-</pre>
-<p>Set up java.  </p>
-<pre>
-cat &lt;&lt;EOF &gt; /etc/profile.d/java.sh
-export JAVA_HOME="/usr/java/jdk1.5.0"
-export JAVA_PATH="$JAVA_HOME"
-export PATH="$PATH:$JAVA_HOME/bin"
-export JDK_HOME="$JAVA_HOME"
-EOF
-ln -s /usr/java/jdk1.5.0/jre/plugin/i386/ns7/libjavaplugin_oji.so &#0092;
-  /usr/lib/mozilla/plugins/
-</pre>
-<p>Setup yum.conf correctly (add some repos).  See <a href="http://www.fedorafaq.org/">http://www.fedorafaq.org/</a>.</p>
-<pre>
-emacs -nw  /etc/yum.conf
-yum -y update
-</pre>
-<p>Install some evil packages</p>
-<pre>
-yum install unrar libdvdnav libdvdplay libdvdread xvidcore
-yum install ogle aalib screen bash-completion bittorrent
-yum install id3v2 epic gftp xine grip dhcp
-</pre>
-<p>Some things to make mplayer (which lives in /usr/local) happy.  Add /usr/local/lib to /etc/ld.so.conf.  Change PRELINK_OPTS so that mplayer doesn't crash. Put "dev.rtc.max-user-freq = 1024" in /etc/sysctl.conf</p>
-<pre>
-emacs -nw  /etc/ld.so.conf
-/sbin/ldconfig
-ln -s /usr/local/lib/codec /usr/lib/win32
-emacs -nw  /etc/sysconfig/prelink
-touch /var/lib/misc/prelink.force
-/etc/cron.daily/prelink
-execstack -s /usr/local/bin/mplayer
-emacs -nw  /etc/sysctl.conf
-/sbin/sysctl -p /etc/sysctl.conf
-</pre>
-<p><strong>BASIC SETUP</strong></p>
-<p>Setup basic things.  Printer, time.</p>
-<pre>
-system-config-printer
-system-config-time
-</pre>
-<p>Grab my old SSHD keys.</p>
-<pre>
-cd /etc/ssh
-/sbin/service sshd stop
-rename key key.OLD *_key
-rename pub pub.OLD *.pub
-cp /home/etc-2004-11-10/ssh/*key* .
-/sbin/service sshd start
-</pre>
-<p>My workstation doubles as a router, so I need to: Play with network settings.  Set "net.ipv4.ip_forward = 1" in /etc/sysctl.conf .  Use my custom iptables script.  Set up dhcpd</p>
-<pre>
-system-config-network
-system-config-services
+I installed Fedora Core 3 on my workstaion at home this month. It works fine; I get slightly more up to date versions of the software I use, no big deal. For those who care (really, for my own reference), here's how I set things up.  
+  
+**FILESYSTEM**
 
-/sbin/chkconfig iptables on
-/usr/local/sbin/iptables-script.sh
-/sbin/service iptables save
+This is how I set up my hard drive. I planned on formatting every partition except for /home. /home also contained a copy of the four CDs, aquired from a torrent. FC3-i386-disc{1,2,3,4}.iso. I only burnt the first CD. The others could live on disc. (Use “linux askmethod“ at the boot prompt to make this work.)
 
-emacs -nw  /etc/sysctl.conf
-/sbin/sysctl -p /etc/sysctl.conf
+    
+    Filesystem	1M-blocks	Mounted on
+    /dev/hdb1	      190	/boot
+    /dev/hdb2	     7706	/
+    /dev/hdb3	    18122	/home
+    /dev/hdb5	      471	/waste
+    /dev/hdb6	    ~2048	[SWAP]
+    
 
-/sbin/chkconfig dhcpd on
-cp -i /home/etc-2004-11-10/dhcpd.conf /etc/dhcpd.conf
-/sbin/service dhcpd start
-</pre>
-<p>Set up services.  Shutdown all I can.</p>
-<pre>
-system-config-services
-</pre>
-<p><strong>UPDATE 2004-12-06:</strong> Set up alsa right for my sound card. PROPER MIXING!</p>
-<pre>
-cat &lt;&lt;EOF &gt; $HOME/.asoundrc
-pcm.!default {
-        type plug
-        slave.pcm "dmix"
-}
-EOF
-</pre>
+**PREPARE**
 
+Save a copy of /etc onto /home partition. If I wanted, I could save all or part of /var as well.
+
+    cp -r /etc /home/etc-$(date +%Y-%m-%d)
+
+**FSTAB**
+
+I went ahead and installed. After installing, I had to get my /home partition mounted correctly and then link /usr/local to /home/local . I did all of this before I logged in.
+
+    
+    echo '/dev/hdb3 /home ext3 defaults 1 2' \
+    	> /etc/fstab
+    mv /home /OLD.home
+    mkdir /home
+    mount /home
+    mv /usr/local /usr/OLD.local
+    ln -s /home/local/ /usr/local
+    
+
+**SUDOERS**
+
+Add myself to the wheel group. Give that group sudoers access. Do everything else with suders.
+
+    
+    system-config-users
+    emacs /etc/sudoers
+    
+
+**PACKAGES**
+
+Import keys for rpm/yum.
+
+    
+    rpm --import /usr/share/doc/fedora-release-3/RPM-GPG-KEY*
+    rpm --import http://www.fedora.us/FEDORA-GPG-KEY
+    rpm --import http://rpm.livna.org/RPM-LIVNA-GPG-KEY
+    rpm --import http://freshrpms.net/packages/RPM-GPG-KEY.txt
+    rpm --import http://dag.wieers.com/packages/RPM-GPG-KEY.dag.txt
+    rpm --import http://atrpms.net/RPM-GPG-KEY.atrpms
+    rpm --import http://newrpms.sunsite.dk/gpg-pubkey-newrpms.txt
+    rpm --import http://www.jpackage.org/jpackage.asc
+    
+
+Do my first update:
+
+    
+    yum update
+    
+
+Reboot if I got a new kernel.
+
+I keep useful packages in /usr/local/packages. Install them.
+
+    
+    rpm -Uvh /usr/local/packages/gqview-1.4.1-2.i386.rpm
+    rpm -Uvh /usr/local/packages/RealPlayer10GOLD.rpm
+    rpm -Uvh /usr/local/packages/acroread-5.0.8-1.1.fc2.dag.i386.rpm
+    rpm -Uvh /usr/local/packages/jdk-1_5_0-linux-i586.rpm
+    
+
+Set up java.
+
+    
+    cat <<EOF > /etc/profile.d/java.sh
+    export JAVA_HOME="/usr/java/jdk1.5.0"
+    export JAVA_PATH="$JAVA_HOME"
+    export PATH="$PATH:$JAVA_HOME/bin"
+    export JDK_HOME="$JAVA_HOME"
+    EOF
+    ln -s /usr/java/jdk1.5.0/jre/plugin/i386/ns7/libjavaplugin_oji.so \
+      /usr/lib/mozilla/plugins/
+    
+
+Setup yum.conf correctly (add some repos). See [http://www.fedorafaq.org/](http://www.fedorafaq.org/).
+
+    
+    emacs -nw  /etc/yum.conf
+    yum -y update
+    
+
+Install some evil packages
+
+    
+    yum install unrar libdvdnav libdvdplay libdvdread xvidcore
+    yum install ogle aalib screen bash-completion bittorrent
+    yum install id3v2 epic gftp xine grip dhcp
+    
+
+Some things to make mplayer (which lives in /usr/local) happy. Add /usr/local/lib to /etc/ld.so.conf. Change PRELINK\_OPTS so that mplayer doesn't crash. Put "dev.rtc.max-user-freq = 1024" in /etc/sysctl.conf
+
+    
+    emacs -nw  /etc/ld.so.conf
+    /sbin/ldconfig
+    ln -s /usr/local/lib/codec /usr/lib/win32
+    emacs -nw  /etc/sysconfig/prelink
+    touch /var/lib/misc/prelink.force
+    /etc/cron.daily/prelink
+    execstack -s /usr/local/bin/mplayer
+    emacs -nw  /etc/sysctl.conf
+    /sbin/sysctl -p /etc/sysctl.conf
+    
+
+**BASIC SETUP**
+
+Setup basic things. Printer, time.
+
+    
+    system-config-printer
+    system-config-time
+    
+
+Grab my old SSHD keys.
+
+    
+    cd /etc/ssh
+    /sbin/service sshd stop
+    rename key key.OLD *_key
+    rename pub pub.OLD *.pub
+    cp /home/etc-2004-11-10/ssh/*key* .
+    /sbin/service sshd start
+    
+
+My workstation doubles as a router, so I need to: Play with network settings. Set "net.ipv4.ip\_forward = 1" in /etc/sysctl.conf . Use my custom iptables script. Set up dhcpd
+
+    
+    system-config-network
+    system-config-services
+    
+    /sbin/chkconfig iptables on
+    /usr/local/sbin/iptables-script.sh
+    /sbin/service iptables save
+    
+    emacs -nw  /etc/sysctl.conf
+    /sbin/sysctl -p /etc/sysctl.conf
+    
+    /sbin/chkconfig dhcpd on
+    cp -i /home/etc-2004-11-10/dhcpd.conf /etc/dhcpd.conf
+    /sbin/service dhcpd start
+    
+
+Set up services. Shutdown all I can.
+
+    
+    system-config-services
+    
+
+**UPDATE 2004-12-06:** Set up alsa right for my sound card. PROPER MIXING!
+
+    
+    cat <<EOF > $HOME/.asoundrc
+    pcm.!default {
+            type plug
+            slave.pcm "dmix"
+    }
+    EOF

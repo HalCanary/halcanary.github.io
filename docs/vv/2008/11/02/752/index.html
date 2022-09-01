@@ -78,44 +78,43 @@ ul.flat li::before {content:"[";}
   </header>
   <div class="content e-content">
 <div style="display:none;"></div>
-<p>I was reading the other day the submission guidelines for a certain publishing house.  They wanted <a href="http://en.wikipedia.org/wiki/Rich_Text_Format">RTF</a> documents.  One would think plain text would be just as good, but it's easy enough to write a program that converts a utf8-encoded plain text document to a simple <a href="http://search.cpan.org/~sburke/RTF-Writer/lib/RTF/Cookbook.pod">RTF</a> document.  And the output is about a third of the size of the document that you would get from using oowriter.</p>
-<pre>#!/usr/bin/env python
+<p>I was reading the other day the submission guidelines for a certain publishing house. They wanted <a href="http://en.wikipedia.org/wiki/Rich_Text_Format">RTF</a> documents. One would think plain text would be just as good, but it's easy enough to write a program that converts a utf8-encoded plain text document to a simple <a href="http://search.cpan.org/~sburke/RTF-Writer/lib/RTF/Cookbook.pod">RTF</a> document. And the output is about a third of the size of the document that you would get from using oowriter.</p>
+<pre><code>#!/usr/bin/env python
 # txt2rtf.py
 # Written 2008 Hal Canary
 # Dedicated to the Public Domain
 import sys
 fi = sys.stdin
 fo = sys.stdout
-encoding = &#0039;UTF-8&#0039;
-fo.write(r&#0039;{&#0092;rtf1&#0092;ansi&#0092;deff0{&#0092;fonttbl{&#0092;f0 Times New Roman;}}&#0039;)
-fo.write(r&#0039;&#0092;paperh15840&#0092;paperw12240&#0092;margl1800&#0092;margr1800&#0092;margt1440&#0092;margb1440&#0092;fs24&#0039;)
-fo.write(&#0039;&#0092;n&#0039;)
+encoding = &#39;UTF-8&#39;
+fo.write(r&#39;{\rtf1\ansi\deff0{\fonttbl{\f0 Times New Roman;}}&#39;)
+fo.write(r&#39;\paperh15840\paperw12240\margl1800\margr1800\margt1440\margb1440\fs24&#39;)
+fo.write(&#39;\n&#39;)
 for line in fi:
   uline = unicode(line, encoding)
   for char in uline:
-    if (char == &quot;&#0092;n&quot;):
-      fo.write(&quot;&#0092;&#0092;par&#0092;n&quot;)
+    if (char == &quot;\n&quot;):
+      fo.write(&quot;\\par\n&quot;)
       continue
-    if (char == &quot;&#0092;t&quot;):
-      fo.write(&quot;&#0092;&#0092;tab &quot;)
+    if (char == &quot;\t&quot;):
+      fo.write(&quot;\\tab &quot;)
       continue
-    if (char == &quot;&#0092;&#0092;&quot;):
-      fo.write(&quot;&#0092;&#0092;&#0092;&#0092;&quot;)
+    if (char == &quot;\\&quot;):
+      fo.write(&quot;\\\\&quot;)
       continue
     if (char == &quot;{&quot;):
-      fo.write(&quot;&#0092;&#0092;{&quot;)
+      fo.write(&quot;\\{&quot;)
       continue
     if (char == &quot;}&quot;):
-      fo.write(&quot;&#0092;&#0092;}&quot;)
+      fo.write(&quot;\\}&quot;)
       continue
     ordchar = ord(char)
     if (ordchar &gt;= 128):
-      fo.write(&quot;&#0092;&#0092;u%d?&quot; % ordchar)
+      fo.write(&quot;\\u%d?&quot; % ordchar)
       continue
     fo.write(char)
-fo.write(&#0039;}&#0092;n&#0092;n&#0039;)
-</pre>
-<p>For a manuscript, you don't want to do any fancy formating, bold text, fonts, colors, curly quotes, et cetera.  This avoids all of that jazz.  One might want italic text, but that's not <a href="http://everything2.com/title/fASCIIst">fASCIIst</a> enough, is it?</p>
+fo.write(&#39;}\n\n&#39;)</code></pre>
+<p>For a manuscript, you don't want to do any fancy formating, bold text, fonts, colors, curly quotes, et cetera. This avoids all of that jazz. One might want italic text, but that's not <a href="http://everything2.com/title/fASCIIst">fASCIIst</a> enough, is it?</p>
   </div>
 </article>
 <hr>

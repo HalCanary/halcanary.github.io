@@ -3,16 +3,18 @@ TITLE=id3tag --genre
 DATE=2005-06-14 12:34:16
 POSTID=474
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<p><strong>WARNING:  boring linux-related post follows!</strong></p>
-<p>Here's how to quickly fix the genres of your mp3 colection.</p>
-<p>Get the list of genres</p>
-<pre>
-$ lame --genre-list | sort -n | column
-</pre>
-<p>Pick one.  In general, the lower the number, the more standard it is. Suppose we pick genre #17 (rock).</p>
-<pre>
-id3tag --genre=17 <em>filelist</em>
-</pre>
+**WARNING: boring linux-related post follows!**
 
+Here's how to quickly fix the genres of your mp3 colection.
+
+Get the list of genres
+
+    
+    $ lame --genre-list | sort -n | column
+    
+
+Pick one. In general, the lower the number, the more standard it is. Suppose we pick genre #17 (rock).
+
+    
+    id3tag --genre=17 filelist

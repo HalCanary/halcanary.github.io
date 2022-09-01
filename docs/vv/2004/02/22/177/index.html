@@ -79,8 +79,7 @@ ul.flat li::before {content:"[";}
   <div class="content e-content">
 <div style="display:none;"></div>
 <p>This is how to combine mkisofs and cdrecord. This should be a standard script on all systems, but it's not.</p>
-<pre>
-#!/bin/sh
+<pre><code>#!/bin/sh
 
 ## /usr/local/bin/burn-dir ##
 
@@ -89,22 +88,21 @@ ul.flat li::before {content:"[";}
 # mkisofs man page.  Assumes that
 # /etc/cdrecord.conf is correct.
 if [ $# -eq 0 ] ; then
-  echo -e "Useage:"
-  echo -e "  $0 directory &#0092;"Volume Name &#0092;""
+  echo -e &quot;Useage:&quot;
+  echo -e &quot;  $0 directory \&quot;Volume Name \&quot;&quot;
   exit 1
 fi
 CDROM=/dev/cdrom1
 
-cdblocks=`mkisofs -print-size -quiet -V &#0092;
-  "$2" -r -J -f $1`
+cdblocks=`mkisofs -print-size -quiet -V \
+  &quot;$2&quot; -r -J -f $1`
 
-echo "mkisofs -quiet -V \"$2\" -r -J -f $1 |&#0092;
-  cdrecord -v -pad  tsize=${cdblocks}s -"
-mkisofs -quiet -V "$2" -r -J -f $1 | &#0092;
+echo &quot;mkisofs -quiet -V \&quot;$2\&quot; -r -J -f $1 | \
+  cdrecord -v -pad  tsize=${cdblocks}s -&quot;
+mkisofs -quiet -V &quot;$2&quot; -r -J -f $1 | \
   cdrecord -v -pad tsize=${cdblocks}s -
 
-eject $CDROM
-</pre>
+eject $CDROM</code></pre>
   </div>
 </article>
 <hr>

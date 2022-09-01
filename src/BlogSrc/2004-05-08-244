@@ -3,10 +3,7 @@ TITLE=duh...add-hook
 DATE=2004-05-08 16:36:13
 POSTID=244
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<pre>
-;; from ~/.emacs
-(add-hook 'php-mode-hook 'html-mode)
-</pre>
-
+    
+    ;; from ~/.emacs
+    (add-hook 'php-mode-hook 'html-mode)

@@ -3,34 +3,37 @@ TITLE=lpr-text for CUPS
 DATE=2006-09-08 09:52:37
 POSTID=629
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<p>If you are using CUPS for your printing, there is no reason to continue using Enscript.</p>
-<pre>#!/bin/sh
-#DTPD#
-# http://cups.org/documentation.php/options.html
-# ~/bin/lpr-2col-text
-exec lpr -o page-left=36 &#92;
-        -o page-right=36 &#92;
-        -o page-top=72 &#92;
-        -o page-bottom=36 &#92;
-        -o columns=2 &#92;
-        -o landscape &#92;
-        -o cpi=16.842 &#92;
-        -o lpi=10.1052 "$@"
-# 80 columns width x 70 columns high x 2 columns
-</pre>
-<p>That's about 140  80-character lines per page, in two columns.  Somewhat analagous to "enscript -2r -B".  I leave room at the left margin for hole-punches, to make binding easier.</p>
-<p>In theory, this should handle Unicode characters much better than enscript or a2ps does.  If you are still having issues with unicode printing, try "ooffice - file".</p>
-<p>Here's the one-column version:</p>
-<pre>#!/bin/sh
-#DTPD#
-# http://cups.org/documentation.php/options.html
-# ~/bin/lpr-1col-text
-exec lpr -o page-left=72 &#92;
-        -o page-right=36 &#92;
-        -o page-top=36 &#92;
-        -o page-bottom=36 &#92;
-        -o cpi=11.43 -o lpi=6.858 "$@"
-# 80 columns width x 68 columns high</pre>
+If you are using CUPS for your printing, there is no reason to continue using Enscript.
 
+    #!/bin/sh
+    #DTPD#
+    # http://cups.org/documentation.php/options.html
+    # ~/bin/lpr-2col-text
+    exec lpr -o page-left=36 \
+            -o page-right=36 \
+            -o page-top=72 \
+            -o page-bottom=36 \
+            -o columns=2 \
+            -o landscape \
+            -o cpi=16.842 \
+            -o lpi=10.1052 "$@"
+    # 80 columns width x 70 columns high x 2 columns
+    
+
+That's about 140 80-character lines per page, in two columns. Somewhat analagous to "enscript -2r -B". I leave room at the left margin for hole-punches, to make binding easier.
+
+In theory, this should handle Unicode characters much better than enscript or a2ps does. If you are still having issues with unicode printing, try "ooffice - file".
+
+Here's the one-column version:
+
+    #!/bin/sh
+    #DTPD#
+    # http://cups.org/documentation.php/options.html
+    # ~/bin/lpr-1col-text
+    exec lpr -o page-left=72 \
+            -o page-right=36 \
+            -o page-top=36 \
+            -o page-bottom=36 \
+            -o cpi=11.43 -o lpi=6.858 "$@"
+    # 80 columns width x 68 columns high

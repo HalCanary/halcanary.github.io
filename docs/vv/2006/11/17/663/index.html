@@ -79,12 +79,11 @@ ul.flat li::before {content:"[";}
   <div class="content e-content">
 <div style="display:none;"></div>
 <p>Read <em>Head Rush Ajax</em> yesterday. If you already know Javascript and the DOM, all there is left to learn about the magic of Ajax is the XMLHttpRequest / Msxml2.XMLHTTP / Microsoft.XMLHTTP functions, which aparently all work identically.</p>
-<pre>
-/* ajax-http-request.js */
+<pre><code>/* ajax-http-request.js */
 function newHttpRequest() {
   var request = null;
   try {
-    request = new <a href="http://en.wikipedia.org/wiki/XMLHttpRequest">XMLHttpRequest()</a>;
+    request = new XMLHttpRequest();
   } catch (trymicrosoft) {
     try {
       request = new ActiveXObject(&quot;Msxml2.XMLHTTP&quot;);
@@ -97,11 +96,9 @@ function newHttpRequest() {
     }
   }
   return(request);
-}
-</pre>
+}</code></pre>
 <p>Given that simple library file, you can do this:</p>
-<pre>
-/* some-other-javascript-file.js */
+<pre><code>/* some-other-javascript-file.js */
 var req = newHttpRequest();
 if (req == null)
   alert(&quot;Error creating request object!&quot;);
@@ -116,8 +113,7 @@ function dealWithResponse() {
 }
 req.open(&quot;GET&quot;, &quot;someurl&quot;, true);
 req.onreadystatechange = dealWithResponse;
-req.send(null);
-</pre>
+req.send(null);</code></pre>
 <p>And that's all you really need to know to do Ajax.</p>
   </div>
 </article>

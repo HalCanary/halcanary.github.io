@@ -78,7 +78,7 @@ ul.flat li::before {content:"[";}
   </header>
   <div class="content e-content">
 <div style="display:none;"></div>
-<pre>#!/usr/bin/perl
+<pre><code>#!/usr/bin/perl
 ## otpasswd --- One Time Passwd
 ## Generate a random password unsuitable
 ## for memorization.
@@ -88,17 +88,17 @@ ul.flat li::before {content:"[";}
 use strict;
 use warnings;
 foreach my $x (0 .. 19) {
-	my $num = int(rand(62));
-	if ($num &lt; 10) {
-		$num += 48;
-	} elsif ($num &lt; 36) {
-		$num += (65-10);
-	} else {
-		$num += (97-36);
-	}
-	printf("%c",$num);
+    my $num = int(rand(62));
+    if ($num &lt; 10) {
+        $num += 48;
+    } elsif ($num &lt; 36) {
+        $num += (65-10);
+    } else {
+        $num += (97-36);
+    }
+    printf(&quot;%c&quot;,$num);
 }
-print "&#0092;n";</pre>
+print &quot;\n&quot;;</code></pre>
   </div>
 </article>
 <hr>

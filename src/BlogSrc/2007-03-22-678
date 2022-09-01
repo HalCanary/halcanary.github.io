@@ -3,21 +3,22 @@ TITLE=timeinmicroseconds.c
 DATE=2007-03-22 15:50:15
 POSTID=678
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<p>I wrote this today as a demonstration of where /dev/random gets all its randomness.</p>
-<pre>/* Copyright 2007 Hal Canary, https://halcanary.org/
-Dedicated to the Public Domain. */
-#include &lt;stdio.h&gt;
-#include &lt;sys/time.h&gt;
-int main(void) {
-        struct timeval x;
-        struct timezone t;
-        gettimeofday(&amp;x, &amp;t);
-        printf(&quot;%u.%06u&#0092;n&quot;,x.tv_sec,x.tv_usec);
-        return(0);
-}</pre>
-<p>And then...</p>
-<pre>$ cc -o timeinmicroseconds timeinmicroseconds.c
-$ while read -s -n 1 x ; do ./timeinmicroseconds ; done</pre>
+I wrote this today as a demonstration of where /dev/random gets all its randomness.
 
+    /* Copyright 2007 Hal Canary, https://halcanary.org/
+    Dedicated to the Public Domain. */
+    #include <stdio.h>
+    #include <sys/time.h>
+    int main(void) {
+            struct timeval x;
+            struct timezone t;
+            gettimeofday(&x, &t);
+            printf("%u.%06u\n",x.tv_sec,x.tv_usec);
+            return(0);
+    }
+
+And then...
+
+    $ cc -o timeinmicroseconds timeinmicroseconds.c
+    $ while read -s -n 1 x ; do ./timeinmicroseconds ; done

@@ -3,47 +3,46 @@ TITLE=guitar chord charts
 DATE=2009-08-12 18:59:01
 POSTID=780
 CATEGORIES=music;
-MODE=htmldiv
 
-<p>I'm fooling around with a guitar and wanted to take notes on a blank page of guitar chord charts, so I post-scripted this one: <a href="/pub/tablature.pdf">pdf file</a>.</p>
-<pre>%!
-%% Written 2009 Hal Canary
-%% Dedicated to the Public Domain
-/Times-Roman findfont
-14 scalefont setfont
-/inch {72 mul} def
-/tabu {
-  newpath
-  moveto
-  90 0 rlineto   0 115 rlineto
-  -90 0 rlineto  0 -115 rlineto
-  0 23 rmoveto   90 0 rlineto
-  0 23 rmoveto   -90 0 rlineto
-  0 23 rmoveto   90 0 rlineto
-  0 23 rmoveto   -90 0 rlineto
-  18 23 rmoveto  0 -115 rlineto
-  18 0 rmoveto   0 115 rlineto
-  18 0 rmoveto   0 -115 rlineto
-  18 0 rmoveto   0 115 rlineto
-  -76 3 rmoveto  (E) show
-  9 0 rmoveto    (A) show
-  8 0 rmoveto    (D) show
-  8 0 rmoveto    (G) show
-  8 0 rmoveto    (B) show
-  8 0 rmoveto    (E) show
-  closepath
-  stroke
-} def
-/trow {
-  inch dup dup dup
-  2.5 inch exch tabu
-  0.5 inch exch tabu
-  4.5 inch exch tabu
-  6.5 inch exch tabu
-} def
-1 trow
-3.5 trow
-6 trow
-8.5 trow
-showpage</pre>
+I'm fooling around with a guitar and wanted to take notes on a blank page of guitar chord charts, so I post-scripted this one: [pdf file](/pub/tablature.pdf).
 
+    %!
+    %% Written 2009 Hal Canary
+    %% Dedicated to the Public Domain
+    /Times-Roman findfont
+    14 scalefont setfont
+    /inch {72 mul} def
+    /tabu {
+      newpath
+      moveto
+      90 0 rlineto   0 115 rlineto
+      -90 0 rlineto  0 -115 rlineto
+      0 23 rmoveto   90 0 rlineto
+      0 23 rmoveto   -90 0 rlineto
+      0 23 rmoveto   90 0 rlineto
+      0 23 rmoveto   -90 0 rlineto
+      18 23 rmoveto  0 -115 rlineto
+      18 0 rmoveto   0 115 rlineto
+      18 0 rmoveto   0 -115 rlineto
+      18 0 rmoveto   0 115 rlineto
+      -76 3 rmoveto  (E) show
+      9 0 rmoveto    (A) show
+      8 0 rmoveto    (D) show
+      8 0 rmoveto    (G) show
+      8 0 rmoveto    (B) show
+      8 0 rmoveto    (E) show
+      closepath
+      stroke
+    } def
+    /trow {
+      inch dup dup dup
+      2.5 inch exch tabu
+      0.5 inch exch tabu
+      4.5 inch exch tabu
+      6.5 inch exch tabu
+    } def
+    1 trow
+    3.5 trow
+    6 trow
+    8.5 trow
+    showpage

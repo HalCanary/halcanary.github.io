@@ -80,30 +80,32 @@ ul.flat li::before {content:"[";}
 <div style="display:none;"></div>
 <p>I wanted to test out the response time of my new LCD monitor, so I downloaded some games for my Fedora Core 6 system.</p>
 <p>All of the games I am reviewing are:</p>
-<p>	1) Free/Open Source Software, including the game data files.  This is a fine distinction that I should explain.  For example, Id Software has released the game engines for Doom and Quakes 1, 2, and 3 under the General Public License, but they did not release the game content under a new license.  Qfusion is a derivative of the Quake2 engine that is FOSS, but the game Warsaw that makes use of the Qfusion engine comes with proprietary game content, so Warsaw as a whole is not F/OSS.</p>
-<p>	2) In the Fedora Extras repository.  This guarantees that the game will run on my system and if I have a problem, I can file a bug against it at bugzilla.redhat.com.  Installation is this easy:</p>
-<pre>sudo yum install supertux supertuxkart &#0092;
-     ppracer prboom freedoom xpilot-ng</pre>
+<ol type="1">
+<li><p>Free/Open Source Software, including the game data files. This is a fine distinction that I should explain. For example, Id Software has released the game engines for Doom and Quakes 1, 2, and 3 under the General Public License, but they did not release the game content under a new license. Qfusion is a derivative of the Quake2 engine that is FOSS, but the game Warsaw that makes use of the Qfusion engine comes with proprietary game content, so Warsaw as a whole is not F/OSS.</p></li>
+<li><p>In the Fedora Extras repository. This guarantees that the game will run on my system and if I have a problem, I can file a bug against it at bugzilla.redhat.com. Installation is this easy:</p>
+<p>sudo yum install supertux supertuxkart<br />
+ppracer prboom freedoom xpilot-ng</p></li>
+</ol>
 <p><strong>Supertux 0.1.3</strong></p>
-<p>Supertux is a game patterned after Super Mario Brothers.  If I had a joystick similar to the NES controller (like maybe a Gravis (I used to have one, but I fried it while hacking my USB controller card.)), I'd probably be happier with this game.  Or if it was 1986.  Then I'd be super psyched about this game and every day all summer I'd go over to Wilson's house and play against him until I learned the game.  This game is somewhat monotonous.  Setting it in Antarctica limits the color pallet.</p>
-<p><img src="/images/2006-11-30-scrnsht-supertux.png" width="320" height="240" alt="[screenshot]" /></p>
+<p>Supertux is a game patterned after Super Mario Brothers. If I had a joystick similar to the NES controller (like maybe a Gravis (I used to have one, but I fried it while hacking my USB controller card.)), I'd probably be happier with this game. Or if it was 1986. Then I'd be super psyched about this game and every day all summer I'd go over to Wilson's house and play against him until I learned the game. This game is somewhat monotonous. Setting it in Antarctica limits the color pallet.</p>
+<p><img src="/images/2006-11-30-scrnsht-supertux.png" alt="[screenshot]" /></p>
 <p><strong>SuperTuxkart 0.2</strong></p>
-<p><a href="http://supertuxkart.berlios.de/">Super Tux Kart</a> is a homage to Mario Kart.  It features a similar split-screen multiplayer mode.  It might be fun to plug two or four USB gamepads into my USB hub and play with friends.</p>
+<p><a href="http://supertuxkart.berlios.de/">Super Tux Kart</a> is a homage to Mario Kart. It features a similar split-screen multiplayer mode. It might be fun to plug two or four USB gamepads into my USB hub and play with friends.</p>
 <p><strong>PPRacer 0.3.1</strong></p>
-<p>PlanetPenguin Racer is the current version of what used to be called Tux Racer 0.6.1, with a new development team.  Not much has changed.  It works perfectly on any accelerated video card, including my Radeon 9200+F/OSS driver.</p>
-<p>If you've never played it, this is a downhill racing game.  It's somewhat fun and fairly challenging.</p>
-<p><img src="/images/2006-11-30-scrnsht-ppracer.png" width="320" height="240" alt="[screenshot]" /></p>
+<p>PlanetPenguin Racer is the current version of what used to be called Tux Racer 0.6.1, with a new development team. Not much has changed. It works perfectly on any accelerated video card, including my Radeon 9200+F/OSS driver.</p>
+<p>If you've never played it, this is a downhill racing game. It's somewhat fun and fairly challenging.</p>
+<p><img src="/images/2006-11-30-scrnsht-ppracer.png" alt="[screenshot]" /></p>
 <p><strong>PrBoom v2.4.7 / FreeDoom 0.5</strong></p>
-<p>PrBoom is the engine, derived from the Doom engine.  FreeDoom is the F/OSS game content for that engine.  The graphics for this aren't bad on my Radeon 9200 (with the free radeon driver) as long as you enable the openGL mode.</p>
-<pre>prboom -vidmode gl</pre>
-<p>Caveat:  they aren't bad compared to, say the original Doom running on my 386 back in the day.  They are primitive compared to quake3 or doom3 but I have yet to get those games to run under the F/OSS driver for my video card.  But <code>prboom -vidmode gl</code> is almost as good as OpenGL quake2.</p>
-<p>I hate to say it, but even after all these years this is a fun game.  Who doesn't like to kill demons with a shotgun?</p>
-<p><img src="/images/2006-11-30-scrnsht-prboom.png" width="320" height="240" alt="[screenshot]" /></p>
+<p>PrBoom is the engine, derived from the Doom engine. FreeDoom is the F/OSS game content for that engine. The graphics for this aren't bad on my Radeon 9200 (with the free radeon driver) as long as you enable the openGL mode.</p>
+<pre><code>prboom -vidmode gl</code></pre>
+<p>Caveat: they aren't bad compared to, say the original Doom running on my 386 back in the day. They are primitive compared to quake3 or doom3 but I have yet to get those games to run under the F/OSS driver for my video card. But <code>prboom -vidmode gl</code> is almost as good as OpenGL quake2.</p>
+<p>I hate to say it, but even after all these years this is a fun game. Who doesn't like to kill demons with a shotgun?</p>
+<p><img src="/images/2006-11-30-scrnsht-prboom.png" alt="[screenshot]" /></p>
 <p><strong>xpilot-ng-sdl 4.7.2</strong></p>
-<p>XPilot is a fun online multiplayer game.  If you played SubSpace on Windows, you've seen a similar game.  It's a Multiplayer Online Third Person Shooter (MOTPS).  XPilot came out in 1991, had primitive graphics, and only worked on Unix/X11.  In 1997, SubSpace was written for Windows:  it had much better graphics and had been written from scratch.  In 2000, the XPilot NG project was started to update the XPilot graphics system to use SDL/OpenGL (the cross-platform equivalent of DirectDraw/Direct3D).</p>
-<p><img src="/images/2006-11-30-scrnsht-xpilot-ng-sdl.png" width="320" height="240" alt="[screenshot]" /></p>
+<p>XPilot is a fun online multiplayer game. If you played SubSpace on Windows, you've seen a similar game. It's a Multiplayer Online Third Person Shooter (MOTPS). XPilot came out in 1991, had primitive graphics, and only worked on Unix/X11. In 1997, SubSpace was written for Windows: it had much better graphics and had been written from scratch. In 2000, the XPilot NG project was started to update the XPilot graphics system to use SDL/OpenGL (the cross-platform equivalent of DirectDraw/Direct3D).</p>
+<p><img src="/images/2006-11-30-scrnsht-xpilot-ng-sdl.png" alt="[screenshot]" /></p>
 <p><strong>Other</strong></p>
-<p>There are two multiplayer games I want to test out at some point in the future:  OpenArena and Tremulous, both bases on the GPLed Quake3 engine.  Tremulous can be downloaded from Fedora Extras.  OpenArena cannot yet.</p>
+<p>There are two multiplayer games I want to test out at some point in the future: OpenArena and Tremulous, both bases on the GPLed Quake3 engine. Tremulous can be downloaded from Fedora Extras. OpenArena cannot yet.</p>
   </div>
 </article>
 <hr>

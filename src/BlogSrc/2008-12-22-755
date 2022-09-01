@@ -3,39 +3,54 @@ TITLE=icecast+liveice
 DATE=2008-12-22 08:43:49
 POSTID=755
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<p>Setting up icecast+liveice so I can stream music from my PC to the internet.  A simple </p>
-<pre>sudo apt-get install -y liveice icecast-server</pre>
-<p>installs the software.  Use</p>
-<pre>makepasswd --crypt</pre>
-<p>to make a password and a hash of that password for the icecast server.  Edit the /etc/icecast/icecast.conf to put the hashed password in there.  Set port, hostname, and server_name.  I used my dyndns hostname for my server name and used 8888 for my port.  I was sure to open that port on my firewall and forward it on my nat/router.  Restart the server with </p>
-<pre>sudo /etc/init.d/icecast-server start</pre>
-<p>Check the logs with </p>
-<pre>tail -f /var/log/icecast/icecast.log</pre>
-<p>That will let you know if you have password errors connecting to the icecast server.</p>
-<p>Now edit the file $HOME/.liveice.cfg by starting with the example found on the internets.  Some of the values I put in are:</p>
-<pre>SERVER localhost
-PORT 8888
-X_AUDIOCAST_LOGIN
-PASSWORD XXXXXXXXXXXX
-MOUNTPOINT /x
-NO_SOUNDCARD
-MIXER
-PLAYLIST /home/hal/playlist.pl</pre>
-<p>Be sure to set all the values, not just the ones I listed.</p>
-<pre>#!/bin/sh
-# $HOME/bin/startliveice.sh
-# DTPD
-DIR=&quot;/d/music/&quot;
-find &quot;${DIR}&quot; -name &#0039;*.mp3&#0039; &#0092;
-  | ${HOME}/bin/randomize-list.py &#0092;
-  &gt; ${HOME}/playlist.pl
-exec liveice -F ${HOME}/.liveice.cfg &#0092;
-  2&gt; /dev/null</pre>
-<p>Now you're ready to start the liveice program.  Read /usr/share/doc/liveice/README.liveice.gz to find out the commands for the curses frontend.  </p>
-<p>Check that it's working with </p>
-<pre>mplayer -quiet -cache 32 http://127.0.0.1:8888/x</pre>
-<p>If I'm broadcasting, check me at at </p>
-<pre>http://halcanary.dyndns.org:8888/x</pre>
+Setting up icecast+liveice so I can stream music from my PC to the internet. A simple
 
+    sudo apt-get install -y liveice icecast-server
+
+installs the software. Use
+
+    makepasswd --crypt
+
+to make a password and a hash of that password for the icecast server. Edit the /etc/icecast/icecast.conf to put the hashed password in there. Set port, hostname, and server\_name. I used my dyndns hostname for my server name and used 8888 for my port. I was sure to open that port on my firewall and forward it on my nat/router. Restart the server with
+
+    sudo /etc/init.d/icecast-server start
+
+Check the logs with
+
+    tail -f /var/log/icecast/icecast.log
+
+That will let you know if you have password errors connecting to the icecast server.
+
+Now edit the file $HOME/.liveice.cfg by starting with the example found on the internets. Some of the values I put in are:
+
+    SERVER localhost
+    PORT 8888
+    X_AUDIOCAST_LOGIN
+    PASSWORD XXXXXXXXXXXX
+    MOUNTPOINT /x
+    NO_SOUNDCARD
+    MIXER
+    PLAYLIST /home/hal/playlist.pl
+
+Be sure to set all the values, not just the ones I listed.
+
+    #!/bin/sh
+    # $HOME/bin/startliveice.sh
+    # DTPD
+    DIR="/d/music/"
+    find "${DIR}" -name '*.mp3' \
+      | ${HOME}/bin/randomize-list.py \
+      > ${HOME}/playlist.pl
+    exec liveice -F ${HOME}/.liveice.cfg \
+      2> /dev/null
+
+Now you're ready to start the liveice program. Read /usr/share/doc/liveice/README.liveice.gz to find out the commands for the curses frontend.
+
+Check that it's working with
+
+    mplayer -quiet -cache 32 http://127.0.0.1:8888/x
+
+If I'm broadcasting, check me at at
+
+    http://halcanary.dyndns.org:8888/x

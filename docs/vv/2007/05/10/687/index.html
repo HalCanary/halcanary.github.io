@@ -78,15 +78,14 @@ ul.flat li::before {content:"[";}
   </header>
   <div class="content e-content">
 <div style="display:none;"></div>
-<pre>#!/bin/sh
+<pre><code>#!/bin/sh
 #~/bin/infoless
 #DTPD#
 if [ $# -ne 1 ] ; then
   echo &quot;which page?&quot;
   exit 1
 fi
-exec info $1 2&gt; /dev/null | less
-</pre>
+exec info $1 2&gt; /dev/null | less</code></pre>
   </div>
 </article>
 <hr>

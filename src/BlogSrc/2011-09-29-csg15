@@ -3,7 +3,7 @@ TITLE=.emacs look and feel
 DATE=2011-09-29 12:00:00
 POSTID=csg15
 
-<pre>
+<pre><code>
 ;_____________________________________________________________________
 ;
 ;	 Look And Feel
@@ -31,4 +31,4 @@ POSTID=csg15
 (global-set-key (kbd &quot;C-h&quot;) 'backward-delete-char-untabify)
 (global-set-key	[(control s)] 'save-buffer)
 (global-set-key	[(control f)] 'isearch-forward)
-(define-key isearch-mode-map [(control f)] 'isearch-repeat-forward)</pre>
+(define-key isearch-mode-map [(control f)] 'isearch-repeat-forward)</code></pre>

@@ -79,8 +79,7 @@ ul.flat li::before {content:"[";}
   <div class="content e-content">
 <div style="display:none;"></div>
 <p>I've been getting attacks against my sshd server:</p>
-<pre>
-Failed logins from these:
+<pre><code>Failed logins from these:
    admin/password from 12.47.62.139: 2 Time(s)
    admin/password from 134.21.2.227: 2 Time(s)
    guest/password from 12.47.62.139: 1 Time(s)
@@ -94,15 +93,12 @@ Failed logins from these:
    test/password from 210.1.9.227: 1 Time(s)
    test/password from 61.193.179.162: 1 Time(s)
    user/password from 12.47.62.139: 1 Time(s)
-   user/password from 134.21.2.227: 1 Time(s)
-</pre>
+   user/password from 134.21.2.227: 1 Time(s)</code></pre>
 <p>If you have one of these common accounts, shut off logins from them:</p>
-<pre>
-## lines added to /etc/ssh/sshd_config
+<pre><code>## lines added to /etc/ssh/sshd_config
 PermitRootLogin no
 DenyUsers admin guest test user
-## EOF
-</pre>
+## EOF</code></pre>
   </div>
 </article>
 <hr>

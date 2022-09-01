@@ -79,22 +79,21 @@ ul.flat li::before {content:"[";}
   <div class="content e-content">
 <div style="display:none;"></div>
 <p>To check out http headers, you can use telnet, but I've found it easier to use <code>nc</code> (netcat):</p>
-<pre>H=&quot;en.wikipedia.org&quot;
+<pre><code>H=&quot;en.wikipedia.org&quot;
 G=&quot;/&quot;
-echo -en &quot;GET $G HTTP/1.1&#0092;r&#0092;nHost: $H&#0092;r&#0092;n&#0092;r&#0092;n&quot; &#0092;
-    | nc $H 80
-</pre>
+echo -en &quot;GET $G HTTP/1.1\r\nHost: $H\r\n\r\n&quot; \
+    | nc $H 80</code></pre>
 <p>Here's a script:</p>
-<pre>#!/bin/sh
+<pre><code>#!/bin/sh
 #DTPD#
 if [ &quot;$#&quot; -ne 2 ] ;  then
-  echo -e &quot;useage:&#0092;n  $0 HOST RESOURCE&quot;
-  echo -e &quot;for example:&#0092;n  $0 www.google.com /&quot;
+  echo -e &quot;useage:\n  $0 HOST RESOURCE&quot;
+  echo -e &quot;for example:\n  $0 www.google.com /&quot;
   exit 1
 fi
-echo -en &quot;GET $2 HTTP/1.1&#0092;r&#0092;nHost: $1&#0092;r&#0092;n&#0092;r&#0092;n&quot;
-echo -en &quot;GET $2 HTTP/1.1&#0092;r&#0092;nHost: $1&#0092;r&#0092;n&#0092;r&#0092;n&quot; &#0092;
-  | nc $1 80</pre>
+echo -en &quot;GET $2 HTTP/1.1\r\nHost: $1\r\n\r\n&quot;
+echo -en &quot;GET $2 HTTP/1.1\r\nHost: $1\r\n\r\n&quot; \
+  | nc $1 80</code></pre>
   </div>
 </article>
 <hr>

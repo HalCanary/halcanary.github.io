@@ -79,19 +79,18 @@ ul.flat li::before {content:"[";}
   <div class="content e-content">
 <div style="display:none;"></div>
 <p><a href="http://en.wikipedia.org/wiki/POSIX">POSIX</a> defines a command-line calculator language/interpretor known as<br />
-<em>bc</em>.  <a href="http://en.wikipedia.org/wiki/Bc_programming_language">bc</a> is convientent but fairly light on the included math<br />
-functions.  I wanted a power function that would take floating point<br />
-numbers as exponents.  bc's basic math library provides the following<br />
+<em>bc</em>. <a href="http://en.wikipedia.org/wiki/Bc_programming_language">bc</a> is convientent but fairly light on the included math<br />
+functions. I wanted a power function that would take floating point<br />
+numbers as exponents. bc's basic math library provides the following<br />
 functions: sqrt(), sin(), cos(), atan(), ln(), and exp()---abriviated<br />
 to sqrt(), s(), c(), a(), l(), and e().</p>
 <p>Since</p>
-<pre>a^b = e^( b * ln(a) ),</pre>
+<pre><code>a^b = e^( b * ln(a) ),</code></pre>
 <p>I can define a new fucntion---</p>
-<pre>define pow(a,b) { return e(b*l(a)); } </pre>
-<p> — for my power function.  While I was at it, I went ahead and created<br />
+<pre><code>define pow(a,b) { return e(b*l(a)); } </code></pre>
+<p>— for my power function. While I was at it, I went ahead and created<br />
 defininitions for the most common trig functions:</p>
-<pre>
-#DTPD#
+<pre><code>#DTPD#
 define ln(a) { return l(a); }
 define exp(a) { return e(a); }
 define pow(a,b) { return e(b*l(a)); }
@@ -115,8 +114,7 @@ define tanh(x) { return (e(2*x) - 1)/(e(2*x) + 1); }
 define asinh(x) { return l(x+sqrt((x^2)+1)); }
 define acosh(x) { return l(x+sqrt((x^2)-1)); }
 define atanh(x) { return 0.5*l((1+x)/(1-x)); }
-pi = 4*a(1);
-</pre>
+pi = 4*a(1);</code></pre>
 <p>Of course, now that I read more about it I find that I could have just looked up the answers.</p>
   </div>
 </article>

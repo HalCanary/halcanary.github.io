@@ -3,29 +3,35 @@ TITLE=tar c | ssh "tar x"
 DATE=2004-08-03 18:44:29
 POSTID=281
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<pre>
-tar c directory/ | ssh lensman "tar x"
-</pre>
-<p>Unix is beautiful.</p>
-<p>(Yes, I know about scp and rsync.)</p>
-<p><strong>UPDATE 2004-08-06:</strong> Other options:</p>
-<p>This is the most ugly way of doing it.  It involves wasting disc space.</p>
-<pre>
-$ tar czf directory.tgz directory
-$ scp directory.tgz lensman:
-$ ssh lensman
-$ tar xzf directory.tgz
-</pre>
-<p>Until I did this research, I didn't know you could do this one:  (Notice the rcp-like syntax.)</p>
-<pre>
-$ scp -r directory lensman:
-</pre>
-<p>rsync is the king of the rcp replacements.  It has the most options and is best for incremental backups.<br />
-Set the RSYNC_RSH variable in your ~/.bashrc file.</p>
-<pre>
-$ export RSYNC_RSH="ssh"
-$ rsync -r directory lensman:
-</pre>
+    
+    tar c directory/ | ssh lensman "tar x"
+    
 
+Unix is beautiful.
+
+(Yes, I know about scp and rsync.)
+
+**UPDATE 2004-08-06:** Other options:
+
+This is the most ugly way of doing it. It involves wasting disc space.
+
+    
+    $ tar czf directory.tgz directory
+    $ scp directory.tgz lensman:
+    $ ssh lensman
+    $ tar xzf directory.tgz
+    
+
+Until I did this research, I didn't know you could do this one: (Notice the rcp-like syntax.)
+
+    
+    $ scp -r directory lensman:
+    
+
+rsync is the king of the rcp replacements. It has the most options and is best for incremental backups.  
+Set the RSYNC\_RSH variable in your ~/.bashrc file.
+
+    
+    $ export RSYNC_RSH="ssh"
+    $ rsync -r directory lensman:

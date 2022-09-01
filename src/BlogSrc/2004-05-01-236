@@ -3,27 +3,24 @@ TITLE=Stupid Scripts
 DATE=2004-05-01 14:39:03
 POSTID=236
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<pre>#!/usr/bin/perl
-## ~/bin/prepend-something ##
-my $pre = shift;
-my @files = @ARGV;
-foreach $file (@files) {
-    my $new = $pre.$file;
-    system ("mv -v &#0092;"$file&#0092;" &#0092;"$new&#0092;"");
-}
-</pre>
-<p>&nbsp;</p>
-<pre>#!/usr/bin/perl
-## ~/bin/rename-files ##
-my $old = shift;
-my $new = shift;
-my @files = @ARGV;
-foreach $file (@files) {
-    my $filenew = $file;
-    $filenew =~ s/$old/$new/g;
-    system ("mv -v &#0092;"$file&#0092;" &#0092;"$filenew&#0092;"");
-}
-</pre>
+    #!/usr/bin/perl
+    ## ~/bin/prepend-something ##
+    my $pre = shift;
+    my @files = @ARGV;
+    foreach $file (@files) {
+        my $new = $pre.$file;
+        system ("mv -v \"$file\" \"$new\"");
+    }
+    
 
+    #!/usr/bin/perl
+    ## ~/bin/rename-files ##
+    my $old = shift;
+    my $new = shift;
+    my @files = @ARGV;
+    foreach $file (@files) {
+        my $filenew = $file;
+        $filenew =~ s/$old/$new/g;
+        system ("mv -v \"$file\" \"$filenew\"");
+    }

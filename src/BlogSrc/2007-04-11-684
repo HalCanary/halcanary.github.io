@@ -3,75 +3,95 @@ TITLE=(X)Ubuntu on my P3-700 laptop
 DATE=2007-04-11 14:13:25
 POSTID=684
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<p>This is a post I wrote almost a month ago and never posted:</p>
-<p>2007-03-11</p>
-<p>I went to the Linux Users Group the other night.  The local LUG tries to have a presentation at every month's meeting.  This is ambitious goal, so I thought I'd help out.  I went home and started putting together a presentation on F/OSS crytography tools.</p>
-<p>Then I realized that if I was going to give a presentation in front of the Linux group, I ought to get Linux working on my laptop.  This has been a problem since I got this used laptop two years ago, since the CDROM drive refuses to read any CDs I put in it.  So I did more research this week and found out that I can <a href="http://www.ubuntuforums.org/showthread.php?t=118182">bootstrap from inside windows a copy of linux to run a network installer</a>.</p>
-<p>I chose to install Ubuntu Linux because it has a reputation for good support for wifi cards.  Without WiFi, a notebook is mostly useless to me.  I had never installed Ubuntu before.  In a sense, I still havn't: I install XUbuntu instead.  XUbuntu is a scaled down version of Ubuntu that is supposed to use less resources by replacing Gnome with Xfce.</p>
-<pre>$ cat /proc/cpuinfo | head -8
-vendor_id       : GenuineIntel
-cpu family      : 6
-model           : 8
-model name      : Pentium III (Coppermine)
-stepping        : 10
-cpu MHz         : 700.000
-cache size      : 256 KB
+This is a post I wrote almost a month ago and never posted:
 
-$ cat /proc/meminfo  | head -1
-MemTotal:       385828 kB</pre>
-<p>This thing has got a 700 MHz Pentium III (Coppermine mobile) processor, which makes the processor design almost seven years old.</p>
-<p>Thoughts on this setup:</p>
-<p>1) (X)Ubuntu works pretty well.  I'm in the proccess of learning all    about apt-get; otherwise a lot of my RH/Fedora knowledge translates    over to Ubuntu.</p>
-<p>2) Xfce is still a little rough round the edges, but it does what I   want it to.  I miss Gnome's Rhythmbox and Gedit, but I should learn   to make do with less.</p>
-<p>3) The wireless drivers work perfectly, BUT the GUI frontend   (network-admin) is useless.  I ended up writing my own scripts.   This one lists all the availible networks.</p>
-<pre>#!/bin/sh
-## ~/bin/scanwifi
-## 2007 Hal Canary
-## Dedicated to the Public Domain
-sudo echo 'Restarting and scanning Wifi...'
-echo '&gt;&gt;&gt; ifconfig eth1 down &gt;&gt;&gt;'
-sudo ifconfig eth1 down
-echo '&gt;&gt;&gt; ifconfig eth1 up &gt;&gt;&gt;'
-sudo ifconfig eth1 up
-echo '&gt;&gt;&gt; iwconfig eth1 essid any &gt;&gt;&gt;'
-sudo iwconfig eth1 essid any
-echo '&gt;&gt;&gt; iwconfig eth1 &gt;&gt;&gt;'
-sudo ifconfig eth1
-echo '&gt;&gt;&gt; iwlist eth1 scanning &gt;&gt;&gt;'
-sudo iwlist eth1 scanning
-exit 0</pre>
-<p>This one connects to the selected network:</p>
-<pre>#!/bin/sh
-## ~/bin/connectwifi
-## 2007 Hal Canary
-## Dedicated to the Public Domain
-if [ &quot;$#&quot; -lt 1 ] ; then
-	echo &quot;useage:&quot;
-	echo &quot;  $0 SSID&quot;
-	echo &quot;or:&quot;
-	echo &quot;  $0 SSID KEY&quot;
-	exit 1
-fi
-echo '########## iwconfig eth1 essid &quot;'$1'&quot; ########'
-sudo iwconfig eth1 essid &quot;$1&quot;
-if [ ! -z &quot;$2&quot; ] ; then
-	echo '########## iwconfig eth1 key &quot;'$2'&quot; ########'
-	sudo iwconfig eth1 key &quot;$2&quot;
-fi
-echo '########## dhclient eth1 ########'
-sudo dhclient eth1
-exit 0;</pre>
-<p>   And this one connects to my home network (not my real key):</p>
-<pre>#!/bin/sh
-## ~/bin/connectwifi.MySsid
-connectwifi MySsid 0c0dc52de9fbc078f3c1411100</pre>
-<p>Disconnecting can be accomplished with a</p>
-<pre>sudo ifconfig eth1 down</pre>
-<p>or by simply removing the network card.</p>
-<p>4) In theory this laptop's battery has only about an hour's charge on   it, but I think that if I keep disc and CPU useage down to a   minimum, it can last longer.  I've been sitting here outside for   almost an hour and it's at 46%.  This is to be expected with a   LiIon battery this old.  If I get a new battery for this thing, it   would cost around $100.  We got this whole laptop for less than   that.</p>
-<p>5) It's geeting cold out, so I'm going to go home now.</p>
-<p>6) Ubuntu disallows the use of the login name 'hal', reserving it for   the hardware abstraction layer daemon.  This makes me sad.</p>
-<p>7) Ubuntu has a much more lax default security policy.  Iptables is   off my default.  There is no SELinux.</p>
+2007-03-11
 
+I went to the Linux Users Group the other night. The local LUG tries to have a presentation at every month's meeting. This is ambitious goal, so I thought I'd help out. I went home and started putting together a presentation on F/OSS crytography tools.
+
+Then I realized that if I was going to give a presentation in front of the Linux group, I ought to get Linux working on my laptop. This has been a problem since I got this used laptop two years ago, since the CDROM drive refuses to read any CDs I put in it. So I did more research this week and found out that I can [bootstrap from inside windows a copy of linux to run a network installer](http://www.ubuntuforums.org/showthread.php?t=118182).
+
+I chose to install Ubuntu Linux because it has a reputation for good support for wifi cards. Without WiFi, a notebook is mostly useless to me. I had never installed Ubuntu before. In a sense, I still havn't: I install XUbuntu instead. XUbuntu is a scaled down version of Ubuntu that is supposed to use less resources by replacing Gnome with Xfce.
+
+    $ cat /proc/cpuinfo | head -8
+    vendor_id       : GenuineIntel
+    cpu family      : 6
+    model           : 8
+    model name      : Pentium III (Coppermine)
+    stepping        : 10
+    cpu MHz         : 700.000
+    cache size      : 256 KB
+    
+    $ cat /proc/meminfo  | head -1
+    MemTotal:       385828 kB
+
+This thing has got a 700 MHz Pentium III (Coppermine mobile) processor, which makes the processor design almost seven years old.
+
+Thoughts on this setup:
+
+1) (X)Ubuntu works pretty well. I'm in the proccess of learning all about apt-get; otherwise a lot of my RH/Fedora knowledge translates over to Ubuntu.
+
+2) Xfce is still a little rough round the edges, but it does what I want it to. I miss Gnome's Rhythmbox and Gedit, but I should learn to make do with less.
+
+3) The wireless drivers work perfectly, BUT the GUI frontend (network-admin) is useless. I ended up writing my own scripts. This one lists all the availible networks.
+
+    #!/bin/sh
+    ## ~/bin/scanwifi
+    ## 2007 Hal Canary
+    ## Dedicated to the Public Domain
+    sudo echo 'Restarting and scanning Wifi...'
+    echo '>>> ifconfig eth1 down >>>'
+    sudo ifconfig eth1 down
+    echo '>>> ifconfig eth1 up >>>'
+    sudo ifconfig eth1 up
+    echo '>>> iwconfig eth1 essid any >>>'
+    sudo iwconfig eth1 essid any
+    echo '>>> iwconfig eth1 >>>'
+    sudo ifconfig eth1
+    echo '>>> iwlist eth1 scanning >>>'
+    sudo iwlist eth1 scanning
+    exit 0
+
+This one connects to the selected network:
+
+    #!/bin/sh
+    ## ~/bin/connectwifi
+    ## 2007 Hal Canary
+    ## Dedicated to the Public Domain
+    if [ "$#" -lt 1 ] ; then
+    	echo "useage:"
+    	echo "  $0 SSID"
+    	echo "or:"
+    	echo "  $0 SSID KEY"
+    	exit 1
+    fi
+    echo '########## iwconfig eth1 essid "'$1'" ########'
+    sudo iwconfig eth1 essid "$1"
+    if [ ! -z "$2" ] ; then
+    	echo '########## iwconfig eth1 key "'$2'" ########'
+    	sudo iwconfig eth1 key "$2"
+    fi
+    echo '########## dhclient eth1 ########'
+    sudo dhclient eth1
+    exit 0;
+
+And this one connects to my home network (not my real key):
+
+    #!/bin/sh
+    ## ~/bin/connectwifi.MySsid
+    connectwifi MySsid 0c0dc52de9fbc078f3c1411100
+
+Disconnecting can be accomplished with a
+
+    sudo ifconfig eth1 down
+
+or by simply removing the network card.
+
+4) In theory this laptop's battery has only about an hour's charge on it, but I think that if I keep disc and CPU useage down to a minimum, it can last longer. I've been sitting here outside for almost an hour and it's at 46%. This is to be expected with a LiIon battery this old. If I get a new battery for this thing, it would cost around $100. We got this whole laptop for less than that.
+
+5) It's geeting cold out, so I'm going to go home now.
+
+6) Ubuntu disallows the use of the login name 'hal', reserving it for the hardware abstraction layer daemon. This makes me sad.
+
+7) Ubuntu has a much more lax default security policy. Iptables is off my default. There is no SELinux.

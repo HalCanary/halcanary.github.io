@@ -3,23 +3,22 @@ TITLE=terminal lock
 DATE=2004-05-10 17:14:47
 POSTID=245
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<pre>
-#!/bin/sh
-## ~/bin/tlock ##
-PASS='12345'
-trap '' TERM INT
-BAD="true"
-clear
-while [ "$BAD" == "true" ] ; do
-    echo -en "&#0092;ntlock password: "
-    stty -echo;
-    read x
-    stty echo;
-    [ "$x" == "$PASS" ] &amp;&amp; BAD="false"
-done
-echo "";
-</pre>
-<p><strong>UPDATE 2004-12-02:</strong> Add &ldquo;<code>trap '' TERM SIGTSTP</code>&rdquo; for additional security.</p>
+    
+    #!/bin/sh
+    ## ~/bin/tlock ##
+    PASS='12345'
+    trap '' TERM INT
+    BAD="true"
+    clear
+    while [ "$BAD" == "true" ] ; do
+        echo -en "\ntlock password: "
+        stty -echo;
+        read x
+        stty echo;
+        [ "$x" == "$PASS" ] && BAD="false"
+    done
+    echo "";
+    
 
+**UPDATE 2004-12-02:** Add “`trap '' TERM SIGTSTP`” for additional security.

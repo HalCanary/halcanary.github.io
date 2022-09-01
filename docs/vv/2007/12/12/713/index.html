@@ -78,10 +78,10 @@ ul.flat li::before {content:"[";}
   </header>
   <div class="content e-content">
 <div style="display:none;"></div>
-<p>I can't tell the difference between a 32KBps and 224KBps mp3 file.  Can you?</p>
-<p>So I'm down-sampling all my mp3s to fit on my new mp3 player.  I should be able to fit around 3 days of music onto my 1GB player this way.</p>
+<p>I can't tell the difference between a 32KBps and 224KBps mp3 file. Can you?</p>
+<p>So I'm down-sampling all my mp3s to fit on my new mp3 player. I should be able to fit around 3 days of music onto my 1GB player this way.</p>
 <p>Here's a script to do that---a work in progress</p>
-<pre>#!/bin/sh
+<pre><code>#!/bin/sh
 
 ## Compressmp3s - Copyright 2007 Hal Canary
 ## Dedicated to the Public Domain.
@@ -101,18 +101,18 @@ mkdir -p &quot;$TARGETDIR&quot; || {
     exit 1 ; }
 
 ## for FILE in &quot;$@&quot; ; do
-find &quot;$@&quot; -name '*.mp3' | while read FILE; do
+find &quot;$@&quot; -name &#39;*.mp3&#39; | while read FILE; do
     IN=&quot;$FILE&quot;
     OUT=&quot;${TARGETDIR}/$FILE&quot;
     ## Grab the id3 info for later use
-    artist=`id3info &quot;$IN&quot; | grep TPE1 | &#0092;
-        awk -F ': ' '{print $2}'`
-    album=`id3info &quot;$IN&quot; | grep TALB | &#0092;
-        awk -F ': ' '{print $2}'`
-    track=`id3info &quot;$IN&quot; | grep TRCK | &#0092;
-        awk -F ': ' '{print $2}'`
-    song=`id3info &quot;$IN&quot; | grep TIT2 | &#0092;
-        awk -F ': ' '{print $2}'`
+    artist=`id3info &quot;$IN&quot; | grep TPE1 | \
+        awk -F &#39;: &#39; &#39;{print $2}&#39;`
+    album=`id3info &quot;$IN&quot; | grep TALB | \
+        awk -F &#39;: &#39; &#39;{print $2}&#39;`
+    track=`id3info &quot;$IN&quot; | grep TRCK | \
+        awk -F &#39;: &#39; &#39;{print $2}&#39;`
+    song=`id3info &quot;$IN&quot; | grep TIT2 | \
+        awk -F &#39;: &#39; &#39;{print $2}&#39;`
     echo &quot;$OUT&quot;
     ## refuse to clobber a file
     if [ ! -f &quot;$OUT&quot; ] ; then
@@ -124,18 +124,17 @@ find &quot;$@&quot; -name '*.mp3' | while read FILE; do
         DIRECTORY=`dirname &quot;$OUT&quot;`
         mkdir -p &quot;$DIRECTORY&quot; || { echo &quot;permission error&quot; ;
             exit 1 ; }
-        lame -b 32 &quot;$IN&quot; &quot;$OUT&quot; &#0092;
-            --ta &quot;$artist&quot; --tl &quot;$album&quot; &#0092;
-            --tn &quot;$track&quot; --tt &quot;$song&quot; &#0092;
+        lame -b 32 &quot;$IN&quot; &quot;$OUT&quot; \
+            --ta &quot;$artist&quot; --tl &quot;$album&quot; \
+            --tn &quot;$track&quot; --tt &quot;$song&quot; \
             --add-id3v2
     else
         echo &quot;  already exists!&quot;
     fi
-done
-</pre>
+done</code></pre>
 <p>Okay, on some files, I *can* tell the difference.</p>
 <p>* * *</p>
-<p>Compare:  <a href="/pub/hidden/Nb99cbhCIxWy7ddxYPNU/032kbps_Catfish_and_the_One_Eyed_Jacks_-_The_Way_You_Move_01_-_Move_.mp3">032kbps mp3</a> versus <a href="/pub/hidden/Nb99cbhCIxWy7ddxYPNU/128kbps_Catfish_and_the_One_Eyed_Jacks_-_The_Way_You_Move_01_-_Move_.mp3">128kbps mp3</a>.</p>
+<p>Compare: <a href="/pub/hidden/Nb99cbhCIxWy7ddxYPNU/032kbps_Catfish_and_the_One_Eyed_Jacks_-_The_Way_You_Move_01_-_Move_.mp3">032kbps mp3</a> versus <a href="/pub/hidden/Nb99cbhCIxWy7ddxYPNU/128kbps_Catfish_and_the_One_Eyed_Jacks_-_The_Way_You_Move_01_-_Move_.mp3">128kbps mp3</a>.</p>
   </div>
 </article>
 <hr>

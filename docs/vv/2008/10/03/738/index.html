@@ -78,10 +78,10 @@ ul.flat li::before {content:"[";}
   </header>
   <div class="content e-content">
 <div style="display:none;"></div>
-<p>I always meant to go ahead and fix this function so it did what I want.  Now it uses proper regex.  See <a href="/vv/2004/02/18/176/">the old version, too</a>.</p>
-<pre>;; ~/.emacs ;;
+<p>I always meant to go ahead and fix this function so it did what I want. Now it uses proper regex. See <a href="/vv/2004/02/18/176/">the old version, too</a>.</p>
+<pre><code>;; ~/.emacs ;;
 (defun remove-excess-whitespace () (interactive)
-  (auto-mega-replace  &quot;&#0092;&#0092;( &#0092;&#0092;|&#0092;t&#0092;&#0092;)$&quot; &quot;&quot;))
+  (auto-mega-replace  &quot;\\( \\|\t\\)$&quot; &quot;&quot;))
 (defun auto-mega-replace (arg1 arg2)
   (save-excursion
     (beginning-of-buffer)
@@ -89,7 +89,7 @@ ul.flat li::before {content:"[";}
       (beginning-of-buffer)
       (perform-replace arg1 arg2
         nil t nil)
-      (beginning-of-buffer))))</pre>
+      (beginning-of-buffer))))</code></pre>
   </div>
 </article>
 <hr>

@@ -3,10 +3,11 @@ TITLE=imagemagik convert
 DATE=2004-03-01 09:51:16
 POSTID=178
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<p>This:</p>
-<pre>convert -size 120x120 $1 -resize 120x120 +profile "*" $2</pre>
-<p>Works better than this:</p>
-<pre>convert -sample 120x120 $1 $2</pre>
+This:
 
+    convert -size 120x120 $1 -resize 120x120 +profile "*" $2
+
+Works better than this:
+
+    convert -sample 120x120 $1 $2

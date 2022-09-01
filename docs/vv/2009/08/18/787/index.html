@@ -78,7 +78,7 @@ ul.flat li::before {content:"[";}
   </header>
   <div class="content e-content">
 <div style="display:none;"></div>
-<pre>/* Copyright 2009 Hal Canary, https://halcanary.org/
+<pre><code>/* Copyright 2009 Hal Canary, https://halcanary.org/
    Dedicated to the Public Domain.
 
    cc -o timer timer.c
@@ -89,7 +89,7 @@ int main(int argc, char *argv[]) {
   int totalminutes, totalseconds; /* args */
   int minute, second; /* counter */
   if (argc &lt;= 1) {
-    fprintf(stderr, &quot;Usage: timer MINUTES [SECONDS]&#0092;n&#0092;n&quot;);
+    fprintf(stderr, &quot;Usage: timer MINUTES [SECONDS]\n\n&quot;);
     return(1);
   }
   totalminutes = atoi(argv[1]); /* FIRST ARGUMENT */
@@ -101,15 +101,15 @@ int main(int argc, char *argv[]) {
   printf(&quot;%02i:%02i &quot;,totalminutes,totalseconds);
   for(minute=totalminutes; minute &gt;= 0; minute--) {
     for(second=totalseconds-1; second &gt;= 0; second--) {
-      printf(&quot;&#0092;b&#0092;b&#0092;b&#0092;b&#0092;b&#0092;b&#0092;b%02i:%02i &quot;,minute,second);
+      printf(&quot;\b\b\b\b\b\b\b%02i:%02i &quot;,minute,second);
       fflush(stdout);
       sleep(1);
     }
     totalseconds=60;
   }
-  printf(&quot;&#0092;n&quot;);
+  printf(&quot;\n&quot;);
   return(0);
-}</pre>
+}</code></pre>
   </div>
 </article>
 <hr>

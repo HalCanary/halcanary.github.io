@@ -78,7 +78,7 @@ ul.flat li::before {content:"[";}
   </header>
   <div class="content e-content">
 <div style="display:none;"></div>
-<pre>/*  hexer - Convert  binary files to hexadecimal
+<pre><code>/*  hexer - Convert  binary files to hexadecimal
     Copyright 2007 Hal Canary
     Dedicated to the Public Domain. */
 /*  cc -o hexer hexer.c */
@@ -91,16 +91,16 @@ int main (int argc, char *argv[]) {
     i++;
     printf(&quot;%02hhx&quot;,x);
     if (i % 32 == 0) {
-      printf(&quot;&#0092;n&quot;);
+      printf(&quot;\n&quot;);
     }
   }
-  printf(&quot;&#0092;n&quot;);
+  printf(&quot;\n&quot;);
   return(0);
 }
-/*EOF*/</pre>
+/*EOF*/</code></pre>
 <p>Or:</p>
-<pre>#!/bin/sh
-exec hexdump -e '32/1 &quot;%02x&quot; &quot;&#0092;n&quot;' &quot;$@&quot;</pre>
+<pre><code>#!/bin/sh
+exec hexdump -e &#39;32/1 &quot;%02x&quot; &quot;\n&quot;&#39; &quot;$@&quot;</code></pre>
   </div>
 </article>
 <hr>

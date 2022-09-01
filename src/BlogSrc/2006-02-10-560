@@ -3,24 +3,25 @@ TITLE=palm pilot scripts
 DATE=2006-02-10 14:26:59
 POSTID=560
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<p>Pilot scripts:</p>
-<pre>
-#!/bin/sh
-## $HOME/Palm/pilot-xfer-install
-export PILOTPORT=/dev/ttyS0
-export PILOTRATE=115200
-if ! (/bin/ls -l $PILOTPORT | grep -q rwxrwxrwx) ; then
-    echo "sudo chmod 777 $PILOTPORT"
-    sudo chmod 777 $PILOTPORT
-fi
-exec pilot-xfer -i "$@"</pre>
-<p>and</p>
-<pre>
-#!/bin/sh
-## $HOME/Palm/INSTALL_EVERYTHING.sh
-exec $HOME/Palm/pilot-xfer-install &#92;
-    $HOME/Palm/Docs/*.pdb &#92;
-    $HOME/Palm/Apps/*.prc</pre>
+Pilot scripts:
 
+    
+    #!/bin/sh
+    ## $HOME/Palm/pilot-xfer-install
+    export PILOTPORT=/dev/ttyS0
+    export PILOTRATE=115200
+    if ! (/bin/ls -l $PILOTPORT | grep -q rwxrwxrwx) ; then
+        echo "sudo chmod 777 $PILOTPORT"
+        sudo chmod 777 $PILOTPORT
+    fi
+    exec pilot-xfer -i "$@"
+
+and
+
+    
+    #!/bin/sh
+    ## $HOME/Palm/INSTALL_EVERYTHING.sh
+    exec $HOME/Palm/pilot-xfer-install \
+        $HOME/Palm/Docs/*.pdb \
+        $HOME/Palm/Apps/*.prc

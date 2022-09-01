@@ -78,19 +78,19 @@ ul.flat li::before {content:"[";}
   </header>
   <div class="content e-content">
 <div style="display:none;"></div>
-<p>My desktop does a fsck too foten for my tastes. Let&#0039;s find out why</p>
-<pre>hal@sloop:~$ sudo dumpe2fs /dev/sda1 | grep &#0039;heck&#0092;|nt count&#0039;
+<p>My desktop does a fsck too foten for my tastes. Let's find out why</p>
+<pre><code>hal@sloop:~$ sudo dumpe2fs /dev/sda1 | grep &#39;heck\|nt count&#39;
 dumpe2fs 1.40.8 (13-Mar-2008)
 Mount count: 9
 Maximum mount count: 35
 Last checked: Tue Mar 3 17:38:44 2009
 Check interval: 15552000 (6 months)
-Next check after: Sun Aug 30 18:38:44 2009</pre>
-<p>I want it to check every three months or 150 boots. That&#0039;s easy to do.</p>
-<pre>sudo tune2fs -i 3m /dev/sda1
-sudo tune2fs -c 150 /dev/sda1</pre>
+Next check after: Sun Aug 30 18:38:44 2009</code></pre>
+<p>I want it to check every three months or 150 boots. That's easy to do.</p>
+<pre><code>sudo tune2fs -i 3m /dev/sda1
+sudo tune2fs -c 150 /dev/sda1</code></pre>
 <hr />
-<p><strong>UPDATE (2011-04-11):</strong>  I later realized that the fscks were being triggered at mount time by /ets/fstab.  &ldquo;The sixth field, (fs_passno), is used by the fsck(8) program to determine the order in which filesystem checks are done at reboot time.&rdquo;</p>
+<p><strong>UPDATE (2011-04-11):</strong> I later realized that the fscks were being triggered at mount time by /ets/fstab. “The sixth field, (fs_passno), is used by the fsck(8) program to determine the order in which filesystem checks are done at reboot time.”</p>
   </div>
 </article>
 <hr>

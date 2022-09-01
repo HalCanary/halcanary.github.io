@@ -3,15 +3,13 @@ TITLE=track-numbers/id3tag
 DATE=2006-02-08 11:32:36
 POSTID=559
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<pre>#!/bin/sh
-## track-numbers.sh
-## (C) 2006 Hal Canary
-## DTPD
-for NUMBER in $(seq -w 1 99); do
-    if (/bin/ls *${NUMBER}* &amp;&gt; /dev/null); then
-        id3tag -t ${NUMBER} *${NUMBER}*
-    fi
-done</pre>
-
+    #!/bin/sh
+    ## track-numbers.sh
+    ## (C) 2006 Hal Canary
+    ## DTPD
+    for NUMBER in $(seq -w 1 99); do
+        if (/bin/ls *${NUMBER}* &> /dev/null); then
+            id3tag -t ${NUMBER} *${NUMBER}*
+        fi
+    done

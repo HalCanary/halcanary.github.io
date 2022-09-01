@@ -2,33 +2,30 @@ COPYRIGHT=Copyright Hal Canary / ALL RIGHTS RESERVED
 TITLE=Java Makefiles
 DATE=2011-12-17 12:00:00
 POSTID=csg21
-MODE=htmldiv
 
+**Java Makefiles**
 
+Here's a basic makefile for compiling Java programs. On most systems, you will only need to edit the first three lines.
 
-	<p><strong>Java Makefiles</strong></p>
-	<p>Here's a basic makefile for compiling Java programs.  On most
-	  systems, you will only need to edit the first three lines.</p>
-<pre>
-classes = Prog.class AnotherClass.class
-entrypointclass = Prog
-jarfile = program.jar
-
-JAVAC = javac
-JAVA = java
-JAR = jar
-RM = rm &#0045;f
-JCFLAGS = &#0045;Xlint &#0045;g 
-JFLAGS = &#0045;enableassertions
-
-.PHONY : clean all run
-all: $(jarfile)
-run: $(jarfile)
-	$(JAVA) $(JFLAGS) &#0045;jar $(jarfile)
-clean:
-	$(RM) &#0045;v *~ $(classes)
-$(jarfile): $(classes)
-	$(JAR) cvfe $@ $(entrypointclass) $^
-%.class : %.java
-	$(JAVAC) $(JCFLAGS) $^
-</pre>
+    
+    classes = Prog.class AnotherClass.class
+    entrypointclass = Prog
+    jarfile = program.jar
+    
+    JAVAC = javac
+    JAVA = java
+    JAR = jar
+    RM = rm -f
+    JCFLAGS = -Xlint -g 
+    JFLAGS = -enableassertions
+    
+    .PHONY : clean all run
+    all: $(jarfile)
+    run: $(jarfile)
+    	$(JAVA) $(JFLAGS) -jar $(jarfile)
+    clean:
+    	$(RM) -v *~ $(classes)
+    $(jarfile): $(classes)
+    	$(JAR) cvfe $@ $(entrypointclass) $^
+    %.class : %.java
+    	$(JAVAC) $(JCFLAGS) $^

@@ -3,22 +3,25 @@ TITLE=search and replace for elisp.
 DATE=2004-02-18 13:56:59
 POSTID=176
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<p>When mutt is told to <a href="http://gnupg.org/">gpg</a> sign an email, it will use <a href="http://www.freesoft.org/CIE/RFC/1521/6.htm">Quoted-Printable Content-Transfer-Encoding</a>, which will replace <code>&quot;&nbsp;&#0092;n&quot;</code> with <code>&quot;=20&#0092;n&quot;</code>, an escape sequence of some sort. (ASCII &quot;&nbsp;&quot; is 0x20.)</p>
-<p>I'd rather replace <code>&quot;&nbsp;&#0092;n&quot;</code> with <code>&quot;&#0092;n&quot;</code> anyways.   Here's some elisp code to do just that:</p>
-<pre>
-;; ~/.emacs ;;
-(defun hal1 () (interactive)
-  (auto-mega-replace  " &#0092;n" "&#0092;n"))
-(defun auto-mega-replace (arg1 arg2)
-  (save-excursion
-    (beginning-of-buffer)
-    (while (search-forward arg1)
-      (beginning-of-buffer)
-      (perform-replace arg1 arg2
-        nil nil nil)
-      (beginning-of-buffer))))
-</pre>
-<p>[<em>edited 2003-02-20</em>]</p>
+When mutt is told to [gpg](http://gnupg.org/) sign an email, it will use
+[Quoted-Printable
+Content-Transfer-Encoding](http://www.freesoft.org/CIE/RFC/1521/6.htm), which
+will replace `" \n"` with `"=20\n"`, an escape sequence of some sort. (ASCII
+" " is 0x20.)
 
+I'd rather replace `" \n"` with `"\n"` anyways. Here's some elisp code to do just that:
+
+    ;; ~/.emacs ;;
+    (defun hal1 () (interactive)
+      (auto-mega-replace  " \n" "\n"))
+    (defun auto-mega-replace (arg1 arg2)
+      (save-excursion
+        (beginning-of-buffer)
+        (while (search-forward arg1)
+          (beginning-of-buffer)
+          (perform-replace arg1 arg2
+            nil nil nil)
+          (beginning-of-buffer))))
+
+\[_edited 2003-02-20_\]

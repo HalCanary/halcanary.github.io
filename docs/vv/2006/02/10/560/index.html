@@ -79,23 +79,21 @@ ul.flat li::before {content:"[";}
   <div class="content e-content">
 <div style="display:none;"></div>
 <p>Pilot scripts:</p>
-<pre>
-#!/bin/sh
+<pre><code>#!/bin/sh
 ## $HOME/Palm/pilot-xfer-install
 export PILOTPORT=/dev/ttyS0
 export PILOTRATE=115200
 if ! (/bin/ls -l $PILOTPORT | grep -q rwxrwxrwx) ; then
-    echo "sudo chmod 777 $PILOTPORT"
+    echo &quot;sudo chmod 777 $PILOTPORT&quot;
     sudo chmod 777 $PILOTPORT
 fi
-exec pilot-xfer -i "$@"</pre>
+exec pilot-xfer -i &quot;$@&quot;</code></pre>
 <p>and</p>
-<pre>
-#!/bin/sh
+<pre><code>#!/bin/sh
 ## $HOME/Palm/INSTALL_EVERYTHING.sh
-exec $HOME/Palm/pilot-xfer-install &#92;
-    $HOME/Palm/Docs/*.pdb &#92;
-    $HOME/Palm/Apps/*.prc</pre>
+exec $HOME/Palm/pilot-xfer-install \
+    $HOME/Palm/Docs/*.pdb \
+    $HOME/Palm/Apps/*.prc</code></pre>
   </div>
 </article>
 <hr>

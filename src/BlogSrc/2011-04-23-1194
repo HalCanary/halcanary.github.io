@@ -21,5 +21,5 @@ I don't have time to be writing programs.
     s/>/\&gt;/g;
     s/'/\&#0039;/g;
     s/\(http:\/\/[^ ]\+\)/<a href="\1">\1<\/a>/g
-    1 s/^/<pre>/
+    1 s/^/<pre><code>/
     $ s/$/<\/pre><\/body><\/html>/

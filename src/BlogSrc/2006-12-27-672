@@ -3,40 +3,43 @@ TITLE=dealing with lots of arguments in bash
 DATE=2006-12-27 12:00:57
 POSTID=672
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<pre>#!/bin/sh
-#DTPD#
-echo first argument is '&quot;'${1}'&quot;'
-for argc in `seq 2 $#`; do
-        eval arg=&#0092;${$argc}
-        echo ${argc}th arg is $arg
-done</pre>
-<p>For example:</p>
-<pre>#!/bin/sh
-# prepend-something.sh
-#DTPD#
-if [ &quot;$#&quot; -lt 2 ] ; then
-        echo &quot;useage:  $0 PREFEX FILE[S]&quot;
+    #!/bin/sh
+    #DTPD#
+    echo first argument is '"'${1}'"'
+    for argc in `seq 2 $#`; do
+            eval arg=\${$argc}
+            echo ${argc}th arg is $arg
+    done
+
+For example:
+
+    #!/bin/sh
+    # prepend-something.sh
+    #DTPD#
+    if [ "$#" -lt 2 ] ; then
+            echo "useage:  $0 PREFEX FILE[S]"
+            exit 1
+    fi
+    PREFEX=${1}
+    for argc in `seq 2 $#`; do
+            eval arg=\${$argc}
+            mv -v "${arg}" "${PREFEX}${arg}"
+    done
+
+* * *
+
+**Update 2009-12-05**: Another way to do it would be to use the shift command.
+
+    #!/bin/sh
+    # prepend-something.sh
+    #DTPD#
+    if [ "$#" -lt 2 ] ; then
+        echo "useage:  $0 PREFEX FILE[S]"
         exit 1
-fi
-PREFEX=${1}
-for argc in `seq 2 $#`; do
-        eval arg=&#0092;${$argc}
-        mv -v &quot;${arg}&quot; &quot;${PREFEX}${arg}&quot;
-done</pre>
-<hr />
-<p><strong>Update 2009-12-05</strong>:  Another way to do it would be to use the shift command.</p>
-<pre>#!/bin/sh
-# prepend&#0045;something.sh
-#DTPD#
-if [ &quot;$#&quot; &#0045;lt 2 ] ; then
-    echo &quot;useage:  $0 PREFEX FILE[S]&quot;
-    exit 1
-fi
-prefix=${1}
-shift
-for arg in &quot;$@&quot;; do
-    mv &#0045;v &quot;$arg&quot; &quot;${prefix}${arg}&quot;
-done</pre>
-
+    fi
+    prefix=${1}
+    shift
+    for arg in "$@"; do
+        mv -v "$arg" "${prefix}${arg}"
+    done

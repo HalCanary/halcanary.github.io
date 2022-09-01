@@ -78,7 +78,7 @@ ul.flat li::before {content:"[";}
   </header>
   <div class="content e-content">
 <div style="display:none;"></div>
-<pre>#!/bin/sh
+<pre><code>#!/bin/sh
 ## track-numbers.sh
 ## (C) 2006 Hal Canary
 ## DTPD
@@ -86,7 +86,7 @@ for NUMBER in $(seq -w 1 99); do
     if (/bin/ls *${NUMBER}* &amp;&gt; /dev/null); then
         id3tag -t ${NUMBER} *${NUMBER}*
     fi
-done</pre>
+done</code></pre>
   </div>
 </article>
 <hr>

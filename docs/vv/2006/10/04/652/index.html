@@ -80,14 +80,14 @@ ul.flat li::before {content:"[";}
 <div style="display:none;"></div>
 <p>How to install the Fedora Core 4 version of the default Clearlooks theme on Fedora Core 5 and later:</p>
 <p><img src="/images/Clearlooks_FC4_example.png" alt="SCREENSHOT OF THEME" /></p>
-<p>Begin by going to <a href="http://fedora.redhat.com/Download/">http://fedora.redhat.com/Download/</a> and find a mirror.  Navigate to the directory <code>core/4/i386/os/Fedora/RPMS/</code> to download the two rpm packages we need: gnome-themes-x.xx.x-x.xxx.rpm and gtk2-engines-x.x.x-x.xxxx.rpm</p>
-<pre>mkdir workingfolder
+<p>Begin by going to <a href="http://fedora.redhat.com/Download/">http://fedora.redhat.com/Download/</a> and find a mirror. Navigate to the directory <code>core/4/i386/os/Fedora/RPMS/</code> to download the two rpm packages we need: gnome-themes-x.xx.x-x.xxx.rpm and gtk2-engines-x.x.x-x.xxxx.rpm</p>
+<pre><code>mkdir workingfolder
 cd workingfolder
 rpm2cpio [PATH]/gnome-themes-2.10.1-2.i386.rpm | cpio -id
 rpm2cpio [PATH]/gtk2-engines-2.6.3-2.i386.rpm | cpio -id
-cp -a usr/share/themes/Clearlooks Clearlooks_FC4</pre>
-<p>Now we need to edit the files in the Clearlooks_FC4 directory to give this theme a new name so the Theme Manager doesn't get confused.  Edit the file <code>Clearlooks_FC4/index.theme</code>:</p>
-<pre>[Desktop Entry]
+cp -a usr/share/themes/Clearlooks Clearlooks_FC4</code></pre>
+<p>Now we need to edit the files in the Clearlooks_FC4 directory to give this theme a new name so the Theme Manager doesn't get confused. Edit the file <code>Clearlooks_FC4/index.theme</code>:</p>
+<pre><code>[Desktop Entry]
 Name=Clearlooks_FC4
 Type=X-GNOME-Metatheme
 Comment=Attractive Usability
@@ -96,19 +96,19 @@ Encoding=UTF-8
 [X-GNOME-Metatheme]
 GtkTheme=Clearlooks_FC4
 MetacityTheme=Clearlooks_FC4
-IconTheme=Clearlooks</pre>
+IconTheme=Clearlooks</code></pre>
 <p>Edit the file <code>Clearlooks_FC4/metacity-1/metacity-theme-1.xml</code> and change one line:</p>
-<pre>&lt;name&gt;Clearlooks_FC4&lt;/name&gt;</pre>
+<pre><code>&lt;name&gt;Clearlooks_FC4&lt;/name&gt;</code></pre>
 <p>Now let's wrap this up:</p>
-<pre>mkdir -p ~/.themes
+<pre><code>mkdir -p ~/.themes
 mv Clearlooks_FC4 ~/.themes
 cd ..
 rm -r workingfolder
-gnome-theme-manager &amp;</pre>
+gnome-theme-manager &amp;</code></pre>
 <p>Or you could just download my copy of <a href="/pub/Clearlooks_FC4.tar.gz">Clearlooks_FC4.tar.gz</a>.</p>
-<pre>mkdir -p ~/.themes
+<pre><code>mkdir -p ~/.themes
 tar xzf Clearlooks_FC4.tar.gz -C ~/.themes/
-gnome-theme-manager &amp;</pre>
+gnome-theme-manager &amp;</code></pre>
   </div>
 </article>
 <hr>

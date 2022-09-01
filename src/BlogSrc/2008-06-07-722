@@ -3,14 +3,12 @@ TITLE=~/bin/longest-filename
 DATE=2008-06-07 18:10:57
 POSTID=722
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<pre>#!/bin/sh
-#DTPD#
-# ~/bin/longest-filename
-# How long is the longest filename
-# in these directories?
-{ for x in &quot;$@&quot; ; do
-find &quot;$x&quot; -exec basename {} &#0092;;
-done } | wc -L</pre>
-
+    #!/bin/sh
+    #DTPD#
+    # ~/bin/longest-filename
+    # How long is the longest filename
+    # in these directories?
+    { for x in "$@" ; do
+    find "$x" -exec basename {} \;
+    done } | wc -L

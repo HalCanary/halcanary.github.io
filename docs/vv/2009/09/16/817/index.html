@@ -78,25 +78,25 @@ ul.flat li::before {content:"[";}
   </header>
   <div class="content e-content">
 <div style="display:none;"></div>
-<p>I wanted to access my desktop&#0039;s music library from my living room and play it through the amplifier and speakers there.  So I grabbed my netbook, and after fumbling around with NFS for too long, I just tried:</p>
-<pre>yum install sshfs</pre>
-<p>(It&#0039;s a OLPC XO&#0045;1, so it&#0039;s Redhat&#0045;based.) And then wrote a little script:</p>
-<pre>#!/bin/sh
-## ~/bin/mount&#0045;music
-mkdir -p "${HOME}/music"
-sshfs hal@sloop:/d/music "${HOME}/music"</pre>
-<p>I installed mpg123&#0045;alsa (by the simple expedient of copying the executable) and wrote a little script to run it.</p>
-<pre>#!/bin/sh
-test &#0045;f &quot;${HOME}/music/index.txt&quot; || &#0092;
+<p>I wanted to access my desktop's music library from my living room and play it through the amplifier and speakers there. So I grabbed my netbook, and after fumbling around with NFS for too long, I just tried:</p>
+<pre><code>yum install sshfs</code></pre>
+<p>(It's a OLPC XO-1, so it's Redhat-based.) And then wrote a little script:</p>
+<pre><code>#!/bin/sh
+## ~/bin/mount-music
+mkdir -p &quot;${HOME}/music&quot;
+sshfs hal@sloop:/d/music &quot;${HOME}/music&quot;</code></pre>
+<p>I installed mpg123-alsa (by the simple expedient of copying the executable) and wrote a little script to run it.</p>
+<pre><code>#!/bin/sh
+test -f &quot;${HOME}/music/index.txt&quot; || \
     sshfs hal@sloop:/d/music &quot;${HOME}/music&quot;
 cd &quot;${HOME}/music&quot;
-exec mpg123&#0045;alsa &#0045;&#0045;control &#0045;&#0045;long&#0045;tag &#0092;
-    &#0045;&#0045;shuffle &#0045;&#0045;list index.txt</pre>
+exec mpg123-alsa --control --long-tag \
+    --shuffle --list index.txt</code></pre>
 <p>And index.txt is a file created with the find command on the server:</p>
-<pre>#!/bin/sh
+<pre><code>#!/bin/sh
 # run this script to refresh the index file.
 cd $HOME/music
-find . &#0045;type f &#0045;a &#0045;name &#0039;*.mp3&#0039; &gt; index.txt</pre>
+find . -type f -a -name &#39;*.mp3&#39; &gt; index.txt</code></pre>
   </div>
 </article>
 <hr>

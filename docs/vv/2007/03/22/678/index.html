@@ -79,7 +79,7 @@ ul.flat li::before {content:"[";}
   <div class="content e-content">
 <div style="display:none;"></div>
 <p>I wrote this today as a demonstration of where /dev/random gets all its randomness.</p>
-<pre>/* Copyright 2007 Hal Canary, https://halcanary.org/
+<pre><code>/* Copyright 2007 Hal Canary, https://halcanary.org/
 Dedicated to the Public Domain. */
 #include &lt;stdio.h&gt;
 #include &lt;sys/time.h&gt;
@@ -87,12 +87,12 @@ int main(void) {
         struct timeval x;
         struct timezone t;
         gettimeofday(&amp;x, &amp;t);
-        printf(&quot;%u.%06u&#0092;n&quot;,x.tv_sec,x.tv_usec);
+        printf(&quot;%u.%06u\n&quot;,x.tv_sec,x.tv_usec);
         return(0);
-}</pre>
+}</code></pre>
 <p>And then...</p>
-<pre>$ cc -o timeinmicroseconds timeinmicroseconds.c
-$ while read -s -n 1 x ; do ./timeinmicroseconds ; done</pre>
+<pre><code>$ cc -o timeinmicroseconds timeinmicroseconds.c
+$ while read -s -n 1 x ; do ./timeinmicroseconds ; done</code></pre>
   </div>
 </article>
 <hr>

@@ -2,13 +2,9 @@ COPYRIGHT=Copyright Hal Canary / ALL RIGHTS RESERVED
 TITLE=Restart X11 under Ubuntu
 DATE=2011-11-03 12:00:00
 POSTID=csg17
-MODE=htmldiv
 
-
-<pre>#!/bin/sh
-# Restart X11 under Ubuntu. #
-#DTPD#
-test `id &#0045;u` = &quot;0&quot; || exec sudo &quot;$0&quot;
-exec /usr/sbin/service gdm restart</pre>
-
-
+    #!/bin/sh
+    # Restart X11 under Ubuntu. #
+    #DTPD#
+    test `id -u` = "0" || exec sudo "$0"
+    exec /usr/sbin/service gdm restart

@@ -78,14 +78,14 @@ ul.flat li::before {content:"[";}
   </header>
   <div class="content e-content">
 <div style="display:none;"></div>
-<pre>#!/bin/sh
+<pre><code>#!/bin/sh
 #DTPD#
 # ~/bin/longest-filename
 # How long is the longest filename
 # in these directories?
 { for x in &quot;$@&quot; ; do
-find &quot;$x&quot; -exec basename {} &#0092;;
-done } | wc -L</pre>
+find &quot;$x&quot; -exec basename {} \;
+done } | wc -L</code></pre>
   </div>
 </article>
 <hr>

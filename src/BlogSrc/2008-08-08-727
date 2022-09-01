@@ -3,15 +3,15 @@ TITLE=/etc/sudoers
 DATE=2008-08-08 07:46:24
 POSTID=727
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<p>Because the syntax of the <em>/etc/sudoers</em> file is obscure, I'm noting down here exactly what I've done to mine:</p>
-<pre>
-root	ALL=(ALL) ALL
-%admin ALL=(ALL) ALL
-%admin ALL=NOPASSWD: /usr/bin/wodim
-%admin ALL=NOPASSWD: /usr/bin/apt-get
-%admin ALL=NOPASSWD: /sbin/reboot
-%admin ALL=NOPASSWD: /sbin/poweroff</pre>
-<p>This allows a few commonly used commands to be executed without a password.</p>
+Because the syntax of the _/etc/sudoers_ file is obscure, I'm noting down here exactly what I've done to mine:
 
+    
+    root	ALL=(ALL) ALL
+    %admin ALL=(ALL) ALL
+    %admin ALL=NOPASSWD: /usr/bin/wodim
+    %admin ALL=NOPASSWD: /usr/bin/apt-get
+    %admin ALL=NOPASSWD: /sbin/reboot
+    %admin ALL=NOPASSWD: /sbin/poweroff
+
+This allows a few commonly used commands to be executed without a password.

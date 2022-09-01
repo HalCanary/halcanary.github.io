@@ -78,10 +78,10 @@ ul.flat li::before {content:"[";}
   </header>
   <div class="content e-content">
 <div style="display:none;"></div>
-<p>Printing a text file is one of those basic things you never think about.  Unless you are me.  I like to play with the variables and make that printout look <em>good</em>.</p>
-<pre>#!/bin/sh
-# Print a UTF&#0045;8 document to the default printer
-# Written by Hal Canary 2009&#0045;12&#0045;23.
+<p>Printing a text file is one of those basic things you never think about. Unless you are me. I like to play with the variables and make that printout look <em>good</em>.</p>
+<pre><code>#!/bin/sh
+# Print a UTF-8 document to the default printer
+# Written by Hal Canary 2009-12-23.
 #DTPD# Dedicated to the Public Domain.
 
 # Configurable Options
@@ -100,14 +100,14 @@ t_margin=`echo &quot;( $t_margin * 72 ) / 1&quot; | bc`
 r_margin=`echo &quot;( $r_margin * 72 ) / 1&quot; | bc`
 l_margin=`echo &quot;( $l_margin * 72 ) / 1&quot; | bc`
 
-exec paps &#0045;&#0045;font=&quot;$font&quot; &#0092;
-  &#0045;&#0045;paper=&quot;$paper&quot; &#0092;
-  &#0045;&#0045;bottom&#0045;margin=$b_margin &#0092;
-  &#0045;&#0045;top&#0045;margin=$t_margin &#0092;
-  &#0045;&#0045;right&#0045;margin=$r_margin &#0092;
-  &#0045;&#0045;left&#0045;margin=$l_margin &#0092;
+exec paps --font=&quot;$font&quot; \
+  --paper=&quot;$paper&quot; \
+  --bottom-margin=$b_margin \
+  --top-margin=$t_margin \
+  --right-margin=$r_margin \
+  --left-margin=$l_margin \
   &quot;$@&quot; | lpr
-#EOF#</pre>
+#EOF#</code></pre>
   </div>
 </article>
 <hr>

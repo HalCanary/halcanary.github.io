@@ -3,29 +3,31 @@ TITLE=another funny html thingy: blockquote
 DATE=2006-09-11 15:35:53
 POSTID=631
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<p>Good html:</p>
-<pre>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01//EN&quot;
-&quot;http://www.w3.org/TR/html4/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;title&gt;&lt;/title&gt;&lt;/head&gt;&lt;body&gt;
-&lt;div&gt;
-&lt;blockquote&gt;
-&lt;div&gt;
-X
-&lt;/div&gt;
-&lt;/blockquote&gt;
-&lt;/div&gt;
-&lt;/body&gt;&lt;/html&gt;</pre>
-<p>Bad html:</p>
-<pre>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01//EN&quot;
-&quot;http://www.w3.org/TR/html4/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;title&gt;&lt;/title&gt;&lt;/head&gt;&lt;body&gt;
-&lt;div&gt;
-&lt;blockquote&gt;
-X
-&lt;/blockquote&gt;
-&lt;/div&gt;
-&lt;/body&gt;&lt;/html&gt;</pre>
-<p>Check it <a href="http://validator.w3.org/">yourself</a>.</p>
+Good html:
 
+    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd">
+    <html><head><title></title></head><body>
+    <div>
+    <blockquote>
+    <div>
+    X
+    </div>
+    </blockquote>
+    </div>
+    </body></html>
+
+Bad html:
+
+    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd">
+    <html><head><title></title></head><body>
+    <div>
+    <blockquote>
+    X
+    </blockquote>
+    </div>
+    </body></html>
+
+Check it [yourself](http://validator.w3.org/).

@@ -78,27 +78,27 @@ ul.flat li::before {content:"[";}
   </header>
   <div class="content e-content">
 <div style="display:none;"></div>
-<p>Since id3lib is incompatable with version 2.4 id3 tags produced by Sound Juicer, you need to use gstreamer and id3mux to grab the tag info to--for example--renormalize your filenames.  Tags can themselves be edited in Rhythmbox.</p>
-<pre>#!/bin/sh
+<p>Since id3lib is incompatable with version 2.4 id3 tags produced by Sound Juicer, you need to use gstreamer and id3mux to grab the tag info to--for example--renormalize your filenames. Tags can themselves be edited in Rhythmbox.</p>
+<pre><code>#!/bin/sh
 #~/bin/id3v24-info.sh
 #DTPD
 for file in &quot;$@&quot; ; do
   TMP=`/bin/tempfile`
   echo &quot;$file&quot;
-  gst-launch-0.10 filesrc location=/proc/self/fd/0 &#0092;
-    ! id3demux ! fakesink -t &#0092;
+  gst-launch-0.10 filesrc location=/proc/self/fd/0 \
+    ! id3demux ! fakesink -t \
     &lt; &quot;${file}&quot; &gt; &quot;$TMP&quot; 2&gt; /dev/null
-  for tag in &#0039;title&#0039; &#0039;artist&#0039; &#0039;album&#0039; &#0039;genre&#0039; &#0092;
-      &#0039;track count&#0039; &#0039;track number&#0039; &#0039;disc number&#0039; &#0092;
-      &#0039;artist sortname&#0039; ; do
-    grep &quot;${tag}:&quot; &quot;$TMP&quot; | &#0092;
-      awk -F &quot;${tag}: &quot; &quot;{ print &#0092;&quot;  ${tag} = &#0092;&quot; &#0092;$2 }&quot;
+  for tag in &#39;title&#39; &#39;artist&#39; &#39;album&#39; &#39;genre&#39; \
+      &#39;track count&#39; &#39;track number&#39; &#39;disc number&#39; \
+      &#39;artist sortname&#39; ; do
+    grep &quot;${tag}:&quot; &quot;$TMP&quot; | \
+      awk -F &quot;${tag}: &quot; &quot;{ print \&quot;  ${tag} = \&quot; \$2 }&quot;
   done
   rm &quot;$TMP&quot;
-done</pre>
+done</code></pre>
 <p>So my workflow is:</p>
-<ol>
-<li>Rip a stack of CDs in Sound Juicer. </li>
+<ol type="1">
+<li>Rip a stack of CDs in Sound Juicer.</li>
 <li>Notice that the tags aren't right or don't fit with the other tags in the collection</li>
 <li>Edit tags in rhythmbox</li>
 <li>Run a script to renormalize the filename.</li>

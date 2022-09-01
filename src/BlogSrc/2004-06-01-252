@@ -3,29 +3,28 @@ TITLE=about "$@"
 DATE=2004-06-01 16:43:27
 POSTID=252
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<pre>#!/bin/sh
-## test.sh ##
-for x in  $*  ; do echo $x; done ; echo "" ;
-for x in "$*" ; do echo $x; done ; echo "" ;
-for x in  $@  ; do echo $x; done ; echo "" ;
-for x in "$@" ; do echo $x; done ; echo "" ;
-</pre>
-<p>Output:</p>
-<pre>
-$ code/test.sh 1 "2 3"
-1
-2
-3
+    #!/bin/sh
+    ## test.sh ##
+    for x in  $*  ; do echo $x; done ; echo "" ;
+    for x in "$*" ; do echo $x; done ; echo "" ;
+    for x in  $@  ; do echo $x; done ; echo "" ;
+    for x in "$@" ; do echo $x; done ; echo "" ;
+    
 
-1 2 3
+Output:
 
-1
-2
-3
-
-1
-2 3
-</pre>
-
+    
+    $ code/test.sh 1 "2 3"
+    1
+    2
+    3
+    
+    1 2 3
+    
+    1
+    2
+    3
+    
+    1
+    2 3

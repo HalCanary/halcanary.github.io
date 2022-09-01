@@ -3,15 +3,13 @@ TITLE=Fun with Gnome 2
 DATE=2004-08-20 12:20:44
 POSTID=306
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<p>These two commands set keybindings for horizonatally and vertically maximizing a window.  Most of the time when you maximize, you only need one of the two dimentions to be bigger.</p>
-<pre>
-$ gconftool-2 --type string -s &#0092;
-  /apps/metacity/window_keybindings/maximize_vertically &#0092;
-  '&lt;Ctrl&gt;&lt;Alt&gt;v'
-$ gconftool-2 --type string -s &#0092;
-  /apps/metacity/window_keybindings/maximize_horizontally &#0092;
-  '&lt;Ctrl&gt;&lt;Alt&gt;h'
-</pre>
+These two commands set keybindings for horizonatally and vertically maximizing a window. Most of the time when you maximize, you only need one of the two dimentions to be bigger.
 
+    
+    $ gconftool-2 --type string -s \
+      /apps/metacity/window_keybindings/maximize_vertically \
+      '<Ctrl><Alt>v'
+    $ gconftool-2 --type string -s \
+      /apps/metacity/window_keybindings/maximize_horizontally \
+      '<Ctrl><Alt>h'

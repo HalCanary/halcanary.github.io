@@ -78,36 +78,30 @@ ul.flat li::before {content:"[";}
   </header>
   <div class="content e-content">
 <div style="display:none;"></div>
-<p>One-time pads are an old-fashoned way of doing cryptography, not used much these days. On the other hand, they are as secure as the random device is random.  (Want a better random device?  <a href="http://www.protego.se/sg100_en.htm">here's one</a>.)</p>
+<p>One-time pads are an old-fashoned way of doing cryptography, not used much these days. On the other hand, they are as secure as the random device is random. (Want a better random device? <a href="http://www.protego.se/sg100_en.htm">here's one</a>.)</p>
 <p>I've been meaning to write this code for a while now:</p>
-<pre>
-#!/usr/bin/perl
+<pre><code>#!/usr/bin/perl
 ## crypt-otp.pl ##
-if (@ARGV OUTPUT&#0092;n";
+if (@ARGV OUTPUT\n&quot;;
     exit 1;
 }
 my $a_file = shift @ARGV;
 my $b_file = shift @ARGV;
-open(OTP, "&lt; $a_file");
-open(PTX, "&lt; $b_file");
+open(OTP, &quot;&lt; $a_file&quot;);
+open(PTX, &quot;&lt; $b_file&quot;);
 while (read(PTX,$b,1)) {
-    read(OTP,$a,1) or die "Out of otp.";
+    read(OTP,$a,1) or die &quot;Out of otp.&quot;;
     print $a ^ $b;
-}
-</pre>
+}</code></pre>
 <p>Here's how to use it.</p>
-<pre>
-$ head -c 10k /dev/random &gt; otp.data
+<pre><code>$ head -c 10k /dev/random &gt; otp.data
 $ ./crypt-otp.pl otp.data file &gt; file.crypt
-$ ./crypt-otp.pl otp.data file.crypt | less
-</pre>
+$ ./crypt-otp.pl otp.data file.crypt | less</code></pre>
 <p>Here's how NOT to use it:</p>
-<pre>
-$ perl -e 'for $x (1..1000) {print "PASSWORD"}' &gt; badotp
+<pre><code>$ perl -e &#39;for $x (1..1000) {print &quot;PASSWORD&quot;}&#39; &gt; badotp
 $ gzip &lt; file | ./crypt-otp.pl  badotp - &gt; x
-$ ./crypt-otp.pl badotp x | gunzip - | less
-</pre>
-<p>If /dev/random hangs, jiggle your mouse for a while to build up entropy. If you input file is biger than your OTP, then it won't work.  That's the one part of one-time.  So make a bigger OTP by changing the argument to head.</p>
+$ ./crypt-otp.pl badotp x | gunzip - | less</code></pre>
+<p>If /dev/random hangs, jiggle your mouse for a while to build up entropy. If you input file is biger than your OTP, then it won't work. That's the one part of one-time. So make a bigger OTP by changing the argument to head.</p>
   </div>
 </article>
 <hr>

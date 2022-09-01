@@ -78,11 +78,11 @@ ul.flat li::before {content:"[";}
   </header>
   <div class="content e-content">
 <div style="display:none;"></div>
-<pre>#!/bin/sh
+<pre><code>#!/bin/sh
 ## Written 2009 Hal Canary
 ## based on numerous examples
 ## DTPD
-if [ &quot;$#&quot; &#0045;lt 1 ] ; then
+if [ &quot;$#&quot; -lt 1 ] ; then
    X=`basename &quot;$0&quot;`
    echo &quot;Useage:  $X FILENAME&quot;
    exit 1
@@ -91,19 +91,19 @@ D=`dirname &quot;$1&quot;`
 B=`basename &quot;$1&quot;`
 cd $D
 X=`pwd`/$B
-cd &#0045;
-if [ ! &#0045;f &quot;$X&quot; ] ; then
-  echo &quot;not a file: &#0039;$X&#0039;.&quot;
+cd -
+if [ ! -f &quot;$X&quot; ] ; then
+  echo &quot;not a file: &#39;$X&#39;.&quot;
   exit 1
 fi
-echo &quot;New background: &#0039;$X&#0039;&quot;
-gconftool&#0045;2 &#0045;t str &#0045;&#0045;set &#0092;
-  /desktop/gnome/background/picture_filename &#0092;
+echo &quot;New background: &#39;$X&#39;&quot;
+gconftool-2 -t str --set \
+  /desktop/gnome/background/picture_filename \
   &quot;$X&quot;
-gconftool&#0045;2 &#0045;t str &#0045;&#0045;set &#0092;
-  /desktop/gnome/background/picture_options &#0092;
+gconftool-2 -t str --set \
+  /desktop/gnome/background/picture_options \
   &quot;centered&quot;
-exit 0</pre>
+exit 0</code></pre>
   </div>
 </article>
 <hr>

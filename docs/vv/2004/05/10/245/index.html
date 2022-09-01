@@ -78,23 +78,21 @@ ul.flat li::before {content:"[";}
   </header>
   <div class="content e-content">
 <div style="display:none;"></div>
-<pre>
-#!/bin/sh
+<pre><code>#!/bin/sh
 ## ~/bin/tlock ##
-PASS='12345'
-trap '' TERM INT
-BAD="true"
+PASS=&#39;12345&#39;
+trap &#39;&#39; TERM INT
+BAD=&quot;true&quot;
 clear
-while [ "$BAD" == "true" ] ; do
-    echo -en "&#0092;ntlock password: "
+while [ &quot;$BAD&quot; == &quot;true&quot; ] ; do
+    echo -en &quot;\ntlock password: &quot;
     stty -echo;
     read x
     stty echo;
-    [ "$x" == "$PASS" ] &amp;&amp; BAD="false"
+    [ &quot;$x&quot; == &quot;$PASS&quot; ] &amp;&amp; BAD=&quot;false&quot;
 done
-echo "";
-</pre>
-<p><strong>UPDATE 2004-12-02:</strong> Add &ldquo;<code>trap '' TERM SIGTSTP</code>&rdquo; for additional security.</p>
+echo &quot;&quot;;</code></pre>
+<p><strong>UPDATE 2004-12-02:</strong> Add “<code>trap '' TERM SIGTSTP</code>” for additional security.</p>
   </div>
 </article>
 <hr>

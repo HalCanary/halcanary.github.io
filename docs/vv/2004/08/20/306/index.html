@@ -78,15 +78,13 @@ ul.flat li::before {content:"[";}
   </header>
   <div class="content e-content">
 <div style="display:none;"></div>
-<p>These two commands set keybindings for horizonatally and vertically maximizing a window.  Most of the time when you maximize, you only need one of the two dimentions to be bigger.</p>
-<pre>
-$ gconftool-2 --type string -s &#0092;
-  /apps/metacity/window_keybindings/maximize_vertically &#0092;
-  '&lt;Ctrl&gt;&lt;Alt&gt;v'
-$ gconftool-2 --type string -s &#0092;
-  /apps/metacity/window_keybindings/maximize_horizontally &#0092;
-  '&lt;Ctrl&gt;&lt;Alt&gt;h'
-</pre>
+<p>These two commands set keybindings for horizonatally and vertically maximizing a window. Most of the time when you maximize, you only need one of the two dimentions to be bigger.</p>
+<pre><code>$ gconftool-2 --type string -s \
+  /apps/metacity/window_keybindings/maximize_vertically \
+  &#39;&lt;Ctrl&gt;&lt;Alt&gt;v&#39;
+$ gconftool-2 --type string -s \
+  /apps/metacity/window_keybindings/maximize_horizontally \
+  &#39;&lt;Ctrl&gt;&lt;Alt&gt;h&#39;</code></pre>
   </div>
 </article>
 <hr>

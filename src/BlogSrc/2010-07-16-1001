@@ -3,38 +3,46 @@ TITLE=gnuplot question
 DATE=2010-07-16 22:10:14
 POSTID=1001
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<p>Here's your basic LaTeX document:</p>
-<pre>
-%% FILE: basic.tex
-&#0092;documentclass[letterpaper,12pt]{article}
-&#0092;begin{document}
-&#0092;input{graph}
-&#0092;end{document}
-</pre>
-<p>The file graph.tex is generated using Gnuplot like this:</p>
-<pre>
-#!/usr/bin/gnuplot
-## FILE: graph.gnuplot
-set xrange [&#0045;3:3]
-set yrange [0:.42]
-set ytics nomirror autofreq 0, .1
-set terminal latex size 3,1.5
-set output &#0039;graph.tex&#0039;
-f(x) = .39894228040143267794 * exp(&#0045;0.5 * (x ** 2))
-set style line 1 linecolor rgb &quot;black&quot; linewidth 1
-plot f(x) ls 1 notitle
-</pre>
-<p>Here's the execution:</p>
-<pre>
-$ gnuplot graph.gnuplot
-$ pdflatex basic.tex > /dev/null
-$ evince basic.pdf &
-</pre>
-<p>This makes a really professional-looking graph I can put in a document.</p>
-<p><img src="/images/2010-07-16_graph.png" alt="[]" style="margin-left:2ex" /></p>
-<p>Now here's what I want to see:</p>
-<p><img src="/images/2010-07-16_graph_2.png" alt="[]" style="margin-left:2ex" /></p>
-<p>How do I do this with Gnuplot?</p>
+Here's your basic LaTeX document:
 
+    
+    %% FILE: basic.tex
+    \documentclass[letterpaper,12pt]{article}
+    \begin{document}
+    \input{graph}
+    \end{document}
+    
+
+The file graph.tex is generated using Gnuplot like this:
+
+    
+    #!/usr/bin/gnuplot
+    ## FILE: graph.gnuplot
+    set xrange [-3:3]
+    set yrange [0:.42]
+    set ytics nomirror autofreq 0, .1
+    set terminal latex size 3,1.5
+    set output 'graph.tex'
+    f(x) = .39894228040143267794 * exp(-0.5 * (x ** 2))
+    set style line 1 linecolor rgb "black" linewidth 1
+    plot f(x) ls 1 notitle
+    
+
+Here's the execution:
+
+    
+    $ gnuplot graph.gnuplot
+    $ pdflatex basic.tex > /dev/null
+    $ evince basic.pdf &
+    
+
+This makes a really professional-looking graph I can put in a document.
+
+![[]](/images/2010-07-16_graph.png)
+
+Now here's what I want to see:
+
+![[]](/images/2010-07-16_graph_2.png)
+
+How do I do this with Gnuplot?

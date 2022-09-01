@@ -3,19 +3,60 @@ TITLE=Septemebr 12
 DATE=2006-09-12 08:52:16
 POSTID=634
 CATEGORIES=politics;
-MODE=htmldiv
 
-<p>Number dead as a result of 2001 September 11 Hijackings: 2,973</p>
-<p>Number dead as a result of Iraq War: 65,000+</p>
-<p>Number dead as a result of Traffic Accidents in US in 2005 alone: <a href="http://www-fars.nhtsa.dot.gov/">43,443</a></p>
-<p><strong>Update 2006-09-18</strong>: <a href="http://www.wired.com/news/technology/0,71743-0.html?tw=wn_index_29">Ryan Singel</a> says it much better here:</p>
-<blockquote><p>With that in mind, here's a handy ranking of the various dangers confronting America, based on the  number of mortalities in each category throughout the 11-year period spanning 1995 through 2005 (extrapolated from best available data).</p>
-<div style="border: 2px black solid;width:402px">
-<div style="width: 398px; border: 2px black solid; background-color:#f00; color:000;text-align:center"><span style="font-size:xx-large;"><strong>S E V E R E</strong></span><br /><strong>Driving off the road: 254,419</strong><br /><strong>Falling: 146,542</strong><br /><strong>Accidental poisoning: 140,327</strong></div>
-<div style="width: 398px; border: 2px black solid; background-color:rgb(255, 204, 0); color:000;text-align:center"><span style="font-size:xx-large;"><strong>H I G H</strong></span><br /><strong>Dying from work: 59,730</strong><br /><strong>Walking down the street: 52,000.</strong><br /><strong>Accidentally drowning: 38,302</strong></div>
-<div style="width: 398px; border: 2px black solid; background-color:rgb(238, 238, 0); color:000;text-align:center"><span style="font-size:xx-large;"><strong>E L E V A T E D</strong></span><br /><strong>Killed by the flu: 19,41</strong><br /><strong>Dying from a hernia: 16,742</strong></div>
-<div style="width: 398px; border: 2px black solid; background-color:rgb(51, 51, 255); color:000;text-align:center"><span style="font-size:xx-large;"><strong>G U A R D E D</strong></span><br /><strong>Accidental firing of a gun: 8,536</strong><br /><strong>Electrocution: 5,171</strong></div>
-<div style="width: 398px; border: 2px black solid; background-color:rgb(51, 204, 0); color:000;text-align:center"><span style="font-size:xx-large;"><strong>L O W</strong></span><br /><strong>Being shot by law enforcement: 3,949</strong><br /><strong>Terrorism: 3147</strong><br /><strong>Carbon monoxide in products: 1,554</strong></div>
-</div>
-</blockquote>
+Number dead as a result of 2001 September 11 Hijackings: 2,973
 
+Number dead as a result of Iraq War: 65,000+
+
+Number dead as a result of Traffic Accidents in US in 2005 alone:
+[43,443](http://www-fars.nhtsa.dot.gov/)
+
+**Update 2006-09-18**: [Ryan
+Singel](http://www.wired.com/news/technology/0,71743-0.html?tw=wn_index_29)
+says it much better here:
+
+> With that in mind, here's a handy ranking of the various dangers confronting
+> America, based on the number of mortalities in each category throughout the
+> 11-year period spanning 1995 through 2005 (extrapolated from best available
+> data).
+>
+> <div style="border: 2px black solid;width:402px">
+> <div style="width: 398px; border: 2px black solid; background-color:#f00; color:000;text-align:center">
+>
+> <span style="font-size:xx-large;"> **S E V E R E** </span>  
+> **Driving off the road: 254,419**  
+> **Falling: 146,542**  
+> **Accidental poisoning: 140,327**
+>
+> </div>
+> <div style="width: 398px; border: 2px black solid; background-color:rgb(255, 204, 0); color:000;text-align:center">
+>
+> <span style="font-size:xx-large;"> **H I G H** </span>  
+> **Dying from work: 59,730**  
+> **Walking down the street: 52,000.**  
+> **Accidentally drowning: 38,302** 
+>
+> </div>
+> <div style="width: 398px; border: 2px black solid; background-color:rgb(238, 238, 0); color:000;text-align:center">
+>
+> <span style="font-size:xx-large;"> **E L E V A T E D** </span>  
+> **Killed by the flu: 19,41**  
+> **Dying from a hernia: 16,742**
+>
+> </div>
+> <div style="width: 398px; border: 2px black solid; background-color:rgb(51, 51, 255); color:000;text-align:center">
+>
+> <span style="font-size:xx-large;"> **G U A R D E D** </span>  
+> **Accidental firing of a gun: 8,536**  
+> **Electrocution: 5,171**
+>
+> </div>
+> <div style="width: 398px; border: 2px black solid; background-color:rgb(51, 204, 0); color:000;text-align:center">
+>
+> <span style="font-size:xx-large;"> **L O W** </span>  
+> **Being shot by law enforcement: 3,949**  
+> **Terrorism: 3147**  
+> **Carbon monoxide in products: 1,554**
+>
+> </div>
+> </div>

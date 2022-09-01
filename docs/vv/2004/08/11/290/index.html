@@ -79,17 +79,13 @@ ul.flat li::before {content:"[";}
   <div class="content e-content">
 <div style="display:none;"></div>
 <p>To make Movabletype's RSS-feed work the way mine does, replace</p>
-<pre>
-&lt;description&gt;
+<pre><code>&lt;description&gt;
 &lt;$MTEntryExcerpt remove_html=&quot;1&quot; encode_xml=&quot;1&quot; $&gt;
-&lt;/description&gt;
-</pre>
+&lt;/description&gt;</code></pre>
 <p>with</p>
-<pre>
-&lt;description&gt;
+<pre><code>&lt;description&gt;
 &lt;$MTEntryBody encode_xml=&quot;1&quot; $&gt;
-&lt;/description&gt;
-</pre>
+&lt;/description&gt;</code></pre>
   </div>
 </article>
 <hr>

@@ -78,7 +78,7 @@ ul.flat li::before {content:"[";}
   </header>
   <div class="content e-content">
 <div style="display:none;"></div>
-<pre>#!/bin/sh
+<pre><code>#!/bin/sh
 # this script will calculate the sha1sum
 # for each regular file in the PWD.
 # and put it into a file called SHA1SUM.txt
@@ -88,12 +88,12 @@ ul.flat li::before {content:"[";}
 
 [ -f &quot;SHA1SUM.txt&quot; ] &amp;&amp; rm -i SHA1SUM.txt
 TMPFILE=`mktemp`
-find . -type f &#0092;
-	-exec sha1sum {} ';' &#0092;
-	-fprintf /dev/stderr '.' &#0092;
-	&gt; &quot;${TMPFILE}&quot;
+find . -type f \
+    -exec sha1sum {} &#39;;&#39; \
+    -fprintf /dev/stderr &#39;.&#39; \
+    &gt; &quot;${TMPFILE}&quot;
 mv &quot;${TMPFILE}&quot; SHA1SUM.txt
-echo '' 2&gt;&amp;1</pre>
+echo &#39;&#39; 2&gt;&amp;1</code></pre>
   </div>
 </article>
 <hr>

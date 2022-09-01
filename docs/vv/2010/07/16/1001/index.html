@@ -79,36 +79,30 @@ ul.flat li::before {content:"[";}
   <div class="content e-content">
 <div style="display:none;"></div>
 <p>Here's your basic LaTeX document:</p>
-<pre>
-%% FILE: basic.tex
-&#0092;documentclass[letterpaper,12pt]{article}
-&#0092;begin{document}
-&#0092;input{graph}
-&#0092;end{document}
-</pre>
+<pre><code>%% FILE: basic.tex
+\documentclass[letterpaper,12pt]{article}
+\begin{document}
+\input{graph}
+\end{document}</code></pre>
 <p>The file graph.tex is generated using Gnuplot like this:</p>
-<pre>
-#!/usr/bin/gnuplot
+<pre><code>#!/usr/bin/gnuplot
 ## FILE: graph.gnuplot
-set xrange [&#0045;3:3]
+set xrange [-3:3]
 set yrange [0:.42]
 set ytics nomirror autofreq 0, .1
 set terminal latex size 3,1.5
-set output &#0039;graph.tex&#0039;
-f(x) = .39894228040143267794 * exp(&#0045;0.5 * (x ** 2))
+set output &#39;graph.tex&#39;
+f(x) = .39894228040143267794 * exp(-0.5 * (x ** 2))
 set style line 1 linecolor rgb &quot;black&quot; linewidth 1
-plot f(x) ls 1 notitle
-</pre>
+plot f(x) ls 1 notitle</code></pre>
 <p>Here's the execution:</p>
-<pre>
-$ gnuplot graph.gnuplot
-$ pdflatex basic.tex > /dev/null
-$ evince basic.pdf &
-</pre>
+<pre><code>$ gnuplot graph.gnuplot
+$ pdflatex basic.tex &gt; /dev/null
+$ evince basic.pdf &amp;</code></pre>
 <p>This makes a really professional-looking graph I can put in a document.</p>
-<p><img src="/images/2010-07-16_graph.png" alt="[]" style="margin-left:2ex" /></p>
+<p><img src="/images/2010-07-16_graph.png" alt="[]" /></p>
 <p>Now here's what I want to see:</p>
-<p><img src="/images/2010-07-16_graph_2.png" alt="[]" style="margin-left:2ex" /></p>
+<p><img src="/images/2010-07-16_graph_2.png" alt="[]" /></p>
 <p>How do I do this with Gnuplot?</p>
   </div>
 </article>

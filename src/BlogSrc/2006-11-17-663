@@ -3,47 +3,49 @@ TITLE=In honor of Telemonian Ajax, apparently
 DATE=2006-11-17 18:22:32
 POSTID=663
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<p>Read <em>Head Rush Ajax</em> yesterday. If you already know Javascript and the DOM, all there is left to learn about the magic of Ajax is the XMLHttpRequest / Msxml2.XMLHTTP / Microsoft.XMLHTTP functions, which aparently all work identically.</p>
-<pre>
-/* ajax-http-request.js */
-function newHttpRequest() {
-  var request = null;
-  try {
-    request = new <a href="http://en.wikipedia.org/wiki/XMLHttpRequest">XMLHttpRequest()</a>;
-  } catch (trymicrosoft) {
-    try {
-      request = new ActiveXObject(&quot;Msxml2.XMLHTTP&quot;);
-    } catch (othermicrosoft) {
+Read _Head Rush Ajax_ yesterday. If you already know Javascript and the DOM, all there is left to learn about the magic of Ajax is the XMLHttpRequest / Msxml2.XMLHTTP / Microsoft.XMLHTTP functions, which aparently all work identically.
+
+    
+    /* ajax-http-request.js */
+    function newHttpRequest() {
+      var request = null;
       try {
-         request = new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);
-      } catch (failed) {
-        request = null;
+        request = new XMLHttpRequest();
+      } catch (trymicrosoft) {
+        try {
+          request = new ActiveXObject("Msxml2.XMLHTTP");
+        } catch (othermicrosoft) {
+          try {
+             request = new ActiveXObject("Microsoft.XMLHTTP");
+          } catch (failed) {
+            request = null;
+            }
         }
+      }
+      return(request);
     }
-  }
-  return(request);
-}
-</pre>
-<p>Given that simple library file, you can do this:</p>
-<pre>
-/* some-other-javascript-file.js */
-var req = newHttpRequest();
-if (req == null)
-  alert(&quot;Error creating request object!&quot;);
+    
 
-function dealWithResponse() {
-  if (req.readyState == 4) {
-    if (req.status == 200)
-      doSomethingWith(req.responseText);
-    } else {
-      throwAnErrorOrSomething();
-  }
-}
-req.open(&quot;GET&quot;, &quot;someurl&quot;, true);
-req.onreadystatechange = dealWithResponse;
-req.send(null);
-</pre>
-<p>And that's all you really need to know to do Ajax.</p>
+Given that simple library file, you can do this:
 
+    
+    /* some-other-javascript-file.js */
+    var req = newHttpRequest();
+    if (req == null)
+      alert("Error creating request object!");
+    
+    function dealWithResponse() {
+      if (req.readyState == 4) {
+        if (req.status == 200)
+          doSomethingWith(req.responseText);
+        } else {
+          throwAnErrorOrSomething();
+      }
+    }
+    req.open("GET", "someurl", true);
+    req.onreadystatechange = dealWithResponse;
+    req.send(null);
+    
+
+And that's all you really need to know to do Ajax.

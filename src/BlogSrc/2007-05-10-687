@@ -3,15 +3,12 @@ TITLE=because I hate navigating info pages
 DATE=2007-05-10 11:25:41
 POSTID=687
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<pre>#!/bin/sh
-#~/bin/infoless
-#DTPD#
-if [ $# -ne 1 ] ; then
-  echo &quot;which page?&quot;
-  exit 1
-fi
-exec info $1 2&gt; /dev/null | less
-</pre>
-
+    #!/bin/sh
+    #~/bin/infoless
+    #DTPD#
+    if [ $# -ne 1 ] ; then
+      echo "which page?"
+      exit 1
+    fi
+    exec info $1 2> /dev/null | less

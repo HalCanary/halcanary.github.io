@@ -78,28 +78,28 @@ ul.flat li::before {content:"[";}
   </header>
   <div class="content e-content">
 <div style="display:none;"></div>
-<p>Everytime I go into my storage room in the basement, I get spider bites.  New plan:  I'm getting as many boxes out of there this evening as possible, and leave the big stuff for much later.  Then I avoid the basement.</p>
+<p>Everytime I go into my storage room in the basement, I get spider bites. New plan: I'm getting as many boxes out of there this evening as possible, and leave the big stuff for much later. Then I avoid the basement.</p>
 <hr />
-<pre><strong>[hal@lensman]$</strong> time-till-I-leave-town.sh
+<pre><code>[hal@lensman]$ time-till-I-leave-town.sh
 Time until Mon Jul  3 09:00:00 CDT 2006:
 3747726 seconds
 3.7477 megaseconds
 6 weeks + 1.3764 days
-43.3764 days</pre>
+43.3764 days</code></pre>
 <hr />
-<pre><strong>[hal@lensman]$</strong> cat ~/bin/time-till-I-leave-town.sh
+<pre><code>[hal@lensman]$ cat ~/bin/time-till-I-leave-town.sh
 #!/bin/sh
-DDAY="Mon Jul  3 09:00:00 CDT 2006"
-SECONDS=$(( $(date -d "${DDAY}" +%s)-$(date +%s) ))
-MEGASECONDS=$( echo "scale=4;$SECONDS/10^6" | bc )
-WEEKS=$( echo "$SECONDS/604800" | bc )
-DAYS=$( echo "scale=4;$SECONDS/86400" | bc )
-EXTRAS=$( echo "scale=4;$DAYS-($WEEKS * 7)" | bc )
-echo "Time until ${DDAY}:"
-echo "$SECONDS seconds"
-echo "$MEGASECONDS megaseconds"
-echo "$WEEKS weeks + $EXTRAS days"
-echo "$DAYS days" ; echo ""</pre>
+DDAY=&quot;Mon Jul  3 09:00:00 CDT 2006&quot;
+SECONDS=$(( $(date -d &quot;${DDAY}&quot; +%s)-$(date +%s) ))
+MEGASECONDS=$( echo &quot;scale=4;$SECONDS/10^6&quot; | bc )
+WEEKS=$( echo &quot;$SECONDS/604800&quot; | bc )
+DAYS=$( echo &quot;scale=4;$SECONDS/86400&quot; | bc )
+EXTRAS=$( echo &quot;scale=4;$DAYS-($WEEKS * 7)&quot; | bc )
+echo &quot;Time until ${DDAY}:&quot;
+echo &quot;$SECONDS seconds&quot;
+echo &quot;$MEGASECONDS megaseconds&quot;
+echo &quot;$WEEKS weeks + $EXTRAS days&quot;
+echo &quot;$DAYS days&quot; ; echo &quot;&quot;</code></pre>
   </div>
 </article>
 <hr>

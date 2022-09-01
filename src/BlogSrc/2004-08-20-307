@@ -3,9 +3,9 @@ TITLE=Spam Armoring
 DATE=2004-08-20 14:56:58
 POSTID=307
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<p><a href="/archives/000249.html">See this for background.</a> I am declaring a little victory here.  The simplest spam-armoring possible has proved to be the most effective:</p>
-<pre>echo $EMAIL | sed 's/@/ at /g;s/&#0092;./ dot /g'</pre>
-<p>As long as that method is not over-used--or used in a predictable manner--it should be safe for a while.</p>
+[See this for background.](/archives/000249.html) I am declaring a little victory here. The simplest spam-armoring possible has proved to be the most effective:
 
+    echo $EMAIL | sed 's/@/ at /g;s/\./ dot /g'
+
+As long as that method is not over-used--or used in a predictable manner--it should be safe for a while.

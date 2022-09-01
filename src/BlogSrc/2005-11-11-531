@@ -3,27 +3,24 @@ TITLE=Recursive Shred And Remove
 DATE=2005-11-11 15:30:34
 POSTID=531
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<pre>
-#!/bin/sh
-##  RECURSIVE SHRED AND REMOVE
-##  (c) Hal Canary 2005
-##  big_geek at halcanary dot org
-##  Version:  rm-shred v2005-07-02.
-##  This is free software; you can redistribute
-##  it and modify it under the terms of version
-##  2 of the GNU GPL.
-for x in "$@" ; do
-  if [ -d "$x" ] ; then
-    if [ "$x" != "." -a "$x" != ".." ] ; then
-      touch "${x}"/EMPTY
-      rm-shred "${x}"/*
-      rmdir "${x}"
-    fi
-  else
-    shred -n 1 -u "$x"
-  fi
-done
-</pre>
-
+    
+    #!/bin/sh
+    ##  RECURSIVE SHRED AND REMOVE
+    ##  (c) Hal Canary 2005
+    ##  big_geek at halcanary dot org
+    ##  Version:  rm-shred v2005-07-02.
+    ##  This is free software; you can redistribute
+    ##  it and modify it under the terms of version
+    ##  2 of the GNU GPL.
+    for x in "$@" ; do
+      if [ -d "$x" ] ; then
+        if [ "$x" != "." -a "$x" != ".." ] ; then
+          touch "${x}"/EMPTY
+          rm-shred "${x}"/*
+          rmdir "${x}"
+        fi
+      else
+        shred -n 1 -u "$x"
+      fi
+    done

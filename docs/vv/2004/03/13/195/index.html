@@ -78,12 +78,11 @@ ul.flat li::before {content:"[";}
   </header>
   <div class="content e-content">
 <div style="display:none;"></div>
-<p>I've decided to back up my mp3 collection for the first time ever.  It's a whopping 14 Gb. which I split up among 21 CDs.  </p>
+<p>I've decided to back up my mp3 collection for the first time ever. It's a whopping 14 Gb. which I split up among 21 CDs.</p>
 <p>I'll be burning all night.</p>
-<p>At least I automated the task somewhat.  I wrote a script that softlinks the files into directories each less than 700000kb.</p>
-<p>Be sure to use &ldquo;mkisofs -f&rdquo; (follow symbolic links).</p>
-<pre>
-#!/usr/bin/perl
+<p>At least I automated the task somewhat. I wrote a script that softlinks the files into directories each less than 700000kb.</p>
+<p>Be sure to use “mkisofs -f” (follow symbolic links).</p>
+<pre><code>#!/usr/bin/perl
 #
 #DTPD#
 #
@@ -93,14 +92,14 @@ ul.flat li::before {content:"[";}
 # To Do: Jolietify (64 char filename).
 #        Preserve directory structure.
 
-$backupdir = &quot;&#0092;$HOME/MP3_BACKUP&quot;;
+$backupdir = &quot;\$HOME/MP3_BACKUP&quot;;
 system(&quot;mkdir -p $backupdir&quot;);
 $num=1;
 $dirnum = &amp;padnum($num);
 system(&quot;mkdir $backupdir/$dirnum&quot;);
 while ($file = &lt;&gt;) {
     chomp ($file);
-    @ar = split (/&#0092;//, $file);
+    @ar = split (/\//, $file);
     $short = pop(@ar);
     $dir = &quot;$backupdir/$dirnum&quot;;
     $new = &quot;$dir/$short&quot;;
@@ -108,7 +107,7 @@ while ($file = &lt;&gt;) {
     $size = `du -Ls &quot;$dir&quot;`;
     chomp ($size);
     if ($size &gt; 700000) {
-        system(&quot;rm &#0092;&quot;$new&#0092;&quot;&quot;);
+        system(&quot;rm \&quot;$new\&quot;&quot;);
         $num++;
         $dirnum = &amp;padnum($num);
         $dir = &quot;$backupdir/$dirnum&quot;;
@@ -120,15 +119,14 @@ while ($file = &lt;&gt;) {
 sub link {
     my $o = shift;
     my $l = shift;
-    system(&quot;ln -s &#0092;&quot;$o&#0092;&quot; &#0092;&quot;$l&#0092;&quot;&quot;);
+    system(&quot;ln -s \&quot;$o\&quot; \&quot;$l\&quot;&quot;);
 }
 sub padnum {
     my $num=shift;
     return &quot;00&quot;.$num if $num&lt;10;
     return &quot;0&quot;.$num if $num&lt;100;
     return &quot;$num&quot;;
-}
-</pre>
+}</code></pre>
   </div>
 </article>
 <hr>

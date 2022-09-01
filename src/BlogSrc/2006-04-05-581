@@ -3,22 +3,24 @@ TITLE=funny html thingy
 DATE=2006-04-05 14:40:39
 POSTID=581
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<p>Good html:</p>
-<pre>
-&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01//EN&quot;
-&quot;http://www.w3.org/TR/html4/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;title&gt;&lt;/title&gt;&lt;/head&gt;&lt;body&gt;
-&lt;div&gt;X&lt;/div&gt;
-&lt;/body&gt;&lt;/html&gt;</pre>
-<p>Bad html:</p>
-<pre>
-&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01//EN&quot;
-&quot;http://www.w3.org/TR/html4/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;title&gt;&lt;/title&gt;&lt;/head&gt;&lt;body&gt;
-X
-&lt;/body&gt;&lt;/html&gt;
-</pre>
-<p><a href="http://validator.w3.org/">Check it yerself</a></p>
+Good html:
 
+    
+    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd">
+    <html><head><title></title></head><body>
+    <div>X</div>
+    </body></html>
+
+Bad html:
+
+    
+    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd">
+    <html><head><title></title></head><body>
+    X
+    </body></html>
+    
+
+[Check it yerself](http://validator.w3.org/)

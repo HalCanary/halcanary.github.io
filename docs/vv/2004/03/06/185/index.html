@@ -79,14 +79,13 @@ ul.flat li::before {content:"[";}
   <div class="content e-content">
 <div style="display:none;"></div>
 <p>xmms was giving me some crap the other day, so I gave up on it, again.</p>
-<pre>
-#!/bin/sh
+<pre><code>#!/bin/sh
 ## $HOME/bin/playmusic ##
 
-FILE="$HOME/music-file.txt"
-M="$HOME/Music"
+FILE=&quot;$HOME/music-file.txt&quot;
+M=&quot;$HOME/Music&quot;
 
-echo -n "" &gt; $FILE
+echo -n &quot;&quot; &gt; $FILE
 cd $M
 for x in */*.mp3 ; do
     echo $M/$x &gt;&gt; $FILE
@@ -99,8 +98,7 @@ for x in */*/*/*.mp3 ; do
 done
 
 echo mpg123 -z --list $FILE
-exec mpg123 -z --list $FILE
-</pre>
+exec mpg123 -z --list $FILE</code></pre>
 <p><strong>UPDATE 2007-06-28:</strong> <a href="/vv/2006/11/23/665/"><code>find</code> is a lot better than this wildcard stuff</a>.</p>
   </div>
 </article>

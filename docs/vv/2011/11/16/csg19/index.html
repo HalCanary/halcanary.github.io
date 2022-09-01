@@ -78,11 +78,10 @@ ul.flat li::before {content:"[";}
   </header>
   <div class="content e-content">
 <div style="display:none;"></div>
-
 <p>Quick linear regression script</p>
-<pre>#!/usr/bin/env python
-#sudo yum &#0045;y install scipy
-# input is space&#0045;deleimited (x y) pairs.
+<pre><code>#!/usr/bin/env python
+#sudo yum -y install scipy
+# input is space-deleimited (x y) pairs.
 import scipy
 import numpy
 import sys
@@ -91,23 +90,21 @@ inp = [map(float, l.split()[0:2]) for l in sys.stdin]
 x = numpy.array([t[0] for t in inp])
 y = numpy.array([t[1] for t in inp])
 fit = scipy.polyfit(x,y,1)
-print &#0039;y = (%f) x + (%f)&#0039; % tuple(fit)
-</pre>
-
+print &#39;y = (%f) x + (%f)&#39; % tuple(fit)</code></pre>
 <p>power fit:</p>
-<pre>#!/usr/bin/env python
-#sudo yum &#0045;y install scipy
-# input is space&#0045;deleimited (x y) pairs.
+<pre><code>#!/usr/bin/env python
+#sudo yum -y install scipy
+# input is space-deleimited (x y) pairs.
 import scipy
 import numpy
 import sys
 import math
 inp = [map(math.log, map(float, l.split()[0:2]))
-	for l in sys.stdin]
+    for l in sys.stdin]
 x = numpy.array([t[0] for t in inp])
 y = numpy.array([t[1] for t in inp])
 fit = scipy.polyfit(x,y,1)
-print &#0039;y = ({0[1]})e^({0[0]})&#0039;.format(tuple(fit))</pre>
+print &#39;y = ({0[1]})e^({0[0]})&#39;.format(tuple(fit))</code></pre>
   </div>
 </article>
 <hr>

@@ -3,12 +3,10 @@ TITLE=Dear 1999, please take your music player back.
 DATE=2006-11-23 21:48:30
 POSTID=665
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<pre>#!/bin/sh
-#DTPD#
-M=/tmp/Musiclist
-DIR=/home/music
-find $DIR -name &quot;*.mp3&quot; &gt; $M
-mpg321 --list $M --random</pre>
-
+    #!/bin/sh
+    #DTPD#
+    M=/tmp/Musiclist
+    DIR=/home/music
+    find $DIR -name "*.mp3" > $M
+    mpg321 --list $M --random

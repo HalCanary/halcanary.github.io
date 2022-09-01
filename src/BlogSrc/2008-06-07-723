@@ -3,69 +3,67 @@ TITLE=jolietify
 DATE=2008-06-07 18:11:49
 POSTID=723
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<pre>#!/usr/bin/env python
-
-# jolietify - reduce a filename to 64 chars, preserving
-# the suffix.
-#
-# See http://en.wikipedia.org/wiki/Joliet_(file_system)
-# for a justification.  It is recomended that filenames
-# be reduced to 64 chars before putting on a CD-ROM.
-#
-# Copyright 2008 Hal Canary
-#
-# Permission is hereby granted, free of charge, to any
-# person obtaining a copy of this software and
-# associated documentation files (the &#0039;Software&#0039;), to
-# deal in the Software without restriction, including
-# without limitation the rights to use, copy, modify,
-# merge, publish, distribute, sublicense, and/or sell
-# copies of the Software, and to permit persons to whom
-# the Software is furnished to do so, subject to the
-# following conditions:
-#
-# The above copyright notice and this permission notice
-# shall be included in all copies or substantial
-# portions of the Software.
-#
-# THE SOFTWARE IS PROVIDED &#0039;AS IS&#0039;, WITHOUT WARRANTY OF
-# ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
-# LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
-# FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO
-# EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
-# LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
-# WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
-# ARISING FROM, OUT OF OR IN CONNECTION WITH THE
-# SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-# SOFTWARE.
-
-import sys
-import glob
-import os
-import os.path
-
-def jolietify(dirfilename):
-    (head,fname) = os.path.split(dirfilename)
-    if (len(fname) &lt;= 64):
-        print &quot;Is good:&quot;, dirfilename
-        return 1
-    splitname=fname.rsplit(&#0039;.&#0039;,1)
-    if (len(splitname) == 1):
-	new=os.path.join(head,splitname[0][0:64])
-        print &#0039;rename&#0039;, dirfilename, new
-        os.rename(dirfilename, new)
-        return 0
-    else:
-	new=os.path.join(head,
-            splitname[0][0:63-len(splitname[1])]+&#0039;.&#0039;+splitname[1])
-	print &#0039;rename&#0039;, dirfilename, new
-        os.rename(dirfilename, new)
-        return 0
-
-if __name__ == &quot;__main__&quot;:
-    for x in sys.argv[1:]:
-       for y in glob.glob(x):
-            jolietify(y)</pre>
-
+    #!/usr/bin/env python
+    
+    # jolietify - reduce a filename to 64 chars, preserving
+    # the suffix.
+    #
+    # See http://en.wikipedia.org/wiki/Joliet_(file_system)
+    # for a justification.  It is recomended that filenames
+    # be reduced to 64 chars before putting on a CD-ROM.
+    #
+    # Copyright 2008 Hal Canary
+    #
+    # Permission is hereby granted, free of charge, to any
+    # person obtaining a copy of this software and
+    # associated documentation files (the 'Software'), to
+    # deal in the Software without restriction, including
+    # without limitation the rights to use, copy, modify,
+    # merge, publish, distribute, sublicense, and/or sell
+    # copies of the Software, and to permit persons to whom
+    # the Software is furnished to do so, subject to the
+    # following conditions:
+    #
+    # The above copyright notice and this permission notice
+    # shall be included in all copies or substantial
+    # portions of the Software.
+    #
+    # THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF
+    # ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
+    # LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+    # FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO
+    # EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+    # LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+    # WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+    # ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+    # SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    # SOFTWARE.
+    
+    import sys
+    import glob
+    import os
+    import os.path
+    
+    def jolietify(dirfilename):
+        (head,fname) = os.path.split(dirfilename)
+        if (len(fname) <= 64):
+            print "Is good:", dirfilename
+            return 1
+        splitname=fname.rsplit('.',1)
+        if (len(splitname) == 1):
+    	new=os.path.join(head,splitname[0][0:64])
+            print 'rename', dirfilename, new
+            os.rename(dirfilename, new)
+            return 0
+        else:
+    	new=os.path.join(head,
+                splitname[0][0:63-len(splitname[1])]+'.'+splitname[1])
+    	print 'rename', dirfilename, new
+            os.rename(dirfilename, new)
+            return 0
+    
+    if __name__ == "__main__":
+        for x in sys.argv[1:]:
+           for y in glob.glob(x):
+                jolietify(y)

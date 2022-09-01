@@ -78,9 +78,8 @@ ul.flat li::before {content:"[";}
   </header>
   <div class="content e-content">
 <div style="display:none;"></div>
-<p>Some years ago, cdrecord gained the ability to convert .wav files to an audio CD on the fly.  No more messing around with sox!  But I've found that it's better to feed files through sox anyways, just to make sure that the file format is correct and the sampling rate is correct:</p>
-<pre>
-#!/bin/sh
+<p>Some years ago, cdrecord gained the ability to convert .wav files to an audio CD on the fly. No more messing around with sox! But I've found that it's better to feed files through sox anyways, just to make sure that the file format is correct and the sampling rate is correct:</p>
+<pre><code>#!/bin/sh
 
 # makecdrfiles - Convert mp3s to
 # .cdr format for an audio CD.
@@ -90,15 +89,15 @@ ul.flat li::before {content:"[";}
 if [ &quot;$#&quot; -lt 1 ] ; then
   echo &quot;  Useage: $0 file.mp3 [more files.mp3]&quot;
   echo &quot;&quot;
-  echo &quot;  After you're done, burn with:&quot;
-  echo -n '   sudo cdrecord -v -dao -eject dev=$DEV'
-  echo ' -pad -audio *.cdr'
+  echo &quot;  After you&#39;re done, burn with:&quot;
+  echo -n &#39;   sudo cdrecord -v -dao -eject dev=$DEV&#39;
+  echo &#39; -pad -audio *.cdr&#39;
   exit 1
 fi
 for FILE in &quot;$@&quot; ; do
-  nice lame --decode &quot;$FILE&quot; - | &#0092;
+  nice lame --decode &quot;$FILE&quot; - | \
     nice sox -t wav - &quot;$(basename $FILE .mp3).cdr&quot;
-done</pre>
+done</code></pre>
 <p>I burnt four coasters today before I figured this out.</p>
   </div>
 </article>

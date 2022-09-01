@@ -79,9 +79,9 @@ ul.flat li::before {content:"[";}
   <div class="content e-content">
 <div style="display:none;"></div>
 <p>Step 1. Set a hotkey to make applications run full-screened in Gnome:</p>
-<pre>gconftool&#0045;2 &#0045;&#0045;type string &#0045;&#0045;set &#0092;
-  /apps/metacity/window_keybindings/toggle_fullscreen &#0092;
-  &#0039;&lt;Ctrl&gt;&lt;Alt&gt;f&#0039;</pre>
+<pre><code>gconftool-2 --type string --set \
+  /apps/metacity/window_keybindings/toggle_fullscreen \
+  &#39;&lt;Ctrl&gt;&lt;Alt&gt;f&#39;</code></pre>
 <p>Step 2. Run your text editor and terminal window fullscreen.</p>
 <p>Step 3. Code without distractions.</p>
   </div>

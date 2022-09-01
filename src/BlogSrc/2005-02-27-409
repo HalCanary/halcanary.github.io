@@ -3,11 +3,9 @@ TITLE=My favorite email interface
 DATE=2005-02-27 19:19:45
 POSTID=409
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<p>Because I'm geek, AND I'm lazy.</p>
-<pre>
-echo 'Mom, what recipe do you use for chili?' &#0092;
- | mutt mom -s chili
-</pre>
+Because I'm geek, AND I'm lazy.
 
+    
+    echo 'Mom, what recipe do you use for chili?' \
+     | mutt mom -s chili

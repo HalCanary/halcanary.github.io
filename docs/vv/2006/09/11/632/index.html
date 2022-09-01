@@ -78,14 +78,14 @@ ul.flat li::before {content:"[";}
   </header>
   <div class="content e-content">
 <div style="display:none;"></div>
-<pre>#!/bin/sed -f
+<pre><code>#!/bin/sed -f
 #DTPD#
 #txt2html Cleans up HTML control characters &lt;.&quot;,&amp;,&gt;
-s/&#0092;&amp;/&#0092;&amp;amp;/g;
-s/&#0092;&quot;/&#0092;&amp;quot;/g;
-s/&lt;/&#0092;&amp;lt;/g;
-s/&gt;/&#0092;&amp;gt;/g;
-s/&#0092;&#0092;/&#0092;&amp;&#0092;#0092;/g;</pre>
+s/\&amp;/\&amp;amp;/g;
+s/\&quot;/\&amp;quot;/g;
+s/&lt;/\&amp;lt;/g;
+s/&gt;/\&amp;gt;/g;
+s/\\/\&amp;\#0092;/g;</code></pre>
   </div>
 </article>
 <hr>

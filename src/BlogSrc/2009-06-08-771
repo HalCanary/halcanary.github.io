@@ -3,61 +3,59 @@ TITLE=make-envelope.sh
 DATE=2009-06-08 17:58:49
 POSTID=771
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<pre>#!/bin/sh
-
-## make-envelope.sh
-##
-## Written 2009 Hal Canary.
-## Dedicated to the public domain.
-##
-## Put the envelope in the printer
-## with the front facing you, and
-## the opening flap to the right.
-##
-## Argument is file containing
-## &quot;to&quot; address.
-
-FROM=&quot;${HOME}/.return-address.txt&quot;
-
-## No 6-3/4 Envelope
- WIDTH=6.5	# inches
- HEIGHT=3.625	# inches
-
-## No. 10 Envelope
-# WIDTH=9.5	# inches
-# HEIGHT=4.5	# inches
-
-## Stationary Envelope
-#WIDTH=5.5	# inches
-#HEIGHT=4	# inches
-
-MARGINLEFT=$(echo &quot;(11-${WIDTH}+.5)*72&quot; &#0092;
-	|bc -l|awk -F. &#0039;{ print $1 }&#0039;)
-MARGINRIGHT=$(echo &quot;.25*72&quot;&#0092;
-	|bc -l|awk -F. &#0039;{ print $1 }&#0039;)
-MARGINTOPBOTTOM=$( echo &quot;(((8.5-${HEIGHT})/2)+.25)*72&quot;&#0092;
-	|bc -l|awk -F. &#0039;{ print $1 }&#0039;)
-
-echo &quot;	MARGINLEFT = $MARGINLEFT points&quot;
-echo &quot;	MARGINRIGHT = $MARGINRIGHT points&quot;
-echo &quot;	MARGINTOPBOTTOM = $MARGINTOPBOTTOM points&quot;
-
-TO=&quot;$1&quot;
-PDF=`mktemp`
-mv &quot;${PDF}&quot; &quot;${PDF}.pdf&quot;
-PDF=&quot;${PDF}.pdf&quot;
-TMP=`mktemp`
-{ cat &quot;${FROM}&quot;;
-  echo &quot;&#0092;n&#0092;n&quot; ;
-  sed &#0039;s/^/&#0092;t&#0092;t/g&#0039; &lt;&quot;${TO}&quot;; }  &gt; &quot;${TMP}&quot;
-cat &quot;$TMP&quot;
-paps --landscape &#0092;
-  --bottom-margin=$MARGINTOPBOTTOM &#0092;
-  --top-margin=$MARGINTOPBOTTOM &#0092;
-  --left-margin=$MARGINLEFT  &#0092;
-  --right-margin=$MARGINRIGHT   &#0092;
-  &lt; &quot;${TMP}&quot; | ps2pdf - - &gt; &quot;${PDF}&quot;
-echo &quot;lpr ${PDF}&quot;</pre>
-
+    #!/bin/sh
+    
+    ## make-envelope.sh
+    ##
+    ## Written 2009 Hal Canary.
+    ## Dedicated to the public domain.
+    ##
+    ## Put the envelope in the printer
+    ## with the front facing you, and
+    ## the opening flap to the right.
+    ##
+    ## Argument is file containing
+    ## "to" address.
+    
+    FROM="${HOME}/.return-address.txt"
+    
+    ## No 6-3/4 Envelope
+     WIDTH=6.5	# inches
+     HEIGHT=3.625	# inches
+    
+    ## No. 10 Envelope
+    # WIDTH=9.5	# inches
+    # HEIGHT=4.5	# inches
+    
+    ## Stationary Envelope
+    #WIDTH=5.5	# inches
+    #HEIGHT=4	# inches
+    
+    MARGINLEFT=$(echo "(11-${WIDTH}+.5)*72" \
+    	|bc -l|awk -F. '{ print $1 }')
+    MARGINRIGHT=$(echo ".25*72"\
+    	|bc -l|awk -F. '{ print $1 }')
+    MARGINTOPBOTTOM=$( echo "(((8.5-${HEIGHT})/2)+.25)*72"\
+    	|bc -l|awk -F. '{ print $1 }')
+    
+    echo "	MARGINLEFT = $MARGINLEFT points"
+    echo "	MARGINRIGHT = $MARGINRIGHT points"
+    echo "	MARGINTOPBOTTOM = $MARGINTOPBOTTOM points"
+    
+    TO="$1"
+    PDF=`mktemp`
+    mv "${PDF}" "${PDF}.pdf"
+    PDF="${PDF}.pdf"
+    TMP=`mktemp`
+    { cat "${FROM}";
+      echo "\n\n" ;
+      sed 's/^/\t\t/g' <"${TO}"; }  > "${TMP}"
+    cat "$TMP"
+    paps --landscape \
+      --bottom-margin=$MARGINTOPBOTTOM \
+      --top-margin=$MARGINTOPBOTTOM \
+      --left-margin=$MARGINLEFT  \
+      --right-margin=$MARGINRIGHT   \
+      < "${TMP}" | ps2pdf - - > "${PDF}"
+    echo "lpr ${PDF}"

@@ -3,32 +3,30 @@ TITLE=alarm
 DATE=2006-06-04 13:08:44
 POSTID=604
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<p>Here, I take a 10 second clip from "Whole Lotta Love", 133 seconds<br />
-into the song, where Plant is orgasmily screaming and Page's guitar is<br />
-doing the same.  Then I increase the volume by a factor of 4.  I then<br />
-reencode the wav as ALARM.mp3 and use it as the alarm sound for my egg<br />
-timer program.</p>
-<pre>
-FILE=~/Music/led_zeppelin/Led_Zepplin_-_BS_CD1_01_whole_lotta_love.mp3
-lame --decode $FILE file.wav
-sox file.wav trim.wav trim 133 10 vol 4
-lame trim.wav ALARM.mp3
-rm trim.wav file.wav
-mv ALARM.mp3 ~/Music/
+Here, I take a 10 second clip from "Whole Lotta Love", 133 seconds  
+into the song, where Plant is orgasmily screaming and Page's guitar is  
+doing the same. Then I increase the volume by a factor of 4. I then  
+reencode the wav as ALARM.mp3 and use it as the alarm sound for my egg  
+timer program.
 
-#!/bin/sh
-# EGG TIMER.  #DTPD#
-# ${HOME}/bin/timer
-MINUTES=$1
-echo ${MINUTES}:00
-for M in $(seq -w $(($MINUTES - 1)) -1 0); do
-    for S in $(seq -w 55 -5 0); do
-	sleep 5 ; echo ${M}:${S}
+    
+    FILE=~/Music/led_zeppelin/Led_Zepplin_-_BS_CD1_01_whole_lotta_love.mp3
+    lame --decode $FILE file.wav
+    sox file.wav trim.wav trim 133 10 vol 4
+    lame trim.wav ALARM.mp3
+    rm trim.wav file.wav
+    mv ALARM.mp3 ~/Music/
+    
+    #!/bin/sh
+    # EGG TIMER.  #DTPD#
+    # ${HOME}/bin/timer
+    MINUTES=$1
+    echo ${MINUTES}:00
+    for M in $(seq -w $(($MINUTES - 1)) -1 0); do
+        for S in $(seq -w 55 -5 0); do
+    	sleep 5 ; echo ${M}:${S}
+        done
     done
-done
-echo -e &quot;&#0092;n&#0092;n&#0092;t&#0092;tALARM! ALARM! ALARM!&#0092;n&#0092;n&quot;
-exec mplayer ~/Music/ALARM.mp3 &amp;&gt; /dev/null
-</pre>
-
+    echo -e "\n\n\t\tALARM! ALARM! ALARM!\n\n"
+    exec mplayer ~/Music/ALARM.mp3 &> /dev/null

@@ -3,27 +3,25 @@ TITLE=otpasswd
 DATE=2006-09-03 12:57:58
 POSTID=627
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<pre>#!/usr/bin/perl
-## otpasswd --- One Time Passwd
-## Generate a random password unsuitable
-## for memorization.
-## Example output: 2HPxfca3W2tDAPPrhFw8
-## Copyright 2006 Hal Canary
-## DTPD (Dedicated to the Public Domain)
-use strict;
-use warnings;
-foreach my $x (0 .. 19) {
-	my $num = int(rand(62));
-	if ($num &lt; 10) {
-		$num += 48;
-	} elsif ($num &lt; 36) {
-		$num += (65-10);
-	} else {
-		$num += (97-36);
-	}
-	printf("%c",$num);
-}
-print "&#0092;n";</pre>
-
+    #!/usr/bin/perl
+    ## otpasswd --- One Time Passwd
+    ## Generate a random password unsuitable
+    ## for memorization.
+    ## Example output: 2HPxfca3W2tDAPPrhFw8
+    ## Copyright 2006 Hal Canary
+    ## DTPD (Dedicated to the Public Domain)
+    use strict;
+    use warnings;
+    foreach my $x (0 .. 19) {
+    	my $num = int(rand(62));
+    	if ($num < 10) {
+    		$num += 48;
+    	} elsif ($num < 36) {
+    		$num += (65-10);
+    	} else {
+    		$num += (97-36);
+    	}
+    	printf("%c",$num);
+    }
+    print "\n";

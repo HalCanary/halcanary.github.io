@@ -3,36 +3,41 @@ TITLE=Fun with randomness
 DATE=2004-03-05 16:09:16
 POSTID=184
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<p>One-time pads are an old-fashoned way of doing cryptography, not used much these days. On the other hand, they are as secure as the random device is random.  (Want a better random device?  <a href="http://www.protego.se/sg100_en.htm">here's one</a>.)</p>
-<p>I've been meaning to write this code for a while now:</p>
-<pre>
-#!/usr/bin/perl
-## crypt-otp.pl ##
-if (@ARGV OUTPUT&#0092;n";
-    exit 1;
-}
-my $a_file = shift @ARGV;
-my $b_file = shift @ARGV;
-open(OTP, "&lt; $a_file");
-open(PTX, "&lt; $b_file");
-while (read(PTX,$b,1)) {
-    read(OTP,$a,1) or die "Out of otp.";
-    print $a ^ $b;
-}
-</pre>
-<p>Here's how to use it.</p>
-<pre>
-$ head -c 10k /dev/random &gt; otp.data
-$ ./crypt-otp.pl otp.data file &gt; file.crypt
-$ ./crypt-otp.pl otp.data file.crypt | less
-</pre>
-<p>Here's how NOT to use it:</p>
-<pre>
-$ perl -e 'for $x (1..1000) {print "PASSWORD"}' &gt; badotp
-$ gzip &lt; file | ./crypt-otp.pl  badotp - &gt; x
-$ ./crypt-otp.pl badotp x | gunzip - | less
-</pre>
-<p>If /dev/random hangs, jiggle your mouse for a while to build up entropy. If you input file is biger than your OTP, then it won't work.  That's the one part of one-time.  So make a bigger OTP by changing the argument to head.</p>
+One-time pads are an old-fashoned way of doing cryptography, not used much these days. On the other hand, they are as secure as the random device is random. (Want a better random device? [here's one](http://www.protego.se/sg100_en.htm).)
 
+I've been meaning to write this code for a while now:
+
+    
+    #!/usr/bin/perl
+    ## crypt-otp.pl ##
+    if (@ARGV OUTPUT\n";
+        exit 1;
+    }
+    my $a_file = shift @ARGV;
+    my $b_file = shift @ARGV;
+    open(OTP, "< $a_file");
+    open(PTX, "< $b_file");
+    while (read(PTX,$b,1)) {
+        read(OTP,$a,1) or die "Out of otp.";
+        print $a ^ $b;
+    }
+    
+
+Here's how to use it.
+
+    
+    $ head -c 10k /dev/random > otp.data
+    $ ./crypt-otp.pl otp.data file > file.crypt
+    $ ./crypt-otp.pl otp.data file.crypt | less
+    
+
+Here's how NOT to use it:
+
+    
+    $ perl -e 'for $x (1..1000) {print "PASSWORD"}' > badotp
+    $ gzip < file | ./crypt-otp.pl  badotp - > x
+    $ ./crypt-otp.pl badotp x | gunzip - | less
+    
+
+If /dev/random hangs, jiggle your mouse for a while to build up entropy. If you input file is biger than your OTP, then it won't work. That's the one part of one-time. So make a bigger OTP by changing the argument to head.

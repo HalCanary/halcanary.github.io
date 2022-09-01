@@ -79,42 +79,37 @@ ul.flat li::before {content:"[";}
   <div class="content e-content">
 <div style="display:none;"></div>
 <p><img src="/images/mono.png" alt="[mono logo]" /></p>
-<p><a href="http://www.mono-project.com/">Mono</a> has just hit 1.0.  It is now time for me to abandon Java and start developing in c# instead.  Let's get started:</p>
-<pre>
-## Lines added to /etc/yum.conf
+<p><a href="http://www.mono-project.com/">Mono</a> has just hit 1.0. It is now time for me to abandon Java and start developing in c# instead. Let's get started:</p>
+<pre><code>## Lines added to /etc/yum.conf
 ## visit http://www.mono-project.com/downloads/
 ## for the correct url for your distro and version.
 [ximian-mono]
 name=Ximian Mono
-baseurl=http://mono2.ximian.com/archive/1.0/fedora-2-i386/
-</pre>
+baseurl=http://mono2.ximian.com/archive/1.0/fedora-2-i386/</code></pre>
 <p>After updating /etc/yum.conf, I installed everything mono, willy-nilly.</p>
-<pre>$ sudo yum install mono*</pre>
+<pre><code>$ sudo yum install mono*</code></pre>
 <p>Now we play with <code>mcs</code>, the mono compiler. Here is Hello World:</p>
-<pre>
-/* ~/code/c-sharp/Hello.cs */
+<pre><code>/* ~/code/c-sharp/Hello.cs */
 /**
    Hello World in C Sharp
 **/
 using System;
 class  Hello {
     static void Main() {
-	Console.Write("hello world&#0092;n");
+    Console.Write(&quot;hello world\n&quot;);
     }
 }
-/*EOF*/</pre>
+/*EOF*/</code></pre>
 <p>Compile and and run:</p>
-<pre>
-$ mcs Hello.cs
+<pre><code>$ mcs Hello.cs
 Compilation succeeded
 $ ls
 Hello.cs  Hello.exe
 $ mono Hello.exe
 hello world
-$
-</pre>
+$</code></pre>
 <p>Yea!</p>
-<pre>$ monodoc &amp;</pre>
+<pre><code>$ monodoc &amp;</code></pre>
   </div>
 </article>
 <hr>

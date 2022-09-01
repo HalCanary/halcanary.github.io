@@ -3,18 +3,18 @@ TITLE=Tweak MT's RSS
 DATE=2004-08-11 15:02:42
 POSTID=290
 CATEGORIES=meta;
-MODE=htmldiv
 
-<p>To make Movabletype's RSS-feed work the way mine does, replace</p>
-<pre>
-&lt;description&gt;
-&lt;$MTEntryExcerpt remove_html=&quot;1&quot; encode_xml=&quot;1&quot; $&gt;
-&lt;/description&gt;
-</pre>
-<p>with</p>
-<pre>
-&lt;description&gt;
-&lt;$MTEntryBody encode_xml=&quot;1&quot; $&gt;
-&lt;/description&gt;
-</pre>
+To make Movabletype's RSS-feed work the way mine does, replace
 
+    
+    <description>
+    <$MTEntryExcerpt remove_html="1" encode_xml="1" $>
+    </description>
+    
+
+with
+
+    
+    <description>
+    <$MTEntryBody encode_xml="1" $>
+    </description>

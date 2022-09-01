@@ -78,8 +78,8 @@ ul.flat li::before {content:"[";}
   </header>
   <div class="content e-content">
 <div style="display:none;"></div>
-<p>Even though I've studied this algorithm a couple of times, I've never had to implement it before.  So I assigned it to myself.</p>
-<pre>/** should have a time-complecity of O(N&#0215;log(N))
+<p>Even though I've studied this algorithm a couple of times, I've never had to implement it before. So I assigned it to myself.</p>
+<pre><code>/** should have a time-complecity of O(N×log(N))
     and a space-compelcity of O(N) **/
 void mergesort(int N, int array[]) {
   int k; // k is the block size.
@@ -89,7 +89,7 @@ void mergesort(int N, int array[]) {
   int ilimit,jlimit; //end of blocks.
   int *hold = malloc(sizeof(hold) * N);
   if (hold == NULL) {
-    fprintf(stderr,&quot;malloc failed&#0092;n&quot;);
+    fprintf(stderr,&quot;malloc failed\n&quot;);
     exit(2);
   }
   int *new = hold;
@@ -102,29 +102,29 @@ void mergesort(int N, int array[]) {
       ilimit = i + k;
       j = ilimit;
       if (ilimit &gt;= N) {
-	while (i &lt; N)
-	  new[p++] = old[i++];
- 	break; //out of for-loop
+    while (i &lt; N)
+      new[p++] = old[i++];
+    break; //out of for-loop
       }
       jlimit = j + k;
       if (jlimit &gt;= N)
-	jlimit = N;
+    jlimit = N;
       while (1) {
-	if (old[i] &lt; old[j]) {
-	  new[p++] = old[i++];
-	  if (i == ilimit) {
-	    while (j &lt; jlimit)
-	      new[p++] = old[j++];
-	    break; //out of while-loop
-	  }
-	} else {
-	  new[p++] = old[j++];
-	  if (j == jlimit) {
-	    while (i &lt; ilimit)
-	      new[p++] = old[i++];
-	    break; //out of while-loop
-	  }
-	}
+    if (old[i] &lt; old[j]) {
+      new[p++] = old[i++];
+      if (i == ilimit) {
+        while (j &lt; jlimit)
+          new[p++] = old[j++];
+        break; //out of while-loop
+      }
+    } else {
+      new[p++] = old[j++];
+      if (j == jlimit) {
+        while (i &lt; ilimit)
+          new[p++] = old[i++];
+        break; //out of while-loop
+      }
+    }
       } // End while loop.
     } // End inner for loop.
     tmp = old; old = new; new = tmp;
@@ -134,9 +134,9 @@ void mergesort(int N, int array[]) {
       array[i] = old[i];
   free(hold);
   return;
-}</pre>
+}</code></pre>
 <p>Next step is to translate to Java and use .compareTo() with arrays of references:</p>
-<pre>  public static void mergeSort(Comparable array[]) {
+<pre><code>  public static void mergeSort(Comparable array[]) {
     int N = array.length;
     int k; // k is the block size.
     int x; // x is which block we are at.
@@ -184,7 +184,7 @@ void mergesort(int N, int array[]) {
     if (old != array)
       for (i = 0; i &lt; N; i++)
         array[i] = old[i];
-  }</pre>
+  }</code></pre>
   </div>
 </article>
 <hr>

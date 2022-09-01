@@ -79,9 +79,9 @@ ul.flat li::before {content:"[";}
   <div class="content e-content">
 <div style="display:none;"></div>
 <p>I had been doing this:</p>
-<pre>sudo su -c 'echo AT+MODE=8 > /dev/ttyACM0'</pre>
+<pre><code>sudo su -c &#39;echo AT+MODE=8 &gt; /dev/ttyACM0&#39;</code></pre>
 <p>but I think that this is better becasue it spawns one less shell:</p>
-<pre>echo AT+MODE=8 | sudo tee /dev/ttyACM0 > /dev/null</pre>
+<pre><code>echo AT+MODE=8 | sudo tee /dev/ttyACM0 &gt; /dev/null</code></pre>
   </div>
 </article>
 <hr>

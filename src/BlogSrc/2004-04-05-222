@@ -3,23 +3,23 @@ TITLE=emacs clipboard cut and paste, done right!
 DATE=2004-04-05 00:50:23
 POSTID=222
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<pre>
-;; ~/.emacs ;;
-(global-unset-key [(control v)]) ;;use page-down
-(global-set-key   [(control v)]
-    'clipboard-yank)
-(global-unset-key [(control shift v)]) ;;use page-up
-(global-set-key   [(control shift v)]
-    'clipboard-yank)
-(global-unset-key [(control shift c)])
-(global-set-key   [(control shift c)]
-    'clipboard-kill-ring-save)
-(global-unset-key [(control shift x)])
-(global-set-key   [(control shift x)]
-    'clipboard-kill-region)
-</pre>
-<p>I figured this out after reading HP's <a href="http://ometer.com/free-software-ui.html">essay on useability</a>, where he mentions that &ldquo;Emacs is basically the last remaining X application that insists on having cut and paste that doesn't work correctly.&rdquo;</p>
-<p>A while back, I vowed to switch from emacs to another editor.  Silly me.  That could never happen.</p>
+    
+    ;; ~/.emacs ;;
+    (global-unset-key [(control v)]) ;;use page-down
+    (global-set-key   [(control v)]
+        'clipboard-yank)
+    (global-unset-key [(control shift v)]) ;;use page-up
+    (global-set-key   [(control shift v)]
+        'clipboard-yank)
+    (global-unset-key [(control shift c)])
+    (global-set-key   [(control shift c)]
+        'clipboard-kill-ring-save)
+    (global-unset-key [(control shift x)])
+    (global-set-key   [(control shift x)]
+        'clipboard-kill-region)
+    
 
+I figured this out after reading HP's [essay on useability](http://ometer.com/free-software-ui.html), where he mentions that “Emacs is basically the last remaining X application that insists on having cut and paste that doesn't work correctly.”
+
+A while back, I vowed to switch from emacs to another editor. Silly me. That could never happen.

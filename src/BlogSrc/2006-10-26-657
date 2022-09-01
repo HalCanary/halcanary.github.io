@@ -3,10 +3,8 @@ TITLE=Tiny Utility Script of the Day
 DATE=2006-10-26 11:58:36
 POSTID=657
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<pre>#!/bin/sh
-#bin/amp#
-#DTPD#
-nohup &quot;$@&quot; 1&gt; /dev/null 2&gt;&amp;1 &amp;</pre>
-
+    #!/bin/sh
+    #bin/amp#
+    #DTPD#
+    nohup "$@" 1> /dev/null 2>&1 &

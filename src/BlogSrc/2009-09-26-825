@@ -3,32 +3,36 @@ TITLE=ssh-show-key-fingerprint
 DATE=2009-09-26 13:01:31
 POSTID=825
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<pre>#!/bin/sh
-## ~/bin/ssh&#0045;show&#0045;key&#0045;fingerprint
-## Prints out SSHD Key Fingerprints
-## Written 2004&#0045;2009 Hal Canary
-## Dedicated ott he Public Domain.
-test &quot;$#&quot; &#0045;eq 0 &amp;&amp; &#0092;
-  exec &quot;$0&quot; /etc/ssh/ssh_host_*_key.pub
-for file in &quot;$@&quot; ; do
-  ( cd `dirname &quot;$file&quot;`;
-    /usr/bin/ssh&#0045;keygen &#0045;l &#0092;
-      &#0045;f  `basename &quot;$file&quot;`; )
-done</pre>
-<p>What to do with this info?  first of all, print out the fingerprints and put them in your wallet.</p>
-<p>Here's another thing I do:</p>
-<pre>ssh-show-key-fingerprint | \
-  sudo tee -a /etc/issue.ssh > /dev/null
-echo 'Banner /etc/issue.ssh' | \
-  sudo tee -a /etc/ssh/sshd_config > /dev/null</pre>
-<p>This, of course, is in no way a secure way to check your fingerprint, since it is just as vulnerable to a man-in-the-middle attack.  But it works as a backup plan.</p>
-<p>And some legal theories say you should insert these additional lines into your /ets/issue.ssh file:</p>
-<pre> UNAUTHORIZED ACCESS PROHIBITED.
+    #!/bin/sh
+    ## ~/bin/ssh-show-key-fingerprint
+    ## Prints out SSHD Key Fingerprints
+    ## Written 2004-2009 Hal Canary
+    ## Dedicated ott he Public Domain.
+    test "$#" -eq 0 && \
+      exec "$0" /etc/ssh/ssh_host_*_key.pub
+    for file in "$@" ; do
+      ( cd `dirname "$file"`;
+        /usr/bin/ssh-keygen -l \
+          -f  `basename "$file"`; )
+    done
 
- USE OF THIS SYSTEM BY ANY USER, AUTHORIZED OR UNAUTHORIZED,
- CONSTITUTES CONSENT TO THIS MONITORING, INTERCEPTION,
- RECORDING, READING, COPYING, or CAPTURING and DISCLOSURE
- by SYSTEM OWNER.</pre>
+What to do with this info? first of all, print out the fingerprints and put them in your wallet.
 
+Here's another thing I do:
+
+    ssh-show-key-fingerprint | \
+      sudo tee -a /etc/issue.ssh > /dev/null
+    echo 'Banner /etc/issue.ssh' | \
+      sudo tee -a /etc/ssh/sshd_config > /dev/null
+
+This, of course, is in no way a secure way to check your fingerprint, since it is just as vulnerable to a man-in-the-middle attack. But it works as a backup plan.
+
+And some legal theories say you should insert these additional lines into your /ets/issue.ssh file:
+
+     UNAUTHORIZED ACCESS PROHIBITED.
+    
+     USE OF THIS SYSTEM BY ANY USER, AUTHORIZED OR UNAUTHORIZED,
+     CONSTITUTES CONSENT TO THIS MONITORING, INTERCEPTION,
+     RECORDING, READING, COPYING, or CAPTURING and DISCLOSURE
+     by SYSTEM OWNER.

@@ -78,8 +78,7 @@ ul.flat li::before {content:"[";}
   </header>
   <div class="content e-content">
 <div style="display:none;"></div>
-<pre>
-#!/bin/sh
+<pre><code>#!/bin/sh
 ##  RECURSIVE SHRED AND REMOVE
 ##  (c) Hal Canary 2005
 ##  big_geek at halcanary dot org
@@ -87,18 +86,17 @@ ul.flat li::before {content:"[";}
 ##  This is free software; you can redistribute
 ##  it and modify it under the terms of version
 ##  2 of the GNU GPL.
-for x in "$@" ; do
-  if [ -d "$x" ] ; then
-    if [ "$x" != "." -a "$x" != ".." ] ; then
-      touch "${x}"/EMPTY
-      rm-shred "${x}"/*
-      rmdir "${x}"
+for x in &quot;$@&quot; ; do
+  if [ -d &quot;$x&quot; ] ; then
+    if [ &quot;$x&quot; != &quot;.&quot; -a &quot;$x&quot; != &quot;..&quot; ] ; then
+      touch &quot;${x}&quot;/EMPTY
+      rm-shred &quot;${x}&quot;/*
+      rmdir &quot;${x}&quot;
     fi
   else
-    shred -n 1 -u "$x"
+    shred -n 1 -u &quot;$x&quot;
   fi
-done
-</pre>
+done</code></pre>
   </div>
 </article>
 <hr>

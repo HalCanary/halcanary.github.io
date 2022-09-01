@@ -3,31 +3,31 @@ TITLE=sshd attacks
 DATE=2004-07-26 13:47:22
 POSTID=278
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<p>I've been getting attacks against my sshd server:</p>
-<pre>
-Failed logins from these:
-   admin/password from 12.47.62.139: 2 Time(s)
-   admin/password from 134.21.2.227: 2 Time(s)
-   guest/password from 12.47.62.139: 1 Time(s)
-   guest/password from 134.21.2.227: 1 Time(s)
-   guest/password from 210.1.9.227: 1 Time(s)
-   guest/password from 61.193.179.162: 1 Time(s)
-   root/password from 12.47.62.139: 3 Time(s)
-   root/password from 134.21.2.227: 3 Time(s)
-   test/password from 12.47.62.139: 2 Time(s)
-   test/password from 134.21.2.227: 2 Time(s)
-   test/password from 210.1.9.227: 1 Time(s)
-   test/password from 61.193.179.162: 1 Time(s)
-   user/password from 12.47.62.139: 1 Time(s)
-   user/password from 134.21.2.227: 1 Time(s)
-</pre>
-<p>If you have one of these common accounts, shut off logins from them:</p>
-<pre>
-## lines added to /etc/ssh/sshd_config
-PermitRootLogin no
-DenyUsers admin guest test user
-## EOF
-</pre>
+I've been getting attacks against my sshd server:
 
+    
+    Failed logins from these:
+       admin/password from 12.47.62.139: 2 Time(s)
+       admin/password from 134.21.2.227: 2 Time(s)
+       guest/password from 12.47.62.139: 1 Time(s)
+       guest/password from 134.21.2.227: 1 Time(s)
+       guest/password from 210.1.9.227: 1 Time(s)
+       guest/password from 61.193.179.162: 1 Time(s)
+       root/password from 12.47.62.139: 3 Time(s)
+       root/password from 134.21.2.227: 3 Time(s)
+       test/password from 12.47.62.139: 2 Time(s)
+       test/password from 134.21.2.227: 2 Time(s)
+       test/password from 210.1.9.227: 1 Time(s)
+       test/password from 61.193.179.162: 1 Time(s)
+       user/password from 12.47.62.139: 1 Time(s)
+       user/password from 134.21.2.227: 1 Time(s)
+    
+
+If you have one of these common accounts, shut off logins from them:
+
+    
+    ## lines added to /etc/ssh/sshd_config
+    PermitRootLogin no
+    DenyUsers admin guest test user
+    ## EOF

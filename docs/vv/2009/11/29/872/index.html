@@ -78,7 +78,7 @@ ul.flat li::before {content:"[";}
   </header>
   <div class="content e-content">
 <div style="display:none;"></div>
-<pre>#!/bin/sh
+<pre><code>#!/bin/sh
 SEDCMD=&quot;$1&quot;
 shift
 for x in &quot;$@&quot; ; do
@@ -87,9 +87,9 @@ for x in &quot;$@&quot; ; do
   sed &quot;${SEDCMD}&quot; &lt; &quot;${x}&quot; &gt; &quot;${tmp}&quot;
   mv &quot;${tmp}&quot; &quot;${x}&quot;
   echo &quot;$x fixed.&quot;
-done</pre>
-<p>UPDATE:  The next day I realized that</p>
-<pre>sed -i</pre>
+done</code></pre>
+<p>UPDATE: The next day I realized that</p>
+<pre><code>sed -i</code></pre>
 <p>does exactly the same thing.</p>
   </div>
 </article>

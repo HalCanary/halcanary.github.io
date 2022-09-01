@@ -3,31 +3,32 @@ TITLE=ransdomize
 DATE=2008-12-21 18:50:35
 POSTID=754
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<pre>#!/usr/bin/env python
-# randomize_list.py
-# Written 2008 Hal Canary
-# Dedicated to the public domain.
-import sys, random
-l=[]
-for line in sys.stdin:
-	l.append(line)
-while l:
-	e = random.choice(l)
-	l.remove(e)
-	sys.stdout.write(e)</pre>
-<p><strong>UPDATE 2009-01-04</strong>:  Just as I suspected, that code is highly inefficient.  Here's a different algorithm which is much faster for large N.</p>
-<pre>#!/usr/bin/env python
-# randomize_list.py
-# Written 2008-2009 Hal Canary
-# Dedicated to the public domain.
-import sys, random
-l=[]
-for line in sys.stdin:
-	l.append(line)
-while l:
-	i = random.randint(0,len(l)-1)
-	sys.stdout.write(l.pop(i))</pre>
-<p>Testing with the <code>time</code> command showed a 74% reduction in CPU use with the better algorithm.</p>
+    #!/usr/bin/env python
+    # randomize_list.py
+    # Written 2008 Hal Canary
+    # Dedicated to the public domain.
+    import sys, random
+    l=[]
+    for line in sys.stdin:
+    	l.append(line)
+    while l:
+    	e = random.choice(l)
+    	l.remove(e)
+    	sys.stdout.write(e)
 
+**UPDATE 2009-01-04**: Just as I suspected, that code is highly inefficient. Here's a different algorithm which is much faster for large N.
+
+    #!/usr/bin/env python
+    # randomize_list.py
+    # Written 2008-2009 Hal Canary
+    # Dedicated to the public domain.
+    import sys, random
+    l=[]
+    for line in sys.stdin:
+    	l.append(line)
+    while l:
+    	i = random.randint(0,len(l)-1)
+    	sys.stdout.write(l.pop(i))
+
+Testing with the `time` command showed a 74% reduction in CPU use with the better algorithm.

@@ -78,7 +78,7 @@ ul.flat li::before {content:"[";}
   </header>
   <div class="content e-content">
 <div style="display:none;"></div>
-<pre>/*
+<pre><code>/*
    randpassphrase.c
    This makes use of /dev/random
    Copyright 2006 Hal Canary
@@ -93,13 +93,13 @@ int main() {
   char source [] = &quot;/dev/random&quot;;
   unsigned int num;
   if ((devrandom = fopen(source, &quot;rb&quot;)) == NULL) {
-    fprintf(stderr, &quot;Cannot open %s&#0092;n&quot;, source);
+    fprintf(stderr, &quot;Cannot open %s\n&quot;, source);
     exit(EXIT_FAILURE);
   }
   int i;
   for (i=0; i&lt; 28; i++) {
     if (fread(&amp;num, sizeof(num), 1, devrandom) != 1) {
-      fprintf(stderr, &quot;%s: file read error.&#0092;n&quot;, source);
+      fprintf(stderr, &quot;%s: file read error.\n&quot;, source);
       exit(EXIT_FAILURE);
     }
     printf(&quot;%c&quot;,((num % 26) + 97));
@@ -107,9 +107,9 @@ int main() {
     if (i%4 == 3) { printf(&quot; &quot;); }
   }
   close(devrandom);
-  printf(&quot;&#0092;n&quot;);
+  printf(&quot;\n&quot;);
   return(0);
-}</pre>
+}</code></pre>
   </div>
 </article>
 <hr>

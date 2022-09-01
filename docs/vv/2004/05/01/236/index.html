@@ -78,17 +78,17 @@ ul.flat li::before {content:"[";}
   </header>
   <div class="content e-content">
 <div style="display:none;"></div>
-<pre>#!/usr/bin/perl
+<pre><code>#!/usr/bin/perl
 ## ~/bin/prepend-something ##
 my $pre = shift;
 my @files = @ARGV;
 foreach $file (@files) {
     my $new = $pre.$file;
-    system ("mv -v &#0092;"$file&#0092;" &#0092;"$new&#0092;"");
+    system (&quot;mv -v \&quot;$file\&quot; \&quot;$new\&quot;&quot;);
 }
-</pre>
-<p>&nbsp;</p>
-<pre>#!/usr/bin/perl
+
+
+#!/usr/bin/perl
 ## ~/bin/rename-files ##
 my $old = shift;
 my $new = shift;
@@ -96,9 +96,8 @@ my @files = @ARGV;
 foreach $file (@files) {
     my $filenew = $file;
     $filenew =~ s/$old/$new/g;
-    system ("mv -v &#0092;"$file&#0092;" &#0092;"$filenew&#0092;"");
-}
-</pre>
+    system (&quot;mv -v \&quot;$file\&quot; \&quot;$filenew\&quot;&quot;);
+}</code></pre>
   </div>
 </article>
 <hr>

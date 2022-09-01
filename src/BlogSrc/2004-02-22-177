@@ -3,33 +3,30 @@ TITLE=burn-dir
 DATE=2004-02-22 10:52:55
 POSTID=177
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<p>This is how to combine mkisofs and cdrecord. This should be a standard script on all systems, but it's not.</p>
-<pre>
-#!/bin/sh
+This is how to combine mkisofs and cdrecord. This should be a standard script on all systems, but it's not.
 
-## /usr/local/bin/burn-dir ##
+    #!/bin/sh
 
-# Burn-dir. Simple command to burn a
-# directory onto a CD-R.  Based off of
-# mkisofs man page.  Assumes that
-# /etc/cdrecord.conf is correct.
-if [ $# -eq 0 ] ; then
-  echo -e "Useage:"
-  echo -e "  $0 directory &#0092;"Volume Name &#0092;""
-  exit 1
-fi
-CDROM=/dev/cdrom1
+    ## /usr/local/bin/burn-dir ##
 
-cdblocks=`mkisofs -print-size -quiet -V &#0092;
-  "$2" -r -J -f $1`
+    # Burn-dir. Simple command to burn a
+    # directory onto a CD-R.  Based off of
+    # mkisofs man page.  Assumes that
+    # /etc/cdrecord.conf is correct.
+    if [ $# -eq 0 ] ; then
+      echo -e "Useage:"
+      echo -e "  $0 directory \"Volume Name \""
+      exit 1
+    fi
+    CDROM=/dev/cdrom1
 
-echo "mkisofs -quiet -V \"$2\" -r -J -f $1 |&#0092;
-  cdrecord -v -pad  tsize=${cdblocks}s -"
-mkisofs -quiet -V "$2" -r -J -f $1 | &#0092;
-  cdrecord -v -pad tsize=${cdblocks}s -
+    cdblocks=`mkisofs -print-size -quiet -V \
+      "$2" -r -J -f $1`
 
-eject $CDROM
-</pre>
+    echo "mkisofs -quiet -V \"$2\" -r -J -f $1 | \
+      cdrecord -v -pad  tsize=${cdblocks}s -"
+    mkisofs -quiet -V "$2" -r -J -f $1 | \
+      cdrecord -v -pad tsize=${cdblocks}s -
 
+    eject $CDROM

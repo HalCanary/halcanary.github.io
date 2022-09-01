@@ -3,18 +3,17 @@ TITLE=(defun remove-excess-whitespace...
 DATE=2008-10-03 21:02:56
 POSTID=738
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<p>I always meant to go ahead and fix this function so it did what I want.  Now it uses proper regex.  See <a href="/vv/2004/02/18/176/">the old version, too</a>.</p>
-<pre>;; ~/.emacs ;;
-(defun remove-excess-whitespace () (interactive)
-  (auto-mega-replace  &quot;&#0092;&#0092;( &#0092;&#0092;|&#0092;t&#0092;&#0092;)$&quot; &quot;&quot;))
-(defun auto-mega-replace (arg1 arg2)
-  (save-excursion
-    (beginning-of-buffer)
-    (while (re-search-forward arg1)
-      (beginning-of-buffer)
-      (perform-replace arg1 arg2
-        nil t nil)
-      (beginning-of-buffer))))</pre>
+I always meant to go ahead and fix this function so it did what I want. Now it uses proper regex. See [the old version, too](/vv/2004/02/18/176/).
 
+    ;; ~/.emacs ;;
+    (defun remove-excess-whitespace () (interactive)
+      (auto-mega-replace  "\\( \\|\t\\)$" ""))
+    (defun auto-mega-replace (arg1 arg2)
+      (save-excursion
+        (beginning-of-buffer)
+        (while (re-search-forward arg1)
+          (beginning-of-buffer)
+          (perform-replace arg1 arg2
+            nil t nil)
+          (beginning-of-buffer))))

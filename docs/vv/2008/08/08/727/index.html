@@ -79,13 +79,12 @@ ul.flat li::before {content:"[";}
   <div class="content e-content">
 <div style="display:none;"></div>
 <p>Because the syntax of the <em>/etc/sudoers</em> file is obscure, I'm noting down here exactly what I've done to mine:</p>
-<pre>
-root	ALL=(ALL) ALL
+<pre><code>root    ALL=(ALL) ALL
 %admin ALL=(ALL) ALL
 %admin ALL=NOPASSWD: /usr/bin/wodim
 %admin ALL=NOPASSWD: /usr/bin/apt-get
 %admin ALL=NOPASSWD: /sbin/reboot
-%admin ALL=NOPASSWD: /sbin/poweroff</pre>
+%admin ALL=NOPASSWD: /sbin/poweroff</code></pre>
 <p>This allows a few commonly used commands to be executed without a password.</p>
   </div>
 </article>

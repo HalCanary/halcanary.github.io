@@ -3,38 +3,38 @@ TITLE=dynamic arrays
 DATE=2010-03-17 09:00:38
 POSTID=953
 CATEGORIES=computer-science;computers-code;
-MODE=htmldiv
 
-<p>About ten years ago, I wrote a C++ program to print out all the prime numbers less than a given number using trial division.  I recently went back and looked at the program and realized how little I knew at the time.  Even though my first CS class covered object-oriented programming in C++, we never really talked the about simply using the <code>new</code> keyword on arrays to make use of dynamic arrays.  The topic was covered in my second CS class, which I took three years later.</p>
-<pre>
-int *array;
-int array_size = 128;
-array = new int[array_size];
+About ten years ago, I wrote a C++ program to print out all the prime numbers less than a given number using trial division. I recently went back and looked at the program and realized how little I knew at the time. Even though my first CS class covered object-oriented programming in C++, we never really talked the about simply using the `new` keyword on arrays to make use of dynamic arrays. The topic was covered in my second CS class, which I took three years later.
 
-/* do somthing to fill the array */
+    
+    int *array;
+    int array_size = 128;
+    array = new int[array_size];
+    
+    /* do somthing to fill the array */
+    
+    int *temparray = new int[(array_size * 2)];
+    for (int i = 0; i < array_size; i++)
+        temparray[i] = array[i];
+    array_size = array_size * 2;
+    delete [] array;
+    array = temparray;
+    
 
-int *temparray = new int[(array_size * 2)];
-for (int i = 0; i &lt; array_size; i++)
-    temparray[i] = array[i];
-array_size = array_size * 2;
-delete [] array;
-array = temparray;
-</pre>
-<p>In the last few years, I have realized that for the simplest progrmas, C is often more efficient and straightforward than C++.  In C, the code looks exactly the same, except that <code>new</code> is replaced by <code>malloc()</code> and <code>delete</code> is replaced by <code>free()</code>.</p>
-<pre>
-int *array;
-int *temparray;
-int array_size = 128;
-int i;
-array = malloc(array_size * sizeof(*array));
+In the last few years, I have realized that for the simplest progrmas, C is often more efficient and straightforward than C++. In C, the code looks exactly the same, except that `new` is replaced by `malloc()` and `delete` is replaced by `free()`.
 
-/* do somthing to fill the array */
-
-temparray = malloc(array_size * 2 * sizeof(*temparray));
-for (i = 0; i &lt; array_size; i++)
-    temparray[i] = array[i];
-array_size = (array_size * 2);
-free(array);
-array = temparray;
-</pre>
-
+    
+    int *array;
+    int *temparray;
+    int array_size = 128;
+    int i;
+    array = malloc(array_size * sizeof(*array));
+    
+    /* do somthing to fill the array */
+    
+    temparray = malloc(array_size * 2 * sizeof(*temparray));
+    for (i = 0; i < array_size; i++)
+        temparray[i] = array[i];
+    array_size = (array_size * 2);
+    free(array);
+    array = temparray;

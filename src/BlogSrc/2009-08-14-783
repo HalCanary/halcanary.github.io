@@ -3,39 +3,39 @@ TITLE=rounding functions for POSIX bc.
 DATE=2009-08-14 12:26:54
 POSTID=783
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<pre>$ echo &#0039;scale=10; 1/3*3;&#0039;|bc
-.9999999999</pre>
-<p>A work in progress, rounding functions for POSIX bc.</p>
-<pre>/* DTPD */
-define round(x,dec) {
-  oscale = scale;
-  x = x * (10 ^ dec);
-  scale = 0;
-  tmp = x / 1;
-  if (x-tmp &gt;= 0.5) {
-    x = tmp + 1 ;
-  } else {
-    x = tmp ;
-  }
-  scale = oscale;
-  x = x / (10 ^ dec);
-  return x;
-}
-define round(x) {
-  oscale = scale;
-  dec = oscale-1;
-  x = x * (10 ^ dec);
-  scale = 0;
-  tmp = x / 1;
-  if (x-tmp &gt;= 0.5) {
-    x = tmp + 1 ;
-  } else {
-    x = tmp ;
-  }
-  scale = oscale;
-  x = x / (10 ^ dec);
-  return x;
-}</pre>
+    $ echo 'scale=10; 1/3*3;'|bc
+    .9999999999
 
+A work in progress, rounding functions for POSIX bc.
+
+    /* DTPD */
+    define round(x,dec) {
+      oscale = scale;
+      x = x * (10 ^ dec);
+      scale = 0;
+      tmp = x / 1;
+      if (x-tmp >= 0.5) {
+        x = tmp + 1 ;
+      } else {
+        x = tmp ;
+      }
+      scale = oscale;
+      x = x / (10 ^ dec);
+      return x;
+    }
+    define round(x) {
+      oscale = scale;
+      dec = oscale-1;
+      x = x * (10 ^ dec);
+      scale = 0;
+      tmp = x / 1;
+      if (x-tmp >= 0.5) {
+        x = tmp + 1 ;
+      } else {
+        x = tmp ;
+      }
+      scale = oscale;
+      x = x / (10 ^ dec);
+      return x;
+    }

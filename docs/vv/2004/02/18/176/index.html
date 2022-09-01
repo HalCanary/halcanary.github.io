@@ -78,12 +78,15 @@ ul.flat li::before {content:"[";}
   </header>
   <div class="content e-content">
 <div style="display:none;"></div>
-<p>When mutt is told to <a href="http://gnupg.org/">gpg</a> sign an email, it will use <a href="http://www.freesoft.org/CIE/RFC/1521/6.htm">Quoted-Printable Content-Transfer-Encoding</a>, which will replace <code>&quot;&nbsp;&#0092;n&quot;</code> with <code>&quot;=20&#0092;n&quot;</code>, an escape sequence of some sort. (ASCII &quot;&nbsp;&quot; is 0x20.)</p>
-<p>I'd rather replace <code>&quot;&nbsp;&#0092;n&quot;</code> with <code>&quot;&#0092;n&quot;</code> anyways.   Here's some elisp code to do just that:</p>
-<pre>
-;; ~/.emacs ;;
+<p>When mutt is told to <a href="http://gnupg.org/">gpg</a> sign an email, it will use
+<a href="http://www.freesoft.org/CIE/RFC/1521/6.htm">Quoted-Printable
+Content-Transfer-Encoding</a>, which
+will replace <code>" \n"</code> with <code>"=20\n"</code>, an escape sequence of some sort. (ASCII
+" " is 0x20.)</p>
+<p>I'd rather replace <code>" \n"</code> with <code>"\n"</code> anyways. Here's some elisp code to do just that:</p>
+<pre><code>;; ~/.emacs ;;
 (defun hal1 () (interactive)
-  (auto-mega-replace  " &#0092;n" "&#0092;n"))
+  (auto-mega-replace  &quot; \n&quot; &quot;\n&quot;))
 (defun auto-mega-replace (arg1 arg2)
   (save-excursion
     (beginning-of-buffer)
@@ -91,8 +94,7 @@ ul.flat li::before {content:"[";}
       (beginning-of-buffer)
       (perform-replace arg1 arg2
         nil nil nil)
-      (beginning-of-buffer))))
-</pre>
+      (beginning-of-buffer))))</code></pre>
 <p>[<em>edited 2003-02-20</em>]</p>
   </div>
 </article>

@@ -78,29 +78,21 @@ ul.flat li::before {content:"[";}
   </header>
   <div class="content e-content">
 <div style="display:none;"></div>
-<pre>
-tar c directory/ | ssh lensman "tar x"
-</pre>
+<pre><code>tar c directory/ | ssh lensman &quot;tar x&quot;</code></pre>
 <p>Unix is beautiful.</p>
 <p>(Yes, I know about scp and rsync.)</p>
 <p><strong>UPDATE 2004-08-06:</strong> Other options:</p>
-<p>This is the most ugly way of doing it.  It involves wasting disc space.</p>
-<pre>
-$ tar czf directory.tgz directory
+<p>This is the most ugly way of doing it. It involves wasting disc space.</p>
+<pre><code>$ tar czf directory.tgz directory
 $ scp directory.tgz lensman:
 $ ssh lensman
-$ tar xzf directory.tgz
-</pre>
-<p>Until I did this research, I didn't know you could do this one:  (Notice the rcp-like syntax.)</p>
-<pre>
-$ scp -r directory lensman:
-</pre>
-<p>rsync is the king of the rcp replacements.  It has the most options and is best for incremental backups.<br />
+$ tar xzf directory.tgz</code></pre>
+<p>Until I did this research, I didn't know you could do this one: (Notice the rcp-like syntax.)</p>
+<pre><code>$ scp -r directory lensman:</code></pre>
+<p>rsync is the king of the rcp replacements. It has the most options and is best for incremental backups.<br />
 Set the RSYNC_RSH variable in your ~/.bashrc file.</p>
-<pre>
-$ export RSYNC_RSH="ssh"
-$ rsync -r directory lensman:
-</pre>
+<pre><code>$ export RSYNC_RSH=&quot;ssh&quot;
+$ rsync -r directory lensman:</code></pre>
   </div>
 </article>
 <hr>

@@ -78,15 +78,15 @@ ul.flat li::before {content:"[";}
   </header>
   <div class="content e-content">
 <div style="display:none;"></div>
-<pre>#!/bin/sh
+<pre><code>#!/bin/sh
 #DTPD#
-echo first argument is '&quot;'${1}'&quot;'
+echo first argument is &#39;&quot;&#39;${1}&#39;&quot;&#39;
 for argc in `seq 2 $#`; do
-        eval arg=&#0092;${$argc}
+        eval arg=\${$argc}
         echo ${argc}th arg is $arg
-done</pre>
+done</code></pre>
 <p>For example:</p>
-<pre>#!/bin/sh
+<pre><code>#!/bin/sh
 # prepend-something.sh
 #DTPD#
 if [ &quot;$#&quot; -lt 2 ] ; then
@@ -95,23 +95,23 @@ if [ &quot;$#&quot; -lt 2 ] ; then
 fi
 PREFEX=${1}
 for argc in `seq 2 $#`; do
-        eval arg=&#0092;${$argc}
+        eval arg=\${$argc}
         mv -v &quot;${arg}&quot; &quot;${PREFEX}${arg}&quot;
-done</pre>
+done</code></pre>
 <hr />
-<p><strong>Update 2009-12-05</strong>:  Another way to do it would be to use the shift command.</p>
-<pre>#!/bin/sh
-# prepend&#0045;something.sh
+<p><strong>Update 2009-12-05</strong>: Another way to do it would be to use the shift command.</p>
+<pre><code>#!/bin/sh
+# prepend-something.sh
 #DTPD#
-if [ &quot;$#&quot; &#0045;lt 2 ] ; then
+if [ &quot;$#&quot; -lt 2 ] ; then
     echo &quot;useage:  $0 PREFEX FILE[S]&quot;
     exit 1
 fi
 prefix=${1}
 shift
 for arg in &quot;$@&quot;; do
-    mv &#0045;v &quot;$arg&quot; &quot;${prefix}${arg}&quot;
-done</pre>
+    mv -v &quot;$arg&quot; &quot;${prefix}${arg}&quot;
+done</code></pre>
   </div>
 </article>
 <hr>

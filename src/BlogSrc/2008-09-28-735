@@ -3,10 +3,11 @@ TITLE=sudo tee
 DATE=2008-09-28 20:27:24
 POSTID=735
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<p>I had been doing this:</p>
-<pre>sudo su -c 'echo AT+MODE=8 > /dev/ttyACM0'</pre>
-<p>but I think that this is better becasue it spawns one less shell:</p>
-<pre>echo AT+MODE=8 | sudo tee /dev/ttyACM0 > /dev/null</pre>
+I had been doing this:
 
+    sudo su -c 'echo AT+MODE=8 > /dev/ttyACM0'
+
+but I think that this is better becasue it spawns one less shell:
+
+    echo AT+MODE=8 | sudo tee /dev/ttyACM0 > /dev/null

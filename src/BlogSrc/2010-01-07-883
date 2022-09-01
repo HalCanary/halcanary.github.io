@@ -3,36 +3,35 @@ TITLE=Printing a text file
 DATE=2010-01-07 13:22:40
 POSTID=883
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<p>Printing a text file is one of those basic things you never think about.  Unless you are me.  I like to play with the variables and make that printout look <em>good</em>.</p>
-<pre>#!/bin/sh
-# Print a UTF&#0045;8 document to the default printer
-# Written by Hal Canary 2009&#0045;12&#0045;23.
-#DTPD# Dedicated to the Public Domain.
+Printing a text file is one of those basic things you never think about. Unless you are me. I like to play with the variables and make that printout look _good_.
 
-# Configurable Options
-font=&quot;Monospace 11&quot;
-#font=&quot;Serif 11&quot;
-#font=&quot;Sans 11&quot;
-paper=&quot;letter&quot;
-b_margin=0.25
-t_margin=0.25
-r_margin=0.25
-l_margin=0.75
-
-# convert inches to PostScript points
-b_margin=`echo &quot;( $b_margin * 72 ) / 1&quot; | bc`
-t_margin=`echo &quot;( $t_margin * 72 ) / 1&quot; | bc`
-r_margin=`echo &quot;( $r_margin * 72 ) / 1&quot; | bc`
-l_margin=`echo &quot;( $l_margin * 72 ) / 1&quot; | bc`
-
-exec paps &#0045;&#0045;font=&quot;$font&quot; &#0092;
-  &#0045;&#0045;paper=&quot;$paper&quot; &#0092;
-  &#0045;&#0045;bottom&#0045;margin=$b_margin &#0092;
-  &#0045;&#0045;top&#0045;margin=$t_margin &#0092;
-  &#0045;&#0045;right&#0045;margin=$r_margin &#0092;
-  &#0045;&#0045;left&#0045;margin=$l_margin &#0092;
-  &quot;$@&quot; | lpr
-#EOF#</pre>
-
+    #!/bin/sh
+    # Print a UTF-8 document to the default printer
+    # Written by Hal Canary 2009-12-23.
+    #DTPD# Dedicated to the Public Domain.
+    
+    # Configurable Options
+    font="Monospace 11"
+    #font="Serif 11"
+    #font="Sans 11"
+    paper="letter"
+    b_margin=0.25
+    t_margin=0.25
+    r_margin=0.25
+    l_margin=0.75
+    
+    # convert inches to PostScript points
+    b_margin=`echo "( $b_margin * 72 ) / 1" | bc`
+    t_margin=`echo "( $t_margin * 72 ) / 1" | bc`
+    r_margin=`echo "( $r_margin * 72 ) / 1" | bc`
+    l_margin=`echo "( $l_margin * 72 ) / 1" | bc`
+    
+    exec paps --font="$font" \
+      --paper="$paper" \
+      --bottom-margin=$b_margin \
+      --top-margin=$t_margin \
+      --right-margin=$r_margin \
+      --left-margin=$l_margin \
+      "$@" | lpr
+    #EOF#

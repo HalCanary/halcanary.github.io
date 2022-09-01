@@ -3,8 +3,7 @@ TITLE=/usr/share/dict
 DATE=2008-12-06 09:51:29
 POSTID=753
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<pre>grep -i Ubuntu /usr/share/dict/*</pre>
-<p>In the Ubuntu OS distribution, the standard dictionaries lack the word "Ubuntu."</p>
+    grep -i Ubuntu /usr/share/dict/*
 
+In the Ubuntu OS distribution, the standard dictionaries lack the word "Ubuntu."

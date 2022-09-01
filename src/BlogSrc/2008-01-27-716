@@ -3,21 +3,19 @@ TITLE=genpasswd.py
 DATE=2008-01-27 15:54:05
 POSTID=716
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<pre>
-#!/usr/bin/env python
-# ~/bin/genpasswd.py
-#   Generate a random password with about
-#   142 bits of randomness, making use of
-#   /dev/urandom.
-# Note:
-#   Most online services have somewhat
-#   arbitrary rules about what characters
-#   can be included in a password. So we
-#   limit ourselves to A-Za-z0-9.
-# Copyright 2007-2008 Hal Canary
-# Dedicated to the Public Domain.
-import os, base64
-print base64.b64encode(os.urandom(18),'Zz')</pre>
-
+    
+    #!/usr/bin/env python
+    # ~/bin/genpasswd.py
+    #   Generate a random password with about
+    #   142 bits of randomness, making use of
+    #   /dev/urandom.
+    # Note:
+    #   Most online services have somewhat
+    #   arbitrary rules about what characters
+    #   can be included in a password. So we
+    #   limit ourselves to A-Za-z0-9.
+    # Copyright 2007-2008 Hal Canary
+    # Dedicated to the Public Domain.
+    import os, base64
+    print base64.b64encode(os.urandom(18),'Zz')

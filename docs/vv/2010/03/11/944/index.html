@@ -78,28 +78,28 @@ ul.flat li::before {content:"[";}
   </header>
   <div class="content e-content">
 <div style="display:none;"></div>
-<p>This example of why the right algorithm matters comes directly from my textbook.  Here's the C implementation:</p>
+<p>This example of why the right algorithm matters comes directly from my textbook. Here's the C implementation:</p>
 <p>Bad:</p>
-<pre>#include &lt;stdio.h&gt;
+<pre><code>#include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt;
 long int fib(long int n) {
   if (n==0)
     return 1;
   if (n==1)
     return 1;
-  return fib(n&#0045;1) + fib(n&#0045;2);
+  return fib(n-1) + fib(n-2);
 }
 int main(int argc, char *argv[]) {
   if (argc &lt;= 1) {
-    fprintf(stderr, &quot;argument?&#0092;n&#0092;n&quot;);
+    fprintf(stderr, &quot;argument?\n\n&quot;);
     exit(1);
   }
   long int n = atol(argv[1]);
-  printf(&quot;f(%li) = %li&#0092;n&quot;,n,fib(n));
+  printf(&quot;f(%li) = %li\n&quot;,n,fib(n));
   return 0;
-}</pre>
+}</code></pre>
 <p>Good:</p>
-<pre>#include &lt;stdio.h&gt;
+<pre><code>#include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt;
 long int fib(long int n) {
   long a=1, b=1, c;
@@ -111,27 +111,27 @@ long int fib(long int n) {
 }
 int main(int argc, char *argv[]) {
   if (argc &lt;= 1) {
-    fprintf(stderr, &quot;argument?&#0092;n&#0092;n&quot;);
+    fprintf(stderr, &quot;argument?\n\n&quot;);
     exit(1);
   }
   long int n = atol(argv[1]);
-  printf(&quot;f(%li) = %li&#0092;n&quot;,n,fib(n));
+  printf(&quot;f(%li) = %li\n&quot;,n,fib(n));
   return 0;
-}</pre>
+}</code></pre>
 <p>Output:</p>
-<pre>$ time ./fib2 38 ; time ./fib1 38
+<pre><code>$ time ./fib2 38 ; time ./fib1 38
 f(38) = 63245986
 
-real	0m0.002s
-user	0m0.000s
-sys	0m0.004s
+real    0m0.002s
+user    0m0.000s
+sys 0m0.004s
 f(38) = 63245986
 
-real	0m1.492s
-user	0m1.428s
-sys	0m0.004s</pre>
+real    0m1.492s
+user    0m1.428s
+sys 0m0.004s</code></pre>
 <p>And you can show how nicely the good algorithm scales up by pulling out a bigint library, like Java's BigInteger:</p>
-<pre>public class fib3 {
+<pre><code>public class fib3 {
   public static String fib(int n) {
     java.math.BigInteger a,b,c;
     int i;
@@ -151,7 +151,7 @@ sys	0m0.004s</pre>
       Integer.toString(n) + &quot;) = &quot;);
     System.out.println(fib(n));
   }
-}</pre>
+}</code></pre>
   </div>
 </article>
 <hr>

@@ -78,10 +78,10 @@ ul.flat li::before {content:"[";}
   </header>
   <div class="content e-content">
 <div style="display:none;"></div>
-<pre>$ echo &#0039;scale=10; 1/3*3;&#0039;|bc
-.9999999999</pre>
+<pre><code>$ echo &#39;scale=10; 1/3*3;&#39;|bc
+.9999999999</code></pre>
 <p>A work in progress, rounding functions for POSIX bc.</p>
-<pre>/* DTPD */
+<pre><code>/* DTPD */
 define round(x,dec) {
   oscale = scale;
   x = x * (10 ^ dec);
@@ -110,7 +110,7 @@ define round(x) {
   scale = oscale;
   x = x / (10 ^ dec);
   return x;
-}</pre>
+}</code></pre>
   </div>
 </article>
 <hr>

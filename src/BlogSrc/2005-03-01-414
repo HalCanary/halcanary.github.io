@@ -3,10 +3,10 @@ TITLE=Fedora Extras
 DATE=2005-03-01 21:35:24
 POSTID=414
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<p><strong>Warning/Disclaimer.</strong></p>
-<p>Te following is a geeky linux-related post.  Chances are, you will want to skip it.  If you are a cute yet non-geeky cyber-stalker, please skip to the next post, which will be about politics, grammar, or food.</p>
-<p>I see that Fedora Extras (The add-ons meant to supplement Fedora Core) have finally been moved to the download.fedora.redhat.com server.  I also notice that new packages have been added, such as the ever-popular packages<br />
-gqview, perl-GD, sodipodi, gnofract4d, and starfighter</p>
+**Warning/Disclaimer.**
 
+Te following is a geeky linux-related post. Chances are, you will want to skip it. If you are a cute yet non-geeky cyber-stalker, please skip to the next post, which will be about politics, grammar, or food.
+
+I see that Fedora Extras (The add-ons meant to supplement Fedora Core) have finally been moved to the download.fedora.redhat.com server. I also notice that new packages have been added, such as the ever-popular packages  
+gqview, perl-GD, sodipodi, gnofract4d, and starfighter

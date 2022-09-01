@@ -78,8 +78,7 @@ ul.flat li::before {content:"[";}
   </header>
   <div class="content e-content">
 <div style="display:none;"></div>
-<pre>
-#!/usr/bin/env python
+<pre><code>#!/usr/bin/env python
 
 # zipme.py - Copyright 2008 Hal Canary
 #
@@ -105,8 +104,8 @@ ul.flat li::before {content:"[";}
 # OTHER DEALINGS IN THE SOFTWARE.
 
 # To use me:
-#   >>> from zipme import zipme
-#   >>> zipme('directoryname')
+#   &gt;&gt;&gt; from zipme import zipme
+#   &gt;&gt;&gt; zipme(&#39;directoryname&#39;)
 
 import zipfile
 import os
@@ -114,20 +113,20 @@ import os.path
 def zipdir(z,x):
     if os.path.isfile(x):
         z.write(x)
-        print 'wrote %s' % x
+        print &#39;wrote %s&#39; % x
     elif os.path.isdir(x):
         for y in os.listdir(x):
             zipdir(z,x + os.sep + y)
     else:
-        print 'ERROR: %s' % x
+        print &#39;ERROR: %s&#39; % x
 
 def zipme(d):
-    z = zipfile.ZipFile(d+'.zip','w',zipfile.ZIP_DEFLATED)
+    z = zipfile.ZipFile(d+&#39;.zip&#39;,&#39;w&#39;,zipfile.ZIP_DEFLATED)
     zipdir(z,d)
     z.close()
 
 if __name__ == &quot;__main__&quot;:
-    zipme('Randoms')</pre>
+    zipme(&#39;Randoms&#39;)</code></pre>
   </div>
 </article>
 <hr>

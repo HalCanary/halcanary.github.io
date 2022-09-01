@@ -3,23 +3,24 @@ TITLE=telnet to port 80
 DATE=2006-11-30 08:56:31
 POSTID=667
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<p>To check out http headers, you can use telnet, but I've found it easier to use <code>nc</code> (netcat):</p>
-<pre>H=&quot;en.wikipedia.org&quot;
-G=&quot;/&quot;
-echo -en &quot;GET $G HTTP/1.1&#0092;r&#0092;nHost: $H&#0092;r&#0092;n&#0092;r&#0092;n&quot; &#0092;
-    | nc $H 80
-</pre>
-<p>Here's a script:</p>
-<pre>#!/bin/sh
-#DTPD#
-if [ &quot;$#&quot; -ne 2 ] ;  then
-  echo -e &quot;useage:&#0092;n  $0 HOST RESOURCE&quot;
-  echo -e &quot;for example:&#0092;n  $0 www.google.com /&quot;
-  exit 1
-fi
-echo -en &quot;GET $2 HTTP/1.1&#0092;r&#0092;nHost: $1&#0092;r&#0092;n&#0092;r&#0092;n&quot;
-echo -en &quot;GET $2 HTTP/1.1&#0092;r&#0092;nHost: $1&#0092;r&#0092;n&#0092;r&#0092;n&quot; &#0092;
-  | nc $1 80</pre>
+To check out http headers, you can use telnet, but I've found it easier to use `nc` (netcat):
 
+    H="en.wikipedia.org"
+    G="/"
+    echo -en "GET $G HTTP/1.1\r\nHost: $H\r\n\r\n" \
+        | nc $H 80
+    
+
+Here's a script:
+
+    #!/bin/sh
+    #DTPD#
+    if [ "$#" -ne 2 ] ;  then
+      echo -e "useage:\n  $0 HOST RESOURCE"
+      echo -e "for example:\n  $0 www.google.com /"
+      exit 1
+    fi
+    echo -en "GET $2 HTTP/1.1\r\nHost: $1\r\n\r\n"
+    echo -en "GET $2 HTTP/1.1\r\nHost: $1\r\n\r\n" \
+      | nc $1 80

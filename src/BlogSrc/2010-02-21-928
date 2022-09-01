@@ -3,25 +3,29 @@ TITLE=private static String itoa(int i)
 DATE=2010-02-21 11:19:27
 POSTID=928
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<p>I like Java's verbosity; it is consistant and clear.  But sometimes you want succinct things.</p>
-<pre>/** &quot;Returns a String object representing the specified integer.&quot; */
-private static String itoa(int i){
-	return Integer.toString(i);
-}
-/** &quot;Returns a String object representing this Integer&#0039;s value.&quot; */
-private static String itoa(Integer i){
-	return i.toString();
-}</pre>
-<hr />
-<p>Also, I realized I had been using <code>assert</code> statements without <code>-enableassertions</code> for the last month, which did me very little good.  A good habit, I suppose.</p>
-<hr />
-<p>ALSO:</p>
-<pre>private static void printl(String s) {
-	System.out.println(s);
-}
-private static void error(String s) {
-	System.err.println(s);
-}</pre>
+I like Java's verbosity; it is consistant and clear. But sometimes you want succinct things.
 
+    /** "Returns a String object representing the specified integer." */
+    private static String itoa(int i){
+    	return Integer.toString(i);
+    }
+    /** "Returns a String object representing this Integer's value." */
+    private static String itoa(Integer i){
+    	return i.toString();
+    }
+
+* * *
+
+Also, I realized I had been using `assert` statements without `-enableassertions` for the last month, which did me very little good. A good habit, I suppose.
+
+* * *
+
+ALSO:
+
+    private static void printl(String s) {
+    	System.out.println(s);
+    }
+    private static void error(String s) {
+    	System.err.println(s);
+    }

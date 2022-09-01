@@ -78,34 +78,29 @@ ul.flat li::before {content:"[";}
   </header>
   <div class="content e-content">
 <div style="display:none;"></div>
-
-
-	<p><strong>Java Makefiles</strong></p>
-	<p>Here's a basic makefile for compiling Java programs.  On most
-	  systems, you will only need to edit the first three lines.</p>
-<pre>
-classes = Prog.class AnotherClass.class
+<p><strong>Java Makefiles</strong></p>
+<p>Here's a basic makefile for compiling Java programs. On most systems, you will only need to edit the first three lines.</p>
+<pre><code>classes = Prog.class AnotherClass.class
 entrypointclass = Prog
 jarfile = program.jar
 
 JAVAC = javac
 JAVA = java
 JAR = jar
-RM = rm &#0045;f
-JCFLAGS = &#0045;Xlint &#0045;g 
-JFLAGS = &#0045;enableassertions
+RM = rm -f
+JCFLAGS = -Xlint -g 
+JFLAGS = -enableassertions
 
 .PHONY : clean all run
 all: $(jarfile)
 run: $(jarfile)
-	$(JAVA) $(JFLAGS) &#0045;jar $(jarfile)
+    $(JAVA) $(JFLAGS) -jar $(jarfile)
 clean:
-	$(RM) &#0045;v *~ $(classes)
+    $(RM) -v *~ $(classes)
 $(jarfile): $(classes)
-	$(JAR) cvfe $@ $(entrypointclass) $^
+    $(JAR) cvfe $@ $(entrypointclass) $^
 %.class : %.java
-	$(JAVAC) $(JCFLAGS) $^
-</pre>
+    $(JAVAC) $(JCFLAGS) $^</code></pre>
   </div>
 </article>
 <hr>

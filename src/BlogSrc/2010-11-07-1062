@@ -3,29 +3,33 @@ TITLE=using emacsclient
 DATE=2010-11-07 13:36:36
 POSTID=1062
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<p>Attention Emacs users.  It took me a while to realize that new&#0045;style fonts can be enabled by adding this to the ~/.emacs file.</p>
-<pre>(set&#0045;face&#0045;attribute &#0039;default
-  nil :font &quot;Monospace&#0045;11&quot;)</pre>
-<p>So here&#0039;s how I set up the look of Emacs in my .emacs:</p>
-<pre>(require &#0039;color&#0045;theme)
-(color&#0045;theme&#0045;dark&#0045;laptop)
-(set&#0045;scroll&#0045;bar&#0045;mode &#0039;right)
-(tool&#0045;bar&#0045;mode nil)
-(menu&#0045;bar&#0045;mode nil)
-(set&#0045;face&#0045;attribute &#0039;default
-  nil :font &quot;Monospace&#0045;11&quot;)</pre>
-<p>And here&#0039;s my emacs startup script:</p>
-<pre>#!/bin/sh
-#DTPD#
-# ${HOME}/bin/e
-if test &quot;$DISPLAY&quot; ; then
-  nohup /usr/bin/emacsclient &#0092;
-    &#0045;a &#0039;&#0039; &#0045;n  &quot;$@&quot; &#0092;
-    &gt; /dev/null 2&gt;&amp;1 &amp;
-else
-  exec /usr/bin/emacs &quot;$@&quot;
-fi</pre>
-<p>This startes emacs in daemon mode if it&#0039;s not already running (there&#0039;s not a lot of harm in leaving a daemon going in the background all the time) and then the client tell the daemon to spawn a new window to open the files mentioned in the command&#0045;line arguments.  The &quot;nohup&quot; part deparents the server so you don&#0039;t get error messages hitting your console.</p>
+Attention Emacs users. It took me a while to realize that new-style fonts can be enabled by adding this to the ~/.emacs file.
 
+    (set-face-attribute 'default
+      nil :font "Monospace-11")
+
+So here's how I set up the look of Emacs in my .emacs:
+
+    (require 'color-theme)
+    (color-theme-dark-laptop)
+    (set-scroll-bar-mode 'right)
+    (tool-bar-mode nil)
+    (menu-bar-mode nil)
+    (set-face-attribute 'default
+      nil :font "Monospace-11")
+
+And here's my emacs startup script:
+
+    #!/bin/sh
+    #DTPD#
+    # ${HOME}/bin/e
+    if test "$DISPLAY" ; then
+      nohup /usr/bin/emacsclient \
+        -a '' -n  "$@" \
+        > /dev/null 2>&1 &
+    else
+      exec /usr/bin/emacs "$@"
+    fi
+
+This startes emacs in daemon mode if it's not already running (there's not a lot of harm in leaving a daemon going in the background all the time) and then the client tell the daemon to spawn a new window to open the files mentioned in the command-line arguments. The "nohup" part deparents the server so you don't get error messages hitting your console.

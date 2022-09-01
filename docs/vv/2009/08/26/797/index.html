@@ -78,18 +78,18 @@ ul.flat li::before {content:"[";}
   </header>
   <div class="content e-content">
 <div style="display:none;"></div>
-<pre>#!/bin/sh
+<pre><code>#!/bin/sh
 ## $HOME/bin/unzip-nozipbomb
 ## Written 2007 Hal Canary
 ## DTPD ##
 for zipfile in &quot;$@&quot; ; do
     dir=$(basename &quot;${zipfile}&quot; .zip)
     if [ &quot;${dir}&quot; = &quot;${zipfile}&quot; ] ; then
-	dir=&quot;${dir}.d&quot;
+    dir=&quot;${dir}.d&quot;
     fi
     mkdir -p &quot;${dir}&quot;
     unzip -d &quot;${dir}&quot; &quot;${zipfile}&quot;
-done</pre>
+done</code></pre>
   </div>
 </article>
 <hr>

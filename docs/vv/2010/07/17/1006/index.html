@@ -78,15 +78,13 @@ ul.flat li::before {content:"[";}
   </header>
   <div class="content e-content">
 <div style="display:none;"></div>
-<pre>
-&lt;!-- Easy Gravatar implementation for
+<pre><code>&lt;!-- Easy Gravatar implementation for
      Wordpress comment page: --&gt;
 &lt;?php
 $gravlink = &quot;http://www.gravatar.com/avatar/&quot;;
 $gravlink .= md5(strtolower(trim(get_comment_author_email())));
 $gravlink .= &quot;?d=&quot;.urlencode(&quot;https://halcanary.org/images/q80.png&quot;);
-echo $gravlink; ?&gt;
-</pre>
+echo $gravlink; ?&gt;</code></pre>
   </div>
 </article>
 <hr>

@@ -3,19 +3,20 @@ TITLE=sed in place
 DATE=2009-11-29 00:45:32
 POSTID=872
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<pre>#!/bin/sh
-SEDCMD=&quot;$1&quot;
-shift
-for x in &quot;$@&quot; ; do
-  dirt=`dirname &quot;${x}&quot;`
-  tmp=`mktemp &quot;${dirt}/tmp.XXXXXXXXXX&quot;`
-  sed &quot;${SEDCMD}&quot; &lt; &quot;${x}&quot; &gt; &quot;${tmp}&quot;
-  mv &quot;${tmp}&quot; &quot;${x}&quot;
-  echo &quot;$x fixed.&quot;
-done</pre>
-<p>UPDATE:  The next day I realized that</p>
-<pre>sed -i</pre>
-<p>does exactly the same thing.</p>
+    #!/bin/sh
+    SEDCMD="$1"
+    shift
+    for x in "$@" ; do
+      dirt=`dirname "${x}"`
+      tmp=`mktemp "${dirt}/tmp.XXXXXXXXXX"`
+      sed "${SEDCMD}" < "${x}" > "${tmp}"
+      mv "${tmp}" "${x}"
+      echo "$x fixed."
+    done
 
+UPDATE: The next day I realized that
+
+    sed -i
+
+does exactly the same thing.

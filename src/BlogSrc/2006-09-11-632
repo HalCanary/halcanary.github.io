@@ -3,14 +3,12 @@ TITLE=txt2html
 DATE=2006-09-11 15:44:34
 POSTID=632
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<pre>#!/bin/sed -f
-#DTPD#
-#txt2html Cleans up HTML control characters &lt;.&quot;,&amp;,&gt;
-s/&#0092;&amp;/&#0092;&amp;amp;/g;
-s/&#0092;&quot;/&#0092;&amp;quot;/g;
-s/&lt;/&#0092;&amp;lt;/g;
-s/&gt;/&#0092;&amp;gt;/g;
-s/&#0092;&#0092;/&#0092;&amp;&#0092;#0092;/g;</pre>
-
+    #!/bin/sed -f
+    #DTPD#
+    #txt2html Cleans up HTML control characters <.",&,>
+    s/\&/\&amp;/g;
+    s/\"/\&quot;/g;
+    s/</\&lt;/g;
+    s/>/\&gt;/g;
+    s/\\/\&\#0092;/g;
