@@ -3,10 +3,11 @@ TITLE=Xlib:  extension "GLX" missing
 DATE=2004-05-30 23:14:29
 POSTID=249
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<p>Odd issue in linux/x11.  I used to have the evil proprietary Nvidia drivers loaded.  I gave up on them recently, but once I installed a new kernel without them, glx (openGL for x) stopped working.  I got the error:</p>
-<p><code>Xlib:  extension "GLX" missing on display ":0.0"</code></p>
-<p>It should have worked, as the file <code>/usr/X11R6/lib/modules/extensions/libglx.a</code> should have provided this funtionality. </p>
-<p>But alas, Xorg X11 was using the file <code>/usr/X11R6/lib/modules/extensions/libglx.so.1.0.5336</code>, left over from the proprietary driver.  I deleted this file, restarted X11, and it all workes correctly!  I have a fast enough processor that most small openGL apps work fine without hardware acceleration.</p>
+Odd issue in linux/x11. I used to have the evil proprietary Nvidia drivers loaded. I gave up on them recently, but once I installed a new kernel without them, glx (openGL for x) stopped working. I got the error:
 
+`Xlib: extension "GLX" missing on display ":0.0"`
+
+It should have worked, as the file `/usr/X11R6/lib/modules/extensions/libglx.a` should have provided this funtionality.
+
+But alas, Xorg X11 was using the file `/usr/X11R6/lib/modules/extensions/libglx.so.1.0.5336`, left over from the proprietary driver. I deleted this file, restarted X11, and it all workes correctly! I have a fast enough processor that most small openGL apps work fine without hardware acceleration.

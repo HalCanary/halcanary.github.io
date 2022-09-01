@@ -3,8 +3,7 @@ TITLE=A picture says a thousand words.
 DATE=2004-03-31 11:36:13
 POSTID=218
 CATEGORIES=politics;
-MODE=htmldiv
 
-<p><a href="/images/2004-03-31-falluja.jpg"><img src="/images/2004-03-31-falluja-small.jpg" alt="[After the attacks, Falluja's streets were thick with men and boys and chaos.]" width="352" height="205" /></a></p>
-<p>(<a href="http://www.nytimes.com/2004/03/31/international/worldspecial/31CND-IRAQ.html">link</a>)</p>
+[![[After the attacks, Falluja's streets were thick with men and boys and chaos.]](/images/2004-03-31-falluja-small.jpg)](/images/2004-03-31-falluja.jpg)
 
+([link](http://www.nytimes.com/2004/03/31/international/worldspecial/31CND-IRAQ.html))

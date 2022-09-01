@@ -3,14 +3,10 @@ TITLE=Current version of hot cocoa recipe
 DATE=2009-12-17 19:22:05
 POSTID=876
 CATEGORIES=food;
-MODE=htmldiv
 
-<ul>
-<li>	4 teaspoons cocoa</li>
-<li>	4 packets splenda</li>
-<li>	1/6 teaspoon cornstarch (helps thicken the cocoa suspension)</li>
-<li>	1 pinch salt</li>
-<li>	1 cup boiling water</li>
-<li>	Add milk or cream for additional calories</li>
-</ul>
-
+*   4 teaspoons cocoa
+*   4 packets splenda
+*   1/6 teaspoon cornstarch (helps thicken the cocoa suspension)
+*   1 pinch salt
+*   1 cup boiling water
+*   Add milk or cream for additional calories

@@ -3,9 +3,9 @@ TITLE=Doesn't that offend you?
 DATE=2005-11-12 23:02:13
 POSTID=532
 CATEGORIES=tv;
-MODE=htmldiv
 
-<p>Young man, you speak so well!</p>
-<p><img width="270" height="340" alt="[]" src="http://www.halcanary.org//images/2005-11-12-huey+riley.jpg" /></p>
-<p>I enjoyed the show.</p>
+Young man, you speak so well!
 
+![[]](http://www.halcanary.org//images/2005-11-12-huey+riley.jpg)
+
+I enjoyed the show.

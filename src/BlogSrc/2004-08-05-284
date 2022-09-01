@@ -3,7 +3,5 @@ TITLE=Billmon
 DATE=2004-08-05 21:29:48
 POSTID=284
 CATEGORIES=mindless-link-propagation;
-MODE=htmldiv
 
-<p>Why doesn't <a href="http://billmon.org/">bilmon</a> have his own column?</p>
-
+Why doesn't [bilmon](http://billmon.org/) have his own column?

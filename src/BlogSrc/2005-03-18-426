@@ -3,8 +3,7 @@ TITLE=Geometry Fun
 DATE=2005-03-18 11:57:02
 POSTID=426
 CATEGORIES=mathematics;
-MODE=htmldiv
 
-<p><img src="/images/2005-03-18_geometry.png" alt="geometer's sketchpad" /></p>
-<p>Somewhere in here is a proof of the law of sines.</p>
+![geometer's sketchpad](/images/2005-03-18_geometry.png)
 
+Somewhere in here is a proof of the law of sines.

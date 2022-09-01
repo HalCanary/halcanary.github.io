@@ -3,7 +3,5 @@ TITLE=AARP?
 DATE=2004-07-14 01:08:14
 POSTID=266
 CATEGORIES=spam;
-MODE=htmldiv
 
-<p><img src="/images/aarp_membership.jpg " width="720" height="258" alt="[the aarp wants me!]" /></p>
-
+![[the aarp wants me!]](/images/aarp_membership.jpg )

@@ -3,7 +3,5 @@ TITLE=About OSS Companies
 DATE=2004-09-07 21:55:55
 POSTID=315
 CATEGORIES=mindless-link-propagation;
-MODE=htmldiv
 
-<p>Havoc Pennington put together a nice document detailing what <a href="http://www.redhat.com/">Red Hat</a> does all day: <a href="http://log.ometer.com/2004-09.html">Open Source Software Subscriptions</a></p>
-
+Havoc Pennington put together a nice document detailing what [Red Hat](http://www.redhat.com/) does all day: [Open Source Software Subscriptions](http://log.ometer.com/2004-09.html)

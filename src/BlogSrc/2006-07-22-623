@@ -3,8 +3,6 @@ TITLE=Old Photos
 DATE=2006-07-22 19:39:38
 POSTID=623
 CATEGORIES=photos;
-MODE=htmldiv
 
-<p>Me, Cira 1994, Memphis<br />
-<img src="/photos/1994-hal-canary.jpg" alt="[Me, Cira 1994, Memphis]" width="480" height="480" /></p>
-
+Me, Cira 1994, Memphis  
+![[Me, Cira 1994, Memphis]](/photos/1994-hal-canary.jpg)

@@ -3,8 +3,7 @@ TITLE=Money!
 DATE=2004-03-13 00:29:24
 POSTID=192
 CATEGORIES=mindless-link-propagation;
-MODE=htmldiv
 
-<p><img src="/images/abe.jpg" width="130" alt="ABE" /></p>
-<p><a href="http://www.johnnyburrito.com/images/dinero/5_punk.jpg">link</a>, <a href="http://www.johnnyburrito.com/images/dinero/5_paper.jpg">link</a>, <a href="http://www.johnnyburrito.com/images/dinero/1_homer_a.jpg">link</a>, and <a href="http://uglymoney.com/">link</a></p>
+![ABE](/images/abe.jpg)
 
+[link](http://www.johnnyburrito.com/images/dinero/5_punk.jpg), [link](http://www.johnnyburrito.com/images/dinero/5_paper.jpg), [link](http://www.johnnyburrito.com/images/dinero/1_homer_a.jpg), and [link](http://uglymoney.com/)

@@ -3,7 +3,5 @@ TITLE=A/C Power Diagram for Hal's Desk.
 DATE=2008-10-03 22:50:16
 POSTID=740
 CATEGORIES=computers-code;energy-policy;life;
-MODE=htmldiv
 
-<p><img src="/images/ACDiagram.png" alt="[]" /></p>
-
+![[]](/images/ACDiagram.png)

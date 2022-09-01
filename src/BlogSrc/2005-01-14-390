@@ -3,8 +3,7 @@ TITLE=Josh and I
 DATE=2005-01-14 02:55:07
 POSTID=390
 CATEGORIES=life;
-MODE=htmldiv
 
-<p><img src="/images/scalp_gangli.jpg" alt="[WOW]" width="684" height="682" /></p>
-<p>Josh is the ugly one.</p>
+![[WOW]](/images/scalp_gangli.jpg)
 
+Josh is the ugly one.

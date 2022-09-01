@@ -3,8 +3,7 @@ TITLE=These things happen.
 DATE=2006-05-26 15:15:00
 POSTID=596
 CATEGORIES=found-on-the-internets;
-MODE=htmldiv
 
-<p><img src="/images/u142.png" alt="[THIS ISSUE: EVERYBODY DIES!]" width="189" height="136" /></p>
-<p>(<a href="http://en.wikipedia.org/wiki/Image:Uncanny142.png">source</a>)</p>
+![[THIS ISSUE: EVERYBODY DIES!]](/images/u142.png)
 
+([source](http://en.wikipedia.org/wiki/Image:Uncanny142.png))

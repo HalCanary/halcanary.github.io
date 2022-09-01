@@ -3,9 +3,5 @@ TITLE=Best Headline Ever!
 DATE=2004-08-27 08:54:51
 POSTID=310
 CATEGORIES=mindless-link-propagation;
-MODE=htmldiv
 
-<p><a href="http://www.salon.com/opinion/feature/2004/08/27/abu_ghraib/"><br />
-The Pentagon high command clears the Pentagon high command of any wrongdoing in the Abu Ghraib torture scandal.<br />
-</a></p>
-
+[The Pentagon high command clears the Pentagon high command of any wrongdoing in the Abu Ghraib torture scandal.](http://www.salon.com/opinion/feature/2004/08/27/abu_ghraib/)

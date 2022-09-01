@@ -3,9 +3,9 @@ TITLE=Photography
 DATE=2004-04-04 15:03:19
 POSTID=221
 CATEGORIES=photos;
-MODE=htmldiv
 
-<p><a href="/photos/2004-04-03-img_1214.jpg"><img width="120" height="90" alt="[Thumb]" src="/photos/thumb/2004-04-03-img_1214.jpg" /></a></p>
-<p><a href="/p/photo-2004-04-03/">Yesterday's photos</a>.</p>
-<p>A page all <a href="/p/about-photography">about my photography</a>.</p>
+[![[Thumb]](/photos/thumb/2004-04-03-img_1214.jpg)](/photos/2004-04-03-img_1214.jpg)
 
+[Yesterday's photos](/p/photo-2004-04-03/).
+
+A page all [about my photography](/p/about-photography).

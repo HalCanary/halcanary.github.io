@@ -3,7 +3,5 @@ TITLE=360 panorama of my house.
 DATE=2004-07-15 23:52:43
 POSTID=268
 CATEGORIES=photos;
-MODE=htmldiv
 
-<p><a href="/photos/2004-07-15-divitt-panorama.jpg">    <img width="120" height="9" alt="[Thumb]" src="/photos/thumb/2004-07-15-divitt-panorama.jpg" />  </a></p>
-
+[![[Thumb]](/photos/thumb/2004-07-15-divitt-panorama.jpg)](/photos/2004-07-15-divitt-panorama.jpg)

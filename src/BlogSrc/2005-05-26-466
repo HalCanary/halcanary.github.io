@@ -3,20 +3,18 @@ TITLE=dumping mt?
 DATE=2005-05-26 13:08:56
 POSTID=466
 CATEGORIES=meta;
-MODE=htmldiv
 
-<p><strong>WARNING:</strong> Metablogging is always stupid.  Do not continue reading this post.</p>
-<p>Reasons to contiue using movable type:</p>
-<ol>
-<li>Already  installed and working</li>
-<li>Does everything I  want it to.</li>
-<li>Like its template system.</li>
-</ol>
-<p>Reasons to dump movable type:</p>
-<ol>
-<li>Free as in beer (v2.64), not as in speech.</li>
-<li>Version 2.x no longer supported.  Version 3.x not free.  (I fell for the BitKeeper Trap!)</li>
-<li>Comment Spam issue.</li>
-<li>Do I really need a forsaken database? It complicates backup.  I'd rather have a load of flat files tied together with php scripts.</li>
-</ol>
+**WARNING:** Metablogging is always stupid. Do not continue reading this post.
 
+Reasons to contiue using movable type:
+
+1.  Already installed and working
+2.  Does everything I want it to.
+3.  Like its template system.
+
+Reasons to dump movable type:
+
+1.  Free as in beer (v2.64), not as in speech.
+2.  Version 2.x no longer supported. Version 3.x not free. (I fell for the BitKeeper Trap!)
+3.  Comment Spam issue.
+4.  Do I really need a forsaken database? It complicates backup. I'd rather have a load of flat files tied together with php scripts.

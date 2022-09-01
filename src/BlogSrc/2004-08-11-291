@@ -3,7 +3,5 @@ TITLE=Very cold for August
 DATE=2004-08-11 15:26:24
 POSTID=291
 CATEGORIES=life;
-MODE=htmldiv
 
-<p><img src="/images/2004-08-11-weather.png" alt="53degF!" width="349" height="470" /></p>
-
+![53degF!](/images/2004-08-11-weather.png)

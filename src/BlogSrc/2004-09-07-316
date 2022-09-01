@@ -3,7 +3,5 @@ TITLE=Essay
 DATE=2004-09-07 22:14:56
 POSTID=316
 CATEGORIES=mindless-link-propagation;
-MODE=htmldiv
 
-<p>Paul Graham has a neat essay <a href="http://www.paulgraham.com/essay.html">About Essays</a>.</p>
-
+Paul Graham has a neat essay [About Essays](http://www.paulgraham.com/essay.html).

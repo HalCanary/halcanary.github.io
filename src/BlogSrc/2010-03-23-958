@@ -3,7 +3,5 @@ TITLE=Judging a Book by its Cover
 DATE=2010-03-23 08:06:58
 POSTID=958
 CATEGORIES=judging-a-book-by-its-cover;
-MODE=htmldiv
 
-<p><a href="/isbn/?1439116253/American+Adulterer"><img src="/images/2542169ce8e6f4c04d9321b1b29ccf0761770ff4.jpg" alt="_American Adulterer_ by Jed Mercurio (1439116253). Read the cover text." title="_American Adulterer_ by Jed Mercurio (1439116253). Read the cover text." /></a></p>
-
+[![_American Adulterer_ by Jed Mercurio (1439116253). Read the cover text.](/images/2542169ce8e6f4c04d9321b1b29ccf0761770ff4.jpg "_American Adulterer_ by Jed Mercurio (1439116253). Read the cover text.")](/isbn/?1439116253/American+Adulterer)

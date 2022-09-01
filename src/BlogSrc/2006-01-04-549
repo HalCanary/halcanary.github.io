@@ -3,16 +3,21 @@ TITLE=hibernation sickness
 DATE=2006-01-04 11:23:00
 POSTID=549
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<p>Things will get seriously fracked up when two differnet operating systems try and access the same HDD partition at the same time.</p>
-<p>How can this happen?<br />
-<!--more--><br />
-I found out.</p>
-<p>1) Run some programs in windows xp.</p>
-<p>2) Tell XP to hibernate</p>
-<p>3) Boot into linux</p>
-<p>4) access FAT filesystem, say to copy some music over to the d:&#92;music directory.</p>
-<p>5) reboot to windows.</p>
-<p>6) Wait til it hits the fan.</p>
+Things will get seriously fracked up when two differnet operating systems try and access the same HDD partition at the same time.
 
+How can this happen?  
+  
+I found out.
+
+1) Run some programs in windows xp.
+
+2) Tell XP to hibernate
+
+3) Boot into linux
+
+4) access FAT filesystem, say to copy some music over to the d:\\music directory.
+
+5) reboot to windows.
+
+6) Wait til it hits the fan.

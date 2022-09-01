@@ -3,12 +3,9 @@ TITLE=DJB
 DATE=2004-02-11 10:45:37
 POSTID=170
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<p>I went to a <a href="http://www.madisonlinux.org/">talk on qmail last night</a>.  Here's what I got.</p>
-<ol>
-<li>qmail is great, but I don't have any reason to switch from postfix.</li>
-<li><a href="http://cr.yp.to/">D. J. Bernstein</a> is some kind of paranoid mad genius.</li>
-<li>Maildir is an elegant solution to the problem of locking mail spools.  I'm going to try it out.</li>
-</ol>
+I went to a [talk on qmail last night](http://www.madisonlinux.org/). Here's what I got.
 
+1.  qmail is great, but I don't have any reason to switch from postfix.
+2.  [D. J. Bernstein](http://cr.yp.to/) is some kind of paranoid mad genius.
+3.  Maildir is an elegant solution to the problem of locking mail spools. I'm going to try it out.

@@ -3,9 +3,6 @@ TITLE=amazing yet tautological
 DATE=2004-07-23 11:50:16
 POSTID=276
 CATEGORIES=mindless-link-propagation;
-MODE=htmldiv
 
-<p><a href="http://salon.com/comics/boll/2004/07/22/boll/"><br />
-<img src="/images/amazing_yet_tautological.png" alt="[amazing_yet_tautological]" /><br />
-</a></p>
-
+[![[amazing_yet_tautological]](/images/amazing_yet_tautological.png)  
+](http://salon.com/comics/boll/2004/07/22/boll/)

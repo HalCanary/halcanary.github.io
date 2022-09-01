@@ -3,9 +3,5 @@ TITLE=2005 Nickels
 DATE=2004-09-16 20:39:05
 POSTID=322
 CATEGORIES=mindless-link-propagation;
-MODE=htmldiv
 
-<p><a href="http://www.usmint.gov/pressroom/index.cfm?action=Photo#2004NickelSeries"><br />
-<img src="/images/2005Nickel.jpg" alt="[2005 Nickels]" /><br />
-</a></p>
-
+[![[2005 Nickels]](/images/2005Nickel.jpg)](http://www.usmint.gov/pressroom/index.cfm?action=Photo#2004NickelSeries)

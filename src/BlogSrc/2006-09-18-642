@@ -3,7 +3,5 @@ TITLE=The Centered &lt;div&gt; Issue
 DATE=2006-09-18 00:53:51
 POSTID=642
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<p><a href="/p/centered-div">An explanation</a> of some obscure HTML/CSS issues.</p>
-
+[An explanation](/p/centered-div) of some obscure HTML/CSS issues.

@@ -3,8 +3,7 @@ TITLE=the 16 binary boolean operators
 DATE=2010-04-20 19:13:29
 POSTID=974
 CATEGORIES=mathematics;
-MODE=htmldiv
 
-<p>Given: the set of binary operators contain all unary and nullary operators as a subset.</p>
-<p>There are 2^(2&times;2)=16 possible binary boolean operators.  In order, they are:  FALSE, <em>x</em> AND <em>y</em>, <em>x</em> AND NOT <em>y</em>, <em>x</em>, <em>y</em> AND NOT <em>x</em>, <em>y</em>, <em>x</em> XOR <em>y</em>, <em>x</em> OR <em>y</em>, <em>x</em> NOR <em>y</em>, <em>x</em> EQV <em>y</em>, NOT <em>y</em>, <em>x</em> OR NOT <em>y</em>, NOT <em>x</em>, <em>y</em> OR NOT <em>x</em>, <em>x</em> NAND <em>y</em>, and TRUE.</p>
+Given: the set of binary operators contain all unary and nullary operators as a subset.
 
+There are 2^(2×2)=16 possible binary boolean operators. In order, they are: FALSE, _x_ AND _y_, _x_ AND NOT _y_, _x_, _y_ AND NOT _x_, _y_, _x_ XOR _y_, _x_ OR _y_, _x_ NOR _y_, _x_ EQV _y_, NOT _y_, _x_ OR NOT _y_, NOT _x_, _y_ OR NOT _x_, _x_ NAND _y_, and TRUE.

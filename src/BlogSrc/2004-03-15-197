@@ -3,7 +3,5 @@ TITLE=TeXShop
 DATE=2004-03-15 12:38:00
 POSTID=197
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<p>Someone should port <a href="http://www.uoregon.edu/~koch/texshop/texshop.html">TeXShop</a> to linux.</p>
-
+Someone should port [TeXShop](http://www.uoregon.edu/~koch/texshop/texshop.html) to linux.

@@ -3,17 +3,14 @@ TITLE=New Photos.
 DATE=2004-03-03 12:34:15
 POSTID=179
 CATEGORIES=photos;
-MODE=htmldiv
 
-<p><a href="/photos/2004-02-29-arbor-10.jpg"><img width="120" height="90" alt="[Thumb]" src="/photos/thumb/2004-02-29-arbor-10.jpg" /></a></p>
-<ul>
-<li><a href="/p/photo-2003-11-01/">2003-11-01 Haloween     </a></li>
-<li><a href="/p/photo-2003-11-05/">2003-11-05 Out on the town.</a></li>
-<li><a href="/p/photo-2003-11/">2003-11 Randomness      </a></li>
-<li><a href="/p/photo-2003-12-10/">2003-12-10 Snow </a></li>
-<li><a href="/p/photo-2003-12/">2003-12 D.C. and some art. </a></li>
-<li><a href="/p/photo-2004-02/">2004-02 Randomness</a></li>
-<li><a href="/p/photo-2004-ssl/">2004 SSL pics           </a></li>
-<li><a href="/p/photo-2004-02-29/">2004-02-29 Arboreetum photos</a></li>
-</ul>
+[![[Thumb]](/photos/thumb/2004-02-29-arbor-10.jpg)](/photos/2004-02-29-arbor-10.jpg)
 
+*   [2003-11-01 Haloween](/p/photo-2003-11-01/)
+*   [2003-11-05 Out on the town.](/p/photo-2003-11-05/)
+*   [2003-11 Randomness](/p/photo-2003-11/)
+*   [2003-12-10 Snow](/p/photo-2003-12-10/)
+*   [2003-12 D.C. and some art.](/p/photo-2003-12/)
+*   [2004-02 Randomness](/p/photo-2004-02/)
+*   [2004 SSL pics](/p/photo-2004-ssl/)
+*   [2004-02-29 Arboreetum photos](/p/photo-2004-02-29/)

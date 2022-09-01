@@ -3,7 +3,5 @@ TITLE=the library again?
 DATE=2006-09-05 19:23:19
 POSTID=628
 CATEGORIES=books;
-MODE=htmldiv
 
-<p>I read <a href="http://search.barnesandnoble.com/booksearch/isbninquiry.asp?ISBN=0765341603"><em>Blind Lake</em></a> today.  New hypothesis:  RCW does not write bad books.</p>
-
+I read [_Blind Lake_](http://search.barnesandnoble.com/booksearch/isbninquiry.asp?ISBN=0765341603) today. New hypothesis: RCW does not write bad books.

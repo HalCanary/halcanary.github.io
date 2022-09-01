@@ -3,17 +3,23 @@ TITLE=Books for Sale
 DATE=2004-08-17 18:19:17
 POSTID=304
 CATEGORIES=books;
-MODE=htmldiv
 
-<p><a href="/isbn/?0201029189"><img src="/images/books-goldstein.jpg" alt="[book cover]" width="130" height="195" /></a><br />
-<strong><em>Goldstein</em></strong></p>
-<p>Herbert Goldstein. <em>Classical Mechanics</em> (2nd Edition) (1980).</p>
-<p>almost new</p>
-<p>$35.00 </p>
-<p><a href="/isbn/?0070518009"><img src="/images/books-reif.jpg" alt="[book cover]" width="130" height="200" /></a><br />
-<strong><em>Reif</em></strong></p>
-<p>F. Reif. <em>Fundamentals of Statistical and Thermal Physics</em>  (1965).</p>
-<p>good condition</p>
-<p>$45.00</p>
-<p>contact me, Hal Canary, at <em>hal at ups dot physics dot wisc dot edu</em>,  or at 608-347-5844.</p>
+[![[book cover]](/images/books-goldstein.jpg)](/isbn/?0201029189)  
+**_Goldstein_**
 
+Herbert Goldstein. _Classical Mechanics_ (2nd Edition) (1980).
+
+almost new
+
+$35.00
+
+[![[book cover]](/images/books-reif.jpg)](/isbn/?0070518009)  
+**_Reif_**
+
+F. Reif. _Fundamentals of Statistical and Thermal Physics_ (1965).
+
+good condition
+
+$45.00
+
+contact me, Hal Canary, at _hal at ups dot physics dot wisc dot edu_, or at 608-347-5844.

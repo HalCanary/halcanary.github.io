@@ -3,67 +3,17 @@ TITLE=DVD Burner
 DATE=2005-06-01 13:58:10
 POSTID=471
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<p>I finally bought a DVD+-R/RW drive.  It even does dual-layer burning.  </p>
-<table class="border">
-<tr>
-<th>Media	</th>
-<th>Cost	</th>
-<th>Number	</th>
-<th>Cost Per</th>
-<th>Bytes		</th>
-<th>Cost per GiB</th>
-</tr>
-<tr>
-<td>CD-R	</td>
-<td>$25	</td>
-<td>100	</td>
-<td>$0.25	</td>
-<td>737280000	</td>
-<td>$0.36</td>
-</tr>
-<tr>
-<td>DVD-R	</td>
-<td>$40	</td>
-<td>50	</td>
-<td>$0.80	</td>
-<td>4700000000	</td>
-<td>$0.18</td>
-</tr>
-</table>
-<p>See!  I'll save money inthe long run! 278 GiB or 64 DVD-Rs in the future.</p>
-<p>Additional research shows that I paid too much for that DVD-R spindel at the store.<br />
-<!--more--><br />
-<strong>UPDATE 2005-07-03:</strong>  Finding the cheapest source online, I get:</p>
-<table class="border">
-<tr>
-<td colspan="6">(price includes shipping)</td>
-</tr>
-<tr>
-<th>Media	</th>
-<th>Cost	</th>
-<th>Number	</th>
-<th>Cost Per</th>
-<th>Bytes		</th>
-<th>Cost per GiB</th>
-</tr>
-<tr>
-<td>CD-R	</td>
-<td>$17.40	</td>
-<td>100	</td>
-<td>$0.17	</td>
-<td>737280000	</td>
-<td>$0.25</td>
-</tr>
-<tr>
-<td>DVD-R	</td>
-<td>$15.25	</td>
-<td>50	</td>
-<td>$0.31	</td>
-<td>4700000000	</td>
-<td>$0.07</td>
-</tr>
-</table>
-<p>The moral of the story:  buy everything online.</p>
+I finally bought a DVD+-R/RW drive. It even does dual-layer burning.
 
+<table class="border"><tbody><tr><th>Media</th><th>Cost</th><th>Number</th><th>Cost Per</th><th>Bytes</th><th>Cost per GiB</th></tr><tr><td>CD-R</td><td>$25</td><td>100</td><td>$0.25</td><td>737280000</td><td>$0.36</td></tr><tr><td>DVD-R</td><td>$40</td><td>50</td><td>$0.80</td><td>4700000000</td><td>$0.18</td></tr></tbody></table>
+
+See! I'll save money inthe long run! 278 GiB or 64 DVD-Rs in the future.
+
+Additional research shows that I paid too much for that DVD-R spindel at the store.  
+  
+**UPDATE 2005-07-03:** Finding the cheapest source online, I get:
+
+<table class="border"><tbody><tr><td colspan="6">(price includes shipping)</td></tr><tr><th>Media</th><th>Cost</th><th>Number</th><th>Cost Per</th><th>Bytes</th><th>Cost per GiB</th></tr><tr><td>CD-R</td><td>$17.40</td><td>100</td><td>$0.17</td><td>737280000</td><td>$0.25</td></tr><tr><td>DVD-R</td><td>$15.25</td><td>50</td><td>$0.31</td><td>4700000000</td><td>$0.07</td></tr></tbody></table>
+
+The moral of the story: buy everything online.

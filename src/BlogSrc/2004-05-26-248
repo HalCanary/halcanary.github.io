@@ -3,11 +3,11 @@ TITLE=department of redundant redundant URL department.
 DATE=2004-05-26 19:54:30
 POSTID=248
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<p><a href="http://mirrors.usc.edu/pub/linux/fedora/fedora/fedora/2/">http://mirrors.usc.edu/pub/linux/fedora/fedora/fedora/2/</a></p>
-<p><a href="http://mirrors.usc.edu/pub/linux/distributions/redhat/redhat/linux/">http://mirrors.usc.edu/pub/linux/distributions/redhat/redhat/linux/</a></p>
-<p><strong>UPDATE 2004-12-02:</strong> It should be something like <br />
-http://$SERVER/pub/linux/fedora/core/$VERSION/<br />
-http://$SERVER/pub/linux/fedora/extras/$VERSION/</p>
+[http://mirrors.usc.edu/pub/linux/fedora/fedora/fedora/2/](http://mirrors.usc.edu/pub/linux/fedora/fedora/fedora/2/)
 
+[http://mirrors.usc.edu/pub/linux/distributions/redhat/redhat/linux/](http://mirrors.usc.edu/pub/linux/distributions/redhat/redhat/linux/)
+
+**UPDATE 2004-12-02:** It should be something like  
+http://$SERVER/pub/linux/fedora/core/$VERSION/  
+http://$SERVER/pub/linux/fedora/extras/$VERSION/

@@ -3,9 +3,7 @@ TITLE=sunrise
 DATE=2005-08-11 09:27:00
 POSTID=498
 CATEGORIES=photos;
-MODE=htmldiv
 
-<p><a href="/photos/2005-08-06-img_1784.jpg"><br />
-    <img width="120" height="90" alt="[Thumb]" src="/photos/thumb/2005-08-06-img_1784.jpg" /><br />
-  </a></p>
-
+[  
+![[Thumb]](/photos/thumb/2005-08-06-img_1784.jpg)  
+](/photos/2005-08-06-img_1784.jpg)

@@ -3,7 +3,5 @@ TITLE=Flashblock Alt Image
 DATE=2010-09-26 19:30:06
 POSTID=1058
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<p>I noticed that someone had the bright idea to layer Adobe Flash objects *over* images using a <code>&lt;div style=&quot;background-image:url($IMAGE_URL)&quot;&gt;</code>.  That way, when the <a href="https://addons.mozilla.org/en-US/firefox/addon/433/">Flashblock add-on</a> blocks a Flash object, you can give users an idea of what you are blocking.  Here's <a href="/pub/flashexample.html">an example of the technique in use,</a> but it won't make any sense if you aren't using Flashblock.</p>
-
+I noticed that someone had the bright idea to layer Adobe Flash objects \*over\* images using a `<div style="background-image:url($IMAGE_URL)">`. That way, when the [Flashblock add-on](https://addons.mozilla.org/en-US/firefox/addon/433/) blocks a Flash object, you can give users an idea of what you are blocking. Here's [an example of the technique in use,](/pub/flashexample.html) but it won't make any sense if you aren't using Flashblock.

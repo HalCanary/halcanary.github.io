@@ -3,14 +3,19 @@ TITLE=Been Bad
 DATE=2004-07-08 20:59:51
 POSTID=261
 CATEGORIES=life;
-MODE=htmldiv
 
-<p>The other morning I got mad at my clock radio and hit it.</p>
-<p>Hard.</p>
-<p>It doesn't work anymore.</p>
-<p>I feel bad.  I got that clock sometime in the late 80s.  I was fond of it.</p>
-<p>Why was I angry?  One of those fascists  praising GWB for his taxcuts -- "giving the people their money back"  -- while supporting an expensive war and refusing to adequately fund schools. Chapman had the perfect <a href="/images/taxes.png">graphic</a> for this:  Two pie graphs, the first is  government spending  as a part of GDP.  The second is taxes as part of GDP.  In the long run, those slices HAVE to be balanced.</p>
-<p><strong>UPDATE 2004-07-16:</strong> It turns out that new clock radios sell for $5 at Wallmart.  Same features, streamlined production --&gt; cheap conusmer goods.</p>
-<p><strong>UPDATE 2004-08-11:</strong> Inlining the image:</p>
-<p><img src="/images/taxes.png" alt="pie graphs" width="550" height="270" /></p>
+The other morning I got mad at my clock radio and hit it.
 
+Hard.
+
+It doesn't work anymore.
+
+I feel bad. I got that clock sometime in the late 80s. I was fond of it.
+
+Why was I angry? One of those fascists praising GWB for his taxcuts -- "giving the people their money back" -- while supporting an expensive war and refusing to adequately fund schools. Chapman had the perfect [graphic](/images/taxes.png) for this: Two pie graphs, the first is government spending as a part of GDP. The second is taxes as part of GDP. In the long run, those slices HAVE to be balanced.
+
+**UPDATE 2004-07-16:** It turns out that new clock radios sell for $5 at Wallmart. Same features, streamlined production --> cheap conusmer goods.
+
+**UPDATE 2004-08-11:** Inlining the image:
+
+![pie graphs](/images/taxes.png)

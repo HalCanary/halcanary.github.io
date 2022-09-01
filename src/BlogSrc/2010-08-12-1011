@@ -3,7 +3,5 @@ TITLE=published
 DATE=2010-08-12 09:42:12
 POSTID=1011
 CATEGORIES=life;mathematics;
-MODE=htmldiv
 
-<p>I am published in <a href="http://www.combinatorics.org/Volume_17/Abstracts/v17i1r105.html"><em>The Electronic Journal of Combinatorics</em> 17(1), R105</a>. </p>
-
+I am published in [_The Electronic Journal of Combinatorics_ 17(1), R105](http://www.combinatorics.org/Volume_17/Abstracts/v17i1r105.html).

@@ -3,8 +3,6 @@ TITLE=NN
 DATE=2005-02-15 21:26:28
 POSTID=399
 CATEGORIES=life;
-MODE=htmldiv
 
-<p>For those who know Noble, he can be found<br />
-<a href="http://novitzki.blogspot.com">here</a></p>
-
+For those who know Noble, he can be found  
+[here](http://novitzki.blogspot.com)

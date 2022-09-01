@@ -3,11 +3,13 @@ TITLE=Spam Test
 DATE=2004-06-01 12:26:56
 POSTID=251
 CATEGORIES=spam;
-MODE=htmldiv
 
-<p>I'm publishing this address, in this form:</p>
-<p>mailto: test at halcanary dot org</p>
-<p>on this page as a test of spam email harvesters.  This seems like the simplest way to spam-armor an email address.  So far I've got no spam at that address since I put the address up on May 21.</p>
-<p>This is encouraging.  I should be able to switch to another address for all of my personal communication and, as long as I don't use it for mailing lists, usenet, or www forums, it should remain hidden from spammers.</p>
-<p><strong>UPDATE 2004-08-11:</strong> Still no spam at that address.  Cool!</p>
+I'm publishing this address, in this form:
 
+mailto: test at halcanary dot org
+
+on this page as a test of spam email harvesters. This seems like the simplest way to spam-armor an email address. So far I've got no spam at that address since I put the address up on May 21.
+
+This is encouraging. I should be able to switch to another address for all of my personal communication and, as long as I don't use it for mailing lists, usenet, or www forums, it should remain hidden from spammers.
+
+**UPDATE 2004-08-11:** Still no spam at that address. Cool!

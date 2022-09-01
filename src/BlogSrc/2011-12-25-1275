@@ -3,7 +3,5 @@ TITLE=NC 2011-12
 DATE=2011-12-25 00:00:01
 POSTID=1275
 CATEGORIES=life;photos;
-MODE=htmldiv
 
-<p><a href="http://www.flickr.com/photos/philosophies/6628399591/"><img src="/images/4e630e5947eaa1c356dcf72e6f339f2eb72849f1.jpg" width="500" height="374" alt="2011-12-24_171021_img_0435" /></a></p>
-
+[![2011-12-24_171021_img_0435](/images/4e630e5947eaa1c356dcf72e6f339f2eb72849f1.jpg)](http://www.flickr.com/photos/philosophies/6628399591/)

@@ -3,7 +3,5 @@ TITLE=2011-08-24-ride
 DATE=2011-08-24 12:18:04
 POSTID=1230
 CATEGORIES=life;
-MODE=htmldiv
 
-<p><a href="/images/2011-08-24-ride.png"><img src="/images/2011-08-24-ride_scale.png" width="554" height="685" alt="[]" /></a></p>
-
+[![[]](/images/2011-08-24-ride_scale.png)](/images/2011-08-24-ride.png)

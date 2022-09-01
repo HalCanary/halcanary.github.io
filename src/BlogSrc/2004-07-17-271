@@ -3,7 +3,5 @@ TITLE=electoral-vote.com
 DATE=2004-07-17 16:00:30
 POSTID=271
 CATEGORIES=mindless-link-propagation;
-MODE=htmldiv
 
-<p><a href="http://www.electoral-vote.com/">http://www.electoral-vote.com/</a></p>
-
+[http://www.electoral-vote.com/](http://www.electoral-vote.com/)

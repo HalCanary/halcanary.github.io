@@ -3,11 +3,6 @@ TITLE=2005-11 photos
 DATE=2005-12-07 11:52:20
 POSTID=543
 CATEGORIES=photos;
-MODE=htmldiv
 
-<p>
-    <a href="/p/photo-2005-11"><br />
-      <img src="/photos/thumb/2005-11-26-img_1857.jpg" alt="[Thumb]" height="90" width="120" /><br />
-    </a><br />
-   Trip to FL, 2005 November.</p>
-
+[  ![[Thumb]](/photos/thumb/2005-11-26-img_1857.jpg)  ](/p/photo-2005-11)  
+Trip to FL, 2005 November.

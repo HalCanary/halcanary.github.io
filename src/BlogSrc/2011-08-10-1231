@@ -3,27 +3,25 @@ TITLE=reading queue
 DATE=2011-08-10 08:18:33
 POSTID=1231
 CATEGORIES=books;
-MODE=htmldiv
 
-<p>The SF/Fantasy reading queue has grown absurdly large.  I haven't read any new books all summer.  A trip to the bookstore yesterday reminded me of this fact.  I went ahead and grabbed the ebook of <em>The Magician King</em> and will work my way down the list.</p>
-<ul>
-<li><a href="/isbn/?0670022314/The+Magician+King"><em>The Magician King</em>  by Lev Grossman</a> [R]</li>
-<li><a href="/isbn/?0441020348/Rule+34"><em>Rule 34</em> By Charlie Stross</a> [R]</li>
-<li><a href="/isbn/?1439134480/Ring+of+Fire+III"><em>Ring of Fire III</em> by Eric Flint</a></li>
-<li><a href="/isbn/?0765323427/Vortex"><em>Vortex</em> by Robert Charles Wilson</a></li>
-<li><a href="/isbn/?0765328542/Fuzzy+Nation"><em>Fuzzy Nation</em> by John Scalzi</a> [R]</li>
-<li><a href="/isbn/?0765322056/Destroyer+of+Worlds"><em>Destroyer&mdash;</em></a> and <a href="https://halcanary.org/isbn/?0765326086/Betrayer+of+Worlds"><em>Betrayer of Worlds</em> by Niven and Lerner</a></li>
-<li><a href="/isbn/?0441020372/Beyond+the+Frontier"><em>The Lost Fleet Beyond the Frontier 1</em> by Jack Campbell</a> [R]</li>
-<li><a href="/isbn/?1439134324/The+Hot+Gate"><em>The Hot Gate</em> by John Ringo</a></li>
-<li><a href="/isbn/?0553801473/A+Dance+With+Dragons"><em>A Dance with Dragons</em> by George R.R. Martin</a> [P]</li>
-</ul>
-<p>To be published in the next few months:</p>
-<ul>
-<li><a href="/isbn/?0061977969/Reamde"><em>Reamde</em> by Neal Stephenson</a> [R]</li>
-<li><a href="/isbn/?0765321548/How+Firm+a+Foundation"><em>How Firm a Foundation</em> by David Weber</a> [H]</li>
-<li><a href="/isbn/?0312875622/The+Children+of+the+Sky"><em>The Children of the Sky</em> by Vernor Vinge</a> [H]</li>
-</ul>
-<p>[R] = read<br />
-[P] = in progress<br />
-[H] = on hold at library</p>
+The SF/Fantasy reading queue has grown absurdly large. I haven't read any new books all summer. A trip to the bookstore yesterday reminded me of this fact. I went ahead and grabbed the ebook of _The Magician King_ and will work my way down the list.
 
+*   [_The Magician King_ by Lev Grossman](/isbn/?0670022314/The+Magician+King) \[R\]
+*   [_Rule 34_ By Charlie Stross](/isbn/?0441020348/Rule+34) \[R\]
+*   [_Ring of Fire III_ by Eric Flint](/isbn/?1439134480/Ring+of+Fire+III)
+*   [_Vortex_ by Robert Charles Wilson](/isbn/?0765323427/Vortex)
+*   [_Fuzzy Nation_ by John Scalzi](/isbn/?0765328542/Fuzzy+Nation) \[R\]
+*   [_Destroyer—_](/isbn/?0765322056/Destroyer+of+Worlds) and [_Betrayer of Worlds_ by Niven and Lerner](https://halcanary.org/isbn/?0765326086/Betrayer+of+Worlds)
+*   [_The Lost Fleet Beyond the Frontier 1_ by Jack Campbell](/isbn/?0441020372/Beyond+the+Frontier) \[R\]
+*   [_The Hot Gate_ by John Ringo](/isbn/?1439134324/The+Hot+Gate)
+*   [_A Dance with Dragons_ by George R.R. Martin](/isbn/?0553801473/A+Dance+With+Dragons) \[P\]
+
+To be published in the next few months:
+
+*   [_Reamde_ by Neal Stephenson](/isbn/?0061977969/Reamde) \[R\]
+*   [_How Firm a Foundation_ by David Weber](/isbn/?0765321548/How+Firm+a+Foundation) \[H\]
+*   [_The Children of the Sky_ by Vernor Vinge](/isbn/?0312875622/The+Children+of+the+Sky) \[H\]
+
+\[R\] = read  
+\[P\] = in progress  
+\[H\] = on hold at library

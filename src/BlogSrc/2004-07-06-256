@@ -3,7 +3,5 @@ TITLE=Rotor Router Applet v1.0
 DATE=2004-07-06 15:47:43
 POSTID=256
 CATEGORIES=mathematics;
-MODE=htmldiv
 
-<p><a href="/mathapplets/rotor-router-model/">Here you go...</a></p>
-
+[Here you go...](/mathapplets/rotor-router-model/)

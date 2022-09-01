@@ -3,8 +3,6 @@ TITLE=photos from the weekend
 DATE=2009-01-13 20:49:07
 POSTID=758
 CATEGORIES=photos;
-MODE=htmldiv
 
-<p><img src="/photos/2009-01-11_112610_Snailshell.jpg" alt="[]" /><br />
-<img src="/photos/2009-01-11_111725_Pine_Flatwoods.jpg" alt="[]" /></p>
-
+![[]](/photos/2009-01-11_112610_Snailshell.jpg)  
+![[]](/photos/2009-01-11_111725_Pine_Flatwoods.jpg)

@@ -3,7 +3,5 @@ TITLE=New Word!
 DATE=2004-12-06 20:52:54
 POSTID=371
 CATEGORIES=physics;
-MODE=htmldiv
 
-<p><a href="http://en.wikipedia.org/wiki/Protoscience">Protoscience</a></p>
-
+[Protoscience](http://en.wikipedia.org/wiki/Protoscience)

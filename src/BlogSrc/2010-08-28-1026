@@ -3,11 +3,11 @@ TITLE=Redesign of the Mexican flag
 DATE=2010-08-28 15:40:53
 POSTID=1026
 CATEGORIES=art;
-MODE=htmldiv
 
-<p>Here's my candidate for a redesign of the Mexican flag.</p>
-<p>Old:<br />
-<a href="/images/Flag_of_Mexico.png"><img src="/images/thumb/Flag_of_Mexico.png" width="120" height="69" alt="flag" /></a></p>
-<p>New:<br />
-<a href="/images/Flag_of_Mexico_Redesign.png"><img src="/images/thumb/Flag_of_Mexico_Redesign.png" width="120" height="69" alt="flag" /></a></p>
+Here's my candidate for a redesign of the Mexican flag.
 
+Old:  
+[![flag](/images/thumb/Flag_of_Mexico.png)](/images/Flag_of_Mexico.png)
+
+New:  
+[![flag](/images/thumb/Flag_of_Mexico_Redesign.png)](/images/Flag_of_Mexico_Redesign.png)

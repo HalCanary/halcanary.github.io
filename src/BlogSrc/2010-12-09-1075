@@ -3,7 +3,5 @@ TITLE=REAL10
 DATE=2010-12-09 00:20:44
 POSTID=1075
 CATEGORIES=computer-science;computers-code;mathematics;
-MODE=htmldiv
 
-<p>&ldquo;Real&rdquo; is not an acceptible synonym for &ldquo;80&#0045;bit floating&#0045;point number.&rdquo; Real numbers aren&#0039;t even countable, much less in a bijection to a set of size 2^80.</p>
-
+“Real” is not an acceptible synonym for “80-bit floating-point number.” Real numbers aren't even countable, much less in a bijection to a set of size 2^80.

@@ -3,7 +3,5 @@ TITLE=I'm scared.
 DATE=2004-03-29 04:06:09
 POSTID=215
 CATEGORIES=mindless-link-propagation;
-MODE=htmldiv
 
-<p><a href="https://www.google.com/search?q=google">google</a> looks slightly different.  I find this jarring and scary.</p>
-
+[google](https://www.google.com/search?q=google) looks slightly different. I find this jarring and scary.

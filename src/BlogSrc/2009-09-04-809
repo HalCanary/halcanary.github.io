@@ -3,7 +3,5 @@ TITLE=that someday the sun would die
 DATE=2009-09-04 08:30:56
 POSTID=809
 CATEGORIES=books;movies;
-MODE=htmldiv
 
-<p><img src="http://www.newyorker.com/images/2009/08/24/p233/090824_r18725_p233.jpg" alt="[]" /> &ldquo;Don&rsquo;t worry about the sun dying! You and everyone you know will be long gone by then!&rdquo; (<a href="http://www.newyorker.com/fiction/features/2009/08/24/090824fi_fiction_eggers?printable=true">link</a>)</p>
-
+![[]](http://www.newyorker.com/images/2009/08/24/p233/090824_r18725_p233.jpg) “Don’t worry about the sun dying! You and everyone you know will be long gone by then!” ([link](http://www.newyorker.com/fiction/features/2009/08/24/090824fi_fiction_eggers?printable=true))

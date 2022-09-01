@@ -3,9 +3,5 @@ TITLE=Chatahoochie River
 DATE=2005-08-12 21:03:57
 POSTID=499
 CATEGORIES=photos;
-MODE=htmldiv
 
-<p><a href="/photos/2005-08-12_chz_028.jpg"><br />
-    <img width="120" height="90" alt="[Thumb]" src="/photos/thumb/2005-08-12_chz_028.jpg" /><br />
-  </a></p>
-
+[  ![[Thumb]](/photos/thumb/2005-08-12_chz_028.jpg)  ](/photos/2005-08-12_chz_028.jpg)

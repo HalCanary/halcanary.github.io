@@ -3,9 +3,7 @@ TITLE=The story of my year.
 DATE=2005-12-17 12:22:00
 POSTID=546
 CATEGORIES=found-on-the-internets;
-MODE=htmldiv
 
-<p>Below the fold: a cartoon from 1989.  The story of my year.<br />
-<!--more--><br />
-<img src="/images/1989-boing-boing-issue-1-twisted-image.png" alt="1989-boing-boing-issue-1-twisted-image" width="336" height="997" /></p>
-
+Below the fold: a cartoon from 1989. The story of my year.  
+  
+![1989-boing-boing-issue-1-twisted-image](/images/1989-boing-boing-issue-1-twisted-image.png)

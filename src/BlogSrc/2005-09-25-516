@@ -3,8 +3,7 @@ TITLE=it might count as...
 DATE=2005-09-25 13:08:45
 POSTID=516
 CATEGORIES=photos;
-MODE=htmldiv
 
-<p>It's not good photography. But it might count as art.</p>
-<p><a href="/photos/2005-09-24-P049-mod.jpg"><img src="/photos/thumb/2005-09-24-P049-mod.jpg" alt="[Thumb]" width="120" height="90" /></a></p>
+It's not good photography. But it might count as art.
 
+[![[Thumb]](/photos/thumb/2005-09-24-P049-mod.jpg)](/photos/2005-09-24-P049-mod.jpg)

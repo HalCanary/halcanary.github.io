@@ -3,10 +3,11 @@ TITLE=action figure
 DATE=2005-02-01 10:25:27
 POSTID=393
 CATEGORIES=life;
-MODE=htmldiv
 
-<p><a href="http://www.sciplus.com/singleItem.cfm?terms=10315"><img src="/images/einstein-action-figure.jpg" width="81" alt="[Al]" /></a></p>
-<p><a href="http://ups.physics.wisc.edu/~cjwilson/">Chris</a> sent me an <a href="http://www.einsteinyear.org/facts/">Einstein</a> action figure for my birthday, along with an <a href="http://en.wikipedia.org/wiki/Alnico">alnico magnet</a>.  The magnet has a pull of ~8.5 lbs and can stop my watch if I hold it too close.</p>
-<p>Thanks, Chris!</p>
-<p>Geek.</p>
+[![[Al]](/images/einstein-action-figure.jpg)](http://www.sciplus.com/singleItem.cfm?terms=10315)
 
+[Chris](http://ups.physics.wisc.edu/~cjwilson/) sent me an [Einstein](http://www.einsteinyear.org/facts/) action figure for my birthday, along with an [alnico magnet](http://en.wikipedia.org/wiki/Alnico). The magnet has a pull of ~8.5 lbs and can stop my watch if I hold it too close.
+
+Thanks, Chris!
+
+Geek.

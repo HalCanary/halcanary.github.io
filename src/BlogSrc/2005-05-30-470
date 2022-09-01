@@ -3,7 +3,5 @@ TITLE=patents
 DATE=2005-05-30 10:17:44
 POSTID=470
 CATEGORIES=mathematics;
-MODE=htmldiv
 
-<p>Correct me if I'm wrong, but if an algorithm is patented, and you develop an application that uses it, you can be sued for infringement, <em>even if you never sell that application to anyone else</em>.</p>
-
+Correct me if I'm wrong, but if an algorithm is patented, and you develop an application that uses it, you can be sued for infringement, _even if you never sell that application to anyone else_.

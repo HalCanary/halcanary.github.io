@@ -3,8 +3,7 @@ TITLE=autostart?  no thanks
 DATE=2008-10-19 22:03:33
 POSTID=748
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<p>Q: How do I disable autostart of Totem after inserting a DVD in Ubuntu 8.04 (Hardy Heron)?</p>
-<p>A: Open Nautilus (Places->Home Folder) then from the menu bar, Edit->Preferences->Media->Never prompt or start programs on media insertion.</p>
+Q: How do I disable autostart of Totem after inserting a DVD in Ubuntu 8.04 (Hardy Heron)?
 
+A: Open Nautilus (Places->Home Folder) then from the menu bar, Edit->Preferences->Media->Never prompt or start programs on media insertion.

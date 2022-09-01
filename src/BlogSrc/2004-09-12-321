@@ -3,8 +3,8 @@ TITLE=Photos from two weeks ago/
 DATE=2004-09-12 21:22:05
 POSTID=321
 CATEGORIES=photos;
-MODE=htmldiv
 
-<p><a href="/p/photo-2004-08-29">Link</a></p>
-<p>    <a href="/photos/2004-08-29-img_1484.jpg">      <img src="/photos/thumb/2004-08-29-img_1484.jpg" alt="[Thumb]" width="120" height="90" />    </a>    <a href="/photos/2004-08-29-img_1487.jpg">      <img src="/photos/thumb/2004-08-29-img_1487.jpg" alt="[Thumb]" width="120" height="90" />    </a>    <a href="/photos/2004-08-29-img_1488.jpg">      <img src="/photos/thumb/2004-08-29-img_1488.jpg" alt="[Thumb]" width="120" height="90" />    </a><br />    <a href="/photos/2004-08-29-img_1492.jpg">      <img src="/photos/thumb/2004-08-29-img_1492.jpg" alt="[Thumb]" width="120" height="90" />    </a>    <a href="/photos/2004-08-29-img_1494.jpg">      <img src="/photos/thumb/2004-08-29-img_1494.jpg" alt="[Thumb]" width="120" height="90" />    </a>    <a href="/photos/2004-08-29-img_1496.jpg">      <img src="/photos/thumb/2004-08-29-img_1496.jpg" alt="[Thumb]" width="120" height="90" />    </a></p>
+[Link](/p/photo-2004-08-29)
 
+ [![[Thumb]](/photos/thumb/2004-08-29-img_1484.jpg)](/photos/2004-08-29-img_1484.jpg)[![[Thumb]](/photos/thumb/2004-08-29-img_1487.jpg) ](/photos/2004-08-29-img_1487.jpg)[![[Thumb]](/photos/thumb/2004-08-29-img_1488.jpg)](/photos/2004-08-29-img_1488.jpg)  
+ [![[Thumb]](/photos/thumb/2004-08-29-img_1492.jpg)](/photos/2004-08-29-img_1492.jpg)[![[Thumb]](/photos/thumb/2004-08-29-img_1494.jpg) ](/photos/2004-08-29-img_1494.jpg)[![[Thumb]](/photos/thumb/2004-08-29-img_1496.jpg)](/photos/2004-08-29-img_1496.jpg)

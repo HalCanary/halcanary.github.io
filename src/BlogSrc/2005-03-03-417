@@ -3,7 +3,5 @@ TITLE=Design by committe of seventh-grade script kiddies
 DATE=2005-03-03 17:31:48
 POSTID=417
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<p><a href="/images/netscape_8.png">Some people should not be allowed to design software</a>.</p>
-
+[Some people should not be allowed to design software](/images/netscape_8.png).

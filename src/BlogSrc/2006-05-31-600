@@ -3,10 +3,9 @@ TITLE=new timescales
 DATE=2006-05-31 14:51:00
 POSTID=600
 CATEGORIES=found-on-the-internets;
-MODE=htmldiv
 
-<blockquote><div><a href="http://en.wikipedia.org/wiki/Pangaea">Pangaea</a> was not the first supercontinent. From the evidence available, scientists have reconstructed a predecessor, termed <a href="http://en.wikipedia.org/wiki/Pannotia">Pannotia</a>, that formed about 600&nbsp;mya, before dividing again some 50 million years later. Another, <a href="http://en.wikipedia.org/wiki/Rodinia">Rodinia</a>, apparently formed approximately 1,100 mya and divided 750&nbsp;mya.<br />(<a href="http://en.wikipedia.org/wiki/Pangaea">source</a>)</div>
-</blockquote>
-<p>In comparison, the earth is 4.57 billion years old.  Somehow I had thought that Pangaea was the original configuration.</p>
-<p>(See also: <a href="http://en.wikipedia.org/wiki/Supercontinent_cycle">Supercontinent Cycle</a>)</p>
+> <div><a href="http://en.wikipedia.org/wiki/Pangaea">Pangaea</a> was not the first supercontinent. From the evidence available, scientists have reconstructed a predecessor, termed <a href="http://en.wikipedia.org/wiki/Pannotia">Pannotia</a>, that formed about 600&nbsp;mya, before dividing again some 50 million years later. Another, <a href="http://en.wikipedia.org/wiki/Rodinia">Rodinia</a>, apparently formed approximately 1,100 mya and divided 750&nbsp;mya.<br>(<a href="http://en.wikipedia.org/wiki/Pangaea">source</a>)</div>
 
+In comparison, the earth is 4.57 billion years old. Somehow I had thought that Pangaea was the original configuration.
+
+(See also: [Supercontinent Cycle](http://en.wikipedia.org/wiki/Supercontinent_cycle))

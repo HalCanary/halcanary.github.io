@@ -80,7 +80,8 @@ ul.flat li::before {content:"[";}
 <div style="display:none;"></div>
 <p>Wondeful farce.</p>
 <blockquote>
-<blockquote><p>I'd love to adopt Linux but am still trying to mount /dev/clue ;-)</p>
+<blockquote>
+<p>I'd love to adopt Linux but am still trying to mount /dev/clue ;-)</p>
 </blockquote>
 <p>Well, that's easy. First, download the latest 2.6 kernel (/dev/clue on 2.4 kernels is still experimental). Use a vanilla kernel, the clue patch is probably not working with the kernel your distro may offer. Then get the clue patch, apply it, recompile (configure the clue as module, building it directly into the kernel is not well tested), don't forget to make modules &amp;&amp; make modules_install. Install your new kernel (if you use LILO, dont forget to call /sbin/lilo) and reboot. Type modprobe clue. Then look in the proc filesystem if clue has properly initialized. If not, you might have to create a /etc/clue.conf for your system (see the Clue-device-HOWTO for details, but beware that some instructions there are out of date, so check the CHANGES file of the current release). As soon as everything is running, there should be the clue device in you /dev. Now you need to activate the clue filesystem (installed together with the clue device, just do modprobe cluefs). Now you can just issue the corresponding mount command (the exact options can be found on www.cluefaq.org), and voila. To have your clue activated and mounted automatically, you should adapt your modules.conf and fstab.</p>
 <p>(<a href="http://developers.slashdot.org/comments.pl?sid=100742&amp;cid=8588208">link</a>)</p>

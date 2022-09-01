@@ -3,8 +3,7 @@ TITLE=Mathematical Writing, part 1
 DATE=2004-10-23 22:18:42
 POSTID=335
 CATEGORIES=mathematics;
-MODE=htmldiv
 
-<p>I am enjoying <a href="http://tex.loria.fr/typographie/mathwriting.pdf"><em>Mathematical Writing</em> by Donald E. Knuth, Tracy Larrabee, and Paul M. Roberts</a>.</p>
-<p>&ldquo;I look forward to the day when a Pulitzer Prize will be given for the best computer program of the year.&rdquo; ---Knuth</p>
+I am enjoying [_Mathematical Writing_ by Donald E. Knuth, Tracy Larrabee, and Paul M. Roberts](http://tex.loria.fr/typographie/mathwriting.pdf).
 
+“I look forward to the day when a Pulitzer Prize will be given for the best computer program of the year.” ---Knuth

@@ -3,7 +3,5 @@ TITLE=Google Movie Showtimes
 DATE=2005-02-25 13:33:47
 POSTID=402
 CATEGORIES=found-on-the-internets;
-MODE=htmldiv
 
-<p><a href="http://www.halcanary.org/p/google-movie-showtimes">Google Movie Showtimes</a></p>
-
+[Google Movie Showtimes](http://www.halcanary.org/p/google-movie-showtimes)

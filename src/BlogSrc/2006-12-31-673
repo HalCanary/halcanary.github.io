@@ -3,7 +3,5 @@ TITLE=In-game spam.
 DATE=2006-12-31 15:44:15
 POSTID=673
 CATEGORIES=computers-code;games;spam;
-MODE=htmldiv
 
-<p><img src="/images/2006-12-31-in-game-spam.png" alt="[]" /></p>
-
+![[]](/images/2006-12-31-in-game-spam.png)

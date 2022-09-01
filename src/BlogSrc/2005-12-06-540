@@ -3,8 +3,7 @@ TITLE=puzzles
 DATE=2005-12-06 12:34:37
 POSTID=540
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<p>My folks play <a href="http://en.wikipedia.org/wiki/Sudoku">Sudoku</a>.  I looked at the game and decided it was boring.  <a href="/p/sudoku-solver">So I wrote a program to solve it.</a></p>
-<p>Shouldn't humans stick to puzzles on which we can outperform computers?  Word games and such?</p>
+My folks play [Sudoku](http://en.wikipedia.org/wiki/Sudoku). I looked at the game and decided it was boring. [So I wrote a program to solve it.](/p/sudoku-solver)
 
+Shouldn't humans stick to puzzles on which we can outperform computers? Word games and such?

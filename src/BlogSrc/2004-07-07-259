@@ -3,8 +3,5 @@ TITLE=Linux Firewall Notes
 DATE=2004-07-07 19:16:43
 POSTID=259
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<p>My<br />
-<a href="/p/firewall">Linux Firewall Notes</a></p>
-
+My [Linux Firewall Notes](/p/firewall)

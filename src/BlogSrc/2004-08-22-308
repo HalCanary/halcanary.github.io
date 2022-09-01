@@ -3,11 +3,7 @@ TITLE=iptables traversal
 DATE=2004-08-22 09:47:07
 POSTID=308
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<p>Tuesday I went to Martin Brown's talk on netfilter/iptables.<br />
-He provided this<br />
-<a href="http://linux-ip.net/nf/nfk-traversal.png"><br />
-very useful diagram of how it all works.<br />
-</a></p>
-
+Tuesday I went to Martin Brown's talk on netfilter/iptables.
+ 
+He provided this  [very useful diagram of how it all works.](http://linux-ip.net/nf/nfk-traversal.png)

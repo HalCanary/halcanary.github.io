@@ -3,7 +3,6 @@ TITLE=My hair!
 DATE=2006-04-24 13:55:31
 POSTID=584
 CATEGORIES=life;
-MODE=htmldiv
 
-<p><img src="/photos/2006-04-24-my-hair.jpg" alt="[]" height="480" width="640" /><br />I gave myself a summertime haircut today.</p>
-
+![[]](/photos/2006-04-24-my-hair.jpg)  
+I gave myself a summertime haircut today.

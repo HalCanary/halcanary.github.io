@@ -3,7 +3,5 @@ TITLE=Audrey Seiler Poll
 DATE=2004-04-07 22:10:40
 POSTID=224
 CATEGORIES=tv;
-MODE=htmldiv
 
-<p><a href="/p/audrey-seiler-poll">Fill out the poll</a></p>
-
+[Fill out the poll](/p/audrey-seiler-poll)

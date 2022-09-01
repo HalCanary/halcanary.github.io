@@ -3,7 +3,5 @@ TITLE=Digging through old photos at the folks' house today.
 DATE=2010-04-03 21:16:39
 POSTID=972
 CATEGORIES=photos;
-MODE=htmldiv
 
-<p><a href="/photos/2001-05-20-graduation.jpg"><img src="/photos/thumb/2001-05-20-graduation.jpg" alt="[Thumb]" width="120" height="90" /></a></p>
-
+[![[Thumb]](/photos/thumb/2001-05-20-graduation.jpg)](/photos/2001-05-20-graduation.jpg)

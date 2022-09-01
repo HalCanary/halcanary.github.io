@@ -3,10 +3,11 @@ TITLE=Photos Taken with Mark's Camera
 DATE=2004-07-09 12:58:21
 POSTID=263
 CATEGORIES=photos;
-MODE=htmldiv
 
-<p><a href="/p/photo-2004-06/">link</a></p>
-<p>I took some photos with Mark's camera.  I cropped and massaged them, just for you:</p>
-<p><a href="/photos/2004-05-27-guitar5-bw.jpg">img width="120" height="103" alt="[Thumb]" src="/photos/thumb/2004-05-27-guitar5-bw.jpg" /&gt;  </a></p>
-<p><a href="/photos/2004-05-30-keys2-bw.jpg"><img width="120" height="94" alt="[Thumb]" src="/photos/thumb/2004-05-30-keys2-bw.jpg" />  </a></p>
+[link](/p/photo-2004-06/)
 
+I took some photos with Mark's camera. I cropped and massaged them, just for you:
+
+[img width="120" height="103" alt="\[Thumb\]" src="/photos/thumb/2004-05-27-guitar5-bw.jpg" />](/photos/2004-05-27-guitar5-bw.jpg)
+
+[![[Thumb]](/photos/thumb/2004-05-30-keys2-bw.jpg)](/photos/2004-05-30-keys2-bw.jpg)

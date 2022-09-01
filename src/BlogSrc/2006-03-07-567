@@ -3,9 +3,7 @@ TITLE=Things are fine, thank you.
 DATE=2006-03-07 21:35:00
 POSTID=567
 CATEGORIES=politics;
-MODE=htmldiv
 
-<p>Image below the fold<br />
-<!--more--><br />
-<img src="/images/2006-03-07-things-are-fine.jpg" width="640" height="670" alt="[questionare]" /></p>
-
+Image below the fold  
+  
+![[questionare]](/images/2006-03-07-things-are-fine.jpg)

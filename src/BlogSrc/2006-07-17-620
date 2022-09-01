@@ -3,25 +3,9 @@ TITLE=too big
 DATE=2006-07-17 19:46:31
 POSTID=620
 CATEGORIES=life;
-MODE=htmldiv
 
-<p>Same Population.</p>
-<p>But way too big.</p>
-<table class="border">
-<tr>
-<th>				</th>
-<th>Population	</th>
-<th>Population Density</th>
-</tr>
-<tr>
-<td>Cape Coral Florida Urban Area	</td>
-<td>329,757 	</td>
-<td>1719 / mile^2</td>
-</tr>
-<tr>
-<td>Madison Wisconsin Urban Area	</td>
-<td>329,533 	</td>
-<td>2893 / mile^2</td>
-</tr>
-</table>
+Same Population.
 
+But way too big.
+
+<table class="border"><tbody><tr><th></th><th>Population</th><th>Population Density</th></tr><tr><td>Cape Coral Florida Urban Area</td><td>329,757</td><td>1719 / mile^2</td></tr><tr><td>Madison Wisconsin Urban Area</td><td>329,533</td><td>2893 / mile^2</td></tr></tbody></table>

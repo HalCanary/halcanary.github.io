@@ -3,9 +3,7 @@ TITLE=I'm not that smart.
 DATE=2005-08-23 21:17:23
 POSTID=506
 CATEGORIES=life;
-MODE=htmldiv
 
-<p><a href="http://fedoranews.yanbaru.dyndns.org/contributors/localyumrepomirror/index.html">Somebody translated something I wrote into another language.</a> An asian one, to boot.  Crazy.<br />
-<br />
-<img src="/images//2005-08-23-translated-hal.png" alt="[screengrab]" /></p>
-
+[Somebody translated something I wrote into another language.](http://fedoranews.yanbaru.dyndns.org/contributors/localyumrepomirror/index.html) An asian one, to boot. Crazy.  
+  
+![[screengrab]](/images//2005-08-23-translated-hal.png)

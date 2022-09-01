@@ -3,8 +3,6 @@ TITLE=cold
 DATE=2004-01-30 09:44:03
 POSTID=163
 CATEGORIES=life;
-MODE=htmldiv
 
-<p><img src="/images/current_conditions.gif" alt="Current Conditions. Updated: 8:53 AM CST on January 30, 2004.  Observed at Madison, Wisconsin. Temperature = -11 &deg;F / -24 &deg;C. Windchill = -29 &deg;F / -34 &deg;C" /><br />
-I find myself praying for temperatures as warm as 15 &deg; F.</p>
-
+![Current Conditions. Updated: 8:53 AM CST on January 30, 2004.  Observed at Madison, Wisconsin. Temperature = -11 °F / -24 °C. Windchill = -29 °F / -34 °C](/images/current_conditions.gif)  
+I find myself praying for temperatures as warm as 15 ° F.

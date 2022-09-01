@@ -3,7 +3,5 @@ TITLE=Guess who is still alive
 DATE=2005-10-04 14:18:09
 POSTID=519
 CATEGORIES=photos;
-MODE=htmldiv
 
-<p><img src="/photos/2005-10-04-Picture008.jpg" alt="[Thumb]" width="480" height="640" /></p>
-
+![[Thumb]](/photos/2005-10-04-Picture008.jpg)

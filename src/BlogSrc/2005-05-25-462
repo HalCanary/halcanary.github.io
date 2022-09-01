@@ -3,8 +3,6 @@ TITLE=Memphis Clubs
 DATE=2005-05-25 00:03:21
 POSTID=462
 CATEGORIES=games;
-MODE=htmldiv
 
-<p><img src="/images/club.png" alt="[&#9827;]" /><br />
-<a href="/p/clubs">Memphis Clubs</a>, a card game by Wes.</p>
-
+![[♣]](/images/club.png)  
+[Memphis Clubs](/p/clubs), a card game by Wes.

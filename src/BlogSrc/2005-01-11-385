@@ -3,7 +3,5 @@ TITLE=Took my advice.
 DATE=2005-01-11 13:45:45
 POSTID=385
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<p><a href="http://www.apple.com/macmini/">http://www.apple.com/macmini/</a> and <a href="/archives/000312.html">https://halcanary.org/archives/000312.html</a></p>
-
+[http://www.apple.com/macmini/](http://www.apple.com/macmini/) and [https://halcanary.org/archives/000312.html](/archives/000312.html)

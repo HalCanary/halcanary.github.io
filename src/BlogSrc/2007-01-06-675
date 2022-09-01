@@ -3,8 +3,6 @@ TITLE=widow's walk
 DATE=2007-01-06 14:47:04
 POSTID=675
 CATEGORIES=photos;
-MODE=htmldiv
 
-<p>This is the view from the top of the house we lived in in 1994.<br />
-<img src="/photos/1994-top-of-house.jpg" alt="view of beach" /></p>
-
+This is the view from the top of the house we lived in in 1994.  
+![view of beach](/photos/1994-top-of-house.jpg)

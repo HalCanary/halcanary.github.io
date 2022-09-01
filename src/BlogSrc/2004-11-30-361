@@ -3,7 +3,5 @@ TITLE=Welcome...
 DATE=2004-11-30 21:52:48
 POSTID=361
 CATEGORIES=rant;
-MODE=htmldiv
 
-<p><a href="http://www.newamericancentury.org/"><img src="/images/new-american-century.jpg" alt="Welcome to the New American Century" width="294" height="392" /></a></p>
-
+[![Welcome to the New American Century](/images/new-american-century.jpg)](http://www.newamericancentury.org/)

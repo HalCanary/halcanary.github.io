@@ -3,7 +3,5 @@ TITLE=H2
 DATE=2004-07-13 17:05:18
 POSTID=265
 CATEGORIES=mindless-link-propagation;
-MODE=htmldiv
 
-<p><a href="http://www.fuh2.com/">http://www.fuh2.com/</a></p>
-
+[http://www.fuh2.com/](http://www.fuh2.com/)

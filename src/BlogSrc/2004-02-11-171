@@ -3,9 +3,7 @@ TITLE=profound
 DATE=2004-02-11 23:47:50
 POSTID=171
 CATEGORIES=rant;
-MODE=htmldiv
 
-<blockquote><p>&ldquo;The Internet interprets censorship as damage and routes around it.&rdquo;</p>
-<p>&mdash;<a href="http://www.toad.com/gnu/">John Gilmore</a>(<a href="http://www.worldofends.com/">link</a>)</p>
-</blockquote>
-
+> “The Internet interprets censorship as damage and routes around it.”
+> 
+> —[John Gilmore](http://www.toad.com/gnu/)([link](http://www.worldofends.com/))

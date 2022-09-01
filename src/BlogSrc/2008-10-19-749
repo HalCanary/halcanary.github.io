@@ -3,8 +3,7 @@ TITLE=LTS
 DATE=2008-10-19 22:45:25
 POSTID=749
 CATEGORIES=computers-code;
-MODE=htmldiv
 
-<p>I've got out of the need-to-install-a-new-OS-all-the-time mode.  This is mostly because Linux Distributions these days are mostly good enough.</p>
-<p>So I've got Ubuntu <a href="http://en.wikipedia.org/wiki/History_of_Ubuntu_releases#Ubuntu_8.04_.28Hardy_Heron.29">8.04</a> (Hardy Heron) installed.  Since this is a "Long Term Support" release, I'll leave it installed until the next LTS release or until it end-of-lifes. </p>
+I've got out of the need-to-install-a-new-OS-all-the-time mode. This is mostly because Linux Distributions these days are mostly good enough.
 
+So I've got Ubuntu [8.04](http://en.wikipedia.org/wiki/History_of_Ubuntu_releases#Ubuntu_8.04_.28Hardy_Heron.29) (Hardy Heron) installed. Since this is a "Long Term Support" release, I'll leave it installed until the next LTS release or until it end-of-lifes.
