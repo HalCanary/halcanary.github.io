@@ -3,7 +3,6 @@ TITLE=Randomness
 DATE=2003-07-16 04:00:33
 POSTID=68
 CATEGORIES=computers-code;
-MODE=markdown
 
 [Emacs will not have Xft support anytime soon](http://mail.gnu.org/archive/html/emacs-devel/2002-10/msg00100.html), unless somebody codes it.
 

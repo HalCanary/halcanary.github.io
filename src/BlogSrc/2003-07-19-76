@@ -3,7 +3,6 @@ TITLE=despaceify script
 DATE=2003-07-19 03:50:10
 POSTID=76
 CATEGORIES=computers-code;
-MODE=markdown
 
 It now gets rid of apostrophies as well as spaces. It will then convert to lowercase unless it is a directory.
 

@@ -2,7 +2,6 @@ COPYRIGHT=Copyright Hal Canary / ALL RIGHTS RESERVED
 TITLE=PowerShot A40 + Linux
 DATE=2003-07-16 01:18:43
 POSTID=whc04
-MODE=markdown
 SUMMARY=Getting my Canon PowerShot A40 working under RedHat Linux 7.3 with gphoto2
 
 ![pic of A40](/images/A40.jpg)

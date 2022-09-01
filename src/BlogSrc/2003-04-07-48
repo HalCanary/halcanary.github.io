@@ -3,7 +3,6 @@ TITLE=Linux Crap
 DATE=2003-04-07 11:21:15
 POSTID=48
 CATEGORIES=computers-code;
-MODE=markdown
 
 I bought a copy of Red Hat 9 today. I've got the hang of installing new linux distros. Just don't format over the /home and /usr/local partitions and remember where you wrote down the phone number for your ppp connection. And don't forget that the modem is /dev/ttyS4, not /dev/ttyS0; that mistake cost me an hour.
 

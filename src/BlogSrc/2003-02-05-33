@@ -3,7 +3,6 @@ TITLE=WindowMaker Fin
 DATE=2003-02-05 22:18:04
 POSTID=33
 CATEGORIES=computers-code;
-MODE=markdown
 
 ![[screenshot]](/images/phoenix-minimized.png)  
 Fixed the minimiztion icon for phoenix under Windowmaker. Edit the  

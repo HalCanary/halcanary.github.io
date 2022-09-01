@@ -3,7 +3,6 @@ TITLE=More Linux Crap
 DATE=2003-04-10 12:23:15
 POSTID=49
 CATEGORIES=computers-code;
-MODE=markdown
 
 Note: the fact that .Xdefauts doesn't work is due to the fact that the file has been renamed .Xresources.
 

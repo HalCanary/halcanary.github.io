@@ -44,11 +44,12 @@ def proc(path):
     markdown = htmlToMarkdown(html)
     if not markdown:
         return
-    d['MODE'] = 'markdown'   
+    d['MODE'] = None
     with open(path, 'w') as o:
         for key in keys:
             if key in d:
-                o.write('%s=%s\n' %(key, d[key]))
+                if d[key]:
+                    o.write('%s=%s\n' %(key, d[key]))
         o.write('\n')
         o.write(markdown)
         if not markdown.endswith('\n'):

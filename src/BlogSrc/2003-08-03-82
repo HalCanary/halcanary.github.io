@@ -3,6 +3,5 @@ TITLE=the n Queens problem
 DATE=2003-08-03 21:55:51
 POSTID=82
 CATEGORIES=mathematics;
-MODE=markdown
 
 Learned a [new sequence](http://www.research.att.com/cgi-bin/access.cgi/as/njas/sequences/eisA.cgi?Anum=A000170) today: 1, 0, 0, 2, 10, 4, 40, 92, 352, 724, 2680, 14200, 73712, 365596, 2279184, 14772512, 95815104, 666090624, 4968057848, 39029188884, 314666222712, 2691008701644, 24233937684440... There doesn't seem to be a closed form solution to this one.

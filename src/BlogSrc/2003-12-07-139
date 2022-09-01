@@ -3,7 +3,6 @@ TITLE=(c) 2003 Hal Canary
 DATE=2003-12-07 21:36:56
 POSTID=139
 CATEGORIES=meta;
-MODE=markdown
 
 I went through and made a bunch of changes to wohc this weekend. First, I finally switched over to movable type. Then I marked all code on the site with a suitable license. Then I added a [FAQ](/p/faq/) and [site map](/p/sitemap/).
 

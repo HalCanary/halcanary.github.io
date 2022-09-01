@@ -3,7 +3,6 @@ TITLE=software defined radio
 DATE=2003-07-14 04:57:21
 POSTID=65
 CATEGORIES=computers-code;
-MODE=markdown
 
 [![[GNU RADIO]](/images/gnu-radio.png)](http://www.gnu.org/software/gnuradio/) I read this [article on software defined radio](http://www.guardian.co.uk/online/story/0,3605,994679,00.html) and once again got excited about it. The only problem is that you need a very expensive ADC to pick up [FM or HDTV](http://comsec.com/wiki?HowtoHdTv).
 

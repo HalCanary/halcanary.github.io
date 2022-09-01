@@ -3,7 +3,6 @@ TITLE=ssh-add script.
 DATE=2003-08-26 13:51:35
 POSTID=103
 CATEGORIES=computers-code;
-MODE=markdown
 
 Here's little script that check to see if the ssh-agent knows any keys. If not, it asks for your passphrase. Then it executes ssh.
 

@@ -3,7 +3,6 @@ TITLE=Standard Keybinding for Emacs
 DATE=2003-07-24 21:49:52
 POSTID=81
 CATEGORIES=computers-code;
-MODE=markdown
 
     ;; $HOME/.emacs ;;
     (global-set-key

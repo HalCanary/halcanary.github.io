@@ -3,6 +3,5 @@ TITLE=Blog Changes
 DATE=2003-08-13 18:48:42
 POSTID=90
 CATEGORIES=meta;
-MODE=markdown
 
 I'm making a few changes to the blog form on this site. The eventual goal is to make a RSS feed. To do that I've got to first make some changes in my data structures.
