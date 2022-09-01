@@ -6,6 +6,7 @@ import email.utils
 import hashlib
 import lxml.html
 import os
+import re
 import sys
 import uuid
 import xml.dom.minidom
@@ -94,15 +95,14 @@ def makeRSS(out, posts):
             contentstring = clean('<p>' + cleanText(post.summary) + '</p>\n' + post.post)
         else:
             contentstring = clean(post.post)
-        date = datetime.datetime.fromisoformat(post.date[:25])
         item = channel.appendChild(doc.createElement('item'))
         add(item, 'title', cleanText(post.title))
-        link = URL_BASE + '/' + post.permalinkpart
+        link = URL_BASE + '/' + post.permalinkpart()
         add(item, 'link', link)
         m = hashlib.sha256()
         m.update((link + contentstring).encode('utf-8'))
         add(item, 'guid', str(uuid.UUID(m.hexdigest()[:32]))).setAttribute('isPermaLink', 'false')
-        add(item, 'pubDate', email.utils.format_datetime(date))
+        add(item, 'pubDate', email.utils.format_datetime(post.timestamp))
         add(item, 'description', contentstring)
         if post.category_list:
             add(item, 'category', ','.join(post.category_list))
@@ -132,14 +132,13 @@ class UpdatingFile(object):
         self._o.append(s)
 
 class Post(object):
-    @staticmethod
-    def write(o, post_info, level, identifier=None):
+    def write(self, o, level=1, identifier=None):
         category_fmt = '<a href="/{1}/category/{0}/" class="p-category">#{0}</a>'
-        categories = '; '.join(category_fmt.format(cat, BASE_DIR) for cat in post_info['category_list'])
+        categories = '; '.join(category_fmt.format(cat, BASE_DIR) for cat in self.category_list)
         if categories:
             categories = '<div>%s</div>' % categories
         # keys = [ 'src', 'permalinkpart', 'title', 'summary', 'date', 'category_list', 'post' ]
-        summ = '    <p class="p-summary">{}</p>'.format(post_info['summary']) if post_info['summary'] else ''
+        summ = '    <p class="p-summary">{}</p>'.format(self.summary) if self.summary else ''
         post_template = """
 <article id="{fragment}" class="h-entry">
   <header>
@@ -149,7 +148,7 @@ class Post(object):
     <div class="byline plainlink">
       <div>
           <div class="p-author">Hal Canary</div>
-          <div class="dt-published">{date}</div>
+          <div><time datetime="{datetime}" class="dt-published">{date}</time></div>
           <div><a href="/{permalinkpart}" class="u-url u-uid">{URL_BASE}/{permalinkpart}</a></div>
           {categories}
       </div>
@@ -163,35 +162,36 @@ class Post(object):
 <hr>
 """
         o.write(post_template.format(level=level, categories=categories, summ=summ,
-                                     URL_BASE=URL_BASE, **post_info))
+                                     URL_BASE=URL_BASE, **vars(self),
+                                     datetime=self.timestamp.isoformat(),
+                                     permalinkpart=self.permalinkpart(),
+                                     fragment=self.fragmentId(),
+                                     date=self.date()))
 
     def __init__(self, path):
+        if not os.path.isfile(path):
+            raise Exception(path + " is not a file")
+        self.src = os.path.basename(path)
         # Required:
         #    TITLE
         #    DATE
         #    POSTID
+        self.title = None
+        self.timestamp = None
+        self.tzinfo = None
+        self.postid = None
         # Suggested:
         #    SUMMARY
         #    CATEGORIES
         #    MODE
         # Everything else is ignored
-        if not os.path.isfile(path):
-            raise Exception(path + " is not a file")
-
-        self.src = os.path.basename(path)
-        self.category_list = []
         self.summary = ''
-        self.date = None
-        self.day = None
-        self.month = None
-        self.permalinkpart = None
-        self.post = None
-        self.title = None
-        self.year = None
-        self.next = None
-        self.prev = None
+        self.category_list = []
+        self.post = None  # content
 
-        postid = None
+        self.next = None  # pointer to next in sequence
+        self.prev = None  # pointer to previous in sequence
+
         mode = 'markdown'
         with open(path,'r') as f:
             while True:
@@ -208,9 +208,12 @@ class Post(object):
                 if key == 'TITLE':
                     self.title = value
                 elif key == 'DATE':
-                    self.date = value
+                    self.timestamp = datetime.datetime.fromisoformat(re.sub(' *\(.*\)$', '', value))
+                    tzinfo_match = re.search('\((.*)\)', value)
+                    if tzinfo_match is not None:
+                        self.tzinfo = tzinfo_match.group(1)
                 elif key == 'POSTID':
-                    postid = value
+                    self.postid = value
                 elif key == 'SUMMARY':
                     self.summary = value
                 elif key == 'CATEGORIES':
@@ -225,35 +228,40 @@ class Post(object):
             else:
                 self.post = f.read().rstrip()
 
-        if self.date is None:
+        if self.timestamp is None:
             raise Exception('DATE missing ({})'.format(path))
-        if postid is None:
+        if self.postid is None:
             raise Exception('POSTID missing ({})'.format(path))
         if self.title is None:
             raise Exception('TITLE missing ({})'.format(path))
 
-        if not self.category_list :
+        if not self.category_list:
             self.category_list.append('uncategorized')
 
-        timestamp = datetime.datetime.strptime(self.date.split()[0], '%Y-%m-%d').date()
-        self.year  = timestamp.year
-        self.month = timestamp.month
-        self.day   = timestamp.day
-        self.postid = postid
 
-        self.permalinkpart = '{:s}/{:04d}/{:02d}/{:02d}/{:s}/'.format(BASE_DIR, self.year, self.month, self.day, postid)
-        self.fragment = '{:04d}/{:02d}/{:02d}/{:s}'.format(self.year, self.month, self.day, postid)
+    def date(self):
+        if self.tzinfo is None:
+            return self.timestamp.isoformat(' ')
+        return '%s (%s)' % (self.timestamp.isoformat(' '), self.tzinfo)
+
+    def fragmentId(self):
+        return '{:04d}/{:02d}/{:02d}/{:s}'.format(
+            self.timestamp.year, self.timestamp.month, self.timestamp.day, self.postid)
+
+    def permalinkpart(self):
+        return '{:s}/{}/'.format(BASE_DIR, self.fragmentId())
+
 
     def write_to_file(self, output_path):
         def linker(post, s):
-            return '({}<a href="/{}">{}</a>)'.format(s, post.permalinkpart, post.title) if post else None
+            return '({}<a href="/{}">{}</a>)'.format(s, post.permalinkpart(), post.title) if post else None
 
         up = '(<a href="/{}/archives/">back</a>)'.format(BASE_DIR)
         with UpdatingFile(OUTPUT_DIR + '/' + output_path) as o:
             o.write('<!DOCTYPE html>\n<html lang="en">\n')
             o.write(head(title='Voder-Vocoder: ' + self.title, years=get_years()))
             o.write('\n<body>\n')
-            Post.write(o, vars(self), 1)
+            self.write(o, 1)
             o.write('<nav>\n')
             o.write(lcr(linker(self.prev, 'older: '), up, linker(self.next, 'newer: ')))
             o.write('\n</nav>\n</body>\n</html>')
@@ -265,7 +273,7 @@ class RecentPosts(object):
         self.posts.append(post)
     def close(self):
         def linker(post, s):
-            return '({}<a href="/{}">{}</a>)'.format(s, post.permalinkpart, post.title) if post else None
+            return '({}<a href="/{}">{}</a>)'.format(s, post.permalinkpart(), post.title) if post else None
         with UpdatingFile('{}/{}/index.html'.format(OUTPUT_DIR, BASE_DIR)) as o:
             o.write('<!DOCTYPE html>\n<html lang="en">\n')
             o.write(head(title='Voder-Vocoder', years=get_years()))
@@ -273,17 +281,17 @@ class RecentPosts(object):
             o.write(top_posts_header)
             o.write('<nav>\n<ul class="flat">\n')
             for post in self.posts:
-                o.write('<li><a href="#{}">{}</a></li>\n'.format(post.fragment, post.title))
+                o.write('<li><a href="#{}">{}</a></li>\n'.format(post.fragmentId(), post.title))
             o.write('</ul>\n</nav>\n<hr>\n<div role="main">\n')
             for post in self.posts:
-                Post.write(o, vars(post), 2)
+                post.write(o, 2)
             o.write('</div>\n')
             o.write('<nav aria-label="External Navigation">\n')
             o.write(lcr(linker(self.posts[-1].prev, 'older: '), '(<a href="archives/">ALL POSTS</a>)', ''))
             o.write('</nav>\n</body>\n</html>\n')
 
 def writeIndex(loc, title, post_list, prev_next):
-    posts = index_by_keyfn(post_list, lambda p: [p.year])
+    posts = index_by_keyfn(post_list, lambda p: [p.timestamp.year])
     with UpdatingFile(OUTPUT_DIR + '/' + loc) as o:
         o.write('<!DOCTYPE html>\n<html lang="en">\n')
         o.write(head(title=title, years=get_years()))
@@ -298,7 +306,7 @@ def writeIndex(loc, title, post_list, prev_next):
             for post in year_posts:
                 s = '  <div>{}</div>'.format(post.summary) if post.summary else ''
                 fmt = '<li>\n  <a href="/{permalinkpart}">{title}</a>\n  {date}\n{s}\n</li>\n'
-                o.write(fmt.format(s=s, **vars(post)))
+                o.write(fmt.format(s=s, permalinkpart=post.permalinkpart(), date=post.date(), **vars(post)))
             o.write('</ul>\n\n')
         o.write('</div>\n')
         previ, nexti = prev_next
@@ -363,9 +371,9 @@ def main():
         if i < 10:
             recentPosts.addPost(post)
 
-    posts_by_year     = index_by_keyfn(all_posts, lambda p: [p.year])
-    posts_by_month    = index_by_keyfn(all_posts, lambda p: [(p.year, p.month)])
-    posts_by_day      = index_by_keyfn(all_posts, lambda p: [(p.year, p.month, p.day)])
+    posts_by_year     = index_by_keyfn(all_posts, lambda p: [p.timestamp.year])
+    posts_by_month    = index_by_keyfn(all_posts, lambda p: [(p.timestamp.year, p.timestamp.month)])
+    posts_by_day      = index_by_keyfn(all_posts, lambda p: [(p.timestamp.year, p.timestamp.month, p.timestamp.day)])
     posts_by_category = index_by_keyfn(all_posts, lambda p: p.category_list)
 
     global first_year
@@ -409,7 +417,7 @@ def main():
 
 
     for post in all_posts:
-        post.write_to_file(post.permalinkpart + 'index.html')
+        post.write_to_file(post.permalinkpart() + 'index.html')
 
     recentPosts.close()
 
