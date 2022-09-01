@@ -79,32 +79,41 @@ ul.flat li::before {content:"[";}
   <div class="content e-content">
 <div style="display:none;"></div>
 <p>Command-line package commands for Debian and Ubuntu-type systems that you should know:</p>
-<dl>
-<dt>apt&#0045;get update</dt>
-<dd>resynchronize the package index files</dd>
-<dt>apt&#0045;get dist&#0045;upgrade</dt>
-<dd>install the newest versions of all packages currently installed and handle changing dependencies</dd>
-<dt>apt&#0045;get install PKG</dt>
-<dd>install a package and figure out dependancies</dd>
-<dt>apt&#0045;get remove PKG</dt>
-<dd>remove a package</dd>
-<dt>apt&#0045;get clean</dt>
-<dd>clear out the local repository of retrieved package files</dd>
-<dt>apt&#0045;cache showpkg PKG</dt>
-<dd>displays information about the package</dd>
-<dt>apt&#0045;cache search REGEX</dt>
-<dd>search all available package lists for a regex pattern</dd>
-<dt>dpkg&#0045;query &#0045;&#0045;list PATTERN</dt>
-<dd>list installed packages matching given pattern</dd>
-<dt>dpkg&#0045;query &#0045;&#0045;status PKG</dt>
-<dd>report the status of specified package</dd>
-<dt>dpkg&#0045;query &#0045;&#0045;listfiles PKG</dt>
-<dd>list files installed to your system from a package</dd>
-<dt>dpkg&#0045;query &#0045;&#0045;search FILENAME</dt>
-<dd>search for a filename from installed packages</dd>
-<dt>sudo dpkg &#0045;&#0045;install DEBPKGFILE</dt>
-<dd>install a .deb package</dd>
-</dl>
+<pre><code>apt-get update
+    resynchronize the package index files
+
+apt-get dist-upgrade
+    install the newest versions of all packages currently installed and handle changing dependencies
+
+apt-get install PKG
+    install a package and figure out dependancies
+
+apt-get remove PKG
+    remove a package
+
+apt-get clean
+    clear out the local repository of retrieved package files
+
+apt-cache showpkg PKG
+    displays information about the package
+
+apt-cache search REGEX
+    search all available package lists for a regex pattern
+
+dpkg-query --list PATTERN
+    list installed packages matching given pattern
+
+dpkg-query --status PKG
+    report the status of specified package
+
+dpkg-query --listfiles PKG
+    list files installed to your system from a package
+
+dpkg-query --search FILENAME
+    search for a filename from installed packages
+
+sudo dpkg --install DEBPKGFILE
+    install a .deb package</code></pre>
   </div>
 </article>
 <hr>

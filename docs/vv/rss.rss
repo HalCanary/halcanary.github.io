@@ -7,8 +7,8 @@
 		<description>The Log of Hal Canary</description>
 		<language>en-US</language>
 		<copyright>Copyright 2002-2022 Hal W. Canary. ALL RIGHTS RESERVED.</copyright>
-		<pubDate>Thu, 01 Sep 2022 18:30:34 -0400</pubDate>
-		<lastBuildDate>Thu, 01 Sep 2022 18:30:34 -0400</lastBuildDate>
+		<pubDate>Thu, 01 Sep 2022 18:38:55 -0400</pubDate>
+		<lastBuildDate>Thu, 01 Sep 2022 18:38:55 -0400</lastBuildDate>
 		<image>
 			<url>https://halcanary.org/images/HAL_CANARY_20191008_512.jpg</url>
 			<title>Voder-Vocoder</title>
@@ -2350,20 +2350,20 @@ fi&lt;/code&gt;&lt;/pre&gt;
 		<item>
 			<title>Update comparison</title>
 			<link>https://halcanary.org/vv/2010/09/04/1032/</link>
-			<guid isPermaLink="false">7098e6c9-7234-1a58-4baa-8635dbfd2d73</guid>
+			<guid isPermaLink="false">af53a06c-2c47-2654-8162-40e937fd4f00</guid>
 			<pubDate>Sat, 04 Sep 2010 13:43:34 -0000</pubDate>
-			<description>&lt;div&gt;&lt;p&gt;No comparison.  APT (the Advanced Packaging Tool) beats Windows Update by a million to one.  I had hoped that Windows Seven would improve things, but no such luck.&lt;/p&gt;
+			<description>&lt;div&gt;&lt;p&gt;No comparison. APT (the Advanced Packaging Tool) beats Windows Update by a million to one. I had hoped that Windows Seven would improve things, but no such luck.&lt;/p&gt;
 &lt;p&gt;APT: You run this script, once, in the background and it does everything.&lt;/p&gt;
-&lt;pre&gt;#!/bin/sh
+&lt;pre&gt;&lt;code&gt;#!/bin/sh
 sudo apt-get update
 sudo apt-get -y dist-upgrade
-sudo apt-get clean&lt;/pre&gt;
-&lt;p&gt;Windows Update:  You run this program—&lt;/p&gt;
-&lt;pre&gt;%windir%\system32\wuapp.exe&lt;/pre&gt;
-&lt;p&gt;—then click on some things, then it downloads and installs, then it asks you to reboot.  Then while it shuts down it does things, then while it boots up it does things, then you have to repeat the same process THREE TIMES to get all the updates!&lt;/p&gt;
+sudo apt-get clean&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Windows Update: You run this program—&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;%windir%\system32\wuapp.exe&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;—then click on some things, then it downloads and installs, then it asks you to reboot. Then while it shuts down it does things, then while it boots up it does things, then you have to repeat the same process THREE TIMES to get all the updates!&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;Also, here's my full script:&lt;/p&gt;
-&lt;pre style=&quot;overflow:auto; overflow-y:visible&quot;&gt;#!/bin/sh
+&lt;pre&gt;&lt;code&gt;#!/bin/sh
 # ${HOME}/bin/agu -- &quot;Apt, Get Updates&quot;
 # Written by Hal Canary
 # Dedicated to the public domain.
@@ -2382,7 +2382,7 @@ sudo /usr/bin/nice /usr/bin/apt-get --yes update &amp;amp;&amp;amp; \
 sudo /usr/bin/nice /usr/bin/apt-get --yes dist-upgrade
 sudo /usr/bin/nice /usr/bin/apt-get autoremove
 sudo /usr/bin/nice /usr/bin/apt-get clean
-sudo /usr/bin/nice /usr/bin/dpkg --configure --pending&lt;/pre&gt;&lt;/div&gt;</description>
+sudo /usr/bin/nice /usr/bin/dpkg --configure --pending&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
 			<category>computers-code</category>
 		</item>
 		<item>
@@ -3257,35 +3257,44 @@ exec emacs-snapshot \
 		<item>
 			<title>Command-line Package Tools</title>
 			<link>https://halcanary.org/vv/2009/09/26/827/</link>
-			<guid isPermaLink="false">55cd49ca-f897-9fda-8ca0-4d03e01589ca</guid>
+			<guid isPermaLink="false">c4101639-7055-680d-6791-03e52901d9d5</guid>
 			<pubDate>Sat, 26 Sep 2009 18:54:45 -0000</pubDate>
 			<description>&lt;div&gt;&lt;p&gt;Command-line package commands for Debian and Ubuntu-type systems that you should know:&lt;/p&gt;
-&lt;dl&gt;
-&lt;dt&gt;apt-get update&lt;/dt&gt;
-&lt;dd&gt;resynchronize the package index files&lt;/dd&gt;
-&lt;dt&gt;apt-get dist-upgrade&lt;/dt&gt;
-&lt;dd&gt;install the newest versions of all packages currently installed and handle changing dependencies&lt;/dd&gt;
-&lt;dt&gt;apt-get install PKG&lt;/dt&gt;
-&lt;dd&gt;install a package and figure out dependancies&lt;/dd&gt;
-&lt;dt&gt;apt-get remove PKG&lt;/dt&gt;
-&lt;dd&gt;remove a package&lt;/dd&gt;
-&lt;dt&gt;apt-get clean&lt;/dt&gt;
-&lt;dd&gt;clear out the local repository of retrieved package files&lt;/dd&gt;
-&lt;dt&gt;apt-cache showpkg PKG&lt;/dt&gt;
-&lt;dd&gt;displays information about the package&lt;/dd&gt;
-&lt;dt&gt;apt-cache search REGEX&lt;/dt&gt;
-&lt;dd&gt;search all available package lists for a regex pattern&lt;/dd&gt;
-&lt;dt&gt;dpkg-query --list PATTERN&lt;/dt&gt;
-&lt;dd&gt;list installed packages matching given pattern&lt;/dd&gt;
-&lt;dt&gt;dpkg-query --status PKG&lt;/dt&gt;
-&lt;dd&gt;report the status of specified package&lt;/dd&gt;
-&lt;dt&gt;dpkg-query --listfiles PKG&lt;/dt&gt;
-&lt;dd&gt;list files installed to your system from a package&lt;/dd&gt;
-&lt;dt&gt;dpkg-query --search FILENAME&lt;/dt&gt;
-&lt;dd&gt;search for a filename from installed packages&lt;/dd&gt;
-&lt;dt&gt;sudo dpkg --install DEBPKGFILE&lt;/dt&gt;
-&lt;dd&gt;install a .deb package&lt;/dd&gt;
-&lt;/dl&gt;&lt;/div&gt;</description>
+&lt;pre&gt;&lt;code&gt;apt-get update
+    resynchronize the package index files
+
+apt-get dist-upgrade
+    install the newest versions of all packages currently installed and handle changing dependencies
+
+apt-get install PKG
+    install a package and figure out dependancies
+
+apt-get remove PKG
+    remove a package
+
+apt-get clean
+    clear out the local repository of retrieved package files
+
+apt-cache showpkg PKG
+    displays information about the package
+
+apt-cache search REGEX
+    search all available package lists for a regex pattern
+
+dpkg-query --list PATTERN
+    list installed packages matching given pattern
+
+dpkg-query --status PKG
+    report the status of specified package
+
+dpkg-query --listfiles PKG
+    list files installed to your system from a package
+
+dpkg-query --search FILENAME
+    search for a filename from installed packages
+
+sudo dpkg --install DEBPKGFILE
+    install a .deb package&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
 			<category>computers-code</category>
 		</item>
 		<item>
@@ -7168,209 +7177,78 @@ $ sha1sum /dev/hdc&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
 		<item>
 			<title>Art</title>
 			<link>https://halcanary.org/vv/2006/09/19/whc02/</link>
-			<guid isPermaLink="false">dc3a6195-ea94-5b63-438c-7e10c6b59be2</guid>
+			<guid isPermaLink="false">9984d7c3-4051-331c-f7f6-e506486e2468</guid>
 			<pubDate>Tue, 19 Sep 2006 23:21:33 -0000</pubDate>
 			<description>&lt;div&gt;&lt;p&gt;old art of mine that I scanned at one point; also art by some others.&lt;/p&gt;
-  &lt;h2&gt;Art by Hal Canary&lt;/h2&gt;
-  &lt;div class=&quot;subsection&quot;&gt;
-    &lt;h3&gt;Watercolors&lt;/h3&gt;
-    &lt;p&gt;
-      &lt;a href=&quot;https://halcanary.org/art/destin.jpg&quot;&gt;
-	&lt;img src=&quot;https://halcanary.org/art/thumb/destin.jpg&quot; alt=&quot;[Thumb]&quot; width=&quot;120&quot; height=&quot;88&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;
-      &lt;/a&gt;
-      &lt;br&gt;The ominous foggy morning when we arrived in Destin. July 1998.
-    &lt;/p&gt;
-    &lt;p&gt;
-      &lt;a href=&quot;https://halcanary.org/art/devil-01.jpg&quot;&gt;
-	&lt;img src=&quot;https://halcanary.org/art/thumb/devil-01.jpg&quot; alt=&quot;[Thumb]&quot; width=&quot;120&quot; height=&quot;89&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;
-      &lt;/a&gt;
-      &lt;br&gt;Devil's Lake - view from west bluff. May 2002.
-      &lt;br&gt;
-      &lt;a href=&quot;https://halcanary.org/art/devil-02.jpg&quot;&gt;
-	&lt;img src=&quot;https://halcanary.org/art/thumb/devil-02.jpg&quot; alt=&quot;[Thumb]&quot; width=&quot;120&quot; height=&quot;81&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;
-      &lt;/a&gt;
-      &lt;br&gt;Devil's Lake - view from base of east bluff. May 2002.
-      &lt;br&gt;
-      &lt;a href=&quot;https://halcanary.org/art/devil-04.jpg&quot;&gt;
-	&lt;img src=&quot;https://halcanary.org/art/thumb/devil-04.jpg&quot; alt=&quot;[Thumb]&quot; width=&quot;120&quot; height=&quot;78&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;
-      &lt;/a&gt;
-      &lt;br&gt;Devil's Lake. Summer 2002.
-    &lt;/p&gt;
-    &lt;p&gt;
-      &lt;a href=&quot;https://halcanary.org/art/frontgarden.jpg&quot;&gt;
-	&lt;img src=&quot;https://halcanary.org/art/thumb/frontgarden.jpg&quot; alt=&quot;[Thumb]&quot; width=&quot;88&quot; height=&quot;120&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;
-      &lt;/a&gt;
-      &lt;br&gt;My front yard, Panda Lane, Memphis. Summer 1998.
-    &lt;/p&gt;
-    &lt;p&gt;
-      &lt;a href=&quot;https://halcanary.org/art/padre1.jpg&quot;&gt;
-	&lt;img src=&quot;https://halcanary.org/art/thumb/padre1.jpg&quot; alt=&quot;[Thumb]&quot; width=&quot;120&quot; height=&quot;86&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;
-      &lt;/a&gt;
-      &lt;br&gt;The beach on South Padre Island, Texas. August 1998.
-    &lt;/p&gt;
-    &lt;p&gt;
-      &lt;a href=&quot;https://halcanary.org/art/padre2.jpg&quot;&gt;
-	&lt;img src=&quot;https://halcanary.org/art/thumb/padre2.jpg&quot; alt=&quot;[Thumb]&quot; width=&quot;120&quot; height=&quot;91&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;
-      &lt;/a&gt;
-      &lt;br&gt;A bar on the beach on South Padre Island, Texas. August 1998.
-    &lt;/p&gt;
-    &lt;p&gt;
-      &lt;a href=&quot;https://halcanary.org/art/reader.jpg&quot;&gt;
-	&lt;img src=&quot;https://halcanary.org/art/thumb/reader.jpg&quot; alt=&quot;[Thumb]&quot; width=&quot;93&quot; height=&quot;120&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;
-      &lt;/a&gt;
-      &lt;br&gt;&lt;em&gt;The Reader by the Lake&lt;/em&gt;. February 1999.
-    &lt;/p&gt;
-    &lt;p&gt;
-      &lt;a href=&quot;https://halcanary.org/art/2005-09-13-chapman.jpg&quot;&gt;
-	&lt;img src=&quot;https://halcanary.org/art/thumb/2005-09-13-chapman.jpg&quot; alt=&quot;[Thumb]&quot; width=&quot;74&quot; height=&quot;120&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;
-      &lt;/a&gt;
-      &lt;br&gt;
-      &lt;a href=&quot;https://halcanary.org/art/2005-09-14-chapman-final.jpg&quot;&gt;
-	&lt;img src=&quot;https://halcanary.org/art/thumb/2005-09-14-chapman-final.jpg&quot; alt=&quot;[Thumb]&quot; width=&quot;94&quot; height=&quot;120&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;
-      &lt;/a&gt;
-      &lt;br&gt;Portrate of Chapman.  September 2005.
-    &lt;/p&gt;
-
-  &lt;/div&gt;
-  &lt;div class=&quot;subsection&quot;&gt;
-    &lt;h3&gt;Pencil&lt;/h3&gt;
-    &lt;p&gt;
-      &lt;a href=&quot;https://halcanary.org/art/devil-03.jpg&quot;&gt;
-	&lt;img src=&quot;https://halcanary.org/art/thumb/devil-03.jpg&quot; alt=&quot;[Thumb]&quot; width=&quot;87&quot; height=&quot;120&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;
-      &lt;/a&gt;
-      &lt;br&gt;Devil's Lake - tree at base of east bluff. May 2002.
-    &lt;/p&gt;
-    &lt;p&gt;
-      &lt;a href=&quot;https://halcanary.org/art/2005-07-22-Picture024.jpg&quot;&gt;
-	&lt;img src=&quot;https://halcanary.org/art/thumb/2005-07-22-Picture024.jpg&quot; alt=&quot;[Thumb]&quot; width=&quot;90&quot; height=&quot;120&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;
-      &lt;/a&gt;
-      &lt;br&gt;A sign on the wall.  July 2005.
-    &lt;/p&gt;
-    &lt;p&gt;
-      &lt;a href=&quot;https://halcanary.org/art/2005-07-22-Picture025.jpg&quot;&gt;
-	&lt;img src=&quot;https://halcanary.org/art/thumb/2005-07-22-Picture025.jpg&quot; alt=&quot;[Thumb]&quot; width=&quot;120&quot; height=&quot;90&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;
-      &lt;/a&gt;
-      &lt;br&gt;My car.  July 2005.
-    &lt;/p&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;subsection&quot;&gt;
-    &lt;h3&gt;Pen &amp;amp; Ink&lt;/h3&gt;
-    &lt;p&gt;
-      &lt;a href=&quot;https://halcanary.org/art/2005-09-14-img_1801.jpg&quot;&gt;
-	&lt;img src=&quot;https://halcanary.org/art/thumb/2005-09-14-img_1801.jpg&quot; alt=&quot;[Thumb]&quot; width=&quot;120&quot; height=&quot;90&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;
-      &lt;/a&gt;
-      &lt;br&gt;Abstract with circles.  September 2005.
-    &lt;/p&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;subsection&quot;&gt;
-    &lt;h3&gt;Acrylics&lt;/h3&gt;
-    &lt;p&gt;
-      &lt;a href=&quot;https://halcanary.org/art/alice.jpg&quot;&gt;
-	&lt;img src=&quot;https://halcanary.org/art/thumb/alice.jpg&quot; alt=&quot;[Thumb]&quot; width=&quot;95&quot; height=&quot;120&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;
-      &lt;/a&gt;
-      &lt;br&gt;Alice takes a Hit. June 1999. 40&quot; X 30&quot;.
-    &lt;/p&gt;
-    &lt;p&gt;
-      &lt;a href=&quot;https://halcanary.org/art/2004-07-19-golden_ratio.jpg&quot;&gt;
-	&lt;img src=&quot;https://halcanary.org/art/thumb/2004-07-19-golden_ratio.jpg&quot; alt=&quot;[Thumb]&quot; width=&quot;74&quot; height=&quot;120&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;
-      &lt;/a&gt;
-      &lt;br&gt;Golden Ratio. 2004-07-19.
-    &lt;/p&gt;
-    &lt;p&gt;
-      &lt;a href=&quot;https://halcanary.org/art/2003-08-24-art-1.jpg&quot;&gt;
-	&lt;img src=&quot;https://halcanary.org/art/thumb/2003-08-24-art-1.jpg&quot; alt=&quot;[Thumb]&quot; width=&quot;120&quot; height=&quot;95&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;
-      &lt;/a&gt;
-      &lt;br&gt;
-      &lt;a href=&quot;https://halcanary.org/art/2003-08-24-art-2.jpg&quot;&gt;
-	&lt;img src=&quot;https://halcanary.org/art/thumb/2003-08-24-art-2.jpg&quot; alt=&quot;[Thumb]&quot; width=&quot;120&quot; height=&quot;95&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;
-      &lt;/a&gt;
-      &lt;br&gt;A modern piece. 2003-08-24.
-    &lt;/p&gt;
-    &lt;p&gt;
-      &lt;a href=&quot;https://halcanary.org/art/2003-08-24-art-3.jpg&quot;&gt;
-	&lt;img src=&quot;https://halcanary.org/art/thumb/2003-08-24-art-3.jpg&quot; alt=&quot;[Thumb]&quot; width=&quot;96&quot; height=&quot;120&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;
-      &lt;/a&gt;
-      &lt;br&gt;A work in progress. 2003-08-24
-    &lt;/p&gt;
-
-
-  &lt;/div&gt;
-
-  &lt;div class=&quot;subsection&quot;&gt;
-    &lt;h3&gt;Digital Minatures&lt;/h3&gt;
-    &lt;p&gt;
-      &lt;a href=&quot;https://halcanary.org/art/redsky.jpg&quot;&gt;
-	&lt;img src=&quot;https://halcanary.org/art/thumb/redsky.jpg&quot; alt=&quot;[Thumb]&quot; width=&quot;120&quot; height=&quot;89&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;
-      &lt;/a&gt;
-    &lt;/p&gt;
-    &lt;p&gt;
-      &lt;a href=&quot;https://halcanary.org/art/roundboy.jpg&quot;&gt;
-	&lt;img src=&quot;https://halcanary.org/art/thumb/roundboy.jpg&quot; alt=&quot;[Thumb]&quot; width=&quot;120&quot; height=&quot;89&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;
-      &lt;/a&gt;
-    &lt;/p&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;subsection&quot;&gt;
-    &lt;h3&gt;Sculpture&lt;/h3&gt;
-    &lt;p&gt;
-      &lt;a href=&quot;https://halcanary.org/art/tinman.jpg&quot;&gt;
-	&lt;img src=&quot;https://halcanary.org/art/thumb/tinman.jpg&quot; alt=&quot;[Thumb]&quot; width=&quot;74&quot; height=&quot;120&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;
-      &lt;/a&gt;
-      &lt;br&gt;21 February 1999: The Tin Man, which won first place in the
-      Public Relations Student Society of America's Can Creation
-      Contest, stands in Library Mall Sunday. It was created by Hal
-      Canary and Beth Petrus.
-    &lt;/p&gt;
-  &lt;/div&gt;
-
+&lt;h2&gt;Art by Hal Canary&lt;/h2&gt;
+&lt;h3&gt;Watercolors&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://halcanary.org/art/destin.jpg&quot;&gt;&lt;img src=&quot;https://halcanary.org/art/thumb/destin.jpg&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;br&gt;
+The ominous foggy morning when we arrived in Destin. July 1998.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://halcanary.org/art/devil-01.jpg&quot;&gt;&lt;img src=&quot;https://halcanary.org/art/thumb/devil-01.jpg&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;br&gt;
+Devil's Lake - view from west bluff. May 2002.&lt;br&gt;
+&lt;a href=&quot;https://halcanary.org/art/devil-02.jpg&quot;&gt;&lt;img src=&quot;https://halcanary.org/art/thumb/devil-02.jpg&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;br&gt;
+Devil's Lake - view from base of east bluff. May 2002.&lt;br&gt;
+&lt;a href=&quot;https://halcanary.org/art/devil-04.jpg&quot;&gt;&lt;img src=&quot;https://halcanary.org/art/thumb/devil-04.jpg&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;br&gt;
+Devil's Lake. Summer 2002.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://halcanary.org/art/frontgarden.jpg&quot;&gt;&lt;img src=&quot;https://halcanary.org/art/thumb/frontgarden.jpg&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;br&gt;
+My front yard, Panda Lane, Memphis. Summer 1998.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://halcanary.org/art/padre1.jpg&quot;&gt;&lt;img src=&quot;https://halcanary.org/art/thumb/padre1.jpg&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;br&gt;
+The beach on South Padre Island, Texas. August 1998.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://halcanary.org/art/padre2.jpg&quot;&gt;&lt;img src=&quot;https://halcanary.org/art/thumb/padre2.jpg&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;br&gt;
+A bar on the beach on South Padre Island, Texas. August 1998.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://halcanary.org/art/reader.jpg&quot;&gt;&lt;img src=&quot;https://halcanary.org/art/thumb/reader.jpg&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;br&gt;
+&lt;em&gt;The Reader by the Lake&lt;/em&gt;. February 1999.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://halcanary.org/art/2005-09-13-chapman.jpg&quot;&gt;&lt;img src=&quot;https://halcanary.org/art/thumb/2005-09-13-chapman.jpg&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;br&gt;
+&lt;a href=&quot;https://halcanary.org/art/2005-09-14-chapman-final.jpg&quot;&gt;&lt;img src=&quot;https://halcanary.org/art/thumb/2005-09-14-chapman-final.jpg&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;br&gt;
+Portrate of Chapman. September 2005.&lt;/p&gt;
 &lt;hr&gt;
-
-  &lt;h2&gt;Art by others&lt;/h2&gt;
-
-
-  &lt;div class=&quot;subsection&quot;&gt;
-    &lt;h3&gt;?&lt;/h3&gt;
-    &lt;p&gt;
-      &lt;a href=&quot;https://halcanary.org/art/haldrawn.png&quot;&gt;
-	&lt;img src=&quot;https://halcanary.org/art/thumb/haldrawn.png&quot; alt=&quot;[Thumb]&quot; width=&quot;111&quot; height=&quot;120&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;
-      &lt;/a&gt;
-      &lt;br&gt;In October 1997, this girl I met drew a picture of me
-      while I drew a picture of someone else. I never saw her again.
-      These things happen.
-    &lt;/p&gt;
-  &lt;/div&gt;
-
-  &lt;div class=&quot;subsection&quot;&gt;
-    &lt;h3&gt;Art by Kathy Canary&lt;/h3&gt;
-    &lt;p&gt;
-      &lt;a href=&quot;https://halcanary.org/art/kc1.jpg&quot;&gt;
-	&lt;img src=&quot;https://halcanary.org/art/thumb/kc1.jpg&quot; alt=&quot;[Thumb]&quot; width=&quot;120&quot; height=&quot;72&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;
-      &lt;/a&gt;
-      &lt;br&gt;
-      &lt;a href=&quot;https://halcanary.org/art/kc2.jpg&quot;&gt;
-	&lt;img src=&quot;https://halcanary.org/art/thumb/kc2.jpg&quot; alt=&quot;[Thumb]&quot; width=&quot;120&quot; height=&quot;72&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;
-      &lt;/a&gt;
-      &lt;br&gt;
-      &lt;a href=&quot;https://halcanary.org/art/kc3.jpg&quot;&gt;
-	&lt;img src=&quot;https://halcanary.org/art/thumb/kc3.jpg&quot; alt=&quot;[Thumb]&quot; width=&quot;120&quot; height=&quot;116&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;
-      &lt;/a&gt;
-      &lt;br&gt;
-      &lt;a href=&quot;https://halcanary.org/art/kc4.png&quot;&gt;
-	&lt;img src=&quot;https://halcanary.org/art/thumb/kc4.png&quot; alt=&quot;[Thumb]&quot; width=&quot;120&quot; height=&quot;72&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;
-      &lt;/a&gt;
-      &lt;br&gt;
-      &lt;a href=&quot;https://halcanary.org/art/kc5.png&quot;&gt;
-	&lt;img src=&quot;https://halcanary.org/art/thumb/kc5.png&quot; alt=&quot;[Thumb]&quot; width=&quot;120&quot; height=&quot;72&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;
-      &lt;/a&gt;
-      &lt;br&gt;
-      &lt;a href=&quot;https://halcanary.org/art/kc6.png&quot;&gt;
-	&lt;img src=&quot;https://halcanary.org/art/thumb/kc6.png&quot; alt=&quot;[Thumb]&quot; width=&quot;120&quot; height=&quot;72&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;
-      &lt;/a&gt;
-      &lt;br&gt;
-      &lt;a href=&quot;https://halcanary.org/art/kc7.png&quot;&gt;
-	&lt;img src=&quot;https://halcanary.org/art/thumb/kc7.png&quot; alt=&quot;[Thumb]&quot; width=&quot;120&quot; height=&quot;72&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;
-      &lt;/a&gt;
-    &lt;/p&gt;
-  &lt;/div&gt;&lt;/div&gt;</description>
+&lt;h3&gt;Pencil&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://halcanary.org/art/devil-03.jpg&quot;&gt;&lt;img src=&quot;https://halcanary.org/art/thumb/devil-03.jpg&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;br&gt;
+Devil's Lake - tree at base of east bluff. May 2002.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://halcanary.org/art/2005-07-22-Picture024.jpg&quot;&gt;&lt;img src=&quot;https://halcanary.org/art/thumb/2005-07-22-Picture024.jpg&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;br&gt;
+A sign on the wall. July 2005.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://halcanary.org/art/2005-07-22-Picture025.jpg&quot;&gt;&lt;img src=&quot;https://halcanary.org/art/thumb/2005-07-22-Picture025.jpg&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;br&gt;
+My car. July 2005.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3&gt;Pen &amp;amp; Ink&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://halcanary.org/art/2005-09-14-img_1801.jpg&quot;&gt;&lt;img src=&quot;https://halcanary.org/art/thumb/2005-09-14-img_1801.jpg&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;br&gt;
+Abstract with circles. September 2005.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3&gt;Acrylics&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://halcanary.org/art/alice.jpg&quot;&gt;&lt;img src=&quot;https://halcanary.org/art/thumb/alice.jpg&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;br&gt;
+Alice takes a Hit. June 1999. 40&quot; X 30&quot;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://halcanary.org/art/2004-07-19-golden_ratio.jpg&quot;&gt;&lt;img src=&quot;https://halcanary.org/art/thumb/2004-07-19-golden_ratio.jpg&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;br&gt;
+Golden Ratio. 2004-07-19.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://halcanary.org/art/2003-08-24-art-1.jpg&quot;&gt;&lt;img src=&quot;https://halcanary.org/art/thumb/2003-08-24-art-1.jpg&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;br&gt;
+&lt;a href=&quot;https://halcanary.org/art/2003-08-24-art-2.jpg&quot;&gt;&lt;img src=&quot;https://halcanary.org/art/thumb/2003-08-24-art-2.jpg&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;br&gt;
+A modern piece. 2003-08-24.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://halcanary.org/art/2003-08-24-art-3.jpg&quot;&gt;&lt;img src=&quot;https://halcanary.org/art/thumb/2003-08-24-art-3.jpg&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;br&gt;
+A work in progress. 2003-08-24&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3&gt;Digital Minatures&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://halcanary.org/art/redsky.jpg&quot;&gt;&lt;img src=&quot;https://halcanary.org/art/thumb/redsky.jpg&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://halcanary.org/art/roundboy.jpg&quot;&gt;&lt;img src=&quot;https://halcanary.org/art/thumb/roundboy.jpg&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3&gt;Sculpture&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://halcanary.org/art/tinman.jpg&quot;&gt;&lt;img src=&quot;https://halcanary.org/art/thumb/tinman.jpg&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;br&gt;
+21 February 1999: The Tin Man, which won first place in the Public Relations
+Student Society of America's Can Creation Contest, stands in Library Mall
+Sunday. It was created by Hal Canary and Beth Petrus.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;Art by others&lt;/h2&gt;
+&lt;h3&gt;?&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://halcanary.org/art/haldrawn.png&quot;&gt;&lt;img src=&quot;https://halcanary.org/art/thumb/haldrawn.png&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;br&gt;
+In October 1997, this girl I met drew a picture of me while I drew a picture of
+someone else. I never saw her again. These things happen.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3&gt;Art by Kathy Canary&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://halcanary.org/art/kc1.jpg&quot;&gt;&lt;img src=&quot;https://halcanary.org/art/thumb/kc1.jpg&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;br&gt;
+&lt;a href=&quot;https://halcanary.org/art/kc2.jpg&quot;&gt;&lt;img src=&quot;https://halcanary.org/art/thumb/kc2.jpg&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;br&gt;
+&lt;a href=&quot;https://halcanary.org/art/kc3.jpg&quot;&gt;&lt;img src=&quot;https://halcanary.org/art/thumb/kc3.jpg&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;br&gt;
+&lt;a href=&quot;https://halcanary.org/art/kc4.png&quot;&gt;&lt;img src=&quot;https://halcanary.org/art/thumb/kc4.png&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;br&gt;
+&lt;a href=&quot;https://halcanary.org/art/kc5.png&quot;&gt;&lt;img src=&quot;https://halcanary.org/art/thumb/kc5.png&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;br&gt;
+&lt;a href=&quot;https://halcanary.org/art/kc6.png&quot;&gt;&lt;img src=&quot;https://halcanary.org/art/thumb/kc6.png&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;br&gt;
+&lt;a href=&quot;https://halcanary.org/art/kc7.png&quot;&gt;&lt;img src=&quot;https://halcanary.org/art/thumb/kc7.png&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description>
 			<category>uncategorized</category>
 		</item>
 		<item>
