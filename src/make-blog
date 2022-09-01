@@ -183,16 +183,15 @@ class Post(object):
         # Suggested:
         #    SUMMARY
         #    CATEGORIES
-        #    MODE
         # Everything else is ignored
         self.summary = ''
         self.category_list = []
+        self.markdown = None  # content src
         self.post = None  # content
 
         self.next = None  # pointer to next in sequence
         self.prev = None  # pointer to previous in sequence
 
-        mode = 'markdown'
         with open(path,'r') as f:
             while True:
                 sline = f.readline().strip()
@@ -218,15 +217,12 @@ class Post(object):
                     self.summary = value
                 elif key == 'CATEGORIES':
                     self.category_list = [x for x in filter(len, value.split(';'))]
-                elif key == 'MODE':
-                    mode = value
                 elif key != 'COPYRIGHT':
                     sys.stderr.write('%s: %r=%r\n' % (path, key, value))
 
-            if mode.lower() == 'markdown':
-                self.post = wohc.pipe_process(f.read(), wohc.MARKDOWN_CMD).rstrip()
-            else:
-                self.post = f.read().rstrip()
+            self.markdown = f.read()
+
+        self.post = wohc.pipe_process(self.markdown, wohc.MARKDOWN_CMD).rstrip()
 
         if self.timestamp is None:
             raise Exception('DATE missing ({})'.format(path))
