@@ -3,10 +3,12 @@ TITLE=More Art
 DATE=2003-08-24 18:31:23
 POSTID=101
 CATEGORIES=art;
-MODE=htmldiv
+MODE=markdown
 
-<p><a href="/art/2003-08-24-art-2.jpg"><img src="/art/2003-08-24-art-2-s.jpg" alt="modern art" width="150" height="120" /></a></p>
-<p>Here's the final version of the modern piece I started last night.</p>
-<p><a href="/art/2003-08-24-art-3.jpg"> <img src="/art/2003-08-24-art-3-s.jpg" alt="landscape painting" width="150" height="188" /> </a></p>
-<p>And on the right is a work in progress. All I can say is that it is less ugly now than it was last night.</p>
+[![modern art](/art/2003-08-24-art-2-s.jpg)](/art/2003-08-24-art-2.jpg)
 
+Here's the final version of the modern piece I started last night.
+
+[![landscape painting](/art/2003-08-24-art-3-s.jpg)](/art/2003-08-24-art-3.jpg)
+
+And on the right is a work in progress. All I can say is that it is less ugly now than it was last night.

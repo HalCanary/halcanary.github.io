@@ -3,12 +3,11 @@ TITLE=WindowMaker Fin
 DATE=2003-02-05 22:18:04
 POSTID=33
 CATEGORIES=computers-code;
-MODE=htmldiv
+MODE=markdown
 
-<p><img alt="[screenshot]" src="/images/phoenix-minimized.png" /><br />
-Fixed the minimiztion icon for phoenix under Windowmaker. Edit the<br />
-<em>~/GNUstep/Defaults/WMWindowAttributes</em><br />
-file. Add a line<br />
-<code>"Mozilla.navigator:browser" = {Icon = "/path/to/icon.png";};</code><br />
-somewhere.</p>
-
+![[screenshot]](/images/phoenix-minimized.png)  
+Fixed the minimiztion icon for phoenix under Windowmaker. Edit the  
+_~/GNUstep/Defaults/WMWindowAttributes_  
+file. Add a line  
+`"Mozilla.navigator:browser" = {Icon = "/path/to/icon.png";};`  
+somewhere.

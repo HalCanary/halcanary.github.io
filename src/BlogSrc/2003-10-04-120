@@ -3,22 +3,25 @@ TITLE=css junk
 DATE=2003-10-04 12:09:13
 POSTID=120
 CATEGORIES=computers-code;
-MODE=htmldiv
+MODE=markdown
 
-<p>As a html author, should I use</p>
-<pre>&lt;a name=&quot;bleg&quot;&gt;Text&lt;/a&gt;</pre>
-<p>or</p>
-<pre>&lt;a name=&quot;bleg&quot;&gt;&lt;/a&gt;Text?</pre>
-<p>It only matters if one has defined something in css for &quot;a:hover&quot;. <a href="http://www.w3.org/TR/REC-CSS2/selector.html#x33">The W3C</a> doesn't specify that :hover should apply to any specific element. So one could define css:</p>
-<pre>
+As a html author, should I use
+
+<a name="bleg">Text</a>
+
+or
+
+<a name="bleg"></a>Text?
+
+It only matters if one has defined something in css for "a:hover". [The W3C](http://www.w3.org/TR/REC-CSS2/selector.html#x33) doesn't specify that :hover should apply to any specific element. So one could define css:
+
 span.highlight:hover {
   background-color:#ffffaa;
   color:#000000; }
-</pre>
-<p>and use html:</p>
-<pre>
-words, &lt;span class=&quot;highlight&quot;&gt;
- words,&lt;/span&gt; words!
-</pre>
-<p>All this implies that I should make a point to immediately  close &quot;&lt;a name=...&quot; tags, unless I want highlighting.</p>
 
+and use html:
+
+words, <span class="highlight">
+ words,</span> words!
+
+All this implies that I should make a point to immediately close "<a name=..." tags, unless I want highlighting.

@@ -3,7 +3,6 @@ TITLE=photos
 DATE=2003-05-23 00:05:46
 POSTID=53
 CATEGORIES=photos;
-MODE=htmldiv
+MODE=markdown
 
-<p><a href="/photos/2003-05-17-devil-4.jpg"> <img alt="mark" src="/photos/thumb/2003-05-17-devil-4.jpg" width="120" height="75" /></a> Photos <a href="/p/photo-2003-03-00/">here</a> and <a href="/p/photo-2003-05-00/">here</a>.</p>
-
+[![mark](/photos/thumb/2003-05-17-devil-4.jpg)](/photos/2003-05-17-devil-4.jpg) Photos [here](/p/photo-2003-03-00/) and [here](/p/photo-2003-05-00/).

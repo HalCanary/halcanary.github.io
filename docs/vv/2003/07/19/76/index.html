@@ -78,21 +78,19 @@ ul.flat li::before {content:"[";}
   </header>
   <div class="content e-content">
 <div style="display:none;"></div>
-<p>It now gets rid of apostrophies as well as spaces. It will then convert to lowercase unless it is a directory. </p>
-<pre>
-#!/usr/bin/perl
+<p>It now gets rid of apostrophies as well as spaces. It will then convert to lowercase unless it is a directory.</p>
+<pre><code>#!/usr/bin/perl
 ## ~/bin/despaceify ##
 #DTPD#
-foreach my $file (glob "*") {
+foreach my $file (glob &quot;\*&quot;) {
   my $new = $file;
   $new =~ s/ /_/g;
-  $new =~ s/&#0092;'//g;
+  $new =~ s/\&#39;//g;
   $new =~ tr/A-Z/a-z/
-    if (system "test -d &#0092;"$file&#0092;"");
-  system "mv -vi &#0092;"$file&#0092;" $new"
+    if (system &quot;test -d \&quot;$file\&quot;&quot;);
+  system &quot;mv -vi \&quot;$file\&quot; $new&quot;
     if ($new ne $file);
-}
-</pre>
+}</code></pre>
   </div>
 </article>
 <hr>

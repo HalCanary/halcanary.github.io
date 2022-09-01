@@ -3,8 +3,8 @@ TITLE=hair
 DATE=2003-05-20 11:23:13
 POSTID=52
 CATEGORIES=life;
-MODE=htmldiv
+MODE=markdown
 
-<p><a href="/photos/2003-05-20-self-portrait.jpg">  <img src="/photos/thumb/2003-05-20-self-portrait.jpg" height="120" width="107" alt="[Photo of Hal]" />  </a>  New look again. This time I cut my own hair. </p>
-<p>I have photos from the past couple of months to post up here, when I get around to it.</p>
+ [![[Photo of Hal]](/photos/thumb/2003-05-20-self-portrait.jpg)](/photos/2003-05-20-self-portrait.jpg)New look again. This time I cut my own hair.
 
+I have photos from the past couple of months to post up here, when I get around to it.

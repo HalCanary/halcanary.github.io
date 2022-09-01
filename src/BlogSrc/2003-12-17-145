@@ -3,9 +3,10 @@ TITLE=Kids hate CDs for Christmas
 DATE=2003-12-17 22:37:06
 POSTID=145
 CATEGORIES=music;
-MODE=htmldiv
+MODE=markdown
 
-<p><a href="http://www.whatacrappypresent.com/">&quot;Kids hate CDs for Christmas&quot;</a></p>
-<p><a href="http://www.magnetbox.com/riaa/">&quot;a tool that music consumers can use to easily and instantly distinguish whether an album was released by a member of the Recording Industry Association of America&quot;</a></p>
-<p><a href="http://www.downhillbattle.org/riaa/">stickering campaigns.</a></p>
+["Kids hate CDs for Christmas"](http://www.whatacrappypresent.com/)
 
+["a tool that music consumers can use to easily and instantly distinguish whether an album was released by a member of the Recording Industry Association of America"](http://www.magnetbox.com/riaa/)
+
+[stickering campaigns.](http://www.downhillbattle.org/riaa/)

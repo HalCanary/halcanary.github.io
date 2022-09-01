@@ -3,15 +3,22 @@ TITLE=RANT
 DATE=2003-09-11 10:31:18
 POSTID=110
 CATEGORIES=rant;
-MODE=htmldiv
+MODE=markdown
 
-<p>I'm sick.</p>
-<p>&#0092;begin{rant}</p>
-<p>I'm sick the weekly asshole killing innocents and avoiding the  consequences of his action through suicide.</p>
-<p>I'm sick of Ariel Sharon building a apartheid state in Palestine.</p>
-<p>I'm sick of the Nobel Prize committee giving a peace prize to avowed terrorist Yasser Arafat.</p>
-<p>I'm sick of George W. Bush, an devout Christian, chumming it up with Crown Prince Abdullah Bin Abdul-Aziz at the ranch, when Abdullah is the ruling dictator of a country where it is illegal to celebrate the Eucharist in public.</p>
-<p>I'm sick of George Bush, who said in 2000 that his favorite philosopher is Jesus Christ, interpreting "Turn the other cheek" to mean "Bomb another country, just to prove that your testicles are bigger than everyone else's."</p>
-<p>I'm sick of every member of every army in the world, who all think that the commandment THOU SHALT NOT KILL somehow doesn't apply to them.</p>
-<p>&#0092;end{rant}</p>
+I'm sick.
 
+\\begin{rant}
+
+I'm sick the weekly asshole killing innocents and avoiding the consequences of his action through suicide.
+
+I'm sick of Ariel Sharon building a apartheid state in Palestine.
+
+I'm sick of the Nobel Prize committee giving a peace prize to avowed terrorist Yasser Arafat.
+
+I'm sick of George W. Bush, an devout Christian, chumming it up with Crown Prince Abdullah Bin Abdul-Aziz at the ranch, when Abdullah is the ruling dictator of a country where it is illegal to celebrate the Eucharist in public.
+
+I'm sick of George Bush, who said in 2000 that his favorite philosopher is Jesus Christ, interpreting "Turn the other cheek" to mean "Bomb another country, just to prove that your testicles are bigger than everyone else's."
+
+I'm sick of every member of every army in the world, who all think that the commandment THOU SHALT NOT KILL somehow doesn't apply to them.
+
+\\end{rant}

@@ -3,7 +3,6 @@ TITLE=Matrix
 DATE=2003-11-08 10:05:26
 POSTID=132
 CATEGORIES=movies;
-MODE=htmldiv
+MODE=markdown
 
-<p>Noone liked <em>Matrix Revolutions</em>. I did. It was great.</p>
-
+Noone liked _Matrix Revolutions_. I did. It was great.

@@ -3,8 +3,8 @@ TITLE=Movable Type
 DATE=2003-09-30 11:51:52
 POSTID=116
 CATEGORIES=computers-code;
-MODE=htmldiv
+MODE=markdown
 
-<p>I played around with Movable Type this weekend. I liked it, but have a couple of issues. I think it should come with a couple of dozen stylesheets for users to choose from. I spent an hour playing with  CSS before I got  <a href="/vv/">something I liked</a>.</p>
-<p>The one thing I don't like is that it groups entries by date. That seems very unnatural.</p>
+I played around with Movable Type this weekend. I liked it, but have a couple of issues. I think it should come with a couple of dozen stylesheets for users to choose from. I spent an hour playing with CSS before I got [something I liked](/vv/).
 
+The one thing I don't like is that it groups entries by date. That seems very unnatural.

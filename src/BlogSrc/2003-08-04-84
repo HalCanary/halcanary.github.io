@@ -3,17 +3,15 @@ TITLE=another recipe
 DATE=2003-08-04 02:41:56
 POSTID=84
 CATEGORIES=food;
-MODE=htmldiv
+MODE=markdown
 
-<p>Here's your basic shish-kabob, using my favorite general-purpose meat: chicken.</p>
-<ol>
-<li>Take your chicken breasts out of the freezer. Cut each breast into aprroximately six equal-sized chunks. Marinate in a lot of black pepper, lemon pepper, some random herbs from your garden, and the chicken's own juices.</li>
-<li>Wait 24 hours.</li>
-<li>Cut up a several bell peppers of different colors into 8-12 large pieces. (Remember that non-green bell peppers are more expensive, so you don't have to buy more than one token pepper of each color.)</li>
-<li>Cut an onion up into little pieces.</li>
-<li>Also have little tomatoes and mushrooms.</li>
-<li>Invite your guests to build thier own kabobs. Audience paricipation makes everything more fun. Differenciate your kabobs by having different items on the ends.</li>
-<li>Grill over hot charcoals until meat is nolonger raw and veggies are well burnt. Don't forget to rotate and flip.</li>
-<li>Enjoy.</li>
-</ol>
+Here's your basic shish-kabob, using my favorite general-purpose meat: chicken.
 
+1.  Take your chicken breasts out of the freezer. Cut each breast into aprroximately six equal-sized chunks. Marinate in a lot of black pepper, lemon pepper, some random herbs from your garden, and the chicken's own juices.
+2.  Wait 24 hours.
+3.  Cut up a several bell peppers of different colors into 8-12 large pieces. (Remember that non-green bell peppers are more expensive, so you don't have to buy more than one token pepper of each color.)
+4.  Cut an onion up into little pieces.
+5.  Also have little tomatoes and mushrooms.
+6.  Invite your guests to build thier own kabobs. Audience paricipation makes everything more fun. Differenciate your kabobs by having different items on the ends.
+7.  Grill over hot charcoals until meat is nolonger raw and veggies are well burnt. Don't forget to rotate and flip.
+8.  Enjoy.

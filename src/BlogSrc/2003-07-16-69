@@ -3,7 +3,6 @@ TITLE=Site Redesign
 DATE=2003-07-16 04:01:33
 POSTID=69
 CATEGORIES=meta;
-MODE=htmldiv
+MODE=markdown
 
-<p>The redesign started with only editing css files, but then I needed to insert some &lt;div&gt;'s, and I needed to edit almost every cgi and html file. I managed to automate the task, though.</p>
-
+The redesign started with only editing css files, but then I needed to insert some <div>'s, and I needed to edit almost every cgi and html file. I managed to automate the task, though.

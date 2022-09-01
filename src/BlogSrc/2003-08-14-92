@@ -3,8 +3,8 @@ TITLE=Other Bloggers
 DATE=2003-08-14 01:08:46
 POSTID=92
 CATEGORIES=meta;
-MODE=htmldiv
+MODE=markdown
 
-<p>By the way, any of my friends who want to use this space to blog are welcome. One caveat, though: I'm not hosting any static files. </p>
-<p>I'm also going to streamline [s]ome of the back-engine of the site, too. Stop using cookies+ecmascript to do the stylesheet changes, instead just specify a few alternate stylesheets. I've already moved the blog submission form to a htaccess-controlled directory.</p>
+By the way, any of my friends who want to use this space to blog are welcome. One caveat, though: I'm not hosting any static files.
 
+I'm also going to streamline \[s\]ome of the back-engine of the site, too. Stop using cookies+ecmascript to do the stylesheet changes, instead just specify a few alternate stylesheets. I've already moved the blog submission form to a htaccess-controlled directory.

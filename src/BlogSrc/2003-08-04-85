@@ -3,10 +3,7 @@ TITLE=Standards are sexy!
 DATE=2003-08-04 18:29:06
 POSTID=85
 CATEGORIES=rant;
-MODE=htmldiv
+MODE=markdown
 
-<ul>
-<li><a href="http://www.iso.ch/iso/en/prods-services/popstds/datesandtime.html"> Date/Time Standards</a></li>
-<li><a href="http://www.cl.cam.ac.uk/~mgk25/iso-paper.html"> Paper Standards</a></li>
-</ul>
-
+*   [Date/Time Standards](http://www.iso.ch/iso/en/prods-services/popstds/datesandtime.html)
+*   [Paper Standards](http://www.cl.cam.ac.uk/~mgk25/iso-paper.html)

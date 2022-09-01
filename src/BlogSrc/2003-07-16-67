@@ -3,10 +3,10 @@ TITLE=robots
 DATE=2003-07-16 03:59:33
 POSTID=67
 CATEGORIES=robots;
-MODE=htmldiv
+MODE=markdown
 
-<blockquote><p><strong>Fry:</strong> Who cares what you're programmed for? If somebody programmed you to jump off a bridge, would you do it?</p>
-<p><strong>Bender:</strong> I'll have to check my program.  <em>&lt;pause&gt;</em> Yep.</p>
-</blockquote>
-<p>Been watching too much <em>Futurama</em> recently,  so I've got robots on my mind. I haven't read enough recent sci-fi with robots. There are robots in the  old Asimov books, and a handful of sentient AI's in some other books, but not enough.</p>
+> **Fry:** Who cares what you're programmed for? If somebody programmed you to jump off a bridge, would you do it?
+> 
+> **Bender:** I'll have to check my program. _<pause>_ Yep.
 
+Been watching too much _Futurama_ recently, so I've got robots on my mind. I haven't read enough recent sci-fi with robots. There are robots in the old Asimov books, and a handful of sentient AI's in some other books, but not enough.

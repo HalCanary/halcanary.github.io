@@ -3,7 +3,6 @@ TITLE=Linux on SRX87
 DATE=2003-02-02 19:52:48
 POSTID=32
 CATEGORIES=computers-code;
-MODE=htmldiv
+MODE=markdown
 
-<p><a href="http://www.differentpla.net/~roger/hardware/vaio/linux/"> It looks like someone was able to install linux on thier Vaio SRX87.</a> Now I don't know if I need to go to the effort of duplicating that effort, considering that I am relativly happy with things the way things are. I'll probably give it a try sometime in the future.</p>
-
+[It looks like someone was able to install linux on thier Vaio SRX87.](http://www.differentpla.net/~roger/hardware/vaio/linux/) Now I don't know if I need to go to the effort of duplicating that effort, considering that I am relativly happy with things the way things are. I'll probably give it a try sometime in the future.

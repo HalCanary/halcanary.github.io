@@ -3,7 +3,6 @@ TITLE=RSS Feed
 DATE=2003-08-13 20:02:44
 POSTID=91
 CATEGORIES=meta;
-MODE=htmldiv
+MODE=markdown
 
-<p>Here's my <a href="/wohc-rss.xml">rss feed</a>. It seems to be working. I don't know if anyone else would even want to use it, but I will probably use this data to make a blog summary page.</p>
-
+Here's my [rss feed](/wohc-rss.xml). It seems to be working. I don't know if anyone else would even want to use it, but I will probably use this data to make a blog summary page.

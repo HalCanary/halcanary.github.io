@@ -3,15 +3,14 @@ TITLE=Grub help.
 DATE=2003-08-19 21:16:50
 POSTID=97
 CATEGORIES=computers-code;
-MODE=htmldiv
+MODE=markdown
 
-<p>Today I wanted to play Civ III on my computer. It required booting into windows. Now don't get me wrong, Windows XP is a fine operating system....for playing games on. I'd hate to have a job where I was required to do any work on such a machine. Or if I had such a job, I'd quit it after 18 months.</p>
-<p>Windows has been unable to boot since I put in a new motherboard and processor. So I took this opportunity to reinstall windows and repartition /dev/hda. (You can't fit windows XP on 2GB. Don't even try.) Of course the istallation wrote over my master boot record. I had a little problem restoring it. I'll let you know what I ended up doing in case it ever helps someone else. (Although I think my setup is probably unique.)</p>
-<ol>
-<li>put in redhat install disk. Boot into rescue mode. It will mount your filesystmes under <code>/mnt/sysimage</code>. </li>
-<li>If <code>/boot</code> is a seperate partition, unmount it first:   "<code>umount /mnt/sysimage/boot</code>".</li>
-<li><code>chroot /mnt/sysimage</code></li>
-<li>remount the <code>/boot</code> partition:  "<code>mount /dev/hdb1 /boot</code>".</li>
-<li><code>grub-install '(hd0)'</code></li>
-</ol>
+Today I wanted to play Civ III on my computer. It required booting into windows. Now don't get me wrong, Windows XP is a fine operating system....for playing games on. I'd hate to have a job where I was required to do any work on such a machine. Or if I had such a job, I'd quit it after 18 months.
 
+Windows has been unable to boot since I put in a new motherboard and processor. So I took this opportunity to reinstall windows and repartition /dev/hda. (You can't fit windows XP on 2GB. Don't even try.) Of course the istallation wrote over my master boot record. I had a little problem restoring it. I'll let you know what I ended up doing in case it ever helps someone else. (Although I think my setup is probably unique.)
+
+1.  put in redhat install disk. Boot into rescue mode. It will mount your filesystmes under `/mnt/sysimage`.
+2.  If `/boot` is a seperate partition, unmount it first: "`umount /mnt/sysimage/boot`".
+3.  `chroot /mnt/sysimage`
+4.  remount the `/boot` partition: "`mount /dev/hdb1 /boot`".
+5.  `grub-install '(hd0)'`

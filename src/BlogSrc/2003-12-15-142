@@ -3,10 +3,10 @@ TITLE=The first snow last week
 DATE=2003-12-15 16:30:34
 POSTID=142
 CATEGORIES=photos;
-MODE=htmldiv
+MODE=markdown
 
-<p>11:48 AM:<br />
-<a href="/photos/2003-12-10-snow_1.jpg"><img src="/photos/thumb/2003-12-10-snow_1.jpg" width="120" height="90" alt="[]" /></a></p>
-<p>2:00 PM:<br />
-<a href="/photos/2003-12-10-snow_2.jpg"><img src="/photos/thumb/2003-12-10-snow_2.jpg" width="120" height="90" alt="[]" /></a></p>
+11:48 AM:  
+[![[]](/photos/thumb/2003-12-10-snow_1.jpg)](/photos/2003-12-10-snow_1.jpg)
 
+2:00 PM:  
+[![[]](/photos/thumb/2003-12-10-snow_2.jpg)](/photos/2003-12-10-snow_2.jpg)

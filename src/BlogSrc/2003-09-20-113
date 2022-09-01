@@ -3,9 +3,8 @@ TITLE=Xmms
 DATE=2003-09-20 16:16:45
 POSTID=113
 CATEGORIES=computers-code;
-MODE=htmldiv
+MODE=markdown
 
-<blockquote><p>&quot;We are well aware that the xmms ui sucks. Some time i hope  we can ship media player with a working interface, but for  now use Ctrl-D.&quot;</p>
-<p> — <a href="https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=75157#c">Alexander Larsson</a></p>
-</blockquote>
-
+> "We are well aware that the xmms ui sucks. Some time i hope we can ship media player with a working interface, but for now use Ctrl-D."
+> 
+> — [Alexander Larsson](https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=75157#c)

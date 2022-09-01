@@ -3,10 +3,12 @@ TITLE=Photos
 DATE=2003-07-19 03:49:10
 POSTID=75
 CATEGORIES=photos;
-MODE=htmldiv
+MODE=markdown
 
-<p><a href="/photos/1999-11-josh-jones-bird.jpg"><img width="120" height="108" alt="[Thumb]" src="/photos/thumb/1999-11-josh-jones-bird.jpg" /></a></p>
-<p>I found some cool old photos floating around my hard drives.  This one's a gem. Also check out  <a href="http://nuclear.physics.wisc.edu/~chapman/pictures/">Mark's Photos</a>, which have been updated recently.</p>
-<p>Looking at old photos it would seem that I gained a lot of weight while working at Epic. Desk jobs suck. Maybe I've got enough self control to stick to diet and excercise. But I doubt it.</p>
-<p>While moving files around my harddrive, I was forced to update my...</p>
+[![[Thumb]](/photos/thumb/1999-11-josh-jones-bird.jpg)](/photos/1999-11-josh-jones-bird.jpg)
 
+I found some cool old photos floating around my hard drives. This one's a gem. Also check out [Mark's Photos](http://nuclear.physics.wisc.edu/~chapman/pictures/), which have been updated recently.
+
+Looking at old photos it would seem that I gained a lot of weight while working at Epic. Desk jobs suck. Maybe I've got enough self control to stick to diet and excercise. But I doubt it.
+
+While moving files around my harddrive, I was forced to update my...

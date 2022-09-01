@@ -3,14 +3,12 @@ TITLE=ls directories script
 DATE=2003-12-03 20:15:15
 POSTID=136
 CATEGORIES=computers-code;
-MODE=htmldiv
+MODE=markdown
 
-<p>Useful unix tip of the week:</p>
-<pre>
+Useful unix tip of the week:
+
 #!/bin/sh
 #DTPD#
 ## $HOME/bin/lsd ##
-/bin/ls --color='yes' &#0092;
+/bin/ls --color='yes' \\
     -l "$@" | grep "^d"
-</pre>
-

@@ -3,8 +3,8 @@ TITLE=More on Robots!
 DATE=2003-08-25 13:50:44
 POSTID=102
 CATEGORIES=robots;
-MODE=htmldiv
+MODE=markdown
 
-<p><img src="/images/honda-robot-1.png" alt="honda robot" />The <a href="http://marshallbrain.com/robotic-freedom.htm">third part of Marshall Brain's essay on robots</a> is out. Also check out <a href="http://www.marshallbrain.com/manna1.htm"><em>Manna</em></a>, a work of fiction.</p>
-<p>Brain gives two possibilities. Utopia and distopia. I have the feeling that the future, a usual, lies between.</p>
+![honda robot](/images/honda-robot-1.png)The [third part of Marshall Brain's essay on robots](http://marshallbrain.com/robotic-freedom.htm) is out. Also check out [_Manna_](http://www.marshallbrain.com/manna1.htm), a work of fiction.
 
+Brain gives two possibilities. Utopia and distopia. I have the feeling that the future, a usual, lies between.

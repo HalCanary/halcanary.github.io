@@ -3,7 +3,6 @@ TITLE=Thanksgiving
 DATE=2003-11-27 15:12:29
 POSTID=135
 CATEGORIES=life;
-MODE=htmldiv
+MODE=markdown
 
-<p>The thing I hate the most about my apartment building is that I can smell other apartment's food.  I was completely okay with spending this thanksgiving alone by myself, until I smelled my neighbor's food.</p>
-
+The thing I hate the most about my apartment building is that I can smell other apartment's food. I was completely okay with spending this thanksgiving alone by myself, until I smelled my neighbor's food.

@@ -3,7 +3,6 @@ TITLE=Applets for SSL
 DATE=2003-09-25 21:17:51
 POSTID=114
 CATEGORIES=mathematics;
-MODE=htmldiv
+MODE=markdown
 
-<p><a href="http://ups.physics.wisc.edu/~hal/SSL/">  <img src="http://ups.physics.wisc.edu/~hal/SSL/2003/rotor-pics/rotor-182.png" alt="[rotor model]" /></a> Been doing some Java programing for math. I'm getting paid to do this too! I've written two applets that deal with a rotor-based sandpile model.</p>
-
+[![[rotor model]](http://ups.physics.wisc.edu/~hal/SSL/2003/rotor-pics/rotor-182.png)](http://ups.physics.wisc.edu/~hal/SSL/) Been doing some Java programing for math. I'm getting paid to do this too! I've written two applets that deal with a rotor-based sandpile model.

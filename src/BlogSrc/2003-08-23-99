@@ -3,9 +3,10 @@ TITLE=Bike
 DATE=2003-08-23 19:45:05
 POSTID=99
 CATEGORIES=life;
-MODE=htmldiv
+MODE=markdown
 
-<p><a href="/photos/2001-madison-halbikeroom.jpg"><img alt="[hal on a bike indoors]" src="/photos/thumb/2001-madison-halbikeroom.jpg" /></a></p>
-<p>I bought a new used bike last month. It's nice, but it's a bit too hot during the month of August to want to ride it long distances. I plan on making it my primary mode of transportation as soon as September brings cooler weather.</p>
-<p>I picked up a headlamp for my bike today. My old lamp, which I lost, was 15 years old, used C batteries (who has those?), and tended to slide off the handle. The new one uses AA's, and can be unclipped from the (very secure) mounting to serve as a flashlight.</p>
+[![[hal on a bike indoors]](/photos/thumb/2001-madison-halbikeroom.jpg)](/photos/2001-madison-halbikeroom.jpg)
 
+I bought a new used bike last month. It's nice, but it's a bit too hot during the month of August to want to ride it long distances. I plan on making it my primary mode of transportation as soon as September brings cooler weather.
+
+I picked up a headlamp for my bike today. My old lamp, which I lost, was 15 years old, used C batteries (who has those?), and tended to slide off the handle. The new one uses AA's, and can be unclipped from the (very secure) mounting to serve as a flashlight.

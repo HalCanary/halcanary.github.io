@@ -3,8 +3,8 @@ TITLE=Screenshots
 DATE=2003-07-19 03:48:10
 POSTID=74
 CATEGORIES=computers-code;
-MODE=htmldiv
+MODE=markdown
 
-<p><a href="/images/wohc-firebird06.png"> <img src="/images/thumb-wohc-firebird06.png" alt="[]" /></a> <a href="/images/wohc-ie60.png"> <img src="/images/thumb-wohc-ie60.png" alt="[]" /></a> <a href="/images/wohc-netscape47.png"> <img src="/images/thumb-wohc-netscape47.png" alt="[]" /></a></p>
-<p>This is what this pages looks likes in various browsers. Notice how NS47 degrades gracefully and IE60 ouputs garbage.</p>
+[![[]](/images/thumb-wohc-firebird06.png)](/images/wohc-firebird06.png) [![[]](/images/thumb-wohc-ie60.png)](/images/wohc-ie60.png) [![[]](/images/thumb-wohc-netscape47.png)](/images/wohc-netscape47.png)
 
+This is what this pages looks likes in various browsers. Notice how NS47 degrades gracefully and IE60 ouputs garbage.

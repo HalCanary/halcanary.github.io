@@ -3,20 +3,23 @@ TITLE=Media PC
 DATE=2003-08-15 15:51:00
 POSTID=96
 CATEGORIES=computers-code;
-MODE=htmldiv
+MODE=markdown
 
-<p><a href="/photos/2003-08-15-dalek-media-pc.jpg"><img width="120" height="101" alt="[Thumb]" src="/photos/thumb/2003-08-15-dalek-media-pc.jpg" /></a></p>
-<p>As I've mentioned before, I'm putting together a media pc. I started  with my old computer, <em>dalek</em>, and put it in a new case. Then I  hooked the video card's s-video output up to my television and the  sound up to my stereo. When I tried to turn it on two days ago nothing  happened. So I went to bed. Yesterday, I opened it up and found that  the power supply was not plugged into the motherboard snugly. After fixing that, it booted.</p>
-<p>It is running Knoppix off of a CD. Right now, XFree86 is not sending  the TV a good signal, so I'm stuck in console mode. So no watching  movies on dalek yet. But I did pop in a CD full of mp3's and  it could play them using mpg123.</p>
-<p>To Do: </p>
-<ol>
-<li>Get XFree86 working.</li>
-<li>Play DVDs</li>
-<li>Get my router working.</li>
-<li>Get dalek onto the network.</li>
-<li>Share music &amp; video from lensman's harddrive using samba.</li>
-<li>Play video games with emulators.</li>
-</ol>
-<p>That photo I just took is meant to show one thing. Since it's a  black case, it doesn't stand out much. Which is exactly how things  should be. It's just another component in my A/V system. Eventually,  the system should consist of (1) a media pc, (2) an amplifier &amp;  speakers and (3) a screen.</p>
-<p><strong>UPDATE 2004-12-02:</strong> A while back I broke down and threw a 8 GiB HDD into dalek and installed FC.  This eventually got 1, 2, 3, 4, and 6 working.  I use scp instead of samba.  I just don't trust samba.</p>
+[![[Thumb]](/photos/thumb/2003-08-15-dalek-media-pc.jpg)](/photos/2003-08-15-dalek-media-pc.jpg)
 
+As I've mentioned before, I'm putting together a media pc. I started with my old computer, _dalek_, and put it in a new case. Then I hooked the video card's s-video output up to my television and the sound up to my stereo. When I tried to turn it on two days ago nothing happened. So I went to bed. Yesterday, I opened it up and found that the power supply was not plugged into the motherboard snugly. After fixing that, it booted.
+
+It is running Knoppix off of a CD. Right now, XFree86 is not sending the TV a good signal, so I'm stuck in console mode. So no watching movies on dalek yet. But I did pop in a CD full of mp3's and it could play them using mpg123.
+
+To Do:
+
+1.  Get XFree86 working.
+2.  Play DVDs
+3.  Get my router working.
+4.  Get dalek onto the network.
+5.  Share music & video from lensman's harddrive using samba.
+6.  Play video games with emulators.
+
+That photo I just took is meant to show one thing. Since it's a black case, it doesn't stand out much. Which is exactly how things should be. It's just another component in my A/V system. Eventually, the system should consist of (1) a media pc, (2) an amplifier & speakers and (3) a screen.
+
+**UPDATE 2004-12-02:** A while back I broke down and threw a 8 GiB HDD into dalek and installed FC. This eventually got 1, 2, 3, 4, and 6 working. I use scp instead of samba. I just don't trust samba.

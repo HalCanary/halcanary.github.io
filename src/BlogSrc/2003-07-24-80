@@ -3,7 +3,6 @@ TITLE=Robots!
 DATE=2003-07-24 17:53:48
 POSTID=80
 CATEGORIES=robots;
-MODE=htmldiv
+MODE=markdown
 
-<p><a href="http://marshallbrain.com/robotic-nation.htm">An essay on Robots.</a> Yes, <strong>robots will take over the world</strong>. Or worse, take away that menial labor job you have. So buy stock in RobotCorp now and reap the profits when they take away your job!</p>
-
+[An essay on Robots.](http://marshallbrain.com/robotic-nation.htm) Yes, **robots will take over the world**. Or worse, take away that menial labor job you have. So buy stock in RobotCorp now and reap the profits when they take away your job!

@@ -3,11 +3,14 @@ TITLE=Friday
 DATE=2003-10-04 13:23:40
 POSTID=122
 CATEGORIES=life;
-MODE=htmldiv
+MODE=markdown
 
-<p>I woke up this morning and wandered into the living room. Other people bring home girls from parties, I have someone else's sparc-station sitting on my coffee table.</p>
-<p>Yesterday I worked from home in the morning. I mangled my email with a photo:  <img src="/images/email.png" width="192" height="22" alt="(my email address is my first name at this domain.)" />  I still don't know if that is a good or bad approach to reducing spam.</p>
-<p>After some research, I now think it will be trivial to backport my java 1.2 applets to 1.1.</p>
-<p>Went to the math colloqium. Didn't understand much, but there were  pretty topology-type pictures. Also tried to socalize with  mathematicians before-hand. Don't know enough of them.</p>
-<p>Went to LUG, and got some pointers on iptables. Realized that I had met Staci at First Friday Party in past. Gave her ride to this one, but she left a sparc sation in my car. I brought it in out of the cold last night. That is why it's in my living room.</p>
+I woke up this morning and wandered into the living room. Other people bring home girls from parties, I have someone else's sparc-station sitting on my coffee table.
 
+Yesterday I worked from home in the morning. I mangled my email with a photo: ![(my email address is my first name at this domain.)](/images/email.png) I still don't know if that is a good or bad approach to reducing spam.
+
+After some research, I now think it will be trivial to backport my java 1.2 applets to 1.1.
+
+Went to the math colloqium. Didn't understand much, but there were pretty topology-type pictures. Also tried to socalize with mathematicians before-hand. Don't know enough of them.
+
+Went to LUG, and got some pointers on iptables. Realized that I had met Staci at First Friday Party in past. Gave her ride to this one, but she left a sparc sation in my car. I brought it in out of the cold last night. That is why it's in my living room.

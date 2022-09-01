@@ -3,21 +3,19 @@ TITLE=despaceify script
 DATE=2003-07-19 03:50:10
 POSTID=76
 CATEGORIES=computers-code;
-MODE=htmldiv
+MODE=markdown
 
-<p>It now gets rid of apostrophies as well as spaces. It will then convert to lowercase unless it is a directory. </p>
-<pre>
-#!/usr/bin/perl
-## ~/bin/despaceify ##
-#DTPD#
-foreach my $file (glob "*") {
-  my $new = $file;
-  $new =~ s/ /_/g;
-  $new =~ s/&#0092;'//g;
-  $new =~ tr/A-Z/a-z/
-    if (system "test -d &#0092;"$file&#0092;"");
-  system "mv -vi &#0092;"$file&#0092;" $new"
-    if ($new ne $file);
-}
-</pre>
+It now gets rid of apostrophies as well as spaces. It will then convert to lowercase unless it is a directory.
 
+    #!/usr/bin/perl
+    ## ~/bin/despaceify ##
+    #DTPD#
+    foreach my $file (glob "\*") {
+      my $new = $file;
+      $new =~ s/ /_/g;
+      $new =~ s/\'//g;
+      $new =~ tr/A-Z/a-z/
+        if (system "test -d \"$file\"");
+      system "mv -vi \"$file\" $new"
+        if ($new ne $file);
+    }

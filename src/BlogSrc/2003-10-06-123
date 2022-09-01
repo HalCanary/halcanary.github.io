@@ -3,7 +3,6 @@ TITLE=Dean
 DATE=2003-10-06 22:20:06
 POSTID=123
 CATEGORIES=photos;
-MODE=htmldiv
+MODE=markdown
 
-<p><a href="/photos/2003-10-05-howard-dean.jpg"> <img src="/photos/thumb/2003-10-05-howard-dean.jpg" width="120" height="120" alt="[pic of dean]" /></a> Went to see Howard Dean speak yesterday.  Took some photos.  One came out well.</p>
-
+[![[pic of dean]](/photos/thumb/2003-10-05-howard-dean.jpg)](/photos/2003-10-05-howard-dean.jpg) Went to see Howard Dean speak yesterday. Took some photos. One came out well.

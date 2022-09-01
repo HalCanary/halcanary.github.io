@@ -3,7 +3,6 @@ TITLE=MLP
 DATE=2003-07-21 01:07:22
 POSTID=78
 CATEGORIES=mindless-link-propagation;
-MODE=htmldiv
+MODE=markdown
 
-<p><a href="http://www.xulplanet.com/ndeakin/arts/mozilla715.html">[1]</a> and  <a href="http://mightymu.net/">[2]</a> and <a href="logo">[3]</a></p>
-
+[\[1\]](http://www.xulplanet.com/ndeakin/arts/mozilla715.html) and [\[2\]](http://mightymu.net/) and [\[3\]](logo)

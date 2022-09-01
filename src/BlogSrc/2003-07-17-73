@@ -3,8 +3,8 @@ TITLE=Google Fun
 DATE=2003-07-17 21:11:40
 POSTID=73
 CATEGORIES=mindless-link-propagation;
-MODE=htmldiv
+MODE=markdown
 
-<p><a href="https://www.google.com/search?btnI=l&amp;q=french+military+victories">https://www.google.com/search?btnI=l &amp;q=french+military+victories</a></p>
-<p><a href="https://www.google.com/search?btnI=l&amp;q=weapons+of+mass+destruction">https://www.google.com/search?btnI=l &amp;q=weapons+of+mass+destruction</a></p>
+[https://www.google.com/search?btnI=l &q=french+military+victories](https://www.google.com/search?btnI=l&q=french+military+victories)
 
+[https://www.google.com/search?btnI=l &q=weapons+of+mass+destruction](https://www.google.com/search?btnI=l&q=weapons+of+mass+destruction)

@@ -3,10 +3,9 @@ TITLE=Rotor Router Applets page
 DATE=2003-12-27 23:08:05
 POSTID=150
 CATEGORIES=computers-code;
-MODE=htmldiv
+MODE=markdown
 
-<p><a href="/SSL/rotor/"><br />
-<img src="/SSL/Images/rotor-1d-agg.png" alt="screenshot" /><br />
-<br />
-Work I've been doing</a></p>
-
+[  
+![screenshot](/SSL/Images/rotor-1d-agg.png)  
+  
+Work I've been doing](/SSL/rotor/)
