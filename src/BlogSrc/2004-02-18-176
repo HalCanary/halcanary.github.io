@@ -12,16 +12,18 @@ will replace `" \n"` with `"=20\n"`, an escape sequence of some sort. (ASCII
 
 I'd rather replace `" \n"` with `"\n"` anyways. Here's some elisp code to do just that:
 
-    ;; ~/.emacs ;;
-    (defun hal1 () (interactive)
-      (auto-mega-replace  " \n" "\n"))
-    (defun auto-mega-replace (arg1 arg2)
-      (save-excursion
-        (beginning-of-buffer)
-        (while (search-forward arg1)
-          (beginning-of-buffer)
-          (perform-replace arg1 arg2
-            nil nil nil)
-          (beginning-of-buffer))))
+```Emacs Lisp
+;; ~/.emacs ;;
+(defun hal1 () (interactive)
+  (auto-mega-replace  " \n" "\n"))
+(defun auto-mega-replace (arg1 arg2)
+  (save-excursion
+    (beginning-of-buffer)
+    (while (search-forward arg1)
+      (beginning-of-buffer)
+      (perform-replace arg1 arg2
+        nil nil nil)
+      (beginning-of-buffer))))
+```
 
 \[_edited 2003-02-20_\]

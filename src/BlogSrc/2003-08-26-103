@@ -6,13 +6,15 @@ CATEGORIES=computers-code;
 
 Here's little script that check to see if the ssh-agent knows any keys. If not, it asks for your passphrase. Then it executes ssh.
 
-    #!/bin/sh
-    #DTPD#
-    ## $HOME/bin/ssh ##
-    if ! (ssh-add -l > /dev/null); then
-      ssh-add;
-    fi
-    echo ssh "$@";
-    exec /usr/bin/ssh "$@";
+```sh
+#!/bin/sh
+#DTPD#
+## $HOME/bin/ssh ##
+if ! (ssh-add -l > /dev/null); then
+  ssh-add;
+fi
+echo ssh "$@";
+exec /usr/bin/ssh "$@";
+```
 
 Of course you have to have the ssh-agent working correctly in the first place.

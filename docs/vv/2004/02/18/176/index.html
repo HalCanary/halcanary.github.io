@@ -84,7 +84,7 @@ Content-Transfer-Encoding</a>, which
 will replace <code>" \n"</code> with <code>"=20\n"</code>, an escape sequence of some sort. (ASCII
 " " is 0x20.)</p>
 <p>I'd rather replace <code>" \n"</code> with <code>"\n"</code> anyways. Here's some elisp code to do just that:</p>
-<pre><code>;; ~/.emacs ;;
+<pre class="Emacs"><code>;; ~/.emacs ;;
 (defun hal1 () (interactive)
   (auto-mega-replace  &quot; \n&quot; &quot;\n&quot;))
 (defun auto-mega-replace (arg1 arg2)

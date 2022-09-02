@@ -4,9 +4,11 @@ DATE=2003-05-29 02:26:17
 POSTID=55
 CATEGORIES=computers-code;
 
-    #/bin/sh
-    #DTPD#
-    # ~/bin/despacify v2003-05
-    ls -x1 | \\
-      perl -e 'while(<>){chomp;$x=$\_;s/ /\_/g; \\
-      system("mv \\"$x\\" \\"$\_\\"") if ($x ne $\_);}'
+```sh
+#/bin/sh
+#DTPD#
+# ~/bin/despacify v2003-05
+ls -x1 | \
+  perl -e 'while(<>){chomp;$x=$\_;s/ /\_/g; \
+  system("mv \\"$x\\" \\"$\_\\"") if ($x ne $\_);}'
+```

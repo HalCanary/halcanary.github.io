@@ -79,7 +79,7 @@ ul.flat li::before {content:"[";}
   <div class="content e-content">
 <div style="display:none;"></div>
 <p>Here's little script that check to see if the ssh-agent knows any keys. If not, it asks for your passphrase. Then it executes ssh.</p>
-<pre><code>#!/bin/sh
+<pre class="sh"><code>#!/bin/sh
 #DTPD#
 ## $HOME/bin/ssh ##
 if ! (ssh-add -l &gt; /dev/null); then

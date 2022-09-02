@@ -6,15 +6,17 @@ CATEGORIES=computers-code;
 
 It now gets rid of apostrophies as well as spaces. It will then convert to lowercase unless it is a directory.
 
-    #!/usr/bin/perl
-    ## ~/bin/despaceify ##
-    #DTPD#
-    foreach my $file (glob "\*") {
-      my $new = $file;
-      $new =~ s/ /_/g;
-      $new =~ s/\'//g;
-      $new =~ tr/A-Z/a-z/
-        if (system "test -d \"$file\"");
-      system "mv -vi \"$file\" $new"
-        if ($new ne $file);
-    }
+```Perl
+#!/usr/bin/perl
+## ~/bin/despaceify ##
+#DTPD#
+foreach my $file (glob "\*") {
+  my $new = $file;
+  $new =~ s/ /_/g;
+  $new =~ s/\'//g;
+  $new =~ tr/A-Z/a-z/
+    if (system "test -d \"$file\"");
+  system "mv -vi \"$file\" $new"
+    if ($new ne $file);
+}
+```

@@ -22,7 +22,8 @@ except ModuleNotFoundError:
 MARKDOWN_CMD = ['pandoc',
                 '--from=commonmark',
                 '--to=html',
-                '--wrap=preserve']
+                '--wrap=preserve',
+                '--no-highlight']
 
 def to_str(src):
     return str(src, encoding='utf-8')

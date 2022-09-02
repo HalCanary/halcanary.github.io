@@ -4,36 +4,42 @@ DATE=2003-07-16 19:20:59
 POSTID=71
 CATEGORIES=computers-code;
 
-90% of the time you use a &lt;hr> you are putting a divider between sections or subsections that are already (or should already) be divided by &lt;h2>'s or &lt;h3>'s. Instead use &lt;div>'s to break up sections and subsections. So
+90% of the time you use a `<hr>` you are putting a divider between sections or subsections that are already (or should already) be divided by `<h2>`'s or `<h3>`'s. Instead use `<div>`'s to break up sections and subsections. So
 
-    <!--document.html-->
-    <h2>Welcome</h2>
-    <p>Paragraph</p>
-    <hr />
+```HTML
+<!--document.html-->
+<h2>Welcome</h2>
+<p>Paragraph</p>
+<hr />
 
-    <h2>Blog</h2>
-    <p>Paragraph</p>
-    <hr />
+<h2>Blog</h2>
+<p>Paragraph</p>
+<hr />
+```
 
 becomes
 
-    <!--document.html-->
-    <div class="section">
-      <h2>Welcome</h2>
-      <p>Paragraph</p>
-    </div>
+```HTML
+<!--document.html-->
+<div class="section">
+  <h2>Welcome</h2>
+  <p>Paragraph</p>
+</div>
 
-    <div class="section">
-      <h2>Blog</h2>
-      <p>Paragraph</p>
-    </div>
+<div class="section">
+  <h2>Blog</h2>
+  <p>Paragraph</p>
+</div>
+```
 
-The following css will produce a &lt;hr> style border:
+The following css will produce a `<hr>` style border:
 
-    /* style.css */
-    div.section {
-       border-bottom:
-        solid 3px #000000 ;
-     }
+```CSS
+/* style.css */
+div.section {
+  border-bottom:
+  solid 3px #000000 ;
+}
+````
 
-At this point you can have more fun with the css, without touching the html any more. (Isn't that the point?) Try putting each &lt;div class="section"> in its own little colorful box.
+At this point you can have more fun with the css, without touching the html any more. (Isn't that the point?) Try putting each `<div class="section">` in its own little colorful box.

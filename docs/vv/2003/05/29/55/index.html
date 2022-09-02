@@ -78,11 +78,11 @@ ul.flat li::before {content:"[";}
   </header>
   <div class="content e-content">
 <div style="display:none;"></div>
-<pre><code>#/bin/sh
+<pre class="sh"><code>#/bin/sh
 #DTPD#
 # ~/bin/despacify v2003-05
-ls -x1 | \\
-  perl -e &#39;while(&lt;&gt;){chomp;$x=$\_;s/ /\_/g; \\
+ls -x1 | \
+  perl -e &#39;while(&lt;&gt;){chomp;$x=$\_;s/ /\_/g; \
   system(&quot;mv \\&quot;$x\\&quot; \\&quot;$\_\\&quot;&quot;) if ($x ne $\_);}&#39;</code></pre>
   </div>
 </article>

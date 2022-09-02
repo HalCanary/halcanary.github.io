@@ -4,16 +4,18 @@ DATE=2003-07-24 21:49:52
 POSTID=81
 CATEGORIES=computers-code;
 
-    ;; $HOME/.emacs ;;
-    (global-set-key
-       [(control s)]
-       'save-buffer)
-    (global-set-key
-       [(control f)]
-       'isearch-forward)
-     (define-key isearch-mode-map
-       [(control f)]
-       'isearch-repeat-forward)
+```Emacs Lisp
+;; $HOME/.emacs ;;
+(global-set-key
+   [(control s)]
+   'save-buffer)
+(global-set-key
+   [(control f)]
+   'isearch-forward)
+ (define-key isearch-mode-map
+   [(control f)]
+   'isearch-repeat-forward)
+```
 
 Code from [This message](http://mail.gnu.org/archive/html/help-gnu-emacs/2003-02/msg00652.html)
 

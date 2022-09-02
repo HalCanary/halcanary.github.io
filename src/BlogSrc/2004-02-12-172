@@ -4,15 +4,19 @@ DATE=2004-02-12 23:35:59
 POSTID=172
 CATEGORIES=computers-code;
 
-    #!/bin/sh
-    #DTPD#
-    ## ~/bin/wgeto ##
-    exec wget -o /dev/null -O - "$@"
+```sh
+#!/bin/sh
+#DTPD#
+## ~/bin/wgeto ##
+exec wget -o /dev/null -O - "$@"
+```
 
 Then,
 
-    $ wgeto http://craphound.com/ebooksneitherenorbooks.txt \
-         | fold -s -w 70 | less 
+```
+$ wgeto http://craphound.com/ebooksneitherenorbooks.txt \
+   | fold -s -w 70 | less 
+```
 
 Explanation for non-unix-literate people: First of all, I wrote a neat script
 called `wgeto`. `wget` is a program that downloads stuff off of the internet, via

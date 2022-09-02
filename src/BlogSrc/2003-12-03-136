@@ -6,8 +6,10 @@ CATEGORIES=computers-code;
 
 Useful unix tip of the week:
 
+```sh
 #!/bin/sh
 #DTPD#
 ## $HOME/bin/lsd ##
-/bin/ls --color='yes' \\
+/bin/ls --color='yes' \
     -l "$@" | grep "^d"
+```

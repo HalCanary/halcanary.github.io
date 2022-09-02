@@ -78,13 +78,13 @@ ul.flat li::before {content:"[";}
   </header>
   <div class="content e-content">
 <div style="display:none;"></div>
-<pre><code>#!/bin/sh
+<pre class="sh"><code>#!/bin/sh
 #DTPD#
 ## ~/bin/wgeto ##
 exec wget -o /dev/null -O - &quot;$@&quot;</code></pre>
 <p>Then,</p>
 <pre><code>$ wgeto http://craphound.com/ebooksneitherenorbooks.txt \
-     | fold -s -w 70 | less </code></pre>
+   | fold -s -w 70 | less </code></pre>
 <p>Explanation for non-unix-literate people: First of all, I wrote a neat script
 called <code>wgeto</code>. <code>wget</code> is a program that downloads stuff off of the internet, via
 http or ftp. wgeto calls wget, but tells it to ignore the progress dialog by
