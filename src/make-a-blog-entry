@@ -10,7 +10,7 @@ done
 POSTID=$(( $BIGGEST + 1 ))
 #DATE="$(date '+%Y-%m-%d %H:%M:%S %z (%Z)')"
 DATE="$("${SDIR}/isodate.py")"
-FILE=$DIR/$(date '+%Y-%m-%d')-$POSTID
+FILE=$DIR/$(date '+%Y-%m-%d')-${POSTID}.md
 echo $FILE
 cat << EOM > $FILE
 TITLE=
