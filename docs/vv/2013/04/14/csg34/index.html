@@ -80,7 +80,7 @@ ul.flat li::before {content:"[";}
 <div style="display:none;"></div>
 <p>Suppose you are writing a C++ program and are linking to a C library. Many of the library calls return a pointer to a heap-allocated structure. You are expected to free that structure using a specialized free function. For example, the openssl library has a BIGNUM type that is typically created using BN_new() and deleted using BN_free(); The following <code>Pointer&lt; BIGNUM, BN_clear_free &gt;</code> class will take ownership of the BIGNUM pointer in a smart-pointer way and call the BN_free() function when ever the BIGNUM_ptr goes out of scope.</p>
 <p>This allows me to exit a function in any of several places (using return or throw) without explicitly freeing memeory.</p>
-<pre><code>// Pointer Template
+<pre class="C++"><code>// Pointer Template
 // Copyright 2013 Hal Canary
 //
 // Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
@@ -155,7 +155,7 @@ public:
 
 #endif /* POINTER_H */</code></pre>
 <p>And the main funtion, as promised:</p>
-<pre><code>// compile with &quot;-lcrypto&quot;
+<pre class="C++"><code>// compile with &quot;-lcrypto&quot;
 #include &lt;iostream&gt; // cout
 #include &lt;exception&gt; // exception
 #include &lt;openssl/bn.h&gt; // BIGNUM

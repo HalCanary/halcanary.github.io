@@ -7,8 +7,8 @@
 		<description>The Log of Hal Canary</description>
 		<language>en-US</language>
 		<copyright>Copyright 2002-2022 Hal W. Canary. ALL RIGHTS RESERVED.</copyright>
-		<pubDate>Thu, 01 Sep 2022 18:38:55 -0400</pubDate>
-		<lastBuildDate>Thu, 01 Sep 2022 18:38:55 -0400</lastBuildDate>
+		<pubDate>Tue, 06 Sep 2022 08:43:23 -0400</pubDate>
+		<lastBuildDate>Tue, 06 Sep 2022 08:43:23 -0400</lastBuildDate>
 		<image>
 			<url>https://halcanary.org/images/HAL_CANARY_20191008_512.jpg</url>
 			<title>Voder-Vocoder</title>
@@ -623,11 +623,11 @@ EOF&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
 		<item>
 			<title>packages</title>
 			<link>https://halcanary.org/vv/2013/05/23/1320/</link>
-			<guid isPermaLink="false">274419e2-7908-9853-4a19-2a664c557ed5</guid>
+			<guid isPermaLink="false">ac96edd7-e401-ec0d-3aed-9b42f95e0b26</guid>
 			<pubDate>Thu, 23 May 2013 13:53:49 -0000</pubDate>
 			<description>&lt;div&gt;&lt;p&gt;Bash user? Be sure to install and use the package &lt;code&gt;bash-completion&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Write a lot of code? Don't forget &lt;code&gt;source-highlight&lt;/code&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;# add to .bashrc
+&lt;pre class=&quot;sh&quot;&gt;&lt;code&gt;# add to .bashrc
 if command -v source-highlight &amp;gt; /dev/null ; then
 source-highlight-less() {
     [ $# -eq 0 ] &amp;amp;&amp;amp; { echo &quot;args?&quot; &amp;gt;&amp;amp;2; return 1; }
@@ -665,11 +665,11 @@ fi&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
 		<item>
 			<title>Surface Viewing</title>
 			<link>https://halcanary.org/vv/2013/04/20/1305/</link>
-			<guid isPermaLink="false">b4df35b5-ae5b-ca0c-1aaa-f506fd01f534</guid>
+			<guid isPermaLink="false">d3ac2a89-9858-fe17-02e5-272395a5c560</guid>
 			<pubDate>Sat, 20 Apr 2013 20:00:26 -0000</pubDate>
 			<description>&lt;div&gt;&lt;p&gt;In the class I am sitting in on this semester - &lt;a href=&quot;http://www.cs.unc.edu/Admin/Courses/descriptions/257.html&quot;&gt;Visual Solid Shape&lt;/a&gt;, we use a piece of software called &lt;a href=&quot;http://andrewthall.org/papers/draft7_7Feb05.pdf&quot;&gt;shapemonger&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;I wanted to get a better view at monge patch (a surface defined by (&lt;em&gt;x&lt;/em&gt;,&lt;em&gt;y&lt;/em&gt;,&lt;em&gt;f&lt;/em&gt;(&lt;em&gt;x&lt;/em&gt;,&lt;em&gt;y&lt;/em&gt;)) so I wrote a little Python-VTK program to generate a vtkPolyData of the surface.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;#!/usr/bin/vtkpython
+&lt;pre class=&quot;Python&quot;&gt;&lt;code&gt;#!/usr/bin/vtkpython
 import vtk
 
 function = lambda x,y: x**2 - y**2
@@ -709,7 +709,7 @@ print 'wrote to', outputName&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The surface can be viewed in Paraview or &lt;a href=&quot;https://github.com/HalCanary/vtkviewer&quot;&gt;vtkviewer&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://halcanary.org/images/vtkviewer0.png&quot; alt=&quot;[]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;To make this surface look better, calculate the normals. The (unnormalized) normal direction is (-∂f/∂x,-∂f/∂y,1).&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;.......
+&lt;pre class=&quot;Python&quot;&gt;&lt;code&gt;.......
 def partial(func,v,i):
     epsilon = 5e-7
     def f(v,i,d):
@@ -740,11 +740,11 @@ polyData.GetPointData().SetNormals(normals)
 		<item>
 			<title>Pointer class</title>
 			<link>https://halcanary.org/vv/2013/04/14/csg34/</link>
-			<guid isPermaLink="false">0cef74fe-81ee-a21a-5bf3-cc3bee719db7</guid>
+			<guid isPermaLink="false">8d797f54-6e84-247f-3bef-79e07391ecce</guid>
 			<pubDate>Sun, 14 Apr 2013 12:00:00 -0000</pubDate>
 			<description>&lt;div&gt;&lt;p&gt;Suppose you are writing a C++ program and are linking to a C library. Many of the library calls return a pointer to a heap-allocated structure. You are expected to free that structure using a specialized free function. For example, the openssl library has a BIGNUM type that is typically created using BN_new() and deleted using BN_free(); The following &lt;code&gt;Pointer&amp;lt; BIGNUM, BN_clear_free &amp;gt;&lt;/code&gt; class will take ownership of the BIGNUM pointer in a smart-pointer way and call the BN_free() function when ever the BIGNUM_ptr goes out of scope.&lt;/p&gt;
 &lt;p&gt;This allows me to exit a function in any of several places (using return or throw) without explicitly freeing memeory.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;// Pointer Template
+&lt;pre class=&quot;C++&quot;&gt;&lt;code&gt;// Pointer Template
 // Copyright 2013 Hal Canary
 //
 // Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
@@ -819,7 +819,7 @@ public:
 
 #endif /* POINTER_H */&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;And the main funtion, as promised:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;// compile with &quot;-lcrypto&quot;
+&lt;pre class=&quot;C++&quot;&gt;&lt;code&gt;// compile with &quot;-lcrypto&quot;
 #include &amp;lt;iostream&amp;gt; // cout
 #include &amp;lt;exception&amp;gt; // exception
 #include &amp;lt;openssl/bn.h&amp;gt; // BIGNUM
@@ -841,9 +841,9 @@ int main(int, char **) {
 		<item>
 			<title>a common idiom</title>
 			<link>https://halcanary.org/vv/2013/03/01/csg33/</link>
-			<guid isPermaLink="false">528264de-1c5a-52f0-47cd-30c5db61fbb5</guid>
+			<guid isPermaLink="false">cd867a0c-8f76-246f-f538-d0df89013701</guid>
 			<pubDate>Fri, 01 Mar 2013 12:00:00 -0000</pubDate>
-			<description>&lt;div&gt;&lt;pre&gt;&lt;code&gt;/*
+			<description>&lt;div&gt;&lt;pre class=&quot;C++&quot;&gt;&lt;code&gt;/*
   a common idiom:
  */
 void C::f() {
@@ -862,7 +862,7 @@ void C::f() {
     (delete this-&amp;gt;ptr) = NULL;
 }&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;strong&gt;UPDATE&lt;/strong&gt; 2013-05-12: Stroustrup suggests an alternative:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;template&amp;lt;class T&amp;gt;
+&lt;pre class=&quot;C++&quot;&gt;&lt;code&gt;template&amp;lt;class T&amp;gt;
 inline void destroy(T*&amp;amp; p) {
   delete p;
   p = NULL;
@@ -872,9 +872,9 @@ inline void destroy(T*&amp;amp; p) {
 		<item>
 			<title>an emacs macro</title>
 			<link>https://halcanary.org/vv/2012/09/25/csg32/</link>
-			<guid isPermaLink="false">9fce48f8-48e5-39da-6a4e-8f43e2ecdae2</guid>
+			<guid isPermaLink="false">263d82e1-1ab2-358c-4170-b16ba5051988</guid>
 			<pubDate>Tue, 25 Sep 2012 12:00:00 -0000</pubDate>
-			<description>&lt;div&gt;&lt;pre&gt;&lt;code&gt;(defun guard ()
+			<description>&lt;div&gt;&lt;pre class=&quot;Emacs&quot;&gt;&lt;code&gt;(defun guard ()
   &quot;http://en.wikipedia.org/wiki/Include_guard&quot;
   (interactive)
   (if (buffer-file-name)
@@ -940,9 +940,9 @@ inline void destroy(T*&amp;amp; p) {
 		<item>
 			<title>validity</title>
 			<link>https://halcanary.org/vv/2012/07/16/csg29/</link>
-			<guid isPermaLink="false">8bf18330-f083-8665-3bf1-776127c886df</guid>
+			<guid isPermaLink="false">37186c22-9ade-7d7c-e27f-ac2e24a810fa</guid>
 			<pubDate>Mon, 16 Jul 2012 12:00:00 -0000</pubDate>
-			<description>&lt;div&gt;&lt;pre&gt;&lt;code&gt;// Oddly enough, this is a
+			<description>&lt;div&gt;&lt;pre class=&quot;C++&quot;&gt;&lt;code&gt;// Oddly enough, this is a
 // valid c++ program
 #include &amp;lt;iostream&amp;gt;
 using namespace std;
@@ -1198,9 +1198,9 @@ $ system-config-printer&lt;/code&gt;&lt;/pre&gt;
 		<item>
 			<title>Reasonable Contour Levels</title>
 			<link>https://halcanary.org/vv/2012/04/23/csg28/</link>
-			<guid isPermaLink="false">b0fe5ef0-f42d-7db6-dd1f-c300946bcdfb</guid>
+			<guid isPermaLink="false">fa3ece17-40a8-6edb-476f-09dec899a875</guid>
 			<pubDate>Mon, 23 Apr 2012 12:00:00 -0000</pubDate>
-			<description>&lt;div&gt;&lt;pre&gt;&lt;code&gt;import math
+			<description>&lt;div&gt;&lt;pre class=&quot;Python&quot;&gt;&lt;code&gt;import math
 def generateContours(min_value, max_val, target):
     value_range = max_val - min_value
     x = int(round(3 * math.log10(value_range / target)))
@@ -1218,9 +1218,9 @@ def generateContours(min_value, max_val, target):
 		<item>
 			<title>Collapse paragraphs</title>
 			<link>https://halcanary.org/vv/2012/04/03/csg27/</link>
-			<guid isPermaLink="false">dc1aa12e-64ba-9d8e-43a8-d4576e523d9c</guid>
+			<guid isPermaLink="false">e2349e50-1582-86fa-6cce-37a526417164</guid>
 			<pubDate>Tue, 03 Apr 2012 12:00:00 -0000</pubDate>
-			<description>&lt;div&gt;&lt;pre&gt;&lt;code&gt;#!/usr/bin/env python
+			<description>&lt;div&gt;&lt;pre class=&quot;Python&quot;&gt;&lt;code&gt;#!/usr/bin/env python
 # ignores witespace
 # collapses paragraphs
 import sys
@@ -1235,9 +1235,9 @@ for line in sys.stdin:
 		<item>
 			<title>generate image files</title>
 			<link>https://halcanary.org/vv/2012/03/23/csg26/</link>
-			<guid isPermaLink="false">eb273d0f-972a-dbf8-9cf5-25693c55f083</guid>
+			<guid isPermaLink="false">b27650d8-074a-d135-4acd-15f142e85f34</guid>
 			<pubDate>Fri, 23 Mar 2012 12:00:00 -0000</pubDate>
-			<description>&lt;div&gt;&lt;pre&gt;&lt;code&gt;#!/usr/bin/python
+			<description>&lt;div&gt;&lt;pre class=&quot;Python&quot;&gt;&lt;code&gt;#!/usr/bin/python
 
 import Image
 import numpy
@@ -1250,7 +1250,7 @@ ima = numpy.zeros((Y,X,4), dtype=numpy.uint8)
 ima[:,:,3] = 255 # make opaque
 Image.fromarray(ima,mode='RGBA').save(filename)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;For example:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;#!/usr/bin/env python
+&lt;pre class=&quot;Python&quot;&gt;&lt;code&gt;#!/usr/bin/env python
 import Image
 import numpy
 N, K = (16,16), (256, 256)
@@ -1277,9 +1277,9 @@ print filename&lt;/p&gt;&lt;/div&gt;</description>
 		<item>
 			<title>generic viewer</title>
 			<link>https://halcanary.org/vv/2012/02/24/1281/</link>
-			<guid isPermaLink="false">e46be834-648b-99f4-ac4e-d91cb7c81ffd</guid>
+			<guid isPermaLink="false">c741a35c-c1f0-d7a3-b1dd-44eb50eff058</guid>
 			<pubDate>Fri, 24 Feb 2012 08:38:00 -0000</pubDate>
-			<description>&lt;div&gt;&lt;pre&gt;&lt;code&gt;#!/bin/sh
+			<description>&lt;div&gt;&lt;pre class=&quot;sh&quot;&gt;&lt;code&gt;#!/bin/sh
 #${HOME}/bin/v
 #
 # Copyright 2012 Hal Canary
@@ -1338,9 +1338,9 @@ done&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
 		<item>
 			<title>makefiles</title>
 			<link>https://halcanary.org/vv/2012/02/23/csg24/</link>
-			<guid isPermaLink="false">0aa1296c-68e4-6d90-6b73-f3aa5d8d9b33</guid>
+			<guid isPermaLink="false">ebf4042b-86bb-3621-57b5-ec851deb3154</guid>
 			<pubDate>Thu, 23 Feb 2012 12:00:00 -0000</pubDate>
-			<description>&lt;div&gt;&lt;pre&gt;&lt;code&gt;# Example (GNU) Makefile for a C++ project.
+			<description>&lt;div&gt;&lt;pre class=&quot;Makefile&quot;&gt;&lt;code&gt;# Example (GNU) Makefile for a C++ project.
 # Assume there is a .h file for each .cxx
 
 executable_file_name = program
@@ -1369,7 +1369,7 @@ $(executable_file_name) : $(objects)
 clean:
     rm -f -v $(objects)&lt;/code&gt;&lt;/pre&gt;
 &lt;hr&gt;
-&lt;pre&gt;&lt;code&gt;# Example (GNU) Makefile for a Java project.
+&lt;pre class=&quot;Makefile&quot;&gt;&lt;code&gt;# Example (GNU) Makefile for a Java project.
 # Constructs a JAR file with all of the classes.
 
 entrypointclass = Program
@@ -1417,9 +1417,9 @@ $(jarfile): $(classes)
 		<item>
 			<title>PyQt QInputDialog.get*() wrappers</title>
 			<link>https://halcanary.org/vv/2012/01/17/csg22/</link>
-			<guid isPermaLink="false">cb49f8c9-5f1f-6573-8a1a-913c0526972d</guid>
+			<guid isPermaLink="false">6529ba73-d07b-3f24-643b-93fc5c0fed3b</guid>
 			<pubDate>Tue, 17 Jan 2012 12:00:00 -0000</pubDate>
-			<description>&lt;div&gt;&lt;pre&gt;&lt;code&gt;#!/usr/bin/env python
+			<description>&lt;div&gt;&lt;pre class=&quot;Python&quot;&gt;&lt;code&gt;#!/usr/bin/env python
 
 import PyQt4.QtGui
 
@@ -1508,11 +1508,11 @@ print getText('getText()','give me some text','string')&lt;/code&gt;&lt;/pre&gt;
 		<item>
 			<title>Java Makefiles</title>
 			<link>https://halcanary.org/vv/2011/12/17/csg21/</link>
-			<guid isPermaLink="false">9fe3c5b4-6b1f-22fb-9bcd-1dede4032f14</guid>
+			<guid isPermaLink="false">42b4e194-330a-1ce5-ed21-39251d34a05a</guid>
 			<pubDate>Sat, 17 Dec 2011 12:00:00 -0000</pubDate>
 			<description>&lt;div&gt;&lt;p&gt;&lt;strong&gt;Java Makefiles&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Here's a basic makefile for compiling Java programs. On most systems, you will only need to edit the first three lines.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;classes = Prog.class AnotherClass.class
+&lt;pre class=&quot;Makefile&quot;&gt;&lt;code&gt;classes = Prog.class AnotherClass.class
 entrypointclass = Prog
 jarfile = program.jar
 
@@ -1555,10 +1555,10 @@ $(jarfile): $(classes)
 		<item>
 			<title>Quick linear regression</title>
 			<link>https://halcanary.org/vv/2011/11/16/csg19/</link>
-			<guid isPermaLink="false">4bb22bf2-7831-07f0-62a2-33238d1b5f45</guid>
+			<guid isPermaLink="false">672b1270-38fc-00d9-b3c3-e0a7ca40f2e8</guid>
 			<pubDate>Wed, 16 Nov 2011 12:00:00 -0000</pubDate>
 			<description>&lt;div&gt;&lt;p&gt;Quick linear regression script&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;#!/usr/bin/env python
+&lt;pre class=&quot;Python&quot;&gt;&lt;code&gt;#!/usr/bin/env python
 #sudo yum -y install scipy
 # input is space-deleimited (x y) pairs.
 import scipy
@@ -1571,7 +1571,7 @@ y = numpy.array([t[1] for t in inp])
 fit = scipy.polyfit(x,y,1)
 print 'y = (%f) x + (%f)' % tuple(fit)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;power fit:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;#!/usr/bin/env python
+&lt;pre class=&quot;Python&quot;&gt;&lt;code&gt;#!/usr/bin/env python
 #sudo yum -y install scipy
 # input is space-deleimited (x y) pairs.
 import scipy
@@ -1589,10 +1589,10 @@ print 'y = ({0[1]})e^({0[0]})'.format(tuple(fit))&lt;/code&gt;&lt;/pre&gt;&lt;/d
 		<item>
 			<title>snap your window to the left or right</title>
 			<link>https://halcanary.org/vv/2011/11/08/csg18/</link>
-			<guid isPermaLink="false">9d520185-112a-fd1d-a419-f86bb97aba2f</guid>
+			<guid isPermaLink="false">0fb73695-ca92-aa14-1fb7-0063231aa9bd</guid>
 			<pubDate>Tue, 08 Nov 2011 12:00:00 -0000</pubDate>
 			<description>&lt;div&gt;&lt;p&gt;This script will snap your window to the left or right side of the screen in Linux: (&lt;a href=&quot;http://www.techsupportalert.com/content/ubuntu-tips-and-tricks.htm#Enable-Aero-Snap&quot;&gt;SOURCE&lt;/a&gt;)&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;#!/bin/sh
+&lt;pre class=&quot;sh&quot;&gt;&lt;code&gt;#!/bin/sh
 ## ${HOME}/bin/wmctrl-snap-edge
 #DTPD#
 WMCTRL=&quot;${HOME}/bin/wmctrl_`arch`&quot;
@@ -1609,9 +1609,9 @@ elif test &quot;$1&quot; = &quot;right&quot; ; then
     &quot;$WMCTRL&quot; -r :ACTIVE: -e 0,$HALF,0,$HALF,-1
 fi&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;If you don't have wmctrl installed, you can apt-get it (Ubuntu):&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;sudo apt-get --yes install wmctrl&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;sh&quot;&gt;&lt;code&gt;sudo apt-get --yes install wmctrl&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Or compile it yourself:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;sudo yum install libXmu-devel
+&lt;pre class=&quot;sh&quot;&gt;&lt;code&gt;sudo yum install libXmu-devel
 cd /tmp
 wget 'http://tomas.styblo.name/wmctrl/dist/wmctrl-1.07.tar.gz'
 tar --extract --gzip --file &quot;wmctrl-1.07.tar.gz&quot;
@@ -1620,7 +1620,7 @@ cd wmctrl-1.07
 make -j 4
 mv wmctrl ${HOME}/bin/wmctrl_`arch`&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The next step is to set up hotkeys. If you use Metacity like I do, then:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;gconftool-2 --type string --set \
+&lt;pre class=&quot;sh&quot;&gt;&lt;code&gt;gconftool-2 --type string --set \
     /apps/metacity/global_keybindings/run_command_6 \
     '&amp;lt;Ctrl&amp;gt;&amp;lt;Alt&amp;gt;Page_Up'
 
@@ -1640,9 +1640,9 @@ gconftool-2 --type string --set \
 		<item>
 			<title>Restart X11 under Ubuntu</title>
 			<link>https://halcanary.org/vv/2011/11/03/csg17/</link>
-			<guid isPermaLink="false">c41f9db4-519b-6747-bf73-f4730af5a4c9</guid>
+			<guid isPermaLink="false">11472b58-ae85-2923-22b9-1c317a36ee9e</guid>
 			<pubDate>Thu, 03 Nov 2011 12:00:00 -0000</pubDate>
-			<description>&lt;div&gt;&lt;pre&gt;&lt;code&gt;#!/bin/sh
+			<description>&lt;div&gt;&lt;pre class=&quot;sh&quot;&gt;&lt;code&gt;#!/bin/sh
 # Restart X11 under Ubuntu. #
 #DTPD#
 test `id -u` = &quot;0&quot; || exec sudo &quot;$0&quot;
@@ -1676,10 +1676,10 @@ exec /usr/sbin/service gdm restart&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</descrip
 		<item>
 			<title>spam rules</title>
 			<link>https://halcanary.org/vv/2011/10/26/1252/</link>
-			<guid isPermaLink="false">f501dce7-a4f6-7129-d97f-87e1bd9a2697</guid>
+			<guid isPermaLink="false">888c9ba8-3acd-24c7-bc26-41ffc2d046b3</guid>
 			<pubDate>Wed, 26 Oct 2011 15:01:41 -0000</pubDate>
 			<description>&lt;div&gt;&lt;p&gt;These are my new spamassassin rules. If your configured email client fails to have a valid DKIM or DK signature or SPF record, I'm probably going to mark you as spam.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;#### .spamassassin/user_prefs
+&lt;pre&gt;&lt;code&gt;# .spamassassin/user_prefs
 required_score -1.0
 score DKIM_VALID_AU -10.0
 score SPF_PASS -5.0&lt;/code&gt;&lt;/pre&gt;
@@ -1689,9 +1689,9 @@ score SPF_PASS -5.0&lt;/code&gt;&lt;/pre&gt;
 		<item>
 			<title>restart gdm under ubuntu</title>
 			<link>https://halcanary.org/vv/2011/10/14/csg16/</link>
-			<guid isPermaLink="false">f3c6089a-f6cf-feeb-df72-de434bee8faf</guid>
+			<guid isPermaLink="false">477a6ee3-2cd9-a9ce-cd54-bc32b6c6892d</guid>
 			<pubDate>Fri, 14 Oct 2011 12:00:00 -0000</pubDate>
-			<description>&lt;div&gt;&lt;pre&gt;&lt;code&gt;(defun next-good-buffer () &quot;HWC&quot; (interactive)
+			<description>&lt;div&gt;&lt;pre class=&quot;Emacs&quot;&gt;&lt;code&gt;(defun next-good-buffer () &quot;HWC&quot; (interactive)
   (next-buffer)
   (while (and (not (string= (buffer-name) &quot;*scratch*&quot;))
           (equal (buffer-file-name) nil))
@@ -5095,57 +5095,70 @@ print base64.b64encode(os.urandom(18),'Zz')&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 		<item>
 			<title>Email2</title>
 			<link>https://halcanary.org/vv/2008/01/25/715/</link>
-			<guid isPermaLink="false">9354b0ea-d97c-6f65-40e3-5a81808e50f1</guid>
+			<guid isPermaLink="false">ceacb6a1-c39a-ff0b-c58c-ab0192a19708</guid>
 			<pubDate>Fri, 25 Jan 2008 14:34:12 -0000</pubDate>
-			<description>&lt;div&gt;&lt;p&gt;== Email2 ==&lt;/p&gt;
-&lt;p&gt;Here's a proposal for new e-mail protocols to completely replace existing SMTP/MIME/IMAP/POP protocols. There would be a phase-in period, lasting about 5-10 years, during which two systems would exist in paralel and servers would fall back to old protocols where the new ones aren't availible yet.&lt;/p&gt;
+			<description>&lt;div&gt;&lt;p&gt;Here's a proposal for new e-mail protocols to completely replace existing SMTP/MIME/IMAP/POP protocols. There would be a phase-in period, lasting about 5-10 years, during which two systems would exist in paralel and servers would fall back to old protocols where the new ones aren't availible yet.&lt;/p&gt;
 &lt;p&gt;The name of the new protocols would be Email2. It would contain the following protocols:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Email2 E-Mail Client Protocol
-    * client-server connections
-    * replaces SMTP, IMAP, POP
-    * Specifies how the client sends and
-      recieves messages from the server.
-    * Client configuration is simplified:
-      user ONLY specifies e-mail address
-      and password.  No seperate inbound
-      and outbound configurations.
-    * Use of TLS strongly recommended.
-Email2 E-Mail Server Protocol
-    * server-server connections
-    * replaces SMTP
-    * meant to discourage spam
-    * Use of TLS strongly recommended.
-    * servers must verfy dns records of
-      sending server before accepting e-mail.
-Email2 E-Mail File Format
-    * replaces MIME
-    * 8-bit
-    * unicode (UTF-8) for all text,
-      including headers
-    * mesage is compressed with DEFLATE
-      algorithm
-Email2 E-Mail Storage Protocol
-    * replaces maildir, mbox, et cetera
-    * Can be used by all major OSes
-    * similar to maildir
-    * allows user to switch clients seamlessly&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;== Email2 E-Mail File Format ==&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Email2 E-Mail Client Protocol
+&lt;ul&gt;
+&lt;li&gt;client-server connections&lt;/li&gt;
+&lt;li&gt;replaces SMTP, IMAP, POP&lt;/li&gt;
+&lt;li&gt;Specifies how the client sends and
+recieves messages from the server.&lt;/li&gt;
+&lt;li&gt;Client configuration is simplified:
+user ONLY specifies e-mail address
+and password. No seperate inbound
+and outbound configurations.&lt;/li&gt;
+&lt;li&gt;Use of TLS strongly recommended.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Email2 E-Mail Server Protocol
+&lt;ul&gt;
+&lt;li&gt;server-server connections&lt;/li&gt;
+&lt;li&gt;replaces SMTP&lt;/li&gt;
+&lt;li&gt;meant to discourage spam&lt;/li&gt;
+&lt;li&gt;Use of TLS strongly recommended.&lt;/li&gt;
+&lt;li&gt;servers must verfy dns records of
+sending server before accepting e-mail.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Email2 E-Mail File Format
+&lt;ul&gt;
+&lt;li&gt;replaces MIME&lt;/li&gt;
+&lt;li&gt;8-bit&lt;/li&gt;
+&lt;li&gt;unicode (UTF-8) for all text,
+including headers&lt;/li&gt;
+&lt;li&gt;mesage is compressed with DEFLATE
+algorithm&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Email2 E-Mail Storage Protocol
+&lt;ul&gt;
+&lt;li&gt;replaces maildir, mbox, et cetera&lt;/li&gt;
+&lt;li&gt;Can be used by all major OSes&lt;/li&gt;
+&lt;li&gt;similar to maildir&lt;/li&gt;
+&lt;li&gt;allows user to switch clients seamlessly&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Email2 E-Mail File Format&lt;/h3&gt;
 &lt;p&gt;First of all, we need to get rid of 7-bit and linelength limitations that are part of SMTP.&lt;/p&gt;
 &lt;p&gt;The message is composed of three parts:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Head
-Body
-Attachments&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;Head&lt;/li&gt;
+&lt;li&gt;Body&lt;/li&gt;
+&lt;li&gt;Attachments&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;Specifically, we would have the following:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Magic number representing this file format.
-0x0a
-UTF-8 data (the head) with each field
-    seperated by a single unix-style endline.
-0x0a0a (two endlines to specify the end of the head)
-a gziped file containing the body
-the attachemnts, somehow.&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;Magic number representing this file format.&lt;/li&gt;
+&lt;li&gt;0x0a&lt;/li&gt;
+&lt;li&gt;UTF-8 data (the head) with each field
+seperated by a single unix-style endline.&lt;/li&gt;
+&lt;li&gt;0x0a0a (two endlines to specify the end of the head)&lt;/li&gt;
+&lt;li&gt;a gziped file containing the body&lt;/li&gt;
+&lt;li&gt;the attachemnts, somehow.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;The head is similar to SMTP headers, but is encoded in UTF-8. There are more restrictions on what can be in the headers, for instance &quot;From:&quot; must be identical to the email sending the message, or it will not be accepted. Mailing lists have their own specific headers.&lt;/p&gt;
 &lt;p&gt;Since the body may be long and the server won't need to read it (except for spam filtering), it will be compressed.&lt;/p&gt;
-&lt;p&gt;The body should *not* be HTML, since that introduces several security &amp;amp; spam risks. I suggest UTF-8 text with a minimal markup syntax to allow for &quot;slightly rich&quot; text. The text of the body may have long lines intended to be wrapped to whatever screen is availible. It is not assumed that this plain text is monospaced or wrapped at 70 characters.&lt;/p&gt;
+&lt;p&gt;The body should &lt;strong&gt;not&lt;/strong&gt; be HTML, since that introduces several security &amp;amp; spam risks. I suggest UTF-8 text with a minimal markup syntax to allow for &quot;slightly rich&quot; text. The text of the body may have long lines intended to be wrapped to whatever screen is availible. It is not assumed that this plain text is monospaced or wrapped at 70 characters.&lt;/p&gt;
 &lt;p&gt;All printable Unicode characters are acceptable in the body.&lt;/p&gt;
 &lt;p&gt;Because plain text is so unacceptable to most people, we allow text to be transformed to italics, bold, monospaced, subscript, superscript, strikethrough, and underline.&lt;/p&gt;
 &lt;p&gt;Whole paragraphs (seperated by newlines) can be modified with indention, center, and rightjustify.&lt;/p&gt;
@@ -5170,28 +5183,28 @@ the attachemnts, somehow.&lt;/code&gt;&lt;/pre&gt;
 \{cj} = begin center justification on this line
 \{lj} = go back to left justification on this line
 \{rj} = begin right justification on this line&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The backslash character *must* be followed by one of those two-character escape codes to be a conforming document.&lt;/p&gt;
+&lt;p&gt;The backslash character &lt;strong&gt;must&lt;/strong&gt; be followed by one of those two-character escape codes to be a conforming document.&lt;/p&gt;
 &lt;p&gt;All conforming email clients should display this markup to the user in a consistant way and not expose the underlying escape characters.&lt;/p&gt;
 &lt;p&gt;Maformed escape syntax should always throw up an error. No conforming client can ever produce malfomerd syntax, so this might be spam.&lt;/p&gt;
 &lt;p&gt;Quoting previous email would always use the indentation markup, like a HTML blockquote element.&lt;/p&gt;
 &lt;p&gt;Additionally, whitespace characters like spaces, tabs, and newlines would be rendered just like they would in a plain-text document. One newline standard (such as CRLF or LF) would be chosen and all conforming clients would use it.&lt;br&gt;
 Tabs would be rendered in a consistant way---for example one could put a tab-stop every 8 ems. (1 em is the width of a single &quot;m&quot; glyph.) Or base the tabs off of the width of the client's monospaced font.&lt;/p&gt;
-&lt;p&gt;Note that the following things are *banned* from this markup language: specifying fonts, specifying font types (other than monospace), specifying font size, specifying font color, specifying background color, blinking text, scrolling text, tables, embedded scripts, embedded images, or embedded documents. If you want any of that, you must attach an attachment.&lt;/p&gt;
-&lt;p&gt;Additionally, all conforming mail clinets *must* recognize IANA-registered URI schemes and make them into clickable (or otherwise selectable) links. But those links will look like URIs, to keep the process *transparent* to the user. URI's can be imbedded in the text in the form &quot;[whitespace]URI[whitespace]&quot;, &quot;(URI)&quot;, &quot;[URI]&quot;, &quot;{URI}&quot;, or &quot;&lt;uri&gt;&quot;. This should be recognizable by the client since URIs generally do not contain whitespace characters or &amp;lt;[({})]&amp;gt;.&lt;/uri&gt;&lt;/p&gt;
+&lt;p&gt;Note that the following things are &lt;strong&gt;banned&lt;/strong&gt; from this markup language: specifying fonts, specifying font types (other than monospace), specifying font size, specifying font color, specifying background color, blinking text, scrolling text, tables, embedded scripts, embedded images, or embedded documents. If you want any of that, you must attach an attachment.&lt;/p&gt;
+&lt;p&gt;Additionally, all conforming mail clinets &lt;strong&gt;must&lt;/strong&gt; recognize IANA-registered URI schemes and make them into clickable (or otherwise selectable) links. But those links will look like URIs, to keep the process &lt;strong&gt;transparent&lt;/strong&gt; to the user. URI's can be imbedded in the text in the form &quot;[whitespace]URI[whitespace]&quot;, &quot;(URI)&quot;, &quot;[URI]&quot;, &quot;{URI}&quot;, or &quot;&lt;uri&gt;&quot;. This should be recognizable by the client since URIs generally do not contain whitespace characters or &amp;lt;[({})]&amp;gt;.&lt;/uri&gt;&lt;/p&gt;
 &lt;p&gt;The header has none of this markup.&lt;/p&gt;
 &lt;p&gt;For the N attachemtns, the Internet media type, the preferred document name, whether it is compressed, a checksum or cryptographic hash, and file length is specified. For security purposes, the client mut not open these attachments automatically and should call a virus scanner before opening them. It is recommended that all email clients attempt to compress the attachements with DEFLATE before attaching them. If the compression results are good, then they will be attached like that. (For example, the ZIP file format can include files either compressed or uncompressed.) a checksum for each attachment would be included in the email file format. The exact format would be part of the standard, but I don't have an opinion on how it should work.&lt;/p&gt;
-&lt;p&gt;== Email2 E-Mail Storage Protocol ==&lt;/p&gt;
-&lt;p&gt;The new standard would specify a standard way of storing email in a filesystem, similar to Maildir. This way, a user can *always* switch email clients seamlessly. Furthermore, a default place to store email would be used, specifed for each operating system. For example, under Windows it would be something like&lt;/p&gt;
+&lt;h3&gt;Email2 E-Mail Storage Protocol&lt;/h3&gt;
+&lt;p&gt;The new standard would specify a standard way of storing email in a filesystem, similar to Maildir. This way, a user can &lt;strong&gt;always&lt;/strong&gt; switch email clients seamlessly. Furthermore, a default place to store email would be used, specifed for each operating system. For example, under Windows it would be something like&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;    %HOMEDRIVE%%HOMEPATH%\\Application Data\\email\\&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;and *NIX would use&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;    $HOME/.email/&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;== Email2 E-Mail Client Protocol &amp;amp; Server Protocol ==&lt;/p&gt;
+&lt;h3&gt;Email2 E-Mail Client Protocol &amp;amp; Server Protocol&lt;/h3&gt;
 &lt;p&gt;Email2 is a Client-Server-Server-Client protocol. No more forwarding email through a chain of servers. No more faking addresses.&lt;/p&gt;
 &lt;p&gt;Suppose bannana@orange.com wants to email mango@plum.com.&lt;/p&gt;
 &lt;p&gt;Bannana's client must connect to mail.orange.com directly, using a TLS encrypted session and verfying his creditions with a password (or optionally some other identifer, like a PKE key).&lt;/p&gt;
-&lt;p&gt;The connection is *not* SMTP, since we are throwing that protocol out the window. we'll call it a &quot;client-server&quot; connection.&lt;/p&gt;
+&lt;p&gt;The connection is &lt;strong&gt;not&lt;/strong&gt; SMTP, since we are throwing that protocol out the window. we'll call it a &quot;client-server&quot; connection.&lt;/p&gt;
 &lt;p&gt;mail.orange.com verifies that the e-mail is well-formed and that the &quot;From&quot; address matches the address that Bannana used to log in with.&lt;/p&gt;
-&lt;p&gt;mail.orange.com then connects directly to mail.plum.com using a TLS-encrypted &quot;server-server&quot; connection and identifies itself as mail.orange.com. mail.plum.com *MUST* verify that mail.orange.com is who they say they are through checking (1) dns entries AND (2) TLS encryption keys. mail.orange.com has already verified mail.plum.com.&lt;/p&gt;
+&lt;p&gt;mail.orange.com then connects directly to mail.plum.com using a TLS-encrypted &quot;server-server&quot; connection and identifies itself as mail.orange.com. mail.plum.com &lt;strong&gt;MUST&lt;/strong&gt; verify that mail.orange.com is who they say they are through checking (1) dns entries AND (2) TLS encryption keys. mail.orange.com has already verified mail.plum.com.&lt;/p&gt;
 &lt;p&gt;mail.orange.com then hands over the e-mail to mango@plum.com. Before terminating the session, mail.plum.com (1) checks to see that the e-mail is from an address at @orange.com (2) tells mail.orange.com whether there is a mango@ this address (3) checks to see if the message is well-formed. If not, then orange knows that the e-mail is undeliverable and will tell the sending client that. (There is an undeliverable folder on the server just for that purpose.)&lt;/p&gt;
 &lt;p&gt;Next, (this is an optional step that awesome mail servers will be able to do) mail.plum.com consults a series of rules that Mango specified earlier and sorts the mail into a subfolder of the Inbox folder. For example, if the subject contains a specific keyword, it might go in a subfolder for that keyword. The server might run Spamasasain on the message and sort it into a Inbox/Spam folder. Why does the server do this and not the client? Becasue whe user might use two clients on two different machines to connect to the server and doesn't wat to repeat a bunch of rules!&lt;/p&gt;
 &lt;p&gt;Ideally, the rule format will be specified in the protocol.&lt;/p&gt;
@@ -5221,11 +5234,11 @@ Local Folders/
 &lt;p&gt;The user could drag-and-drop the new email from Bannana from plum.com/Inbox/ to plum.com/Old/Bannana . This would be an atomic operation that the server could perform without copying the email, just moving some pointers around.&lt;/p&gt;
 &lt;p&gt;I am no human-interface guru, so this could probably use some refining.&lt;/p&gt;
 &lt;p&gt;The client also has a way of changing the delivery rules on the server in some standard way.&lt;/p&gt;
-&lt;p&gt;== Mailing Lists ===&lt;/p&gt;
+&lt;h3&gt;Mailing Lists&lt;/h3&gt;
 &lt;p&gt;Client-Server-Server-Server-Client Proticol would exist for mailing lists.&lt;/p&gt;
 &lt;p&gt;Suppose that bannana@orange.com wants to send a email to the Fruits mailing list, which has an email address of fruits%pear.com. mango@plum.com is on that list.&lt;/p&gt;
 &lt;p&gt;First of all, notice that mailing list addresses have a different syntax, replaceing the &quot;@&quot; with a &quot;%&quot;. the &quot;%&quot; is supposed to too like mutliple &quot;@&quot;s. [Is that going to be a problem with URI syntax? maybe we should use fruits#pear.com.]&lt;/p&gt;
-&lt;p&gt;For the first server-server connection, mail.orange.com connects to mail.pear.com, using the same authentication system. mail.pear.com then checks to see if there is a fruits mailing list and (this is important) if bannana@orange.com is authorized to email that list. mail.pear.com might be configured to reject anyone that is not on the list, or to reject anyone who isn't a list owner, or to allow anyone to post to the list (which is a *BAD* idea).&lt;/p&gt;
+&lt;p&gt;For the first server-server connection, mail.orange.com connects to mail.pear.com, using the same authentication system. mail.pear.com then checks to see if there is a fruits mailing list and (this is important) if bannana@orange.com is authorized to email that list. mail.pear.com might be configured to reject anyone that is not on the list, or to reject anyone who isn't a list owner, or to allow anyone to post to the list (which is a &lt;strong&gt;BAD&lt;/strong&gt; idea).&lt;/p&gt;
 &lt;p&gt;mail.pear.com looks through the mailing list and sorts it by domain name, then connects sequentially all the domains to deliver the email. These connections are again authenticated both ways. When mango@plum.com gets the message it looks like this:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;From: Bannana &amp;lt;bannana@orange.com&amp;gt;
 To: Fruits &amp;lt;fruits%pear.com&amp;gt;
@@ -5242,25 +5255,29 @@ BCC: Fruits &amp;lt;fruits%pear.com&amp;gt;
 Delivered To: mango &amp;lt;mango@plum.com&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;is what Mango would see. Everyone on that list knows what list was BCCed. Apple, however, is in the dark.&lt;/p&gt;
 &lt;p&gt;There is no way to see who is on a mailing list unless you are an owner of that list. Of course the owner might make that information availible some other way.&lt;/p&gt;
-&lt;p&gt;== Timestamps ==&lt;/p&gt;
+&lt;h3&gt;Timestamps&lt;/h3&gt;
 &lt;p&gt;All timestamps in the email header should use ISO 8601 in the following way: 2007-12-21 17:47:01-05:00. Clients can convert to local timezone if they wish. Clients may diplay dates using local conventions as well.&lt;/p&gt;
 &lt;p&gt;There are multiple timestamps in the header&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Date = when the client started to transmit
-DateS = when the Sending server recieved the message
-DateL = when the listsrev recieved the messafe
-DateR = when the recieving server recieved the message
-DateC = when the recieving client first noticed it&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;Date = when the client started to transmit&lt;/li&gt;
+&lt;li&gt;DateS = when the Sending server recieved the message&lt;/li&gt;
+&lt;li&gt;DateL = when the listsrev recieved the messafe&lt;/li&gt;
+&lt;li&gt;DateR = when the recieving server recieved the message&lt;/li&gt;
+&lt;li&gt;DateC = when the recieving client first noticed it&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;Client machines often have incorrect clocks. Servers are encouraged to use NTP to keep thier clocks up to date, so maybe a client could be configured to use DateS to timestamp the real message.&lt;/p&gt;
-&lt;p&gt;== Dead addresses ==&lt;/p&gt;
+&lt;h3&gt;Dead addresses&lt;/h3&gt;
 &lt;p&gt;Since mail can no longer be forwarded, what happens when you get a new email address?&lt;/p&gt;
 &lt;p&gt;All email servers should keep a list of no-longer active email addresses and give an apropriate error code for undeliverable mail.&lt;/p&gt;
 &lt;p&gt;Delivery status:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Deliverable
-Undeliverable - no such address
-Undeliverable - account closed &lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;Deliverable&lt;/li&gt;
+&lt;li&gt;Undeliverable - no such address&lt;/li&gt;
+&lt;li&gt;Undeliverable - account closed&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;When a mail account is closed, the user or administrator can add a 1kb plain text (UTF-8) message explaining why it is closed and maybe another address to try.&lt;/p&gt;
 &lt;p&gt;This message should get back to the sender somehow, but not in the form of another email.&lt;/p&gt;
-&lt;p&gt;== Problems with this approach ==&lt;/p&gt;
+&lt;h3&gt;Problems with this approac&lt;/h3&gt;
 &lt;p&gt;A lot of coding. But most of it is really simple stuff.&lt;/p&gt;
 &lt;p&gt;Clients will need to be able to connect to both kinds of email servers for the interum.&lt;/p&gt;
 &lt;p&gt;Mail-sorting rules might be difficult to stadardize.&lt;/p&gt;
@@ -5508,7 +5525,7 @@ done&lt;/code&gt;&lt;/pre&gt;
 		<item>
 			<title>number reform</title>
 			<link>https://halcanary.org/vv/2007/10/31/706/</link>
-			<guid isPermaLink="false">e8bd8607-b7e2-a6f9-85b9-5c9b47ac443d</guid>
+			<guid isPermaLink="false">4e872f95-8758-c9ae-5f60-2e0ac48fdec4</guid>
 			<pubDate>Wed, 31 Oct 2007 13:46:45 -0000</pubDate>
 			<description>&lt;div&gt;&lt;p&gt;Well, if we were really starting from scratch, I would go with a base 16
 numbering system (already in use by programmers everywhere).&lt;/p&gt;
@@ -5516,7 +5533,7 @@ numbering system (already in use by programmers everywhere).&lt;/p&gt;
 also give us an opportunity to throw out the base 360/60/60 system
 (degrees/minutes/seconds) and 24/60/60 (hours/minutes/seconds) that the
 Babylonians saddled us with.&lt;/p&gt;
-&lt;h2&gt;Numbers&lt;/h2&gt;
+&lt;h3&gt;Numbers&lt;/h3&gt;
 &lt;p&gt;The proposal: The sixteen digits 0123456789abcdef. Integers would be written&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;dd,dddd,dddd&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;with four digit groups (16 bits each). Mixed numbers would be witten&lt;/p&gt;
@@ -5527,7 +5544,7 @@ scientific notation) would always be written&lt;/p&gt;
 &lt;p&gt;or&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;d.dddP-dd&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;where &quot;&lt;em&gt;x&lt;/em&gt;⁠P⁠&lt;em&gt;y&lt;/em&gt;&quot; means &quot;&lt;em&gt;x&lt;/em&gt; × 16&lt;sup&gt;&lt;em&gt;y&lt;/em&gt;&lt;/sup&gt;&quot; (P for exPonent.)&lt;/p&gt;
-&lt;h2&gt;Time&lt;/h2&gt;
+&lt;h3&gt;Time&lt;/h3&gt;
 &lt;p&gt;The new minute would be 1/256 th of an average day. (5.625 old-minutes) The new
 second would be 1/ 65536 th of a day (1.318 old-seconds).&lt;/p&gt;
 &lt;p&gt;(Note that you could always specify meeting times with only new-minutes, since
@@ -5535,10 +5552,10 @@ one never wants to be more specific than 1 new-minute for such things.
 Therefore, &quot;meet me at 1:15 p.m.&quot; becomes &quot;meet me at :8D&quot;. Days and time can
 be specified simpler: &quot;2007-10-31 13:46:45&quot; becomes &quot;7D7-A-1F:930&quot; (Year
 &lt;em&gt;7D7&lt;/em&gt;, month &lt;em&gt;A&lt;/em&gt;, day &lt;em&gt;1F&lt;/em&gt;, minute &lt;em&gt;93&lt;/em&gt;, second &lt;em&gt;0&lt;/em&gt;.))&lt;/p&gt;
-&lt;h2&gt;Length&lt;/h2&gt;
+&lt;h3&gt;Length&lt;/h3&gt;
 &lt;p&gt;The new standard length would be around 9.202 centimeters. that would make the
 speed of light equal to an even 16^8 (new standard lengths/new seconds)&lt;/p&gt;
-&lt;h2&gt;Angles&lt;/h2&gt;
+&lt;h3&gt;Angles&lt;/h3&gt;
 &lt;p&gt;The new degree would simply be 1/256th of a circle.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;Translating to and from binary would of course be trivial.&lt;/p&gt;
@@ -7177,11 +7194,11 @@ $ sha1sum /dev/hdc&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
 		<item>
 			<title>Art</title>
 			<link>https://halcanary.org/vv/2006/09/19/whc02/</link>
-			<guid isPermaLink="false">9984d7c3-4051-331c-f7f6-e506486e2468</guid>
+			<guid isPermaLink="false">f50e7f2e-1a67-fde8-d056-6f8afd3731f7</guid>
 			<pubDate>Tue, 19 Sep 2006 23:21:33 -0000</pubDate>
 			<description>&lt;div&gt;&lt;p&gt;old art of mine that I scanned at one point; also art by some others.&lt;/p&gt;
-&lt;h2&gt;Art by Hal Canary&lt;/h2&gt;
-&lt;h3&gt;Watercolors&lt;/h3&gt;
+&lt;h3&gt;Art by Hal Canary&lt;/h3&gt;
+&lt;h4&gt;Watercolors&lt;/h4&gt;
 &lt;p&gt;&lt;a href=&quot;https://halcanary.org/art/destin.jpg&quot;&gt;&lt;img src=&quot;https://halcanary.org/art/thumb/destin.jpg&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;br&gt;
 The ominous foggy morning when we arrived in Destin. July 1998.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://halcanary.org/art/devil-01.jpg&quot;&gt;&lt;img src=&quot;https://halcanary.org/art/thumb/devil-01.jpg&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;br&gt;
@@ -7202,7 +7219,7 @@ A bar on the beach on South Padre Island, Texas. August 1998.&lt;/p&gt;
 &lt;a href=&quot;https://halcanary.org/art/2005-09-14-chapman-final.jpg&quot;&gt;&lt;img src=&quot;https://halcanary.org/art/thumb/2005-09-14-chapman-final.jpg&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;br&gt;
 Portrate of Chapman. September 2005.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3&gt;Pencil&lt;/h3&gt;
+&lt;h4&gt;Pencil&lt;/h4&gt;
 &lt;p&gt;&lt;a href=&quot;https://halcanary.org/art/devil-03.jpg&quot;&gt;&lt;img src=&quot;https://halcanary.org/art/thumb/devil-03.jpg&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;br&gt;
 Devil's Lake - tree at base of east bluff. May 2002.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://halcanary.org/art/2005-07-22-Picture024.jpg&quot;&gt;&lt;img src=&quot;https://halcanary.org/art/thumb/2005-07-22-Picture024.jpg&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;br&gt;
@@ -7210,11 +7227,11 @@ A sign on the wall. July 2005.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://halcanary.org/art/2005-07-22-Picture025.jpg&quot;&gt;&lt;img src=&quot;https://halcanary.org/art/thumb/2005-07-22-Picture025.jpg&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;br&gt;
 My car. July 2005.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3&gt;Pen &amp;amp; Ink&lt;/h3&gt;
+&lt;h4&gt;Pen &amp;amp; Ink&lt;/h4&gt;
 &lt;p&gt;&lt;a href=&quot;https://halcanary.org/art/2005-09-14-img_1801.jpg&quot;&gt;&lt;img src=&quot;https://halcanary.org/art/thumb/2005-09-14-img_1801.jpg&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;br&gt;
 Abstract with circles. September 2005.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3&gt;Acrylics&lt;/h3&gt;
+&lt;h4&gt;Acrylics&lt;/h4&gt;
 &lt;p&gt;&lt;a href=&quot;https://halcanary.org/art/alice.jpg&quot;&gt;&lt;img src=&quot;https://halcanary.org/art/thumb/alice.jpg&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;br&gt;
 Alice takes a Hit. June 1999. 40&quot; X 30&quot;.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://halcanary.org/art/2004-07-19-golden_ratio.jpg&quot;&gt;&lt;img src=&quot;https://halcanary.org/art/thumb/2004-07-19-golden_ratio.jpg&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;br&gt;
@@ -7225,23 +7242,23 @@ A modern piece. 2003-08-24.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://halcanary.org/art/2003-08-24-art-3.jpg&quot;&gt;&lt;img src=&quot;https://halcanary.org/art/thumb/2003-08-24-art-3.jpg&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;br&gt;
 A work in progress. 2003-08-24&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3&gt;Digital Minatures&lt;/h3&gt;
+&lt;h4&gt;Digital Minatures&lt;/h4&gt;
 &lt;p&gt;&lt;a href=&quot;https://halcanary.org/art/redsky.jpg&quot;&gt;&lt;img src=&quot;https://halcanary.org/art/thumb/redsky.jpg&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://halcanary.org/art/roundboy.jpg&quot;&gt;&lt;img src=&quot;https://halcanary.org/art/thumb/roundboy.jpg&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3&gt;Sculpture&lt;/h3&gt;
+&lt;h4&gt;Sculpture&lt;/h4&gt;
 &lt;p&gt;&lt;a href=&quot;https://halcanary.org/art/tinman.jpg&quot;&gt;&lt;img src=&quot;https://halcanary.org/art/thumb/tinman.jpg&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;br&gt;
 21 February 1999: The Tin Man, which won first place in the Public Relations
 Student Society of America's Can Creation Contest, stands in Library Mall
 Sunday. It was created by Hal Canary and Beth Petrus.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2&gt;Art by others&lt;/h2&gt;
-&lt;h3&gt;?&lt;/h3&gt;
+&lt;h3&gt;Art by others&lt;/h3&gt;
+&lt;h4&gt;?&lt;/h4&gt;
 &lt;p&gt;&lt;a href=&quot;https://halcanary.org/art/haldrawn.png&quot;&gt;&lt;img src=&quot;https://halcanary.org/art/thumb/haldrawn.png&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;br&gt;
 In October 1997, this girl I met drew a picture of me while I drew a picture of
 someone else. I never saw her again. These things happen.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h3&gt;Art by Kathy Canary&lt;/h3&gt;
+&lt;h4&gt;Art by Kathy Canary&lt;/h4&gt;
 &lt;p&gt;&lt;a href=&quot;https://halcanary.org/art/kc1.jpg&quot;&gt;&lt;img src=&quot;https://halcanary.org/art/thumb/kc1.jpg&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;br&gt;
 &lt;a href=&quot;https://halcanary.org/art/kc2.jpg&quot;&gt;&lt;img src=&quot;https://halcanary.org/art/thumb/kc2.jpg&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;br&gt;
 &lt;a href=&quot;https://halcanary.org/art/kc3.jpg&quot;&gt;&lt;img src=&quot;https://halcanary.org/art/thumb/kc3.jpg&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;br&gt;
@@ -12508,7 +12525,7 @@ foreach $file (@files) {
 		<item>
 			<title>Tiny Vaio Laptop</title>
 			<link>https://halcanary.org/vv/2004/04/28/whc03/</link>
-			<guid isPermaLink="false">fa08f30c-37f5-2db9-10b5-a515f53030a0</guid>
+			<guid isPermaLink="false">4eb7c13b-545d-e39e-0f00-16ddf964a5bb</guid>
 			<pubDate>Wed, 28 Apr 2004 17:07:07 -0000</pubDate>
 			<description>&lt;div&gt;&lt;p&gt;Notes on my Sony VAIO PCG-SRX87 laptop, purchased in 2002.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://halcanary.org/photos/2002-12-15-vaio-w-kbd.jpg&quot; alt=&quot;[]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/p&gt;
@@ -12518,7 +12535,7 @@ foreach $file (@files) {
 &lt;p&gt;&lt;strong&gt;Update!&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;In 2003, I installed RedHat 9 on the srx87 with little problems. Some of the hardware is not detected, and the USB kernel module gives a stream of errors.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2&gt;Hardware Notes&lt;/h2&gt;
+&lt;h3&gt;Hardware Notes&lt;/h3&gt;
 &lt;p&gt;Sony VAIO PCG-SRX87&lt;/p&gt;
 &lt;ol type=&quot;1&quot;&gt;
 &lt;li&gt;Step 1: Try to install as normal with latest RedHat Distro (8.0). This failed. The installer was unable to find the FireWire CD-ROM, although it would boot off of the CD-ROM.&lt;/li&gt;
@@ -13404,10 +13421,10 @@ done&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
 		<item>
 			<title>burn-dir</title>
 			<link>https://halcanary.org/vv/2004/02/22/177/</link>
-			<guid isPermaLink="false">0437ae08-8349-7ecb-c89e-a66361baf6b6</guid>
+			<guid isPermaLink="false">a9ca5f1e-d3b9-b9e3-5244-865720b2ee1a</guid>
 			<pubDate>Sun, 22 Feb 2004 10:52:55 -0000</pubDate>
 			<description>&lt;div&gt;&lt;p&gt;This is how to combine mkisofs and cdrecord. This should be a standard script on all systems, but it's not.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;#!/bin/sh
+&lt;pre class=&quot;sh&quot;&gt;&lt;code&gt;#!/bin/sh
 
 ## /usr/local/bin/burn-dir ##
 
@@ -13436,7 +13453,7 @@ eject $CDROM&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
 		<item>
 			<title>search and replace for elisp.</title>
 			<link>https://halcanary.org/vv/2004/02/18/176/</link>
-			<guid isPermaLink="false">ba0a9d07-c0c3-c51a-6a54-c2e062c7abb1</guid>
+			<guid isPermaLink="false">ab8a5762-b94b-8240-26ec-ccc955fded50</guid>
 			<pubDate>Wed, 18 Feb 2004 13:56:59 -0000</pubDate>
 			<description>&lt;div&gt;&lt;p&gt;When mutt is told to &lt;a href=&quot;http://gnupg.org/&quot;&gt;gpg&lt;/a&gt; sign an email, it will use
 &lt;a href=&quot;http://www.freesoft.org/CIE/RFC/1521/6.htm&quot;&gt;Quoted-Printable
@@ -13444,7 +13461,7 @@ Content-Transfer-Encoding&lt;/a&gt;, which
 will replace &lt;code&gt;&quot; \n&quot;&lt;/code&gt; with &lt;code&gt;&quot;=20\n&quot;&lt;/code&gt;, an escape sequence of some sort. (ASCII
 &quot; &quot; is 0x20.)&lt;/p&gt;
 &lt;p&gt;I'd rather replace &lt;code&gt;&quot; \n&quot;&lt;/code&gt; with &lt;code&gt;&quot;\n&quot;&lt;/code&gt; anyways. Here's some elisp code to do just that:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;;; ~/.emacs ;;
+&lt;pre class=&quot;Emacs&quot;&gt;&lt;code&gt;;; ~/.emacs ;;
 (defun hal1 () (interactive)
   (auto-mega-replace  &quot; \n&quot; &quot;\n&quot;))
 (defun auto-mega-replace (arg1 arg2)
@@ -13513,15 +13530,15 @@ You haven't done much of anything&lt;/em&gt;&lt;/p&gt;
 		<item>
 			<title>wget to standard out</title>
 			<link>https://halcanary.org/vv/2004/02/12/172/</link>
-			<guid isPermaLink="false">fc7aa508-c860-5cb6-d92a-84482ead3336</guid>
+			<guid isPermaLink="false">dec3c7de-d5ed-4748-6ec4-dee0d2269d23</guid>
 			<pubDate>Thu, 12 Feb 2004 23:35:59 -0000</pubDate>
-			<description>&lt;div&gt;&lt;pre&gt;&lt;code&gt;#!/bin/sh
+			<description>&lt;div&gt;&lt;pre class=&quot;sh&quot;&gt;&lt;code&gt;#!/bin/sh
 #DTPD#
 ## ~/bin/wgeto ##
 exec wget -o /dev/null -O - &quot;$@&quot;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Then,&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;$ wgeto http://craphound.com/ebooksneitherenorbooks.txt \
-     | fold -s -w 70 | less &lt;/code&gt;&lt;/pre&gt;
+   | fold -s -w 70 | less &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Explanation for non-unix-literate people: First of all, I wrote a neat script
 called &lt;code&gt;wgeto&lt;/code&gt;. &lt;code&gt;wget&lt;/code&gt; is a program that downloads stuff off of the internet, via
 http or ftp. wgeto calls wget, but tells it to ignore the progress dialog by
@@ -13913,14 +13930,14 @@ Away shall fade ! Away shall fade!&lt;/em&gt;&lt;/p&gt;
 		<item>
 			<title>ls directories script</title>
 			<link>https://halcanary.org/vv/2003/12/03/136/</link>
-			<guid isPermaLink="false">e05b70cc-cc39-3bd3-0c5d-f0a55df60334</guid>
+			<guid isPermaLink="false">fe2f9cd8-3ae5-6b78-a23f-cf2e36806639</guid>
 			<pubDate>Wed, 03 Dec 2003 20:15:15 -0000</pubDate>
 			<description>&lt;div&gt;&lt;p&gt;Useful unix tip of the week:&lt;/p&gt;
-&lt;p&gt;#!/bin/sh
-#DTPD#&lt;/p&gt;
-&lt;h2&gt;$HOME/bin/lsd&lt;/h2&gt;
-&lt;p&gt;/bin/ls --color='yes' \
--l &quot;$@&quot; | grep &quot;^d&quot;&lt;/p&gt;&lt;/div&gt;</description>
+&lt;pre class=&quot;sh&quot;&gt;&lt;code&gt;#!/bin/sh
+#DTPD#
+## $HOME/bin/lsd ##
+/bin/ls --color='yes' \
+    -l &quot;$@&quot; | grep &quot;^d&quot;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
 			<category>computers-code</category>
 		</item>
 		<item>
@@ -14295,10 +14312,10 @@ words,&lt;/span&gt; words!&lt;/p&gt;
 		<item>
 			<title>ssh-add script.</title>
 			<link>https://halcanary.org/vv/2003/08/26/103/</link>
-			<guid isPermaLink="false">7b5f54ba-c6b9-79c7-e3a3-609eb54890b5</guid>
+			<guid isPermaLink="false">839247fe-bab2-c6b8-3ba8-729334b90b63</guid>
 			<pubDate>Tue, 26 Aug 2003 13:51:35 -0000</pubDate>
 			<description>&lt;div&gt;&lt;p&gt;Here's little script that check to see if the ssh-agent knows any keys. If not, it asks for your passphrase. Then it executes ssh.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;#!/bin/sh
+&lt;pre class=&quot;sh&quot;&gt;&lt;code&gt;#!/bin/sh
 #DTPD#
 ## $HOME/bin/ssh ##
 if ! (ssh-add -l &amp;gt; /dev/null); then
@@ -14556,9 +14573,9 @@ exec /usr/bin/ssh &quot;$@&quot;;&lt;/code&gt;&lt;/pre&gt;
 		<item>
 			<title>Standard Keybinding for Emacs</title>
 			<link>https://halcanary.org/vv/2003/07/24/81/</link>
-			<guid isPermaLink="false">3a3e5f5c-923a-a38e-9144-2d1fa76a7c57</guid>
+			<guid isPermaLink="false">9931882f-4719-7ad9-29cb-c803e88e83c6</guid>
 			<pubDate>Thu, 24 Jul 2003 21:49:52 -0000</pubDate>
-			<description>&lt;div&gt;&lt;pre&gt;&lt;code&gt;;; $HOME/.emacs ;;
+			<description>&lt;div&gt;&lt;pre class=&quot;Emacs&quot;&gt;&lt;code&gt;;; $HOME/.emacs ;;
 (global-set-key
    [(control s)]
    'save-buffer)
@@ -14609,10 +14626,10 @@ exec /usr/bin/ssh &quot;$@&quot;;&lt;/code&gt;&lt;/pre&gt;
 		<item>
 			<title>despaceify script</title>
 			<link>https://halcanary.org/vv/2003/07/19/76/</link>
-			<guid isPermaLink="false">440e460b-1957-568d-4612-0ab6fbd0e844</guid>
+			<guid isPermaLink="false">2cbbf58d-c1bd-95f8-3d97-7931b066070d</guid>
 			<pubDate>Sat, 19 Jul 2003 03:50:10 -0000</pubDate>
 			<description>&lt;div&gt;&lt;p&gt;It now gets rid of apostrophies as well as spaces. It will then convert to lowercase unless it is a directory.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;#!/usr/bin/perl
+&lt;pre class=&quot;Perl&quot;&gt;&lt;code&gt;#!/usr/bin/perl
 ## ~/bin/despaceify ##
 #DTPD#
 foreach my $file (glob &quot;\*&quot;) {
@@ -14727,10 +14744,10 @@ There are no files in folder '/DCIM/CANONMSC'.&lt;/code&gt;&lt;/pre&gt;
 		<item>
 			<title>&lt;hr&gt; considered harmful.</title>
 			<link>https://halcanary.org/vv/2003/07/16/71/</link>
-			<guid isPermaLink="false">fd3bdd46-2fa7-f68b-8e8d-1da446fd8ae3</guid>
+			<guid isPermaLink="false">4e8d2f67-a0f5-7cfa-cf20-ed49ed44046b</guid>
 			<pubDate>Wed, 16 Jul 2003 19:20:59 -0000</pubDate>
-			<description>&lt;div&gt;&lt;p&gt;90% of the time you use a &amp;lt;hr&amp;gt; you are putting a divider between sections or subsections that are already (or should already) be divided by &amp;lt;h2&amp;gt;'s or &amp;lt;h3&amp;gt;'s. Instead use &amp;lt;div&amp;gt;'s to break up sections and subsections. So&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;!--document.html--&amp;gt;
+			<description>&lt;div&gt;&lt;p&gt;90% of the time you use a &lt;code&gt;&amp;lt;hr&amp;gt;&lt;/code&gt; you are putting a divider between sections or subsections that are already (or should already) be divided by &lt;code&gt;&amp;lt;h2&amp;gt;&lt;/code&gt;'s or &lt;code&gt;&amp;lt;h3&amp;gt;&lt;/code&gt;'s. Instead use &lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt;'s to break up sections and subsections. So&lt;/p&gt;
+&lt;pre class=&quot;HTML&quot;&gt;&lt;code&gt;&amp;lt;!--document.html--&amp;gt;
 &amp;lt;h2&amp;gt;Welcome&amp;lt;/h2&amp;gt;
 &amp;lt;p&amp;gt;Paragraph&amp;lt;/p&amp;gt;
 &amp;lt;hr /&amp;gt;
@@ -14739,7 +14756,7 @@ There are no files in folder '/DCIM/CANONMSC'.&lt;/code&gt;&lt;/pre&gt;
 &amp;lt;p&amp;gt;Paragraph&amp;lt;/p&amp;gt;
 &amp;lt;hr /&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;becomes&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;!--document.html--&amp;gt;
+&lt;pre class=&quot;HTML&quot;&gt;&lt;code&gt;&amp;lt;!--document.html--&amp;gt;
 &amp;lt;div class=&quot;section&quot;&amp;gt;
   &amp;lt;h2&amp;gt;Welcome&amp;lt;/h2&amp;gt;
   &amp;lt;p&amp;gt;Paragraph&amp;lt;/p&amp;gt;
@@ -14749,13 +14766,13 @@ There are no files in folder '/DCIM/CANONMSC'.&lt;/code&gt;&lt;/pre&gt;
   &amp;lt;h2&amp;gt;Blog&amp;lt;/h2&amp;gt;
   &amp;lt;p&amp;gt;Paragraph&amp;lt;/p&amp;gt;
 &amp;lt;/div&amp;gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;The following css will produce a &amp;lt;hr&amp;gt; style border:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;/* style.css */
+&lt;p&gt;The following css will produce a &lt;code&gt;&amp;lt;hr&amp;gt;&lt;/code&gt; style border:&lt;/p&gt;
+&lt;pre class=&quot;CSS&quot;&gt;&lt;code&gt;/* style.css */
 div.section {
-   border-bottom:
-    solid 3px #000000 ;
- }&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;At this point you can have more fun with the css, without touching the html any more. (Isn't that the point?) Try putting each &amp;lt;div class=&quot;section&quot;&amp;gt; in its own little colorful box.&lt;/p&gt;&lt;/div&gt;</description>
+  border-bottom:
+  solid 3px #000000 ;
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;At this point you can have more fun with the css, without touching the html any more. (Isn't that the point?) Try putting each &lt;code&gt;&amp;lt;div class=&quot;section&quot;&amp;gt;&lt;/code&gt; in its own little colorful box.&lt;/p&gt;&lt;/div&gt;</description>
 			<category>computers-code</category>
 		</item>
 		<item>
@@ -14866,18 +14883,18 @@ I ain't got no matches but I've got so far to go.&lt;/em&gt;&lt;/p&gt;
 		<item>
 			<title>cable torrent</title>
 			<link>https://halcanary.org/vv/2003/07/09/61/</link>
-			<guid isPermaLink="false">23952f76-0a5f-bb1c-ef69-84e3bd648f22</guid>
+			<guid isPermaLink="false">52aa5c4e-4f61-8847-03d3-9b4f57a1fe73</guid>
 			<pubDate>Wed, 09 Jul 2003 01:13:46 -0000</pubDate>
-			<description>&lt;div&gt;&lt;h4&gt;high-speed internet&lt;/h4&gt;
+			<description>&lt;div&gt;&lt;h3&gt;high-speed internet&lt;/h3&gt;
 &lt;p&gt;I got cable modem service last week. This is the first time I've had a high speed connection at my house, and here is what I think:&lt;/p&gt;
 &lt;p&gt;All in all, it's a good idea. A bit expensive, but these things can be budgeted for.&lt;/p&gt;
-&lt;h4&gt;bittorrent&lt;/h4&gt;
+&lt;h3&gt;bittorrent&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&quot;http://bitconjurer.org/BitTorrent/&quot;&gt;BitTorrent&lt;/a&gt; is awesome. Because the load is distributed evenly, you can get the full use of whatever bandwidth you have.&lt;/p&gt;
 &lt;p&gt;I love how the program is so minimalistic. Compare to Kazaa, which is a huge executable that only seems to run on Windows. It achieves this minimality by using existing httpd clients/servers to not only deliver the .torrent metafiles, but also information about and links to the torrents in normal text/html.&lt;/p&gt;
 &lt;p&gt;It's annoying when servers deliver .torrent files as text/plain instead of application/x-bittorrent.&lt;/p&gt;
-&lt;h4&gt;hardware addiction&lt;/h4&gt;
+&lt;h3&gt;hardware addiction&lt;/h3&gt;
 &lt;p&gt;With all of the crap I'm downloading, I may need to get a new hard drive soon. Right now I have two 30 GB drives. If I replaced one of them with a 120 GB drive, then I'd have two and a half times as much storage. If I had a mobo with more than two IDE channels, I could have more than four devices. But I really shouldn't spend any more money on hardware. Instead I'll spend it on blank CD-Rs.&lt;/p&gt;
-&lt;h4&gt;the urge to game&lt;/h4&gt;
+&lt;h3&gt;the urge to game&lt;/h3&gt;
 &lt;p&gt;I read a review of &lt;a href=&quot;http://starwarsgalaxies.station.sony.com/&quot;&gt;Star Wars Galaxies&lt;/a&gt; the other day. Made me want to see the game. Explore it for a few weeks, at least. Their pricing model discourages the casual gamer. It's $12 to $15 per month plus $50 up front for the game. If they were really confidant that the game was fun, it would be $20 up front for the first month and $20/per month after that. If they can keep a gamer for a year they've more than broke even. But $50 is a bit much for a game that I might want to stop playing the first month.&lt;/p&gt;
 &lt;p&gt;And I'm certainly not paying $80 for the collectors edition since the standard edition is sold out. `&lt;/p&gt;
 &lt;p&gt;This is a well established business principle. Give away the razor and profit on the blades.&lt;/p&gt;
@@ -14946,13 +14963,13 @@ I ain't got no matches but I've got so far to go.&lt;/em&gt;&lt;/p&gt;
 		<item>
 			<title>Beautiful one-liner</title>
 			<link>https://halcanary.org/vv/2003/05/29/55/</link>
-			<guid isPermaLink="false">8ad3c06d-ead6-91aa-6337-92d5acd305e7</guid>
+			<guid isPermaLink="false">bb903921-7884-ddc7-3cf9-3bc242e720ef</guid>
 			<pubDate>Thu, 29 May 2003 02:26:17 -0000</pubDate>
-			<description>&lt;div&gt;&lt;pre&gt;&lt;code&gt;#/bin/sh
+			<description>&lt;div&gt;&lt;pre class=&quot;sh&quot;&gt;&lt;code&gt;#/bin/sh
 #DTPD#
 # ~/bin/despacify v2003-05
-ls -x1 | \\
-  perl -e 'while(&amp;lt;&amp;gt;){chomp;$x=$\_;s/ /\_/g; \\
+ls -x1 | \
+  perl -e 'while(&amp;lt;&amp;gt;){chomp;$x=$\_;s/ /\_/g; \
   system(&quot;mv \\&quot;$x\\&quot; \\&quot;$\_\\&quot;&quot;) if ($x ne $\_);}'&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
 			<category>computers-code</category>
 		</item>
@@ -14986,11 +15003,11 @@ ls -x1 | \\
 		<item>
 			<title>summer plans</title>
 			<link>https://halcanary.org/vv/2003/05/01/51/</link>
-			<guid isPermaLink="false">c48f8789-e715-47fa-6f9e-373501d5f4bd</guid>
+			<guid isPermaLink="false">4321dd7f-a764-bf15-289c-679e45e2ec32</guid>
 			<pubDate>Thu, 01 May 2003 13:11:42 -0000</pubDate>
 			<description>&lt;div&gt;&lt;p&gt;It's a rainy grey week. That's okay, because the plants need rain. But it had better brighten up soon.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h4&gt;This summer.&lt;/h4&gt;
+&lt;h3&gt;This summer.&lt;/h3&gt;
 &lt;p&gt;I don't know if I've mentioned my plans for the summer yet. I'm going to go hike pieces of the &lt;a href=&quot;http://www.appalachiantrail.org/&quot;&gt;appalachian trail&lt;/a&gt;. Here's the plan :&lt;/p&gt;
 &lt;ol type=&quot;1&quot;&gt;
 &lt;li&gt;Next week and the week after: Take exams&lt;/li&gt;
@@ -15010,11 +15027,11 @@ ls -x1 | \\
 		<item>
 			<title>analysis / linux / death</title>
 			<link>https://halcanary.org/vv/2003/04/18/50/</link>
-			<guid isPermaLink="false">2ad20946-2321-918a-0805-d8b65e035d3f</guid>
+			<guid isPermaLink="false">36ea90f4-4b7c-82dd-05e9-69aabf5564a4</guid>
 			<pubDate>Fri, 18 Apr 2003 09:54:27 -0000</pubDate>
 			<description>&lt;div&gt;&lt;p&gt;I did extremely bad on that analysis exam last week. I should start doing homework in that class.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h4&gt;Even More Linux Crap&lt;/h4&gt;
+&lt;h3&gt;Even More Linux Crap&lt;/h3&gt;
 &lt;p&gt;We installed rh9 onto the ups server/workstation. Gnome is not useable on a pII-233, and there are no smaller windowmanagers. So we installed windowmaker. I find that using &lt;a href=&quot;http://freshmeat.net/projects/wmbuildmenu/&quot;&gt;this script&lt;/a&gt; helps with getting the windowmaker menus into good shape.&lt;/p&gt;
 &lt;p&gt;Linux on the Vaio is utterly unusable right now. I'm not going to fool with it any more for a while. The other day, I booted into windows, installed &lt;a href=&quot;http://www.chiark.greenend.org.uk/~sgtatham/putty/&quot;&gt;putty&lt;/a&gt; and &lt;a href=&quot;http://mozilla.org/projects/phoenix/&quot;&gt;phoenix&lt;/a&gt; and got some work done...by sshing into a linux server and doing my work there.&lt;/p&gt;
 &lt;hr&gt;
@@ -15141,7 +15158,7 @@ ls -x1 | \\
 		<item>
 			<title>War On.</title>
 			<link>https://halcanary.org/vv/2003/03/19/42/</link>
-			<guid isPermaLink="false">7b386862-35ed-ffc1-988f-fe6165822746</guid>
+			<guid isPermaLink="false">8a5484d5-1ade-4523-2bb7-45bbd1960f79</guid>
 			<pubDate>Wed, 19 Mar 2003 23:46:50 -0000</pubDate>
 			<description>&lt;div&gt;&lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;I'm not here&lt;br&gt;
@@ -15156,7 +15173,7 @@ Yeah, it's gone&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;The war is on, as of cira 9:00PM CST.&lt;/p&gt;
 &lt;p&gt;Currently drinking: White Russian. I'll be switching to whiskey soon.&lt;/p&gt;
 &lt;p&gt;Note: the Iraq debate I was going to sponsor next week will not be taking place. The point is now moot.&lt;/p&gt;
-&lt;h4&gt;Mindless Link Propagation&lt;/h4&gt;
+&lt;h3&gt;Mindless Link Propagation&lt;/h3&gt;
 &lt;ol type=&quot;1&quot;&gt;
 &lt;li&gt;&lt;p&gt;Here's something to read from &lt;a href=&quot;http://www.observer.co.uk/iraq/story/0,12239,905990,00.html&quot;&gt;Terry Jones in the Observer&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Please, support the DOWN WITH NATIONALISM campaign. All you have to do is copy and pass on &lt;a href=&quot;https://halcanary.org/images/down-with-nationalism.png&quot;&gt;this image&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;

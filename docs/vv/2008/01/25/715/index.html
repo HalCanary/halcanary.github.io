@@ -78,7 +78,6 @@ ul.flat li::before {content:"[";}
   </header>
   <div class="content e-content">
 <div style="display:none;"></div>
-<h1>Email2</h1>
 <p>Here's a proposal for new e-mail protocols to completely replace existing SMTP/MIME/IMAP/POP protocols. There would be a phase-in period, lasting about 5-10 years, during which two systems would exist in paralel and servers would fall back to old protocols where the new ones aren't availible yet.</p>
 <p>The name of the new protocols would be Email2. It would contain the following protocols:</p>
 <ul>
@@ -120,7 +119,7 @@ algorithm</li>
 <li>allows user to switch clients seamlessly</li>
 </ul></li>
 </ul>
-<h2>Email2 E-Mail File Format</h2>
+<h3>Email2 E-Mail File Format</h3>
 <p>First of all, we need to get rid of 7-bit and linelength limitations that are part of SMTP.</p>
 <p>The message is composed of three parts:</p>
 <ul>
@@ -175,12 +174,12 @@ Tabs would be rendered in a consistant way---for example one could put a tab-sto
 <p>Additionally, all conforming mail clinets <strong>must</strong> recognize IANA-registered URI schemes and make them into clickable (or otherwise selectable) links. But those links will look like URIs, to keep the process <strong>transparent</strong> to the user. URI's can be imbedded in the text in the form "[whitespace]URI[whitespace]", "(URI)", "[URI]", "{URI}", or "<URI>". This should be recognizable by the client since URIs generally do not contain whitespace characters or &lt;[({})]&gt;.</p>
 <p>The header has none of this markup.</p>
 <p>For the N attachemtns, the Internet media type, the preferred document name, whether it is compressed, a checksum or cryptographic hash, and file length is specified. For security purposes, the client mut not open these attachments automatically and should call a virus scanner before opening them. It is recommended that all email clients attempt to compress the attachements with DEFLATE before attaching them. If the compression results are good, then they will be attached like that. (For example, the ZIP file format can include files either compressed or uncompressed.) a checksum for each attachment would be included in the email file format. The exact format would be part of the standard, but I don't have an opinion on how it should work.</p>
-<h2>Email2 E-Mail Storage Protocol</h2>
+<h3>Email2 E-Mail Storage Protocol</h3>
 <p>The new standard would specify a standard way of storing email in a filesystem, similar to Maildir. This way, a user can <strong>always</strong> switch email clients seamlessly. Furthermore, a default place to store email would be used, specifed for each operating system. For example, under Windows it would be something like</p>
 <pre><code>    %HOMEDRIVE%%HOMEPATH%\\Application Data\\email\\</code></pre>
 <p>and *NIX would use</p>
 <pre><code>    $HOME/.email/</code></pre>
-<h2>Email2 E-Mail Client Protocol &amp; Server Protocol</h2>
+<h3>Email2 E-Mail Client Protocol &amp; Server Protocol</h3>
 <p>Email2 is a Client-Server-Server-Client protocol. No more forwarding email through a chain of servers. No more faking addresses.</p>
 <p>Suppose bannana@orange.com wants to email mango@plum.com.</p>
 <p>Bannana's client must connect to mail.orange.com directly, using a TLS encrypted session and verfying his creditions with a password (or optionally some other identifer, like a PKE key).</p>
@@ -216,7 +215,7 @@ Local Folders/
 <p>The user could drag-and-drop the new email from Bannana from plum.com/Inbox/ to plum.com/Old/Bannana . This would be an atomic operation that the server could perform without copying the email, just moving some pointers around.</p>
 <p>I am no human-interface guru, so this could probably use some refining.</p>
 <p>The client also has a way of changing the delivery rules on the server in some standard way.</p>
-<h2>Mailing Lists</h2>
+<h3>Mailing Lists</h3>
 <p>Client-Server-Server-Server-Client Proticol would exist for mailing lists.</p>
 <p>Suppose that bannana@orange.com wants to send a email to the Fruits mailing list, which has an email address of fruits%pear.com. mango@plum.com is on that list.</p>
 <p>First of all, notice that mailing list addresses have a different syntax, replaceing the "@" with a "%". the "%" is supposed to too like mutliple "@"s. [Is that going to be a problem with URI syntax? maybe we should use fruits#pear.com.]</p>
@@ -237,7 +236,7 @@ BCC: Fruits &lt;fruits%pear.com&gt;
 Delivered To: mango &lt;mango@plum.com&gt;</code></pre>
 <p>is what Mango would see. Everyone on that list knows what list was BCCed. Apple, however, is in the dark.</p>
 <p>There is no way to see who is on a mailing list unless you are an owner of that list. Of course the owner might make that information availible some other way.</p>
-<h2>Timestamps</h2>
+<h3>Timestamps</h3>
 <p>All timestamps in the email header should use ISO 8601 in the following way: 2007-12-21 17:47:01-05:00. Clients can convert to local timezone if they wish. Clients may diplay dates using local conventions as well.</p>
 <p>There are multiple timestamps in the header</p>
 <ul>
@@ -248,7 +247,7 @@ Delivered To: mango &lt;mango@plum.com&gt;</code></pre>
 <li>DateC = when the recieving client first noticed it</li>
 </ul>
 <p>Client machines often have incorrect clocks. Servers are encouraged to use NTP to keep thier clocks up to date, so maybe a client could be configured to use DateS to timestamp the real message.</p>
-<h2>Dead addresses</h2>
+<h3>Dead addresses</h3>
 <p>Since mail can no longer be forwarded, what happens when you get a new email address?</p>
 <p>All email servers should keep a list of no-longer active email addresses and give an apropriate error code for undeliverable mail.</p>
 <p>Delivery status:</p>
@@ -259,7 +258,7 @@ Delivered To: mango &lt;mango@plum.com&gt;</code></pre>
 </ul>
 <p>When a mail account is closed, the user or administrator can add a 1kb plain text (UTF-8) message explaining why it is closed and maybe another address to try.</p>
 <p>This message should get back to the sender somehow, but not in the form of another email.</p>
-<h2>Problems with this approac</h2>
+<h3>Problems with this approac</h3>
 <p>A lot of coding. But most of it is really simple stuff.</p>
 <p>Clients will need to be able to connect to both kinds of email servers for the interum.</p>
 <p>Mail-sorting rules might be difficult to stadardize.</p>

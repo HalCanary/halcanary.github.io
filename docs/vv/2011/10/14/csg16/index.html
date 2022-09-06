@@ -78,7 +78,7 @@ ul.flat li::before {content:"[";}
   </header>
   <div class="content e-content">
 <div style="display:none;"></div>
-<pre><code>(defun next-good-buffer () &quot;HWC&quot; (interactive)
+<pre class="Emacs"><code>(defun next-good-buffer () &quot;HWC&quot; (interactive)
   (next-buffer)
   (while (and (not (string= (buffer-name) &quot;*scratch*&quot;))
           (equal (buffer-file-name) nil))

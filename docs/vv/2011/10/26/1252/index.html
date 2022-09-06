@@ -79,7 +79,7 @@ ul.flat li::before {content:"[";}
   <div class="content e-content">
 <div style="display:none;"></div>
 <p>These are my new spamassassin rules. If your configured email client fails to have a valid DKIM or DK signature or SPF record, I'm probably going to mark you as spam.</p>
-<pre><code>#### .spamassassin/user_prefs
+<pre><code># .spamassassin/user_prefs
 required_score -1.0
 score DKIM_VALID_AU -10.0
 score SPF_PASS -5.0</code></pre>

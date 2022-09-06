@@ -80,7 +80,7 @@ ul.flat li::before {content:"[";}
 <div style="display:none;"></div>
 <p>In the class I am sitting in on this semester - <a href="http://www.cs.unc.edu/Admin/Courses/descriptions/257.html">Visual Solid Shape</a>, we use a piece of software called <a href="http://andrewthall.org/papers/draft7_7Feb05.pdf">shapemonger</a>.</p>
 <p>I wanted to get a better view at monge patch (a surface defined by (<em>x</em>,<em>y</em>,<em>f</em>(<em>x</em>,<em>y</em>)) so I wrote a little Python-VTK program to generate a vtkPolyData of the surface.</p>
-<pre><code>#!/usr/bin/vtkpython
+<pre class="Python"><code>#!/usr/bin/vtkpython
 import vtk
 
 function = lambda x,y: x**2 - y**2
@@ -120,7 +120,7 @@ print &#39;wrote to&#39;, outputName</code></pre>
 <p>The surface can be viewed in Paraview or <a href="https://github.com/HalCanary/vtkviewer">vtkviewer</a>.</p>
 <p><img src="/images/vtkviewer0.png" alt="[]" /></p>
 <p>To make this surface look better, calculate the normals. The (unnormalized) normal direction is (-∂f/∂x,-∂f/∂y,1).</p>
-<pre><code>.......
+<pre class="Python"><code>.......
 def partial(func,v,i):
     epsilon = 5e-7
     def f(v,i,d):

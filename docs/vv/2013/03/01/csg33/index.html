@@ -78,7 +78,7 @@ ul.flat li::before {content:"[";}
   </header>
   <div class="content e-content">
 <div style="display:none;"></div>
-<pre><code>/*
+<pre class="C++"><code>/*
   a common idiom:
  */
 void C::f() {
@@ -97,7 +97,7 @@ void C::f() {
     (delete this-&gt;ptr) = NULL;
 }</code></pre>
 <p><strong>UPDATE</strong> 2013-05-12: Stroustrup suggests an alternative:</p>
-<pre><code>template&lt;class T&gt;
+<pre class="C++"><code>template&lt;class T&gt;
 inline void destroy(T*&amp; p) {
   delete p;
   p = NULL;

@@ -78,7 +78,7 @@ ul.flat li::before {content:"[";}
   </header>
   <div class="content e-content">
 <div style="display:none;"></div>
-<pre><code>#!/usr/bin/python
+<pre class="Python"><code>#!/usr/bin/python
 
 import Image
 import numpy
@@ -91,7 +91,7 @@ ima = numpy.zeros((Y,X,4), dtype=numpy.uint8)
 ima[:,:,3] = 255 # make opaque
 Image.fromarray(ima,mode=&#39;RGBA&#39;).save(filename)</code></pre>
 <p>For example:</p>
-<pre><code>#!/usr/bin/env python
+<pre class="Python"><code>#!/usr/bin/env python
 import Image
 import numpy
 N, K = (16,16), (256, 256)
