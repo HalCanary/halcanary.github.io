@@ -57,27 +57,27 @@ ul.flat li {display:inline;}
 ul.flat li::after {content:"]";}
 ul.flat li::before {content:"[";}
 </style>
-<link rel="alternate" type="application/atom+xml" title="/vv/" href="/vv/rss.rss">
+<link title="/vv/" href="/vv/rss.rss" rel="alternate" type="application/atom+xml">
 <!-- Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED. -->
 </head>
 <body>
 
-<article id="2013/04/14/csg34" class="h-entry">
-  <header>
-    <!-- SRC= 2013-04-14-csg34.md -->
-    <h1 class="blogtitle p-name">Pointer class</h1>
+<article class="h-entry" id="2013/04/14/csg34">
+<header>
+<!-- SRC= 2013-04-14-csg34.md -->
+<h1 class="blogtitle p-name">Pointer class</h1>
 
-    <div class="byline plainlink">
-      <div>
-          <div class="p-author">Hal Canary</div>
-          <div><time datetime="2013-04-14T12:00:00-05:00" class="dt-published">2013-04-14 12:00:00-05:00 (CDT)</time></div>
-          <div><a href="/vv/2013/04/14/csg34/" class="u-url u-uid">https://halcanary.org/vv/2013/04/14/csg34/</a></div>
-          <div><a href="/vv/category/uncategorized/" class="p-category">#uncategorized</a></div>
-      </div>
-    </div>
-  </header>
-  <div class="content e-content">
-<div style="display:none;"></div>
+<div class="byline plainlink">
+<div>
+<div class="p-author">Hal Canary</div>
+<div><time class="dt-published" datetime="2013-04-14T12:00:00-05:00">2013-04-14 12:00:00-05:00 (CDT)</time></div>
+<div><a class="u-url u-uid" href="/vv/2013/04/14/csg34/">https://halcanary.org/vv/2013/04/14/csg34/</a></div>
+<div><a class="p-category" href="/vv/category/uncategorized/">#uncategorized</a></div>
+</div>
+</div>
+</header>
+<div class="content e-content">
+
 <p>Suppose you are writing a C++ program and are linking to a C library. Many of the library calls return a pointer to a heap-allocated structure. You are expected to free that structure using a specialized free function. For example, the openssl library has a BIGNUM type that is typically created using BN_new() and deleted using BN_free(); The following <code>Pointer&lt; BIGNUM, BN_clear_free &gt;</code> class will take ownership of the BIGNUM pointer in a smart-pointer way and call the BN_free() function when ever the BIGNUM_ptr goes out of scope.</p>
 <p>This allows me to exit a function in any of several places (using return or throw) without explicitly freeing memeory.</p>
 <pre class="C++"><code>// Pointer Template
@@ -172,7 +172,7 @@ int main(int, char **) {
   std::cout &lt;&lt; dec &lt;&lt; &#39;\n&#39;;
   return 0;
 }</code></pre>
-  </div>
+</div>
 </article>
 <hr>
 <nav>

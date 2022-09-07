@@ -57,32 +57,32 @@ ul.flat li {display:inline;}
 ul.flat li::after {content:"]";}
 ul.flat li::before {content:"[";}
 </style>
-<link rel="alternate" type="application/atom+xml" title="/vv/" href="/vv/rss.rss">
+<link title="/vv/" href="/vv/rss.rss" rel="alternate" type="application/atom+xml">
 <!-- Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED. -->
 </head>
 <body>
 
-<article id="2004/05/30/249" class="h-entry">
-  <header>
-    <!-- SRC= 2004-05-30-249.md -->
-    <h1 class="blogtitle p-name">Xlib:  extension "GLX" missing</h1>
+<article class="h-entry" id="2004/05/30/249">
+<header>
+<!-- SRC= 2004-05-30-249.md -->
+<h1 class="blogtitle p-name">Xlib:  extension "GLX" missing</h1>
 
-    <div class="byline plainlink">
-      <div>
-          <div class="p-author">Hal Canary</div>
-          <div><time datetime="2004-05-30T23:14:29-05:00" class="dt-published">2004-05-30 23:14:29-05:00 (CDT)</time></div>
-          <div><a href="/vv/2004/05/30/249/" class="u-url u-uid">https://halcanary.org/vv/2004/05/30/249/</a></div>
-          <div><a href="/vv/category/computers-code/" class="p-category">#computers-code</a></div>
-      </div>
-    </div>
-  </header>
-  <div class="content e-content">
-<div style="display:none;"></div>
+<div class="byline plainlink">
+<div>
+<div class="p-author">Hal Canary</div>
+<div><time class="dt-published" datetime="2004-05-30T23:14:29-05:00">2004-05-30 23:14:29-05:00 (CDT)</time></div>
+<div><a class="u-url u-uid" href="/vv/2004/05/30/249/">https://halcanary.org/vv/2004/05/30/249/</a></div>
+<div><a class="p-category" href="/vv/category/computers-code/">#computers-code</a></div>
+</div>
+</div>
+</header>
+<div class="content e-content">
+
 <p>Odd issue in linux/x11. I used to have the evil proprietary Nvidia drivers loaded. I gave up on them recently, but once I installed a new kernel without them, glx (openGL for x) stopped working. I got the error:</p>
 <p><code>Xlib: extension "GLX" missing on display ":0.0"</code></p>
 <p>It should have worked, as the file <code>/usr/X11R6/lib/modules/extensions/libglx.a</code> should have provided this funtionality.</p>
 <p>But alas, Xorg X11 was using the file <code>/usr/X11R6/lib/modules/extensions/libglx.so.1.0.5336</code>, left over from the proprietary driver. I deleted this file, restarted X11, and it all workes correctly! I have a fast enough processor that most small openGL apps work fine without hardware acceleration.</p>
-  </div>
+</div>
 </article>
 <hr>
 <nav>

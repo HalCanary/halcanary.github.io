@@ -57,27 +57,27 @@ ul.flat li {display:inline;}
 ul.flat li::after {content:"]";}
 ul.flat li::before {content:"[";}
 </style>
-<link rel="alternate" type="application/atom+xml" title="/vv/" href="/vv/rss.rss">
+<link title="/vv/" href="/vv/rss.rss" rel="alternate" type="application/atom+xml">
 <!-- Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED. -->
 </head>
 <body>
 
-<article id="2010/05/08/984" class="h-entry">
-  <header>
-    <!-- SRC= 2010-05-08-984.md -->
-    <h1 class="blogtitle p-name">simple mergesort</h1>
+<article class="h-entry" id="2010/05/08/984">
+<header>
+<!-- SRC= 2010-05-08-984.md -->
+<h1 class="blogtitle p-name">simple mergesort</h1>
 
-    <div class="byline plainlink">
-      <div>
-          <div class="p-author">Hal Canary</div>
-          <div><time datetime="2010-05-08T07:55:23-05:00" class="dt-published">2010-05-08 07:55:23-05:00 (CDT)</time></div>
-          <div><a href="/vv/2010/05/08/984/" class="u-url u-uid">https://halcanary.org/vv/2010/05/08/984/</a></div>
-          <div><a href="/vv/category/computer-science/" class="p-category">#computer-science</a>; <a href="/vv/category/computers-code/" class="p-category">#computers-code</a></div>
-      </div>
-    </div>
-  </header>
-  <div class="content e-content">
-<div style="display:none;"></div>
+<div class="byline plainlink">
+<div>
+<div class="p-author">Hal Canary</div>
+<div><time class="dt-published" datetime="2010-05-08T07:55:23-05:00">2010-05-08 07:55:23-05:00 (CDT)</time></div>
+<div><a class="u-url u-uid" href="/vv/2010/05/08/984/">https://halcanary.org/vv/2010/05/08/984/</a></div>
+<div><a class="p-category" href="/vv/category/computer-science/">#computer-science</a>; <a class="p-category" href="/vv/category/computers-code/">#computers-code</a></div>
+</div>
+</div>
+</header>
+<div class="content e-content">
+
 <p>Even though I've studied this algorithm a couple of times, I've never had to implement it before. So I assigned it to myself.</p>
 <pre><code>/** should have a time-complecity of O(N×log(N))
     and a space-compelcity of O(N) **/
@@ -185,7 +185,7 @@ void mergesort(int N, int array[]) {
       for (i = 0; i &lt; N; i++)
         array[i] = old[i];
   }</code></pre>
-  </div>
+</div>
 </article>
 <hr>
 <nav>

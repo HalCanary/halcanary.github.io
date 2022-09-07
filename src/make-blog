@@ -34,7 +34,7 @@ top_posts_header = """
 
 <div class="centered" role="contentinfo">The Log of Hal Canary</div>
 
-<details role="search" class="rightside">
+<details class="rightside" role="search">
 <summary>Search</summary>
 <div>
 <form method="get" action="https://www.google.com/search">
@@ -133,35 +133,36 @@ class UpdatingFile(object):
 
 class Post(object):
     def write(self, o, level=1, identifier=None):
-        category_fmt = '<a href="/{1}/category/{0}/" class="p-category">#{0}</a>'
+        category_fmt = '<a class="p-category" href="/{1}/category/{0}/">#{0}</a>'
         categories = '; '.join(category_fmt.format(cat, BASE_DIR) for cat in self.category_list)
         if categories:
             categories = '<div>%s</div>' % categories
         # keys = [ 'src', 'permalinkpart', 'title', 'summary', 'date', 'category_list', 'post' ]
         summ = '    <p class="p-summary">{}</p>'.format(self.summary) if self.summary else ''
+        summ2 = '<div style="display:none;">{}</div>'.format(self.summary) if self.summary else ''
         post_template = """
-<article id="{fragment}" class="h-entry">
-  <header>
-    <!-- SRC= {src} -->
-    <h{level} class="blogtitle p-name">{title}</h{level}>
+<article class="h-entry" id="{fragment}">
+<header>
+<!-- SRC= {src} -->
+<h{level} class="blogtitle p-name">{title}</h{level}>
 {summ}
-    <div class="byline plainlink">
-      <div>
-          <div class="p-author">Hal Canary</div>
-          <div><time datetime="{datetime}" class="dt-published">{date}</time></div>
-          <div><a href="/{permalinkpart}" class="u-url u-uid">{URL_BASE}/{permalinkpart}</a></div>
-          {categories}
-      </div>
-    </div>
-  </header>
-  <div class="content e-content">
-<div style="display:none;">{summary}</div>
+<div class="byline plainlink">
+<div>
+<div class="p-author">Hal Canary</div>
+<div><time class="dt-published" datetime="{datetime}">{date}</time></div>
+<div><a class="u-url u-uid" href="/{permalinkpart}">{URL_BASE}/{permalinkpart}</a></div>
+{categories}
+</div>
+</div>
+</header>
+<div class="content e-content">
+{summ2}
 {post}
-  </div>
+</div>
 </article>
 <hr>
 """
-        o.write(post_template.format(level=level, categories=categories, summ=summ,
+        o.write(post_template.format(level=level, categories=categories, summ=summ, summ2=summ2,
                                      URL_BASE=URL_BASE, **vars(self),
                                      datetime=self.timestamp.isoformat(),
                                      permalinkpart=self.permalinkpart(),

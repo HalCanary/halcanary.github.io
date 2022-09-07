@@ -57,34 +57,34 @@ ul.flat li {display:inline;}
 ul.flat li::after {content:"]";}
 ul.flat li::before {content:"[";}
 </style>
-<link rel="alternate" type="application/atom+xml" title="/vv/" href="/vv/rss.rss">
+<link title="/vv/" href="/vv/rss.rss" rel="alternate" type="application/atom+xml">
 <!-- Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED. -->
 </head>
 <body>
 
-<article id="2006/11/22/664" class="h-entry">
-  <header>
-    <!-- SRC= 2006-11-22-664.md -->
-    <h1 class="blogtitle p-name">postponing ntpd start</h1>
+<article class="h-entry" id="2006/11/22/664">
+<header>
+<!-- SRC= 2006-11-22-664.md -->
+<h1 class="blogtitle p-name">postponing ntpd start</h1>
 
-    <div class="byline plainlink">
-      <div>
-          <div class="p-author">Hal Canary</div>
-          <div><time datetime="2006-11-22T09:28:16-06:00" class="dt-published">2006-11-22 09:28:16-06:00 (CST)</time></div>
-          <div><a href="/vv/2006/11/22/664/" class="u-url u-uid">https://halcanary.org/vv/2006/11/22/664/</a></div>
-          <div><a href="/vv/category/computers-code/" class="p-category">#computers-code</a></div>
-      </div>
-    </div>
-  </header>
-  <div class="content e-content">
-<div style="display:none;"></div>
+<div class="byline plainlink">
+<div>
+<div class="p-author">Hal Canary</div>
+<div><time class="dt-published" datetime="2006-11-22T09:28:16-06:00">2006-11-22 09:28:16-06:00 (CST)</time></div>
+<div><a class="u-url u-uid" href="/vv/2006/11/22/664/">https://halcanary.org/vv/2006/11/22/664/</a></div>
+<div><a class="p-category" href="/vv/category/computers-code/">#computers-code</a></div>
+</div>
+</div>
+</header>
+<div class="content e-content">
+
 <p>Yet another Linux hint:</p>
 <p>Because ntpd (Network Time Protocol Daemon) takes some time to synchronize with the time server, I don't start it on boot:</p>
 <pre><code>$ sudo /sbin/chkconfig ntpd off</code></pre>
 <p>But I do start it later on, as a background process, so I can go ahead and log in before it finishes. One could do this with any startup procedure that slows you down.</p>
 <pre><code>##  Line from /etc/rc.local
 nohup /etc/init.d/ntpd start &gt; /dev/null 2&gt;&amp;1 &amp;</code></pre>
-  </div>
+</div>
 </article>
 <hr>
 <nav>

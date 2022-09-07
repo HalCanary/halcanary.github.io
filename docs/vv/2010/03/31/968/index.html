@@ -57,27 +57,27 @@ ul.flat li {display:inline;}
 ul.flat li::after {content:"]";}
 ul.flat li::before {content:"[";}
 </style>
-<link rel="alternate" type="application/atom+xml" title="/vv/" href="/vv/rss.rss">
+<link title="/vv/" href="/vv/rss.rss" rel="alternate" type="application/atom+xml">
 <!-- Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED. -->
 </head>
 <body>
 
-<article id="2010/03/31/968" class="h-entry">
-  <header>
-    <!-- SRC= 2010-03-31-968.md -->
-    <h1 class="blogtitle p-name">bourne shell absolute path</h1>
+<article class="h-entry" id="2010/03/31/968">
+<header>
+<!-- SRC= 2010-03-31-968.md -->
+<h1 class="blogtitle p-name">bourne shell absolute path</h1>
 
-    <div class="byline plainlink">
-      <div>
-          <div class="p-author">Hal Canary</div>
-          <div><time datetime="2010-03-31T10:20:12-05:00" class="dt-published">2010-03-31 10:20:12-05:00 (CDT)</time></div>
-          <div><a href="/vv/2010/03/31/968/" class="u-url u-uid">https://halcanary.org/vv/2010/03/31/968/</a></div>
-          <div><a href="/vv/category/uncategorized/" class="p-category">#uncategorized</a></div>
-      </div>
-    </div>
-  </header>
-  <div class="content e-content">
-<div style="display:none;"></div>
+<div class="byline plainlink">
+<div>
+<div class="p-author">Hal Canary</div>
+<div><time class="dt-published" datetime="2010-03-31T10:20:12-05:00">2010-03-31 10:20:12-05:00 (CDT)</time></div>
+<div><a class="u-url u-uid" href="/vv/2010/03/31/968/">https://halcanary.org/vv/2010/03/31/968/</a></div>
+<div><a class="p-category" href="/vv/category/uncategorized/">#uncategorized</a></div>
+</div>
+</div>
+</header>
+<div class="content e-content">
+
 <pre><code>#!/bin/sh
 abspath () {
     D7636=`/usr/bin/dirname &quot;$1&quot;`;
@@ -97,7 +97,7 @@ echo &quot;absolute path = \&quot;${ABSPATH}\&quot;&quot;</code></pre>
 abspath () {
     echo &quot;$(cd &quot;$(dirname &quot;$1&quot;)&quot; ; pwd;)/$(basename &quot;$1&quot;)&quot;
 }</code></pre>
-  </div>
+</div>
 </article>
 <hr>
 <nav>

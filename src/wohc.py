@@ -72,10 +72,10 @@ ICON = to_str(base64.b64encode(read_file(ROOT + '/images/2020-HWC3-favicon.png',
 SVG = read_file(SRC + '/hal_canary_3.svg').strip()
 
 HEAD = """<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>{title}</title>
-<link rel="icon" href="data:image/png;base64,{icon}">
+<link rel="icon" href="data:image/png;base64,{icon}"/>
 <style>
 {style}
 </style>
@@ -102,7 +102,7 @@ def head(title, icon=ICON, style=STYLE, years=YEARS):
         '\n',
         E.STYLE('\n' + STYLE + '\n'),
         '\n',
-        E.LINK(rel="alternate", type="application/atom+xml", title="/vv/", href="/vv/rss.rss"),
+        E.LINK(title="/vv/", href="/vv/rss.rss", rel="alternate", type="application/atom+xml"),
         '\n',
         lxml.html.HtmlComment(' Copyright {} Hal Canary. ALL RIGHTS RESERVED. '.format(years)),
         '\n',

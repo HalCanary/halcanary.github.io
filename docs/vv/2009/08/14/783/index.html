@@ -57,27 +57,27 @@ ul.flat li {display:inline;}
 ul.flat li::after {content:"]";}
 ul.flat li::before {content:"[";}
 </style>
-<link rel="alternate" type="application/atom+xml" title="/vv/" href="/vv/rss.rss">
+<link title="/vv/" href="/vv/rss.rss" rel="alternate" type="application/atom+xml">
 <!-- Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED. -->
 </head>
 <body>
 
-<article id="2009/08/14/783" class="h-entry">
-  <header>
-    <!-- SRC= 2009-08-14-783.md -->
-    <h1 class="blogtitle p-name">rounding functions for POSIX bc.</h1>
+<article class="h-entry" id="2009/08/14/783">
+<header>
+<!-- SRC= 2009-08-14-783.md -->
+<h1 class="blogtitle p-name">rounding functions for POSIX bc.</h1>
 
-    <div class="byline plainlink">
-      <div>
-          <div class="p-author">Hal Canary</div>
-          <div><time datetime="2009-08-14T12:26:54-05:00" class="dt-published">2009-08-14 12:26:54-05:00 (CDT)</time></div>
-          <div><a href="/vv/2009/08/14/783/" class="u-url u-uid">https://halcanary.org/vv/2009/08/14/783/</a></div>
-          <div><a href="/vv/category/computers-code/" class="p-category">#computers-code</a></div>
-      </div>
-    </div>
-  </header>
-  <div class="content e-content">
-<div style="display:none;"></div>
+<div class="byline plainlink">
+<div>
+<div class="p-author">Hal Canary</div>
+<div><time class="dt-published" datetime="2009-08-14T12:26:54-05:00">2009-08-14 12:26:54-05:00 (CDT)</time></div>
+<div><a class="u-url u-uid" href="/vv/2009/08/14/783/">https://halcanary.org/vv/2009/08/14/783/</a></div>
+<div><a class="p-category" href="/vv/category/computers-code/">#computers-code</a></div>
+</div>
+</div>
+</header>
+<div class="content e-content">
+
 <pre><code>$ echo &#39;scale=10; 1/3*3;&#39;|bc
 .9999999999</code></pre>
 <p>A work in progress, rounding functions for POSIX bc.</p>
@@ -111,7 +111,7 @@ define round(x) {
   x = x / (10 ^ dec);
   return x;
 }</code></pre>
-  </div>
+</div>
 </article>
 <hr>
 <nav>

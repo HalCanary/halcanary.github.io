@@ -57,27 +57,27 @@ ul.flat li {display:inline;}
 ul.flat li::after {content:"]";}
 ul.flat li::before {content:"[";}
 </style>
-<link rel="alternate" type="application/atom+xml" title="/vv/" href="/vv/rss.rss">
+<link title="/vv/" href="/vv/rss.rss" rel="alternate" type="application/atom+xml">
 <!-- Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED. -->
 </head>
 <body>
 
-<article id="2004/03/04/182" class="h-entry">
-  <header>
-    <!-- SRC= 2004-03-04-182.md -->
-    <h1 class="blogtitle p-name">manipulating filenames</h1>
+<article class="h-entry" id="2004/03/04/182">
+<header>
+<!-- SRC= 2004-03-04-182.md -->
+<h1 class="blogtitle p-name">manipulating filenames</h1>
 
-    <div class="byline plainlink">
-      <div>
-          <div class="p-author">Hal Canary</div>
-          <div><time datetime="2004-03-04T12:27:41-06:00" class="dt-published">2004-03-04 12:27:41-06:00 (CST)</time></div>
-          <div><a href="/vv/2004/03/04/182/" class="u-url u-uid">https://halcanary.org/vv/2004/03/04/182/</a></div>
-          <div><a href="/vv/category/computers-code/" class="p-category">#computers-code</a></div>
-      </div>
-    </div>
-  </header>
-  <div class="content e-content">
-<div style="display:none;"></div>
+<div class="byline plainlink">
+<div>
+<div class="p-author">Hal Canary</div>
+<div><time class="dt-published" datetime="2004-03-04T12:27:41-06:00">2004-03-04 12:27:41-06:00 (CST)</time></div>
+<div><a class="u-url u-uid" href="/vv/2004/03/04/182/">https://halcanary.org/vv/2004/03/04/182/</a></div>
+<div><a class="p-category" href="/vv/category/computers-code/">#computers-code</a></div>
+</div>
+</div>
+</header>
+<div class="content e-content">
+
 <p>gphoto2 grabs images off of my camera and saves it as IMG_XXXX.JPG. I use the <a href="/archives/000073.html">despacify script</a> to convert to lowercase img_XXXX.jpg. Then I run this script to rename th file to include the date the photo was taken: 2003-11-06-img-XXXX.jpg. Then if the filesystem modification date is changed (e.g. if I rotate it.) I will still know when it originated.</p>
 <pre><code>#!/bin/sh
 ## $HOME/bin/rename-files ##
@@ -86,7 +86,7 @@ for FILE in img_????.jpg ; do
     DATE=${X[0]}
     mv -v &quot;$FILE&quot; &quot;$DATE-$FILE&quot;
 done</code></pre>
-  </div>
+</div>
 </article>
 <hr>
 <nav>

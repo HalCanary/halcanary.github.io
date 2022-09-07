@@ -57,27 +57,27 @@ ul.flat li {display:inline;}
 ul.flat li::after {content:"]";}
 ul.flat li::before {content:"[";}
 </style>
-<link rel="alternate" type="application/atom+xml" title="/vv/" href="/vv/rss.rss">
+<link title="/vv/" href="/vv/rss.rss" rel="alternate" type="application/atom+xml">
 <!-- Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED. -->
 </head>
 <body>
 
-<article id="2004/03/17/205" class="h-entry">
-  <header>
-    <!-- SRC= 2004-03-17-205.md -->
-    <h1 class="blogtitle p-name">/dev/clue</h1>
+<article class="h-entry" id="2004/03/17/205">
+<header>
+<!-- SRC= 2004-03-17-205.md -->
+<h1 class="blogtitle p-name">/dev/clue</h1>
 
-    <div class="byline plainlink">
-      <div>
-          <div class="p-author">Hal Canary</div>
-          <div><time datetime="2004-03-17T12:52:27-06:00" class="dt-published">2004-03-17 12:52:27-06:00 (CST)</time></div>
-          <div><a href="/vv/2004/03/17/205/" class="u-url u-uid">https://halcanary.org/vv/2004/03/17/205/</a></div>
-          <div><a href="/vv/category/computers-code/" class="p-category">#computers-code</a></div>
-      </div>
-    </div>
-  </header>
-  <div class="content e-content">
-<div style="display:none;"></div>
+<div class="byline plainlink">
+<div>
+<div class="p-author">Hal Canary</div>
+<div><time class="dt-published" datetime="2004-03-17T12:52:27-06:00">2004-03-17 12:52:27-06:00 (CST)</time></div>
+<div><a class="u-url u-uid" href="/vv/2004/03/17/205/">https://halcanary.org/vv/2004/03/17/205/</a></div>
+<div><a class="p-category" href="/vv/category/computers-code/">#computers-code</a></div>
+</div>
+</div>
+</header>
+<div class="content e-content">
+
 <p>Wondeful farce.</p>
 <blockquote>
 <blockquote>
@@ -86,7 +86,7 @@ ul.flat li::before {content:"[";}
 <p>Well, that's easy. First, download the latest 2.6 kernel (/dev/clue on 2.4 kernels is still experimental). Use a vanilla kernel, the clue patch is probably not working with the kernel your distro may offer. Then get the clue patch, apply it, recompile (configure the clue as module, building it directly into the kernel is not well tested), don't forget to make modules &amp;&amp; make modules_install. Install your new kernel (if you use LILO, dont forget to call /sbin/lilo) and reboot. Type modprobe clue. Then look in the proc filesystem if clue has properly initialized. If not, you might have to create a /etc/clue.conf for your system (see the Clue-device-HOWTO for details, but beware that some instructions there are out of date, so check the CHANGES file of the current release). As soon as everything is running, there should be the clue device in you /dev. Now you need to activate the clue filesystem (installed together with the clue device, just do modprobe cluefs). Now you can just issue the corresponding mount command (the exact options can be found on www.cluefaq.org), and voila. To have your clue activated and mounted automatically, you should adapt your modules.conf and fstab.</p>
 <p>(<a href="http://developers.slashdot.org/comments.pl?sid=100742&amp;cid=8588208">link</a>)</p>
 </blockquote>
-  </div>
+</div>
 </article>
 <hr>
 <nav>

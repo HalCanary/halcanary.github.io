@@ -57,34 +57,34 @@ ul.flat li {display:inline;}
 ul.flat li::after {content:"]";}
 ul.flat li::before {content:"[";}
 </style>
-<link rel="alternate" type="application/atom+xml" title="/vv/" href="/vv/rss.rss">
+<link title="/vv/" href="/vv/rss.rss" rel="alternate" type="application/atom+xml">
 <!-- Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED. -->
 </head>
 <body>
 
-<article id="2011/10/26/1252" class="h-entry">
-  <header>
-    <!-- SRC= 2011-10-26-1252.md -->
-    <h1 class="blogtitle p-name">spam rules</h1>
+<article class="h-entry" id="2011/10/26/1252">
+<header>
+<!-- SRC= 2011-10-26-1252.md -->
+<h1 class="blogtitle p-name">spam rules</h1>
 
-    <div class="byline plainlink">
-      <div>
-          <div class="p-author">Hal Canary</div>
-          <div><time datetime="2011-10-26T15:01:41-05:00" class="dt-published">2011-10-26 15:01:41-05:00 (CDT)</time></div>
-          <div><a href="/vv/2011/10/26/1252/" class="u-url u-uid">https://halcanary.org/vv/2011/10/26/1252/</a></div>
-          <div><a href="/vv/category/computers-code/" class="p-category">#computers-code</a>; <a href="/vv/category/life/" class="p-category">#life</a></div>
-      </div>
-    </div>
-  </header>
-  <div class="content e-content">
-<div style="display:none;"></div>
+<div class="byline plainlink">
+<div>
+<div class="p-author">Hal Canary</div>
+<div><time class="dt-published" datetime="2011-10-26T15:01:41-05:00">2011-10-26 15:01:41-05:00 (CDT)</time></div>
+<div><a class="u-url u-uid" href="/vv/2011/10/26/1252/">https://halcanary.org/vv/2011/10/26/1252/</a></div>
+<div><a class="p-category" href="/vv/category/computers-code/">#computers-code</a>; <a class="p-category" href="/vv/category/life/">#life</a></div>
+</div>
+</div>
+</header>
+<div class="content e-content">
+
 <p>These are my new spamassassin rules. If your configured email client fails to have a valid DKIM or DK signature or SPF record, I'm probably going to mark you as spam.</p>
 <pre><code># .spamassassin/user_prefs
 required_score -1.0
 score DKIM_VALID_AU -10.0
 score SPF_PASS -5.0</code></pre>
 <p>99% of my legitimate correspondents are okay already.</p>
-  </div>
+</div>
 </article>
 <hr>
 <nav>

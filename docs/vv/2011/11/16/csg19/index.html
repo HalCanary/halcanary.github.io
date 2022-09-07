@@ -57,27 +57,27 @@ ul.flat li {display:inline;}
 ul.flat li::after {content:"]";}
 ul.flat li::before {content:"[";}
 </style>
-<link rel="alternate" type="application/atom+xml" title="/vv/" href="/vv/rss.rss">
+<link title="/vv/" href="/vv/rss.rss" rel="alternate" type="application/atom+xml">
 <!-- Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED. -->
 </head>
 <body>
 
-<article id="2011/11/16/csg19" class="h-entry">
-  <header>
-    <!-- SRC= 2011-11-16-csg19.md -->
-    <h1 class="blogtitle p-name">Quick linear regression</h1>
+<article class="h-entry" id="2011/11/16/csg19">
+<header>
+<!-- SRC= 2011-11-16-csg19.md -->
+<h1 class="blogtitle p-name">Quick linear regression</h1>
 
-    <div class="byline plainlink">
-      <div>
-          <div class="p-author">Hal Canary</div>
-          <div><time datetime="2011-11-16T12:00:00-06:00" class="dt-published">2011-11-16 12:00:00-06:00 (CST)</time></div>
-          <div><a href="/vv/2011/11/16/csg19/" class="u-url u-uid">https://halcanary.org/vv/2011/11/16/csg19/</a></div>
-          <div><a href="/vv/category/uncategorized/" class="p-category">#uncategorized</a></div>
-      </div>
-    </div>
-  </header>
-  <div class="content e-content">
-<div style="display:none;"></div>
+<div class="byline plainlink">
+<div>
+<div class="p-author">Hal Canary</div>
+<div><time class="dt-published" datetime="2011-11-16T12:00:00-06:00">2011-11-16 12:00:00-06:00 (CST)</time></div>
+<div><a class="u-url u-uid" href="/vv/2011/11/16/csg19/">https://halcanary.org/vv/2011/11/16/csg19/</a></div>
+<div><a class="p-category" href="/vv/category/uncategorized/">#uncategorized</a></div>
+</div>
+</div>
+</header>
+<div class="content e-content">
+
 <p>Quick linear regression script</p>
 <pre class="Python"><code>#!/usr/bin/env python
 #sudo yum -y install scipy
@@ -105,7 +105,7 @@ x = numpy.array([t[0] for t in inp])
 y = numpy.array([t[1] for t in inp])
 fit = scipy.polyfit(x,y,1)
 print &#39;y = ({0[1]})e^({0[0]})&#39;.format(tuple(fit))</code></pre>
-  </div>
+</div>
 </article>
 <hr>
 <nav>

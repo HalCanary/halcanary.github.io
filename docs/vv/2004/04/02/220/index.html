@@ -57,27 +57,27 @@ ul.flat li {display:inline;}
 ul.flat li::after {content:"]";}
 ul.flat li::before {content:"[";}
 </style>
-<link rel="alternate" type="application/atom+xml" title="/vv/" href="/vv/rss.rss">
+<link title="/vv/" href="/vv/rss.rss" rel="alternate" type="application/atom+xml">
 <!-- Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED. -->
 </head>
 <body>
 
-<article id="2004/04/02/220" class="h-entry">
-  <header>
-    <!-- SRC= 2004-04-02-220.md -->
-    <h1 class="blogtitle p-name">Book Review: Linux Firewalls</h1>
+<article class="h-entry" id="2004/04/02/220">
+<header>
+<!-- SRC= 2004-04-02-220.md -->
+<h1 class="blogtitle p-name">Book Review: Linux Firewalls</h1>
 
-    <div class="byline plainlink">
-      <div>
-          <div class="p-author">Hal Canary</div>
-          <div><time datetime="2004-04-02T15:07:43-06:00" class="dt-published">2004-04-02 15:07:43-06:00 (CST)</time></div>
-          <div><a href="/vv/2004/04/02/220/" class="u-url u-uid">https://halcanary.org/vv/2004/04/02/220/</a></div>
-          <div><a href="/vv/category/books/" class="p-category">#books</a></div>
-      </div>
-    </div>
-  </header>
-  <div class="content e-content">
-<div style="display:none;"></div>
+<div class="byline plainlink">
+<div>
+<div class="p-author">Hal Canary</div>
+<div><time class="dt-published" datetime="2004-04-02T15:07:43-06:00">2004-04-02 15:07:43-06:00 (CST)</time></div>
+<div><a class="u-url u-uid" href="/vv/2004/04/02/220/">https://halcanary.org/vv/2004/04/02/220/</a></div>
+<div><a class="p-category" href="/vv/category/books/">#books</a></div>
+</div>
+</div>
+</header>
+<div class="content e-content">
+
 <p><a href="/isbn/?0735710996"><img src="/images/linux_firewalls.jpg" alt="[book cover]" /></a></p>
 <p>I've been using Ziegler's <em>Linux Firewalls (2nd Edition)</em> to teach myself <code>iptables</code> syntax. I'm not sure that it's the best book for getting started building firewalls and routers, bcause it advocates really compliated rulesets.</p>
 <p><img src="/images/iptables.png" alt="[]" /></p>
@@ -85,7 +85,7 @@ ul.flat li::before {content:"[";}
 <p>Compare the <a href="http://www.linux-firewall-tools.com/ftp/firewall/optimized.firewall.2">giant scripts in Ziegler</a> to <a href="http://www.netfilter.org/documentation/HOWTO//packet-filtering-HOWTO-5.html">Rusty's Really Quick Guide To Packet Filtering</a></p>
 <p>When I was done confguring my router, I had a 61 line iptables script that blocked most ports, did SNAT and DNAT. I didn't feel the need to, for example, DROP packets on the OUTPUT chain.</p>
 <p>Ziegler could use a chapter on troubleshooting with tcpdump and other tools.</p>
-  </div>
+</div>
 </article>
 <hr>
 <nav>

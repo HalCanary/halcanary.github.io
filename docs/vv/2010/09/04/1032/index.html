@@ -57,27 +57,27 @@ ul.flat li {display:inline;}
 ul.flat li::after {content:"]";}
 ul.flat li::before {content:"[";}
 </style>
-<link rel="alternate" type="application/atom+xml" title="/vv/" href="/vv/rss.rss">
+<link title="/vv/" href="/vv/rss.rss" rel="alternate" type="application/atom+xml">
 <!-- Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED. -->
 </head>
 <body>
 
-<article id="2010/09/04/1032" class="h-entry">
-  <header>
-    <!-- SRC= 2010-09-04-1032.md -->
-    <h1 class="blogtitle p-name">Update comparison</h1>
+<article class="h-entry" id="2010/09/04/1032">
+<header>
+<!-- SRC= 2010-09-04-1032.md -->
+<h1 class="blogtitle p-name">Update comparison</h1>
 
-    <div class="byline plainlink">
-      <div>
-          <div class="p-author">Hal Canary</div>
-          <div><time datetime="2010-09-04T13:43:34-05:00" class="dt-published">2010-09-04 13:43:34-05:00 (CDT)</time></div>
-          <div><a href="/vv/2010/09/04/1032/" class="u-url u-uid">https://halcanary.org/vv/2010/09/04/1032/</a></div>
-          <div><a href="/vv/category/computers-code/" class="p-category">#computers-code</a></div>
-      </div>
-    </div>
-  </header>
-  <div class="content e-content">
-<div style="display:none;"></div>
+<div class="byline plainlink">
+<div>
+<div class="p-author">Hal Canary</div>
+<div><time class="dt-published" datetime="2010-09-04T13:43:34-05:00">2010-09-04 13:43:34-05:00 (CDT)</time></div>
+<div><a class="u-url u-uid" href="/vv/2010/09/04/1032/">https://halcanary.org/vv/2010/09/04/1032/</a></div>
+<div><a class="p-category" href="/vv/category/computers-code/">#computers-code</a></div>
+</div>
+</div>
+</header>
+<div class="content e-content">
+
 <p>No comparison. APT (the Advanced Packaging Tool) beats Windows Update by a million to one. I had hoped that Windows Seven would improve things, but no such luck.</p>
 <p>APT: You run this script, once, in the background and it does everything.</p>
 <pre><code>#!/bin/sh
@@ -109,7 +109,7 @@ sudo /usr/bin/nice /usr/bin/apt-get --yes dist-upgrade
 sudo /usr/bin/nice /usr/bin/apt-get autoremove
 sudo /usr/bin/nice /usr/bin/apt-get clean
 sudo /usr/bin/nice /usr/bin/dpkg --configure --pending</code></pre>
-  </div>
+</div>
 </article>
 <hr>
 <nav>

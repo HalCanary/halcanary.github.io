@@ -57,27 +57,27 @@ ul.flat li {display:inline;}
 ul.flat li::after {content:"]";}
 ul.flat li::before {content:"[";}
 </style>
-<link rel="alternate" type="application/atom+xml" title="/vv/" href="/vv/rss.rss">
+<link title="/vv/" href="/vv/rss.rss" rel="alternate" type="application/atom+xml">
 <!-- Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED. -->
 </head>
 <body>
 
-<article id="2010/11/07/1062" class="h-entry">
-  <header>
-    <!-- SRC= 2010-11-07-1062.md -->
-    <h1 class="blogtitle p-name">using emacsclient</h1>
+<article class="h-entry" id="2010/11/07/1062">
+<header>
+<!-- SRC= 2010-11-07-1062.md -->
+<h1 class="blogtitle p-name">using emacsclient</h1>
 
-    <div class="byline plainlink">
-      <div>
-          <div class="p-author">Hal Canary</div>
-          <div><time datetime="2010-11-07T13:36:36-06:00" class="dt-published">2010-11-07 13:36:36-06:00 (CST)</time></div>
-          <div><a href="/vv/2010/11/07/1062/" class="u-url u-uid">https://halcanary.org/vv/2010/11/07/1062/</a></div>
-          <div><a href="/vv/category/computers-code/" class="p-category">#computers-code</a></div>
-      </div>
-    </div>
-  </header>
-  <div class="content e-content">
-<div style="display:none;"></div>
+<div class="byline plainlink">
+<div>
+<div class="p-author">Hal Canary</div>
+<div><time class="dt-published" datetime="2010-11-07T13:36:36-06:00">2010-11-07 13:36:36-06:00 (CST)</time></div>
+<div><a class="u-url u-uid" href="/vv/2010/11/07/1062/">https://halcanary.org/vv/2010/11/07/1062/</a></div>
+<div><a class="p-category" href="/vv/category/computers-code/">#computers-code</a></div>
+</div>
+</div>
+</header>
+<div class="content e-content">
+
 <p>Attention Emacs users. It took me a while to realize that new-style fonts can be enabled by adding this to the ~/.emacs file.</p>
 <pre><code>(set-face-attribute &#39;default
   nil :font &quot;Monospace-11&quot;)</code></pre>
@@ -101,7 +101,7 @@ else
   exec /usr/bin/emacs &quot;$@&quot;
 fi</code></pre>
 <p>This startes emacs in daemon mode if it's not already running (there's not a lot of harm in leaving a daemon going in the background all the time) and then the client tell the daemon to spawn a new window to open the files mentioned in the command-line arguments. The "nohup" part deparents the server so you don't get error messages hitting your console.</p>
-  </div>
+</div>
 </article>
 <hr>
 <nav>

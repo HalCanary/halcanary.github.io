@@ -57,32 +57,32 @@ ul.flat li {display:inline;}
 ul.flat li::after {content:"]";}
 ul.flat li::before {content:"[";}
 </style>
-<link rel="alternate" type="application/atom+xml" title="/vv/" href="/vv/rss.rss">
+<link title="/vv/" href="/vv/rss.rss" rel="alternate" type="application/atom+xml">
 <!-- Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED. -->
 </head>
 <body>
 
-<article id="2008/09/28/735" class="h-entry">
-  <header>
-    <!-- SRC= 2008-09-28-735.md -->
-    <h1 class="blogtitle p-name">sudo tee</h1>
+<article class="h-entry" id="2008/09/28/735">
+<header>
+<!-- SRC= 2008-09-28-735.md -->
+<h1 class="blogtitle p-name">sudo tee</h1>
 
-    <div class="byline plainlink">
-      <div>
-          <div class="p-author">Hal Canary</div>
-          <div><time datetime="2008-09-28T20:27:24-05:00" class="dt-published">2008-09-28 20:27:24-05:00 (CDT)</time></div>
-          <div><a href="/vv/2008/09/28/735/" class="u-url u-uid">https://halcanary.org/vv/2008/09/28/735/</a></div>
-          <div><a href="/vv/category/computers-code/" class="p-category">#computers-code</a></div>
-      </div>
-    </div>
-  </header>
-  <div class="content e-content">
-<div style="display:none;"></div>
+<div class="byline plainlink">
+<div>
+<div class="p-author">Hal Canary</div>
+<div><time class="dt-published" datetime="2008-09-28T20:27:24-05:00">2008-09-28 20:27:24-05:00 (CDT)</time></div>
+<div><a class="u-url u-uid" href="/vv/2008/09/28/735/">https://halcanary.org/vv/2008/09/28/735/</a></div>
+<div><a class="p-category" href="/vv/category/computers-code/">#computers-code</a></div>
+</div>
+</div>
+</header>
+<div class="content e-content">
+
 <p>I had been doing this:</p>
 <pre><code>sudo su -c &#39;echo AT+MODE=8 &gt; /dev/ttyACM0&#39;</code></pre>
 <p>but I think that this is better becasue it spawns one less shell:</p>
 <pre><code>echo AT+MODE=8 | sudo tee /dev/ttyACM0 &gt; /dev/null</code></pre>
-  </div>
+</div>
 </article>
 <hr>
 <nav>

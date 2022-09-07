@@ -57,27 +57,27 @@ ul.flat li {display:inline;}
 ul.flat li::after {content:"]";}
 ul.flat li::before {content:"[";}
 </style>
-<link rel="alternate" type="application/atom+xml" title="/vv/" href="/vv/rss.rss">
+<link title="/vv/" href="/vv/rss.rss" rel="alternate" type="application/atom+xml">
 <!-- Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED. -->
 </head>
 <body>
 
-<article id="2009/03/12/764" class="h-entry">
-  <header>
-    <!-- SRC= 2009-03-12-764.md -->
-    <h1 class="blogtitle p-name">fsck and tunefs</h1>
+<article class="h-entry" id="2009/03/12/764">
+<header>
+<!-- SRC= 2009-03-12-764.md -->
+<h1 class="blogtitle p-name">fsck and tunefs</h1>
 
-    <div class="byline plainlink">
-      <div>
-          <div class="p-author">Hal Canary</div>
-          <div><time datetime="2009-03-12T19:58:09-05:00" class="dt-published">2009-03-12 19:58:09-05:00 (CDT)</time></div>
-          <div><a href="/vv/2009/03/12/764/" class="u-url u-uid">https://halcanary.org/vv/2009/03/12/764/</a></div>
-          <div><a href="/vv/category/computers-code/" class="p-category">#computers-code</a></div>
-      </div>
-    </div>
-  </header>
-  <div class="content e-content">
-<div style="display:none;"></div>
+<div class="byline plainlink">
+<div>
+<div class="p-author">Hal Canary</div>
+<div><time class="dt-published" datetime="2009-03-12T19:58:09-05:00">2009-03-12 19:58:09-05:00 (CDT)</time></div>
+<div><a class="u-url u-uid" href="/vv/2009/03/12/764/">https://halcanary.org/vv/2009/03/12/764/</a></div>
+<div><a class="p-category" href="/vv/category/computers-code/">#computers-code</a></div>
+</div>
+</div>
+</header>
+<div class="content e-content">
+
 <p>My desktop does a fsck too foten for my tastes. Let's find out why</p>
 <pre><code>hal@sloop:~$ sudo dumpe2fs /dev/sda1 | grep &#39;heck\|nt count&#39;
 dumpe2fs 1.40.8 (13-Mar-2008)
@@ -91,7 +91,7 @@ Next check after: Sun Aug 30 18:38:44 2009</code></pre>
 sudo tune2fs -c 150 /dev/sda1</code></pre>
 <hr />
 <p><strong>UPDATE (2011-04-11):</strong> I later realized that the fscks were being triggered at mount time by /ets/fstab. “The sixth field, (fs_passno), is used by the fsck(8) program to determine the order in which filesystem checks are done at reboot time.”</p>
-  </div>
+</div>
 </article>
 <hr>
 <nav>

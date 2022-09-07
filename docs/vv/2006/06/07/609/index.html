@@ -57,27 +57,27 @@ ul.flat li {display:inline;}
 ul.flat li::after {content:"]";}
 ul.flat li::before {content:"[";}
 </style>
-<link rel="alternate" type="application/atom+xml" title="/vv/" href="/vv/rss.rss">
+<link title="/vv/" href="/vv/rss.rss" rel="alternate" type="application/atom+xml">
 <!-- Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED. -->
 </head>
 <body>
 
-<article id="2006/06/07/609" class="h-entry">
-  <header>
-    <!-- SRC= 2006-06-07-609.md -->
-    <h1 class="blogtitle p-name">fun with POSIX bc...</h1>
+<article class="h-entry" id="2006/06/07/609">
+<header>
+<!-- SRC= 2006-06-07-609.md -->
+<h1 class="blogtitle p-name">fun with POSIX bc...</h1>
 
-    <div class="byline plainlink">
-      <div>
-          <div class="p-author">Hal Canary</div>
-          <div><time datetime="2006-06-07T17:53:53-05:00" class="dt-published">2006-06-07 17:53:53-05:00 (CDT)</time></div>
-          <div><a href="/vv/2006/06/07/609/" class="u-url u-uid">https://halcanary.org/vv/2006/06/07/609/</a></div>
-          <div><a href="/vv/category/computers-code/" class="p-category">#computers-code</a></div>
-      </div>
-    </div>
-  </header>
-  <div class="content e-content">
-<div style="display:none;"></div>
+<div class="byline plainlink">
+<div>
+<div class="p-author">Hal Canary</div>
+<div><time class="dt-published" datetime="2006-06-07T17:53:53-05:00">2006-06-07 17:53:53-05:00 (CDT)</time></div>
+<div><a class="u-url u-uid" href="/vv/2006/06/07/609/">https://halcanary.org/vv/2006/06/07/609/</a></div>
+<div><a class="p-category" href="/vv/category/computers-code/">#computers-code</a></div>
+</div>
+</div>
+</header>
+<div class="content e-content">
+
 <p><a href="http://en.wikipedia.org/wiki/POSIX">POSIX</a> defines a command-line calculator language/interpretor known as<br />
 <em>bc</em>. <a href="http://en.wikipedia.org/wiki/Bc_programming_language">bc</a> is convientent but fairly light on the included math<br />
 functions. I wanted a power function that would take floating point<br />
@@ -116,7 +116,7 @@ define acosh(x) { return l(x+sqrt((x^2)-1)); }
 define atanh(x) { return 0.5*l((1+x)/(1-x)); }
 pi = 4*a(1);</code></pre>
 <p>Of course, now that I read more about it I find that I could have just looked up the answers.</p>
-  </div>
+</div>
 </article>
 <hr>
 <nav>

@@ -57,27 +57,27 @@ ul.flat li {display:inline;}
 ul.flat li::after {content:"]";}
 ul.flat li::before {content:"[";}
 </style>
-<link rel="alternate" type="application/atom+xml" title="/vv/" href="/vv/rss.rss">
+<link title="/vv/" href="/vv/rss.rss" rel="alternate" type="application/atom+xml">
 <!-- Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED. -->
 </head>
 <body>
 
-<article id="2004/03/05/184" class="h-entry">
-  <header>
-    <!-- SRC= 2004-03-05-184.md -->
-    <h1 class="blogtitle p-name">Fun with randomness</h1>
+<article class="h-entry" id="2004/03/05/184">
+<header>
+<!-- SRC= 2004-03-05-184.md -->
+<h1 class="blogtitle p-name">Fun with randomness</h1>
 
-    <div class="byline plainlink">
-      <div>
-          <div class="p-author">Hal Canary</div>
-          <div><time datetime="2004-03-05T16:09:16-06:00" class="dt-published">2004-03-05 16:09:16-06:00 (CST)</time></div>
-          <div><a href="/vv/2004/03/05/184/" class="u-url u-uid">https://halcanary.org/vv/2004/03/05/184/</a></div>
-          <div><a href="/vv/category/computers-code/" class="p-category">#computers-code</a></div>
-      </div>
-    </div>
-  </header>
-  <div class="content e-content">
-<div style="display:none;"></div>
+<div class="byline plainlink">
+<div>
+<div class="p-author">Hal Canary</div>
+<div><time class="dt-published" datetime="2004-03-05T16:09:16-06:00">2004-03-05 16:09:16-06:00 (CST)</time></div>
+<div><a class="u-url u-uid" href="/vv/2004/03/05/184/">https://halcanary.org/vv/2004/03/05/184/</a></div>
+<div><a class="p-category" href="/vv/category/computers-code/">#computers-code</a></div>
+</div>
+</div>
+</header>
+<div class="content e-content">
+
 <p>One-time pads are an old-fashoned way of doing cryptography, not used much these days. On the other hand, they are as secure as the random device is random. (Want a better random device? <a href="http://www.protego.se/sg100_en.htm">here's one</a>.)</p>
 <p>I've been meaning to write this code for a while now:</p>
 <pre><code>#!/usr/bin/perl
@@ -102,7 +102,7 @@ $ ./crypt-otp.pl otp.data file.crypt | less</code></pre>
 $ gzip &lt; file | ./crypt-otp.pl  badotp - &gt; x
 $ ./crypt-otp.pl badotp x | gunzip - | less</code></pre>
 <p>If /dev/random hangs, jiggle your mouse for a while to build up entropy. If you input file is biger than your OTP, then it won't work. That's the one part of one-time. So make a bigger OTP by changing the argument to head.</p>
-  </div>
+</div>
 </article>
 <hr>
 <nav>

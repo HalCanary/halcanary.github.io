@@ -57,27 +57,27 @@ ul.flat li {display:inline;}
 ul.flat li::after {content:"]";}
 ul.flat li::before {content:"[";}
 </style>
-<link rel="alternate" type="application/atom+xml" title="/vv/" href="/vv/rss.rss">
+<link title="/vv/" href="/vv/rss.rss" rel="alternate" type="application/atom+xml">
 <!-- Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED. -->
 </head>
 <body>
 
-<article id="2011/10/14/csg16" class="h-entry">
-  <header>
-    <!-- SRC= 2011-10-14-csg16.md -->
-    <h1 class="blogtitle p-name">restart gdm under ubuntu</h1>
+<article class="h-entry" id="2011/10/14/csg16">
+<header>
+<!-- SRC= 2011-10-14-csg16.md -->
+<h1 class="blogtitle p-name">restart gdm under ubuntu</h1>
 
-    <div class="byline plainlink">
-      <div>
-          <div class="p-author">Hal Canary</div>
-          <div><time datetime="2011-10-14T12:00:00-05:00" class="dt-published">2011-10-14 12:00:00-05:00 (CDT)</time></div>
-          <div><a href="/vv/2011/10/14/csg16/" class="u-url u-uid">https://halcanary.org/vv/2011/10/14/csg16/</a></div>
-          <div><a href="/vv/category/uncategorized/" class="p-category">#uncategorized</a></div>
-      </div>
-    </div>
-  </header>
-  <div class="content e-content">
-<div style="display:none;"></div>
+<div class="byline plainlink">
+<div>
+<div class="p-author">Hal Canary</div>
+<div><time class="dt-published" datetime="2011-10-14T12:00:00-05:00">2011-10-14 12:00:00-05:00 (CDT)</time></div>
+<div><a class="u-url u-uid" href="/vv/2011/10/14/csg16/">https://halcanary.org/vv/2011/10/14/csg16/</a></div>
+<div><a class="p-category" href="/vv/category/uncategorized/">#uncategorized</a></div>
+</div>
+</div>
+</header>
+<div class="content e-content">
+
 <pre class="Emacs"><code>(defun next-good-buffer () &quot;HWC&quot; (interactive)
   (next-buffer)
   (while (and (not (string= (buffer-name) &quot;*scratch*&quot;))
@@ -95,7 +95,7 @@ ul.flat li::before {content:"[";}
 (global-set-key [(control shift tab)] &#39;previous-good-buffer)
 (global-set-key [(control iso-lefttab)] &#39;next-good-buffer)
 (global-set-key [(control shift iso-lefttab)] &#39;previous-good-buffer)</code></pre>
-  </div>
+</div>
 </article>
 <hr>
 <nav>

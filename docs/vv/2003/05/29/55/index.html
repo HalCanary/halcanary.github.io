@@ -57,34 +57,34 @@ ul.flat li {display:inline;}
 ul.flat li::after {content:"]";}
 ul.flat li::before {content:"[";}
 </style>
-<link rel="alternate" type="application/atom+xml" title="/vv/" href="/vv/rss.rss">
+<link title="/vv/" href="/vv/rss.rss" rel="alternate" type="application/atom+xml">
 <!-- Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED. -->
 </head>
 <body>
 
-<article id="2003/05/29/55" class="h-entry">
-  <header>
-    <!-- SRC= 2003-05-29-55.md -->
-    <h1 class="blogtitle p-name">Beautiful one-liner</h1>
+<article class="h-entry" id="2003/05/29/55">
+<header>
+<!-- SRC= 2003-05-29-55.md -->
+<h1 class="blogtitle p-name">Beautiful one-liner</h1>
 
-    <div class="byline plainlink">
-      <div>
-          <div class="p-author">Hal Canary</div>
-          <div><time datetime="2003-05-29T02:26:17-05:00" class="dt-published">2003-05-29 02:26:17-05:00 (CDT)</time></div>
-          <div><a href="/vv/2003/05/29/55/" class="u-url u-uid">https://halcanary.org/vv/2003/05/29/55/</a></div>
-          <div><a href="/vv/category/computers-code/" class="p-category">#computers-code</a></div>
-      </div>
-    </div>
-  </header>
-  <div class="content e-content">
-<div style="display:none;"></div>
+<div class="byline plainlink">
+<div>
+<div class="p-author">Hal Canary</div>
+<div><time class="dt-published" datetime="2003-05-29T02:26:17-05:00">2003-05-29 02:26:17-05:00 (CDT)</time></div>
+<div><a class="u-url u-uid" href="/vv/2003/05/29/55/">https://halcanary.org/vv/2003/05/29/55/</a></div>
+<div><a class="p-category" href="/vv/category/computers-code/">#computers-code</a></div>
+</div>
+</div>
+</header>
+<div class="content e-content">
+
 <pre class="sh"><code>#/bin/sh
 #DTPD#
 # ~/bin/despacify v2003-05
 ls -x1 | \
   perl -e &#39;while(&lt;&gt;){chomp;$x=$\_;s/ /\_/g; \
   system(&quot;mv \\&quot;$x\\&quot; \\&quot;$\_\\&quot;&quot;) if ($x ne $\_);}&#39;</code></pre>
-  </div>
+</div>
 </article>
 <hr>
 <nav>

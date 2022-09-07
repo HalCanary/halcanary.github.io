@@ -57,27 +57,27 @@ ul.flat li {display:inline;}
 ul.flat li::after {content:"]";}
 ul.flat li::before {content:"[";}
 </style>
-<link rel="alternate" type="application/atom+xml" title="/vv/" href="/vv/rss.rss">
+<link title="/vv/" href="/vv/rss.rss" rel="alternate" type="application/atom+xml">
 <!-- Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED. -->
 </head>
 <body>
 
-<article id="2009/09/16/817" class="h-entry">
-  <header>
-    <!-- SRC= 2009-09-16-817.md -->
-    <h1 class="blogtitle p-name">netbook network mp3 player</h1>
+<article class="h-entry" id="2009/09/16/817">
+<header>
+<!-- SRC= 2009-09-16-817.md -->
+<h1 class="blogtitle p-name">netbook network mp3 player</h1>
 
-    <div class="byline plainlink">
-      <div>
-          <div class="p-author">Hal Canary</div>
-          <div><time datetime="2009-09-16T15:37:59-05:00" class="dt-published">2009-09-16 15:37:59-05:00 (CDT)</time></div>
-          <div><a href="/vv/2009/09/16/817/" class="u-url u-uid">https://halcanary.org/vv/2009/09/16/817/</a></div>
-          <div><a href="/vv/category/computers-code/" class="p-category">#computers-code</a>; <a href="/vv/category/music/" class="p-category">#music</a></div>
-      </div>
-    </div>
-  </header>
-  <div class="content e-content">
-<div style="display:none;"></div>
+<div class="byline plainlink">
+<div>
+<div class="p-author">Hal Canary</div>
+<div><time class="dt-published" datetime="2009-09-16T15:37:59-05:00">2009-09-16 15:37:59-05:00 (CDT)</time></div>
+<div><a class="u-url u-uid" href="/vv/2009/09/16/817/">https://halcanary.org/vv/2009/09/16/817/</a></div>
+<div><a class="p-category" href="/vv/category/computers-code/">#computers-code</a>; <a class="p-category" href="/vv/category/music/">#music</a></div>
+</div>
+</div>
+</header>
+<div class="content e-content">
+
 <p>I wanted to access my desktop's music library from my living room and play it through the amplifier and speakers there. So I grabbed my netbook, and after fumbling around with NFS for too long, I just tried:</p>
 <pre><code>yum install sshfs</code></pre>
 <p>(It's a OLPC XO-1, so it's Redhat-based.) And then wrote a little script:</p>
@@ -97,7 +97,7 @@ exec mpg123-alsa --control --long-tag \
 # run this script to refresh the index file.
 cd $HOME/music
 find . -type f -a -name &#39;*.mp3&#39; &gt; index.txt</code></pre>
-  </div>
+</div>
 </article>
 <hr>
 <nav>

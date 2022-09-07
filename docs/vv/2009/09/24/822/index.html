@@ -57,27 +57,27 @@ ul.flat li {display:inline;}
 ul.flat li::after {content:"]";}
 ul.flat li::before {content:"[";}
 </style>
-<link rel="alternate" type="application/atom+xml" title="/vv/" href="/vv/rss.rss">
+<link title="/vv/" href="/vv/rss.rss" rel="alternate" type="application/atom+xml">
 <!-- Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED. -->
 </head>
 <body>
 
-<article id="2009/09/24/822" class="h-entry">
-  <header>
-    <!-- SRC= 2009-09-24-822.md -->
-    <h1 class="blogtitle p-name">MakeBookmarksFile</h1>
+<article class="h-entry" id="2009/09/24/822">
+<header>
+<!-- SRC= 2009-09-24-822.md -->
+<h1 class="blogtitle p-name">MakeBookmarksFile</h1>
 
-    <div class="byline plainlink">
-      <div>
-          <div class="p-author">Hal Canary</div>
-          <div><time datetime="2009-09-24T12:51:50-05:00" class="dt-published">2009-09-24 12:51:50-05:00 (CDT)</time></div>
-          <div><a href="/vv/2009/09/24/822/" class="u-url u-uid">https://halcanary.org/vv/2009/09/24/822/</a></div>
-          <div><a href="/vv/category/computers-code/" class="p-category">#computers-code</a></div>
-      </div>
-    </div>
-  </header>
-  <div class="content e-content">
-<div style="display:none;"></div>
+<div class="byline plainlink">
+<div>
+<div class="p-author">Hal Canary</div>
+<div><time class="dt-published" datetime="2009-09-24T12:51:50-05:00">2009-09-24 12:51:50-05:00 (CDT)</time></div>
+<div><a class="u-url u-uid" href="/vv/2009/09/24/822/">https://halcanary.org/vv/2009/09/24/822/</a></div>
+<div><a class="p-category" href="/vv/category/computers-code/">#computers-code</a></div>
+</div>
+</div>
+</header>
+<div class="content e-content">
+
 <pre><code>#!/usr/bin/env python
 # MakeBookmarksFile - convert a text file containing
 # URLs into a HTMl file with clickable links.
@@ -133,7 +133,7 @@ for line in fi:
   s=re.sub(&#39;&quot;&#39;,&#39;&amp;quot;&#39;,s)
   fo.write(&quot;&lt;a href=\&quot;%s\&quot;&gt;%s&lt;/a&gt;&lt;br&gt;\n&quot; % (s,s))
 fo.write(&#39;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;\n&#39;)</code></pre>
-  </div>
+</div>
 </article>
 <hr>
 <nav>

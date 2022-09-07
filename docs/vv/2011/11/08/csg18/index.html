@@ -57,27 +57,27 @@ ul.flat li {display:inline;}
 ul.flat li::after {content:"]";}
 ul.flat li::before {content:"[";}
 </style>
-<link rel="alternate" type="application/atom+xml" title="/vv/" href="/vv/rss.rss">
+<link title="/vv/" href="/vv/rss.rss" rel="alternate" type="application/atom+xml">
 <!-- Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED. -->
 </head>
 <body>
 
-<article id="2011/11/08/csg18" class="h-entry">
-  <header>
-    <!-- SRC= 2011-11-08-csg18.md -->
-    <h1 class="blogtitle p-name">snap your window to the left or right</h1>
+<article class="h-entry" id="2011/11/08/csg18">
+<header>
+<!-- SRC= 2011-11-08-csg18.md -->
+<h1 class="blogtitle p-name">snap your window to the left or right</h1>
 
-    <div class="byline plainlink">
-      <div>
-          <div class="p-author">Hal Canary</div>
-          <div><time datetime="2011-11-08T12:00:00-06:00" class="dt-published">2011-11-08 12:00:00-06:00 (CST)</time></div>
-          <div><a href="/vv/2011/11/08/csg18/" class="u-url u-uid">https://halcanary.org/vv/2011/11/08/csg18/</a></div>
-          <div><a href="/vv/category/uncategorized/" class="p-category">#uncategorized</a></div>
-      </div>
-    </div>
-  </header>
-  <div class="content e-content">
-<div style="display:none;"></div>
+<div class="byline plainlink">
+<div>
+<div class="p-author">Hal Canary</div>
+<div><time class="dt-published" datetime="2011-11-08T12:00:00-06:00">2011-11-08 12:00:00-06:00 (CST)</time></div>
+<div><a class="u-url u-uid" href="/vv/2011/11/08/csg18/">https://halcanary.org/vv/2011/11/08/csg18/</a></div>
+<div><a class="p-category" href="/vv/category/uncategorized/">#uncategorized</a></div>
+</div>
+</div>
+</header>
+<div class="content e-content">
+
 <p>This script will snap your window to the left or right side of the screen in Linux: (<a href="http://www.techsupportalert.com/content/ubuntu-tips-and-tricks.htm#Enable-Aero-Snap">SOURCE</a>)</p>
 <pre class="sh"><code>#!/bin/sh
 ## ${HOME}/bin/wmctrl-snap-edge
@@ -122,7 +122,7 @@ gconftool-2 --type string --set \
 gconftool-2 --type string --set \
     /apps/metacity/keybinding_commands/command_7 \
     &quot;${HOME}/bin/wmctrl-snap-edge right&quot;</code></pre>
-  </div>
+</div>
 </article>
 <hr>
 <nav>

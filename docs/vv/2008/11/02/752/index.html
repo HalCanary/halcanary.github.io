@@ -57,27 +57,27 @@ ul.flat li {display:inline;}
 ul.flat li::after {content:"]";}
 ul.flat li::before {content:"[";}
 </style>
-<link rel="alternate" type="application/atom+xml" title="/vv/" href="/vv/rss.rss">
+<link title="/vv/" href="/vv/rss.rss" rel="alternate" type="application/atom+xml">
 <!-- Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED. -->
 </head>
 <body>
 
-<article id="2008/11/02/752" class="h-entry">
-  <header>
-    <!-- SRC= 2008-11-02-752.md -->
-    <h1 class="blogtitle p-name">RTF</h1>
+<article class="h-entry" id="2008/11/02/752">
+<header>
+<!-- SRC= 2008-11-02-752.md -->
+<h1 class="blogtitle p-name">RTF</h1>
 
-    <div class="byline plainlink">
-      <div>
-          <div class="p-author">Hal Canary</div>
-          <div><time datetime="2008-11-02T08:27:52-06:00" class="dt-published">2008-11-02 08:27:52-06:00 (CST)</time></div>
-          <div><a href="/vv/2008/11/02/752/" class="u-url u-uid">https://halcanary.org/vv/2008/11/02/752/</a></div>
-          <div><a href="/vv/category/computers-code/" class="p-category">#computers-code</a></div>
-      </div>
-    </div>
-  </header>
-  <div class="content e-content">
-<div style="display:none;"></div>
+<div class="byline plainlink">
+<div>
+<div class="p-author">Hal Canary</div>
+<div><time class="dt-published" datetime="2008-11-02T08:27:52-06:00">2008-11-02 08:27:52-06:00 (CST)</time></div>
+<div><a class="u-url u-uid" href="/vv/2008/11/02/752/">https://halcanary.org/vv/2008/11/02/752/</a></div>
+<div><a class="p-category" href="/vv/category/computers-code/">#computers-code</a></div>
+</div>
+</div>
+</header>
+<div class="content e-content">
+
 <p>I was reading the other day the submission guidelines for a certain publishing house. They wanted <a href="http://en.wikipedia.org/wiki/Rich_Text_Format">RTF</a> documents. One would think plain text would be just as good, but it's easy enough to write a program that converts a utf8-encoded plain text document to a simple <a href="http://search.cpan.org/~sburke/RTF-Writer/lib/RTF/Cookbook.pod">RTF</a> document. And the output is about a third of the size of the document that you would get from using oowriter.</p>
 <pre><code>#!/usr/bin/env python
 # txt2rtf.py
@@ -115,7 +115,7 @@ for line in fi:
     fo.write(char)
 fo.write(&#39;}\n\n&#39;)</code></pre>
 <p>For a manuscript, you don't want to do any fancy formating, bold text, fonts, colors, curly quotes, et cetera. This avoids all of that jazz. One might want italic text, but that's not <a href="http://everything2.com/title/fASCIIst">fASCIIst</a> enough, is it?</p>
-  </div>
+</div>
 </article>
 <hr>
 <nav>

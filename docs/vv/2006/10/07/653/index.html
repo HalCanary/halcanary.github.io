@@ -57,27 +57,27 @@ ul.flat li {display:inline;}
 ul.flat li::after {content:"]";}
 ul.flat li::before {content:"[";}
 </style>
-<link rel="alternate" type="application/atom+xml" title="/vv/" href="/vv/rss.rss">
+<link title="/vv/" href="/vv/rss.rss" rel="alternate" type="application/atom+xml">
 <!-- Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED. -->
 </head>
 <body>
 
-<article id="2006/10/07/653" class="h-entry">
-  <header>
-    <!-- SRC= 2006-10-07-653.md -->
-    <h1 class="blogtitle p-name">HTML wierdness: border-top and blockquotes:</h1>
+<article class="h-entry" id="2006/10/07/653">
+<header>
+<!-- SRC= 2006-10-07-653.md -->
+<h1 class="blogtitle p-name">HTML wierdness: border-top and blockquotes:</h1>
 
-    <div class="byline plainlink">
-      <div>
-          <div class="p-author">Hal Canary</div>
-          <div><time datetime="2006-10-07T11:51:12-05:00" class="dt-published">2006-10-07 11:51:12-05:00 (CDT)</time></div>
-          <div><a href="/vv/2006/10/07/653/" class="u-url u-uid">https://halcanary.org/vv/2006/10/07/653/</a></div>
-          <div><a href="/vv/category/computers-code/" class="p-category">#computers-code</a></div>
-      </div>
-    </div>
-  </header>
-  <div class="content e-content">
-<div style="display:none;"></div>
+<div class="byline plainlink">
+<div>
+<div class="p-author">Hal Canary</div>
+<div><time class="dt-published" datetime="2006-10-07T11:51:12-05:00">2006-10-07 11:51:12-05:00 (CDT)</time></div>
+<div><a class="u-url u-uid" href="/vv/2006/10/07/653/">https://halcanary.org/vv/2006/10/07/653/</a></div>
+<div><a class="p-category" href="/vv/category/computers-code/">#computers-code</a></div>
+</div>
+</div>
+</header>
+<div class="content e-content">
+
 <p>This:</p>
 <pre><code>&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01//EN&quot;
         &quot;http://www.w3.org/TR/html4/strict.dtd&quot;&gt;
@@ -118,7 +118,7 @@ dolore magna aliqua.&lt;/p&gt;
 <p>renders as:<br />
 <img src="/images/2006-10-07-html-border-issue.png" alt="html as rendered by firefox" /></p>
 <p>The act of simply adding a border-top and border-bottom to an element's style will radically change the distance between it and the preceding and following blocks. This is why I've stopped using border-top and border-bottom. See <a href="http://www.w3.org/TR/CSS21/box.html#collapsing-margins">collapsing margins</a></p>
-  </div>
+</div>
 </article>
 <hr>
 <nav>

@@ -57,27 +57,27 @@ ul.flat li {display:inline;}
 ul.flat li::after {content:"]";}
 ul.flat li::before {content:"[";}
 </style>
-<link rel="alternate" type="application/atom+xml" title="/vv/" href="/vv/rss.rss">
+<link title="/vv/" href="/vv/rss.rss" rel="alternate" type="application/atom+xml">
 <!-- Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED. -->
 </head>
 <body>
 
-<article id="2007/05/12/688" class="h-entry">
-  <header>
-    <!-- SRC= 2007-05-12-688.md -->
-    <h1 class="blogtitle p-name">TAOCP/1</h1>
+<article class="h-entry" id="2007/05/12/688">
+<header>
+<!-- SRC= 2007-05-12-688.md -->
+<h1 class="blogtitle p-name">TAOCP/1</h1>
 
-    <div class="byline plainlink">
-      <div>
-          <div class="p-author">Hal Canary</div>
-          <div><time datetime="2007-05-12T12:19:20-05:00" class="dt-published">2007-05-12 12:19:20-05:00 (CDT)</time></div>
-          <div><a href="/vv/2007/05/12/688/" class="u-url u-uid">https://halcanary.org/vv/2007/05/12/688/</a></div>
-          <div><a href="/vv/category/computers-code/" class="p-category">#computers-code</a></div>
-      </div>
-    </div>
-  </header>
-  <div class="content e-content">
-<div style="display:none;"></div>
+<div class="byline plainlink">
+<div>
+<div class="p-author">Hal Canary</div>
+<div><time class="dt-published" datetime="2007-05-12T12:19:20-05:00">2007-05-12 12:19:20-05:00 (CDT)</time></div>
+<div><a class="u-url u-uid" href="/vv/2007/05/12/688/">https://halcanary.org/vv/2007/05/12/688/</a></div>
+<div><a class="p-category" href="/vv/category/computers-code/">#computers-code</a></div>
+</div>
+</div>
+</header>
+<div class="content e-content">
+
 <p>I bought a boxed set of Knuth's <em>Art of Computer Programming</em> last week. As you may or may not know, TAOCP demonstrates programs in assembly for a mythical computer known as the MIX 1009. MIX would not have been out of place in 1965, but is hopelessly outdated today. Nonetheless, I learned enough MIX to write the following program in the MIX Assembly Language.</p>
 <pre><code>* factorial.mixal
 *
@@ -184,7 +184,7 @@ Main    LDO n,pnum,0    load number from memory
 
 overflow TRAP   0,Halt,0</code></pre>
 <p>This processor required me to (gasp) rewrite 'printf("%u",n);', which was the hardest part of the program.</p>
-  </div>
+</div>
 </article>
 <hr>
 <nav>

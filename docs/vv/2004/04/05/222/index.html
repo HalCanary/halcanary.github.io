@@ -57,27 +57,27 @@ ul.flat li {display:inline;}
 ul.flat li::after {content:"]";}
 ul.flat li::before {content:"[";}
 </style>
-<link rel="alternate" type="application/atom+xml" title="/vv/" href="/vv/rss.rss">
+<link title="/vv/" href="/vv/rss.rss" rel="alternate" type="application/atom+xml">
 <!-- Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED. -->
 </head>
 <body>
 
-<article id="2004/04/05/222" class="h-entry">
-  <header>
-    <!-- SRC= 2004-04-05-222.md -->
-    <h1 class="blogtitle p-name">emacs clipboard cut and paste, done right!</h1>
+<article class="h-entry" id="2004/04/05/222">
+<header>
+<!-- SRC= 2004-04-05-222.md -->
+<h1 class="blogtitle p-name">emacs clipboard cut and paste, done right!</h1>
 
-    <div class="byline plainlink">
-      <div>
-          <div class="p-author">Hal Canary</div>
-          <div><time datetime="2004-04-05T00:50:23-05:00" class="dt-published">2004-04-05 00:50:23-05:00 (CDT)</time></div>
-          <div><a href="/vv/2004/04/05/222/" class="u-url u-uid">https://halcanary.org/vv/2004/04/05/222/</a></div>
-          <div><a href="/vv/category/computers-code/" class="p-category">#computers-code</a></div>
-      </div>
-    </div>
-  </header>
-  <div class="content e-content">
-<div style="display:none;"></div>
+<div class="byline plainlink">
+<div>
+<div class="p-author">Hal Canary</div>
+<div><time class="dt-published" datetime="2004-04-05T00:50:23-05:00">2004-04-05 00:50:23-05:00 (CDT)</time></div>
+<div><a class="u-url u-uid" href="/vv/2004/04/05/222/">https://halcanary.org/vv/2004/04/05/222/</a></div>
+<div><a class="p-category" href="/vv/category/computers-code/">#computers-code</a></div>
+</div>
+</div>
+</header>
+<div class="content e-content">
+
 <pre><code>;; ~/.emacs ;;
 (global-unset-key [(control v)]) ;;use page-down
 (global-set-key   [(control v)]
@@ -93,7 +93,7 @@ ul.flat li::before {content:"[";}
     &#39;clipboard-kill-region)</code></pre>
 <p>I figured this out after reading HP's <a href="http://ometer.com/free-software-ui.html">essay on useability</a>, where he mentions that “Emacs is basically the last remaining X application that insists on having cut and paste that doesn't work correctly.”</p>
 <p>A while back, I vowed to switch from emacs to another editor. Silly me. That could never happen.</p>
-  </div>
+</div>
 </article>
 <hr>
 <nav>

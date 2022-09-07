@@ -57,27 +57,27 @@ ul.flat li {display:inline;}
 ul.flat li::after {content:"]";}
 ul.flat li::before {content:"[";}
 </style>
-<link rel="alternate" type="application/atom+xml" title="/vv/" href="/vv/rss.rss">
+<link title="/vv/" href="/vv/rss.rss" rel="alternate" type="application/atom+xml">
 <!-- Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED. -->
 </head>
 <body>
 
-<article id="2004/08/24/309" class="h-entry">
-  <header>
-    <!-- SRC= 2004-08-24-309.md -->
-    <h1 class="blogtitle p-name">Installing Wordpress with MySQL</h1>
+<article class="h-entry" id="2004/08/24/309">
+<header>
+<!-- SRC= 2004-08-24-309.md -->
+<h1 class="blogtitle p-name">Installing Wordpress with MySQL</h1>
 
-    <div class="byline plainlink">
-      <div>
-          <div class="p-author">Hal Canary</div>
-          <div><time datetime="2004-08-24T21:42:49-05:00" class="dt-published">2004-08-24 21:42:49-05:00 (CDT)</time></div>
-          <div><a href="/vv/2004/08/24/309/" class="u-url u-uid">https://halcanary.org/vv/2004/08/24/309/</a></div>
-          <div><a href="/vv/category/computers-code/" class="p-category">#computers-code</a></div>
-      </div>
-    </div>
-  </header>
-  <div class="content e-content">
-<div style="display:none;"></div>
+<div class="byline plainlink">
+<div>
+<div class="p-author">Hal Canary</div>
+<div><time class="dt-published" datetime="2004-08-24T21:42:49-05:00">2004-08-24 21:42:49-05:00 (CDT)</time></div>
+<div><a class="u-url u-uid" href="/vv/2004/08/24/309/">https://halcanary.org/vv/2004/08/24/309/</a></div>
+<div><a class="p-category" href="/vv/category/computers-code/">#computers-code</a></div>
+</div>
+</div>
+</header>
+<div class="content e-content">
+
 <blockquote>
 <p>Definitions:</p>
 <p>Wordpress</p>
@@ -132,7 +132,7 @@ mt_templatemap
 mt_trackback</code></pre>
 <p>I'm getting ahead of myself. Before I got that far, I unpacked the wordpress tarball locally, used a gui ftp program to recursivly copy over the directory. I renamed ~/public_html/wordpress/ to ~/public_html/wp/ for brevity's sake. I then had to change the permission mode on that directory to 777 so that the install program could make the wp-config.php file. Then I made a ~/public_html/b/ directory and copied index.php from the wp/ directory there. This way my permlinks will be to https://halcanary.org/b/, and not to https://halcanary.org/wp/.</p>
 <p>Then I browsed to http://halcanary/wp/ and did the setup.</p>
-  </div>
+</div>
 </article>
 <hr>
 <nav>
