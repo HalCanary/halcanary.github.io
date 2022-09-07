@@ -70,7 +70,7 @@ ul.flat li::before {content:"[";}
     <div class="byline plainlink">
       <div>
           <div class="p-author">Hal Canary</div>
-          <div><time datetime="2007-04-11T14:13:25" class="dt-published">2007-04-11 14:13:25</time></div>
+          <div><time datetime="2007-04-11T14:13:25-05:00" class="dt-published">2007-04-11 14:13:25-05:00 (CDT)</time></div>
           <div><a href="/vv/2007/04/11/684/" class="u-url u-uid">https://halcanary.org/vv/2007/04/11/684/</a></div>
           <div><a href="/vv/category/computers-code/" class="p-category">#computers-code</a></div>
       </div>
@@ -99,26 +99,26 @@ MemTotal:       385828 kB</code></pre>
 <ol type="1">
 <li><p>(X)Ubuntu works pretty well. I'm in the proccess of learning all about apt-get; otherwise a lot of my RH/Fedora knowledge translates over to Ubuntu.</p></li>
 <li><p>Xfce is still a little rough round the edges, but it does what I want it to. I miss Gnome's Rhythmbox and Gedit, but I should learn to make do with less.</p></li>
-<li><p>The wireless drivers work perfectly, BUT the GUI frontend (network-admin) is useless. I ended up writing my own scripts. This one lists all the availible networks.</p>
-<p>#!/bin/sh</p>
-<h2>~/bin/scanwifi</h2>
-<h2>2007 Hal Canary</h2>
-<h2>Dedicated to the Public Domain</h2>
-<p>sudo echo 'Restarting and scanning Wifi...'
-echo '&gt;&gt;&gt; ifconfig eth1 down &gt;&gt;&gt;'
-sudo ifconfig eth1 down
-echo '&gt;&gt;&gt; ifconfig eth1 up &gt;&gt;&gt;'
-sudo ifconfig eth1 up
-echo '&gt;&gt;&gt; iwconfig eth1 essid any &gt;&gt;&gt;'
-sudo iwconfig eth1 essid any
-echo '&gt;&gt;&gt; iwconfig eth1 &gt;&gt;&gt;'
-sudo ifconfig eth1
-echo '&gt;&gt;&gt; iwlist eth1 scanning &gt;&gt;&gt;'
-sudo iwlist eth1 scanning
-exit 0</p></li>
+<li><p>The wireless drivers work perfectly, BUT the GUI frontend (network-admin) is useless. I ended up writing my own scripts. This one lists all the availible networks.</p></li>
 </ol>
+<pre class="sh"><code>#!/bin/sh
+## ~/bin/scanwifi
+## 2007 Hal Canary
+## Dedicated to the Public Domain
+sudo echo &#39;Restarting and scanning Wifi...&#39;
+echo &#39;&gt;&gt;&gt; ifconfig eth1 down &gt;&gt;&gt;&#39;
+sudo ifconfig eth1 down
+echo &#39;&gt;&gt;&gt; ifconfig eth1 up &gt;&gt;&gt;&#39;
+sudo ifconfig eth1 up
+echo &#39;&gt;&gt;&gt; iwconfig eth1 essid any &gt;&gt;&gt;&#39;
+sudo iwconfig eth1 essid any
+echo &#39;&gt;&gt;&gt; iwconfig eth1 &gt;&gt;&gt;&#39;
+sudo ifconfig eth1
+echo &#39;&gt;&gt;&gt; iwlist eth1 scanning &gt;&gt;&gt;&#39;
+sudo iwlist eth1 scanning
+exit 0</code></pre>
 <p>This one connects to the selected network:</p>
-<pre><code>#!/bin/sh
+<pre class="sh"><code>#!/bin/sh
 ## ~/bin/connectwifi
 ## 2007 Hal Canary
 ## Dedicated to the Public Domain
@@ -139,7 +139,7 @@ echo &#39;########## dhclient eth1 ########&#39;
 sudo dhclient eth1
 exit 0;</code></pre>
 <p>And this one connects to my home network (not my real key):</p>
-<pre><code>#!/bin/sh
+<pre class="sh"><code>#!/bin/sh
 ## ~/bin/connectwifi.MySsid
 connectwifi MySsid 0c0dc52de9fbc078f3c1411100</code></pre>
 <p>Disconnecting can be accomplished with a</p>
