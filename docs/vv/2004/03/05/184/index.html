@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Voder-Vocoder: Fun with randomness</title>
-<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==">
+<link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==" rel="icon"/>
 <style>
 @media (prefers-color-scheme:dark) {body {background-color:#000;color:#FFF;}
 a:visited {color:#C0F;}
@@ -57,11 +57,12 @@ ul.flat li {display:inline;}
 ul.flat li::after {content:"]";}
 ul.flat li::before {content:"[";}
 </style>
-<link title="/vv/" href="/vv/rss.rss" rel="alternate" type="application/atom+xml">
-<!-- Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED. -->
+<link href="https://halcanary.org/vv/rss.rss" rel="alternate" title="Voder-Vocoder" type="application/atom+xml"/>
+<!--
+Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
+-->
 </head>
 <body>
-
 <article class="h-entry" id="2004/03/05/184">
 <header>
 <!-- SRC= 2004-03-05-184.md -->
@@ -71,7 +72,7 @@ ul.flat li::before {content:"[";}
 <div>
 <div class="p-author">Hal Canary</div>
 <div><time class="dt-published" datetime="2004-03-05T16:09:16-06:00">2004-03-05 16:09:16-06:00 (CST)</time></div>
-<div><a class="u-url u-uid" href="/vv/2004/03/05/184/">https://halcanary.org/vv/2004/03/05/184/</a></div>
+<div><a class="u-url u-uid" href="https://halcanary.org/vv/2004/03/05/184/">https://halcanary.org/vv/2004/03/05/184/</a></div>
 <div><a class="p-category" href="/vv/category/computers-code/">#computers-code</a></div>
 </div>
 </div>
@@ -92,24 +93,27 @@ open(PTX, &quot;&lt; $b_file&quot;);
 while (read(PTX,$b,1)) {
     read(OTP,$a,1) or die &quot;Out of otp.&quot;;
     print $a ^ $b;
-}</code></pre>
+}
+</code></pre>
 <p>Here's how to use it.</p>
 <pre><code>$ head -c 10k /dev/random &gt; otp.data
 $ ./crypt-otp.pl otp.data file &gt; file.crypt
-$ ./crypt-otp.pl otp.data file.crypt | less</code></pre>
+$ ./crypt-otp.pl otp.data file.crypt | less
+</code></pre>
 <p>Here's how NOT to use it:</p>
-<pre><code>$ perl -e &#39;for $x (1..1000) {print &quot;PASSWORD&quot;}&#39; &gt; badotp
+<pre><code>$ perl -e 'for $x (1..1000) {print &quot;PASSWORD&quot;}' &gt; badotp
 $ gzip &lt; file | ./crypt-otp.pl  badotp - &gt; x
-$ ./crypt-otp.pl badotp x | gunzip - | less</code></pre>
+$ ./crypt-otp.pl badotp x | gunzip - | less
+</code></pre>
 <p>If /dev/random hangs, jiggle your mouse for a while to build up entropy. If you input file is biger than your OTP, then it won't work. That's the one part of one-time. So make a bigger OTP by changing the argument to head.</p>
 </div>
 </article>
-<hr>
-<nav>
+<hr/>
+<nav aria-label="External Navigation">
 <div class="lcr">
-  <div><p>(older: <a href="/vv/2004/03/05/183/">Print on demand.</a>)</p></div>
+  <div><p>(older: <a href="https://halcanary.org/vv/2004/03/05/183/">Print on demand.</a>)</p></div>
   <div class="centered"><p>(<a href="/vv/archives/">back</a>)</p></div>
-  <div class="rightside"><p>(newer: <a href="/vv/2004/03/06/185/">gui's suck</a>)</p></div>
+  <div class="rightside"><p>(newer: <a href="https://halcanary.org/vv/2004/03/06/185/">gui&#39;s suck</a>)</p></div>
 </div>
 </nav>
 </body>

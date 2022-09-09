@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Voder-Vocoder: lpr-text for CUPS</title>
-<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==">
+<link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==" rel="icon"/>
 <style>
 @media (prefers-color-scheme:dark) {body {background-color:#000;color:#FFF;}
 a:visited {color:#C0F;}
@@ -57,11 +57,12 @@ ul.flat li {display:inline;}
 ul.flat li::after {content:"]";}
 ul.flat li::before {content:"[";}
 </style>
-<link title="/vv/" href="/vv/rss.rss" rel="alternate" type="application/atom+xml">
-<!-- Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED. -->
+<link href="https://halcanary.org/vv/rss.rss" rel="alternate" title="Voder-Vocoder" type="application/atom+xml"/>
+<!--
+Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
+-->
 </head>
 <body>
-
 <article class="h-entry" id="2006/09/08/629">
 <header>
 <!-- SRC= 2006-09-08-629.md -->
@@ -71,7 +72,7 @@ ul.flat li::before {content:"[";}
 <div>
 <div class="p-author">Hal Canary</div>
 <div><time class="dt-published" datetime="2006-09-08T09:52:37-05:00">2006-09-08 09:52:37-05:00 (CDT)</time></div>
-<div><a class="u-url u-uid" href="/vv/2006/09/08/629/">https://halcanary.org/vv/2006/09/08/629/</a></div>
+<div><a class="u-url u-uid" href="https://halcanary.org/vv/2006/09/08/629/">https://halcanary.org/vv/2006/09/08/629/</a></div>
 <div><a class="p-category" href="/vv/category/computers-code/">#computers-code</a></div>
 </div>
 </div>
@@ -91,9 +92,10 @@ exec lpr -o page-left=36 \
         -o landscape \
         -o cpi=16.842 \
         -o lpi=10.1052 &quot;$@&quot;
-# 80 columns width x 70 columns high x 2 columns</code></pre>
-<p>That's about 140 80-character lines per page, in two columns. Somewhat analagous to "enscript -2r -B". I leave room at the left margin for hole-punches, to make binding easier.</p>
-<p>In theory, this should handle Unicode characters much better than enscript or a2ps does. If you are still having issues with unicode printing, try "ooffice - file".</p>
+# 80 columns width x 70 columns high x 2 columns
+</code></pre>
+<p>That's about 140 80-character lines per page, in two columns. Somewhat analagous to &quot;enscript -2r -B&quot;. I leave room at the left margin for hole-punches, to make binding easier.</p>
+<p>In theory, this should handle Unicode characters much better than enscript or a2ps does. If you are still having issues with unicode printing, try &quot;ooffice - file&quot;.</p>
 <p>Here's the one-column version:</p>
 <pre><code>#!/bin/sh
 #DTPD#
@@ -104,15 +106,16 @@ exec lpr -o page-left=72 \
         -o page-top=36 \
         -o page-bottom=36 \
         -o cpi=11.43 -o lpi=6.858 &quot;$@&quot;
-# 80 columns width x 68 columns high</code></pre>
+# 80 columns width x 68 columns high
+</code></pre>
 </div>
 </article>
-<hr>
-<nav>
+<hr/>
+<nav aria-label="External Navigation">
 <div class="lcr">
-  <div><p>(older: <a href="/vv/2006/09/05/628/">the library again?</a>)</p></div>
+  <div><p>(older: <a href="https://halcanary.org/vv/2006/09/05/628/">the library again?</a>)</p></div>
   <div class="centered"><p>(<a href="/vv/archives/">back</a>)</p></div>
-  <div class="rightside"><p>(newer: <a href="/vv/2006/09/09/630/">Possibly a medusa.</a>)</p></div>
+  <div class="rightside"><p>(newer: <a href="https://halcanary.org/vv/2006/09/09/630/">Possibly a medusa.</a>)</p></div>
 </div>
 </nav>
 </body>

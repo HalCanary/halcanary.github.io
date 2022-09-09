@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Voder-Vocoder: Excessively long URLs.</title>
-<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==">
+<link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==" rel="icon"/>
 <style>
 @media (prefers-color-scheme:dark) {body {background-color:#000;color:#FFF;}
 a:visited {color:#C0F;}
@@ -57,11 +57,12 @@ ul.flat li {display:inline;}
 ul.flat li::after {content:"]";}
 ul.flat li::before {content:"[";}
 </style>
-<link title="/vv/" href="/vv/rss.rss" rel="alternate" type="application/atom+xml">
-<!-- Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED. -->
+<link href="https://halcanary.org/vv/rss.rss" rel="alternate" title="Voder-Vocoder" type="application/atom+xml"/>
+<!--
+Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
+-->
 </head>
 <body>
-
 <article class="h-entry" id="2007/06/28/696">
 <header>
 <!-- SRC= 2007-06-28-696.md -->
@@ -71,7 +72,7 @@ ul.flat li::before {content:"[";}
 <div>
 <div class="p-author">Hal Canary</div>
 <div><time class="dt-published" datetime="2007-06-28T10:14:14-05:00">2007-06-28 10:14:14-05:00 (CDT)</time></div>
-<div><a class="u-url u-uid" href="/vv/2007/06/28/696/">https://halcanary.org/vv/2007/06/28/696/</a></div>
+<div><a class="u-url u-uid" href="https://halcanary.org/vv/2007/06/28/696/">https://halcanary.org/vv/2007/06/28/696/</a></div>
 <div><a class="p-category" href="/vv/category/computers-code/">#computers-code</a></div>
 </div>
 </div>
@@ -80,41 +81,50 @@ ul.flat li::before {content:"[";}
 
 <p>I hate <a href="http://www.w3.org/Provider/Style/URI">unnecessarily long URLs</a>. One of the things I always try to figure out how to leave out is the file name extension. As Tim Berners-Lee says:</p>
 <blockquote>
-<p>"cgi", even ".html" is something which will change. You may not be using HTML for that page in 20 years time, but you might want today's links to it to still be valid. The canonical way of making links to the W3C site doesn't use the extension</p>
+<p>&quot;cgi&quot;, even &quot;.html&quot; is something which will change. You may not be using HTML for that page in 20 years time, but you might want today's links to it to still be valid. The canonical way of making links to the W3C site doesn't use the extension</p>
 </blockquote>
 <p>Here are two ways of doing this with Apache.</p>
-<ol type="1">
-<li><p>Insert this line into your ".htaccess" file:</p>
-<p>DefaultType text/html</p></li>
+<ol>
+<li>
+<p>Insert this line into your &quot;.htaccess&quot; file:</p>
+<p>DefaultType text/html</p>
+</li>
 </ol>
-<p>Then when you create any new html pages, call them "foobar" instead of "foobar.html" and then your URL will be:</p>
-<pre><code>http://example.com/directory/foobar</code></pre>
+<p>Then when you create any new html pages, call them &quot;foobar&quot; instead of &quot;foobar.html&quot; and then your URL will be:</p>
+<pre><code>http://example.com/directory/foobar
+</code></pre>
 <p>and not</p>
-<pre><code>http://example.com/directory/foobar.html</code></pre>
+<pre><code>http://example.com/directory/foobar.html
+</code></pre>
 <p>Which makes more sense. Now you can at some later point in time change the default to .shtml or .php</p>
-<ol start="2" type="1">
-<li><p>Put this in your ".htaccess" file:</p>
-<p>Options All MultiViews</p></li>
+<ol start="2">
+<li>
+<p>Put this in your &quot;.htaccess&quot; file:</p>
+<p>Options All MultiViews</p>
+</li>
 </ol>
-<p>Then put a file called "foobar.html" in the directory "directory/" and the URL:</p>
-<pre><code>http://example.com/directory/foobar</code></pre>
+<p>Then put a file called &quot;foobar.html&quot; in the directory &quot;directory/&quot; and the URL:</p>
+<pre><code>http://example.com/directory/foobar
+</code></pre>
 <p>will automagically work.</p>
 <hr />
 <p>Other options:</p>
-<ol start="3" type="1">
-<li><p>Here's a third way:</p>
+<ol start="3">
+<li>
+<p>Here's a third way:</p>
 <p>RewriteEngine on
-RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^(.*)$ $1.html</p></li>
+RewriteCond %{REQUEST_FILENAME}.html  -f
+RewriteRule ^(.*)$           $1.html</p>
+</li>
 </ol>
 </div>
 </article>
-<hr>
-<nav>
+<hr/>
+<nav aria-label="External Navigation">
 <div class="lcr">
-  <div><p>(older: <a href="/vv/2007/06/25/695/">Firefox Addons</a>)</p></div>
+  <div><p>(older: <a href="https://halcanary.org/vv/2007/06/25/695/">Firefox Addons</a>)</p></div>
   <div class="centered"><p>(<a href="/vv/archives/">back</a>)</p></div>
-  <div class="rightside"><p>(newer: <a href="/vv/2007/06/30/697/">Can you be more specific?</a>)</p></div>
+  <div class="rightside"><p>(newer: <a href="https://halcanary.org/vv/2007/06/30/697/">Can you be more specific?</a>)</p></div>
 </div>
 </nav>
 </body>

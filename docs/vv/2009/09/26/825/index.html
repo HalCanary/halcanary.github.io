@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Voder-Vocoder: ssh-show-key-fingerprint</title>
-<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==">
+<link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==" rel="icon"/>
 <style>
 @media (prefers-color-scheme:dark) {body {background-color:#000;color:#FFF;}
 a:visited {color:#C0F;}
@@ -57,11 +57,12 @@ ul.flat li {display:inline;}
 ul.flat li::after {content:"]";}
 ul.flat li::before {content:"[";}
 </style>
-<link title="/vv/" href="/vv/rss.rss" rel="alternate" type="application/atom+xml">
-<!-- Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED. -->
+<link href="https://halcanary.org/vv/rss.rss" rel="alternate" title="Voder-Vocoder" type="application/atom+xml"/>
+<!--
+Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
+-->
 </head>
 <body>
-
 <article class="h-entry" id="2009/09/26/825">
 <header>
 <!-- SRC= 2009-09-26-825.md -->
@@ -71,7 +72,7 @@ ul.flat li::before {content:"[";}
 <div>
 <div class="p-author">Hal Canary</div>
 <div><time class="dt-published" datetime="2009-09-26T13:01:31-05:00">2009-09-26 13:01:31-05:00 (CDT)</time></div>
-<div><a class="u-url u-uid" href="/vv/2009/09/26/825/">https://halcanary.org/vv/2009/09/26/825/</a></div>
+<div><a class="u-url u-uid" href="https://halcanary.org/vv/2009/09/26/825/">https://halcanary.org/vv/2009/09/26/825/</a></div>
 <div><a class="p-category" href="/vv/category/computers-code/">#computers-code</a></div>
 </div>
 </div>
@@ -89,13 +90,15 @@ for file in &quot;$@&quot; ; do
   ( cd `dirname &quot;$file&quot;`;
     /usr/bin/ssh-keygen -l \
       -f  `basename &quot;$file&quot;`; )
-done</code></pre>
+done
+</code></pre>
 <p>What to do with this info? first of all, print out the fingerprints and put them in your wallet.</p>
 <p>Here's another thing I do:</p>
 <pre><code>ssh-show-key-fingerprint | \
   sudo tee -a /etc/issue.ssh &gt; /dev/null
-echo &#39;Banner /etc/issue.ssh&#39; | \
-  sudo tee -a /etc/ssh/sshd_config &gt; /dev/null</code></pre>
+echo 'Banner /etc/issue.ssh' | \
+  sudo tee -a /etc/ssh/sshd_config &gt; /dev/null
+</code></pre>
 <p>This, of course, is in no way a secure way to check your fingerprint, since it is just as vulnerable to a man-in-the-middle attack. But it works as a backup plan.</p>
 <p>And some legal theories say you should insert these additional lines into your /ets/issue.ssh file:</p>
 <pre><code> UNAUTHORIZED ACCESS PROHIBITED.
@@ -103,15 +106,16 @@ echo &#39;Banner /etc/issue.ssh&#39; | \
  USE OF THIS SYSTEM BY ANY USER, AUTHORIZED OR UNAUTHORIZED,
  CONSTITUTES CONSENT TO THIS MONITORING, INTERCEPTION,
  RECORDING, READING, COPYING, or CAPTURING and DISCLOSURE
- by SYSTEM OWNER.</code></pre>
+ by SYSTEM OWNER.
+</code></pre>
 </div>
 </article>
-<hr>
-<nav>
+<hr/>
+<nav aria-label="External Navigation">
 <div class="lcr">
-  <div><p>(older: <a href="/vv/2009/09/24/822/">MakeBookmarksFile</a>)</p></div>
+  <div><p>(older: <a href="https://halcanary.org/vv/2009/09/24/822/">MakeBookmarksFile</a>)</p></div>
   <div class="centered"><p>(<a href="/vv/archives/">back</a>)</p></div>
-  <div class="rightside"><p>(newer: <a href="/vv/2009/09/26/827/">Command-line Package Tools</a>)</p></div>
+  <div class="rightside"><p>(newer: <a href="https://halcanary.org/vv/2009/09/26/827/">Command-line Package Tools</a>)</p></div>
 </div>
 </nav>
 </body>

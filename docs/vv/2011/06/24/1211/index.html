@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Voder-Vocoder: change-epub-formatting.py</title>
-<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==">
+<link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==" rel="icon"/>
 <style>
 @media (prefers-color-scheme:dark) {body {background-color:#000;color:#FFF;}
 a:visited {color:#C0F;}
@@ -57,11 +57,12 @@ ul.flat li {display:inline;}
 ul.flat li::after {content:"]";}
 ul.flat li::before {content:"[";}
 </style>
-<link title="/vv/" href="/vv/rss.rss" rel="alternate" type="application/atom+xml">
-<!-- Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED. -->
+<link href="https://halcanary.org/vv/rss.rss" rel="alternate" title="Voder-Vocoder" type="application/atom+xml"/>
+<!--
+Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
+-->
 </head>
 <body>
-
 <article class="h-entry" id="2011/06/24/1211">
 <header>
 <!-- SRC= 2011-06-24-1211.md -->
@@ -71,7 +72,7 @@ ul.flat li::before {content:"[";}
 <div>
 <div class="p-author">Hal Canary</div>
 <div><time class="dt-published" datetime="2011-06-24T15:28:54-05:00">2011-06-24 15:28:54-05:00 (CDT)</time></div>
-<div><a class="u-url u-uid" href="/vv/2011/06/24/1211/">https://halcanary.org/vv/2011/06/24/1211/</a></div>
+<div><a class="u-url u-uid" href="https://halcanary.org/vv/2011/06/24/1211/">https://halcanary.org/vv/2011/06/24/1211/</a></div>
 <div><a class="p-category" href="/vv/category/books/">#books</a>; <a class="p-category" href="/vv/category/computers-code/">#computers-code</a></div>
 </div>
 </div>
@@ -86,11 +87,11 @@ import sys
 import glob
 
 def fixfile(in_file_name):
-  ebookconvert = r&#39;C:\PROGRA~2\Calibre2\ebook-convert.exe&#39;
-  #ebookconvert = &#39;/usr/bin/ebook-convert&#39;
+  ebookconvert = r'C:\PROGRA~2\Calibre2\ebook-convert.exe'
+  #ebookconvert = '/usr/bin/ebook-convert'
   base = os.path.basename(in_file_name)
   dirn = os.path.dirname(in_file_name)
-  newdir = &#39;myformat&#39;
+  newdir = 'myformat'
   try:
     os.mkdir(os.path.join(dirn, newdir))
   except OSError:
@@ -98,30 +99,31 @@ def fixfile(in_file_name):
   out_file_name = os.path.join(dirn, newdir, base)
 
   cmd = [ebookconvert, in_file_name, out_file_name,
-    &#39;--preserve-cover-aspect-ratio&#39;,
-    &#39;--change-justification&#39;, &#39;left&#39;,
-    &#39;--margin-bottom&#39;, &#39;4&#39;,
-    &#39;--margin-left&#39;, &#39;4&#39;,
-    &#39;--margin-right&#39;, &#39;4&#39;,
-    &#39;--margin-top&#39;, &#39;4&#39;,
-    &#39;--remove-paragraph-spacing&#39;]
-  print &#39; &#39;.join(cmd), &#39;\n&#39;
+    '--preserve-cover-aspect-ratio',
+    '--change-justification', 'left',
+    '--margin-bottom', '4',
+    '--margin-left', '4',
+    '--margin-right', '4',
+    '--margin-top', '4',
+    '--remove-paragraph-spacing']
+  print ' '.join(cmd), '\n'
   sproc = subprocess.Popen(cmd)
   sproc.wait()
 
-if __name__ == &#39;__main__&#39;:
+if __name__ == '__main__':
   for arg in sys.argv[1:]:
     for filen in glob.glob(arg):
       fixfile(filen)
-  exit(0)</code></pre>
+  exit(0)
+</code></pre>
 </div>
 </article>
-<hr>
-<nav>
+<hr/>
+<nav aria-label="External Navigation">
 <div class="lcr">
-  <div><p>(older: <a href="/vv/2011/06/21/1209/">scrabble.sh</a>)</p></div>
+  <div><p>(older: <a href="https://halcanary.org/vv/2011/06/21/1209/">scrabble.sh</a>)</p></div>
   <div class="centered"><p>(<a href="/vv/archives/">back</a>)</p></div>
-  <div class="rightside"><p>(newer: <a href="/vv/2011/06/26/1271/">TN 2011-06</a>)</p></div>
+  <div class="rightside"><p>(newer: <a href="https://halcanary.org/vv/2011/06/26/1271/">TN 2011-06</a>)</p></div>
 </div>
 </nav>
 </body>

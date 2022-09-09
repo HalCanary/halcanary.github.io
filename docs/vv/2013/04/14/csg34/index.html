@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Voder-Vocoder: Pointer class</title>
-<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==">
+<link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==" rel="icon"/>
 <style>
 @media (prefers-color-scheme:dark) {body {background-color:#000;color:#FFF;}
 a:visited {color:#C0F;}
@@ -57,11 +57,12 @@ ul.flat li {display:inline;}
 ul.flat li::after {content:"]";}
 ul.flat li::before {content:"[";}
 </style>
-<link title="/vv/" href="/vv/rss.rss" rel="alternate" type="application/atom+xml">
-<!-- Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED. -->
+<link href="https://halcanary.org/vv/rss.rss" rel="alternate" title="Voder-Vocoder" type="application/atom+xml"/>
+<!--
+Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
+-->
 </head>
 <body>
-
 <article class="h-entry" id="2013/04/14/csg34">
 <header>
 <!-- SRC= 2013-04-14-csg34.md -->
@@ -71,8 +72,8 @@ ul.flat li::before {content:"[";}
 <div>
 <div class="p-author">Hal Canary</div>
 <div><time class="dt-published" datetime="2013-04-14T12:00:00-05:00">2013-04-14 12:00:00-05:00 (CDT)</time></div>
-<div><a class="u-url u-uid" href="/vv/2013/04/14/csg34/">https://halcanary.org/vv/2013/04/14/csg34/</a></div>
-<div><a class="p-category" href="/vv/category/uncategorized/">#uncategorized</a></div>
+<div><a class="u-url u-uid" href="https://halcanary.org/vv/2013/04/14/csg34/">https://halcanary.org/vv/2013/04/14/csg34/</a></div>
+
 </div>
 </div>
 </header>
@@ -80,7 +81,7 @@ ul.flat li::before {content:"[";}
 
 <p>Suppose you are writing a C++ program and are linking to a C library. Many of the library calls return a pointer to a heap-allocated structure. You are expected to free that structure using a specialized free function. For example, the openssl library has a BIGNUM type that is typically created using BN_new() and deleted using BN_free(); The following <code>Pointer&lt; BIGNUM, BN_clear_free &gt;</code> class will take ownership of the BIGNUM pointer in a smart-pointer way and call the BN_free() function when ever the BIGNUM_ptr goes out of scope.</p>
 <p>This allows me to exit a function in any of several places (using return or throw) without explicitly freeing memeory.</p>
-<pre class="C++"><code>// Pointer Template
+<pre><code class="language-C++">// Pointer Template
 // Copyright 2013 Hal Canary
 //
 // Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
@@ -153,9 +154,10 @@ public:
   T * operator-&gt;() const { return m_ptr; }
 };
 
-#endif /* POINTER_H */</code></pre>
+#endif /* POINTER_H */
+</code></pre>
 <p>And the main funtion, as promised:</p>
-<pre class="C++"><code>// compile with &quot;-lcrypto&quot;
+<pre><code class="language-C++">// compile with &quot;-lcrypto&quot;
 #include &lt;iostream&gt; // cout
 #include &lt;exception&gt; // exception
 #include &lt;openssl/bn.h&gt; // BIGNUM
@@ -169,17 +171,18 @@ int main(int, char **) {
   if (! BN_hex2bn(&amp;(bn), hexnumber))
     throw std::exception();
   Pointer&lt; char, Pointers::free&lt; char &gt; &gt; dec(BN_bn2dec(bn));
-  std::cout &lt;&lt; dec &lt;&lt; &#39;\n&#39;;
+  std::cout &lt;&lt; dec &lt;&lt; '\n';
   return 0;
-}</code></pre>
+}
+</code></pre>
 </div>
 </article>
-<hr>
-<nav>
+<hr/>
+<nav aria-label="External Navigation">
 <div class="lcr">
-  <div><p>(older: <a href="/vv/2013/03/01/csg33/">a common idiom</a>)</p></div>
+  <div><p>(older: <a href="https://halcanary.org/vv/2013/03/01/csg33/">a common idiom</a>)</p></div>
   <div class="centered"><p>(<a href="/vv/archives/">back</a>)</p></div>
-  <div class="rightside"><p>(newer: <a href="/vv/2013/04/20/1305/">Surface Viewing</a>)</p></div>
+  <div class="rightside"><p>(newer: <a href="https://halcanary.org/vv/2013/04/20/1305/">Surface Viewing</a>)</p></div>
 </div>
 </nav>
 </body>

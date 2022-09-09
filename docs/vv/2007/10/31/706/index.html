@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Voder-Vocoder: number reform</title>
-<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==">
+<link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==" rel="icon"/>
 <style>
 @media (prefers-color-scheme:dark) {body {background-color:#000;color:#FFF;}
 a:visited {color:#C0F;}
@@ -57,11 +57,12 @@ ul.flat li {display:inline;}
 ul.flat li::after {content:"]";}
 ul.flat li::before {content:"[";}
 </style>
-<link title="/vv/" href="/vv/rss.rss" rel="alternate" type="application/atom+xml">
-<!-- Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED. -->
+<link href="https://halcanary.org/vv/rss.rss" rel="alternate" title="Voder-Vocoder" type="application/atom+xml"/>
+<!--
+Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
+-->
 </head>
 <body>
-
 <article class="h-entry" id="2007/10/31/706">
 <header>
 <!-- SRC= 2007-10-31-706.md -->
@@ -71,7 +72,7 @@ ul.flat li::before {content:"[";}
 <div>
 <div class="p-author">Hal Canary</div>
 <div><time class="dt-published" datetime="2007-10-31T13:46:45-05:00">2007-10-31 13:46:45-05:00 (CDT)</time></div>
-<div><a class="u-url u-uid" href="/vv/2007/10/31/706/">https://halcanary.org/vv/2007/10/31/706/</a></div>
+<div><a class="u-url u-uid" href="https://halcanary.org/vv/2007/10/31/706/">https://halcanary.org/vv/2007/10/31/706/</a></div>
 <div><a class="p-category" href="/vv/category/computers-code/">#computers-code</a>; <a class="p-category" href="/vv/category/new-standards/">#new-standards</a>; <a class="p-category" href="/vv/category/manifesto/">#manifesto</a>; <a class="p-category" href="/vv/category/top/">#top</a></div>
 </div>
 </div>
@@ -84,42 +85,46 @@ numbering system (already in use by programmers everywhere).</p>
 also give us an opportunity to throw out the base 360/60/60 system
 (degrees/minutes/seconds) and 24/60/60 (hours/minutes/seconds) that the
 Babylonians saddled us with.</p>
-<h3>Numbers</h3>
+<h2>Numbers</h2>
 <p>The proposal: The sixteen digits 0123456789abcdef. Integers would be written</p>
-<pre><code>dd,dddd,dddd</code></pre>
+<pre><code>dd,dddd,dddd
+</code></pre>
 <p>with four digit groups (16 bits each). Mixed numbers would be witten</p>
-<pre><code>dd,dddd,dddd.ddd</code></pre>
+<pre><code>dd,dddd,dddd.ddd
+</code></pre>
 <p>and a decimal separating fractions. Floating-point numbers (or numbers in
 scientific notation) would always be written</p>
-<pre><code>d.dddPdd</code></pre>
+<pre><code>d.dddPdd
+</code></pre>
 <p>or</p>
-<pre><code>d.dddP-dd</code></pre>
-<p>where "<em>x</em>⁠P⁠<em>y</em>" means "<em>x</em> × 16<sup><em>y</em></sup>" (P for exPonent.)</p>
-<h3>Time</h3>
+<pre><code>d.dddP-dd
+</code></pre>
+<p>where &quot;<em>x</em>⁠P⁠<em>y</em>&quot; means &quot;<em>x</em> × 16<sup><em>y</em></sup>&quot; (P for exPonent.)</p>
+<h2>Time</h2>
 <p>The new minute would be 1/256 th of an average day. (5.625 old-minutes) The new
 second would be 1/ 65536 th of a day (1.318 old-seconds).</p>
 <p>(Note that you could always specify meeting times with only new-minutes, since
 one never wants to be more specific than 1 new-minute for such things.
-Therefore, "meet me at 1:15 p.m." becomes "meet me at :8D". Days and time can
-be specified simpler: "2007-10-31 13:46:45" becomes "7D7-A-1F:930" (Year
+Therefore, &quot;meet me at 1:15 p.m.&quot; becomes &quot;meet me at :8D&quot;.  Days and time can
+be specified simpler:  &quot;2007-10-31 13:46:45&quot; becomes &quot;7D7-A-1F:930&quot; (Year
 <em>7D7</em>, month <em>A</em>, day <em>1F</em>, minute <em>93</em>, second <em>0</em>.))</p>
-<h3>Length</h3>
+<h2>Length</h2>
 <p>The new standard length would be around 9.202 centimeters. that would make the
 speed of light equal to an even 16^8 (new standard lengths/new seconds)</p>
-<h3>Angles</h3>
+<h2>Angles</h2>
 <p>The new degree would simply be 1/256th of a circle.</p>
 <hr />
 <p>Translating to and from binary would of course be trivial.</p>
-<p>One would have to come up with new prefixes which mean "256 times", "1/256
-times", "1/65536 times", and "65536 times"—like "kilo" means "1000 times".</p>
+<p>One would have to come up with new prefixes which mean &quot;256 times&quot;, &quot;1/256
+times&quot;, &quot;1/65536 times&quot;, and &quot;65536 times&quot;—like &quot;kilo&quot; means &quot;1000 times&quot;.</p>
 </div>
 </article>
-<hr>
-<nav>
+<hr/>
+<nav aria-label="External Navigation">
 <div class="lcr">
-  <div><p>(older: <a href="/vv/2007/10/26/705/">Not another calendar reform</a>)</p></div>
+  <div><p>(older: <a href="https://halcanary.org/vv/2007/10/26/705/">Not another calendar reform</a>)</p></div>
   <div class="centered"><p>(<a href="/vv/archives/">back</a>)</p></div>
-  <div class="rightside"><p>(newer: <a href="/vv/2007/11/04/707/">SIG</a>)</p></div>
+  <div class="rightside"><p>(newer: <a href="https://halcanary.org/vv/2007/11/04/707/">SIG</a>)</p></div>
 </div>
 </nav>
 </body>

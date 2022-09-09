@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Voder-Vocoder: Update comparison</title>
-<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==">
+<link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==" rel="icon"/>
 <style>
 @media (prefers-color-scheme:dark) {body {background-color:#000;color:#FFF;}
 a:visited {color:#C0F;}
@@ -57,11 +57,12 @@ ul.flat li {display:inline;}
 ul.flat li::after {content:"]";}
 ul.flat li::before {content:"[";}
 </style>
-<link title="/vv/" href="/vv/rss.rss" rel="alternate" type="application/atom+xml">
-<!-- Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED. -->
+<link href="https://halcanary.org/vv/rss.rss" rel="alternate" title="Voder-Vocoder" type="application/atom+xml"/>
+<!--
+Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
+-->
 </head>
 <body>
-
 <article class="h-entry" id="2010/09/04/1032">
 <header>
 <!-- SRC= 2010-09-04-1032.md -->
@@ -71,7 +72,7 @@ ul.flat li::before {content:"[";}
 <div>
 <div class="p-author">Hal Canary</div>
 <div><time class="dt-published" datetime="2010-09-04T13:43:34-05:00">2010-09-04 13:43:34-05:00 (CDT)</time></div>
-<div><a class="u-url u-uid" href="/vv/2010/09/04/1032/">https://halcanary.org/vv/2010/09/04/1032/</a></div>
+<div><a class="u-url u-uid" href="https://halcanary.org/vv/2010/09/04/1032/">https://halcanary.org/vv/2010/09/04/1032/</a></div>
 <div><a class="p-category" href="/vv/category/computers-code/">#computers-code</a></div>
 </div>
 </div>
@@ -83,9 +84,11 @@ ul.flat li::before {content:"[";}
 <pre><code>#!/bin/sh
 sudo apt-get update
 sudo apt-get -y dist-upgrade
-sudo apt-get clean</code></pre>
+sudo apt-get clean
+</code></pre>
 <p>Windows Update: You run this program—</p>
-<pre><code>%windir%\system32\wuapp.exe</code></pre>
+<pre><code>%windir%\system32\wuapp.exe
+</code></pre>
 <p>—then click on some things, then it downloads and installs, then it asks you to reboot. Then while it shuts down it does things, then while it boots up it does things, then you have to repeat the same process THREE TIMES to get all the updates!</p>
 <hr />
 <p>Also, here's my full script:</p>
@@ -108,15 +111,16 @@ sudo /usr/bin/nice /usr/bin/apt-get --yes update &amp;&amp; \
 sudo /usr/bin/nice /usr/bin/apt-get --yes dist-upgrade
 sudo /usr/bin/nice /usr/bin/apt-get autoremove
 sudo /usr/bin/nice /usr/bin/apt-get clean
-sudo /usr/bin/nice /usr/bin/dpkg --configure --pending</code></pre>
+sudo /usr/bin/nice /usr/bin/dpkg --configure --pending
+</code></pre>
 </div>
 </article>
-<hr>
-<nav>
+<hr/>
+<nav aria-label="External Navigation">
 <div class="lcr">
-  <div><p>(older: <a href="/vv/2010/08/28/1026/">Redesign of the Mexican flag</a>)</p></div>
+  <div><p>(older: <a href="https://halcanary.org/vv/2010/08/28/1026/">Redesign of the Mexican flag</a>)</p></div>
   <div class="centered"><p>(<a href="/vv/archives/">back</a>)</p></div>
-  <div class="rightside"><p>(newer: <a href="/vv/2010/09/25/1046/">recent books</a>)</p></div>
+  <div class="rightside"><p>(newer: <a href="https://halcanary.org/vv/2010/09/25/1046/">recent books</a>)</p></div>
 </div>
 </nav>
 </body>

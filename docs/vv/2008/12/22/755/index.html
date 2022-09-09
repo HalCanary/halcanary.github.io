@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Voder-Vocoder: icecast+liveice</title>
-<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==">
+<link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==" rel="icon"/>
 <style>
 @media (prefers-color-scheme:dark) {body {background-color:#000;color:#FFF;}
 a:visited {color:#C0F;}
@@ -57,11 +57,12 @@ ul.flat li {display:inline;}
 ul.flat li::after {content:"]";}
 ul.flat li::before {content:"[";}
 </style>
-<link title="/vv/" href="/vv/rss.rss" rel="alternate" type="application/atom+xml">
-<!-- Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED. -->
+<link href="https://halcanary.org/vv/rss.rss" rel="alternate" title="Voder-Vocoder" type="application/atom+xml"/>
+<!--
+Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
+-->
 </head>
 <body>
-
 <article class="h-entry" id="2008/12/22/755">
 <header>
 <!-- SRC= 2008-12-22-755.md -->
@@ -71,7 +72,7 @@ ul.flat li::before {content:"[";}
 <div>
 <div class="p-author">Hal Canary</div>
 <div><time class="dt-published" datetime="2008-12-22T08:43:49-06:00">2008-12-22 08:43:49-06:00 (CST)</time></div>
-<div><a class="u-url u-uid" href="/vv/2008/12/22/755/">https://halcanary.org/vv/2008/12/22/755/</a></div>
+<div><a class="u-url u-uid" href="https://halcanary.org/vv/2008/12/22/755/">https://halcanary.org/vv/2008/12/22/755/</a></div>
 <div><a class="p-category" href="/vv/category/computers-code/">#computers-code</a></div>
 </div>
 </div>
@@ -79,13 +80,17 @@ ul.flat li::before {content:"[";}
 <div class="content e-content">
 
 <p>Setting up icecast+liveice so I can stream music from my PC to the internet. A simple</p>
-<pre><code>sudo apt-get install -y liveice icecast-server</code></pre>
+<pre><code>sudo apt-get install -y liveice icecast-server
+</code></pre>
 <p>installs the software. Use</p>
-<pre><code>makepasswd --crypt</code></pre>
+<pre><code>makepasswd --crypt
+</code></pre>
 <p>to make a password and a hash of that password for the icecast server. Edit the /etc/icecast/icecast.conf to put the hashed password in there. Set port, hostname, and server_name. I used my dyndns hostname for my server name and used 8888 for my port. I was sure to open that port on my firewall and forward it on my nat/router. Restart the server with</p>
-<pre><code>sudo /etc/init.d/icecast-server start</code></pre>
+<pre><code>sudo /etc/init.d/icecast-server start
+</code></pre>
 <p>Check the logs with</p>
-<pre><code>tail -f /var/log/icecast/icecast.log</code></pre>
+<pre><code>tail -f /var/log/icecast/icecast.log
+</code></pre>
 <p>That will let you know if you have password errors connecting to the icecast server.</p>
 <p>Now edit the file $HOME/.liveice.cfg by starting with the example found on the internets. Some of the values I put in are:</p>
 <pre><code>SERVER localhost
@@ -95,30 +100,34 @@ PASSWORD XXXXXXXXXXXX
 MOUNTPOINT /x
 NO_SOUNDCARD
 MIXER
-PLAYLIST /home/hal/playlist.pl</code></pre>
+PLAYLIST /home/hal/playlist.pl
+</code></pre>
 <p>Be sure to set all the values, not just the ones I listed.</p>
 <pre><code>#!/bin/sh
 # $HOME/bin/startliveice.sh
 # DTPD
 DIR=&quot;/d/music/&quot;
-find &quot;${DIR}&quot; -name &#39;*.mp3&#39; \
+find &quot;${DIR}&quot; -name '*.mp3' \
   | ${HOME}/bin/randomize-list.py \
   &gt; ${HOME}/playlist.pl
 exec liveice -F ${HOME}/.liveice.cfg \
-  2&gt; /dev/null</code></pre>
+  2&gt; /dev/null
+</code></pre>
 <p>Now you're ready to start the liveice program. Read /usr/share/doc/liveice/README.liveice.gz to find out the commands for the curses frontend.</p>
 <p>Check that it's working with</p>
-<pre><code>mplayer -quiet -cache 32 http://127.0.0.1:8888/x</code></pre>
+<pre><code>mplayer -quiet -cache 32 http://127.0.0.1:8888/x
+</code></pre>
 <p>If I'm broadcasting, check me at at</p>
-<pre><code>http://halcanary.dyndns.org:8888/x</code></pre>
+<pre><code>http://halcanary.dyndns.org:8888/x
+</code></pre>
 </div>
 </article>
-<hr>
-<nav>
+<hr/>
+<nav aria-label="External Navigation">
 <div class="lcr">
-  <div><p>(older: <a href="/vv/2008/12/21/754/">ransdomize</a>)</p></div>
+  <div><p>(older: <a href="https://halcanary.org/vv/2008/12/21/754/">ransdomize</a>)</p></div>
   <div class="centered"><p>(<a href="/vv/archives/">back</a>)</p></div>
-  <div class="rightside"><p>(newer: <a href="/vv/2009/01/08/756/">cool</a>)</p></div>
+  <div class="rightside"><p>(newer: <a href="https://halcanary.org/vv/2009/01/08/756/">cool</a>)</p></div>
 </div>
 </nav>
 </body>

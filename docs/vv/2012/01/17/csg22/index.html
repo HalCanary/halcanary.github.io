@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Voder-Vocoder: PyQt QInputDialog.get*() wrappers</title>
-<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==">
+<link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==" rel="icon"/>
 <style>
 @media (prefers-color-scheme:dark) {body {background-color:#000;color:#FFF;}
 a:visited {color:#C0F;}
@@ -57,11 +57,12 @@ ul.flat li {display:inline;}
 ul.flat li::after {content:"]";}
 ul.flat li::before {content:"[";}
 </style>
-<link title="/vv/" href="/vv/rss.rss" rel="alternate" type="application/atom+xml">
-<!-- Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED. -->
+<link href="https://halcanary.org/vv/rss.rss" rel="alternate" title="Voder-Vocoder" type="application/atom+xml"/>
+<!--
+Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
+-->
 </head>
 <body>
-
 <article class="h-entry" id="2012/01/17/csg22">
 <header>
 <!-- SRC= 2012-01-17-csg22.md -->
@@ -71,14 +72,14 @@ ul.flat li::before {content:"[";}
 <div>
 <div class="p-author">Hal Canary</div>
 <div><time class="dt-published" datetime="2012-01-17T12:00:00-06:00">2012-01-17 12:00:00-06:00 (CST)</time></div>
-<div><a class="u-url u-uid" href="/vv/2012/01/17/csg22/">https://halcanary.org/vv/2012/01/17/csg22/</a></div>
-<div><a class="p-category" href="/vv/category/uncategorized/">#uncategorized</a></div>
+<div><a class="u-url u-uid" href="https://halcanary.org/vv/2012/01/17/csg22/">https://halcanary.org/vv/2012/01/17/csg22/</a></div>
+
 </div>
 </div>
 </header>
 <div class="content e-content">
 
-<pre class="Python"><code>#!/usr/bin/env python
+<pre><code class="language-Python">#!/usr/bin/env python
 
 import PyQt4.QtGui
 
@@ -88,14 +89,14 @@ def getInt(title, label, mini=-2147483647, maxa=2147483647):
   (ret, ok) = PyQt4.QtGui.QInputDialog.getInt(
     PyQt4.QtGui.QWidget(), title, label, default, mini, maxa)
   if not ok:
-    raise Exception(&#39;select error&#39;)
+    raise Exception('select error')
   return ret
 
 def getItem(title, label, items):
   (ret, ok) = PyQt4.QtGui.QInputDialog.getItem(
     PyQt4.QtGui.QWidget(), title, label, items)
   if not ok:
-    raise Exception(&#39;select error&#39;)
+    raise Exception('select error')
   return str(ret)
 
 def getFloat(title, label, mini=-2147483647, maxa=2147483647,
@@ -106,39 +107,40 @@ def getFloat(title, label, mini=-2147483647, maxa=2147483647,
   (ret, ok) = PyQt4.QtGui.QInputDialog.getDouble(
     PyQt4.QtGui.QWidget(), title, label, default, mini, maxa, decimals)
   if not ok:
-    raise Exception(&#39;select error&#39;)
+    raise Exception('select error')
   return ret
 
 def getItem(title, label, items):
   (ret, ok) = PyQt4.QtGui.QInputDialog.getItem(
     PyQt4.QtGui.QWidget(), title, label, items)
   if not ok:
-    raise Exception(&#39;select error&#39;)
+    raise Exception('select error')
   return str(ret)
 
-def getText(title, label, default=&#39;&#39;):
+def getText(title, label, default=''):
   (ret, ok) = PyQt4.QtGui.QInputDialog.getText(
     PyQt4.QtGui.QWidget(), title, label,
     PyQt4.QtGui.QLineEdit.Normal, default)
   if not ok:
-    raise Exception(&#39;select error&#39;)
+    raise Exception('select error')
   return str(ret)
 
 qApplication = PyQt4.QtGui.QApplication([])
 
-print getItem(&#39;getItem()&#39;, &#39;select a color&#39;,
-  [&#39;red&#39;,&#39;orange&#39;,&#39;yellow&#39;,&#39;green&#39;,&#39;blue&#39;,&#39;violet&#39;])
-print getInt(&#39;getInt()&#39;, &#39;give me a number&#39;, 0, 100)
-print getFloat(&#39;getFloat()&#39;, &#39;give me a number&#39;, 0.0, 1.0, None, 2)
-print getText(&#39;getText()&#39;,&#39;give me some text&#39;,&#39;string&#39;)</code></pre>
+print getItem('getItem()', 'select a color',
+  ['red','orange','yellow','green','blue','violet'])
+print getInt('getInt()', 'give me a number', 0, 100)
+print getFloat('getFloat()', 'give me a number', 0.0, 1.0, None, 2)
+print getText('getText()','give me some text','string')
+</code></pre>
 </div>
 </article>
-<hr>
-<nav>
+<hr/>
+<nav aria-label="External Navigation">
 <div class="lcr">
-  <div><p>(older: <a href="/vv/2012/01/08/1279/">Arcosanti</a>)</p></div>
+  <div><p>(older: <a href="https://halcanary.org/vv/2012/01/08/1279/">Arcosanti</a>)</p></div>
   <div class="centered"><p>(<a href="/vv/archives/">back</a>)</p></div>
-  <div class="rightside"><p>(newer: <a href="/vv/2012/02/01/csg23/">rosetta stone</a>)</p></div>
+  <div class="rightside"><p>(newer: <a href="https://halcanary.org/vv/2012/02/01/csg23/">rosetta stone</a>)</p></div>
 </div>
 </nav>
 </body>

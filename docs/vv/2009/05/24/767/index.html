@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Voder-Vocoder: ssh filesharing.</title>
-<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==">
+<link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==" rel="icon"/>
 <style>
 @media (prefers-color-scheme:dark) {body {background-color:#000;color:#FFF;}
 a:visited {color:#C0F;}
@@ -57,11 +57,12 @@ ul.flat li {display:inline;}
 ul.flat li::after {content:"]";}
 ul.flat li::before {content:"[";}
 </style>
-<link title="/vv/" href="/vv/rss.rss" rel="alternate" type="application/atom+xml">
-<!-- Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED. -->
+<link href="https://halcanary.org/vv/rss.rss" rel="alternate" title="Voder-Vocoder" type="application/atom+xml"/>
+<!--
+Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
+-->
 </head>
 <body>
-
 <article class="h-entry" id="2009/05/24/767">
 <header>
 <!-- SRC= 2009-05-24-767.md -->
@@ -71,7 +72,7 @@ ul.flat li::before {content:"[";}
 <div>
 <div class="p-author">Hal Canary</div>
 <div><time class="dt-published" datetime="2009-05-24T15:20:33-05:00">2009-05-24 15:20:33-05:00 (CDT)</time></div>
-<div><a class="u-url u-uid" href="/vv/2009/05/24/767/">https://halcanary.org/vv/2009/05/24/767/</a></div>
+<div><a class="u-url u-uid" href="https://halcanary.org/vv/2009/05/24/767/">https://halcanary.org/vv/2009/05/24/767/</a></div>
 <div><a class="p-category" href="/vv/category/computers-code/">#computers-code</a></div>
 </div>
 </div>
@@ -80,24 +81,34 @@ ul.flat li::before {content:"[";}
 
 <p>R. was looking for an easy way to share files among the computers in his house, most of which ran some version of Linux. SSH offers one solution to this question. Pro: it is available on all the Linux computers, is integrated with Gnome, allows shell as well as file access, and is secure over a wireless network. Cons: Poor support in Windows.</p>
 <p>To set up:</p>
-<ol type="1">
-<li><p>Install the OpenSSH Dæmon. In Ubuntu, for example, "sudo apt-get install -y openssh-server" will install it.</p></li>
-<li><p>Get the local address of each machine with:</p>
-<p>/sbin/ifconfig | grep 'inet addr' | awk '{print $1 " " $2}'</p></li>
-<li><p>Give each machine a unique and memorable hostname. Hostnames can be changed permanently by changing the contents of the file /etc/hostname (on debian-style systems) and until the next boot with "sudo hostname NEWNAME".</p></li>
-<li><p>Edit the file /etc/hosts on each computer to list all of the local IP addresses for each computer on the network. (Under Windows, it's "%SystemRoot%\system32\drivers\etc\hosts" and under MacOSX it's "/private/etc/hosts".</p></li>
-<li><p>In Gnome, open the file browser Nautilus ("nautilus" from the command line)→menu bar→File→Connect to server. In the dialog, select "Service type" to be SSH, give the hostname, and username only if it's different on the two computers.</p></li>
+<ol>
+<li>
+<p>Install the OpenSSH Dæmon. In Ubuntu, for example, &quot;sudo apt-get install -y openssh-server&quot; will install it.</p>
+</li>
+<li>
+<p>Get the local address of each machine with:</p>
+<p>/sbin/ifconfig | grep 'inet addr' | awk '{print $1 &quot; &quot; $2}'</p>
+</li>
+<li>
+<p>Give each machine a unique and memorable hostname. Hostnames can be changed permanently by changing the contents of the file /etc/hostname (on debian-style systems) and until the next boot with &quot;sudo hostname NEWNAME&quot;.</p>
+</li>
+<li>
+<p>Edit the file /etc/hosts on each computer to list all of the local IP addresses for each computer on the network. (Under Windows, it's &quot;%SystemRoot%\system32\drivers\etc\hosts&quot; and under MacOSX it's &quot;/private/etc/hosts&quot;.</p>
+</li>
+<li>
+<p>In Gnome, open the file browser Nautilus (&quot;nautilus&quot; from the command line)→menu bar→File→Connect to server. In the dialog, select &quot;Service type&quot; to be SSH, give the hostname, and username only if it's different on the two computers.</p>
+</li>
 </ol>
-<p>Alternatively, one can enter "nautilus sftp://USERNAME@HOSTNAME/DIRECTORY" on the command line.</p>
+<p>Alternatively, one can enter &quot;nautilus sftp://USERNAME@HOSTNAME/DIRECTORY&quot; on the command line.</p>
 <p>In recent versions of Nautilus/Gnome, you can bookmark locations like this. Then they will be availible from the Gnome Menu→Places→Bookmarks.</p>
 </div>
 </article>
-<hr>
-<nav>
+<hr/>
+<nav aria-label="External Navigation">
 <div class="lcr">
-  <div><p>(older: <a href="/vv/2009/05/13/766/">Going to post some photos.....</a>)</p></div>
+  <div><p>(older: <a href="https://halcanary.org/vv/2009/05/13/766/">Going to post some photos.....</a>)</p></div>
   <div class="centered"><p>(<a href="/vv/archives/">back</a>)</p></div>
-  <div class="rightside"><p>(newer: <a href="/vv/2009/05/30/768/">7</a>)</p></div>
+  <div class="rightside"><p>(newer: <a href="https://halcanary.org/vv/2009/05/30/768/">7</a>)</p></div>
 </div>
 </nav>
 </body>

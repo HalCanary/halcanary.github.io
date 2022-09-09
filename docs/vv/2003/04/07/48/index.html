@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Voder-Vocoder: Linux Crap</title>
-<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==">
+<link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==" rel="icon"/>
 <style>
 @media (prefers-color-scheme:dark) {body {background-color:#000;color:#FFF;}
 a:visited {color:#C0F;}
@@ -57,11 +57,12 @@ ul.flat li {display:inline;}
 ul.flat li::after {content:"]";}
 ul.flat li::before {content:"[";}
 </style>
-<link title="/vv/" href="/vv/rss.rss" rel="alternate" type="application/atom+xml">
-<!-- Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED. -->
+<link href="https://halcanary.org/vv/rss.rss" rel="alternate" title="Voder-Vocoder" type="application/atom+xml"/>
+<!--
+Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
+-->
 </head>
 <body>
-
 <article class="h-entry" id="2003/04/07/48">
 <header>
 <!-- SRC= 2003-04-07-48.md -->
@@ -71,7 +72,7 @@ ul.flat li::before {content:"[";}
 <div>
 <div class="p-author">Hal Canary</div>
 <div><time class="dt-published" datetime="2003-04-07T11:21:15-05:00">2003-04-07 11:21:15-05:00 (CDT)</time></div>
-<div><a class="u-url u-uid" href="/vv/2003/04/07/48/">https://halcanary.org/vv/2003/04/07/48/</a></div>
+<div><a class="u-url u-uid" href="https://halcanary.org/vv/2003/04/07/48/">https://halcanary.org/vv/2003/04/07/48/</a></div>
 <div><a class="p-category" href="/vv/category/computers-code/">#computers-code</a></div>
 </div>
 </div>
@@ -81,7 +82,7 @@ ul.flat li::before {content:"[";}
 <p>I bought a copy of Red Hat 9 today. I've got the hang of installing new linux distros. Just don't format over the /home and /usr/local partitions and remember where you wrote down the phone number for your ppp connection. And don't forget that the modem is /dev/ttyS4, not /dev/ttyS0; that mistake cost me an hour.</p>
 <p>My review: Not much different than 8.0. It feels more like a point release. Does not come with Windowmaker, so I'm not sure how well that will work on a older machine. I'm back to using Bluecurv-themed Gnome. It works okay.</p>
 <p>Problems with Gnome 2:</p>
-<ol type="1">
+<ol>
 <li>No shortcut key to logout. (I submitted a bug report on that.)</li>
 <li>needs to run 'xrdb $HOME/.Xdefaults' on login. (Fixable)</li>
 <li>Not as fast loading as Windowmaker (but faster than Gnome 1.x).</li>
@@ -89,7 +90,7 @@ ul.flat li::before {content:"[";}
 <li>Fonts in Open Office need fixing. I hear that Ximian is working on this.</li>
 </ol>
 <p>To make a usable system, I have to install the following software in /usr/local:</p>
-<ol type="1">
+<ol>
 <li>Phoenix with nice fonts - browser.</li>
 <li>Flash plugin for Phoenix.</li>
 <li>mpg123 - tui mp3 player.</li>
@@ -99,7 +100,7 @@ ul.flat li::before {content:"[";}
 </ol>
 <p>Overall, I'm suprised at how few things need to be in /usr/local. I went through and cleaned up that partition for the first time in years.</p>
 <p>To do:</p>
-<ol type="1">
+<ol>
 <li>Try to get my iPod to play nice with linux. With previous kernel versions, using the firewire card caused kernel errors. Ick.</li>
 <li>Get dvd playback to work nicely. The easy solution is to go buy a video card with mpeg-2 decoding on it. Why does software decoding work so much nicer under Windows than Linux?</li>
 </ol>
@@ -107,12 +108,12 @@ ul.flat li::before {content:"[";}
 <p>It snowed this morning! In April! Crazyness!</p>
 </div>
 </article>
-<hr>
-<nav>
+<hr/>
+<nav aria-label="External Navigation">
 <div class="lcr">
-  <div><p>(older: <a href="/vv/2003/04/01/47/">desk</a>)</p></div>
+  <div><p>(older: <a href="https://halcanary.org/vv/2003/04/01/47/">desk</a>)</p></div>
   <div class="centered"><p>(<a href="/vv/archives/">back</a>)</p></div>
-  <div class="rightside"><p>(newer: <a href="/vv/2003/04/10/49/">More Linux Crap</a>)</p></div>
+  <div class="rightside"><p>(newer: <a href="https://halcanary.org/vv/2003/04/10/49/">More Linux Crap</a>)</p></div>
 </div>
 </nav>
 </body>

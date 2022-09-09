@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Voder-Vocoder: snap your window to the left or right</title>
-<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==">
+<link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==" rel="icon"/>
 <style>
 @media (prefers-color-scheme:dark) {body {background-color:#000;color:#FFF;}
 a:visited {color:#C0F;}
@@ -57,11 +57,12 @@ ul.flat li {display:inline;}
 ul.flat li::after {content:"]";}
 ul.flat li::before {content:"[";}
 </style>
-<link title="/vv/" href="/vv/rss.rss" rel="alternate" type="application/atom+xml">
-<!-- Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED. -->
+<link href="https://halcanary.org/vv/rss.rss" rel="alternate" title="Voder-Vocoder" type="application/atom+xml"/>
+<!--
+Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
+-->
 </head>
 <body>
-
 <article class="h-entry" id="2011/11/08/csg18">
 <header>
 <!-- SRC= 2011-11-08-csg18.md -->
@@ -71,15 +72,15 @@ ul.flat li::before {content:"[";}
 <div>
 <div class="p-author">Hal Canary</div>
 <div><time class="dt-published" datetime="2011-11-08T12:00:00-06:00">2011-11-08 12:00:00-06:00 (CST)</time></div>
-<div><a class="u-url u-uid" href="/vv/2011/11/08/csg18/">https://halcanary.org/vv/2011/11/08/csg18/</a></div>
-<div><a class="p-category" href="/vv/category/uncategorized/">#uncategorized</a></div>
+<div><a class="u-url u-uid" href="https://halcanary.org/vv/2011/11/08/csg18/">https://halcanary.org/vv/2011/11/08/csg18/</a></div>
+
 </div>
 </div>
 </header>
 <div class="content e-content">
 
 <p>This script will snap your window to the left or right side of the screen in Linux: (<a href="http://www.techsupportalert.com/content/ubuntu-tips-and-tricks.htm#Enable-Aero-Snap">SOURCE</a>)</p>
-<pre class="sh"><code>#!/bin/sh
+<pre><code class="language-sh">#!/bin/sh
 ## ${HOME}/bin/wmctrl-snap-edge
 #DTPD#
 WMCTRL=&quot;${HOME}/bin/wmctrl_`arch`&quot;
@@ -87,49 +88,53 @@ WMCTRL=&quot;${HOME}/bin/wmctrl_`arch`&quot;
 test -x &quot;/usr/bin/xdpyinfo&quot; -a -x &quot;$WMCTRL&quot; || {
     echo &quot;error&quot;; exit 1; }
 
-WIDTH=`xdpyinfo | sed -n &#39;s/ *dimensions: *\([0-9]*\)x.*/\1/p&#39;`
+WIDTH=`xdpyinfo | sed -n 's/ *dimensions: *\([0-9]*\)x.*/\1/p'`
 HALF=$(($WIDTH / 2));
 &quot;$WMCTRL&quot; -r :ACTIVE: -b add,maximized_vert;
 if test &quot;$1&quot; = &quot;left&quot; ; then
-    &quot;$WMCTRL&quot; -r :ACTIVE: -e 0,0,0,$HALF,-1
+	&quot;$WMCTRL&quot; -r :ACTIVE: -e 0,0,0,$HALF,-1
 elif test &quot;$1&quot; = &quot;right&quot; ; then
-    &quot;$WMCTRL&quot; -r :ACTIVE: -e 0,$HALF,0,$HALF,-1
-fi</code></pre>
+	&quot;$WMCTRL&quot; -r :ACTIVE: -e 0,$HALF,0,$HALF,-1
+fi
+</code></pre>
 <p>If you don't have wmctrl installed, you can apt-get it (Ubuntu):</p>
-<pre class="sh"><code>sudo apt-get --yes install wmctrl</code></pre>
+<pre><code class="language-sh">sudo apt-get --yes install wmctrl
+</code></pre>
 <p>Or compile it yourself:</p>
-<pre class="sh"><code>sudo yum install libXmu-devel
+<pre><code class="language-sh">sudo yum install libXmu-devel
 cd /tmp
-wget &#39;http://tomas.styblo.name/wmctrl/dist/wmctrl-1.07.tar.gz&#39;
+wget 'http://tomas.styblo.name/wmctrl/dist/wmctrl-1.07.tar.gz'
 tar --extract --gzip --file &quot;wmctrl-1.07.tar.gz&quot;
 cd wmctrl-1.07
 ./configure
 make -j 4
-mv wmctrl ${HOME}/bin/wmctrl_`arch`</code></pre>
+mv wmctrl ${HOME}/bin/wmctrl_`arch`
+</code></pre>
 <p>The next step is to set up hotkeys. If you use Metacity like I do, then:</p>
-<pre class="sh"><code>gconftool-2 --type string --set \
-    /apps/metacity/global_keybindings/run_command_6 \
-    &#39;&lt;Ctrl&gt;&lt;Alt&gt;Page_Up&#39;
+<pre><code class="language-sh">gconftool-2 --type string --set \
+	/apps/metacity/global_keybindings/run_command_6 \
+	'&lt;Ctrl&gt;&lt;Alt&gt;Page_Up'
 
 gconftool-2 --type string --set \
-    /apps/metacity/keybinding_commands/command_6 \
-    &quot;${HOME}/bin/wmctrl-snap-edge left&quot;
+	/apps/metacity/keybinding_commands/command_6 \
+	&quot;${HOME}/bin/wmctrl-snap-edge left&quot;
 
 gconftool-2 --type string --set \
-    /apps/metacity/global_keybindings/run_command_7 \
-    &#39;&lt;Ctrl&gt;&lt;Alt&gt;Page_Down&#39;
+	/apps/metacity/global_keybindings/run_command_7 \
+	'&lt;Ctrl&gt;&lt;Alt&gt;Page_Down'
 
 gconftool-2 --type string --set \
-    /apps/metacity/keybinding_commands/command_7 \
-    &quot;${HOME}/bin/wmctrl-snap-edge right&quot;</code></pre>
+	/apps/metacity/keybinding_commands/command_7 \
+	&quot;${HOME}/bin/wmctrl-snap-edge right&quot;
+</code></pre>
 </div>
 </article>
-<hr>
-<nav>
+<hr/>
+<nav aria-label="External Navigation">
 <div class="lcr">
-  <div><p>(older: <a href="/vv/2011/11/03/csg17/">Restart X11 under Ubuntu</a>)</p></div>
+  <div><p>(older: <a href="https://halcanary.org/vv/2011/11/03/csg17/">Restart X11 under Ubuntu</a>)</p></div>
   <div class="centered"><p>(<a href="/vv/archives/">back</a>)</p></div>
-  <div class="rightside"><p>(newer: <a href="/vv/2011/11/16/csg19/">Quick linear regression</a>)</p></div>
+  <div class="rightside"><p>(newer: <a href="https://halcanary.org/vv/2011/11/16/csg19/">Quick linear regression</a>)</p></div>
 </div>
 </nav>
 </body>

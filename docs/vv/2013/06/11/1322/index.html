@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Voder-Vocoder: spiral</title>
-<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==">
+<link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==" rel="icon"/>
 <style>
 @media (prefers-color-scheme:dark) {body {background-color:#000;color:#FFF;}
 a:visited {color:#C0F;}
@@ -57,46 +57,50 @@ ul.flat li {display:inline;}
 ul.flat li::after {content:"]";}
 ul.flat li::before {content:"[";}
 </style>
-<link title="/vv/" href="/vv/rss.rss" rel="alternate" type="application/atom+xml">
-<!-- Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED. -->
+<link href="https://halcanary.org/vv/rss.rss" rel="alternate" title="Voder-Vocoder" type="application/atom+xml"/>
+<!--
+Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
+-->
 </head>
 <body>
-
 <article class="h-entry" id="2013/06/11/1322">
 <header>
 <!-- SRC= 2013-06-11-1322.md -->
 <h1 class="blogtitle p-name">spiral</h1>
-    <p class="p-summary">Your challenge: make a pretty postscript picture as one tweet</p>
+<p class="p-summary">Your challenge: make a pretty postscript picture as one tweet</p>
 <div class="byline plainlink">
 <div>
 <div class="p-author">Hal Canary</div>
 <div><time class="dt-published" datetime="2013-06-11T14:00:34-05:00">2013-06-11 14:00:34-05:00 (CDT)</time></div>
-<div><a class="u-url u-uid" href="/vv/2013/06/11/1322/">https://halcanary.org/vv/2013/06/11/1322/</a></div>
+<div><a class="u-url u-uid" href="https://halcanary.org/vv/2013/06/11/1322/">https://halcanary.org/vv/2013/06/11/1322/</a></div>
 <div><a class="p-category" href="/vv/category/computers-code/">#computers-code</a></div>
 </div>
 </div>
 </header>
 <div class="content e-content">
 <div style="display:none;">Your challenge: make a pretty postscript picture as one tweet</div>
-<p>Your challenge: make a pretty postscript picture as one tweet. "%!\n" is not necessary
+<p>Your challenge: make a pretty postscript picture as one tweet.  &quot;%!\n&quot;  is not necessary
 (<a href="https://twitter.com/halcanary/status/344530170532741120">tweet</a>)</p>
 <pre><code>%!
 300 300 translate newpath 3 0 2 copy moveto 604 { 5 add
 exch 1.01 mul exch 2 copy cos mul 3 copy pop sin mul
-lineto } repeat stroke showpage</code></pre>
+lineto } repeat stroke showpage
+</code></pre>
 <p><img src="https://halcanary.org/images/postscriptChallenge_spiral.png" alt="program output" /></p>
 <hr />
 <p><a href="https://twitter.com/gmfawcett/status/344891033202614272">gmfawcett:</a></p>
 <pre><code>%!
 /n 90 def 150 150 translate newpath n n moveto 36 { 170
-rotate n n lineto} repeat stroke showpage</code></pre>
+rotate n n lineto} repeat stroke showpage
+</code></pre>
 <p><img src="https://halcanary.org/images/postscriptChallenge_spirograph.png" alt="program output" /></p>
 <hr />
 <p><a href="https://twitter.com/seanjensengrey/status/344825151264808961">seanjensengrey:</a></p>
 <pre><code>%!
 /box { newpath moveto 72 0 rlineto 0 72 rlineto -72 0
 rlineto closepath stroke } def 99 99 translate 0 1 5{60
-rotate -20 0 box}for showpage</code></pre>
+rotate -20 0 box}for showpage
+</code></pre>
 <p><img src="https://halcanary.org/images/postscriptChallenge_sixBoxes.png" alt="program output" /></p>
 <hr />
 <p><a href="https://twitter.com/gmfawcett/status/344986403962253312">gmfawcett:</a></p>
@@ -104,7 +108,8 @@ rotate -20 0 box}for showpage</code></pre>
 /Courier findfont 50 scalefont setfont 150 250 moveto
 (#postscriptchallenge) { 1 string dup 0 4 3 roll put
 show -18 rotate} forall
-showpage</code></pre>
+showpage
+</code></pre>
 <p><img src="https://halcanary.org/images/postscriptChallenge_words.png" alt="program output" /></p>
 <hr />
 <p>Note: to display these,m I used this command:</p>
@@ -112,15 +117,16 @@ showpage</code></pre>
 300 300 translate newpath 3 0 2 copy moveto 604 { 5 add
 exch 1.01 mul exch 2 copy cos mul 3 copy pop sin mul
 lineto } repeat stroke showpage
-EOF</code></pre>
+EOF
+</code></pre>
 </div>
 </article>
-<hr>
-<nav>
+<hr/>
+<nav aria-label="External Navigation">
 <div class="lcr">
-  <div><p>(older: <a href="/vv/2013/05/23/1320/">packages</a>)</p></div>
+  <div><p>(older: <a href="https://halcanary.org/vv/2013/05/23/1320/">packages</a>)</p></div>
   <div class="centered"><p>(<a href="/vv/archives/">back</a>)</p></div>
-  <div class="rightside"><p>(newer: <a href="/vv/2013/06/13/csg36/">or just use xdg-open</a>)</p></div>
+  <div class="rightside"><p>(newer: <a href="https://halcanary.org/vv/2013/06/13/csg36/">or just use xdg-open</a>)</p></div>
 </div>
 </nav>
 </body>

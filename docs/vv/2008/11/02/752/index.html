@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Voder-Vocoder: RTF</title>
-<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==">
+<link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==" rel="icon"/>
 <style>
 @media (prefers-color-scheme:dark) {body {background-color:#000;color:#FFF;}
 a:visited {color:#C0F;}
@@ -57,11 +57,12 @@ ul.flat li {display:inline;}
 ul.flat li::after {content:"]";}
 ul.flat li::before {content:"[";}
 </style>
-<link title="/vv/" href="/vv/rss.rss" rel="alternate" type="application/atom+xml">
-<!-- Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED. -->
+<link href="https://halcanary.org/vv/rss.rss" rel="alternate" title="Voder-Vocoder" type="application/atom+xml"/>
+<!--
+Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
+-->
 </head>
 <body>
-
 <article class="h-entry" id="2008/11/02/752">
 <header>
 <!-- SRC= 2008-11-02-752.md -->
@@ -71,7 +72,7 @@ ul.flat li::before {content:"[";}
 <div>
 <div class="p-author">Hal Canary</div>
 <div><time class="dt-published" datetime="2008-11-02T08:27:52-06:00">2008-11-02 08:27:52-06:00 (CST)</time></div>
-<div><a class="u-url u-uid" href="/vv/2008/11/02/752/">https://halcanary.org/vv/2008/11/02/752/</a></div>
+<div><a class="u-url u-uid" href="https://halcanary.org/vv/2008/11/02/752/">https://halcanary.org/vv/2008/11/02/752/</a></div>
 <div><a class="p-category" href="/vv/category/computers-code/">#computers-code</a></div>
 </div>
 </div>
@@ -86,10 +87,10 @@ ul.flat li::before {content:"[";}
 import sys
 fi = sys.stdin
 fo = sys.stdout
-encoding = &#39;UTF-8&#39;
-fo.write(r&#39;{\rtf1\ansi\deff0{\fonttbl{\f0 Times New Roman;}}&#39;)
-fo.write(r&#39;\paperh15840\paperw12240\margl1800\margr1800\margt1440\margb1440\fs24&#39;)
-fo.write(&#39;\n&#39;)
+encoding = 'UTF-8'
+fo.write(r'{\rtf1\ansi\deff0{\fonttbl{\f0 Times New Roman;}}')
+fo.write(r'\paperh15840\paperw12240\margl1800\margr1800\margt1440\margb1440\fs24')
+fo.write('\n')
 for line in fi:
   uline = unicode(line, encoding)
   for char in uline:
@@ -113,16 +114,17 @@ for line in fi:
       fo.write(&quot;\\u%d?&quot; % ordchar)
       continue
     fo.write(char)
-fo.write(&#39;}\n\n&#39;)</code></pre>
+fo.write('}\n\n')
+</code></pre>
 <p>For a manuscript, you don't want to do any fancy formating, bold text, fonts, colors, curly quotes, et cetera. This avoids all of that jazz. One might want italic text, but that's not <a href="http://everything2.com/title/fASCIIst">fASCIIst</a> enough, is it?</p>
 </div>
 </article>
-<hr>
-<nav>
+<hr/>
+<nav aria-label="External Navigation">
 <div class="lcr">
-  <div><p>(older: <a href="/vv/2008/10/25/751/">Saturday voting</a>)</p></div>
+  <div><p>(older: <a href="https://halcanary.org/vv/2008/10/25/751/">Saturday voting</a>)</p></div>
   <div class="centered"><p>(<a href="/vv/archives/">back</a>)</p></div>
-  <div class="rightside"><p>(newer: <a href="/vv/2008/12/06/753/">/usr/share/dict</a>)</p></div>
+  <div class="rightside"><p>(newer: <a href="https://halcanary.org/vv/2008/12/06/753/">/usr/share/dict</a>)</p></div>
 </div>
 </nav>
 </body>

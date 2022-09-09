@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Voder-Vocoder: FC3</title>
-<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==">
+<link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==" rel="icon"/>
 <style>
 @media (prefers-color-scheme:dark) {body {background-color:#000;color:#FFF;}
 a:visited {color:#C0F;}
@@ -57,11 +57,12 @@ ul.flat li {display:inline;}
 ul.flat li::after {content:"]";}
 ul.flat li::before {content:"[";}
 </style>
-<link title="/vv/" href="/vv/rss.rss" rel="alternate" type="application/atom+xml">
-<!-- Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED. -->
+<link href="https://halcanary.org/vv/rss.rss" rel="alternate" title="Voder-Vocoder" type="application/atom+xml"/>
+<!--
+Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
+-->
 </head>
 <body>
-
 <article class="h-entry" id="2004/11/26/358">
 <header>
 <!-- SRC= 2004-11-26-358.md -->
@@ -71,7 +72,7 @@ ul.flat li::before {content:"[";}
 <div>
 <div class="p-author">Hal Canary</div>
 <div><time class="dt-published" datetime="2004-11-26T17:16:23-06:00">2004-11-26 17:16:23-06:00 (CST)</time></div>
-<div><a class="u-url u-uid" href="/vv/2004/11/26/358/">https://halcanary.org/vv/2004/11/26/358/</a></div>
+<div><a class="u-url u-uid" href="https://halcanary.org/vv/2004/11/26/358/">https://halcanary.org/vv/2004/11/26/358/</a></div>
 <div><a class="p-category" href="/vv/category/computers-code/">#computers-code</a></div>
 </div>
 </div>
@@ -81,28 +82,32 @@ ul.flat li::before {content:"[";}
 <p>I installed Fedora Core 3 on my workstaion at home this month. It works fine; I get slightly more up to date versions of the software I use, no big deal. For those who care (really, for my own reference), here's how I set things up.</p>
 <p><strong>FILESYSTEM</strong></p>
 <p>This is how I set up my hard drive. I planned on formatting every partition except for /home. /home also contained a copy of the four CDs, aquired from a torrent. FC3-i386-disc{1,2,3,4}.iso. I only burnt the first CD. The others could live on disc. (Use “linux askmethod“ at the boot prompt to make this work.)</p>
-<pre><code>Filesystem  1M-blocks   Mounted on
-/dev/hdb1         190   /boot
-/dev/hdb2        7706   /
-/dev/hdb3       18122   /home
-/dev/hdb5         471   /waste
-/dev/hdb6       ~2048   [SWAP]</code></pre>
+<pre><code>Filesystem	1M-blocks	Mounted on
+/dev/hdb1	      190	/boot
+/dev/hdb2	     7706	/
+/dev/hdb3	    18122	/home
+/dev/hdb5	      471	/waste
+/dev/hdb6	    ~2048	[SWAP]
+</code></pre>
 <p><strong>PREPARE</strong></p>
 <p>Save a copy of /etc onto /home partition. If I wanted, I could save all or part of /var as well.</p>
-<pre><code>cp -r /etc /home/etc-$(date +%Y-%m-%d)</code></pre>
+<pre><code>cp -r /etc /home/etc-$(date +%Y-%m-%d)
+</code></pre>
 <p><strong>FSTAB</strong></p>
 <p>I went ahead and installed. After installing, I had to get my /home partition mounted correctly and then link /usr/local to /home/local . I did all of this before I logged in.</p>
-<pre><code>echo &#39;/dev/hdb3 /home ext3 defaults 1 2&#39; \
-    &gt; /etc/fstab
+<pre><code>echo '/dev/hdb3 /home ext3 defaults 1 2' \
+	&gt; /etc/fstab
 mv /home /OLD.home
 mkdir /home
 mount /home
 mv /usr/local /usr/OLD.local
-ln -s /home/local/ /usr/local</code></pre>
+ln -s /home/local/ /usr/local
+</code></pre>
 <p><strong>SUDOERS</strong></p>
 <p>Add myself to the wheel group. Give that group sudoers access. Do everything else with suders.</p>
 <pre><code>system-config-users
-emacs /etc/sudoers</code></pre>
+emacs /etc/sudoers
+</code></pre>
 <p><strong>PACKAGES</strong></p>
 <p>Import keys for rpm/yum.</p>
 <pre><code>rpm --import /usr/share/doc/fedora-release-3/RPM-GPG-KEY*
@@ -112,15 +117,18 @@ rpm --import http://freshrpms.net/packages/RPM-GPG-KEY.txt
 rpm --import http://dag.wieers.com/packages/RPM-GPG-KEY.dag.txt
 rpm --import http://atrpms.net/RPM-GPG-KEY.atrpms
 rpm --import http://newrpms.sunsite.dk/gpg-pubkey-newrpms.txt
-rpm --import http://www.jpackage.org/jpackage.asc</code></pre>
+rpm --import http://www.jpackage.org/jpackage.asc
+</code></pre>
 <p>Do my first update:</p>
-<pre><code>yum update</code></pre>
+<pre><code>yum update
+</code></pre>
 <p>Reboot if I got a new kernel.</p>
 <p>I keep useful packages in /usr/local/packages. Install them.</p>
 <pre><code>rpm -Uvh /usr/local/packages/gqview-1.4.1-2.i386.rpm
 rpm -Uvh /usr/local/packages/RealPlayer10GOLD.rpm
 rpm -Uvh /usr/local/packages/acroread-5.0.8-1.1.fc2.dag.i386.rpm
-rpm -Uvh /usr/local/packages/jdk-1_5_0-linux-i586.rpm</code></pre>
+rpm -Uvh /usr/local/packages/jdk-1_5_0-linux-i586.rpm
+</code></pre>
 <p>Set up java.</p>
 <pre><code>cat &lt;&lt;EOF &gt; /etc/profile.d/java.sh
 export JAVA_HOME=&quot;/usr/java/jdk1.5.0&quot;
@@ -129,15 +137,18 @@ export PATH=&quot;$PATH:$JAVA_HOME/bin&quot;
 export JDK_HOME=&quot;$JAVA_HOME&quot;
 EOF
 ln -s /usr/java/jdk1.5.0/jre/plugin/i386/ns7/libjavaplugin_oji.so \
-  /usr/lib/mozilla/plugins/</code></pre>
+  /usr/lib/mozilla/plugins/
+</code></pre>
 <p>Setup yum.conf correctly (add some repos). See <a href="http://www.fedorafaq.org/">http://www.fedorafaq.org/</a>.</p>
 <pre><code>emacs -nw  /etc/yum.conf
-yum -y update</code></pre>
+yum -y update
+</code></pre>
 <p>Install some evil packages</p>
 <pre><code>yum install unrar libdvdnav libdvdplay libdvdread xvidcore
 yum install ogle aalib screen bash-completion bittorrent
-yum install id3v2 epic gftp xine grip dhcp</code></pre>
-<p>Some things to make mplayer (which lives in /usr/local) happy. Add /usr/local/lib to /etc/ld.so.conf. Change PRELINK_OPTS so that mplayer doesn't crash. Put "dev.rtc.max-user-freq = 1024" in /etc/sysctl.conf</p>
+yum install id3v2 epic gftp xine grip dhcp
+</code></pre>
+<p>Some things to make mplayer (which lives in /usr/local) happy. Add /usr/local/lib to /etc/ld.so.conf. Change PRELINK_OPTS so that mplayer doesn't crash. Put &quot;dev.rtc.max-user-freq = 1024&quot; in /etc/sysctl.conf</p>
 <pre><code>emacs -nw  /etc/ld.so.conf
 /sbin/ldconfig
 ln -s /usr/local/lib/codec /usr/lib/win32
@@ -146,19 +157,22 @@ touch /var/lib/misc/prelink.force
 /etc/cron.daily/prelink
 execstack -s /usr/local/bin/mplayer
 emacs -nw  /etc/sysctl.conf
-/sbin/sysctl -p /etc/sysctl.conf</code></pre>
+/sbin/sysctl -p /etc/sysctl.conf
+</code></pre>
 <p><strong>BASIC SETUP</strong></p>
 <p>Setup basic things. Printer, time.</p>
 <pre><code>system-config-printer
-system-config-time</code></pre>
+system-config-time
+</code></pre>
 <p>Grab my old SSHD keys.</p>
 <pre><code>cd /etc/ssh
 /sbin/service sshd stop
 rename key key.OLD *_key
 rename pub pub.OLD *.pub
 cp /home/etc-2004-11-10/ssh/*key* .
-/sbin/service sshd start</code></pre>
-<p>My workstation doubles as a router, so I need to: Play with network settings. Set "net.ipv4.ip_forward = 1" in /etc/sysctl.conf . Use my custom iptables script. Set up dhcpd</p>
+/sbin/service sshd start
+</code></pre>
+<p>My workstation doubles as a router, so I need to: Play with network settings. Set &quot;net.ipv4.ip_forward = 1&quot; in /etc/sysctl.conf . Use my custom iptables script. Set up dhcpd</p>
 <pre><code>system-config-network
 system-config-services
 
@@ -171,24 +185,27 @@ emacs -nw  /etc/sysctl.conf
 
 /sbin/chkconfig dhcpd on
 cp -i /home/etc-2004-11-10/dhcpd.conf /etc/dhcpd.conf
-/sbin/service dhcpd start</code></pre>
+/sbin/service dhcpd start
+</code></pre>
 <p>Set up services. Shutdown all I can.</p>
-<pre><code>system-config-services</code></pre>
+<pre><code>system-config-services
+</code></pre>
 <p><strong>UPDATE 2004-12-06:</strong> Set up alsa right for my sound card. PROPER MIXING!</p>
 <pre><code>cat &lt;&lt;EOF &gt; $HOME/.asoundrc
 pcm.!default {
         type plug
         slave.pcm &quot;dmix&quot;
 }
-EOF</code></pre>
+EOF
+</code></pre>
 </div>
 </article>
-<hr>
-<nav>
+<hr/>
+<nav aria-label="External Navigation">
 <div class="lcr">
-  <div><p>(older: <a href="/vv/2004/11/26/357/">Good or Bad?</a>)</p></div>
+  <div><p>(older: <a href="https://halcanary.org/vv/2004/11/26/357/">Good or Bad?</a>)</p></div>
   <div class="centered"><p>(<a href="/vv/archives/">back</a>)</p></div>
-  <div class="rightside"><p>(newer: <a href="/vv/2004/11/28/359/">image-upload.php</a>)</p></div>
+  <div class="rightside"><p>(newer: <a href="https://halcanary.org/vv/2004/11/28/359/">image-upload.php</a>)</p></div>
 </div>
 </nav>
 </body>

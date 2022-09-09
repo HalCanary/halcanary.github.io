@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Voder-Vocoder: (X)Ubuntu on my P3-700 laptop</title>
-<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==">
+<link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==" rel="icon"/>
 <style>
 @media (prefers-color-scheme:dark) {body {background-color:#000;color:#FFF;}
 a:visited {color:#C0F;}
@@ -57,11 +57,12 @@ ul.flat li {display:inline;}
 ul.flat li::after {content:"]";}
 ul.flat li::before {content:"[";}
 </style>
-<link title="/vv/" href="/vv/rss.rss" rel="alternate" type="application/atom+xml">
-<!-- Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED. -->
+<link href="https://halcanary.org/vv/rss.rss" rel="alternate" title="Voder-Vocoder" type="application/atom+xml"/>
+<!--
+Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
+-->
 </head>
 <body>
-
 <article class="h-entry" id="2007/04/11/684">
 <header>
 <!-- SRC= 2007-04-11-684.md -->
@@ -71,7 +72,7 @@ ul.flat li::before {content:"[";}
 <div>
 <div class="p-author">Hal Canary</div>
 <div><time class="dt-published" datetime="2007-04-11T14:13:25-05:00">2007-04-11 14:13:25-05:00 (CDT)</time></div>
-<div><a class="u-url u-uid" href="/vv/2007/04/11/684/">https://halcanary.org/vv/2007/04/11/684/</a></div>
+<div><a class="u-url u-uid" href="https://halcanary.org/vv/2007/04/11/684/">https://halcanary.org/vv/2007/04/11/684/</a></div>
 <div><a class="p-category" href="/vv/category/computers-code/">#computers-code</a></div>
 </div>
 </div>
@@ -93,32 +94,40 @@ cpu MHz         : 700.000
 cache size      : 256 KB
 
 $ cat /proc/meminfo  | head -1
-MemTotal:       385828 kB</code></pre>
+MemTotal:       385828 kB
+</code></pre>
 <p>This thing has got a 700 MHz Pentium III (Coppermine mobile) processor, which makes the processor design almost seven years old.</p>
 <p>Thoughts on this setup:</p>
-<ol type="1">
-<li><p>(X)Ubuntu works pretty well. I'm in the proccess of learning all about apt-get; otherwise a lot of my RH/Fedora knowledge translates over to Ubuntu.</p></li>
-<li><p>Xfce is still a little rough round the edges, but it does what I want it to. I miss Gnome's Rhythmbox and Gedit, but I should learn to make do with less.</p></li>
-<li><p>The wireless drivers work perfectly, BUT the GUI frontend (network-admin) is useless. I ended up writing my own scripts. This one lists all the availible networks.</p></li>
+<ol>
+<li>
+<p>(X)Ubuntu works pretty well. I'm in the proccess of learning all about apt-get; otherwise a lot of my RH/Fedora knowledge translates over to Ubuntu.</p>
+</li>
+<li>
+<p>Xfce is still a little rough round the edges, but it does what I want it to. I miss Gnome's Rhythmbox and Gedit, but I should learn to make do with less.</p>
+</li>
+<li>
+<p>The wireless drivers work perfectly, BUT the GUI frontend (network-admin) is useless. I ended up writing my own scripts. This one lists all the availible networks.</p>
+</li>
 </ol>
-<pre class="sh"><code>#!/bin/sh
+<pre><code class="language-sh">#!/bin/sh
 ## ~/bin/scanwifi
 ## 2007 Hal Canary
 ## Dedicated to the Public Domain
-sudo echo &#39;Restarting and scanning Wifi...&#39;
-echo &#39;&gt;&gt;&gt; ifconfig eth1 down &gt;&gt;&gt;&#39;
+sudo echo 'Restarting and scanning Wifi...'
+echo '&gt;&gt;&gt; ifconfig eth1 down &gt;&gt;&gt;'
 sudo ifconfig eth1 down
-echo &#39;&gt;&gt;&gt; ifconfig eth1 up &gt;&gt;&gt;&#39;
+echo '&gt;&gt;&gt; ifconfig eth1 up &gt;&gt;&gt;'
 sudo ifconfig eth1 up
-echo &#39;&gt;&gt;&gt; iwconfig eth1 essid any &gt;&gt;&gt;&#39;
+echo '&gt;&gt;&gt; iwconfig eth1 essid any &gt;&gt;&gt;'
 sudo iwconfig eth1 essid any
-echo &#39;&gt;&gt;&gt; iwconfig eth1 &gt;&gt;&gt;&#39;
+echo '&gt;&gt;&gt; iwconfig eth1 &gt;&gt;&gt;'
 sudo ifconfig eth1
-echo &#39;&gt;&gt;&gt; iwlist eth1 scanning &gt;&gt;&gt;&#39;
+echo '&gt;&gt;&gt; iwlist eth1 scanning &gt;&gt;&gt;'
 sudo iwlist eth1 scanning
-exit 0</code></pre>
+exit 0
+</code></pre>
 <p>This one connects to the selected network:</p>
-<pre class="sh"><code>#!/bin/sh
+<pre><code class="language-sh">#!/bin/sh
 ## ~/bin/connectwifi
 ## 2007 Hal Canary
 ## Dedicated to the Public Domain
@@ -129,36 +138,47 @@ if [ &quot;$#&quot; -lt 1 ] ; then
     echo &quot;  $0 SSID KEY&quot;
     exit 1
 fi
-echo &#39;########## iwconfig eth1 essid &quot;&#39;$1&#39;&quot; ########&#39;
+echo '########## iwconfig eth1 essid &quot;'$1'&quot; ########'
 sudo iwconfig eth1 essid &quot;$1&quot;
 if [ ! -z &quot;$2&quot; ] ; then
-    echo &#39;########## iwconfig eth1 key &quot;&#39;$2&#39;&quot; ########&#39;
+    echo '########## iwconfig eth1 key &quot;'$2'&quot; ########'
     sudo iwconfig eth1 key &quot;$2&quot;
 fi
-echo &#39;########## dhclient eth1 ########&#39;
+echo '########## dhclient eth1 ########'
 sudo dhclient eth1
-exit 0;</code></pre>
+exit 0;
+</code></pre>
 <p>And this one connects to my home network (not my real key):</p>
-<pre class="sh"><code>#!/bin/sh
+<pre><code class="language-sh">#!/bin/sh
 ## ~/bin/connectwifi.MySsid
-connectwifi MySsid 0c0dc52de9fbc078f3c1411100</code></pre>
+connectwifi MySsid 0c0dc52de9fbc078f3c1411100
+</code></pre>
 <p>Disconnecting can be accomplished with a</p>
-<pre><code>sudo ifconfig eth1 down</code></pre>
+<pre><code>sudo ifconfig eth1 down
+</code></pre>
 <p>or by simply removing the network card.</p>
-<ol start="4" type="1">
-<li><p>In theory this laptop's battery has only about an hour's charge on it, but I think that if I keep disc and CPU useage down to a minimum, it can last longer. I've been sitting here outside for almost an hour and it's at 46%. This is to be expected with a LiIon battery this old. If I get a new battery for this thing, it would cost around $100. We got this whole laptop for less than that.</p></li>
-<li><p>It's geeting cold out, so I'm going to go home now.</p></li>
-<li><p>Ubuntu disallows the use of the login name 'hal', reserving it for the hardware abstraction layer daemon. This makes me sad.</p></li>
-<li><p>Ubuntu has a much more lax default security policy. Iptables is off my default. There is no SELinux.</p></li>
+<ol start="4">
+<li>
+<p>In theory this laptop's battery has only about an hour's charge on it, but I think that if I keep disc and CPU useage down to a minimum, it can last longer. I've been sitting here outside for almost an hour and it's at 46%. This is to be expected with a LiIon battery this old. If I get a new battery for this thing, it would cost around $100. We got this whole laptop for less than that.</p>
+</li>
+<li>
+<p>It's geeting cold out, so I'm going to go home now.</p>
+</li>
+<li>
+<p>Ubuntu disallows the use of the login name 'hal', reserving it for the hardware abstraction layer daemon. This makes me sad.</p>
+</li>
+<li>
+<p>Ubuntu has a much more lax default security policy. Iptables is off my default. There is no SELinux.</p>
+</li>
 </ol>
 </div>
 </article>
-<hr>
-<nav>
+<hr/>
+<nav aria-label="External Navigation">
 <div class="lcr">
-  <div><p>(older: <a href="/vv/2007/04/07/683/">focus on getting the brand out</a>)</p></div>
+  <div><p>(older: <a href="https://halcanary.org/vv/2007/04/07/683/">focus on getting the brand out</a>)</p></div>
   <div class="centered"><p>(<a href="/vv/archives/">back</a>)</p></div>
-  <div class="rightside"><p>(newer: <a href="/vv/2007/04/11/685/">Presentation last night: Cryptography, Linux, and You</a>)</p></div>
+  <div class="rightside"><p>(newer: <a href="https://halcanary.org/vv/2007/04/11/685/">Presentation last night: Cryptography, Linux, and You</a>)</p></div>
 </div>
 </nav>
 </body>

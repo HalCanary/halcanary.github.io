@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Voder-Vocoder: genpasswd</title>
-<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==">
+<link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==" rel="icon"/>
 <style>
 @media (prefers-color-scheme:dark) {body {background-color:#000;color:#FFF;}
 a:visited {color:#C0F;}
@@ -57,11 +57,12 @@ ul.flat li {display:inline;}
 ul.flat li::after {content:"]";}
 ul.flat li::before {content:"[";}
 </style>
-<link title="/vv/" href="/vv/rss.rss" rel="alternate" type="application/atom+xml">
-<!-- Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED. -->
+<link href="https://halcanary.org/vv/rss.rss" rel="alternate" title="Voder-Vocoder" type="application/atom+xml"/>
+<!--
+Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
+-->
 </head>
 <body>
-
 <article class="h-entry" id="2007/04/05/682">
 <header>
 <!-- SRC= 2007-04-05-682.md -->
@@ -71,7 +72,7 @@ ul.flat li::before {content:"[";}
 <div>
 <div class="p-author">Hal Canary</div>
 <div><time class="dt-published" datetime="2007-04-05T14:05:04-05:00">2007-04-05 14:05:04-05:00 (CDT)</time></div>
-<div><a class="u-url u-uid" href="/vv/2007/04/05/682/">https://halcanary.org/vv/2007/04/05/682/</a></div>
+<div><a class="u-url u-uid" href="https://halcanary.org/vv/2007/04/05/682/">https://halcanary.org/vv/2007/04/05/682/</a></div>
 <div><a class="p-category" href="/vv/category/computers-code/">#computers-code</a></div>
 </div>
 </div>
@@ -92,10 +93,11 @@ ul.flat li::before {content:"[";}
 # Dedicated to the Public Domain.
 echo &quot;Grabbing bits from /dev/random...&quot; 1&gt;&amp;2
 head -c 18 /dev/random | base64 | \
-        sed &#39;s/\//Z/g;s/+/z/g;&#39;
+        sed 's/\//Z/g;s/+/z/g;'
 # If you lack base64 on your system, try:
-# head -c 18 /dev/random  | uuenview -b &#39;&#39; | \
-#       sed &#39;s/\//Z/g;s/+/z/g;&#39;</code></pre>
+# head -c 18 /dev/random  | uuenview -b '' | \
+#       sed 's/\//Z/g;s/+/z/g;'
+</code></pre>
 <p>Exactly how much entropy do we get?</p>
 <p>Each character can be a z or a Z with a probability of 2/64 for each. The other 60 characters have a probability of 1/64 each. Apply the formula:</p>
 <pre><code>information entropy
@@ -105,16 +107,17 @@ head -c 18 /dev/random | base64 | \
     = 2 * (2/64) * 5 + 60 * 1/64 * 6
     = 20/64 + 360/64
     = 380/64
-    = 5.9375</code></pre>
+    = 5.9375
+</code></pre>
 <p>Mulitply by 24 for 24 characters, and get 142.5 bits of entropy.</p>
 </div>
 </article>
-<hr>
-<nav>
+<hr/>
+<nav aria-label="External Navigation">
 <div class="lcr">
-  <div><p>(older: <a href="/vv/2007/03/28/680/">txt2prehtml</a>)</p></div>
+  <div><p>(older: <a href="https://halcanary.org/vv/2007/03/28/680/">txt2prehtml</a>)</p></div>
   <div class="centered"><p>(<a href="/vv/archives/">back</a>)</p></div>
-  <div class="rightside"><p>(newer: <a href="/vv/2007/04/07/683/">focus on getting the brand out</a>)</p></div>
+  <div class="rightside"><p>(newer: <a href="https://halcanary.org/vv/2007/04/07/683/">focus on getting the brand out</a>)</p></div>
 </div>
 </nav>
 </body>

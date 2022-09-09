@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Voder-Vocoder: gnuplot question</title>
-<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==">
+<link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==" rel="icon"/>
 <style>
 @media (prefers-color-scheme:dark) {body {background-color:#000;color:#FFF;}
 a:visited {color:#C0F;}
@@ -57,11 +57,12 @@ ul.flat li {display:inline;}
 ul.flat li::after {content:"]";}
 ul.flat li::before {content:"[";}
 </style>
-<link title="/vv/" href="/vv/rss.rss" rel="alternate" type="application/atom+xml">
-<!-- Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED. -->
+<link href="https://halcanary.org/vv/rss.rss" rel="alternate" title="Voder-Vocoder" type="application/atom+xml"/>
+<!--
+Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
+-->
 </head>
 <body>
-
 <article class="h-entry" id="2010/07/16/1001">
 <header>
 <!-- SRC= 2010-07-16-1001.md -->
@@ -71,7 +72,7 @@ ul.flat li::before {content:"[";}
 <div>
 <div class="p-author">Hal Canary</div>
 <div><time class="dt-published" datetime="2010-07-16T22:10:14-05:00">2010-07-16 22:10:14-05:00 (CDT)</time></div>
-<div><a class="u-url u-uid" href="/vv/2010/07/16/1001/">https://halcanary.org/vv/2010/07/16/1001/</a></div>
+<div><a class="u-url u-uid" href="https://halcanary.org/vv/2010/07/16/1001/">https://halcanary.org/vv/2010/07/16/1001/</a></div>
 <div><a class="p-category" href="/vv/category/computers-code/">#computers-code</a></div>
 </div>
 </div>
@@ -83,7 +84,8 @@ ul.flat li::before {content:"[";}
 \documentclass[letterpaper,12pt]{article}
 \begin{document}
 \input{graph}
-\end{document}</code></pre>
+\end{document}
+</code></pre>
 <p>The file graph.tex is generated using Gnuplot like this:</p>
 <pre><code>#!/usr/bin/gnuplot
 ## FILE: graph.gnuplot
@@ -91,14 +93,16 @@ set xrange [-3:3]
 set yrange [0:.42]
 set ytics nomirror autofreq 0, .1
 set terminal latex size 3,1.5
-set output &#39;graph.tex&#39;
+set output 'graph.tex'
 f(x) = .39894228040143267794 * exp(-0.5 * (x ** 2))
 set style line 1 linecolor rgb &quot;black&quot; linewidth 1
-plot f(x) ls 1 notitle</code></pre>
+plot f(x) ls 1 notitle
+</code></pre>
 <p>Here's the execution:</p>
 <pre><code>$ gnuplot graph.gnuplot
 $ pdflatex basic.tex &gt; /dev/null
-$ evince basic.pdf &amp;</code></pre>
+$ evince basic.pdf &amp;
+</code></pre>
 <p>This makes a really professional-looking graph I can put in a document.</p>
 <p><img src="https://halcanary.org/images/2010-07-16_graph.png" alt="[]" /></p>
 <p>Now here's what I want to see:</p>
@@ -106,12 +110,12 @@ $ evince basic.pdf &amp;</code></pre>
 <p>How do I do this with Gnuplot?</p>
 </div>
 </article>
-<hr>
-<nav>
+<hr/>
+<nav aria-label="External Navigation">
 <div class="lcr">
-  <div><p>(older: <a href="/vv/2010/06/27/997/">filling an ebook reader</a>)</p></div>
+  <div><p>(older: <a href="https://halcanary.org/vv/2010/06/27/997/">filling an ebook reader</a>)</p></div>
   <div class="centered"><p>(<a href="/vv/archives/">back</a>)</p></div>
-  <div class="rightside"><p>(newer: <a href="/vv/2010/07/17/1006/">gravatar</a>)</p></div>
+  <div class="rightside"><p>(newer: <a href="https://halcanary.org/vv/2010/07/17/1006/">gravatar</a>)</p></div>
 </div>
 </nav>
 </body>

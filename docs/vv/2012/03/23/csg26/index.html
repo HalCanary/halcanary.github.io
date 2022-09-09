@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Voder-Vocoder: generate image files</title>
-<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==">
+<link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==" rel="icon"/>
 <style>
 @media (prefers-color-scheme:dark) {body {background-color:#000;color:#FFF;}
 a:visited {color:#C0F;}
@@ -57,11 +57,12 @@ ul.flat li {display:inline;}
 ul.flat li::after {content:"]";}
 ul.flat li::before {content:"[";}
 </style>
-<link title="/vv/" href="/vv/rss.rss" rel="alternate" type="application/atom+xml">
-<!-- Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED. -->
+<link href="https://halcanary.org/vv/rss.rss" rel="alternate" title="Voder-Vocoder" type="application/atom+xml"/>
+<!--
+Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
+-->
 </head>
 <body>
-
 <article class="h-entry" id="2012/03/23/csg26">
 <header>
 <!-- SRC= 2012-03-23-csg26.md -->
@@ -71,43 +72,45 @@ ul.flat li::before {content:"[";}
 <div>
 <div class="p-author">Hal Canary</div>
 <div><time class="dt-published" datetime="2012-03-23T12:00:00-05:00">2012-03-23 12:00:00-05:00 (CDT)</time></div>
-<div><a class="u-url u-uid" href="/vv/2012/03/23/csg26/">https://halcanary.org/vv/2012/03/23/csg26/</a></div>
-<div><a class="p-category" href="/vv/category/uncategorized/">#uncategorized</a></div>
+<div><a class="u-url u-uid" href="https://halcanary.org/vv/2012/03/23/csg26/">https://halcanary.org/vv/2012/03/23/csg26/</a></div>
+
 </div>
 </div>
 </header>
 <div class="content e-content">
 
-<pre class="Python"><code>#!/usr/bin/python
+<pre><code class="language-Python">#!/usr/bin/python
 
 import Image
 import numpy
 
 X = 1024
 Y = 768
-filename = &#39;/tmp/x.png&#39;
+filename = '/tmp/x.png'
 
 ima = numpy.zeros((Y,X,4), dtype=numpy.uint8)
 ima[:,:,3] = 255 # make opaque
-Image.fromarray(ima,mode=&#39;RGBA&#39;).save(filename)</code></pre>
+Image.fromarray(ima,mode='RGBA').save(filename)
+</code></pre>
 <p>For example:</p>
-<pre class="Python"><code>#!/usr/bin/env python
+<pre><code class="language-Python">#!/usr/bin/env python
 import Image
 import numpy
 N, K = (16,16), (256, 256)
-fn = &#39;random_pixels.png&#39;
+fn = 'random_pixels.png'
 im = numpy.random.random_integers(
-    0,255,(N[0],N[1],3)).astype(&#39;uint8&#39;)
-Image.fromarray(im,mode=&#39;RGB&#39;).resize(K).save(fn)
-print &#39;Wrote to&#39;, fn</code></pre>
+    0,255,(N[0],N[1],3)).astype('uint8')
+Image.fromarray(im,mode='RGB').resize(K).save(fn)
+print 'Wrote to', fn
+</code></pre>
 </div>
 </article>
-<hr>
-<nav>
+<hr/>
+<nav aria-label="External Navigation">
 <div class="lcr">
-  <div><p>(older: <a href="/vv/2012/03/16/csg25/">colapsing multiple for loops</a>)</p></div>
+  <div><p>(older: <a href="https://halcanary.org/vv/2012/03/16/csg25/">colapsing multiple for loops</a>)</p></div>
   <div class="centered"><p>(<a href="/vv/archives/">back</a>)</p></div>
-  <div class="rightside"><p>(newer: <a href="/vv/2012/04/03/csg27/">Collapse paragraphs</a>)</p></div>
+  <div class="rightside"><p>(newer: <a href="https://halcanary.org/vv/2012/04/03/csg27/">Collapse paragraphs</a>)</p></div>
 </div>
 </nav>
 </body>
