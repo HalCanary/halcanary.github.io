@@ -2,12 +2,11 @@ package main
 
 import (
 	"bufio"
-	"strconv"
 	"bytes"
+	"io"
 	"math"
-	"os"
-	"path/filepath"
 	"sort"
+	"strconv"
 	"strings"
 	"time"
 
@@ -134,14 +133,8 @@ func (post Post) Article(level int, url string, prefix string) *dom.Node {
 	)
 }
 
-func ReadPost(path string) (post Post, err error) {
-	var f *os.File
-	f, err = os.Open(path)
-	if err != nil {
-		return
-	}
-	defer f.Close()
-	scanner := bufio.NewScanner(f)
+func ParsePost(src io.Reader) (post Post, err error) {
+	scanner := bufio.NewScanner(src)
 	for scanner.Scan() {
 		splt := strings.SplitN(scanner.Text(), "=", 2)
 		if len(splt) != 2 {
@@ -178,7 +171,6 @@ func ReadPost(path string) (post Post, err error) {
 	}
 	post.Markdown = buffer.Bytes()
 	err = scanner.Err()
-	post.Source = filepath.Base(path)
 	return
 }
 
@@ -188,15 +180,6 @@ func (a postList) Len() int           { return len(a) }
 func (a postList) Swap(i, j int)      { a[i], a[j] = a[j], a[i] }
 func (a postList) Less(i, j int) bool { return a[j].Time.Before(a[i].Time) }
 
-func getAllPosts(paths []string) ([]Post, error) {
-	var allPosts []Post
-	for _, path := range paths {
-		post, err := ReadPost(path)
-		if err != nil {
-			return allPosts, err
-		}
-		allPosts = append(allPosts, post)
-	}
-	sort.Sort(postList(allPosts))
-	return allPosts, nil
+func SortPosts(posts []Post) {
+	sort.Sort(postList(posts))
 }

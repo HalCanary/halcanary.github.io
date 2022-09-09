@@ -11,6 +11,7 @@ import (
 	"sort"
 	"strconv"
 	"strings"
+	"sync"
 	"time"
 
 	"github.com/HalCanary/booker/dom"
@@ -25,8 +26,10 @@ type Blog struct {
 	Prefix      string
 	ImageLink   string
 	Style       string
-	Icon string
+	Icon        string
 }
+
+var waitgroup sync.WaitGroup
 
 func concat(strs ...string) string {
 	return strings.Join(strs, "")
@@ -37,6 +40,12 @@ func link(dst, text string) *dom.Node {
 }
 
 var changedFiles []string
+
+var changedFilesChan chan string
+
+func markChanged(s string) {
+	changedFilesChan <- s
+}
 
 func main() {
 	log.SetFlags(log.Lshortfile)
@@ -49,15 +58,42 @@ func main() {
 	blogRoot := os.Args[1]
 	matches, err := filepath.Glob(blogRoot + "/src/BlogSrc/*.md")
 	check(err)
-	allPosts, err := getAllPosts(matches)
-	check(err)
-	directory := blogRoot + "/docs"
 
+	var allPosts []Post
+	for _, path := range matches {
+		f, err := os.Open(path)
+		check(err)
+		post, err := ParsePost(f)
+		f.Close()
+		check(err)
+		post.Source = filepath.Base(path)
+		allPosts = append(allPosts, post)
+	}
+	SortPosts(allPosts)
+
+	var lastMod time.Time
+	for _, path := range matches {
+		info, err := os.Stat(path)
+		check(err)
+		mt := info.ModTime()
+		if lastMod.IsZero() || lastMod.Before(mt) {
+			lastMod = mt
+		}
+	}
+
+	directory := blogRoot + "/docs"
 
 	configFile, err := os.Open(blogRoot + "/Blog.xml")
 	check(err)
 	var blog Blog
 	check(xml.NewDecoder(configFile).Decode(&blog))
+
+	changedFilesChan = make(chan string)
+	go func() {
+		for s := range changedFilesChan {
+			changedFiles = append(changedFiles, s)
+		}
+	}()
 
 	for idx, post := range allPosts {
 		var prev, next *Post
@@ -67,14 +103,23 @@ func main() {
 		if idx+1 < len(allPosts) {
 			prev = &allPosts[idx+1]
 		}
-		updateHtml(
-			concat(directory, blog.Prefix, post.LongId(), "/index.html"),
-			blog.makeIndividualPost(post, prev, next))
+
+		waitgroup.Add(1)
+		go func(post Post, prev, next *Post) {
+			defer waitgroup.Done()
+			updateHtml(
+				concat(directory, blog.Prefix, post.LongId(), "/index.html"),
+				blog.makeIndividualPost(post, prev, next))
+		}(post, prev, next)
 	}
 
-	updateHtml(
-		concat(directory, blog.Prefix, "archives/", "index.html"),
-		blog.makeListingPage(allPosts, blog.Title+" Archives", nil, nil))
+	waitgroup.Add(1)
+	go func() {
+		defer waitgroup.Done()
+		updateHtml(
+			concat(directory, blog.Prefix, "archives/", "index.html"),
+			blog.makeListingPage(allPosts, blog.Title+" Archives", nil, nil))
+	}()
 
 	blog.doSegmentedPosts(directory, splitBy(allPosts, yearEq), yearFrag, yearTitle)
 	blog.doSegmentedPosts(directory, splitBy(allPosts, monthEq), monthFrag, monthTitle)
@@ -82,19 +127,30 @@ func main() {
 
 	blog.doCategories(directory, allPosts)
 
-	updateHtml(
-		concat(directory, blog.Prefix, "index.html"),
-		blog.makeIndex(allPosts))
+	waitgroup.Add(1)
+	go func() {
+		defer waitgroup.Done()
+		updateHtml(
+			concat(directory, blog.Prefix, "index.html"),
+			blog.makeIndex(allPosts))
+	}()
 
 	rss := BufferedFile{Path: concat(directory, blog.Prefix, "rss.rss")}
-	check(MakeRSS(time.Now(), blog, allPosts, &rss))
-	check(rss.Close())
-	if rss.Changed() {
-		changedFiles = append(changedFiles, rss.Path)
-	}
+	waitgroup.Add(1)
+	go func() {
+		defer waitgroup.Done()
+		check(MakeRSS(lastMod, blog, allPosts, &rss))
+		check(rss.Close())
+		if rss.Changed() {
+			markChanged(rss.Path)
+		}
+	}()
 
-	if len(changedFiles) > 100 {
-		log.Printf("%d changed files.\n", len(changedFiles)) //, strings.Join(changedFiles, "\n"))
+	waitgroup.Wait()
+	if len(changedFiles) == 0 {
+		log.Printf("nothing changed.")
+	} else if len(changedFiles) > 100 {
+		log.Printf("%d changed files.\n", len(changedFiles))
 	} else {
 		log.Printf("%d changed files:\n%s\n", len(changedFiles), strings.Join(changedFiles, "\n"))
 	}
@@ -105,7 +161,7 @@ func updateHtml(path string, node *dom.Node) {
 	node.RenderHTML(&f)
 	check(f.Close())
 	if f.Changed() {
-		changedFiles = append(changedFiles, f.Path)
+		markChanged(f.Path)
 	}
 }
 
@@ -118,11 +174,13 @@ func monthFrag(p Post) string { return p.Time.Format("2006/01/") }
 func dayFrag(p Post) string   { return p.Time.Format("2006/01/02/") }
 
 func yearEq(u, v Post) bool { return u.Time.Year() == v.Time.Year() }
+
 func monthEq(u, v Post) bool {
 	yu, mu, _ := u.Time.Date()
 	yv, mv, _ := v.Time.Date()
 	return yu == yv && mu == mv
 }
+
 func dayEq(u, v Post) bool {
 	yu, mu, du := u.Time.Date()
 	yv, mv, dv := v.Time.Date()
@@ -229,9 +287,13 @@ func (blog Blog) doSegmentedPosts(directory string, segmentedPostLists [][]Post,
 			p := segmentedPostLists[idx+1][0]
 			prev = dom.Elem("p", dom.TextNode("("), link(concat(blog.Prefix, fragFn(p)), titleFn(p)), dom.TextNode(")"))
 		}
-		updateHtml(
-			concat(directory, blog.Prefix, fragFn(segment[0]), "index.html"),
-			blog.makeListingPage(segment, concat(blog.Title, " Archive ", titleFn(segment[0])), prev, next))
+		waitgroup.Add(1)
+		go func(directory string, segment []Post, prev, next *dom.Node) {
+			defer waitgroup.Done()
+			updateHtml(
+				concat(directory, blog.Prefix, fragFn(segment[0]), "index.html"),
+				blog.makeListingPage(segment, concat(blog.Title, " Archive ", titleFn(segment[0])), prev, next))
+		}(directory, segment, prev, next)
 	}
 }
 
@@ -265,17 +327,34 @@ func (blog Blog) doCategories(directory string, allPosts []Post) {
 			catmap[cat] = append(list, p)
 		}
 	}
-
+	categories := map[string]int{}
 	for cat, postList := range catmap {
-		updateHtml(
-			concat(directory, blog.Prefix, "category/", cat, "/index.html"),
-			blog.makeListingPage(postList, blog.Title+" Archive #"+cat, nil, nil))
+		categories[cat] = len(postList)
 	}
+	waitgroup.Add(1)
+	go func() {
+		defer waitgroup.Done()
+		updateHtml(
+			concat(directory, blog.Prefix, "category/index.html"),
+			blog.makeCategoryIndex(categories),
+		)
+	}()
+	for cat, postList := range catmap {
+		waitgroup.Add(1)
+		go func(cat string, postList []Post) {
+			defer waitgroup.Done()
+			updateHtml(
+				concat(directory, blog.Prefix, "category/", cat, "/index.html"),
+				blog.makeListingPage(postList, blog.Title+" Archive #"+cat, nil, nil))
+		}(cat, postList)
+	}
+}
 
+func (blog Blog) makeCategoryIndex(categories map[string]int) *dom.Node {
 	title := blog.Title + " Archive by Category"
 	ul := dom.Elem("ul", dom.TextNode("\n"))
 	var allcats []string
-	for cat, _ := range catmap {
+	for cat, _ := range categories {
 		allcats = append(allcats, cat)
 	}
 	sort.Strings(allcats)
@@ -284,13 +363,13 @@ func (blog Blog) doCategories(directory string, allPosts []Post) {
 			dom.Elem("li",
 				link(
 					concat(blog.Prefix, "category/", cat, "/"),
-					concat("#", cat, " (", strconv.Itoa(len(catmap[cat])), ")"),
+					concat("#", cat, " (", strconv.Itoa(categories[cat]), ")"),
 				),
 			),
 			dom.TextNode("\n"),
 		)
 	}
-	doc := dom.Element("html", dom.Attr{"lang": blog.Language},
+	return dom.Element("html", dom.Attr{"lang": blog.Language},
 		dom.TextNode("\n"),
 		blog.makeHead(title),
 		dom.TextNode("\n"),
@@ -307,7 +386,6 @@ func (blog Blog) doCategories(directory string, allPosts []Post) {
 		),
 		dom.TextNode("\n"),
 	)
-	updateHtml(concat(directory, blog.Prefix, "category/index.html"), doc)
 }
 
 func (blog Blog) makeListingPage(posts []Post, title string, prev, next *dom.Node) *dom.Node {

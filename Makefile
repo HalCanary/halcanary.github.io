@@ -1,11 +1,10 @@
-all:
+all: theblog
 	src/make-old-pages
 	src/make-redirects
 	src/make-pages
-	theblog
 
 theblog: blog
-	./blog .
+	time ./blog .
 
 blog: $(wildcard cmd/blog/*)
 	go build ./cmd/blog
