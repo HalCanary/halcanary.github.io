@@ -7,8 +7,8 @@
 		<description>The Log of Hal Canary</description>
 		<language>en-US</language>
 		<copyright>Copyright 2002-2022 Hal W. Canary. ALL RIGHTS RESERVED.</copyright>
-		<pubDate>Wed, 07 Sep 2022 11:02:38 -0400</pubDate>
-		<lastBuildDate>Wed, 07 Sep 2022 11:02:38 -0400</lastBuildDate>
+		<pubDate>Fri, 09 Sep 2022 15:27:24 -0400</pubDate>
+		<lastBuildDate>Fri, 09 Sep 2022 15:27:24 -0400</lastBuildDate>
 		<image>
 			<url>https://halcanary.org/images/HAL_CANARY_20191008_512.jpg</url>
 			<title>Voder-Vocoder</title>
@@ -155,10 +155,10 @@ change something on the page, not go to a new page.&lt;/p&gt;&lt;/li&gt;
 		<item>
 			<title>Standard Space Habitats</title>
 			<link>https://halcanary.org/vv/2020/07/14/3017/</link>
-			<guid isPermaLink="false">220210b8-1817-6f53-d9a5-83ea5869277d</guid>
+			<guid isPermaLink="false">230f773d-a3b3-2e00-cd62-c61d509e20b0</guid>
 			<pubDate>Tue, 14 Jul 2020 13:06:25 -0400</pubDate>
 			<description>&lt;div&gt;&lt;p&gt;A refinement of O'Neill's colonies.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://settlement.arc.nasa.gov/70sArtHiRes/70sArt/art.html&quot;&gt;&lt;img src=&quot;https://halcanary.org/images/Spacecolony1.jpg&quot; alt=&quot;[Interior view, O'Neill cylinder, looking out through large windows. NASA ID# AC75-1086]&quot; width=&quot;1920&quot; height=&quot;1512&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://settlement.arc.nasa.gov/70sArtHiRes/70sArt/art.html&quot;&gt;&lt;img src=&quot;https://halcanary.org/images/Spacecolony1.jpg&quot; alt=&quot;[Interior view, O'Neill cylinder, looking out through large windows. NASA ID# AC75-1086]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Start with the idea of an &lt;a href=&quot;https://en.wikipedia.org/wiki/O%27Neill_cylinder&quot;&gt;O'Neill cylinder&lt;/a&gt;: a spinning cylindrical space habitat 8 km in diameter and 32 km long. The frequency of revolution is about two minutes. This is a good diameter for a space habitat: if it is an order of magnitude larger, the structure won't hold together when it spins; an order of magnitude smaller, the Coriolis force is more noticeable.&lt;/p&gt;
 &lt;p&gt;The giant windows are a huge hazard for both radiation and meteor impacts. Instead, make the cylinder a solid steel vessel, thick enough to block most radiation. Make it out of many layers of steel sheeting, with a thick layer of ablative insulation on the outside that can absorb and redirect the kinetic energy of a meteor impact. Construct it as several independent 8 km long segments, each with its own shielded endcaps, all sharing a common axis. Each hab segment has airlocks at the axis, leading to rotating joints that connect the segment to two small non-rotating modules at the axis, where there are ports for visiting spacecraft to dock. This is also where arrays of directional communication antennas are located.&lt;/p&gt;
 &lt;p&gt;At one end of the axis, there is a massive array of solar panels (not rotating with the hab), at the other, there is an array of radiators. If the hab is too far from a star for solar power, a nuclear power plant is located outside of the hab, along the axis, in its own shielded module, as far away as needed to minimize radiation hazards to humans entering and exiting the habitat at the docking port module.&lt;/p&gt;
@@ -387,17 +387,17 @@ Memphis, Tennessee, on July 13.&lt;/p&gt;
 		<item>
 			<title>It's a girl!</title>
 			<link>https://halcanary.org/vv/2014/08/28/3005/</link>
-			<guid isPermaLink="false">fedcdbaa-7ae2-1022-9c44-8f6e865e46d1</guid>
+			<guid isPermaLink="false">b7353be1-78b4-7dca-935a-812507f0e2c6</guid>
 			<pubDate>Thu, 28 Aug 2014 23:36:00 -0500</pubDate>
 			<description>&lt;div&gt;&lt;p&gt;I have a daughter!&lt;/p&gt;
 &lt;p&gt;Margaret (Peggy) Rose Canary was born at 1:16 p.m on Thursday, August 28, after a little more than four hours of intervention-free, unmedicated labor (three and a half hours at home and a half hour in the hospital). She weighed six pounds and fifteen ounces and was nineteen and three quarters inches long.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://halcanary.org/images/2014-08-28_DSC_2209_1024.jpg&quot;&gt;&lt;img src=&quot;https://halcanary.org/images/2014-08-28_DSC_2209_1024.jpg&quot; alt=&quot;Lindsay &amp;amp; Peggy&quot; class=&quot;maxy&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description>
+&lt;p&gt;[![/images/2014-08-28_DSC_2209_1024.jpg](Lindsay &amp;amp; Peggy)[(/images/2014-08-28_DSC_2209_1024.jpg)&lt;/p&gt;&lt;/div&gt;</description>
 			<category>life</category>
 		</item>
 		<item>
 			<title>Optimal Region Projection</title>
 			<link>https://halcanary.org/vv/2014/03/27/3004/</link>
-			<guid isPermaLink="false">f36a5eb8-b20a-ff8d-1135-cab812f7233c</guid>
+			<guid isPermaLink="false">57862278-aa75-86d0-4b7d-e2c7697e3464</guid>
 			<pubDate>Thu, 27 Mar 2014 18:53:12 -0500</pubDate>
 			<description>&lt;div&gt;&lt;p&gt;I've been published in _Computers &amp;amp; Graphics_&lt;/p&gt;
 &lt;p&gt;I am published again!&lt;/p&gt;
@@ -408,7 +408,7 @@ Likelihood Density Functions via Optimal Region
 Projection&lt;/a&gt;.”
 &lt;em&gt;Computers &amp;amp; Graphics&lt;/em&gt; 41 (2014): 62-71.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;img src=&quot;https://halcanary.org/images/Optimal_Region_Projection_-_Gomez.png&quot; alt=&quot;example program output from my paper&quot; class=&quot;maxy&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/div&gt;</description>
+&lt;p&gt;&lt;img src=&quot;https://halcanary.org/images/Optimal_Region_Projection_-_Gomez.png&quot; alt=&quot;example program output from my paper&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/p&gt;&lt;/div&gt;</description>
 			<category>life,what-we-need-more-of-is-science</category>
 		</item>
 		<item>
@@ -576,7 +576,7 @@ exit 0&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
 		<item>
 			<title>spiral</title>
 			<link>https://halcanary.org/vv/2013/06/11/1322/</link>
-			<guid isPermaLink="false">15e8c056-6de2-43a9-cd9c-8b7de9623505</guid>
+			<guid isPermaLink="false">a5139010-df28-2a23-f6e4-07c2e2f25c45</guid>
 			<pubDate>Tue, 11 Jun 2013 14:00:34 -0500</pubDate>
 			<description>&lt;div&gt;&lt;p&gt;Your challenge: make a pretty postscript picture as one tweet&lt;/p&gt;
 &lt;p&gt;Your challenge: make a pretty postscript picture as one tweet. &quot;%!\n&quot; is not necessary
@@ -585,23 +585,20 @@ exit 0&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
 300 300 translate newpath 3 0 2 copy moveto 604 { 5 add
 exch 1.01 mul exch 2 copy cos mul 3 copy pop sin mul
 lineto } repeat stroke showpage&lt;/code&gt;&lt;/pre&gt;
-&lt;img src=&quot;https://halcanary.org/images/postscriptChallenge_spiral.png&quot; alt=&quot;program output&quot; width=&quot;500&quot; height=&quot;500&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;
-
+&lt;p&gt;&lt;img src=&quot;https://halcanary.org/images/postscriptChallenge_spiral.png&quot; alt=&quot;program output&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;a href=&quot;https://twitter.com/gmfawcett/status/344891033202614272&quot;&gt;gmfawcett:&lt;/a&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;%!
 /n 90 def 150 150 translate newpath n n moveto 36 { 170
 rotate n n lineto} repeat stroke showpage&lt;/code&gt;&lt;/pre&gt;
-&lt;img src=&quot;https://halcanary.org/images/postscriptChallenge_spirograph.png&quot; alt=&quot;program output&quot; width=&quot;300&quot; height=&quot;300&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;
-
+&lt;p&gt;&lt;img src=&quot;https://halcanary.org/images/postscriptChallenge_spirograph.png&quot; alt=&quot;program output&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;a href=&quot;https://twitter.com/seanjensengrey/status/344825151264808961&quot;&gt;seanjensengrey:&lt;/a&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;%!
 /box { newpath moveto 72 0 rlineto 0 72 rlineto -72 0
 rlineto closepath stroke } def 99 99 translate 0 1 5{60
 rotate -20 0 box}for showpage&lt;/code&gt;&lt;/pre&gt;
-&lt;img src=&quot;https://halcanary.org/images/postscriptChallenge_sixBoxes.png&quot; alt=&quot;program output&quot; width=&quot;200&quot; height=&quot;200&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;
-
+&lt;p&gt;&lt;img src=&quot;https://halcanary.org/images/postscriptChallenge_sixBoxes.png&quot; alt=&quot;program output&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;a href=&quot;https://twitter.com/gmfawcett/status/344986403962253312&quot;&gt;gmfawcett:&lt;/a&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;%!
@@ -609,8 +606,7 @@ rotate -20 0 box}for showpage&lt;/code&gt;&lt;/pre&gt;
 (#postscriptchallenge) { 1 string dup 0 4 3 roll put
 show -18 rotate} forall
 showpage&lt;/code&gt;&lt;/pre&gt;
-&lt;img src=&quot;https://halcanary.org/images/postscriptChallenge_words.png&quot; alt=&quot;program output&quot; width=&quot;300&quot; height=&quot;300&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;
-
+&lt;p&gt;&lt;img src=&quot;https://halcanary.org/images/postscriptChallenge_words.png&quot; alt=&quot;program output&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;Note: to display these,m I used this command:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;gs -sDEVICE=png16m -g500x500 -sOutputFile=out.png &amp;lt;&amp;lt;EOF
@@ -1547,9 +1543,9 @@ $(jarfile): $(classes)
 		<item>
 			<title>EMRATIO</title>
 			<link>https://halcanary.org/vv/2011/11/30/1262/</link>
-			<guid isPermaLink="false">6b325284-0f5a-978f-a01f-aa79d27fb6b9</guid>
+			<guid isPermaLink="false">78afe2e4-b5db-f0f2-cbce-a8b35d0ab414</guid>
 			<pubDate>Wed, 30 Nov 2011 21:39:18 -0600</pubDate>
-			<description>&lt;div&gt;&lt;p&gt;October 1, 1991 – October 1, 2011[&lt;img src=&quot;https://halcanary.org/images/ed791eb3a2a55db9f9b7f90b32e07858d81b2609.png&quot; alt=&quot;[EMRATIO October 1, 1991 – October 1, 2011]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;](http://research.stlouisfed.org/fred2/graph/?g=3CI)&lt;/p&gt;&lt;/div&gt;</description>
+			<description>&lt;div&gt;&lt;p&gt;October 1, 1991 – October 1, 2011&lt;a href=&quot;http://research.stlouisfed.org/fred2/graph/?g=3CI&quot;&gt;&lt;img src=&quot;https://halcanary.org/images/ed791eb3a2a55db9f9b7f90b32e07858d81b2609.png&quot; alt=&quot;[EMRATIO October 1, 1991 – October 1, 2011]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description>
 			<category>economics,politics</category>
 		</item>
 		<item>
@@ -1882,9 +1878,9 @@ except KeyboardInterrupt:
 		<item>
 			<title>40 minute hilly ride. 6.7 miles</title>
 			<link>https://halcanary.org/vv/2011/07/09/1216/</link>
-			<guid isPermaLink="false">a5fc056b-1021-4d9d-8efe-61f3c6e85909</guid>
+			<guid isPermaLink="false">38b210b9-bb04-3ad5-465c-26ba18fa476b</guid>
 			<pubDate>Sat, 09 Jul 2011 14:26:48 -0500</pubDate>
-			<description>&lt;div&gt;&lt;div style=&quot;text-align:center&quot;&gt;&lt;img src=&quot;https://halcanary.org/images/2011-07-09_142801_bikeride2.png&quot; alt=&quot;map of ride&quot; width=&quot;554&quot; height=&quot;936&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/div&gt;&lt;/div&gt;</description>
+			<description>&lt;div&gt;&lt;div style=&quot;text-align:center&quot;&gt;![map of ride](https://halcanary.org/images/2011-07-09_142801_bikeride2.png)&lt;/div&gt;&lt;/div&gt;</description>
 			<category>uncategorized</category>
 		</item>
 		<item>
@@ -4236,7 +4232,7 @@ Now get your ass out of bed!&lt;/em&gt;&lt;/p&gt;
 			<category>computers-code</category>
 		</item>
 		<item>
-			<title>utf8 -&gt; ascii</title>
+			<title>utf8 → ascii</title>
 			<link>https://halcanary.org/vv/2008/10/05/742/</link>
 			<guid isPermaLink="false">06d8d14a-0ce4-0299-3db3-9f9cf9965957</guid>
 			<pubDate>Sun, 05 Oct 2008 00:04:47 -0500</pubDate>
@@ -5095,7 +5091,7 @@ print base64.b64encode(os.urandom(18),'Zz')&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 		<item>
 			<title>Email2</title>
 			<link>https://halcanary.org/vv/2008/01/25/715/</link>
-			<guid isPermaLink="false">ceacb6a1-c39a-ff0b-c58c-ab0192a19708</guid>
+			<guid isPermaLink="false">5db29b24-9c33-60d3-c7e8-7238135a959e</guid>
 			<pubDate>Fri, 25 Jan 2008 14:34:12 -0600</pubDate>
 			<description>&lt;div&gt;&lt;p&gt;Here's a proposal for new e-mail protocols to completely replace existing SMTP/MIME/IMAP/POP protocols. There would be a phase-in period, lasting about 5-10 years, during which two systems would exist in paralel and servers would fall back to old protocols where the new ones aren't availible yet.&lt;/p&gt;
 &lt;p&gt;The name of the new protocols would be Email2. It would contain the following protocols:&lt;/p&gt;
@@ -5190,7 +5186,7 @@ seperated by a single unix-style endline.&lt;/li&gt;
 &lt;p&gt;Additionally, whitespace characters like spaces, tabs, and newlines would be rendered just like they would in a plain-text document. One newline standard (such as CRLF or LF) would be chosen and all conforming clients would use it.&lt;br&gt;
 Tabs would be rendered in a consistant way---for example one could put a tab-stop every 8 ems. (1 em is the width of a single &quot;m&quot; glyph.) Or base the tabs off of the width of the client's monospaced font.&lt;/p&gt;
 &lt;p&gt;Note that the following things are &lt;strong&gt;banned&lt;/strong&gt; from this markup language: specifying fonts, specifying font types (other than monospace), specifying font size, specifying font color, specifying background color, blinking text, scrolling text, tables, embedded scripts, embedded images, or embedded documents. If you want any of that, you must attach an attachment.&lt;/p&gt;
-&lt;p&gt;Additionally, all conforming mail clinets &lt;strong&gt;must&lt;/strong&gt; recognize IANA-registered URI schemes and make them into clickable (or otherwise selectable) links. But those links will look like URIs, to keep the process &lt;strong&gt;transparent&lt;/strong&gt; to the user. URI's can be imbedded in the text in the form &quot;[whitespace]URI[whitespace]&quot;, &quot;(URI)&quot;, &quot;[URI]&quot;, &quot;{URI}&quot;, or &quot;&lt;uri&gt;&quot;. This should be recognizable by the client since URIs generally do not contain whitespace characters or &amp;lt;[({})]&amp;gt;.&lt;/uri&gt;&lt;/p&gt;
+&lt;p&gt;Additionally, all conforming mail clinets &lt;strong&gt;must&lt;/strong&gt; recognize IANA-registered URI schemes and make them into clickable (or otherwise selectable) links. But those links will look like URIs, to keep the process &lt;strong&gt;transparent&lt;/strong&gt; to the user. URI's can be imbedded in the text in the form &quot;[whitespace]URI[whitespace]&quot;, &quot;(URI)&quot;, &quot;[URI]&quot;, &quot;{URI}&quot;, or &quot;&lt;code&gt;&amp;lt;&lt;/code&gt;URI&lt;code&gt;&amp;gt;&lt;/code&gt;&quot;. This should be recognizable by the client since URIs generally do not contain whitespace characters or &lt;code&gt;&amp;lt;&amp;gt;[](){}&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;The header has none of this markup.&lt;/p&gt;
 &lt;p&gt;For the N attachemtns, the Internet media type, the preferred document name, whether it is compressed, a checksum or cryptographic hash, and file length is specified. For security purposes, the client mut not open these attachments automatically and should call a virus scanner before opening them. It is recommended that all email clients attempt to compress the attachements with DEFLATE before attaching them. If the compression results are good, then they will be attached like that. (For example, the ZIP file format can include files either compressed or uncompressed.) a checksum for each attachment would be included in the email file format. The exact format would be part of the standard, but I don't have an opinion on how it should work.&lt;/p&gt;
 &lt;h3&gt;Email2 E-Mail Storage Protocol&lt;/h3&gt;
@@ -5761,9 +5757,9 @@ is so convienent.&lt;/p&gt;
 		<item>
 			<title>Can you be more specific?</title>
 			<link>https://halcanary.org/vv/2007/06/30/697/</link>
-			<guid isPermaLink="false">6623dada-9ac9-0a3a-462a-ea508b159e04</guid>
+			<guid isPermaLink="false">364e040f-1af6-1da7-4b21-0ee791d58cfa</guid>
 			<pubDate>Sat, 30 Jun 2007 11:55:26 -0500</pubDate>
-			<description>&lt;div&gt;&lt;p&gt;![Why are you quitting World of Warcraft? --&amp;gt; General Reason: --&amp;gt; Other &lt;please be as descriptive possible&gt; --&amp;gt; Hmm... can you be more specific? --&amp;gt; Specific Reason: --&amp;gt; I don't have enough time to play anymore --&amp;gt; Additional comments: --&amp;gt; I can't justify the cost considering how little I play the game these days. I'd like to get back into it, but I have so many other things going on now. ](/images/2007-06-30-wow-cancel.png)&lt;/please&gt;&lt;/p&gt;&lt;/div&gt;</description>
+			<description>&lt;div&gt;&lt;p&gt;&lt;img src=&quot;https://halcanary.org/images/2007-06-30-wow-cancel.png&quot; alt=&quot;Why are you quitting World of Warcraft? --&amp;gt; General Reason: --&amp;gt; Other  --&amp;gt; Hmm... can you be more specific? --&amp;gt; Specific Reason: --&amp;gt; I don't have enough time to play anymore --&amp;gt; Additional comments: --&amp;gt; I can't justify the cost considering how little I play the game these days. I'd like to get back into it, but I have so many other things going on now. &quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/p&gt;&lt;/div&gt;</description>
 			<category>games</category>
 		</item>
 		<item>
@@ -5834,7 +5830,7 @@ RewriteRule ^(.*)$ $1.html&lt;/p&gt;&lt;/li&gt;
 		<item>
 			<title>Tension of a Spinning Ring</title>
 			<link>https://halcanary.org/vv/2007/06/23/694/</link>
-			<guid isPermaLink="false">913fd2c4-c3e6-c007-0174-e83e3b304a1d</guid>
+			<guid isPermaLink="false">5c0436cd-e073-687e-9c6b-823c370632ed</guid>
 			<pubDate>Sat, 23 Jun 2007 10:50:40 -0500</pubDate>
 			<description>&lt;div&gt;&lt;p&gt;fun with physics&lt;/p&gt;
 &lt;p&gt;What is the tension in a spinning ring, for example Bank's orbitals or a Niven Ring?&lt;/p&gt;
@@ -5842,13 +5838,13 @@ RewriteRule ^(.*)$ $1.html&lt;/p&gt;&lt;/li&gt;
 &lt;p&gt;Ignoring gravity, there are two forces pulling on each small section: tension pulling to the left and tension pulling to the right. Because the ring is circularly symmetric, the magnitude of the two tensions are equal. The directions of the two forces are dθ from being opposite.&lt;/p&gt;
 &lt;p&gt;If at some moment in time, the left tension, &lt;em&gt;&lt;strong&gt;Tl&lt;/strong&gt;&lt;/em&gt;, is pointing in the -&lt;em&gt;&lt;strong&gt;x̂&lt;/strong&gt;&lt;/em&gt; direction, then the right tension will be&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;Tr&lt;/strong&gt;&lt;/em&gt; = &lt;em&gt;T&lt;/em&gt; sin(dθ) &lt;em&gt;&lt;strong&gt;ŷ&lt;/strong&gt;&lt;/em&gt; + &lt;em&gt;T&lt;/em&gt; cos(dθ) &lt;em&gt;&lt;strong&gt;x̂&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Tr&lt;/strong&gt;&lt;/em&gt; = &lt;em&gt;T&lt;/em&gt; sin(dθ) &lt;em&gt;&lt;strong&gt;ŷ&lt;/strong&gt;&lt;/em&gt; + &lt;em&gt;T&lt;/em&gt; cos(dθ) &lt;em&gt;&lt;strong&gt;x̂&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;where &lt;em&gt;T&lt;/em&gt; is the magnitude of either tension.&lt;/p&gt;
 &lt;p&gt;As &lt;em&gt;N&lt;/em&gt; gets large: dθ gets small, cos(dθ) → 1, and sin(dθ) → dθ. So:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;Tl&lt;/strong&gt;&lt;/em&gt; = -&lt;em&gt;T&lt;/em&gt; &lt;em&gt;&lt;strong&gt;x̂&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;&lt;strong&gt;Tr&lt;/strong&gt;&lt;/em&gt; = +&lt;em&gt;T&lt;/em&gt; &lt;em&gt;&lt;strong&gt;x̂&lt;/strong&gt;&lt;/em&gt; + &lt;em&gt;T&lt;/em&gt; dθ &lt;em&gt;&lt;strong&gt;ŷ&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Tr&lt;/strong&gt;&lt;/em&gt; = +&lt;em&gt;T&lt;/em&gt; &lt;em&gt;&lt;strong&gt;x̂&lt;/strong&gt;&lt;/em&gt; + &lt;em&gt;T&lt;/em&gt; dθ &lt;em&gt;&lt;strong&gt;ŷ&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Consequently, the centripetal force on the small section is _T_dθ. From Newton's second law:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -5858,7 +5854,7 @@ RewriteRule ^(.*)$ $1.html&lt;/p&gt;&lt;/li&gt;
 &lt;p&gt;&lt;em&gt;&lt;strong&gt;Tl&lt;/strong&gt;&lt;/em&gt; + &lt;em&gt;&lt;strong&gt;Tr&lt;/strong&gt;&lt;/em&gt; = &lt;em&gt;m&lt;/em&gt; &lt;strong&gt;&lt;em&gt;a&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;em&gt;T&lt;/em&gt; dθ &lt;em&gt;&lt;strong&gt;ŷ&lt;/strong&gt;&lt;/em&gt; = &lt;em&gt;m&lt;/em&gt; &lt;strong&gt;&lt;em&gt;a&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;T&lt;/em&gt; dθ &lt;em&gt;&lt;strong&gt;ŷ&lt;/strong&gt;&lt;/em&gt; = &lt;em&gt;m&lt;/em&gt; &lt;strong&gt;&lt;em&gt;a&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Let &lt;em&gt;a&lt;/em&gt; = |&lt;em&gt;&lt;strong&gt;a&lt;/strong&gt;&lt;/em&gt;|, the centripetal acceleration.&lt;/p&gt;
 &lt;blockquote&gt;
@@ -6477,7 +6473,7 @@ connectwifi MySsid 0c0dc52de9fbc078f3c1411100&lt;/code&gt;&lt;/pre&gt;
 		<item>
 			<title>genpasswd</title>
 			<link>https://halcanary.org/vv/2007/04/05/682/</link>
-			<guid isPermaLink="false">b0196f18-9dbd-b7a3-9154-c2a66b2388a6</guid>
+			<guid isPermaLink="false">410e3162-9de9-28a9-9cea-e89d0b3a8b0b</guid>
 			<pubDate>Thu, 05 Apr 2007 14:05:04 -0500</pubDate>
 			<description>&lt;div&gt;&lt;pre&gt;&lt;code&gt;#!/bin/sh
 # genpasswd.sh
@@ -6499,8 +6495,14 @@ head -c 18 /dev/random | base64 | \
 #       sed 's/\//Z/g;s/+/z/g;'&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Exactly how much entropy do we get?&lt;/p&gt;
 &lt;p&gt;Each character can be a z or a Z with a probability of 2/64 for each. The other 60 characters have a probability of 1/64 each. Apply the formula:&lt;/p&gt;
-&lt;div class=&quot;centered&quot;&gt;information entropy = &lt;img src=&quot;https://halcanary.org/images/information-entropy.png&quot; width=&quot;183&quot; height=&quot;48&quot; alt=&quot;\displaystyle{\sum_{i=1}^np(x_i)\log_2 \left(1/p(x_i)\right)}&quot; style=&quot;max-width:100%;height:auto;vertical-align:middle;&quot;&gt;&lt;br&gt;&lt;img src=&quot;https://halcanary.org/images/information-entropy2.png&quot; width=&quot;317&quot; height=&quot;52&quot; alt=&quot;= \displaystyle{\sum_{i=1}^{2}\frac{2}{64} \log_2 \left({\frac{64}{2}}\right)} + \displaystyle{\sum_{i=1}^{60}\frac{1}{64} \log_2 \left({\frac{64}{1}}\right)}&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;br&gt;&lt;img src=&quot;https://halcanary.org/images/information-entropy3.png&quot; width=&quot;320&quot; height=&quot;43&quot; alt=&quot;= 2 \left({\frac{2}{64}}\right) \log_2 \left({\frac{64}{2}}\right) + 60 \frac{1}{64} \log_2 \left({\frac{64}{1}}\right)&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;br&gt;&lt;img src=&quot;https://halcanary.org/images/information-entropy4.png&quot; alt=&quot;= 2 \left({\frac{2}{64}}\right) \left({5}\right) + 60 \frac{1}{64} \left({6}\right) = \frac{20}{64} + \frac{360}{64} = \frac{380}{64} = 5.9375&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/div&gt;
-
+&lt;pre&gt;&lt;code&gt;information entropy
+    = ∑(i=1, n, p(x[i]) log2(1 / p(x[i])))
+    = ∑(i=1, 2, 2/64 *  log2(64/2)) + ∑(i=1, 60, 1/64 * log2(64/1))
+    = 2 * (2/64) * log2(64/2) + 60 * (1/64) * log2(64/1)
+    = 2 * (2/64) * 5 + 60 * 1/64 * 6
+    = 20/64 + 360/64
+    = 380/64
+    = 5.9375&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Mulitply by 24 for 24 characters, and get 142.5 bits of entropy.&lt;/p&gt;&lt;/div&gt;</description>
 			<category>computers-code</category>
 		</item>
@@ -7281,7 +7283,7 @@ someone else. I never saw her again. These things happen.&lt;/p&gt;
 			<category>books</category>
 		</item>
 		<item>
-			<title>The Centered &lt;div&gt; Issue</title>
+			<title>The Centered  Issue</title>
 			<link>https://halcanary.org/vv/2006/09/18/642/</link>
 			<guid isPermaLink="false">991bc3c6-6370-2179-748e-3003e8481636</guid>
 			<pubDate>Mon, 18 Sep 2006 00:53:51 -0500</pubDate>
@@ -8342,9 +8344,9 @@ Australia == &lt;em&gt;Terra Australis&lt;/em&gt; == Land of the South (Latin)&l
 		<item>
 			<title>2021=2006+15</title>
 			<link>https://halcanary.org/vv/2006/03/09/569/</link>
-			<guid isPermaLink="false">c9c8a4c6-b985-f5fb-3316-e4eeb99ae9f9</guid>
+			<guid isPermaLink="false">dab6edb2-d136-0987-1ade-1ae2b9208ce5</guid>
 			<pubDate>Thu, 09 Mar 2006 12:30:41 -0600</pubDate>
-			<description>&lt;div&gt;&lt;p&gt;Aquired and watched the complete &lt;em&gt;Sealab 2021&lt;/em&gt; this week. &amp;lt;&lt;vs nalbar jnagf n pbcl yrg zr xabj.&gt;&amp;gt; Not sure why I bother, the show's humor is not laugh-out-loud quality. But it puts a smile on my face; is better than 90% of what's on TV.&lt;/vs&gt;&lt;/p&gt;
+			<description>&lt;div&gt;&lt;p&gt;Aquired and watched the complete &lt;em&gt;Sealab 2021&lt;/em&gt; this week. &lt;code&gt;&amp;lt;&amp;lt;&lt;/code&gt;Vs nalbar jnagf n pbcl yrg zr xabj.&lt;code&gt;&amp;gt;&amp;gt;&lt;/code&gt; Not sure why I bother, the show's humor is not laugh-out-loud quality. But it puts a smile on my face; is better than 90% of what's on TV.&lt;/p&gt;
 &lt;p&gt;Is better than 99% of what's on broadcast TV, anyways.&lt;/p&gt;&lt;/div&gt;</description>
 			<category>tv</category>
 		</item>
@@ -8632,9 +8634,9 @@ done&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
 		<item>
 			<title>2005-11 photos</title>
 			<link>https://halcanary.org/vv/2005/12/07/543/</link>
-			<guid isPermaLink="false">6ce6c28f-b89d-c1d5-1494-5d9d87e59576</guid>
+			<guid isPermaLink="false">79c475c5-fe06-b8c5-0895-9c2072af25cf</guid>
 			<pubDate>Wed, 07 Dec 2005 11:52:20 -0600</pubDate>
-			<description>&lt;div&gt;&lt;p&gt;[ &lt;img src=&quot;https://halcanary.org/photos/thumb/2005-11-26-img_1857.jpg&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt; ](/p/photo-2005-11)&lt;br&gt;
+			<description>&lt;div&gt;&lt;p&gt;&lt;a href=&quot;https://halcanary.org/p/photo-2005-11&quot;&gt; &lt;img src=&quot;https://halcanary.org/photos/thumb/2005-11-26-img_1857.jpg&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt; &lt;/a&gt;&lt;br&gt;
 Trip to FL, 2005 November.&lt;/p&gt;&lt;/div&gt;</description>
 			<category>photos</category>
 		</item>
@@ -9096,14 +9098,14 @@ https://halcanary.org/&lt;/p&gt;&lt;/div&gt;</description>
 		<item>
 			<title>Dr. Canary my butt.</title>
 			<link>https://halcanary.org/vv/2005/08/23/502/</link>
-			<guid isPermaLink="false">9da54673-570e-cacc-3580-7577d098141b</guid>
+			<guid isPermaLink="false">3982e525-e07c-28b0-9e91-88cbf6681df7</guid>
 			<pubDate>Tue, 23 Aug 2005 14:17:29 -0500</pubDate>
 			<description>&lt;div&gt;&lt;p&gt;I wrote the first draft of that paper four years ago and submitted it&lt;br&gt;
 almost two years ago. Yes, I know it's crap, Just go ahead and tell me.&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;From: Brendan McKay &lt;a href=&quot;mailto:xxx@xx.xxx.edu.au&quot;&gt;xxx@xx.xxx.edu.au&lt;/a&gt;&lt;br&gt;
+&lt;p&gt;From: Brendan McKay &amp;lt;xxx@xx.xxx.edu.au&amp;gt;&lt;br&gt;
 Date: Sat, 20 Aug 2005 12:05:16 +1000&lt;br&gt;
-To: Hal Canary &lt;a href=&quot;mailto:xxx@xxx.xxxxxxx.xxxx.xxx&quot;&gt;xxx@xxx.xxxxxxx.xxxx.xxx&lt;/a&gt;&lt;br&gt;
+To: Hal Canary &amp;lt;xxx@xxx.xxxxxxx.xxxx.xxx&amp;gt;&lt;br&gt;
 Cc: xxxxxxxx@xxxxx.edu, xxxxxxxx@xxxx.xxxx.edu, xxxxx@xxxx.xxxx.edu&lt;br&gt;
 Subject: The status of your Baxter diamonds paper with E-JC&lt;/p&gt;
 &lt;p&gt;Dear Dr. Canary,&lt;/p&gt;
@@ -9153,19 +9155,19 @@ Brendan McKay (Editor-in-Chief) [Electronic Journal of Combinatorics]&lt;/p&gt;
 		<item>
 			<title>Chatahoochie River</title>
 			<link>https://halcanary.org/vv/2005/08/12/499/</link>
-			<guid isPermaLink="false">aae31aea-3d41-bc83-936f-425c5f07209a</guid>
+			<guid isPermaLink="false">90e21749-eb60-1858-cd50-1ce9136913c6</guid>
 			<pubDate>Fri, 12 Aug 2005 21:03:57 -0500</pubDate>
-			<description>&lt;div&gt;&lt;p&gt;[ &lt;img src=&quot;https://halcanary.org/photos/thumb/2005-08-12_chz_028.jpg&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt; ](/photos/2005-08-12_chz_028.jpg)&lt;/p&gt;&lt;/div&gt;</description>
+			<description>&lt;div&gt;&lt;p&gt;&lt;a href=&quot;https://halcanary.org/photos/2005-08-12_chz_028.jpg&quot;&gt; &lt;img src=&quot;https://halcanary.org/photos/thumb/2005-08-12_chz_028.jpg&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt; &lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description>
 			<category>photos</category>
 		</item>
 		<item>
 			<title>sunrise</title>
 			<link>https://halcanary.org/vv/2005/08/11/498/</link>
-			<guid isPermaLink="false">52108d8c-a83b-de95-b3a7-a57c9efd73f5</guid>
+			<guid isPermaLink="false">d049bd42-ea32-dee5-844a-6d4d58277661</guid>
 			<pubDate>Thu, 11 Aug 2005 09:27:00 -0500</pubDate>
-			<description>&lt;div&gt;&lt;p&gt;[&lt;br&gt;
+			<description>&lt;div&gt;&lt;p&gt;&lt;a href=&quot;https://halcanary.org/photos/2005-08-06-img_1784.jpg&quot;&gt;&lt;br&gt;
 &lt;img src=&quot;https://halcanary.org/photos/thumb/2005-08-06-img_1784.jpg&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;br&gt;
-](/photos/2005-08-06-img_1784.jpg)&lt;/p&gt;&lt;/div&gt;</description>
+&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description>
 			<category>photos</category>
 		</item>
 		<item>
@@ -10389,9 +10391,9 @@ I rediscovered this a couple of weeks ago when I was looking for something fun t
 		<item>
 			<title>System of the World</title>
 			<link>https://halcanary.org/vv/2005/01/11/386/</link>
-			<guid isPermaLink="false">31190b6d-0bab-9293-e97c-b43fd842eb18</guid>
+			<guid isPermaLink="false">02320f68-a708-7d60-1900-4b0f31d5de2e</guid>
 			<pubDate>Tue, 11 Jan 2005 22:44:36 -0600</pubDate>
-			<description>&lt;div&gt;&lt;p&gt;[ &lt;img src=&quot;https://halcanary.org/images/book-system-of-the-world.jpg&quot; alt=&quot;[BOOK COVER]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt; ](/isbn/?0060523875)&lt;/p&gt;
+			<description>&lt;div&gt;&lt;p&gt;&lt;a href=&quot;https://halcanary.org/isbn/?0060523875&quot;&gt; &lt;img src=&quot;https://halcanary.org/images/book-system-of-the-world.jpg&quot; alt=&quot;[BOOK COVER]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt; &lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Finally finished Stephenson's trilogy. The good news is: we know the secret of Enoch Root. The bad news is that it's over.&lt;/p&gt;&lt;/div&gt;</description>
 			<category>books</category>
 		</item>
@@ -11135,9 +11137,9 @@ State Capitol Square, Madison, WI.&lt;br&gt;
 		<item>
 			<title>I truely am not that concerned about him.</title>
 			<link>https://halcanary.org/vv/2004/10/19/331/</link>
-			<guid isPermaLink="false">ba5be265-4bb3-2514-aedf-e0dd541bc955</guid>
+			<guid isPermaLink="false">ab229e1b-6a6b-5418-6b86-33579b2b243d</guid>
 			<pubDate>Tue, 19 Oct 2004 08:46:42 -0500</pubDate>
-			<description>&lt;div&gt;&lt;p&gt;[ Some politics for you this morning. ](http://cdn.moveonpac.org/content/video/debatefinal.mov)&lt;/p&gt;&lt;/div&gt;</description>
+			<description>&lt;div&gt;&lt;p&gt;&lt;a href=&quot;http://cdn.moveonpac.org/content/video/debatefinal.mov&quot;&gt; Some politics for you this morning. &lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description>
 			<category>politics</category>
 		</item>
 		<item>
@@ -11227,11 +11229,11 @@ State Capitol Square, Madison, WI.&lt;br&gt;
 		<item>
 			<title>Photos from two weeks ago/</title>
 			<link>https://halcanary.org/vv/2004/09/12/321/</link>
-			<guid isPermaLink="false">f5ffcead-5240-dd33-91cc-a0a9155a626f</guid>
+			<guid isPermaLink="false">9b8c98b4-07ef-b869-9296-986b64e5de19</guid>
 			<pubDate>Sun, 12 Sep 2004 21:22:05 -0500</pubDate>
 			<description>&lt;div&gt;&lt;p&gt;&lt;a href=&quot;https://halcanary.org/p/photo-2004-08-29&quot;&gt;Link&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://halcanary.org/photos/2004-08-29-img_1484.jpg&quot;&gt;&lt;img src=&quot;https://halcanary.org/photos/thumb/2004-08-29-img_1484.jpg&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;[&lt;img src=&quot;https://halcanary.org/photos/thumb/2004-08-29-img_1487.jpg&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt; ](/photos/2004-08-29-img_1487.jpg)&lt;a href=&quot;https://halcanary.org/photos/2004-08-29-img_1488.jpg&quot;&gt;&lt;img src=&quot;https://halcanary.org/photos/thumb/2004-08-29-img_1488.jpg&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;br&gt;
-&lt;a href=&quot;https://halcanary.org/photos/2004-08-29-img_1492.jpg&quot;&gt;&lt;img src=&quot;https://halcanary.org/photos/thumb/2004-08-29-img_1492.jpg&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;[&lt;img src=&quot;https://halcanary.org/photos/thumb/2004-08-29-img_1494.jpg&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt; ](/photos/2004-08-29-img_1494.jpg)&lt;a href=&quot;https://halcanary.org/photos/2004-08-29-img_1496.jpg&quot;&gt;&lt;img src=&quot;https://halcanary.org/photos/thumb/2004-08-29-img_1496.jpg&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description>
+&lt;p&gt;&lt;a href=&quot;https://halcanary.org/photos/2004-08-29-img_1484.jpg&quot;&gt;&lt;img src=&quot;https://halcanary.org/photos/thumb/2004-08-29-img_1484.jpg&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://halcanary.org/photos/2004-08-29-img_1487.jpg&quot;&gt;&lt;img src=&quot;https://halcanary.org/photos/thumb/2004-08-29-img_1487.jpg&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt; &lt;/a&gt;&lt;a href=&quot;https://halcanary.org/photos/2004-08-29-img_1488.jpg&quot;&gt;&lt;img src=&quot;https://halcanary.org/photos/thumb/2004-08-29-img_1488.jpg&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;br&gt;
+&lt;a href=&quot;https://halcanary.org/photos/2004-08-29-img_1492.jpg&quot;&gt;&lt;img src=&quot;https://halcanary.org/photos/thumb/2004-08-29-img_1492.jpg&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://halcanary.org/photos/2004-08-29-img_1494.jpg&quot;&gt;&lt;img src=&quot;https://halcanary.org/photos/thumb/2004-08-29-img_1494.jpg&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt; &lt;/a&gt;&lt;a href=&quot;https://halcanary.org/photos/2004-08-29-img_1496.jpg&quot;&gt;&lt;img src=&quot;https://halcanary.org/photos/thumb/2004-08-29-img_1496.jpg&quot; alt=&quot;[Thumb]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description>
 			<category>photos</category>
 		</item>
 		<item>
@@ -11845,17 +11847,17 @@ $ rsync -r directory lensman:&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
 		<item>
 			<title>links to DNC speeches on cspan</title>
 			<link>https://halcanary.org/vv/2004/08/03/280/</link>
-			<guid isPermaLink="false">cc739140-93f4-f587-d7fe-8fdcfdbf35ce</guid>
+			<guid isPermaLink="false">8d8a4705-8057-f19c-42ec-2d7305cf3d45</guid>
 			<pubDate>Tue, 03 Aug 2004 16:04:10 -0500</pubDate>
 			<description>&lt;div&gt;&lt;p&gt;Some highlights:&lt;/p&gt;
 &lt;ol type=&quot;1&quot;&gt;
-&lt;li&gt;&lt;a href=&quot;https://cspanrm.fplive.net/cspan/project/c04/c04_dnc072604_bill.rm&quot;&gt;Bill Clinton&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://cspanrm.fplive.net/cspan/project/c04/c04_dnc072704_obama.rm&quot;&gt;Barak Obama&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://cspanrm.fplive.net/cspan/project/c04/c04_dnc072804_sharpton2.rm&quot;&gt;Al Sharpton&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://cspanrm.fplive.net/cspan/project/c04/c04_dnc072804_edwards.rm&quot;&gt;John Edwards&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://cspanrm.fplive.net/cspan/project/c04/c04_dnc072904_kerry.rm&quot;&gt;John Kerry&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.c-span.org/video/?182717-3/democratic-national-convention-day-1-evening&quot;&gt;Bill Clinton&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.c-span.org/video/?182718-3/illinois-state-senator-barack-obama-2004-democratic-national-convention-keynote-speech&quot;&gt;Barak Obama&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.c-span.org/video/?182719-2/democratic-national-convention-day-3-evening&quot;&gt;Al Sharpton&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.c-span.org/video/?182719-2/democratic-national-convention-day-3-evening&quot;&gt;John Edwards&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.c-span.org/video/?182721-3/john-kerry-accepts-2004-democratic-presidential-nomination&quot;&gt;John Kerry&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;a href=&quot;http://www.c-span.org/Search/advancedsearchform.asp?AdvancedQueryText=&quot;&gt;Search CSPAN video archive&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description>
+&lt;p&gt;&lt;a href=&quot;http://www.c-span.org/search/&quot;&gt;Search CSPAN video archive&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description>
 			<category>mindless-link-propagation,politics</category>
 		</item>
 		<item>
@@ -11908,10 +11910,10 @@ DenyUsers admin guest test user
 		<item>
 			<title>amazing yet tautological</title>
 			<link>https://halcanary.org/vv/2004/07/23/276/</link>
-			<guid isPermaLink="false">2e7c2479-0304-db41-3f50-aa80ef8ab2b1</guid>
+			<guid isPermaLink="false">f7c592e8-aa99-c20f-d7ad-f53ef085d3d4</guid>
 			<pubDate>Fri, 23 Jul 2004 11:50:16 -0500</pubDate>
-			<description>&lt;div&gt;&lt;p&gt;[&lt;img src=&quot;https://halcanary.org/images/amazing_yet_tautological.png&quot; alt=&quot;[amazing_yet_tautological]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;br&gt;
-](http://salon.com/comics/boll/2004/07/22/boll/)&lt;/p&gt;&lt;/div&gt;</description>
+			<description>&lt;div&gt;&lt;p&gt;&lt;a href=&quot;http://salon.com/comics/boll/2004/07/22/boll/&quot;&gt;&lt;img src=&quot;https://halcanary.org/images/amazing_yet_tautological.png&quot; alt=&quot;[amazing_yet_tautological]&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;br&gt;
+&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description>
 			<category>mindless-link-propagation</category>
 		</item>
 		<item>
@@ -12831,11 +12833,11 @@ Than the things you say.&lt;/em&gt;&lt;/p&gt;
 		<item>
 			<title>we can, you know.</title>
 			<link>https://halcanary.org/vv/2004/03/30/217/</link>
-			<guid isPermaLink="false">205bad58-3adf-a579-9a0e-8249e3b25b7b</guid>
+			<guid isPermaLink="false">48d87104-9598-4886-9f8c-71ad5326059d</guid>
 			<pubDate>Tue, 30 Mar 2004 10:58:36 -0600</pubDate>
-			<description>&lt;div&gt;&lt;p&gt;[&lt;br&gt;
+			<description>&lt;div&gt;&lt;p&gt;&lt;a href=&quot;http://www.boingboing.net/2004/03/30/gop_sloganator_highl.html&quot;&gt;&lt;br&gt;
 &lt;img src=&quot;https://halcanary.org/images/wecandetainyou.jpg&quot; alt=&quot;We can detain you, you know. --Bush/Cheney/04&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;br&gt;
-](http://www.boingboing.net/2004/03/30/gop_sloganator_highl.html)&lt;/p&gt;&lt;/div&gt;</description>
+&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description>
 			<category>mindless-link-propagation</category>
 		</item>
 		<item>
@@ -13810,11 +13812,11 @@ M&amp;lt;/hurtle&amp;gt;e mo&amp;lt;/bellyache&amp;gt;re&amp;lt;/a&amp;gt;
 		<item>
 			<title>Rotor Router Applets page</title>
 			<link>https://halcanary.org/vv/2003/12/27/150/</link>
-			<guid isPermaLink="false">cdf51579-11c2-2b5f-054b-b62e3477afe3</guid>
+			<guid isPermaLink="false">65175213-b7e7-9662-6f02-0f483119cd21</guid>
 			<pubDate>Sat, 27 Dec 2003 23:08:05 -0600</pubDate>
 			<description>&lt;div&gt;&lt;p&gt;[&lt;br&gt;
 &lt;img src=&quot;https://halcanary.org/SSL/Images/rotor-1d-agg.png&quot; alt=&quot;screenshot&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Work I've been doing](/SSL/rotor/)&lt;/p&gt;&lt;/div&gt;</description>
+&lt;p&gt;Work I've been doing](https://halcanary.org/SSL/rotor/)&lt;/p&gt;&lt;/div&gt;</description>
 			<category>computers-code</category>
 		</item>
 		<item>
@@ -14610,9 +14612,11 @@ exec /usr/bin/ssh &quot;$@&quot;;&lt;/code&gt;&lt;/pre&gt;
 		<item>
 			<title>MLP</title>
 			<link>https://halcanary.org/vv/2003/07/21/78/</link>
-			<guid isPermaLink="false">30da737d-022a-e17c-bb0b-a758c40f5413</guid>
+			<guid isPermaLink="false">d059dde0-48ec-847a-d2f9-7e0a4ef33146</guid>
 			<pubDate>Mon, 21 Jul 2003 01:07:22 -0500</pubDate>
-			<description>&lt;div&gt;&lt;p&gt;&lt;a href=&quot;http://www.xulplanet.com/ndeakin/arts/mozilla715.html&quot;&gt;[1]&lt;/a&gt; and &lt;a href=&quot;http://mightymu.net/&quot;&gt;[2]&lt;/a&gt; and &lt;a href=&quot;https://halcanary.org/logo&quot;&gt;[3]&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description>
+			<description>&lt;div&gt;&lt;p&gt;&lt;a href=&quot;https://web.archive.org/web/20031003164940/http://www.xulplanet.com/ndeakin/arts/mozilla715.html&quot;&gt;[1]&lt;/a&gt;
+and &lt;a href=&quot;https://web.archive.org/web/20030803023331/https://mightymu.net/&quot;&gt;[2]&lt;/a&gt;
+and &lt;a href=&quot;about:logo&quot;&gt;[3]&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description>
 			<category>mindless-link-propagation</category>
 		</item>
 		<item>
@@ -14742,7 +14746,7 @@ There are no files in folder '/DCIM/CANONMSC'.&lt;/code&gt;&lt;/pre&gt;
 			<category>uncategorized</category>
 		</item>
 		<item>
-			<title>&lt;hr&gt; considered harmful.</title>
+			<title> considered harmful.</title>
 			<link>https://halcanary.org/vv/2003/07/16/71/</link>
 			<guid isPermaLink="false">4e8d2f67-a0f5-7cfa-cf20-ed49ed44046b</guid>
 			<pubDate>Wed, 16 Jul 2003 19:20:59 -0500</pubDate>
@@ -14786,9 +14790,9 @@ div.section {
 		<item>
 			<title>Site Redesign</title>
 			<link>https://halcanary.org/vv/2003/07/16/69/</link>
-			<guid isPermaLink="false">ae9cea4b-55ae-f870-1685-7302fde15c11</guid>
+			<guid isPermaLink="false">3af97f82-d9d7-3642-d4a8-e4dbcedcbf56</guid>
 			<pubDate>Wed, 16 Jul 2003 04:01:33 -0500</pubDate>
-			<description>&lt;div&gt;&lt;p&gt;The redesign started with only editing css files, but then I needed to insert some &lt;/p&gt;&lt;div&gt;'s, and I needed to edit almost every cgi and html file. I managed to automate the task, though.&lt;/div&gt;&lt;/div&gt;</description>
+			<description>&lt;div&gt;&lt;p&gt;The redesign started with only editing css files, but then I needed to insert some &lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt;'s, and I needed to edit almost every cgi and html file. I managed to automate the task, though.&lt;/p&gt;&lt;/div&gt;</description>
 			<category>meta</category>
 		</item>
 		<item>
@@ -14803,11 +14807,11 @@ div.section {
 		<item>
 			<title>robots</title>
 			<link>https://halcanary.org/vv/2003/07/16/67/</link>
-			<guid isPermaLink="false">e5d63acd-30b7-ff20-74f5-638e3af39b48</guid>
+			<guid isPermaLink="false">56dafaa8-5ac1-0fcf-e120-df096c966b0a</guid>
 			<pubDate>Wed, 16 Jul 2003 03:59:33 -0500</pubDate>
 			<description>&lt;div&gt;&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Fry:&lt;/strong&gt; Who cares what you're programmed for? If somebody programmed you to jump off a bridge, would you do it?&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Bender:&lt;/strong&gt; I'll have to check my program. &lt;em&gt;&lt;pause&gt;&lt;/pause&gt;&lt;/em&gt; Yep.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Bender:&lt;/strong&gt; I'll have to check my program. &lt;em&gt;&lt;code&gt;&amp;lt;&lt;/code&gt;pause&lt;code&gt;&amp;gt;&lt;/code&gt;&lt;/em&gt; Yep.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Been watching too much &lt;em&gt;Futurama&lt;/em&gt; recently, so I've got robots on my mind. I haven't read enough recent sci-fi with robots. There are robots in the old Asimov books, and a handful of sentient AI's in some other books, but not enough.&lt;/p&gt;&lt;/div&gt;</description>
 			<category>robots</category>
@@ -15224,10 +15228,9 @@ Yeah, it's gone&lt;/em&gt;&lt;/p&gt;
 		<item>
 			<title>Goodbye old server.</title>
 			<link>https://halcanary.org/vv/2003/03/12/38/</link>
-			<guid isPermaLink="false">840e9a8f-5fae-2867-5c5f-de8b1d918644</guid>
+			<guid isPermaLink="false">b400f623-1cad-2641-bd40-bb26fdda2487</guid>
 			<pubDate>Wed, 12 Mar 2003 11:42:26 -0600</pubDate>
-			<description>&lt;div&gt;&lt;img src=&quot;https://halcanary.org/art/kc2_s.jpg&quot; alt=&quot;abstract&quot; width=&quot;150&quot; height=&quot;90&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;
-
+			<description>&lt;div&gt;&lt;p&gt;&lt;img src=&quot;https://halcanary.org/art/kc2_s.jpg&quot; alt=&quot;abstract&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;I put a lot of work into reworking this page yesterday. I've finally moved all content off of &lt;em&gt;http://uw.physics.wisc.edu/~hal/&lt;/em&gt; and transferred it to this site. I also grabbed a lot of content off of &lt;em&gt;http://ups.physics.wisc.edu/~hal/&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;There's now a lot of junk on the left sidebar.&lt;/p&gt;&lt;/div&gt;</description>
 			<category>computers-code</category>
@@ -15342,9 +15345,9 @@ somewhere.&lt;/p&gt;&lt;/div&gt;</description>
 		<item>
 			<title>Florida photos</title>
 			<link>https://halcanary.org/vv/2002/12/30/27/</link>
-			<guid isPermaLink="false">5d6e385c-ead0-4c1a-8387-81c2155e7df8</guid>
+			<guid isPermaLink="false">105cb83b-48c5-fa9f-61ec-59c8a6eb6fb9</guid>
 			<pubDate>Mon, 30 Dec 2002 19:43:04 -0600</pubDate>
-			<description>&lt;div&gt;&lt;p&gt;&lt;a href=&quot;https://halcanary.org/photos/2002-12-26-sanibel02.jpg&quot;&gt;&lt;img src=&quot;https://halcanary.org/photos/thumb/2002-12-26-sanibel02.jpg&quot; alt=&quot;herons?&quot; width=&quot;120&quot; height=&quot;91&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt; There are more Florida photos to come, but it might be a few days.&lt;/p&gt;
+			<description>&lt;div&gt;&lt;p&gt;&lt;a href=&quot;https://halcanary.org/photos/2002-12-26-sanibel02.jpg&quot;&gt;&lt;img src=&quot;https://halcanary.org/photos/thumb/2002-12-26-sanibel02.jpg&quot; alt=&quot;herons?&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt; There are more Florida photos to come, but it might be a few days.&lt;/p&gt;
 &lt;p&gt;Today is my first day of unemployment that I'm not on vacation. I accompished nothing, aside from some nessisary apartment cleaning.&lt;/p&gt;
 &lt;p&gt;So far I've got nothing done on my quest to simplify my life.&lt;/p&gt;&lt;/div&gt;</description>
 			<category>photos</category>
@@ -15352,31 +15355,31 @@ somewhere.&lt;/p&gt;&lt;/div&gt;</description>
 		<item>
 			<title>telephoto adapter</title>
 			<link>https://halcanary.org/vv/2002/12/28/26/</link>
-			<guid isPermaLink="false">ce6584d7-1cd1-8de2-ebca-6055cda629b7</guid>
+			<guid isPermaLink="false">e9c02050-e56c-9e5b-3852-933155283a70</guid>
 			<pubDate>Sat, 28 Dec 2002 11:29:10 -0600</pubDate>
-			<description>&lt;div&gt;&lt;p&gt;&lt;a href=&quot;https://halcanary.org/photos/2002-12-27-sanibel12.jpg&quot;&gt;&lt;img src=&quot;https://halcanary.org/photos/thumb/2002-12-27-sanibel12.jpg&quot; alt=&quot;Laughing gulls on beach, Sanibel, FL, US&quot; width=&quot;120&quot; height=&quot;120&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt; I got a telephoto adapter for my camera this week. I took some &lt;a href=&quot;https://halcanary.org/p/photos/&quot;&gt;photos&lt;/a&gt; with them on the &lt;a href=&quot;https://halcanary.org/p/photo-2002-12-26/&quot;&gt;26th&lt;/a&gt; and the &lt;a href=&quot;https://halcanary.org/p/photo-2002-12-27/&quot;&gt;27th&lt;/a&gt;.&lt;/p&gt;
+			<description>&lt;div&gt;&lt;p&gt;&lt;a href=&quot;https://halcanary.org/photos/2002-12-27-sanibel12.jpg&quot;&gt;&lt;img src=&quot;https://halcanary.org/photos/thumb/2002-12-27-sanibel12.jpg&quot; alt=&quot;Laughing gulls on beach, Sanibel, FL, US&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt; I got a telephoto adapter for my camera this week. I took some &lt;a href=&quot;https://halcanary.org/p/photos/&quot;&gt;photos&lt;/a&gt; with them on the &lt;a href=&quot;https://halcanary.org/p/photo-2002-12-26/&quot;&gt;26th&lt;/a&gt; and the &lt;a href=&quot;https://halcanary.org/p/photo-2002-12-27/&quot;&gt;27th&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;I'm just about sick of the south again. I want to go back to Wisconsin, where its too cold for biting insects.&lt;/p&gt;&lt;/div&gt;</description>
 			<category>photos</category>
 		</item>
 		<item>
 			<title>fog</title>
 			<link>https://halcanary.org/vv/2002/12/15/25/</link>
-			<guid isPermaLink="false">4f5fc4f7-71e3-4181-dba9-2435ebe31ce3</guid>
+			<guid isPermaLink="false">b78b14d6-88d6-c471-73a4-71abbbd1e1ca</guid>
 			<pubDate>Sun, 15 Dec 2002 19:16:27 -0600</pubDate>
-			<description>&lt;div&gt;&lt;p&gt;&lt;a href=&quot;https://halcanary.org/photos/2002-12-13-capitol.jpg&quot;&gt;&lt;img src=&quot;https://halcanary.org/photos/thumb/2002-12-13-capitol.jpg&quot; alt=&quot;foggy night, WI capitol building&quot; width=&quot;110&quot; height=&quot;120&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt; It was foggy all day friday. Here's a photo of the capitol through the fog. If I had time, I would have tried other settings to try and capture the fog better. Thanks to Em, who actually took the shot.&lt;/p&gt;&lt;/div&gt;</description>
+			<description>&lt;div&gt;&lt;p&gt;&lt;a href=&quot;https://halcanary.org/photos/2002-12-13-capitol.jpg&quot;&gt;&lt;img src=&quot;https://halcanary.org/photos/thumb/2002-12-13-capitol.jpg&quot; alt=&quot;foggy night, WI capitol building&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt; It was foggy all day friday. Here's a photo of the capitol through the fog. If I had time, I would have tried other settings to try and capture the fog better. Thanks to Em, who actually took the shot.&lt;/p&gt;&lt;/div&gt;</description>
 			<category>photos</category>
 		</item>
 		<item>
 			<title>Site Update! / Hardware Standards!</title>
 			<link>https://halcanary.org/vv/2002/12/15/24/</link>
-			<guid isPermaLink="false">e84e6234-dd64-8378-ca7e-f55032257666</guid>
+			<guid isPermaLink="false">96414600-7bbb-9a69-1f16-85b3bac089a6</guid>
 			<pubDate>Sun, 15 Dec 2002 16:50:27 -0600</pubDate>
 			<description>&lt;div&gt;&lt;p&gt;&lt;strong&gt;Site Update!&lt;/strong&gt; (I wonder who reads this, anyway?)&lt;/p&gt;
 &lt;p&gt;I've been going back and rewriting the perl backend of this page. You shouldn't be able to tell a difference, but the code is a lot cleaner now. I've moved all of the reusable code into a &lt;code&gt;.pm&lt;/code&gt; file so I can now knock out new cgi scripts much more quickly.&lt;/p&gt;
 &lt;p&gt;Yea! Reusable Code!&lt;/p&gt;
-&lt;p&gt;There's now a &lt;a href=&quot;https://halcanary.org/blogsubmit.cgi&quot;&gt;Blog Submission&lt;/a&gt; form, which will only work if you are logged in. And I'm the only one with a login right now. So if I know you, and you are looking for a place to log your thoughts, send me a note.&lt;/p&gt;
+&lt;p&gt;There's now a &lt;a href=&quot;https://web.archive.org/web/20041021021448/http://halcanary.org/blogsubmit.cgi&quot;&gt;Blog Submission&lt;/a&gt; form, which will only work if you are logged in. And I'm the only one with a login right now. So if I know you, and you are looking for a place to log your thoughts, send me a note.&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;&lt;a href=&quot;https://halcanary.org/photos/2002-12-15-vaio-w-kbd.jpg&quot;&gt;&lt;img src=&quot;https://halcanary.org/photos/thumb/2002-12-15-vaio-w-kbd.jpg&quot; alt=&quot;tiny computer with external keyboard&quot; width=&quot;120&quot; height=&quot;96&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt; I got sick of the tiny keyboard on my tiny notebook, so I went shopping for a keybord to throw in my suitcase when I travel. I need a full sized USB keyboard that doesn't take up more space than it has to. Since I only have one USB port on my notebook, I also need a USB hub. The ideal thing would be a keyboard with a built in hub, like Apple has. So I wandered around CompUSA looking for such a thing. It turns out that half of the PC keyboards out there still have PS/2 connectors. And all of the rest are huge, with 20 unnessisary buttons.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://halcanary.org/photos/2002-12-15-vaio-w-kbd.jpg&quot;&gt;&lt;img src=&quot;https://halcanary.org/photos/thumb/2002-12-15-vaio-w-kbd.jpg&quot; alt=&quot;tiny computer with external keyboard&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/a&gt; I got sick of the tiny keyboard on my tiny notebook, so I went shopping for a keybord to throw in my suitcase when I travel. I need a full sized USB keyboard that doesn't take up more space than it has to. Since I only have one USB port on my notebook, I also need a USB hub. The ideal thing would be a keyboard with a built in hub, like Apple has. So I wandered around CompUSA looking for such a thing. It turns out that half of the PC keyboards out there still have PS/2 connectors. And all of the rest are huge, with 20 unnessisary buttons.&lt;/p&gt;
 &lt;p&gt;So I ended up buying an Apple Pro Keyboard. It works perffectly. The only thing it lacks is a context-menu button. And the alt and start buttons are reversed. But I can deal with those issues. Apple could make a killing if they would market thier keyboards at PC users.&lt;/p&gt;
 &lt;p&gt;Yea! Hardware Standards!&lt;/p&gt;&lt;/div&gt;</description>
 			<category>meta</category>
@@ -15606,14 +15609,14 @@ Lord, have mercy.&lt;/em&gt;&lt;/p&gt;
 		<item>
 			<title>Books on JavaScript and Perl</title>
 			<link>https://halcanary.org/vv/2002/09/19/12/</link>
-			<guid isPermaLink="false">d970dbd4-a754-6fec-00c5-88e7e81a5444</guid>
+			<guid isPermaLink="false">68ed55b9-13f4-5f0a-3587-84f4c22d95d1</guid>
 			<pubDate>Thu, 19 Sep 2002 23:16:04 -0500</pubDate>
 			<description>&lt;div&gt;&lt;p&gt;Last weekend, I picked up a couple of O'Reilly books at the store: &lt;em&gt;JavaScript: The Definitive Guide&lt;/em&gt; by David Flanagan, and &lt;em&gt;Programming Perl&lt;/em&gt; (the camel book) by Larry Wall, et all.&lt;/p&gt;
 &lt;p&gt;I've found that JavaScript (js) is a much easier to grok if you think of it as a real language. And there's a lot of cool things that can be done with the W3C DOM.&lt;/p&gt;
 &lt;p&gt;Perl, on the other hand, is cool, but it's syntax is too complicated. A comparason is in order. YOu can learn all there is to know about Java's syntax in a short time, but it would take years of effort to lean everything that can be done with the language. With Perl, it takes a long time to grok the eccentricies of the syntax, but as soon as you do, you know how to do anything with the language.&lt;/p&gt;
 &lt;p&gt;Is there a word for this concept? I guess that Java is a minimalistic OOP language, while Perl is a maxamalistic language that allows OOP structures. As a logician, I hate Perl. As a hacker, I have a lot of respect for anyone who has mastered it.&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;I've played a bit with js and cookies. See &lt;a href=&quot;https://halcanary.org/preferences.cgi&quot;&gt;the prefs page&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I've played a bit with js and cookies. See &lt;a href=&quot;https://web.archive.org/web/20021013042617/https://halcanary.org/preferences.cgi&quot;&gt;the prefs page&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;I've been taking photos. See &lt;a href=&quot;https://halcanary.org/p/a40/&quot;&gt;this&lt;/a&gt;, &lt;a href=&quot;https://halcanary.org/p/photo-2002-08-25/&quot;&gt;this&lt;/a&gt;, and &lt;a href=&quot;https://halcanary.org/p/photo-2002-08-31/&quot;&gt;that&lt;/a&gt;.&lt;/p&gt;&lt;/div&gt;</description>
 			<category>computers-code</category>
 		</item>
@@ -15672,18 +15675,15 @@ Lord, have mercy.&lt;/em&gt;&lt;/p&gt;
 		<item>
 			<title>Update on my life:</title>
 			<link>https://halcanary.org/vv/2002/05/20/7/</link>
-			<guid isPermaLink="false">5438f843-fb68-adad-5abf-b276d0959bb1</guid>
+			<guid isPermaLink="false">a866168a-0fcf-404a-ba0c-f00f46b5b52d</guid>
 			<pubDate>Mon, 20 May 2002 20:08:53 -0500</pubDate>
 			<description>&lt;div&gt;&lt;p&gt;Yesterday I finished a E2 node I've been working on for a while: &lt;a href=&quot;http://everything2.com/?node=From+Beirut+to+Jerusalem&quot;&gt;http://everything2.com/?node=From+Beirut+to+Jerusalem&lt;/a&gt;. Today I noded &lt;a href=&quot;http://everything2.com/?node=Kyoto+Now%21&quot;&gt;http://everything2.com/?node=Kyoto+Now%21&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Spending more money on CD's.&lt;/p&gt;
 &lt;p&gt;Got these nifty thumb screws for my computer. They are the same size as the srews that you use to keep the covers on the case, but they have an oversized thumb knob to make access easier. For the first time in months, my case covers are screwed on!&lt;/p&gt;
 &lt;p&gt;As of last weekend, I've been graduated for exactly one year. Crazy.&lt;/p&gt;
-&lt;img src=&quot;https://halcanary.org/art/devil-01.jpg&quot; alt=&quot;/art/devil-01.jpg&quot; width=&quot;1024&quot; height=&quot;757&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;
-
-&lt;img src=&quot;https://halcanary.org/art/devil-02.jpg&quot; alt=&quot;/art/devil-02.jpg&quot; width=&quot;640&quot; height=&quot;431&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;
-
-&lt;img src=&quot;https://halcanary.org/art/devil-03.jpg&quot; alt=&quot;/art/devil-03.jpg&quot; width=&quot;417&quot; height=&quot;578&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;
-
+&lt;p&gt;&lt;img src=&quot;http://halcanry.org/art/devil-01.jpg&quot; alt=&quot;/art/devil-01.jpg&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://halcanry.org/art/devil-02.jpg&quot; alt=&quot;/art/devil-02.jpg&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://halcanry.org/art/devil-03.jpg&quot; alt=&quot;/art/devil-03.jpg&quot; style=&quot;max-width:100%;height:auto;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;Later.&lt;/p&gt;&lt;/div&gt;</description>
 			<category>life</category>
 		</item>

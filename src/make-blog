@@ -218,7 +218,7 @@ class Post(object):
                     self.summary = value
                 elif key == 'CATEGORIES':
                     self.category_list = [x for x in filter(len, value.split(';'))]
-                elif key != 'COPYRIGHT':
+                elif key != 'COPYRIGHT' and key != 'AUTHOR':
                     sys.stderr.write('%s: %r=%r\n' % (path, key, value))
 
             self.markdown = f.read()
