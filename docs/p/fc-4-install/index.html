@@ -1,30 +1,68 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en-US">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Copyright 1997-2022 Hal Canary. ALL RIGHTS RESERVED. -->
-<title>World of Hal Canary</title>
-<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==">
-<link rel="stylesheet" type="text/css" href="/styles/scrapple-from-the-apple.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FC4 Install Notes (Workstation)</title>
+<link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==" rel="icon"/>
 <style>
-@media screen { body{
-    max-width: 35em;
-    margin: 22px auto 64px auto;
-    padding: 0 8px;
-} }
-body {
-    color: #000000;
-    background-color: #ffffff;
-    background-image: none;
-    text-align: initial;
+@media (prefers-color-scheme:dark) {body {background-color:#000;color:#FFF;}
+a:visited {color:#C0F;}
+a:link, a:hover, a:active {color:#0CF;}
 }
+@media print {body {max-width:8in;font-size:12px;margin:0;}
+}
+@media screen {body {font-family:sans-serif;max-width:35em;margin:22px auto 64px auto;padding:0 8px;}
+}
+body {overflow-wrap:break-word;}
+@page {size:auto;margin:0.25in 0.5in 0.5in 0.5in;}
+svg {fill:currentColor;}
+img {max-width:100%;height:auto;}
+hr {border-style:solid none;}
+.content {margin:1em 0;}
+.content hr {padding:0;margin:0;border:none;text-align:center;}
+.content hr:after {font-size:150%;content:"* \A0 * \A0 *";display:block;position:relative;}
+.rightside {text-align:right;}
+.centered {text-align:center;}
+pre {overflow-x:auto;}
+.byline > * {display:inline-block;border-style:solid;border-width:thin;padding:3px 8px;border-radius:5px;text-align:initial;}
+.byline {text-align:right;}
+.box {border-style:solid;border-width:thin;margin:8px 0;padding:0 8px;}
+a.hiddenlink:link {background:inherit;color:inherit;text-decoration:none;}
+a.hiddenlink:visited {background:inherit;color:inherit;text-decoration:none;}
+a.hiddenlink:active {background:inherit;color:inherit;text-decoration:none;}
+ul,ol {padding-left:30px;}
+table.border {border-collapse:collapse;margin:8px auto;}
+table.border tr > * {border-style:solid;border-width:thin;padding:3px 8px;border-radius:5px;}
+.tophead {text-align:center;margin:1ex auto 0 auto;max-width:35em;}
+.tightmargins li > ul > li {list-style-type:square;}
+.tightmargins h1,
+.tightmargins h2,
+.tightmargins p,
+.tightmargins ul {margin:0.5ex 0;}
+.tightmargins li > ul {margin:0 0 0.5ex 0;}
+.tightmargins ul {padding-left:30px;}
+.tightmargins li {margin:0 0 0.5ex 0;}
+.plainlink a:link,
+.plainlink a:visited,
+.plainlink a:hover,
+.plainlink a:active {color:inherit;text-decoration:underline;}
+.nolink a:link,
+.nolink a:visited,
+.nolink a:hover,
+.nolink a:active {color:inherit;text-decoration:none;}
+div.lcr {display:grid;grid-template-columns:auto auto auto;}
+ul.flat {list-style-type:none;margin:16px 0;padding:0;}
+ul.flat li {display:inline;}
+ul.flat li::after {content:"]";}
+ul.flat li::before {content:"[";}
 </style>
+<!--
+Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
+-->
 </head>
-
 <body>
-
-<h1><a href="/" class="hiddenlink">
+<div class="tophead" role="banner">
 <svg aria-label="Hal W Canary 3" role="img" viewBox="-200 0 800 91" width="100%">
 <title>Hal W Canary 3</title>
 <rect height="4" width="180" x="-200" y="43" />
@@ -73,211 +111,92 @@ C 325 43 324 42 322 43 C 319 45 322 52 323 54 C 324 58 327 59 328 63 C 329 67
 375 71 C 383 67 399 55 393 45 C 390 38 382 37 380 31 C 384 29 394 26 395 20 C
 395 17 392 15 389 13 C 384 9 378 6 372 10" />
 </svg>
-</a></h1>
-
-<nav class="section"><p><a href="/">Home</a></p></nav>
-
-<!-- p/fc-4-install -->
-
-<!--
-<link rel="stylesheet" type="text/css"
-      href="//styles/centeredcol.css" 
-      title="Centered Column" />
-<div class='centercol'>
--->
-<div class="section">
-  <h2>FC4 Install Notes (Workstation)</h2>
-  <div class="subsection">
-    <h3>Pre-install</h3>
-    <p><b>FILESYSTEM</b></p>
-    <p>This is how I set up my hard drive.  I planned on formatting
-      every partition except for /home.  /home also contained a copy
-      of the four CDs, aquired from a
-      torrent. FC4-i386-disc{1,2,3,4}.iso. I only burnt the first CD.
-      The others could live on disc.  The advantage of copying the
-      packages from HDD to HDD is that it is MUCH faster.  Use
-      &ldquo;linux askmethod&rdquo; at the boot prompt to make this
-      work.</p>
-
-<pre class="indent">
-Filesystem	1M-blocks	Mounted on
+</div>
+<div role="main">
+<h1>FC4 Install Notes (Workstation)</h1>
+<h3>Pre-install</h3>
+<p><strong>FILESYSTEM</strong></p>
+<p>This is how I set up my hard drive. I planned on formatting every partition except for /home. /home also contained a copy of the four CDs, aquired from a torrent. FC4-i386-disc{1,2,3,4}.iso. I only burnt the first CD. The others could live on disc. The advantage of copying the packages from HDD to HDD is that it is MUCH faster. Use “linux askmethod” at the boot prompt to make this work.</p>
+<pre><code>Filesystem	1M-blocks	Mounted on
 /dev/hdb1	      190	/boot
 /dev/hdb2	     9286	/
 /dev/hdb3	   101147	/home
 /dev/hdb4	    ~2048	[SWAP]
 /dev/hda1 (NTFS)		[not mounted]
 /dev/hda2 (VFAT)    19040	/d		
-</pre>  
-
-    <p><b>ETC AND VAR</b></p>
-
-    <p>You may copy /etc and /var to /home </p>
-<pre class="indent">
-sudp cp -a /etc /home/etc-$(date +%Y-%m-%d)
+</code></pre>
+<p><strong>ETC AND VAR</strong></p>
+<p>You may copy /etc and /var to /home</p>
+<pre><code>sudp cp -a /etc /home/etc-$(date +%Y-%m-%d)
 sudp cp -a /var /home/var-$(date +%Y-%m-%d)
-</pre>
-
-    <p>Minimalist method:  keep useful files in /home/ETCETERA (hosts
-    dhcpd.conf ssh-_host*key*, sshd_config, iptables-script).</p>
-
-  </div>
-  <div class="subsection">
-    <h3>Install</h3>
-    <p>only wipe hdb1, hdb2, and hdb4.</p>
-    <p>Install packages....</p>
-  </div>
-  <div class="subsection">
-    <h3>Post-install</h3>
-    <p><b>/HOME</b></p>
-    <p>As root on the console, set up /home partition</p>
-<pre class="indent">
-echo '/dev/hdb3 /home ext3 defaults 1 2' &gt;&gt; /etc/fstab
+</code></pre>
+<p>Minimalist method: keep useful files in /home/ETCETERA (hosts dhcpd.conf ssh-_host*key*, sshd_config, iptables-script).</p>
+<hr />
+<h3>Install</h3>
+<p>only wipe hdb1, hdb2, and hdb4.</p>
+<p>Install packages....</p>
+<hr />
+<h3>Post-install</h3>
+<p><strong>/HOME</strong></p>
+<p>As root on the console, set up /home partition</p>
+<pre><code>echo '/dev/hdb3 /home ext3 defaults 1 2' &gt;&gt; /etc/fstab
 mv /home /OLD.home
 mkdir /home
 mount /home/
-</pre>
-
-    <p><b>SUDOERS</b></p>
-    <p>Add hal to wheel group (/etc/group).  Uncomment wheel group in
-      sudoers file (/etc/sudoers).</p>
-
-
-    <p><b>REPOS</b></p>
-
-<p>Add these files to /etc/yum.repos.d/. Notice that I enable freshrpms
-  this time.  They have the best package selection.  And they now
-  complement Fedora Extras just like livna has always done.</p>
-
-<pre class="indent">
-## /etc/yum.repos.d/freshrpms.repo
+</code></pre>
+<p><strong>SUDOERS</strong></p>
+<p>Add hal to wheel group (/etc/group). Uncomment wheel group in sudoers file (/etc/sudoers).</p>
+<p><strong>REPOS</strong></p>
+<p>Add these files to /etc/yum.repos.d/. Notice that I enable freshrpms this time. They have the best package selection. And they now complement Fedora Extras just like livna has always done.</p>
+<pre><code>## /etc/yum.repos.d/freshrpms.repo
 [freshrpms]
 name=FreshRPMs Fedora Compatible Packages
 mirrorlist=http://ayo.freshrpms.net/fedora/linux/$releasever/mirrors-freshrpms
 enabled=1
 gpgkey=http://freshrpms.net/RPM-GPG-KEY-freshrpms
 gpgcheck=1
-</pre>
-
-<!--
-<pre class="indent">
-##  /etc/yum.repos.d/livna.repo
-[livna]
-name=Livna.org Fedora Compatible Packages
-baseurl=http://rpm.livna.org/fedora/$releasever/$basearch/RPMS.lvn/
-enabled=0
-gpgkey=http://rpm.livna.org/RPM-LIVNA-GPG-KEY-i386
-gpgcheck=1
-</pre>
-
-<pre class="indent">
-## /etc/yum.repos.d/dag.repo
-[dag]
-name=Dag Fedora Compatible Packages
-baseurl=http://dag.freshrpms.net/fedora/$releasever/en/$basearch/dag/
-  http://dag.atrpms.net/fedora/$releasever/en/$basearch/dag/
-enabled=0
-gpgkey=http://dag.wieers.com/packages/RPM-GPG-KEY.dag.txt
-gpgcheck=1
-</pre>
--->
-
-    <p><b>INSTALL PACKAGES</b></p>
-
-    <p>Start by updating files.</p>
-    <pre class="indent">yum -y update</pre>    
-
-
-    <p>Find things to install witrh YUM. Check out availible software
-      in each directory listing.</p>
-
-    <pre class="indent">yum install <em>packages</em></pre>
-
-    <p>
-      <a href="http://download.fedora.redhat.com/pub/fedora/linux/core/4/i386/os/Fedora/RPMS/">Fedora Core</a> - 
-      switchdesk-gui dhcp
-    </p>
-
-    <p>
-      <a href="http://download.fedora.redhat.com/pub/fedora/linux/extras/4/i386/">Fedora Extras</a> - 
-      bash-completion
-      bittorrent
-      WindowMaker
-      blackbox
-      fluxbox
-      xfce*
-      lyx
-      gqview
-      id3lib
-      cpan2rpm
-    </p>
-
-    <p>
-      <a href="http://ayo.ie.freshrpms.net/fedora/linux/4/i386/freshrpms/RPMS/">Freshrpms</a> - 
-      gstreamer-plugins-extra-audio 
-      gstreamer-plugins-extra-dvd
-      gstreamer-plugins-extra-video 
-      mplayer
-      unrar
-      gtkpod
-    </p>
-<!--    
-    <p>
-      <a href="http://rpm.livna.org/fedora/4/i386/RPMS.lvn/">Livna</a> - 
-    </p>
-
-    <p>
-      <a href="http://dag.freshrpms.net/fedora/4/en/i386/RPMS.dag/">Dag</a> - 
-    </p>
--->
-
-
-    <p><b>MPLAYER TWEAKS</b></p>
-    <p>Add line &ldquo;dev.rtc.max-user-freq = 1024&rdquo; in
-      /etc/sysctl.conf.  Run &ldquo;sysctl -p&rdquo;.</p>
-
-    <p>Edit $HOME/.asoundrc to make sound work nicely for mplayer.</p>
-<pre class="indent">
-### user's .asoundrc ###
+</code></pre>
+<p><strong>INSTALL PACKAGES</strong></p>
+<p>Start by updating files.</p>
+<pre><code>yum -y update
+</code></pre>
+<p>Find things to install witrh YUM. Check out availible software in each directory listing.</p>
+<pre><code>yum install packages
+</code></pre>
+<p><a href="http://download.fedora.redhat.com/pub/fedora/linux/core/4/i386/os/Fedora/RPMS/">Fedora Core</a> - switchdesk-gui dhcp</p>
+<p><a href="http://download.fedora.redhat.com/pub/fedora/linux/extras/4/i386/">Fedora Extras</a> - bash-completion bittorrent WindowMaker blackbox fluxbox xfce* lyx gqview id3lib cpan2rpm</p>
+<p><a href="http://ayo.ie.freshrpms.net/fedora/linux/4/i386/freshrpms/RPMS/">Freshrpms</a> - gstreamer-plugins-extra-audio gstreamer-plugins-extra-dvd gstreamer-plugins-extra-video mplayer unrar gtkpod</p>
+<p><strong>MPLAYER TWEAKS</strong></p>
+<p>Add line “dev.rtc.max-user-freq = 1024” in /etc/sysctl.conf. Run “sysctl -p”.</p>
+<p>Edit $HOME/.asoundrc to make sound work nicely for mplayer.</p>
+<pre><code>### user's .asoundrc ###
 pcm.dsp0 {
     type plug
-    #slave.pcm "dmix"
-    slave.pcm "hw:0"
+    #slave.pcm &quot;dmix&quot;
+    slave.pcm &quot;hw:0&quot;
 }
 ctl.mixer0 {
     type hw
     card 0
 }
-</pre>
-
-    <p>Edit mplayer config to use fake oss device</p>
-<pre class="indent">
-### user's .mplayer/config ###
+</code></pre>
+<p>Edit mplayer config to use fake oss device</p>
+<pre><code>### user's .mplayer/config ###
 ao=oss
 ontop=yes
-</pre>
-
-    <p><b>JAVA JDK AND AZUREUS</b></p>
-
-    <p>Install jdk-1_5_0-linux-i586.rpm, which lives in my packages
-      directory. /usr/bin/java is still used by java-1.4.2-gcj-compat;
-      jdk will only install in /usr/java/jdk1.5.0/</p>
-
-    <p>Azureus can be unpackaged to /usr/local/azureus.  Then start it
-      with this script:</p>
-
-<pre class="indent">
-#!/bin/sh
+</code></pre>
+<p><strong>JAVA JDK AND AZUREUS</strong></p>
+<p>Install jdk-1_5_0-linux-i586.rpm, which lives in my packages directory. /usr/bin/java is still used by java-1.4.2-gcj-compat; jdk will only install in /usr/java/jdk1.5.0/</p>
+<p>Azureus can be unpackaged to /usr/local/azureus. Then start it with this script:</p>
+<pre><code>#!/bin/sh
 ###$HOME/bin/azureus
-export JAVA_HOME="/usr/java/jdk1.5.0"
+export JAVA_HOME=&quot;/usr/java/jdk1.5.0&quot;
 export PATH=${JAVA_HOME}/bin:${PATH}
 exec /usr/local/azureus/azureus
-</pre>
-
-
-    <p><b>SSH</b></p>
-    <p>Grab my old SSHD keys. Tighten sshd security:</p>
-
-<pre class="indent">cd /etc/ssh 
+</code></pre>
+<p><strong>SSH</strong></p>
+<p>Grab my old SSHD keys. Tighten sshd security:</p>
+<pre><code>cd /etc/ssh 
 /sbin/service sshd stop
 rename key key.OLD *_key
 rename pub pub.OLD *.pub
@@ -286,31 +205,20 @@ echo '## MODIFICATIONS HWC' &gt;&gt; sshd_config
 echo 'PermitRootLogin no' &gt;&gt; sshd_config
 echo 'AllowUsers hal' &gt;&gt; sshd_config
 /sbin/service sshd start
-</pre>
-
-
-    <p><b>MACROMEDIA FLASH</b></p>
-    <p> Go to 
-      <a href="http://ruslug.rutgers.edu/macromedia/">RSLUG's
-	page</a> and get the appropriate RPM.</p>
-
-    <p><b>DHCPD</b></p>
-<pre class="indent">
-cp -p /home/ETCETERA/dhcpd.conf /etc/
+</code></pre>
+<p><strong>MACROMEDIA FLASH</strong></p>
+<p>Go to <a href="http://ruslug.rutgers.edu/macromedia/">RSLUG's page</a> and get the appropriate RPM.</p>
+<p><strong>DHCPD</strong></p>
+<pre><code>cp -p /home/ETCETERA/dhcpd.conf /etc/
 /sbin/chkconfig dhcpd on
 /sbin/service dhcpd start
-</pre>
-    <p>I am having problems with dhcpd. More later.</p>
-  </div>
+</code></pre>
+<p>I am having problems with dhcpd. More later.</p>
+<hr />
+<hr />
+<p>file modification time: 2005-06-18 13:34:08</p>
+<hr />
+
 </div>
-
-<div class="section"><p class="rightside">file modification time: 2005-06-18 13:34:08</p></div>
-
-<div class="section">
-<p class="centered">Copyright 1997-2013 by Hal Canary.<br>
-<i>mailto: halcanary at gmail dot com</i><br>
-<a href="https://halcanary.org"><i>http://halcanary.org</i></a></p>
-</div>
-
 </body>
 </html>

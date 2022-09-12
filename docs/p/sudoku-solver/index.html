@@ -1,30 +1,68 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en-US">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Copyright 1997-2022 Hal Canary. ALL RIGHTS RESERVED. -->
-<title>World of Hal Canary</title>
-<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==">
-<link rel="stylesheet" type="text/css" href="/styles/scrapple-from-the-apple.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sudoku Solver</title>
+<link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==" rel="icon"/>
 <style>
-@media screen { body{
-    max-width: 35em;
-    margin: 22px auto 64px auto;
-    padding: 0 8px;
-} }
-body {
-    color: #000000;
-    background-color: #ffffff;
-    background-image: none;
-    text-align: initial;
+@media (prefers-color-scheme:dark) {body {background-color:#000;color:#FFF;}
+a:visited {color:#C0F;}
+a:link, a:hover, a:active {color:#0CF;}
 }
+@media print {body {max-width:8in;font-size:12px;margin:0;}
+}
+@media screen {body {font-family:sans-serif;max-width:35em;margin:22px auto 64px auto;padding:0 8px;}
+}
+body {overflow-wrap:break-word;}
+@page {size:auto;margin:0.25in 0.5in 0.5in 0.5in;}
+svg {fill:currentColor;}
+img {max-width:100%;height:auto;}
+hr {border-style:solid none;}
+.content {margin:1em 0;}
+.content hr {padding:0;margin:0;border:none;text-align:center;}
+.content hr:after {font-size:150%;content:"* \A0 * \A0 *";display:block;position:relative;}
+.rightside {text-align:right;}
+.centered {text-align:center;}
+pre {overflow-x:auto;}
+.byline > * {display:inline-block;border-style:solid;border-width:thin;padding:3px 8px;border-radius:5px;text-align:initial;}
+.byline {text-align:right;}
+.box {border-style:solid;border-width:thin;margin:8px 0;padding:0 8px;}
+a.hiddenlink:link {background:inherit;color:inherit;text-decoration:none;}
+a.hiddenlink:visited {background:inherit;color:inherit;text-decoration:none;}
+a.hiddenlink:active {background:inherit;color:inherit;text-decoration:none;}
+ul,ol {padding-left:30px;}
+table.border {border-collapse:collapse;margin:8px auto;}
+table.border tr > * {border-style:solid;border-width:thin;padding:3px 8px;border-radius:5px;}
+.tophead {text-align:center;margin:1ex auto 0 auto;max-width:35em;}
+.tightmargins li > ul > li {list-style-type:square;}
+.tightmargins h1,
+.tightmargins h2,
+.tightmargins p,
+.tightmargins ul {margin:0.5ex 0;}
+.tightmargins li > ul {margin:0 0 0.5ex 0;}
+.tightmargins ul {padding-left:30px;}
+.tightmargins li {margin:0 0 0.5ex 0;}
+.plainlink a:link,
+.plainlink a:visited,
+.plainlink a:hover,
+.plainlink a:active {color:inherit;text-decoration:underline;}
+.nolink a:link,
+.nolink a:visited,
+.nolink a:hover,
+.nolink a:active {color:inherit;text-decoration:none;}
+div.lcr {display:grid;grid-template-columns:auto auto auto;}
+ul.flat {list-style-type:none;margin:16px 0;padding:0;}
+ul.flat li {display:inline;}
+ul.flat li::after {content:"]";}
+ul.flat li::before {content:"[";}
 </style>
+<!--
+Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
+-->
 </head>
-
 <body>
-
-<h1><a href="/" class="hiddenlink">
+<div class="tophead" role="banner">
 <svg aria-label="Hal W Canary 3" role="img" viewBox="-200 0 800 91" width="100%">
 <title>Hal W Canary 3</title>
 <rect height="4" width="180" x="-200" y="43" />
@@ -73,467 +111,18 @@ C 325 43 324 42 322 43 C 319 45 322 52 323 54 C 324 58 327 59 328 63 C 329 67
 375 71 C 383 67 399 55 393 45 C 390 38 382 37 380 31 C 384 29 394 26 395 20 C
 395 17 392 15 389 13 C 384 9 378 6 372 10" />
 </svg>
-</a></h1>
-
-<nav class="section"><p><a href="/">Home</a></p></nav>
-
-<!-- p/sudoku-solver -->
-
-<div class="section">
-  <h2>Sudoku Solver</h2>
-  <form id="sudokuinput" action="" onsubmit="return false;">
-    <table class="p">
-      <tr><th colspan="11">INPUT:</th></tr>
-      <tr>
-	<td><input name="00" type="text" size="1" /></td>
-	<td><input name="01" type="text" size="1" /></td>
-	<td><input name="02" type="text" size="1" /></td>
-	<td style="background-color:black" rowspan="3"></td>
-	<td><input name="03" type="text" size="1" /></td>
-	<td><input name="04" type="text" size="1" /></td>
-	<td><input name="05" type="text" size="1" /></td>
-	<td style="background-color:black" rowspan="3"></td>
-	<td><input name="06" type="text" size="1" /></td>
-	<td><input name="07" type="text" size="1" /></td>
-	<td><input name="08" type="text" size="1" /></td>
-      </tr>
-      <tr>
-	<td><input name="10" type="text" size="1" /></td>
-	<td><input name="11" type="text" size="1" /></td>
-	<td><input name="12" type="text" size="1" /></td>
-	<td><input name="13" type="text" size="1" /></td>
-	<td><input name="14" type="text" size="1" /></td>
-	<td><input name="15" type="text" size="1" /></td>
-	<td><input name="16" type="text" size="1" /></td>
-	<td><input name="17" type="text" size="1" /></td>
-	<td><input name="18" type="text" size="1" /></td>
-      </tr>
-      <tr>
-	<td><input name="20" type="text" size="1" /></td>
-	<td><input name="21" type="text" size="1" /></td>
-	<td><input name="22" type="text" size="1" /></td>
-	<td><input name="23" type="text" size="1" /></td>
-	<td><input name="24" type="text" size="1" /></td>
-	<td><input name="25" type="text" size="1" /></td>
-	<td><input name="26" type="text" size="1" /></td>
-	<td><input name="27" type="text" size="1" /></td>
-	<td><input name="28" type="text" size="1" /></td>
-      </tr>
-      <tr><td style="background-color:black" colspan="11"></td></tr>
-      <tr>
-	<td><input name="30" type="text" size="1" /></td>
-	<td><input name="31" type="text" size="1" /></td>
-	<td><input name="32" type="text" size="1" /></td>
-	<td style="background-color:black" rowspan="3"></td>
-	<td><input name="33" type="text" size="1" /></td>
-	<td><input name="34" type="text" size="1" /></td>
-	<td><input name="35" type="text" size="1" /></td>
-	<td style="background-color:black" rowspan="3"></td>
-	<td><input name="36" type="text" size="1" /></td>
-	<td><input name="37" type="text" size="1" /></td>
-	<td><input name="38" type="text" size="1" /></td>
-      </tr>
-      <tr>
-	<td><input name="40" type="text" size="1" /></td>
-	<td><input name="41" type="text" size="1" /></td>
-	<td><input name="42" type="text" size="1" /></td>
-	<td><input name="43" type="text" size="1" /></td>
-	<td><input name="44" type="text" size="1" /></td>
-	<td><input name="45" type="text" size="1" /></td>
-	<td><input name="46" type="text" size="1" /></td>
-	<td><input name="47" type="text" size="1" /></td>
-	<td><input name="48" type="text" size="1" /></td>
-      </tr>
-      <tr>
-	<td><input name="50" type="text" size="1" /></td>
-	<td><input name="51" type="text" size="1" /></td>
-	<td><input name="52" type="text" size="1" /></td>
-	<td><input name="53" type="text" size="1" /></td>
-	<td><input name="54" type="text" size="1" /></td>
-	<td><input name="55" type="text" size="1" /></td>
-	<td><input name="56" type="text" size="1" /></td>
-	<td><input name="57" type="text" size="1" /></td>
-	<td><input name="58" type="text" size="1" /></td>
-      </tr>
-      <tr><td style="background-color:black" colspan="11"></td></tr>
-      <tr>
-	<td><input name="60" type="text" size="1" /></td>
-	<td><input name="61" type="text" size="1" /></td>
-	<td><input name="62" type="text" size="1" /></td>
-	<td style="background-color:black" rowspan="3"></td>
-	<td><input name="63" type="text" size="1" /></td>
-	<td><input name="64" type="text" size="1" /></td>
-	<td><input name="65" type="text" size="1" /></td>
-	<td style="background-color:black" rowspan="3"></td>
-	<td><input name="66" type="text" size="1" /></td>
-	<td><input name="67" type="text" size="1" /></td>
-	<td><input name="68" type="text" size="1" /></td>
-      </tr>
-      <tr>
-	<td><input name="70" type="text" size="1" /></td>
-	<td><input name="71" type="text" size="1" /></td>
-	<td><input name="72" type="text" size="1" /></td>
-	<td><input name="73" type="text" size="1" /></td>
-	<td><input name="74" type="text" size="1" /></td>
-	<td><input name="75" type="text" size="1" /></td>
-	<td><input name="76" type="text" size="1" /></td>
-	<td><input name="77" type="text" size="1" /></td>
-	<td><input name="78" type="text" size="1" /></td>
-      </tr>
-      <tr>
-	<td><input name="80" type="text" size="1" /></td>
-	<td><input name="81" type="text" size="1" /></td>
-	<td><input name="82" type="text" size="1" /></td>
-	<td><input name="83" type="text" size="1" /></td>
-	<td><input name="84" type="text" size="1" /></td>
-	<td><input name="85" type="text" size="1" /></td>
-	<td><input name="86" type="text" size="1" /></td>
-	<td><input name="87" type="text" size="1" /></td>
-	<td><input name="88" type="text" size="1" /></td>
-      </tr>
-    </table>
-  </form>
-  <p>
-    <input type="button" value="Solve" onclick="solve();" />
-    <input type="button" value="Clear Input" onclick="clearinput();" />
-  </p>
-  <p>
-    <input type="button" value="Sample 1" onclick="sample1();" />
-    <input type="button" value="Sample 2" onclick="sample2();" />
-    <input type="button" value="Sample 3" onclick="sample3();" />
-  </p>
-
-  <form id="sudokuoutput" action="" onsubmit="return false;">
-    <table class="p">
-      <tr><th colspan="11">OUPUT:</th></tr>
-      <tr>
-	<td><input readonly="readonly" name="00" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="01" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="02" type="text" size="1" /></td>
-	<td style="background-color:black" rowspan="3"></td>
-	<td><input readonly="readonly" name="03" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="04" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="05" type="text" size="1" /></td>
-	<td style="background-color:black" rowspan="3"></td>
-	<td><input readonly="readonly" name="06" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="07" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="08" type="text" size="1" /></td>
-      </tr>
-      <tr>
-	<td><input readonly="readonly" name="10" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="11" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="12" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="13" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="14" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="15" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="16" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="17" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="18" type="text" size="1" /></td>
-      </tr>
-      <tr>
-	<td><input readonly="readonly" name="20" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="21" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="22" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="23" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="24" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="25" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="26" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="27" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="28" type="text" size="1" /></td>
-      </tr>
-      <tr>
-	<td style="background-color:black" colspan="11"></td>
-      </tr>
-      <tr>
-	<td><input readonly="readonly" name="30" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="31" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="32" type="text" size="1" /></td>
-	<td style="background-color:black" rowspan="3"></td>
-	<td><input readonly="readonly" name="33" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="34" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="35" type="text" size="1" /></td>
-	<td style="background-color:black" rowspan="3"></td>
-	<td><input readonly="readonly" name="36" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="37" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="38" type="text" size="1" /></td>
-      </tr>
-      <tr>
-	<td><input readonly="readonly" name="40" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="41" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="42" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="43" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="44" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="45" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="46" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="47" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="48" type="text" size="1" /></td>
-      </tr>
-      <tr>
-	<td><input readonly="readonly" name="50" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="51" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="52" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="53" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="54" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="55" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="56" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="57" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="58" type="text" size="1" /></td>
-      </tr>
-      <tr>
-	<td style="background-color:black" colspan="11"></td>
-      </tr>
-      <tr>
-	<td><input readonly="readonly" name="60" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="61" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="62" type="text" size="1" /></td>
-	<td style="background-color:black" rowspan="3"></td>
-	<td><input readonly="readonly" name="63" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="64" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="65" type="text" size="1" /></td>
-	<td style="background-color:black" rowspan="3"></td>
-	<td><input readonly="readonly" name="66" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="67" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="68" type="text" size="1" /></td>
-      </tr>
-      <tr>
-	<td><input readonly="readonly" name="70" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="71" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="72" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="73" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="74" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="75" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="76" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="77" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="78" type="text" size="1" /></td>
-      </tr>
-      <tr>
-	<td><input readonly="readonly" name="80" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="81" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="82" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="83" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="84" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="85" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="86" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="87" type="text" size="1" /></td>
-	<td><input readonly="readonly" name="88" type="text" size="1" /></td>
-      </tr>
-    </table>
-  </form>
-  <script type="text/javascript">
-<!--
-
-// SUDOKU-SOLVER [BRUTE FORCE]
-// (C) 2005 Hal Canary
-// h3 at halcanary dot org
-// Version: 2005-12-06
-// This is free software; you can redistribute
-// it and modify it under the terms of version
-// 2 of the GNU GPL.
-
-function solve() {
-	var sdkinp = document.getElementById("sudokuinput");
-	var sdkout = document.getElementById("sudokuoutput");
-	var s = new Array(81);
-	var p = new Array(81);
-
-	clearoutput();
-
-	for(var i = 0; i < 81; i++) {
-		s[i] = sdkinp[i].value;
-		if (s[i] == "") { s[i] = 0; }
-		if (s[i] != 0) {
-			p[i] = 1;
-		} else {
-			p[i] = 0;
-		}
-	}
-
-	function testpos(pos) {
-		var square;
-		var contents;
-		// Test the 3x3 region.
-		square = (Math.floor(pos/3)*3) - (Math.floor(pos/9)*9)
-			+ (Math.floor(pos/27)*27);
-		contents = [ s[square+ 0], s[square+ 1], s[square+ 2],
-			s[square+ 9], s[square+10], s[square+11],
-			s[square+18], s[square+19], s[square+20] ];
-		for(var i = 0; i < 9; i++) {
-			if (contents[i] != 0) {
-				for(var j = i+1; j < 9; j++) {
-					if (contents[i] == contents[j]) {
-						return 1;
-					}
-				}
-			}
-		}
-		// Test the row.
-		square = (Math.floor(pos/9)*9);
-		contents = [ s[square+ 0], s[square+ 1], s[square+ 2],
-			s[square+ 3], s[square+4], s[square+5],
-			s[square+6], s[square+7], s[square+8] ];
-		for(var i = 0; i < 9; i++) {
-			if (contents[i] != 0) {
-				for(var j = i+1; j < 9; j++) {
-					if (contents[i] == contents[j]) {
-						return 1;
-					}
-				}
-			}
-		}
-		// Test the column.
-		square = pos%9;
-		contents = [ s[square+ 0], s[square+ 9], s[square+ 18],
-			s[square+27], s[square+36], s[square+45],
-			s[square+54], s[square+63], s[square+72] ];
-		for(var i = 0; i < 9; i++) {
-			if (contents[i] != 0) {
-				for(var j = i+1; j < 9; j++) {
-					if (contents[i] == contents[j]) {
-						return 1;
-					}
-				}
-    			}
-  		}
-		// Passed all tests.
-		return 0;
-	}
-	// Main loop:
-	var done = 0;
-	var c = 0;	// current position.
-	var iteration = 0;
-	var neediteration = 0;
-	var sure="Are you sure there's a solution?";
-	var good;
-	var bad;
-	while ( ! done ) {
-		iteration++;
-		if (c==81) {
-			done = 1 ;
-		} else if (p[c] == 1) {
-			c++;
-		} else {
-			good = 0;
-			bad = 0;
-			if (s[c] == 0 || neediter == 1 ) {
-				s[c]++;
-				if (s[c] >= 10) { bad = 1; }
-				neediter = 0;
-			}
-			while(!good && !bad) {
-				if (testpos(c)) {
-					s[c]++;
-					if (s[c] >= 10) { bad = 1; }
-				} else { good = 1; }
-			}
-			if (bad) {
-				s[c] = 0;
-				c = c-1;
-				if (c == -1) {
-					alert( sure );
-					return 1;
-				}
-				while (p[c] == 1) {
-					c = c-1;
-					if (c == -1) {
-						alert( sure );
-						return 1;
-					}
-				}
-				neediter=1;
-			} else if (good) {
-				c++;
-			}
-		}
-	}
-	for(var i = 0; i < 81; i++) {
-		sdkout[i].value = s[i];
-		if (p[i] ==1 ) {
-			sdkout[i].style.backgroundColor = "dddddd";
-		} else {
-			sdkout[i].style.backgroundColor = "ffffff";
-		}
-	}
-}
-
-
-function clearinput() {
-	var sdkinp = document.getElementById("sudokuinput");
-	for(var i = 0; i < 81; i++) {
-		sdkinp[i].value = "";
-	}
-}
-function clearoutput() {
-	var sdkout = document.getElementById("sudokuoutput");
-	for(var i = 0; i < 81; i++) {
-		sdkout[i].value = "";
-		sdkout[i].style.backgroundColor = "ffffff";
-	}
-}
-
-function sample1() {
-	var sdkinp = document.getElementById("sudokuinput");
-	var x = new Array(
-	"","","",2,1,5,6,3,"","",
-	6,"","","",4,9,"","","",
-	"","","","","","",4,8,
-	"","",1,"",5,2,"","","",
-	"",5,7,"","","",1,2,"",
-	"","","",1,4,"",7,"","",
-	8,4,"","","","","","","",
-	"","",6,4,"","","",1,"",
-	"",2,5,3,6,9,"","","");
-	for(var i = 0; i < 81; i++) {
-		sdkinp[i].value = x[i];
-	}
-	clearoutput() ;
-}
-
-function sample2() {
-	var sdkinp = document.getElementById("sudokuinput");
-	var x = new Array(
-	"",1,2,3,"","","","","",
-	"",4,"",5,"",6,"","","",
-	"",5,"","","","",1,4,7,
-	2,"","","",4,"",8,"",6,
-	4,"","","",9,"","","",3,
-	6,"",5,"",2,"","","",1,
-	8,3,4,"","","","",6,"",
-	"","","",4,"",7,"",5,"",
-	"","","","","",2,9,1,"");
-	for(var i = 0; i < 81; i++) {
-		sdkinp[i].value = x[i];
-	}
-	clearoutput() ;
-}
-
-function sample3() {
-	var sdkinp = document.getElementById("sudokuinput");
-	var x = new Array(
-	"","",1,"","",2,3,"",4,
-	5,"","",3,"",6,1,"","",
-	4,"","","","",7,8,"","",
-	"",1,"","",5,"","",4,"",
-	"",8,"","",3,"","",7,"",
-	"",6,"","",9,"","",2,"",
-	"","",3,4,"","","","",6,
-	"","",2,1,"",5,"","",9,
-	6,"",7,8,"","",4,"","");
-	for(var i = 0; i < 81; i++) {
-		sdkinp[i].value = x[i];
-	}
-	clearoutput() ;
-}
--->
-  </script>
 </div>
+<div role="main">
+<h1>Sudoku Solver</h1>
+<form id="sudokuinput" action="" onsubmit="return false;"><table class="p"><tbody><tr><th colspan="11">INPUT:</th></tr><tr><td><input name="00" type="text" size="1"></td><td><input name="01" type="text" size="1"></td><td><input name="02" type="text" size="1"></td><td style="background-color:black" rowspan="3"></td><td><input name="03" type="text" size="1"></td><td><input name="04" type="text" size="1"></td><td><input name="05" type="text" size="1"></td><td style="background-color:black" rowspan="3"></td><td><input name="06" type="text" size="1"></td><td><input name="07" type="text" size="1"></td><td><input name="08" type="text" size="1"></td></tr><tr><td><input name="10" type="text" size="1"></td><td><input name="11" type="text" size="1"></td><td><input name="12" type="text" size="1"></td><td><input name="13" type="text" size="1"></td><td><input name="14" type="text" size="1"></td><td><input name="15" type="text" size="1"></td><td><input name="16" type="text" size="1"></td><td><input name="17" type="text" size="1"></td><td><input name="18" type="text" size="1"></td></tr><tr><td><input name="20" type="text" size="1"></td><td><input name="21" type="text" size="1"></td><td><input name="22" type="text" size="1"></td><td><input name="23" type="text" size="1"></td><td><input name="24" type="text" size="1"></td><td><input name="25" type="text" size="1"></td><td><input name="26" type="text" size="1"></td><td><input name="27" type="text" size="1"></td><td><input name="28" type="text" size="1"></td></tr><tr><td style="background-color:black" colspan="11"></td></tr><tr><td><input name="30" type="text" size="1"></td><td><input name="31" type="text" size="1"></td><td><input name="32" type="text" size="1"></td><td style="background-color:black" rowspan="3"></td><td><input name="33" type="text" size="1"></td><td><input name="34" type="text" size="1"></td><td><input name="35" type="text" size="1"></td><td style="background-color:black" rowspan="3"></td><td><input name="36" type="text" size="1"></td><td><input name="37" type="text" size="1"></td><td><input name="38" type="text" size="1"></td></tr><tr><td><input name="40" type="text" size="1"></td><td><input name="41" type="text" size="1"></td><td><input name="42" type="text" size="1"></td><td><input name="43" type="text" size="1"></td><td><input name="44" type="text" size="1"></td><td><input name="45" type="text" size="1"></td><td><input name="46" type="text" size="1"></td><td><input name="47" type="text" size="1"></td><td><input name="48" type="text" size="1"></td></tr><tr><td><input name="50" type="text" size="1"></td><td><input name="51" type="text" size="1"></td><td><input name="52" type="text" size="1"></td><td><input name="53" type="text" size="1"></td><td><input name="54" type="text" size="1"></td><td><input name="55" type="text" size="1"></td><td><input name="56" type="text" size="1"></td><td><input name="57" type="text" size="1"></td><td><input name="58" type="text" size="1"></td></tr><tr><td style="background-color:black" colspan="11"></td></tr><tr><td><input name="60" type="text" size="1"></td><td><input name="61" type="text" size="1"></td><td><input name="62" type="text" size="1"></td><td style="background-color:black" rowspan="3"></td><td><input name="63" type="text" size="1"></td><td><input name="64" type="text" size="1"></td><td><input name="65" type="text" size="1"></td><td style="background-color:black" rowspan="3"></td><td><input name="66" type="text" size="1"></td><td><input name="67" type="text" size="1"></td><td><input name="68" type="text" size="1"></td></tr><tr><td><input name="70" type="text" size="1"></td><td><input name="71" type="text" size="1"></td><td><input name="72" type="text" size="1"></td><td><input name="73" type="text" size="1"></td><td><input name="74" type="text" size="1"></td><td><input name="75" type="text" size="1"></td><td><input name="76" type="text" size="1"></td><td><input name="77" type="text" size="1"></td><td><input name="78" type="text" size="1"></td></tr><tr><td><input name="80" type="text" size="1"></td><td><input name="81" type="text" size="1"></td><td><input name="82" type="text" size="1"></td><td><input name="83" type="text" size="1"></td><td><input name="84" type="text" size="1"></td><td><input name="85" type="text" size="1"></td><td><input name="86" type="text" size="1"></td><td><input name="87" type="text" size="1"></td><td><input name="88" type="text" size="1"></td></tr></tbody></table></form>
+<p><input type="button" value="Solve" onclick="solve();"> <input type="button" value="Clear Input" onclick="clearinput();"></p>
+<p><input type="button" value="Sample 1" onclick="sample1();"> <input type="button" value="Sample 2" onclick="sample2();"> <input type="button" value="Sample 3" onclick="sample3();"></p>
+<form id="sudokuoutput" action="" onsubmit="return false;"><table class="p"><tbody><tr><th colspan="11">OUPUT:</th></tr><tr><td><input readonly="readonly" name="00" type="text" size="1"></td><td><input readonly="readonly" name="01" type="text" size="1"></td><td><input readonly="readonly" name="02" type="text" size="1"></td><td style="background-color:black" rowspan="3"></td><td><input readonly="readonly" name="03" type="text" size="1"></td><td><input readonly="readonly" name="04" type="text" size="1"></td><td><input readonly="readonly" name="05" type="text" size="1"></td><td style="background-color:black" rowspan="3"></td><td><input readonly="readonly" name="06" type="text" size="1"></td><td><input readonly="readonly" name="07" type="text" size="1"></td><td><input readonly="readonly" name="08" type="text" size="1"></td></tr><tr><td><input readonly="readonly" name="10" type="text" size="1"></td><td><input readonly="readonly" name="11" type="text" size="1"></td><td><input readonly="readonly" name="12" type="text" size="1"></td><td><input readonly="readonly" name="13" type="text" size="1"></td><td><input readonly="readonly" name="14" type="text" size="1"></td><td><input readonly="readonly" name="15" type="text" size="1"></td><td><input readonly="readonly" name="16" type="text" size="1"></td><td><input readonly="readonly" name="17" type="text" size="1"></td><td><input readonly="readonly" name="18" type="text" size="1"></td></tr><tr><td><input readonly="readonly" name="20" type="text" size="1"></td><td><input readonly="readonly" name="21" type="text" size="1"></td><td><input readonly="readonly" name="22" type="text" size="1"></td><td><input readonly="readonly" name="23" type="text" size="1"></td><td><input readonly="readonly" name="24" type="text" size="1"></td><td><input readonly="readonly" name="25" type="text" size="1"></td><td><input readonly="readonly" name="26" type="text" size="1"></td><td><input readonly="readonly" name="27" type="text" size="1"></td><td><input readonly="readonly" name="28" type="text" size="1"></td></tr><tr><td style="background-color:black" colspan="11"></td></tr><tr><td><input readonly="readonly" name="30" type="text" size="1"></td><td><input readonly="readonly" name="31" type="text" size="1"></td><td><input readonly="readonly" name="32" type="text" size="1"></td><td style="background-color:black" rowspan="3"></td><td><input readonly="readonly" name="33" type="text" size="1"></td><td><input readonly="readonly" name="34" type="text" size="1"></td><td><input readonly="readonly" name="35" type="text" size="1"></td><td style="background-color:black" rowspan="3"></td><td><input readonly="readonly" name="36" type="text" size="1"></td><td><input readonly="readonly" name="37" type="text" size="1"></td><td><input readonly="readonly" name="38" type="text" size="1"></td></tr><tr><td><input readonly="readonly" name="40" type="text" size="1"></td><td><input readonly="readonly" name="41" type="text" size="1"></td><td><input readonly="readonly" name="42" type="text" size="1"></td><td><input readonly="readonly" name="43" type="text" size="1"></td><td><input readonly="readonly" name="44" type="text" size="1"></td><td><input readonly="readonly" name="45" type="text" size="1"></td><td><input readonly="readonly" name="46" type="text" size="1"></td><td><input readonly="readonly" name="47" type="text" size="1"></td><td><input readonly="readonly" name="48" type="text" size="1"></td></tr><tr><td><input readonly="readonly" name="50" type="text" size="1"></td><td><input readonly="readonly" name="51" type="text" size="1"></td><td><input readonly="readonly" name="52" type="text" size="1"></td><td><input readonly="readonly" name="53" type="text" size="1"></td><td><input readonly="readonly" name="54" type="text" size="1"></td><td><input readonly="readonly" name="55" type="text" size="1"></td><td><input readonly="readonly" name="56" type="text" size="1"></td><td><input readonly="readonly" name="57" type="text" size="1"></td><td><input readonly="readonly" name="58" type="text" size="1"></td></tr><tr><td style="background-color:black" colspan="11"></td></tr><tr><td><input readonly="readonly" name="60" type="text" size="1"></td><td><input readonly="readonly" name="61" type="text" size="1"></td><td><input readonly="readonly" name="62" type="text" size="1"></td><td style="background-color:black" rowspan="3"></td><td><input readonly="readonly" name="63" type="text" size="1"></td><td><input readonly="readonly" name="64" type="text" size="1"></td><td><input readonly="readonly" name="65" type="text" size="1"></td><td style="background-color:black" rowspan="3"></td><td><input readonly="readonly" name="66" type="text" size="1"></td><td><input readonly="readonly" name="67" type="text" size="1"></td><td><input readonly="readonly" name="68" type="text" size="1"></td></tr><tr><td><input readonly="readonly" name="70" type="text" size="1"></td><td><input readonly="readonly" name="71" type="text" size="1"></td><td><input readonly="readonly" name="72" type="text" size="1"></td><td><input readonly="readonly" name="73" type="text" size="1"></td><td><input readonly="readonly" name="74" type="text" size="1"></td><td><input readonly="readonly" name="75" type="text" size="1"></td><td><input readonly="readonly" name="76" type="text" size="1"></td><td><input readonly="readonly" name="77" type="text" size="1"></td><td><input readonly="readonly" name="78" type="text" size="1"></td></tr><tr><td><input readonly="readonly" name="80" type="text" size="1"></td><td><input readonly="readonly" name="81" type="text" size="1"></td><td><input readonly="readonly" name="82" type="text" size="1"></td><td><input readonly="readonly" name="83" type="text" size="1"></td><td><input readonly="readonly" name="84" type="text" size="1"></td><td><input readonly="readonly" name="85" type="text" size="1"></td><td><input readonly="readonly" name="86" type="text" size="1"></td><td><input readonly="readonly" name="87" type="text" size="1"></td><td><input readonly="readonly" name="88" type="text" size="1"></td></tr></tbody></table></form>
+<script type="text/javascript"><!-- // SUDOKU-SOLVER [BRUTE FORCE] // (C) 2005 Hal Canary // h3 at halcanary dot org // Version: 2005-12-06 // This is free software; you can redistribute // it and modify it under the terms of version // 2 of the GNU GPL. function solve() { var sdkinp = document.getElementById("sudokuinput"); var sdkout = document.getElementById("sudokuoutput"); var s = new Array(81); var p = new Array(81); clearoutput(); for(var i = 0; i < 81; i++) { s[i] = sdkinp[i].value; if (s[i] == "") { s[i] = 0; } if (s[i] != 0) { p[i] = 1; } else { p[i] = 0; } } function testpos(pos) { var square; var contents; // Test the 3x3 region. square = (Math.floor(pos/3)*3) - (Math.floor(pos/9)*9) + (Math.floor(pos/27)*27); contents = [ s[square+ 0], s[square+ 1], s[square+ 2], s[square+ 9], s[square+10], s[square+11], s[square+18], s[square+19], s[square+20] ]; for(var i = 0; i < 9; i++) { if (contents[i] != 0) { for(var j = i+1; j < 9; j++) { if (contents[i] == contents[j]) { return 1; } } } } // Test the row. square = (Math.floor(pos/9)*9); contents = [ s[square+ 0], s[square+ 1], s[square+ 2], s[square+ 3], s[square+4], s[square+5], s[square+6], s[square+7], s[square+8] ]; for(var i = 0; i < 9; i++) { if (contents[i] != 0) { for(var j = i+1; j < 9; j++) { if (contents[i] == contents[j]) { return 1; } } } } // Test the column. square = pos%9; contents = [ s[square+ 0], s[square+ 9], s[square+ 18], s[square+27], s[square+36], s[square+45], s[square+54], s[square+63], s[square+72] ]; for(var i = 0; i < 9; i++) { if (contents[i] != 0) { for(var j = i+1; j < 9; j++) { if (contents[i] == contents[j]) { return 1; } } } } // Passed all tests. return 0; } // Main loop: var done = 0; var c = 0; // current position. var iteration = 0; var neediteration = 0; var sure="Are you sure there's a solution?"; var good; var bad; while ( ! done ) { iteration++; if (c==81) { done = 1 ; } else if (p[c] == 1) { c++; } else { good = 0; bad = 0; if (s[c] == 0 || neediter == 1 ) { s[c]++; if (s[c] >= 10) { bad = 1; } neediter = 0; } while(!good && !bad) { if (testpos(c)) { s[c]++; if (s[c] >= 10) { bad = 1; } } else { good = 1; } } if (bad) { s[c] = 0; c = c-1; if (c == -1) { alert( sure ); return 1; } while (p[c] == 1) { c = c-1; if (c == -1) { alert( sure ); return 1; } } neediter=1; } else if (good) { c++; } } } for(var i = 0; i < 81; i++) { sdkout[i].value = s[i]; if (p[i] ==1 ) { sdkout[i].style.backgroundColor = "dddddd"; } else { sdkout[i].style.backgroundColor = "ffffff"; } } } function clearinput() { var sdkinp = document.getElementById("sudokuinput"); for(var i = 0; i < 81; i++) { sdkinp[i].value = ""; } } function clearoutput() { var sdkout = document.getElementById("sudokuoutput"); for(var i = 0; i < 81; i++) { sdkout[i].value = ""; sdkout[i].style.backgroundColor = "ffffff"; } } function sample1() { var sdkinp = document.getElementById("sudokuinput"); var x = new Array( "","","",2,1,5,6,3,"","", 6,"","","",4,9,"","","", "","","","","","",4,8, "","",1,"",5,2,"","","", "",5,7,"","","",1,2,"", "","","",1,4,"",7,"","", 8,4,"","","","","","","", "","",6,4,"","","",1,"", "",2,5,3,6,9,"","",""); for(var i = 0; i < 81; i++) { sdkinp[i].value = x[i]; } clearoutput() ; } function sample2() { var sdkinp = document.getElementById("sudokuinput"); var x = new Array( "",1,2,3,"","","","","", "",4,"",5,"",6,"","","", "",5,"","","","",1,4,7, 2,"","","",4,"",8,"",6, 4,"","","",9,"","","",3, 6,"",5,"",2,"","","",1, 8,3,4,"","","","",6,"", "","","",4,"",7,"",5,"", "","","","","",2,9,1,""); for(var i = 0; i < 81; i++) { sdkinp[i].value = x[i]; } clearoutput() ; } function sample3() { var sdkinp = document.getElementById("sudokuinput"); var x = new Array( "","",1,"","",2,3,"",4, 5,"","",3,"",6,1,"","", 4,"","","","",7,8,"","", "",1,"","",5,"","",4,"", "",8,"","",3,"","",7,"", "",6,"","",9,"","",2,"", "","",3,4,"","","","",6, "","",2,1,"",5,"","",9, 6,"",7,8,"","",4,"",""); for(var i = 0; i < 81; i++) { sdkinp[i].value = x[i]; } clearoutput() ; } --></script>
+<hr />
+<p>file modification time: 2005-12-06 17:54:18</p>
+<hr />
 
-<div class="section"><p class="rightside">file modification time: 2005-12-06 17:54:18</p></div>
-
-<div class="section">
-<p class="centered">Copyright 1997-2013 by Hal Canary.<br>
-<i>mailto: halcanary at gmail dot com</i><br>
-<a href="https://halcanary.org"><i>http://halcanary.org</i></a></p>
 </div>
-
 </body>
 </html>

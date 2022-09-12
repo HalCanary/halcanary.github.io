@@ -45,19 +45,15 @@ func main() {
 		}
 	}()
 
-	var files []string
-	check.Check(filepath.WalkDir(sourceDir, func(path string, d fs.DirEntry, err error) error {
-		if !d.IsDir() && strings.HasSuffix(d.Name(), ".md") {
-			relpath, err := filepath.Rel(sourceDir, path)
-			if err != nil {
-				return err
-			}
-			files = append(files, relpath)
-		}
-		return nil
-	}))
+	makeRedirects(siteConfig, rootPath)
+
+	files, err :=  getFiles(sourceDir)
+	check.Check(err)
 
 	for _, path := range files {
+		if !strings.HasSuffix(path, ".md") {
+			continue
+		}
 		dst := filepath.Join(dstDir, strings.TrimSuffix(path, ".md"), "index.html")
 		waitgroup.Add(1)
 		go process(siteConfig, filepath.Join(sourceDir, path), dst, false)
@@ -127,4 +123,72 @@ func process(siteConfig SiteConfig, src, dst string, rootPage bool) {
 		changedFilesChan <- f.Path
 	}
 	waitgroup.Done()
+}
+
+func getFiles(dir string) ([]string, error) {
+	var files []string
+	err := filepath.WalkDir(dir, func(path string, d fs.DirEntry, err error) error {
+		if !d.IsDir() {
+			relpath, err := filepath.Rel(dir, path)
+			if err != nil {
+				return err
+			}
+			files = append(files, relpath)
+		}
+		return err
+	})
+	return files, err
+}
+
+func makeRedirects(siteConfig SiteConfig, rootPath string) error {
+	redirectsDir := filepath.Join(rootPath, "src", "redirects")
+	files, err := getFiles(redirectsDir)
+	if err != nil {
+		return err
+	}
+	for _, path := range files {
+		data, err := os.ReadFile(filepath.Join(redirectsDir, path))
+		if err != nil {
+			return err
+		}
+		url := strings.TrimSpace(string(data))
+		dst := filepath.Join(rootPath, "docs", path, "index.html")
+		makeRedirect(siteConfig, url, dst)
+	}
+	return nil
+}
+
+func makeRedirect(siteConfig SiteConfig, url, dst string) {
+	node := dom.Element("html", dom.Attr{"lang": siteConfig.Language},
+		dom.TextNode("\n"),
+		dom.Elem("head",
+			dom.TextNode("\n"),
+			dom.Element("meta", dom.Attr{"charset": "utf-8"}),
+			dom.TextNode("\n"),
+			dom.Element("meta", dom.Attr{
+				"name": "viewport", "content": "width=device-width, initial-scale=1.0"}),
+			dom.TextNode("\n"),
+			dom.Elem("title", dom.TextNode(url)),
+			dom.TextNode("\n"),
+			dom.Elem("script", dom.TextNode(`window.location.replace("`+url+`");`)),
+			dom.TextNode("\n"),
+			dom.Element("link", dom.Attr{"rel": "icon", "href": siteConfig.Icon}),
+			dom.TextNode("\n"),
+			dom.Elem("style", dom.TextNode(`body{font-family:sans-serif;}`)),
+			dom.TextNode("\n"),
+		),
+		dom.TextNode("\n"),
+		dom.Elem("body",
+			dom.Element("a", dom.Attr{"style": "overflow-wrap:break-word", "href": url},
+				dom.TextNode(url),
+			),
+		),
+		dom.TextNode("\n"),
+	)
+	f := filebuf.FileBuf{Path: dst}
+	node.RenderHTML(&f)
+	check.Check(f.Close())
+	if f.Changed() {
+		changedFilesChan <- f.Path
+	}
 }

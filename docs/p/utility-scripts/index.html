@@ -1,30 +1,68 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en-US">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Copyright 1997-2022 Hal Canary. ALL RIGHTS RESERVED. -->
-<title>World of Hal Canary</title>
-<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==">
-<link rel="stylesheet" type="text/css" href="/styles/scrapple-from-the-apple.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Utility Scripts for Unix-compatable systems (id est GNU/Linux)</title>
+<link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==" rel="icon"/>
 <style>
-@media screen { body{
-    max-width: 35em;
-    margin: 22px auto 64px auto;
-    padding: 0 8px;
-} }
-body {
-    color: #000000;
-    background-color: #ffffff;
-    background-image: none;
-    text-align: initial;
+@media (prefers-color-scheme:dark) {body {background-color:#000;color:#FFF;}
+a:visited {color:#C0F;}
+a:link, a:hover, a:active {color:#0CF;}
 }
+@media print {body {max-width:8in;font-size:12px;margin:0;}
+}
+@media screen {body {font-family:sans-serif;max-width:35em;margin:22px auto 64px auto;padding:0 8px;}
+}
+body {overflow-wrap:break-word;}
+@page {size:auto;margin:0.25in 0.5in 0.5in 0.5in;}
+svg {fill:currentColor;}
+img {max-width:100%;height:auto;}
+hr {border-style:solid none;}
+.content {margin:1em 0;}
+.content hr {padding:0;margin:0;border:none;text-align:center;}
+.content hr:after {font-size:150%;content:"* \A0 * \A0 *";display:block;position:relative;}
+.rightside {text-align:right;}
+.centered {text-align:center;}
+pre {overflow-x:auto;}
+.byline > * {display:inline-block;border-style:solid;border-width:thin;padding:3px 8px;border-radius:5px;text-align:initial;}
+.byline {text-align:right;}
+.box {border-style:solid;border-width:thin;margin:8px 0;padding:0 8px;}
+a.hiddenlink:link {background:inherit;color:inherit;text-decoration:none;}
+a.hiddenlink:visited {background:inherit;color:inherit;text-decoration:none;}
+a.hiddenlink:active {background:inherit;color:inherit;text-decoration:none;}
+ul,ol {padding-left:30px;}
+table.border {border-collapse:collapse;margin:8px auto;}
+table.border tr > * {border-style:solid;border-width:thin;padding:3px 8px;border-radius:5px;}
+.tophead {text-align:center;margin:1ex auto 0 auto;max-width:35em;}
+.tightmargins li > ul > li {list-style-type:square;}
+.tightmargins h1,
+.tightmargins h2,
+.tightmargins p,
+.tightmargins ul {margin:0.5ex 0;}
+.tightmargins li > ul {margin:0 0 0.5ex 0;}
+.tightmargins ul {padding-left:30px;}
+.tightmargins li {margin:0 0 0.5ex 0;}
+.plainlink a:link,
+.plainlink a:visited,
+.plainlink a:hover,
+.plainlink a:active {color:inherit;text-decoration:underline;}
+.nolink a:link,
+.nolink a:visited,
+.nolink a:hover,
+.nolink a:active {color:inherit;text-decoration:none;}
+div.lcr {display:grid;grid-template-columns:auto auto auto;}
+ul.flat {list-style-type:none;margin:16px 0;padding:0;}
+ul.flat li {display:inline;}
+ul.flat li::after {content:"]";}
+ul.flat li::before {content:"[";}
 </style>
+<!--
+Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
+-->
 </head>
-
 <body>
-
-<h1><a href="/" class="hiddenlink">
+<div class="tophead" role="banner">
 <svg aria-label="Hal W Canary 3" role="img" viewBox="-200 0 800 91" width="100%">
 <title>Hal W Canary 3</title>
 <rect height="4" width="180" x="-200" y="43" />
@@ -73,24 +111,16 @@ C 325 43 324 42 322 43 C 319 45 322 52 323 54 C 324 58 327 59 328 63 C 329 67
 375 71 C 383 67 399 55 393 45 C 390 38 382 37 380 31 C 384 29 394 26 395 20 C
 395 17 392 15 389 13 C 384 9 378 6 372 10" />
 </svg>
-</a></h1>
-
-<nav class="section"><p><a href="/">Home</a></p></nav>
-
-<!-- p/utility-scripts -->
-
-<div class="section">
-<h2>Utility Scripts for Unix-compatable systems (id est GNU/Linux)</h2>
-
+</div>
+<div role="main">
+<h1>Utility Scripts for Unix-compatable systems (id est GNU/Linux)</h1>
 <p>execute a program in the background, redirect stdout and stderr to null, and keep it from being hungup. [Depends on: Bourne shell, coreutils]</p>
-<pre>#!/bin/sh
+<pre><code>#!/bin/sh
 # ~/bin/amp
 nohup &quot;$@&quot; &gt; /dev/null 2&gt;&amp;1 &amp;
-</pre>
-
+</code></pre>
 <p>Command line calculator based on bc, along with commonly used math functions. [Depends on: Bourne shell, bc]</p>
-<pre>
-#!/bin/sh
+<pre><code>#!/bin/sh
 # ~/bin/calc
 echo 'define ln(a) { return l(a); }
 define exp(a) { return e(a); }
@@ -118,20 +148,14 @@ define atanh(x) { return 0.5*l((1+x)/(1-x)); }
 pi = 4*a(1);
 scale = 6;
 ' &quot;$@&quot; | bc -l
-</pre>
-
-
-<p>Make a file executeable.  Saves keystrokes. [Depends on: Bourne shell, coreutils]</p>
-<pre>
-#!/bin/sh
+</code></pre>
+<p>Make a file executeable. Saves keystrokes. [Depends on: Bourne shell, coreutils]</p>
+<pre><code>#!/bin/sh
 # ~/bin/chx
 chmod +x &quot;$@&quot;
-</pre>
-
-
-<p>Egg timer.  Be sure to make something LOUD for your alarm; use sox to ajust the volume. [Depends on: Bourne shell, coreutils, mplayer]</p>
-<pre>
-#!/bin/sh
+</code></pre>
+<p>Egg timer. Be sure to make something LOUD for your alarm; use sox to ajust the volume. [Depends on: Bourne shell, coreutils, mplayer]</p>
+<pre><code>#!/bin/sh
 # EGG TIMER.  #DTPD#
 # ${HOME}/bin/timer
 MINUTES=$1
@@ -141,27 +165,23 @@ for M in `seq -w $(($MINUTES - 1)) -1 0`; do
     sleep 5 ; echo ${M}:${S}
   done
 done
-echo -e &quot;&#0092;n&#0092;n&#0092;t&#0092;tALARM! ALARM! ALARM!&#0092;n&#0092;n&quot;
+echo -e &quot;\n\n\t\tALARM! ALARM! ALARM!\n\n&quot;
 exec mplayer ~/Music/ALARM.mp3 &amp;&gt; /dev/null
-</pre>
-
-
+</code></pre>
 <p>Quickly update the system using yum. Yet another keystroke saver.[Depends on: Bourne shell, sudo, yum]</p>
-<pre>
-#!/bin/sh
+<pre><code>#!/bin/sh
 # ~/bin/syyu
 echo 'sudo yum -y update'
 exec sudo yum -y update
-</pre>
-
+</code></pre>
 <p>A somewhat safer way to shred all the files in a directory. [Depends on: Bourne shell, coreutils, findutils]</p>
-<pre>#!/bin/sh
+<pre><code>#!/bin/sh
 # ~/bin/rm-shred
 { for x in &quot;$@&quot; ; do
   # regular file
-  find &quot;$x&quot; -type f -exec shred -u -n 1 {} &#0092;;
+  find &quot;$x&quot; -type f -exec shred -u -n 1 {} \;
   # symlink
-  find &quot;$x&quot; -type l -exec rm {} &#0092;;
+  find &quot;$x&quot; -type l -exec rm {} \;
   # wierd files
   find &quot;$x&quot; -type b -printf &quot;%p is a block file&quot;
   find &quot;$x&quot; -type c -printf &quot;%p is a character file&quot;
@@ -169,11 +189,10 @@ exec sudo yum -y update
   find &quot;$x&quot; -type s -printf &quot;%p is a socket&quot;
   # if we get here it is a directory or has been noted
   rm -r &quot;$x&quot;
-done } 2&gt; /dev/null</pre>
-
+done } 2&gt; /dev/null
+</code></pre>
 <p>Safe File Removal [Depends on: Bourne shell, coreutils]</p>
-<pre>
-#!/bin/sh
+<pre><code>#!/bin/sh
 
 ## rms
 ##   &quot;rm, safely.&quot; I also think it's funny
@@ -206,24 +225,22 @@ for file in &quot;$@&quot;; do
     echo &quot;Does $file exist?&quot;
   fi
 done
-exit 0;</pre>
-
+exit 0;
+</code></pre>
 <p>A terminal locker [Depends on: bash, coreutils]</p>
-<pre>
-#!/bin/sh
+<pre><code>#!/bin/sh
 # ~/bin/tlock
 PASS='12345' ; TRY=''
 trap '' TERM INT
 clear
 while [ &quot;$TRY&quot; != &quot;$PASS&quot; ] ; do
-  echo -en &quot;&#0092;ntlock password: &quot;
+  echo -en &quot;\ntlock password: &quot;
   stty -echo; read TRY; stty echo;
 done
 echo &quot;&quot;;
-</pre>
-
+</code></pre>
 <p>Prepend a string to the beginning of each of a set of filename. [Depends on: Bourne shell, coreutils]</p>
-<pre>#!/bin/sh
+<pre><code>#!/bin/sh
 # ~/bin/prepend-something
 if [ &quot;$#&quot; -lt 2 ] ; then
  echo &quot;useage:  $0 PREFEX FILE[S]&quot;
@@ -231,40 +248,38 @@ if [ &quot;$#&quot; -lt 2 ] ; then
 fi
 PREFEX=${1}
 for argc in `seq 2 $#`; do
- eval arg=&#0092;${$argc}
+ eval arg=\${$argc}
  mv -v &quot;${arg}&quot; &quot;${PREFEX}${arg}&quot;
-done</pre>
-
+done
+</code></pre>
 <p>Make a Fair Use backup of a DVD that you own using mencoder. [Depends on: Bourne shell, coreutils, mencoder, mktemp]</p>
-<pre>#!/bin/sh
+<pre><code>#!/bin/sh
 # ~/bin/rip-and-encode-dvd
 X=`mktemp video-XXXXXXXXXX`
 mv $X ${X}.avi
-exec nice mencoder &quot;dvd://1&quot; -alang en &#0092;
- -slang en -o ${X}.avi -ovc lavc &#0092;
- -lavcopts &quot;aspect=16/9:vcodec=mpeg4&quot; &#0092;
+exec nice mencoder &quot;dvd://1&quot; -alang en \
+ -slang en -o ${X}.avi -ovc lavc \
+ -lavcopts &quot;aspect=16/9:vcodec=mpeg4&quot; \
  -oac copy 2&gt; /dev/null
-</pre>
-
+</code></pre>
 <p>Print date+time in ISO 8601 format. [Depends on: Bourne shell, coreutils]</p>
-<pre>#!/bin/sh
+<pre><code>#!/bin/sh
 # ~/bin/isodatetime
 #date --rfc-3339=seconds
-exec date +%Y-%m-%dT%T%z</pre>
-
+exec date +%Y-%m-%dT%T%z
+</code></pre>
 <p>Print just the date in ISO 8601 format. [Depends on: Bourne shell, coreutils]</p>
-<pre>#!/bin/sh
+<pre><code>#!/bin/sh
 # ~/bin/isodate
-exec date +%Y-%m-%d</pre>
-
-<p>Suppose you want to pipe something into a file as root using sudo.  For example: <code>sudo echo 1 &gt; /proc/sys/net/ipv4/ip_forward</code> ; this won't work.  Instead try the sud script like this: <code>sud 'echo 1 &gt; /proc/sys/net/ipv4/ip_forward'</code> . [Depends on: Bourne shell, coreutils, sudo]</p>
-<pre>#!/bin/sh
+exec date +%Y-%m-%d
+</code></pre>
+<p>Suppose you want to pipe something into a file as root using sudo. For example: <code>sudo echo 1 &gt; /proc/sys/net/ipv4/ip_forward</code> ; this won't work. Instead try the sud script like this: <code>sud 'echo 1 &gt; /proc/sys/net/ipv4/ip_forward'</code> . [Depends on: Bourne shell, coreutils, sudo]</p>
+<pre><code>#!/bin/sh
 # ~/bin/sud
-sudo su -c &quot; $* &quot;</pre>
-
-
+sudo su -c &quot; $* &quot;
+</code></pre>
 <p>Self-documented. [Depends on: Bourne shell, coreutils]</p>
-<pre>#!/bin/sh
+<pre><code>#!/bin/sh
 # ~/bin/shorten
 if [ &quot;$#&quot; -ne 1 ] ; then
  echo &quot;useage:  shorten N&quot;
@@ -274,79 +289,79 @@ if [ &quot;$#&quot; -ne 1 ] ; then
  exit 1
 fi
 head -c $1
-echo &quot;&quot;</pre>
-
+echo &quot;&quot;
+</code></pre>
 <p>Launch my favorite terminal editor. [Depends on: Bourne shell, emacs]</p>
-<pre>#!/bin/sh
+<pre><code>#!/bin/sh
 # ~/bin/e
 #exec nano &quot;$@&quot;
-exec emacs -nw &quot;$@&quot;</pre>
-
+exec emacs -nw &quot;$@&quot;
+</code></pre>
 <p>Launch my favorite gui editor, gedit. [Depends on: Bourne shell, coreutils, gedit]</p>
-<pre>#!/bin/sh
+<pre><code>#!/bin/sh
 # ~/bin/ge
-nohup gedit &quot;$@&quot; &gt; /dev/null 2&gt;&amp;1 &amp;</pre>
-
+nohup gedit &quot;$@&quot; &gt; /dev/null 2&gt;&amp;1 &amp;
+</code></pre>
 <p>sudo ifup [Depends on: Bourne shell, sudo, intiscripts]</p>
-<pre>#!/bin/sh
+<pre><code>#!/bin/sh
 # ~/bin/u
-sudo /sbin/ifup &quot;$@&quot;</pre>
-
+sudo /sbin/ifup &quot;$@&quot;
+</code></pre>
 <p>sudo ifdown [Depends on: Bourne shell, sudo, intiscripts]</p>
-<pre>#!/bin/sh
+<pre><code>#!/bin/sh
 # ~/bin/d
-sudo /sbin/ifdown &quot;$@&quot;</pre>
-
-<p> [Depends on: Bourne shell, xorg-x11-apps, sudo, Linux kernel]</p>
-<pre>#!/bin/sh
+sudo /sbin/ifdown &quot;$@&quot;
+</code></pre>
+<p>[Depends on: Bourne shell, xorg-x11-apps, sudo, Linux kernel]</p>
+<pre><code>#!/bin/sh
 # ~/bin/xconsole-proc-kmsg
-sudo -b xconsole -file /proc/kmsg</pre>
-
-<p>Launch gthumb in the current directory if no argument.  otherwise pass over all arguments.  [Depends on: Bourne shell, gthumb]</p>
-<pre>#!/bin/sh
+sudo -b xconsole -file /proc/kmsg
+</code></pre>
+<p>Launch gthumb in the current directory if no argument. otherwise pass over all arguments. [Depends on: Bourne shell, gthumb]</p>
+<pre><code>#!/bin/sh
 # ~/bin/gt
 if [ &quot;$#&quot; -eq 0 ] ;  then 
-  echo gthumb . &#0092;&gt; /dev/null 2&#0092;&gt;&#0092;&amp;1 &#0092;&amp;
+  echo gthumb . \&gt; /dev/null 2\&gt;\&amp;1 \&amp;
   gthumb . &gt; /dev/null 2&gt;&amp;1 &amp;
 else
-  echo gthumb &quot;$@&quot; &#0092;&gt; /dev/null 2&#0092;&gt;&#0092;&amp;1 &#0092;&amp;
+  echo gthumb &quot;$@&quot; \&gt; /dev/null 2\&gt;\&amp;1 \&amp;
   gthumb &quot;$@&quot; &gt; /dev/null 2&gt;&amp;1 &amp;
-fi</pre>
-
+fi
+</code></pre>
 <p>Launch Evince [Depends on: Bourne shell, evince]</p>
-<pre>#!/bin/sh
+<pre><code>#!/bin/sh
 # ~/bin/ev
-evince &quot;$@&quot; &gt; /dev/null 2&gt;&amp;1 &amp;</pre>
-
+evince &quot;$@&quot; &gt; /dev/null 2&gt;&amp;1 &amp;
+</code></pre>
 <p>Encrypt or decrypt with the ROT13 Cypher. Useage: <code>rot13 Uryyb jbeyq.</code> or <code>echo Uryyb jbeyq. | rot13</code> . [Depends on: Bourne shell, coreutils]</p>
-<pre>#!/bin/sh
+<pre><code>#!/bin/sh
 # ~/bin/rot13
 if [ &quot;$#&quot; -gt 0 ] ; then
  echo &quot;$@&quot; | tr A-Za-z N-ZA-Mn-za-m
 else
  tr A-Za-z N-ZA-Mn-za-m
-fi</pre>
-
+fi
+</code></pre>
 <p>Grab a file over http and pipe it to stdout. [Depends on: Bourne shell, wget]</p>
-<pre>#!/bin/sh
+<pre><code>#!/bin/sh
 # ~/bin/wgeto
-exec wget -o /dev/null -O - &quot;$@&quot;</pre>
-
+exec wget -o /dev/null -O - &quot;$@&quot;
+</code></pre>
 <p>Extract a bunch of rar files. [Depends on: Bourne shell, unrar, coreutils]</p>
-<pre>#!/bin/sh
+<pre><code>#!/bin/sh
 # ~/bin/unrar-extract
 for x in &quot;$@&quot; ; do
  nice unrar x &quot;$x&quot;
-done</pre>
-
+done
+</code></pre>
 <p>List only directories. [Depends on: Bourne shell, grep, coreutils]</p>
-<pre>#!/bin/sh
+<pre><code>#!/bin/sh
 # ~/bin/lsd
 /bin/ls --color='yes' -l &quot;$@&quot; | grep &quot;^d&quot;
-# /bin/ls --color=yes -p &quot;$@&quot; | grep &quot;/$&quot;</pre>
-
-<p>Generate Password.  Self-documented. [Depends on: Bourne shell, Linux kernel, coreutils, sed]</p>
-<pre>#!/bin/sh
+# /bin/ls --color=yes -p &quot;$@&quot; | grep &quot;/$&quot;
+</code></pre>
+<p>Generate Password. Self-documented. [Depends on: Bourne shell, Linux kernel, coreutils, sed]</p>
+<pre><code>#!/bin/sh
 # ~/bin/genpasswd
 #   Generate a random password with about
 #   142 bits of randomness, making use of
@@ -359,14 +374,14 @@ done</pre>
 # Copyright 2007 Hal Canary
 # Dedicated to the Public Domain.
 echo &quot;Grabbing bits from /dev/random...&quot; 1&gt;&amp;2
-head -c 18 /dev/random | base64 | &#0092;
- sed 's/&#0092;//Z/g;s/+/z/g;'
+head -c 18 /dev/random | base64 | \
+ sed 's/\//Z/g;s/+/z/g;'
 # If you lack base64 on your system, try:
-# head -c 18 /dev/random  | uuenview -b '' | &#0092;
-#   sed 's/&#0092;//Z/g;s/+/z/g;'</pre>
-
-<p>Convert mp3 files to CD-Audio.  [Depends on Bourne Shell, coreutils, lame, sox.]</p>
-<pre>#!/bin/sh
+# head -c 18 /dev/random  | uuenview -b '' | \
+#   sed 's/\//Z/g;s/+/z/g;'
+</code></pre>
+<p>Convert mp3 files to CD-Audio. [Depends on Bourne Shell, coreutils, lame, sox.]</p>
+<pre><code>#!/bin/sh
 
 # ~/bin/makecdrfiles
 
@@ -383,20 +398,14 @@ if [ &quot;$#&quot; -lt 1 ] ; then
   exit 1
 fi
 for FILE in &quot;$@&quot; ; do
-  nice lame --decode &quot;$FILE&quot; - | &#0092;
+  nice lame --decode &quot;$FILE&quot; - | \
     nice sox -t wav - &quot;$(basename $FILE .mp3).cdr&quot;
 done
-</pre>
+</code></pre>
+<hr />
+<p>file modification time: 2007-06-11 18:58:50</p>
+<hr />
 
 </div>
-
-<div class="section"><p class="rightside">file modification time: 2007-06-11 18:58:50</p></div>
-
-<div class="section">
-<p class="centered">Copyright 1997-2013 by Hal Canary.<br>
-<i>mailto: halcanary at gmail dot com</i><br>
-<a href="https://halcanary.org"><i>http://halcanary.org</i></a></p>
-</div>
-
 </body>
 </html>

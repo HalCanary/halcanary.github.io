@@ -1,30 +1,68 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en-US">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Copyright 1997-2022 Hal Canary. ALL RIGHTS RESERVED. -->
-<title>World of Hal Canary</title>
-<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==">
-<link rel="stylesheet" type="text/css" href="/styles/scrapple-from-the-apple.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Movabletype templates for halcanary.org</title>
+<link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==" rel="icon"/>
 <style>
-@media screen { body{
-    max-width: 35em;
-    margin: 22px auto 64px auto;
-    padding: 0 8px;
-} }
-body {
-    color: #000000;
-    background-color: #ffffff;
-    background-image: none;
-    text-align: initial;
+@media (prefers-color-scheme:dark) {body {background-color:#000;color:#FFF;}
+a:visited {color:#C0F;}
+a:link, a:hover, a:active {color:#0CF;}
 }
+@media print {body {max-width:8in;font-size:12px;margin:0;}
+}
+@media screen {body {font-family:sans-serif;max-width:35em;margin:22px auto 64px auto;padding:0 8px;}
+}
+body {overflow-wrap:break-word;}
+@page {size:auto;margin:0.25in 0.5in 0.5in 0.5in;}
+svg {fill:currentColor;}
+img {max-width:100%;height:auto;}
+hr {border-style:solid none;}
+.content {margin:1em 0;}
+.content hr {padding:0;margin:0;border:none;text-align:center;}
+.content hr:after {font-size:150%;content:"* \A0 * \A0 *";display:block;position:relative;}
+.rightside {text-align:right;}
+.centered {text-align:center;}
+pre {overflow-x:auto;}
+.byline > * {display:inline-block;border-style:solid;border-width:thin;padding:3px 8px;border-radius:5px;text-align:initial;}
+.byline {text-align:right;}
+.box {border-style:solid;border-width:thin;margin:8px 0;padding:0 8px;}
+a.hiddenlink:link {background:inherit;color:inherit;text-decoration:none;}
+a.hiddenlink:visited {background:inherit;color:inherit;text-decoration:none;}
+a.hiddenlink:active {background:inherit;color:inherit;text-decoration:none;}
+ul,ol {padding-left:30px;}
+table.border {border-collapse:collapse;margin:8px auto;}
+table.border tr > * {border-style:solid;border-width:thin;padding:3px 8px;border-radius:5px;}
+.tophead {text-align:center;margin:1ex auto 0 auto;max-width:35em;}
+.tightmargins li > ul > li {list-style-type:square;}
+.tightmargins h1,
+.tightmargins h2,
+.tightmargins p,
+.tightmargins ul {margin:0.5ex 0;}
+.tightmargins li > ul {margin:0 0 0.5ex 0;}
+.tightmargins ul {padding-left:30px;}
+.tightmargins li {margin:0 0 0.5ex 0;}
+.plainlink a:link,
+.plainlink a:visited,
+.plainlink a:hover,
+.plainlink a:active {color:inherit;text-decoration:underline;}
+.nolink a:link,
+.nolink a:visited,
+.nolink a:hover,
+.nolink a:active {color:inherit;text-decoration:none;}
+div.lcr {display:grid;grid-template-columns:auto auto auto;}
+ul.flat {list-style-type:none;margin:16px 0;padding:0;}
+ul.flat li {display:inline;}
+ul.flat li::after {content:"]";}
+ul.flat li::before {content:"[";}
 </style>
+<!--
+Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
+-->
 </head>
-
 <body>
-
-<h1><a href="/" class="hiddenlink">
+<div class="tophead" role="banner">
 <svg aria-label="Hal W Canary 3" role="img" viewBox="-200 0 800 91" width="100%">
 <title>Hal W Canary 3</title>
 <rect height="4" width="180" x="-200" y="43" />
@@ -73,150 +111,119 @@ C 325 43 324 42 322 43 C 319 45 322 52 323 54 C 324 58 327 59 328 63 C 329 67
 375 71 C 383 67 399 55 393 45 C 390 38 382 37 380 31 C 384 29 394 26 395 20 C
 395 17 392 15 389 13 C 384 9 378 6 372 10" />
 </svg>
-</a></h1>
-
-<nav class="section"><p><a href="/">Home</a></p></nav>
-
-<!-- p/mt-templates -->
-
-<div class='section'>
-<h2>Movabletype templates for halcanary.org</h2>
-
-<p>All seven templates on this page are duel licensed
-under the
-<a href="http://creativecommons.org/licenses/sa/1.0/">Creative Commons
-Share Alike License</a> and the
-<a href="http://www.gnu.org/licenses/gpl.txt">GNU General Public
-Licence</a>.  You may use and redistribute this code under the terms
-of either of these liscences.  All templates partially derived from
-MT's defaults.</p> 
-
-<p>Here are the four movable type templates for archive-type
-summaries.  They are all included into a php file, using &lt;?php
-include &quot;filename&quot; ?&gt;.</p>
-
+</div>
+<div role="main">
+<h1>Movabletype templates for halcanary.org</h1>
+<p>All seven templates on this page are duel licensed under the <a href="http://creativecommons.org/licenses/sa/1.0/">Creative Commons Share Alike License</a> and the <a href="http://www.gnu.org/licenses/gpl.txt">GNU General Public Licence</a>. You may use and redistribute this code under the terms of either of these liscences. All templates partially derived from MT's defaults.</p>
+<p>Here are the four movable type templates for archive-type summaries. They are all included into a php file, using <?php include "filename" ?>.</p>
 <p>mt1 makes my front page, with the last 10 entries.</p>
-
-<table class='code'><tr><th>mt1.template.html</th></tr><tr><td>
-<pre>
+<table class="code"><tbody><tr><th>mt1.template.html</th></tr><tr><td><pre><code>
     &lt;!--(c) 2003 Hal Canary--&gt;
     &lt;div class='section'&gt;
       &lt;h2&gt;Log&lt;/h2&gt;
+<pre><code>  &amp;lt;div class=&quot;blog&quot;&amp;gt;
+  &amp;lt;p class=&quot;centered&quot;&amp;gt;(&amp;lt;a href=&quot;./archives/&quot;&amp;gt;Archives&amp;lt;/a&amp;gt;)&amp;lt;/p&amp;gt;
+  &amp;lt;/div&amp;gt;
+  &amp;lt;MTEntries lastn=&quot;10&quot;&amp;gt;
 
-      &lt;div class=&quot;blog&quot;&gt;
-      &lt;p class=&quot;centered&quot;&gt;(&lt;a href=&quot;./archives/&quot;&gt;Archives&lt;/a&gt;)&lt;/p&gt;
-      &lt;/div&gt;
-      &lt;MTEntries lastn=&quot;10&quot;&gt;
+  &amp;lt;div class=&quot;blog&quot;&amp;gt;
+&amp;lt;h3 class=&quot;blogtitle&quot;&amp;gt;&amp;lt;$MTEntryTitle$&amp;gt;&amp;lt;/h3&amp;gt;
 
-      &lt;div class=&quot;blog&quot;&gt;
-	&lt;h3 class=&quot;blogtitle&quot;&gt;&lt;$MTEntryTitle$&gt;&lt;/h3&gt;
+&amp;lt;$MTEntryBody$&amp;gt;	
 
-	&lt;$MTEntryBody$&gt;	
+    &amp;lt;MTEntryIfExtended&amp;gt;
+    &amp;lt;p class=&quot;blog-notes&quot;&amp;gt;
+  &amp;lt;a href=&quot;&amp;lt;$MTEntryPermalink$&amp;gt;&quot;&amp;gt;
+    Continue reading &amp;lt;em&amp;gt;&amp;lt;$MTEntryTitle$&amp;gt;&amp;lt;/em&amp;gt;
+  &amp;lt;/a&amp;gt;
+&amp;lt;/p&amp;gt;
+    &amp;lt;/MTEntryIfExtended&amp;gt;
 
-        &lt;MTEntryIfExtended&gt;
-        &lt;p class=&quot;blog-notes&quot;&gt;
-	  &lt;a href=&quot;&lt;$MTEntryPermalink$&gt;&quot;&gt;
-	    Continue reading &lt;em&gt;&lt;$MTEntryTitle$&gt;&lt;/em&gt;
-	  &lt;/a&gt;
-	&lt;/p&gt;
-        &lt;/MTEntryIfExtended&gt;
+&amp;lt;p class=&quot;blog-notes&quot;&amp;gt;
+  &amp;lt;a href=&quot;&amp;lt;$MTEntryAuthorURL$&amp;gt;&quot;&amp;gt;&amp;lt;$MTEntryAuthor$&amp;gt;&amp;lt;/a&amp;gt; |
+  &amp;lt;$MTEntryCategory$&amp;gt; |
+  &amp;lt;$MTEntryDate format=&quot;%Y-%m-%d, %I:%M %p&quot;$&amp;gt; |
+  &amp;lt;!--&amp;lt;a href=&quot;&amp;lt;$MTEntryLink$&amp;gt;&quot;&amp;gt;permlink &amp;amp;amp; comments&amp;lt;/a&amp;gt;--&amp;gt;
+  &amp;lt;a href=&quot;&amp;lt;$MTEntryPermalink$&amp;gt;&quot;&amp;gt;permlink &amp;amp;amp; comments&amp;lt;/a&amp;gt;
+  (&amp;lt;$MTEntryCommentCount$&amp;gt;)
+&amp;lt;/p&amp;gt;
+  &amp;lt;/div&amp;gt;
 
-	&lt;p class=&quot;blog-notes&quot;&gt;
-	  &lt;a href=&quot;&lt;$MTEntryAuthorURL$&gt;&quot;&gt;&lt;$MTEntryAuthor$&gt;&lt;/a&gt; |
-	  &lt;$MTEntryCategory$&gt; |
-	  &lt;$MTEntryDate format=&quot;%Y-%m-%d, %I:%M %p&quot;$&gt; |
-	  &lt;!--&lt;a href=&quot;&lt;$MTEntryLink$&gt;&quot;&gt;permlink &amp;amp; comments&lt;/a&gt;--&gt;
-	  &lt;a href=&quot;&lt;$MTEntryPermalink$&gt;&quot;&gt;permlink &amp;amp; comments&lt;/a&gt;
-	  (&lt;$MTEntryCommentCount$&gt;)
-	&lt;/p&gt;
-      &lt;/div&gt;
+  &amp;lt;hr class='blogsep' /&amp;gt;
 
-      &lt;hr class='blogsep' /&gt;
+  &amp;lt;/MTEntries&amp;gt;
 
-      &lt;/MTEntries&gt;
-
-    &lt;/div&gt;
-</pre>
-</td></tr></table>
-
+&amp;lt;/div&amp;gt;
+</code></pre>
+<p></code></pre></td></tr></tbody></table></p>
 <p>mt2 also goes on the front page, with links to the last 20 entries.</p>
-
-<table class='code'><tr><th>mt2.template.html</th></tr><tr><td>
-<pre>
+<table class="code"><tbody><tr><th>mt2.template.html</th></tr><tr><td><pre><code>
     &lt;!--(c) 2003 Hal Canary--&gt;
-    &lt;div class=&quot;section&quot;&gt;
+    &lt;div class="section"&gt;
+<pre><code>  &amp;lt;h2&amp;gt;Recent&amp;lt;/h2&amp;gt;
 
-      &lt;h2&gt;Recent&lt;/h2&gt;
-
-      &lt;MTEntries lastn=&quot;30&quot;&gt;
-      &lt;p&gt;
-        &lt;a href=&quot;&lt;$MTEntryPermalink$&gt;&quot;&gt;&lt;$MTEntryTitle$&gt;&lt;/a&gt;
-	&lt;MTComments lastn=&quot;1&quot;&gt;
-	(&lt;$MTEntryCommentCount$&gt;)
-	&lt;/MTComments&gt;
-	&lt;br /&gt;
-	&lt;$MTArchiveDate format=&quot;%Y-%m-%d, %I:%M %p&quot;$&gt;
-      &lt;/p&gt;
-      &lt;/MTEntries&gt;
-    &lt;/div&gt;
-</pre>
-</td></tr></table>
-
+  &amp;lt;MTEntries lastn=&quot;30&quot;&amp;gt;
+  &amp;lt;p&amp;gt;
+    &amp;lt;a href=&quot;&amp;lt;$MTEntryPermalink$&amp;gt;&quot;&amp;gt;&amp;lt;$MTEntryTitle$&amp;gt;&amp;lt;/a&amp;gt;
+&amp;lt;MTComments lastn=&quot;1&quot;&amp;gt;
+(&amp;lt;$MTEntryCommentCount$&amp;gt;)
+&amp;lt;/MTComments&amp;gt;
+&amp;lt;br /&amp;gt;
+&amp;lt;$MTArchiveDate format=&quot;%Y-%m-%d, %I:%M %p&quot;$&amp;gt;
+  &amp;lt;/p&amp;gt;
+  &amp;lt;/MTEntries&amp;gt;
+&amp;lt;/div&amp;gt;
+</code></pre>
+<p></code></pre></td></tr></tbody></table></p>
 <p>mt3 is the full archive, ordered by date</p>
-
-<table class='code'><tr><th>mt3.template.html</th></tr><tr><td>
-<pre>
+<table class="code"><tbody><tr><th>mt3.template.html</th></tr><tr><td><pre><code>
     &lt;!--(c) 2003 Hal Canary--&gt;
     &lt;div class='section'&gt;
       &lt;h2&gt;Archive&lt;/h2&gt;
+<pre><code>  &amp;lt;div class='subsection'&amp;gt;
+    &amp;lt;p&amp;gt;&amp;lt;a href=&quot;../&quot;&amp;gt;home&amp;lt;/a&amp;gt; | 
+&amp;lt;a href=&quot;./cat.php&quot;&amp;gt;category archive&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+  &amp;lt;/div&amp;gt;
 
-      &lt;div class='subsection'&gt;
-        &lt;p&gt;&lt;a href=&quot;../&quot;&gt;home&lt;/a&gt; | 
-	&lt;a href=&quot;./cat.php&quot;&gt;category archive&lt;/a&gt;&lt;/p&gt;
-      &lt;/div&gt;
-
-      &lt;MTArchiveList archive_type=&quot;Monthly&quot;&gt;
-      &lt;div class='subsection'&gt;
-	&lt;h3&gt;
-	&lt;a href=&quot;&lt;$MTArchiveLink$&gt;&quot;&gt;
-	&lt;$MTArchiveTitle$&gt;&lt;/a&gt;
-	  (&lt;$MTArchiveCount$&gt;)&lt;/h3&gt;
-	&lt;ul&gt;
-	  &lt;MTEntries&gt;
-	  &lt;li&gt;
-            &lt;a href=&quot;&lt;$MTEntryPermalink$&gt;&quot;&gt;
-	    &lt;$MTEntryTitle$&gt;&lt;/a&gt; (&lt;$MTEntryCategory$&gt;) 
-	    &lt;$MTArchiveDate format=&quot;%Y-%m-%d, %I:%M %p&quot;$&gt; 
-	    &lt;MTComments lastn=&quot;1&quot;&gt;
-	    (&lt;$MTEntryCommentCount$&gt;)&lt;/MTComments&gt;
-	  &lt;/li&gt;
-	  &lt;/MTEntries&gt;
-	&lt;/ul&gt;
-      &lt;/div&gt;
-      &lt;/MTArchiveList&gt;
-    &lt;/div&gt;
-</pre>
-</td></tr></table>
-
+  &amp;lt;MTArchiveList archive_type=&quot;Monthly&quot;&amp;gt;
+  &amp;lt;div class='subsection'&amp;gt;
+&amp;lt;h3&amp;gt;
+&amp;lt;a href=&quot;&amp;lt;$MTArchiveLink$&amp;gt;&quot;&amp;gt;
+&amp;lt;$MTArchiveTitle$&amp;gt;&amp;lt;/a&amp;gt;
+  (&amp;lt;$MTArchiveCount$&amp;gt;)&amp;lt;/h3&amp;gt;
+&amp;lt;ul&amp;gt;
+  &amp;lt;MTEntries&amp;gt;
+  &amp;lt;li&amp;gt;
+        &amp;lt;a href=&quot;&amp;lt;$MTEntryPermalink$&amp;gt;&quot;&amp;gt;
+    &amp;lt;$MTEntryTitle$&amp;gt;&amp;lt;/a&amp;gt; (&amp;lt;$MTEntryCategory$&amp;gt;) 
+    &amp;lt;$MTArchiveDate format=&quot;%Y-%m-%d, %I:%M %p&quot;$&amp;gt; 
+    &amp;lt;MTComments lastn=&quot;1&quot;&amp;gt;
+    (&amp;lt;$MTEntryCommentCount$&amp;gt;)&amp;lt;/MTComments&amp;gt;
+  &amp;lt;/li&amp;gt;
+  &amp;lt;/MTEntries&amp;gt;
+&amp;lt;/ul&amp;gt;
+  &amp;lt;/div&amp;gt;
+  &amp;lt;/MTArchiveList&amp;gt;
+&amp;lt;/div&amp;gt;
+</code></pre>
+<p></code></pre></td></tr></tbody></table></p>
 <p>mt4 is the full archive, ordered by category</p>
-
-<table class='code'><tr><th>mt4.template.html</th></tr><tr><td>
-<pre>
+<table class="code"><tbody><tr><th>mt4.template.html</th></tr><tr><td><pre><code>
     &lt;!--(c) 2003 Hal Canary--&gt;
     &lt;div class='section'&gt;
       &lt;h2&gt;Category Archive&lt;/h2&gt;
       &lt;MTCategories&gt;
       &lt;div class='subsection'&gt;
-        &lt;h3&gt;&lt;a href=&quot;&lt;$MTCategoryArchiveLink$&gt;&quot;&gt;
+        &lt;h3&gt;&lt;a href="&lt;$MTCategoryArchiveLink$&gt;"&gt;
 	&lt;$MTCategoryLabel$&gt;&lt;/a&gt;
         (&lt;$MTCategoryCount$&gt;)&lt;/h3&gt;
 	&lt;ul&gt;
 	  &lt;MTEntries&gt;
 	  &lt;li&gt;
-            &lt;a href=&quot;&lt;$MTEntryPermalink$&gt;&quot;&gt;
+            &lt;a href="&lt;$MTEntryPermalink$&gt;"&gt;
 	    &lt;$MTEntryTitle$&gt;&lt;/a&gt; 
-	    &lt;$MTArchiveDate format=&quot;%Y-%m-%d, %I:%M %p&quot;$&gt; 
-	    &lt;MTComments lastn=&quot;1&quot;&gt;
+	    &lt;$MTArchiveDate format="%Y-%m-%d, %I:%M %p"$&gt; 
+	    &lt;MTComments lastn="1"&gt;
 	    (&lt;$MTEntryCommentCount$&gt;)
 	    &lt;/MTComments&gt;
 	  &lt;/li&gt;
@@ -225,267 +232,247 @@ include &quot;filename&quot; ?&gt;.</p>
       &lt;/div&gt;
       &lt;/MTCategories&gt;
     &lt;/div&gt;
-</pre>
-</td></tr></table>
-
+</code></pre></td></tr></tbody></table>
 <p>The next three compile into complete files in the /archive/ directory.</p>
-
-<table class='code'><tr><th>individual-entry-archive.html</th></tr><tr><td>
-<pre>
-&lt;$MTInclude file=&quot;head.html&quot;$&gt;
+<table class="code"><tbody><tr><th>individual-entry-archive.html</th></tr><tr><td><pre><code>
+&lt;$MTInclude file="head.html"$&gt;
 &lt;!--(c) 2003 Hal Canary--&gt;
 &lt;body&gt;
-  &lt;div class=&quot;banner&quot;&gt;
+  &lt;div class="banner"&gt;
   &lt;h1&gt;
-    &lt;img src=&quot;/images/new-hal-icon.jpg&quot; alt=&quot;&quot; /&gt;
+    &lt;img src="/images/new-hal-icon.jpg" alt="" /&gt;
     WoHC: &lt;$MTEntryTitle$&gt;
   &lt;/h1&gt;
   &lt;/div&gt;
   &lt;div class='widerightcol'&gt;
     &lt;div class='section'&gt;
       &lt;h2&gt;Log&lt;/h2&gt;
+<pre><code>  &amp;lt;p&amp;gt;
+    &amp;lt;MTEntryPrevious&amp;gt;
+    &amp;lt;a href=&quot;&amp;lt;$MTEntryPermalink$&amp;gt;&quot;&amp;gt;&amp;amp;laquo; &amp;lt;$MTEntryTitle$&amp;gt;&amp;lt;/a&amp;gt; |
+&amp;lt;/MTEntryPrevious&amp;gt;
+&amp;lt;a href=&quot;&amp;lt;$MTBlogURL$&amp;gt;&quot;&amp;gt;Home&amp;lt;/a&amp;gt;
+| &amp;lt;a href=&quot;./&quot;&amp;gt;Archives&amp;lt;/a&amp;gt;
+| &amp;lt;a href=&quot;&amp;lt;$MTEntryLink archive_type=&quot;Monthly&quot;$&amp;gt;&quot;&amp;gt;Month&amp;lt;/a&amp;gt;
+&amp;lt;MTEntryNext&amp;gt;
+| &amp;lt;a href=&quot;&amp;lt;$MTEntryPermalink$&amp;gt;&quot;&amp;gt;&amp;lt;$MTEntryTitle$&amp;gt; &amp;amp;raquo;&amp;lt;/a&amp;gt;
+&amp;lt;/MTEntryNext&amp;gt;
+  &amp;lt;/p&amp;gt;
 
-      &lt;p&gt;
-        &lt;MTEntryPrevious&gt;
-        &lt;a href=&quot;&lt;$MTEntryPermalink$&gt;&quot;&gt;&amp;laquo; &lt;$MTEntryTitle$&gt;&lt;/a&gt; |
-	&lt;/MTEntryPrevious&gt;
-	&lt;a href=&quot;&lt;$MTBlogURL$&gt;&quot;&gt;Home&lt;/a&gt;
-	| &lt;a href=&quot;./&quot;&gt;Archives&lt;/a&gt;
-	| &lt;a href=&quot;&lt;$MTEntryLink archive_type=&quot;Monthly&quot;$&gt;&quot;&gt;Month&lt;/a&gt;
-	&lt;MTEntryNext&gt;
-	| &lt;a href=&quot;&lt;$MTEntryPermalink$&gt;&quot;&gt;&lt;$MTEntryTitle$&gt; &amp;raquo;&lt;/a&gt;
-	&lt;/MTEntryNext&gt;
-      &lt;/p&gt;
+  &amp;lt;div class=&quot;blog&quot;&amp;gt;
+&amp;lt;h3 class=&quot;blogtitle&quot;&amp;gt;&amp;lt;$MTEntryTitle$&amp;gt;&amp;lt;/h3&amp;gt;
+&amp;lt;$MTEntryBody$&amp;gt;	
+&amp;lt;$MTEntryMore$&amp;gt;
+&amp;lt;p class=&quot;blog-notes&quot;&amp;gt;
+  &amp;lt;a href=&quot;&amp;lt;$MTEntryAuthorURL$&amp;gt;&quot;&amp;gt;&amp;lt;$MTEntryAuthor$&amp;gt;&amp;lt;/a&amp;gt; | 
+  &amp;lt;$MTEntryCategory$&amp;gt; |
+  &amp;lt;$MTEntryDate format=&quot;%Y-%m-%d, %I:%M %p&quot;$&amp;gt;
+&amp;lt;/p&amp;gt;
+  &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
 
-      &lt;div class=&quot;blog&quot;&gt;
-	&lt;h3 class=&quot;blogtitle&quot;&gt;&lt;$MTEntryTitle$&gt;&lt;/h3&gt;
-	&lt;$MTEntryBody$&gt;	
-	&lt;$MTEntryMore$&gt;
-	&lt;p class=&quot;blog-notes&quot;&gt;
-	  &lt;a href=&quot;&lt;$MTEntryAuthorURL$&gt;&quot;&gt;&lt;$MTEntryAuthor$&gt;&lt;/a&gt; | 
-	  &lt;$MTEntryCategory$&gt; |
-	  &lt;$MTEntryDate format=&quot;%Y-%m-%d, %I:%M %p&quot;$&gt;
-	&lt;/p&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
+&amp;lt;MTEntryIfAllowComments&amp;gt;
 
-    &lt;MTEntryIfAllowComments&gt;
+&amp;lt;MTComments lastn=&quot;1&quot;&amp;gt;
+&amp;lt;div class='section'&amp;gt;
+  &amp;lt;h2&amp;gt;Comments&amp;lt;/h2&amp;gt;
+&amp;lt;/MTComments&amp;gt;
 
-    &lt;MTComments lastn=&quot;1&quot;&gt;
-    &lt;div class='section'&gt;
-      &lt;h2&gt;Comments&lt;/h2&gt;
-    &lt;/MTComments&gt;
+  &amp;lt;MTComments&amp;gt;
+  &amp;lt;div class=&quot;blog&quot;&amp;gt;
+    &amp;lt;p&amp;gt;
+  &amp;lt;$MTCommentBody$&amp;gt;
+&amp;lt;/p&amp;gt;
+&amp;lt;p class=&quot;blog-notes&quot;&amp;gt;
+  Posted by &amp;lt;$MTCommentAuthorLink spam_protect=&quot;1&quot;$&amp;gt; 
+  at &amp;lt;$MTCommentDate format=&quot;%Y-%m-%d, %I:%M %p&quot;$&amp;gt;
+&amp;lt;/p&amp;gt;
+  &amp;lt;/div&amp;gt;
+  &amp;lt;/MTComments&amp;gt;
 
-      &lt;MTComments&gt;
-      &lt;div class=&quot;blog&quot;&gt;
-        &lt;p&gt;
-	  &lt;$MTCommentBody$&gt;
-	&lt;/p&gt;
-	&lt;p class=&quot;blog-notes&quot;&gt;
-	  Posted by &lt;$MTCommentAuthorLink spam_protect=&quot;1&quot;$&gt; 
-	  at &lt;$MTCommentDate format=&quot;%Y-%m-%d, %I:%M %p&quot;$&gt;
-	&lt;/p&gt;
-      &lt;/div&gt;
-      &lt;/MTComments&gt;
+&amp;lt;MTComments lastn=&quot;1&quot;&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/MTComments&amp;gt;
 
-    &lt;MTComments lastn=&quot;1&quot;&gt;
-    &lt;/div&gt;
-    &lt;/MTComments&gt;
+&amp;lt;MTEntryIfCommentsOpen&amp;gt;
+&amp;lt;div class='section'&amp;gt;
+  &amp;lt;h2&amp;gt;Comment!&amp;lt;/h2&amp;gt;
+  
+  &amp;lt;div class='subsection'&amp;gt;
+  &amp;lt;form method=&quot;post&quot; 
+        action=&quot;&amp;lt;$MTCGIPath$&amp;gt;&amp;lt;$MTCommentScript$&amp;gt;&quot; 
+    name=&quot;comments_form&quot; 
+    onsubmit=&quot;if (this.bakecookie[0].checked) rememberMe(this)&quot;&amp;gt;
+&amp;lt;input type=&quot;hidden&quot; name=&quot;static&quot; value=&quot;1&quot; /&amp;gt;
+&amp;lt;input type=&quot;hidden&quot; name=&quot;entry_id&quot; value=&quot;&amp;lt;$MTEntryID$&amp;gt;&quot; /&amp;gt;
 
-    &lt;MTEntryIfCommentsOpen&gt;
-    &lt;div class='section'&gt;
-      &lt;h2&gt;Comment!&lt;/h2&gt;
-      
-      &lt;div class='subsection'&gt;
-      &lt;form method=&quot;post&quot; 
-            action=&quot;&lt;$MTCGIPath$&gt;&lt;$MTCommentScript$&gt;&quot; 
-	    name=&quot;comments_form&quot; 
-	    onsubmit=&quot;if (this.bakecookie[0].checked) rememberMe(this)&quot;&gt;
-	&lt;input type=&quot;hidden&quot; name=&quot;static&quot; value=&quot;1&quot; /&gt;
-	&lt;input type=&quot;hidden&quot; name=&quot;entry_id&quot; value=&quot;&lt;$MTEntryID$&gt;&quot; /&gt;
+&amp;lt;p&amp;gt;
+   &amp;lt;label for=&quot;author&quot;&amp;gt;Name:&amp;lt;/label&amp;gt;
+   &amp;lt;br /&amp;gt;
+   &amp;lt;input tabindex=&quot;1&quot; id=&quot;author&quot; name=&quot;author&quot; /&amp;gt;
+&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;
+  &amp;lt;label for=&quot;email&quot;&amp;gt;Email Address:&amp;lt;/label&amp;gt;
+  &amp;lt;br /&amp;gt;
+  &amp;lt;input tabindex=&quot;2&quot; id=&quot;email&quot; name=&quot;email&quot; /&amp;gt;
+&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;
+  &amp;lt;label for=&quot;url&quot;&amp;gt;URL:&amp;lt;/label&amp;gt;
+  &amp;lt;br /&amp;gt;
+  &amp;lt;input tabindex=&quot;3&quot; id=&quot;url&quot; name=&quot;url&quot; /&amp;gt;
+&amp;lt;/p&amp;gt;
 
-	&lt;p&gt;
-	   &lt;label for=&quot;author&quot;&gt;Name:&lt;/label&gt;
-	   &lt;br /&gt;
-	   &lt;input tabindex=&quot;1&quot; id=&quot;author&quot; name=&quot;author&quot; /&gt;
-	&lt;/p&gt;
-	&lt;p&gt;
-	  &lt;label for=&quot;email&quot;&gt;Email Address:&lt;/label&gt;
-	  &lt;br /&gt;
-	  &lt;input tabindex=&quot;2&quot; id=&quot;email&quot; name=&quot;email&quot; /&gt;
-	&lt;/p&gt;
-	&lt;p&gt;
-	  &lt;label for=&quot;url&quot;&gt;URL:&lt;/label&gt;
-	  &lt;br /&gt;
-	  &lt;input tabindex=&quot;3&quot; id=&quot;url&quot; name=&quot;url&quot; /&gt;
-	&lt;/p&gt;
-	
-	&lt;p&gt;
-	  Remember personal info?
-	  &lt;br /&gt;
-	  &lt;input type=&quot;radio&quot; id=&quot;bakecookie&quot; name=&quot;bakecookie&quot; /&gt;
-	  &lt;label for=&quot;bakecookie&quot;&gt;Yes&lt;/label&gt;
-	  &lt;input type=&quot;radio&quot; id=&quot;forget&quot; name=&quot;bakecookie&quot; 
-	         onclick=&quot;forgetMe(this.form)&quot; value=&quot;Forget Info&quot; 
-		 style=&quot;margin-left: 15px;&quot; /&gt;
-	  &lt;label for=&quot;forget&quot;&gt;No&lt;/label&gt;
-	  &lt;br style=&quot;clear: both;&quot; /&gt;
-	&lt;/p&gt;
-	&lt;p&gt;
-	  &lt;label for=&quot;text&quot;&gt;Comments:&lt;/label&gt;
-	  &lt;br /&gt;
-	  &lt;textarea tabindex=&quot;4&quot; id=&quot;text&quot; name=&quot;text&quot; 
-	            rows=&quot;10&quot; cols=&quot;50&quot;&gt;&lt;/textarea&gt;
-	&lt;/p&gt;
-	&lt;p&gt;
-	  &lt;input type=&quot;submit&quot; name=&quot;preview&quot; value=&quot;&amp;nbsp;Preview&amp;nbsp;&quot; /&gt;
-	  &lt;input style=&quot;font-weight: bold;&quot; type=&quot;submit&quot; 
-	         name=&quot;post&quot; value=&quot;&amp;nbsp;Post&amp;nbsp;&quot; /&gt;
-	&lt;/p&gt;
-      &lt;/form&gt;
-      &lt;/div&gt;
+&amp;lt;p&amp;gt;
+  Remember personal info?
+  &amp;lt;br /&amp;gt;
+  &amp;lt;input type=&quot;radio&quot; id=&quot;bakecookie&quot; name=&quot;bakecookie&quot; /&amp;gt;
+  &amp;lt;label for=&quot;bakecookie&quot;&amp;gt;Yes&amp;lt;/label&amp;gt;
+  &amp;lt;input type=&quot;radio&quot; id=&quot;forget&quot; name=&quot;bakecookie&quot; 
+         onclick=&quot;forgetMe(this.form)&quot; value=&quot;Forget Info&quot; 
+	 style=&quot;margin-left: 15px;&quot; /&amp;gt;
+  &amp;lt;label for=&quot;forget&quot;&amp;gt;No&amp;lt;/label&amp;gt;
+  &amp;lt;br style=&quot;clear: both;&quot; /&amp;gt;
+&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;
+  &amp;lt;label for=&quot;text&quot;&amp;gt;Comments:&amp;lt;/label&amp;gt;
+  &amp;lt;br /&amp;gt;
+  &amp;lt;textarea tabindex=&quot;4&quot; id=&quot;text&quot; name=&quot;text&quot; 
+            rows=&quot;10&quot; cols=&quot;50&quot;&amp;gt;&amp;lt;/textarea&amp;gt;
+&amp;lt;/p&amp;gt;
+&amp;lt;p&amp;gt;
+  &amp;lt;input type=&quot;submit&quot; name=&quot;preview&quot; value=&quot;&amp;amp;nbsp;Preview&amp;amp;nbsp;&quot; /&amp;gt;
+  &amp;lt;input style=&quot;font-weight: bold;&quot; type=&quot;submit&quot; 
+         name=&quot;post&quot; value=&quot;&amp;amp;nbsp;Post&amp;amp;nbsp;&quot; /&amp;gt;
+&amp;lt;/p&amp;gt;
+  &amp;lt;/form&amp;gt;
+  &amp;lt;/div&amp;gt;
 
-      &lt;script type=&quot;text/javascript&quot; language=&quot;javascript&quot;&gt;
-        &lt;!--
-	  document.comments_form.email.value = getCookie(&quot;mtcmtmail&quot;);
-	  document.comments_form.author.value = getCookie(&quot;mtcmtauth&quot;);
-	  document.comments_form.url.value = getCookie(&quot;mtcmthome&quot;);
-	  if (getCookie(&quot;mtcmtauth&quot;)) {
-	      document.comments_form.bakecookie[0].checked = true;
-	  } else {
-	      document.comments_form.bakecookie[1].checked = true;
-	  } // 
-	--&gt;
-      &lt;/script&gt;
-    &lt;/div&gt;
-    &lt;/MTEntryIfCommentsOpen&gt;
-    &lt;/MTEntryIfAllowComments&gt;
+  &amp;lt;script type=&quot;text/javascript&quot; language=&quot;javascript&quot;&amp;gt;
+    &amp;lt;!--
+  document.comments_form.email.value = getCookie(&quot;mtcmtmail&quot;);
+  document.comments_form.author.value = getCookie(&quot;mtcmtauth&quot;);
+  document.comments_form.url.value = getCookie(&quot;mtcmthome&quot;);
+  if (getCookie(&quot;mtcmtauth&quot;)) {
+      document.comments_form.bakecookie[0].checked = true;
+  } else {
+      document.comments_form.bakecookie[1].checked = true;
+  } // 
+--&amp;gt;
+  &amp;lt;/script&amp;gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;/MTEntryIfCommentsOpen&amp;gt;
+&amp;lt;/MTEntryIfAllowComments&amp;gt;
 
-    &lt;$MTInclude file=&quot;bottom.html&quot;$&gt;
-    &lt;hr class='middle' /&gt;
-  &lt;/div&gt;
-
-  &lt;div class='leftcol'&gt;
-    &lt;$MTInclude file=&quot;leftcol.html&quot;$&gt;  
-  &lt;/div&gt;
+&amp;lt;$MTInclude file=&quot;bottom.html&quot;$&amp;gt;
+&amp;lt;hr class='middle' /&amp;gt;
+</code></pre>
+<p>&lt;/div&gt;</p>
+<p>&lt;div class='leftcol'&gt;
+&lt;$MTInclude file=&quot;leftcol.html&quot;$&gt;<br />
+&lt;/div&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-</pre>
-</td></tr></table>
-
-<table class='code'><tr><th>date-based-archive.html</th></tr><tr><td>
-<pre>
-&lt;$MTInclude file=&quot;head.html&quot;$&gt;
+</code></pre></td></tr></tbody></table></p>
+<table class="code"><tbody><tr><th>date-based-archive.html</th></tr><tr><td><pre><code>
+&lt;$MTInclude file="head.html"$&gt;
 &lt;!--(c) 2003 Hal Canary--&gt;
 &lt;body&gt;
-  &lt;div class=&quot;banner&quot;&gt;
+  &lt;div class="banner"&gt;
   &lt;h1&gt;
-    &lt;img src=&quot;/images/new-hal-icon.jpg&quot; alt=&quot;&quot; /&gt;
+    &lt;img src="/images/new-hal-icon.jpg" alt="" /&gt;
     WoHC Log
   &lt;/h1&gt;
   &lt;/div&gt;
   &lt;div class='widerightcol'&gt;
     &lt;div class='section'&gt;
       &lt;h2&gt;&lt;$MTArchiveTitle$&gt;&lt;/h2&gt;
-      &lt;div class=&quot;subsection&quot;&gt;
+      &lt;div class="subsection"&gt;
         &lt;p&gt;
           &lt;MTArchivePrevious&gt;
-	  &lt;a href=&quot;&lt;$MTArchiveLink$&gt;&quot;&gt;&amp;laquo; &lt;$MTArchiveTitle$&gt;&lt;/a&gt; |
+	  &lt;a href="&lt;$MTArchiveLink$&gt;"&gt;&amp;laquo; &lt;$MTArchiveTitle$&gt;&lt;/a&gt; |
 	  &lt;/MTArchivePrevious&gt;
-	  &lt;a href=&quot;&lt;$MTBlogURL$&gt;&quot;&gt;Main&lt;/a&gt; | 
-	  &lt;a href=&quot;./&quot;&gt;Archives&lt;/a&gt;
+	  &lt;a href="&lt;$MTBlogURL$&gt;"&gt;Main&lt;/a&gt; | 
+	  &lt;a href="./"&gt;Archives&lt;/a&gt;
 	  &lt;MTArchiveNext&gt;
-	  | &lt;a href=&quot;&lt;$MTArchiveLink$&gt;&quot;&gt;&lt;$MTArchiveTitle$&gt; &amp;raquo;&lt;/a&gt;
+	  | &lt;a href="&lt;$MTArchiveLink$&gt;"&gt;&lt;$MTArchiveTitle$&gt; &amp;raquo;&lt;/a&gt;
 	  &lt;/MTArchiveNext&gt;
 	&lt;/p&gt;
       &lt;/div&gt;
+<pre><code>  &amp;lt;MTEntries sort_order=&quot;ascend&quot;&amp;gt;
+  &amp;lt;div class=&quot;blog&quot;&amp;gt;
+&amp;lt;h3 class=&quot;blogtitle&quot;&amp;gt;&amp;lt;$MTEntryTitle$&amp;gt;&amp;lt;/h3&amp;gt;
+&amp;lt;$MTEntryBody$&amp;gt;	
+&amp;lt;$MTEntryMore$&amp;gt;
+&amp;lt;p class=&quot;blog-notes&quot;&amp;gt;
+  &amp;lt;a href=&quot;&amp;lt;$MTEntryAuthorURL$&amp;gt;&quot;&amp;gt;&amp;lt;$MTEntryAuthor$&amp;gt;&amp;lt;/a&amp;gt; | 
+  &amp;lt;$MTEntryCategory$&amp;gt; |
+  &amp;lt;$MTEntryDate format=&quot;%Y-%m-%d, %I:%M %p&quot;$&amp;gt; |
+  &amp;lt;a href=&quot;&amp;lt;$MTEntryPermalink$&amp;gt;&quot;&amp;gt;permlink &amp;amp;amp; comments&amp;lt;/a&amp;gt;
+  (&amp;lt;$MTEntryCommentCount$&amp;gt;)
+&amp;lt;/p&amp;gt;
+  &amp;lt;/div&amp;gt;
+  &amp;lt;/MTEntries&amp;gt;
 
-      &lt;MTEntries sort_order=&quot;ascend&quot;&gt;
-      &lt;div class=&quot;blog&quot;&gt;
-	&lt;h3 class=&quot;blogtitle&quot;&gt;&lt;$MTEntryTitle$&gt;&lt;/h3&gt;
-	&lt;$MTEntryBody$&gt;	
-	&lt;$MTEntryMore$&gt;
-	&lt;p class=&quot;blog-notes&quot;&gt;
-	  &lt;a href=&quot;&lt;$MTEntryAuthorURL$&gt;&quot;&gt;&lt;$MTEntryAuthor$&gt;&lt;/a&gt; | 
-	  &lt;$MTEntryCategory$&gt; |
-	  &lt;$MTEntryDate format=&quot;%Y-%m-%d, %I:%M %p&quot;$&gt; |
-	  &lt;a href=&quot;&lt;$MTEntryPermalink$&gt;&quot;&gt;permlink &amp;amp; comments&lt;/a&gt;
-	  (&lt;$MTEntryCommentCount$&gt;)
-	&lt;/p&gt;
-      &lt;/div&gt;
-      &lt;/MTEntries&gt;
-
-    &lt;/div&gt;
+&amp;lt;/div&amp;gt;
 
 
-    &lt;$MTInclude file=&quot;bottom.html&quot;$&gt;
-    &lt;hr class='middle' /&gt;
-  &lt;/div&gt;
-
-  &lt;div class='leftcol'&gt;
-    &lt;$MTInclude file=&quot;leftcol.html&quot;$&gt;  
-  &lt;/div&gt;
+&amp;lt;$MTInclude file=&quot;bottom.html&quot;$&amp;gt;
+&amp;lt;hr class='middle' /&amp;gt;
+</code></pre>
+<p>&lt;/div&gt;</p>
+<p>&lt;div class='leftcol'&gt;
+&lt;$MTInclude file=&quot;leftcol.html&quot;$&gt;<br />
+&lt;/div&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-</pre>
-</td></tr></table>
-
-<table class='code'><tr><th>category-archive.html</th></tr><tr><td>
-<pre>
-&lt;$MTInclude file=&quot;head.html&quot;$&gt;
+</code></pre></td></tr></tbody></table></p>
+<table class="code"><tbody><tr><th>category-archive.html</th></tr><tr><td><pre><code>
+&lt;$MTInclude file="head.html"$&gt;
 &lt;!--(c) 2003 Hal Canary--&gt;
 &lt;body&gt;
   &lt;h1&gt;
-    &lt;img src=&quot;/images/new-hal-icon.jpg&quot; alt=&quot;&quot; /&gt;
+    &lt;img src="/images/new-hal-icon.jpg" alt="" /&gt;
     WoHC Log
   &lt;/h1&gt;
   &lt;div class='widerightcol'&gt;
     &lt;div class='section'&gt;
       &lt;h2&gt;Category: &lt;$MTArchiveTitle$&gt;&lt;/h2&gt;
-      &lt;div class=&quot;subsection&quot;&gt;
+      &lt;div class="subsection"&gt;
         &lt;p&gt;
-	  &lt;a href=&quot;&lt;$MTBlogURL$&gt;&quot;&gt;Main&lt;/a&gt; | 
-	  &lt;a href=&quot;./&quot;&gt;Archives&lt;/a&gt; |
-	  &lt;a href=&quot;./cat.php&quot;&gt;Categories&lt;/a&gt;
+	  &lt;a href="&lt;$MTBlogURL$&gt;"&gt;Main&lt;/a&gt; | 
+	  &lt;a href="./"&gt;Archives&lt;/a&gt; |
+	  &lt;a href="./cat.php"&gt;Categories&lt;/a&gt;
 	&lt;/p&gt;
       &lt;/div&gt;
+<pre><code>  &amp;lt;MTEntries sort_order=&quot;ascend&quot;&amp;gt;
+  &amp;lt;div class=&quot;blog&quot;&amp;gt;
+&amp;lt;h3 class=&quot;blogtitle&quot;&amp;gt;&amp;lt;$MTEntryTitle$&amp;gt;&amp;lt;/h3&amp;gt;
+&amp;lt;$MTEntryBody$&amp;gt;	
+&amp;lt;$MTEntryMore$&amp;gt;
+&amp;lt;p class=&quot;blog-notes&quot;&amp;gt;
+  &amp;lt;a href=&quot;&amp;lt;$MTEntryAuthorURL$&amp;gt;&quot;&amp;gt;&amp;lt;$MTEntryAuthor$&amp;gt;&amp;lt;/a&amp;gt; | 
+  &amp;lt;$MTEntryDate format=&quot;%Y-%m-%d, %I:%M %p&quot;$&amp;gt; |
+  &amp;lt;a href=&quot;&amp;lt;$MTEntryPermalink$&amp;gt;&quot;&amp;gt;permlink &amp;amp;amp; comments&amp;lt;/a&amp;gt;
+  (&amp;lt;$MTEntryCommentCount$&amp;gt;)
+&amp;lt;/p&amp;gt;
+  &amp;lt;/div&amp;gt;
+  &amp;lt;/MTEntries&amp;gt;
 
-      &lt;MTEntries sort_order=&quot;ascend&quot;&gt;
-      &lt;div class=&quot;blog&quot;&gt;
-	&lt;h3 class=&quot;blogtitle&quot;&gt;&lt;$MTEntryTitle$&gt;&lt;/h3&gt;
-	&lt;$MTEntryBody$&gt;	
-	&lt;$MTEntryMore$&gt;
-	&lt;p class=&quot;blog-notes&quot;&gt;
-	  &lt;a href=&quot;&lt;$MTEntryAuthorURL$&gt;&quot;&gt;&lt;$MTEntryAuthor$&gt;&lt;/a&gt; | 
-	  &lt;$MTEntryDate format=&quot;%Y-%m-%d, %I:%M %p&quot;$&gt; |
-	  &lt;a href=&quot;&lt;$MTEntryPermalink$&gt;&quot;&gt;permlink &amp;amp; comments&lt;/a&gt;
-	  (&lt;$MTEntryCommentCount$&gt;)
-	&lt;/p&gt;
-      &lt;/div&gt;
-      &lt;/MTEntries&gt;
-
-    &lt;/div&gt;
-    &lt;$MTInclude file=&quot;bottom.html&quot;$&gt;
-    &lt;hr class='middle' /&gt;
-  &lt;/div&gt;
-
-  &lt;div class='leftcol'&gt;
-    &lt;$MTInclude file=&quot;leftcol.html&quot;$&gt;  
-  &lt;/div&gt;
+&amp;lt;/div&amp;gt;
+&amp;lt;$MTInclude file=&quot;bottom.html&quot;$&amp;gt;
+&amp;lt;hr class='middle' /&amp;gt;
+</code></pre>
+<p>&lt;/div&gt;</p>
+<p>&lt;div class='leftcol'&gt;
+&lt;$MTInclude file=&quot;leftcol.html&quot;$&gt;<br />
+&lt;/div&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-</pre>
-</td></tr></table>
+</code></pre></td></tr></tbody></table></p>
+<hr />
+<p>file modification time: 2003-12-17 23:18:50</p>
+<hr />
 
 </div>
-
-<div class="section"><p class="rightside">file modification time: 2003-12-17 23:18:50</p></div>
-
-<div class="section">
-<p class="centered">Copyright 1997-2013 by Hal Canary.<br>
-<i>mailto: halcanary at gmail dot com</i><br>
-<a href="https://halcanary.org"><i>http://halcanary.org</i></a></p>
-</div>
-
 </body>
 </html>

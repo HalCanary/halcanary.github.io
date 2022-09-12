@@ -1,0 +1,65 @@
+WHO WILL BE EATEN FIRST?
+========================
+
+Stolen from http://www.howardhallis.com/bis/cthulhuchick/
+
+<div style="width:700px; 
+		margin-left:auto;
+		margin-right:auto;
+		border: 1px solid black;
+		border-bottom: 2px solid black;		  
+		border-right: 2px solid black;
+		padding:10px;"><p style="font-family: sans-serif;
+		 font-size:xx-large;
+		 font-weight:700;
+		 text-align:center;
+		 ">WHO WILL BE EATEN FIRST?</p><p><em>One day, while sitting in a Cafe...</em></p><p><em>Old Man:</em> George, it's <b>vital</b> that you make the right decision before you die.</p><p><em>George:</em> You're going to say I have to choose between God and the devil, right?</p><p><em>Old Man:</em> WRONG! The stars are right! The Elder Gods are going to rise and eat us all!</p><div style="width:500px; 
+		margin-left:auto;
+		margin-right:auto;
+		color:black ;
+		background-color : #e6e6e6;
+		border: 1px solid black;
+		border-bottom: 2px solid black;		  
+		border-right: 2px solid black;
+		padding-left:10px;
+		padding-right:10px;"><p>“In his house at R'lyeh dead Cthulhu waits dreaming.” - H. P. Lovecraft</p><hr><p><em>Old Man:</em> Soon the evil spawn, who had slept for eons... will awaken to clear the earth of man!</p><div style="width:500px; 
+		margin-left:auto;
+		margin-right:auto;
+		color:black ;
+		background-color : #e6e6e6;
+		border: 1px solid black;
+		border-bottom: 2px solid black;		  
+		border-right: 2px solid black;
+		padding-left:10px;
+		padding-right:10px;"><p>“That is not dead which can eternal lie... And with strange aeons even death can die.” - H.P.L.</p><hr><p><em>Old Man:</em> NO ONE will be saved! EVERYONE will die and mankind itself will come to a horrible end!</p><div style="width:500px; 
+		margin-left:auto;
+		margin-right:auto;
+		color:black ;
+		background-color : #e6e6e6;
+		border: 1px solid black;
+		border-bottom: 2px solid black;		  
+		border-right: 2px solid black;
+		padding-left:10px;
+		padding-right:10px;"><p>“...I shall never sleep calmly again when I think of the horrors that lurk ceaselessly behind life in time and space, and of those unhallowed blasphemies from elder stars that dream beneath the sea...” - H.P.L.</p><hr><p><em>Old Man:</em> Soon the seas will turn red with the blood of the human race, as the unspeakable terrors come from beyond the gate, which is Yog Sothoth, to devour all th their path! Ia! Shub Niggutath! Ia! Ia!</p><p><em>George:</em> So if we're all gonna die, what difference does it make? Who cares? Nothing I can do about it...or is there?!</p><p><em>Old Man:</em> You're right George... It's hopeless. But there is one thing we can hope for... TO BE EATEN FIRST!</p><p><em>George:</em> BE EATEN FIRST?! What the fuck kind of advantage is that?! Give me one good reason why I would WANT to be eaten first! One Good reason!!!</p><p><em>Old Man:</em> Do you really want to stick around and watch the entire world be destroyed by evil creatures from beyond Hell?</p><p><em>George:</em> Not really... Oh God... you're right... I don't want to see it all end! I want to be eaten quickly! What do I have to do to make my death a swift one?</p><div style="width:500px; 
+		margin-left:auto;
+		margin-right:auto;
+		color:black ;
+		background-color : #e6e6e6;
+		border: 1px solid black;
+		border-bottom: 2px solid black;		  
+		border-right: 2px solid black;
+		padding-left:10px;
+		padding-right:10px;"><p>“The thing cannot be described - there is no language for such abysms of shricking and immemorial lunacy...” - H.P.L.</p><hr><p><em>Old Man:</em> You must worship and sacrifice at the altar to appease the appetites of the Elder Gods! Then you might hope for a fast death!</p><div style="width:500px; 
+		margin-left:auto;
+		margin-right:auto;
+		color:black ;
+		background-color : #e6e6e6;
+		border: 1px solid black;
+		border-bottom: 2px solid black;		  
+		border-right: 2px solid black;
+		padding-left:10px;
+		padding-right:10px;"><p><em>Worshiping the Elder Gods...</em></p><p><em>High Priest:</em> Ph'nglui mglw'nafh Cthuhlu R'lyeh wgah'nagl fhtagn!</p><p><em>Sacrifice:</em> WAAAHH</p><p><em>Worshiper (thinking):</em> Gasp... This can't be!</p><p><em>Worshipers:</em> CTHULHU FHTAGN!</p><hr><p><em>Old Man:</em> Chant invocations from the NECRONOMICON, the book of dead names written by the Mad Monk, Abdul Alhazred! Only then... on the dreaded day when they rise... Will you be eaten first!</p><hr><p style="font-family: sans-serif;
+		 font-size:x-large;
+		 font-weight:700;
+		 text-align:center;
+		 ">The Elder Gods are coming and everyone is doomed!</p><p>You might as well party and do all the shit you were always afraid to do!</p><p style="text-align:center">NOBODY CAN SAVE YOU.<br>WE WILL ALL BE EATEN</p><p>If you start to have dreams about cities where the geometry is all wrong and get inspired to make weird sculptures, do it!</p><ol><li>Don't worry about going mad. There's no avoiding it.</li><li>Be prepared for horrible visons and creatures that will chill you to the bone</li><li>Remember... Yog Sothoth is the gate!</li></ol><p><b>WHAT TO SAY:</b><br>Ph'nglui mglw'nafh Cthuhlu R'lyeh wgah'nagl fhtagn. Ph'nglui mglw'nafh Cthuhlu R'lyeh wgah'nagl fhtagn. Ph'nglui mglw'nafh Cthuhlu R'lyeh wgah'nagl fhtagn.</p><p>If you have done all this, and you go completely mad... the Elder Gods will eat you first! Or maybe not... maybe they'll torture you in their dank and rotting lairs,,, but you won't care by then because you'll be insane! A shell of a human being! BWA HA HA HA HA!</p><p><em>Just remember... That is not dead which can eternal lie... And with strange aeons even death can die.</em></p><p><b>Help another person go mad with the knowledge of horrible evil! Give them the Necronomicon!</b></p><hr><p>&nbsp;</p><hr><p class="rightside">file modification time: 2004-08-12 01:09:37</p><hr></div></div></div></div></div></div>

@@ -15,9 +15,7 @@
 <div class="rightside">
 
 *file modification time: 2003-07-16 05:18:50*  
-*Copyright 1997-2013 by Hal Canary.*    
-*mailto: halcanary at gmail dot com*  
-*<http://halcanary.org>*
+[HOME](/)
 
 </div>
 

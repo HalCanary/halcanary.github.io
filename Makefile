@@ -1,6 +1,4 @@
 all: theblog staticsite
-	src/make-old-pages
-	src/make-redirects
 
 theblog: blog $(shell find src/BlogSrc -type f)
 	./blog .

@@ -1,30 +1,68 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en-US">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Copyright 1997-2022 Hal Canary. ALL RIGHTS RESERVED. -->
-<title>World of Hal Canary</title>
-<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==">
-<link rel="stylesheet" type="text/css" href="/styles/scrapple-from-the-apple.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Hardware Notes</title>
+<link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==" rel="icon"/>
 <style>
-@media screen { body{
-    max-width: 35em;
-    margin: 22px auto 64px auto;
-    padding: 0 8px;
-} }
-body {
-    color: #000000;
-    background-color: #ffffff;
-    background-image: none;
-    text-align: initial;
+@media (prefers-color-scheme:dark) {body {background-color:#000;color:#FFF;}
+a:visited {color:#C0F;}
+a:link, a:hover, a:active {color:#0CF;}
 }
+@media print {body {max-width:8in;font-size:12px;margin:0;}
+}
+@media screen {body {font-family:sans-serif;max-width:35em;margin:22px auto 64px auto;padding:0 8px;}
+}
+body {overflow-wrap:break-word;}
+@page {size:auto;margin:0.25in 0.5in 0.5in 0.5in;}
+svg {fill:currentColor;}
+img {max-width:100%;height:auto;}
+hr {border-style:solid none;}
+.content {margin:1em 0;}
+.content hr {padding:0;margin:0;border:none;text-align:center;}
+.content hr:after {font-size:150%;content:"* \A0 * \A0 *";display:block;position:relative;}
+.rightside {text-align:right;}
+.centered {text-align:center;}
+pre {overflow-x:auto;}
+.byline > * {display:inline-block;border-style:solid;border-width:thin;padding:3px 8px;border-radius:5px;text-align:initial;}
+.byline {text-align:right;}
+.box {border-style:solid;border-width:thin;margin:8px 0;padding:0 8px;}
+a.hiddenlink:link {background:inherit;color:inherit;text-decoration:none;}
+a.hiddenlink:visited {background:inherit;color:inherit;text-decoration:none;}
+a.hiddenlink:active {background:inherit;color:inherit;text-decoration:none;}
+ul,ol {padding-left:30px;}
+table.border {border-collapse:collapse;margin:8px auto;}
+table.border tr > * {border-style:solid;border-width:thin;padding:3px 8px;border-radius:5px;}
+.tophead {text-align:center;margin:1ex auto 0 auto;max-width:35em;}
+.tightmargins li > ul > li {list-style-type:square;}
+.tightmargins h1,
+.tightmargins h2,
+.tightmargins p,
+.tightmargins ul {margin:0.5ex 0;}
+.tightmargins li > ul {margin:0 0 0.5ex 0;}
+.tightmargins ul {padding-left:30px;}
+.tightmargins li {margin:0 0 0.5ex 0;}
+.plainlink a:link,
+.plainlink a:visited,
+.plainlink a:hover,
+.plainlink a:active {color:inherit;text-decoration:underline;}
+.nolink a:link,
+.nolink a:visited,
+.nolink a:hover,
+.nolink a:active {color:inherit;text-decoration:none;}
+div.lcr {display:grid;grid-template-columns:auto auto auto;}
+ul.flat {list-style-type:none;margin:16px 0;padding:0;}
+ul.flat li {display:inline;}
+ul.flat li::after {content:"]";}
+ul.flat li::before {content:"[";}
 </style>
+<!--
+Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
+-->
 </head>
-
 <body>
-
-<h1><a href="/" class="hiddenlink">
+<div class="tophead" role="banner">
 <svg aria-label="Hal W Canary 3" role="img" viewBox="-200 0 800 91" width="100%">
 <title>Hal W Canary 3</title>
 <rect height="4" width="180" x="-200" y="43" />
@@ -73,134 +111,27 @@ C 325 43 324 42 322 43 C 319 45 322 52 323 54 C 324 58 327 59 328 63 C 329 67
 375 71 C 383 67 399 55 393 45 C 390 38 382 37 380 31 C 384 29 394 26 395 20 C
 395 17 392 15 389 13 C 384 9 378 6 372 10" />
 </svg>
-</a></h1>
-
-<nav class="section"><p><a href="/">Home</a></p></nav>
-
-<!-- p/vaio -->
-
-<div class="section">
-  
-  <p>
-    <img alt="[]" src="/photos/2002-12-15-vaio-w-kbd.jpg">
-  </p>
-  
-  <p><a href="http://creativelimits.net/linux/srx87/">Linux
-      Installation Insturctions.</a></p>
-  
-  <p><b>Update!</b></p>
-  
-  <p>
-    <a href="http://www.differentpla.net/%7Eroger/hardware/vaio/linux/">
-      It looks like someone was able to install linux on thier Vaio SRX87.</a>
-    Now I don't know if I need to go to the effort of duplicating that
-    effort, considering that I am relativly happy with things the way
-    things are.  I'll probably give it a try sometime in the future. </p>
-
-  <p><b>Update!</b></p>
-  
-  <p>In 2003, I installed RedHat 9 on the srx87 with little problems.
-    Some of the hardware is not detected, and the USB kernel module
-    gives a stream of errors.</p>
-
 </div>
-
-<div class="section">
-<h2>Hardware Notes</h2>
-<!-- HWC 2002-11-03 -->
+<div role="main">
+<p><img src="/photos/2002-12-15-vaio-w-kbd.jpg" alt="[]" /></p>
+<p><a href="http://creativelimits.net/linux/srx87/">Linux Installation Insturctions.</a></p>
+<p><strong>Update!</strong></p>
+<p><a href="http://www.differentpla.net/%7Eroger/hardware/vaio/linux/">It looks like someone was able to install linux on thier Vaio SRX87.</a> Now I don't know if I need to go to the effort of duplicating that effort, considering that I am relativly happy with things the way things are. I'll probably give it a try sometime in the future.</p>
+<p><strong>Update!</strong></p>
+<p>In 2003, I installed RedHat 9 on the srx87 with little problems. Some of the hardware is not detected, and the USB kernel module gives a stream of errors.</p>
+<hr />
+<h1>Hardware Notes</h1>
 <p>Sony VAIO PCG-SRX87</p>
-
 <ol>
-<li>Step 1:  Try to install as normal with latest RedHat Distro
-(8.0).  This failed.  The installer was unable to find the FireWire
-CD-ROM, although it would boot off of the CD-ROM.</li>
-<li>Next, I tried copying the installer files onto the harddrive.
-This failed.  The installer was unable to find the drivers for the
-hard drive.</li>
-<li>Now, I need to go find the appropriate drivers for the hard
-drive.</li> 
+<li>Step 1: Try to install as normal with latest RedHat Distro (8.0). This failed. The installer was unable to find the FireWire CD-ROM, although it would boot off of the CD-ROM.</li>
+<li>Next, I tried copying the installer files onto the harddrive. This failed. The installer was unable to find the drivers for the hard drive.</li>
+<li>Now, I need to go find the appropriate drivers for the hard drive.</li>
 </ol>
-
-<table class="p">
-<tr>
-<th colspan="2">Devices</th>
-</tr>
-<tr>
-  <td>Processor</td>
-  <td>Interl Pentium III Mobile (850 MHz)</td>
-</tr>
-<tr>
-  <td>Modem</td>
-  <td>Conexant-Ambit SoftK56 Data,Fax ICH Modem</td>
-</tr>
-<tr>
-  <td>IDE Controller</td>
-  <td>Intel 82801BA Bus Master</td>
-</tr>
-<tr>
-  <td>Hard Disk</td>
-  <td>HITACHI_DK23DA-20</td>
-</tr>
-<tr>
-  <td>USB</td>
-  <td>Intel 82801BA/BAM USB Universal Host Controller</td>
-</tr>
-<tr>
-  <td>Pointing Device</td>
-  <td>Alps Pointing Device</td>
-</tr>
-<tr>
-  <td>Keyboard</td>
-  <td>Standard 101/102 Key PS/2 Keyboard</td>
-</tr>
-<tr>
-  <td>PCMCIA</td>
-  <td>Ricoh R/RL/RT/RC/5C475(II), RC520 or Compatable CardBus Controller</td>
-</tr>
-<tr>
-  <td>Firewire Controller</td>
-  <td>Texas Instruments OHCI COmplieant IEEE 1394 Host Controller</td>
-</tr>
-<tr>
-  <td>External DVD-ROM</td>
-  <td>Sony i.LINK DVD-ROM Drive IEEE SBP2 Device.</td>
-</tr>
-<tr>
-  <td>Wireless</td>
-  <td>Texas Instruments PCI-1410 CardBus Controller
-  <br />ORiNOCO Wireless LAN MiniPCI Card </td>
-</tr>
-<tr>
-  <td>Ethernet</td>
-  <td>Intel PRO/100 Network Connection</td>
-</tr>
-<tr>
-  <td>Video Card</td>
-  <td>Intel 82815 Graphics Controller</td>
-</tr>
-<tr>
-  <td>LCD Screen</td>
-  <td>Sony Notebook LCD (1024x768)</td>
-</tr>
-<tr>
-  <td>Audio</td>
-  <td>Yamaha AC-XG Audio Device</td>
-</tr>
-<tr>
-  <td></td>
-  <td></td>
-</tr>
-</table>
+<table class="p"><tbody><tr><th colspan="2">Devices</th></tr><tr><td>Processor</td><td>Interl Pentium III Mobile (850 MHz)</td></tr><tr><td>Modem</td><td>Conexant-Ambit SoftK56 Data,Fax ICH Modem</td></tr><tr><td>IDE Controller</td><td>Intel 82801BA Bus Master</td></tr><tr><td>Hard Disk</td><td>HITACHI_DK23DA-20</td></tr><tr><td>USB</td><td>Intel 82801BA/BAM USB Universal Host Controller</td></tr><tr><td>Pointing Device</td><td>Alps Pointing Device</td></tr><tr><td>Keyboard</td><td>Standard 101/102 Key PS/2 Keyboard</td></tr><tr><td>PCMCIA</td><td>Ricoh R/RL/RT/RC/5C475(II), RC520 or Compatable CardBus Controller</td></tr><tr><td>Firewire Controller</td><td>Texas Instruments OHCI COmplieant IEEE 1394 Host Controller</td></tr><tr><td>External DVD-ROM</td><td>Sony i.LINK DVD-ROM Drive IEEE SBP2 Device.</td></tr><tr><td>Wireless</td><td>Texas Instruments PCI-1410 CardBus Controller<br>ORiNOCO Wireless LAN MiniPCI Card</td></tr><tr><td>Ethernet</td><td>Intel PRO/100 Network Connection</td></tr><tr><td>Video Card</td><td>Intel 82815 Graphics Controller</td></tr><tr><td>LCD Screen</td><td>Sony Notebook LCD (1024x768)</td></tr><tr><td>Audio</td><td>Yamaha AC-XG Audio Device</td></tr><tr><td></td><td></td></tr></tbody></table>
+<hr />
+<p>file modification time: 2004-04-28 21:07:07</p>
+<hr />
 
 </div>
-
-<div class="section"><p class="rightside">file modification time: 2004-04-28 21:07:07</p></div>
-
-<div class="section">
-<p class="centered">Copyright 1997-2013 by Hal Canary.<br>
-<i>mailto: halcanary at gmail dot com</i><br>
-<a href="https://halcanary.org"><i>http://halcanary.org</i></a></p>
-</div>
-
 </body>
 </html>

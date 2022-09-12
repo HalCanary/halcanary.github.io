@@ -1,30 +1,68 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en-US">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Copyright 1997-2022 Hal Canary. ALL RIGHTS RESERVED. -->
-<title>World of Hal Canary</title>
-<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==">
-<link rel="stylesheet" type="text/css" href="/styles/scrapple-from-the-apple.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Howto Install IceWM under Fedora.</title>
+<link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==" rel="icon"/>
 <style>
-@media screen { body{
-    max-width: 35em;
-    margin: 22px auto 64px auto;
-    padding: 0 8px;
-} }
-body {
-    color: #000000;
-    background-color: #ffffff;
-    background-image: none;
-    text-align: initial;
+@media (prefers-color-scheme:dark) {body {background-color:#000;color:#FFF;}
+a:visited {color:#C0F;}
+a:link, a:hover, a:active {color:#0CF;}
 }
+@media print {body {max-width:8in;font-size:12px;margin:0;}
+}
+@media screen {body {font-family:sans-serif;max-width:35em;margin:22px auto 64px auto;padding:0 8px;}
+}
+body {overflow-wrap:break-word;}
+@page {size:auto;margin:0.25in 0.5in 0.5in 0.5in;}
+svg {fill:currentColor;}
+img {max-width:100%;height:auto;}
+hr {border-style:solid none;}
+.content {margin:1em 0;}
+.content hr {padding:0;margin:0;border:none;text-align:center;}
+.content hr:after {font-size:150%;content:"* \A0 * \A0 *";display:block;position:relative;}
+.rightside {text-align:right;}
+.centered {text-align:center;}
+pre {overflow-x:auto;}
+.byline > * {display:inline-block;border-style:solid;border-width:thin;padding:3px 8px;border-radius:5px;text-align:initial;}
+.byline {text-align:right;}
+.box {border-style:solid;border-width:thin;margin:8px 0;padding:0 8px;}
+a.hiddenlink:link {background:inherit;color:inherit;text-decoration:none;}
+a.hiddenlink:visited {background:inherit;color:inherit;text-decoration:none;}
+a.hiddenlink:active {background:inherit;color:inherit;text-decoration:none;}
+ul,ol {padding-left:30px;}
+table.border {border-collapse:collapse;margin:8px auto;}
+table.border tr > * {border-style:solid;border-width:thin;padding:3px 8px;border-radius:5px;}
+.tophead {text-align:center;margin:1ex auto 0 auto;max-width:35em;}
+.tightmargins li > ul > li {list-style-type:square;}
+.tightmargins h1,
+.tightmargins h2,
+.tightmargins p,
+.tightmargins ul {margin:0.5ex 0;}
+.tightmargins li > ul {margin:0 0 0.5ex 0;}
+.tightmargins ul {padding-left:30px;}
+.tightmargins li {margin:0 0 0.5ex 0;}
+.plainlink a:link,
+.plainlink a:visited,
+.plainlink a:hover,
+.plainlink a:active {color:inherit;text-decoration:underline;}
+.nolink a:link,
+.nolink a:visited,
+.nolink a:hover,
+.nolink a:active {color:inherit;text-decoration:none;}
+div.lcr {display:grid;grid-template-columns:auto auto auto;}
+ul.flat {list-style-type:none;margin:16px 0;padding:0;}
+ul.flat li {display:inline;}
+ul.flat li::after {content:"]";}
+ul.flat li::before {content:"[";}
 </style>
+<!--
+Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
+-->
 </head>
-
 <body>
-
-<h1><a href="/" class="hiddenlink">
+<div class="tophead" role="banner">
 <svg aria-label="Hal W Canary 3" role="img" viewBox="-200 0 800 91" width="100%">
 <title>Hal W Canary 3</title>
 <rect height="4" width="180" x="-200" y="43" />
@@ -73,106 +111,89 @@ C 325 43 324 42 322 43 C 319 45 322 52 323 54 C 324 58 327 59 328 63 C 329 67
 375 71 C 383 67 399 55 393 45 C 390 38 382 37 380 31 C 384 29 394 26 395 20 C
 395 17 392 15 389 13 C 384 9 378 6 372 10" />
 </svg>
-</a></h1>
-
-<nav class="section"><p><a href="/">Home</a></p></nav>
-
-<!-- p/fedora-icewm -->
-
-<div class="section">
-<h2>Howto Install IceWM under Fedora.</h2>
-
+</div>
+<div role="main">
+<h1>Howto Install IceWM under Fedora.</h1>
 <p>[<a href="/archives/000417.html">background</a>]</p>
-
-<p>1) Add the dag repo to yum:</p>
-<pre class="indent">$ sudo rpm --import 'http://dag.wieers.com/packages/RPM-GPG-KEY.dag.txt'</pre>
-
+<ol>
+<li>
+<p>Add the dag repo to yum:</p>
+<p>$ sudo rpm --import 'http://dag.wieers.com/packages/RPM-GPG-KEY.dag.txt'</p>
+</li>
+</ol>
 <p>Edit the file '/etc/yum.conf' and add these lines:</p>
-
-<pre class="indent">[dag]
+<pre><code>[dag]
 name=Dag APT Repository
 baseurl=http://dag.freshrpms.net/fedora/$releasever/en/$basearch/dag/
   http://dag.atrpms.net/fedora/$releasever/en/$basearch/dag/
 enabled=0
-gpgcheck=1</pre>
-
-<p>2) Install:</p>
-<pre class="indent">$ sudo yum -y --enablerepo dag install icewm</pre>
-
-<p>3) Switch your default:</p>
-
-<pre class="indent">$ switchdesk icewm</pre>
-
-<p>4) (Optional) Config Files</p>
-
-<pre class="indent">$ mkdir $HOME/.icewm
+gpgcheck=1
+</code></pre>
+<ol start="2">
+<li>
+<p>Install:</p>
+<p>$ sudo yum -y --enablerepo dag install icewm</p>
+</li>
+<li>
+<p>Switch your default:</p>
+<p>$ switchdesk icewm</p>
+</li>
+<li>
+<p>(Optional) Config Files</p>
+<p>$ mkdir $HOME/.icewm
 $ cd /usr/share/icewm
-$ cp menu preferences keys toolbar $HOME/.icewm
-
-$ cd $HOME/.icewm
-$ touch startup 
-$ chmod +x startup
-
-$ echo 'gnome-terminal &' &gt;&gt; startup</pre>
-
-<p>   Add to toolbar:</p>
-<pre class="indent">prog "Gnome Terminal" xterm gnome-terminal
-prog "Mozilla Firefox" "/usr/lib/firefox-1.0/icons/mozicon16.xpm"
-firefox</pre>
-
-
+$ cp menu preferences keys toolbar $HOME/.icewm</p>
+<p>$ cd $HOME/.icewm
+$ touch startup
+$ chmod +x startup</p>
+<p>$ echo 'gnome-terminal &amp;' &gt;&gt; startup</p>
+</li>
+</ol>
+<p>Add to toolbar:</p>
+<pre><code>prog &quot;Gnome Terminal&quot; xterm gnome-terminal
+prog &quot;Mozilla Firefox&quot; &quot;/usr/lib/firefox-1.0/icons/mozicon16.xpm&quot;
+firefox
+</code></pre>
 <p>Add to menu:</p>
-<pre class="indent">prog "Mozilla Firefox"
-  "/usr/lib/firefox-1.0/icons/mozicon16.xpm" firefox
-prog "Gnome Terminal" xterm gnome-terminal
+<pre><code>prog &quot;Mozilla Firefox&quot;
+  &quot;/usr/lib/firefox-1.0/icons/mozicon16.xpm&quot; firefox
+prog &quot;Gnome Terminal&quot; xterm gnome-terminal
 separator
-prog "Music Player" "" rhythmbox
-prog "Instant Message" "" gaim
+prog &quot;Music Player&quot; &quot;&quot; rhythmbox
+prog &quot;Instant Message&quot; &quot;&quot; gaim
 prog Gimp gimp gimp
 prog Azureus azureus azureus
-prog Emacs emacs emacs</pre>
-
-<p>   To load changes:</p>
-<pre class="indent">$ killall -HUP icewm</pre>
-
-<p>I just grabed a new theme. 
-<a href="http://themes.freshmeat.net/projects/truecurve/">
-  TrueCurve</a>.  </p>
-<pre class="indent">
-$ mkdir -p ~/.icewm/themes
+prog Emacs emacs emacs
+</code></pre>
+<p>To load changes:</p>
+<pre><code>$ killall -HUP icewm
+</code></pre>
+<p>I just grabed a new theme. <a href="http://themes.freshmeat.net/projects/truecurve/">TrueCurve</a>.</p>
+<pre><code>$ mkdir -p ~/.icewm/themes
 $ cd ~/.icewm/themes
 $ tar xzvf [wherever]/truecurve-default-1.0.4.tar.gz
 $ killall -HUP icewm
-</pre>
-
+</code></pre>
 <p>My preferences:</p>
-<pre class="indent">
-KeyWinMaximizeVert="Alt+Ctrl+v"
-KeyWinMaximizeHoriz="Alt+Ctrl+h"
-KeyWinFullscreen="Alt+Ctrl+f"
-</pre>
+<pre><code>KeyWinMaximizeVert=&quot;Alt+Ctrl+v&quot;
+KeyWinMaximizeHoriz=&quot;Alt+Ctrl+h&quot;
+KeyWinFullscreen=&quot;Alt+Ctrl+f&quot;
+</code></pre>
 <p>My keys</p>
-<pre class="indent">
-key "Alt+Ctrl+l"	/home/hal/bin/xss-lock
-key "Alt+Ctrl+a"	/home/hal/bin/xss-activate
-key "Alt+Ctrl+e"	/home/hal/bin/xss-exit
-key "Alt+Ctrl+s"	/home/hal/bin/screenshot
-key "Alt+Ctrl+p"	rhythmbox --play-pause
-key "Alt+Ctrl+n"	rhythmbox --next
-key "Alt+Ctrl+m"	emacs
-key "Shift+Ctrl+KP_Add"	aumix -w -10
-key "Shift+Ctrl+KP_Subtract"	aumix -w +10
-</pre>
+<pre><code>key &quot;Alt+Ctrl+l&quot;	/home/hal/bin/xss-lock
+key &quot;Alt+Ctrl+a&quot;	/home/hal/bin/xss-activate
+key &quot;Alt+Ctrl+e&quot;	/home/hal/bin/xss-exit
+key &quot;Alt+Ctrl+s&quot;	/home/hal/bin/screenshot
+key &quot;Alt+Ctrl+p&quot;	rhythmbox --play-pause
+key &quot;Alt+Ctrl+n&quot;	rhythmbox --next
+key &quot;Alt+Ctrl+m&quot;	emacs
+key &quot;Shift+Ctrl+KP_Add&quot;	aumix -w -10
+key &quot;Shift+Ctrl+KP_Subtract&quot;	aumix -w +10
+</code></pre>
+<hr />
+<p>file modification time: 2005-03-04 20:58:15</p>
+<hr />
 
 </div>
-
-<div class="section"><p class="rightside">file modification time: 2005-03-04 20:58:15</p></div>
-
-<div class="section">
-<p class="centered">Copyright 1997-2013 by Hal Canary.<br>
-<i>mailto: halcanary at gmail dot com</i><br>
-<a href="https://halcanary.org"><i>http://halcanary.org</i></a></p>
-</div>
-
 </body>
 </html>

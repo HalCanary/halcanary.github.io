@@ -1,30 +1,68 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en-US">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Copyright 1997-2022 Hal Canary. ALL RIGHTS RESERVED. -->
-<title>World of Hal Canary</title>
-<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==">
-<link rel="stylesheet" type="text/css" href="/styles/scrapple-from-the-apple.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Getting my Canon PowerShot A40 working under RedHat Linux 7.3 with gphoto2</title>
+<link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==" rel="icon"/>
 <style>
-@media screen { body{
-    max-width: 35em;
-    margin: 22px auto 64px auto;
-    padding: 0 8px;
-} }
-body {
-    color: #000000;
-    background-color: #ffffff;
-    background-image: none;
-    text-align: initial;
+@media (prefers-color-scheme:dark) {body {background-color:#000;color:#FFF;}
+a:visited {color:#C0F;}
+a:link, a:hover, a:active {color:#0CF;}
 }
+@media print {body {max-width:8in;font-size:12px;margin:0;}
+}
+@media screen {body {font-family:sans-serif;max-width:35em;margin:22px auto 64px auto;padding:0 8px;}
+}
+body {overflow-wrap:break-word;}
+@page {size:auto;margin:0.25in 0.5in 0.5in 0.5in;}
+svg {fill:currentColor;}
+img {max-width:100%;height:auto;}
+hr {border-style:solid none;}
+.content {margin:1em 0;}
+.content hr {padding:0;margin:0;border:none;text-align:center;}
+.content hr:after {font-size:150%;content:"* \A0 * \A0 *";display:block;position:relative;}
+.rightside {text-align:right;}
+.centered {text-align:center;}
+pre {overflow-x:auto;}
+.byline > * {display:inline-block;border-style:solid;border-width:thin;padding:3px 8px;border-radius:5px;text-align:initial;}
+.byline {text-align:right;}
+.box {border-style:solid;border-width:thin;margin:8px 0;padding:0 8px;}
+a.hiddenlink:link {background:inherit;color:inherit;text-decoration:none;}
+a.hiddenlink:visited {background:inherit;color:inherit;text-decoration:none;}
+a.hiddenlink:active {background:inherit;color:inherit;text-decoration:none;}
+ul,ol {padding-left:30px;}
+table.border {border-collapse:collapse;margin:8px auto;}
+table.border tr > * {border-style:solid;border-width:thin;padding:3px 8px;border-radius:5px;}
+.tophead {text-align:center;margin:1ex auto 0 auto;max-width:35em;}
+.tightmargins li > ul > li {list-style-type:square;}
+.tightmargins h1,
+.tightmargins h2,
+.tightmargins p,
+.tightmargins ul {margin:0.5ex 0;}
+.tightmargins li > ul {margin:0 0 0.5ex 0;}
+.tightmargins ul {padding-left:30px;}
+.tightmargins li {margin:0 0 0.5ex 0;}
+.plainlink a:link,
+.plainlink a:visited,
+.plainlink a:hover,
+.plainlink a:active {color:inherit;text-decoration:underline;}
+.nolink a:link,
+.nolink a:visited,
+.nolink a:hover,
+.nolink a:active {color:inherit;text-decoration:none;}
+div.lcr {display:grid;grid-template-columns:auto auto auto;}
+ul.flat {list-style-type:none;margin:16px 0;padding:0;}
+ul.flat li {display:inline;}
+ul.flat li::after {content:"]";}
+ul.flat li::before {content:"[";}
 </style>
+<!--
+Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
+-->
 </head>
-
 <body>
-
-<h1><a href="/" class="hiddenlink">
+<div class="tophead" role="banner">
 <svg aria-label="Hal W Canary 3" role="img" viewBox="-200 0 800 91" width="100%">
 <title>Hal W Canary 3</title>
 <rect height="4" width="180" x="-200" y="43" />
@@ -73,32 +111,15 @@ C 325 43 324 42 322 43 C 319 45 322 52 323 54 C 324 58 327 59 328 63 C 329 67
 375 71 C 383 67 399 55 393 45 C 390 38 382 37 380 31 C 384 29 394 26 395 20 C
 395 17 392 15 389 13 C 384 9 378 6 372 10" />
 </svg>
-</a></h1>
-
-<nav class="section"><p><a href="/">Home</a></p></nav>
-
-<!-- p/a40 -->
-
-<div class="section"> 
-<h2>Getting my Canon PowerShot A40 working under RedHat Linux 7.3 with
-gphoto2</h2>
-
+</div>
+<div role="main">
+<h1>Getting my Canon PowerShot A40 working under RedHat Linux 7.3 with gphoto2</h1>
 <p><a href="/p/photos/">See some photos</a>.</p>
-
-<p class="centered"><img src="/images/A40.jpg" alt="pic of A40" /></p>
-
-<p>
-Before you start, glance through the gphoto2 man page.
-</p>
-
+<p><img src="/images/A40.jpg" alt="pic of A40" /></p>
+<p>Before you start, glance through the gphoto2 man page.</p>
 <h3>Getting gphoto2 to recognize the A40</h3>
-
-<p>
-First of all, check the version of gphoto2
-</p>
-
-<pre>
-$ /usr/bin/gphoto2 -v
+<p>First of all, check the version of gphoto2</p>
+<pre><code>$ /usr/bin/gphoto2 -v
 gPhoto (v2.0) - Cross-platform digital camera library.
 Copyright (C) 2000,2001 Scott Fritzinger and others
 Licensed under the Library GNU Public License (LGPL).
@@ -110,36 +131,19 @@ ERROR: Please specify a model.
 For debugging messages, please use the --debug option.
 Debugging messages may help finding a solution to your problem.
 If you intend to send any error or debug messages to the gphoto
-developer mailing list &lt;gphoto-devel@gphoto.org>, please run
+developer mailing list &lt;gphoto-devel@gphoto.org&gt;, please run
 gphoto2 as follows:
 
     env LANG=C gphoto2 --debug -L
 
 Please make sure there is sufficient quoting around the arguments.
-</pre>
-
-<p>
-Version 2.0 does not support the A40, so you'll have to try a command
-line that looks like this:
-</p>
-
-<pre>
-$ gphoto2 --usbid 0x04a9:0x3058=0x04a9:0x304e -L
-</pre>
-
-<p>
-But a better solution would be to download version 2.1 from 
-<a href="http://prdownloads.sourceforge.net/gphoto/gphoto2-2.1.0.tar.gz">
-sourceforge</a>.  gPhoto v2.1.0 supports the A40.  You'll have to
-build from the source.
-</p>
-
-<p>
-Now, su to root, and try 
-</p>
-
-<pre>
-$ gphoto2 -v
+</code></pre>
+<p>Version 2.0 does not support the A40, so you'll have to try a command line that looks like this:</p>
+<pre><code>$ gphoto2 --usbid 0x04a9:0x3058=0x04a9:0x304e -L
+</code></pre>
+<p>But a better solution would be to download version 2.1 from <a href="http://prdownloads.sourceforge.net/gphoto/gphoto2-2.1.0.tar.gz">sourceforge</a>. gPhoto v2.1.0 supports the A40. You'll have to build from the source.</p>
+<p>Now, su to root, and try</p>
+<pre><code>$ gphoto2 -v
 gPhoto (v2.1.0) - Cross-platform digital camera library.
 Copyright (C) 2000-2002 Scott Fritzinger and others
 Licensed under the Library GNU Public License (LGPL).
@@ -152,46 +156,23 @@ There are 2 files in folder '/DCIM/100CANON':
 #1     IMG_0020.JPG               rd   458 KB image/jpeg
 #2     IMG_0021.JPG               rd   429 KB image/jpeg
 There are no files in folder '/DCIM/CANONMSC'.
-</pre>
-
+</code></pre>
 <h3>Permissions</h3>
-
-<p>
-I got most of this from 
-<a href="http://n-dimensional.de/projects/digicam/The_gPhoto2_Manual/html/permissions-usb.html">
-here</a>.
-</p>
-
-<p>
-Don't want to have to su to root all of the time?  Let's get the
-hotplug set up so that we don't have to worry about it.  In this case,
-we'll just want whoever has ownership of /dev/console to be able to
-access any usb devices on the machine.  
-The important files should libe in /etc/hotplug.  
-</p>
-
+<p>I got most of this from <a href="http://n-dimensional.de/projects/digicam/The_gPhoto2_Manual/html/permissions-usb.html">here</a>.</p>
+<p>Don't want to have to su to root all of the time? Let's get the hotplug set up so that we don't have to worry about it. In this case, we'll just want whoever has ownership of /dev/console to be able to access any usb devices on the machine. The important files should libe in /etc/hotplug.</p>
 <p>Instructions:</p>
-
 <ol>
 <li>$ cd /etc/hotplug/</li>
-<li>$ cp usb.usermap usb.usermap.old </li> 
-<li>Edit usb.usermap.  Remove all lines that start with the word usbcam.</li> 
-<li>$ gphoto2 --print-usb-usermap >> usb.usermap </li> 
-<li>Make sure that there is a script called /etc/hotplug/usb/usbcam </li> 
+<li>$ cp usb.usermap usb.usermap.old</li>
+<li>Edit usb.usermap. Remove all lines that start with the word usbcam.</li>
+<li>$ gphoto2 --print-usb-usermap &gt;&gt; usb.usermap</li>
+<li>Make sure that there is a script called /etc/hotplug/usb/usbcam</li>
 </ol>
+<p>I think that's all I had to do.</p>
+<hr />
+<p>file modification time: 2003-07-16 05:18:43</p>
+<hr />
 
-<p>
-I think that's all I had to do. 
-</p>
 </div>
-
-<div class="section"><p class="rightside">file modification time: 2003-07-16 05:18:43</p></div>
-
-<div class="section">
-<p class="centered">Copyright 1997-2013 by Hal Canary.<br>
-<i>mailto: halcanary at gmail dot com</i><br>
-<a href="https://halcanary.org"><i>http://halcanary.org</i></a></p>
-</div>
-
 </body>
 </html>

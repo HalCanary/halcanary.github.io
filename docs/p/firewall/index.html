@@ -1,30 +1,68 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en-US">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Copyright 1997-2022 Hal Canary. ALL RIGHTS RESERVED. -->
-<title>World of Hal Canary</title>
-<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==">
-<link rel="stylesheet" type="text/css" href="/styles/scrapple-from-the-apple.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Firewall Notes</title>
+<link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==" rel="icon"/>
 <style>
-@media screen { body{
-    max-width: 35em;
-    margin: 22px auto 64px auto;
-    padding: 0 8px;
-} }
-body {
-    color: #000000;
-    background-color: #ffffff;
-    background-image: none;
-    text-align: initial;
+@media (prefers-color-scheme:dark) {body {background-color:#000;color:#FFF;}
+a:visited {color:#C0F;}
+a:link, a:hover, a:active {color:#0CF;}
 }
+@media print {body {max-width:8in;font-size:12px;margin:0;}
+}
+@media screen {body {font-family:sans-serif;max-width:35em;margin:22px auto 64px auto;padding:0 8px;}
+}
+body {overflow-wrap:break-word;}
+@page {size:auto;margin:0.25in 0.5in 0.5in 0.5in;}
+svg {fill:currentColor;}
+img {max-width:100%;height:auto;}
+hr {border-style:solid none;}
+.content {margin:1em 0;}
+.content hr {padding:0;margin:0;border:none;text-align:center;}
+.content hr:after {font-size:150%;content:"* \A0 * \A0 *";display:block;position:relative;}
+.rightside {text-align:right;}
+.centered {text-align:center;}
+pre {overflow-x:auto;}
+.byline > * {display:inline-block;border-style:solid;border-width:thin;padding:3px 8px;border-radius:5px;text-align:initial;}
+.byline {text-align:right;}
+.box {border-style:solid;border-width:thin;margin:8px 0;padding:0 8px;}
+a.hiddenlink:link {background:inherit;color:inherit;text-decoration:none;}
+a.hiddenlink:visited {background:inherit;color:inherit;text-decoration:none;}
+a.hiddenlink:active {background:inherit;color:inherit;text-decoration:none;}
+ul,ol {padding-left:30px;}
+table.border {border-collapse:collapse;margin:8px auto;}
+table.border tr > * {border-style:solid;border-width:thin;padding:3px 8px;border-radius:5px;}
+.tophead {text-align:center;margin:1ex auto 0 auto;max-width:35em;}
+.tightmargins li > ul > li {list-style-type:square;}
+.tightmargins h1,
+.tightmargins h2,
+.tightmargins p,
+.tightmargins ul {margin:0.5ex 0;}
+.tightmargins li > ul {margin:0 0 0.5ex 0;}
+.tightmargins ul {padding-left:30px;}
+.tightmargins li {margin:0 0 0.5ex 0;}
+.plainlink a:link,
+.plainlink a:visited,
+.plainlink a:hover,
+.plainlink a:active {color:inherit;text-decoration:underline;}
+.nolink a:link,
+.nolink a:visited,
+.nolink a:hover,
+.nolink a:active {color:inherit;text-decoration:none;}
+div.lcr {display:grid;grid-template-columns:auto auto auto;}
+ul.flat {list-style-type:none;margin:16px 0;padding:0;}
+ul.flat li {display:inline;}
+ul.flat li::after {content:"]";}
+ul.flat li::before {content:"[";}
 </style>
+<!--
+Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
+-->
 </head>
-
 <body>
-
-<h1><a href="/" class="hiddenlink">
+<div class="tophead" role="banner">
 <svg aria-label="Hal W Canary 3" role="img" viewBox="-200 0 800 91" width="100%">
 <title>Hal W Canary 3</title>
 <rect height="4" width="180" x="-200" y="43" />
@@ -73,22 +111,13 @@ C 325 43 324 42 322 43 C 319 45 322 52 323 54 C 324 58 327 59 328 63 C 329 67
 375 71 C 383 67 399 55 393 45 C 390 38 382 37 380 31 C 384 29 394 26 395 20 C
 395 17 392 15 389 13 C 384 9 378 6 372 10" />
 </svg>
-</a></h1>
-
-<nav class="section"><p><a href="/">Home</a></p></nav>
-
-<!-- p/firewall -->
-
-<div class="section">
-  <h2>Firewall Notes</h2>
-
-  <div class="subsection">
-    <h3>Quickstart:</h3>
-    <p>Instructions for configuring a linux firewall for a simple
-      non-routing workstaion.</p>
-    <p>Save this file as <code>/usr/local/sbin/iptables-script.sh</code> :</p>
-<pre style="margin-left:2em;">
-#!/bin/sh
+</div>
+<div role="main">
+<h1>Firewall Notes</h1>
+<h3>Quickstart:</h3>
+<p>Instructions for configuring a linux firewall for a simple non-routing workstaion.</p>
+<p>Save this file as <code>/usr/local/sbin/iptables-script.sh</code> :</p>
+<pre><code>#!/bin/sh
 PATH=/sbin:$PATH
 iptables --flush
 iptables --delete-chain
@@ -101,39 +130,18 @@ iptables -A INPUT -p icmp -m icmp --icmp-type 255 -j ACCEPT
 iptables -A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
 iptables -A INPUT -p tcp -m state --state NEW -m tcp --dport 22 -j ACCEPT
 iptables -A INPUT -j REJECT --reject-with icmp-host-prohibited
-</pre>
-
-    <p>Then, as root, execute this script. 
-      If everything works as planned, set up your system to implement
-      these rules at every boot.
-      If you use a redhat-type system, run:</p>
-    <pre style="margin-left:2em;">
-/sbin/service iptables save
+</code></pre>
+<p>Then, as root, execute this script. If everything works as planned, set up your system to implement these rules at every boot. If you use a redhat-type system, run:</p>
+<pre><code>/sbin/service iptables save
 /sbin/chkconfig iptables on
-</pre>
-    <p>If that doesn't work, you could try calling the script from
-      <code>/etc/rc.local</code> .</p>
-
-  </div>
-  <div class="subsection">
-    <h3>Dirty! Dirty boy!</h3>
-    
-    <p>The internet is a dirty place.  I'm not talking about porn, I'm
-      talking about worms, trojans, and viruses.</p>
-    <p>By the way, what is the difference between worms, trojans, and
-      viruses?  They all are forms of <em>malware</em>, distinguished by
-      how they reproduce.  <em>Worms</em> can infect other computers
-      directly over the internet.  <em>Viruses</em> propagate by
-      hitching a ride with otherwise good information (Word documents,
-      legitimate email).  <em>Trojans</em> pretend to be good
-      information, but are not.</p>
-    <p>This logwatch report shows 289 dropped packets in a day.  I
-      didn't log all dropped packets (<code>-m limit --limit 1/min</code>);
-      one in three didn't get logged.  And I dropped another 10,000 or
-      so sent to 255.255.255.255, the broadcast address.</p>
-
-<pre style="margin-left:2em; overflow: auto; height: 300px;">
- ################### LogWatch 4.3.2 (02/18/03) ##################
+</code></pre>
+<p>If that doesn't work, you could try calling the script from <code>/etc/rc.local</code> .</p>
+<hr />
+<h3>Dirty! Dirty boy!</h3>
+<p>The internet is a dirty place. I'm not talking about porn, I'm talking about worms, trojans, and viruses.</p>
+<p>By the way, what is the difference between worms, trojans, and viruses? They all are forms of <em>malware</em>, distinguished by how they reproduce. <em>Worms</em> can infect other computers directly over the internet. <em>Viruses</em> propagate by hitching a ride with otherwise good information (Word documents, legitimate email). <em>Trojans</em> pretend to be good information, but are not.</p>
+<p>This logwatch report shows 289 dropped packets in a day. I didn't log all dropped packets (<code>-m limit --limit 1/min</code>); one in three didn't get logged. And I dropped another 10,000 or so sent to 255.255.255.255, the broadcast address.</p>
+<pre><code> ################### LogWatch 4.3.2 (02/18/03) ##################
        Processing Initiated: Fri Apr  9 04:02:02 2004
        Date Range Processed: yesterday
      Detail Level of Output: 0
@@ -145,33 +153,33 @@ iptables -A INPUT -j REJECT --reject-with icmp-host-prohibited
 Dropped 289 packets on interface eth0
    From 4.43.201.77 - 2 packets
       To 66.191.XXX.XXX - 2 packets
-         Service: asp <a href="http://isc.sans.org/port_details.php?port=27374">(tcp/27374)</a> (eth0,none) - 2 packets
+         Service: asp (tcp/27374) (eth0,none) - 2 packets
    From 24.103.27.182 - 2 packets
       To 66.191.XXX.XXX - 2 packets
-         Service: 81 <a href="http://isc.sans.org/port_details.php?port=81">(tcp/81)</a> (eth0,none) - 2 packets
+         Service: 81 (tcp/81) (eth0,none) - 2 packets
    From 24.118.142.205 - 3 packets
       To 66.191.XXX.XXX - 3 packets
-         Service: 1214 <a href="http://isc.sans.org/port_details.php?port=1214">(udp/1214)</a> (eth0,none) - 3 packets
+         Service: 1214 (udp/1214) (eth0,none) - 3 packets
    From 24.130.88.220 - 4 packets
       To 66.191.XXX.XXX - 4 packets
-         Service: 1026 <a href="http://isc.sans.org/port_details.php?port=1026">(udp/1026)</a> (eth0,none) - 2 packets
-         Service: 1027 <a href="http://isc.sans.org/port_details.php?port=1027">(udp/1027)</a> (eth0,none) - 2 packets
+         Service: 1026 (udp/1026) (eth0,none) - 2 packets
+         Service: 1027 (udp/1027) (eth0,none) - 2 packets
    From 24.176.84.73 - 1 packet
       To 66.191.XXX.XXX - 1 packet
-         Service: 6129 <a href="http://isc.sans.org/port_details.php?port=6129">(tcp/6129)</a> (eth0,none) - 1 packet
+         Service: 6129 (tcp/6129) (eth0,none) - 1 packet
    From 24.187.82.135 - 3 packets
       To 66.191.XXX.XXX - 3 packets
-         Service: 3127 <a href="http://isc.sans.org/port_details.php?port=3127">(tcp/3127)</a> (eth0,none) - 3 packets
+         Service: 3127 (tcp/3127) (eth0,none) - 3 packets
    From 61.17.107.11 - 3 packets
       To 66.191.XXX.XXX - 3 packets
-         Service: 1026 <a href="http://isc.sans.org/port_details.php?port=1026">(udp/1026)</a> (eth0,none) - 1 packet
-         Service: 1027 <a href="http://isc.sans.org/port_details.php?port=1027">(udp/1027)</a> (eth0,none) - 2 packets
+         Service: 1026 (udp/1026) (eth0,none) - 1 packet
+         Service: 1027 (udp/1027) (eth0,none) - 2 packets
    From 61.133.63.113 - 5 packets
       To 66.191.XXX.XXX - 5 packets
-         Service: 1025 <a href="http://isc.sans.org/port_details.php?port=1025">(tcp/1025)</a> (eth0,none) - 1 packet
-         Service: 2745 <a href="http://isc.sans.org/port_details.php?port=2745">(tcp/2745)</a> (eth0,none) - 1 packet
-         Service: 3127 <a href="http://isc.sans.org/port_details.php?port=3127">(tcp/3127)</a> (eth0,none) - 1 packet
-         Service: 5000 <a href="http://isc.sans.org/port_details.php?port=5000" >(tcp/5000)</a> (eth0,none) - 1 packet
+         Service: 1025 (tcp/1025) (eth0,none) - 1 packet
+         Service: 2745 (tcp/2745) (eth0,none) - 1 packet
+         Service: 3127 (tcp/3127) (eth0,none) - 1 packet
+         Service: 5000 (tcp/5000) (eth0,none) - 1 packet
          Service: 6129 (tcp/6129) (eth0,none) - 1 packet
    From 64.45.210.38 - 4 packets
       To 66.191.XXX.XXX - 4 packets
@@ -468,48 +476,16 @@ Dropped 289 packets on interface eth0
          Service: 4899 (tcp/4899) (eth0,none) - 1 packet
 
  ---------------------- Kernel End -------------------------
-</pre>
-  
-    <p>If you check those ports at the
-      <a href="http://isc.sans.org/">Internet Storm Center</a>, you'll
-      find that many of them are used by trojans and worms.</p>
-    
-    <p>So, what do I do about it?  At first I ignored the problem, then
-      I turned on the default firewall.  Now I've been hacking the
-      firewall.</p>
-    
-  </div>
-  <div class="subsection">
-    <h3>The Default Firewall</h3>
-    
-    <p>On Redhat systems (In this case, Fedora Core 1), the
-      <code>redhat-config-securitylevel</code> program configures the
-      firewall.  (In FC2, this command has been renamed
-      <code>system-config-securitylevel</code>.) 
-      That's all well and good, but it doesn't give you much
-      flexibility.  Here's a screenshot:
-    </p>
-    <p class="centered">
-      <img src="/images/redhat-config-securitylevel.png" width="384"
-	   height="377" alt="[redhat-config-securitylevel screenshot]"
-	   class="fn" />
-    </p>
-    
-    <p>The firewall can be enabled or disabled.  And it can be disabled
-      for certain devices. And you can open any of 5 ports: 80, 21, 22,
-      23, and 25.  Good enough for Aunt Tillie, who only wants to run a
-      subset of those five services.  But not good enough for me.</p>
-    
-    <p>To find out that <code>redhat-config-securitylevel</code> really
-      does, you can check out <code>/etc/sysconfig/iptables</code>, or you
-      can run the command <code>/sbin/iptables-save</code>.  This will give you
-      a file in the iptables-save/iptables-restore format.
-      <b>Do not hand edit these type of files!</b>.  In this example,
-      I'm opening all five ports. Normally, one would not do this.
-      telnet and ftp are especially dangerous.</p>
-    
-<pre style="margin-left:2em;">
-# Generated by iptables-save v1.2.9 on Fri Apr  9 11:22:57 2004
+</code></pre>
+<p>If you check those ports at the <a href="http://isc.sans.org/">Internet Storm Center</a>, you'll find that many of them are used by trojans and worms.</p>
+<p>So, what do I do about it? At first I ignored the problem, then I turned on the default firewall. Now I've been hacking the firewall.</p>
+<hr />
+<h3>The Default Firewall</h3>
+<p>On Redhat systems (In this case, Fedora Core 1), the <code>redhat-config-securitylevel</code> program configures the firewall. (In FC2, this command has been renamed <code>system-config-securitylevel</code>.) That's all well and good, but it doesn't give you much flexibility. Here's a screenshot:</p>
+<p><img src="/images/redhat-config-securitylevel.png" alt="[redhat-config-securitylevel screenshot]" /></p>
+<p>The firewall can be enabled or disabled. And it can be disabled for certain devices. And you can open any of 5 ports: 80, 21, 22, 23, and 25. Good enough for Aunt Tillie, who only wants to run a subset of those five services. But not good enough for me.</p>
+<p>To find out that <code>redhat-config-securitylevel</code> really does, you can check out <code>/etc/sysconfig/iptables</code>, or you can run the command <code>/sbin/iptables-save</code>. This will give you a file in the iptables-save/iptables-restore format. <strong>Do not hand edit these type of files!</strong>. In this example, I'm opening all five ports. Normally, one would not do this. telnet and ftp are especially dangerous.</p>
+<pre><code># Generated by iptables-save v1.2.9 on Fri Apr  9 11:22:57 2004
 *filter
 :INPUT ACCEPT [0:0]
 :FORWARD ACCEPT [0:0]
@@ -530,12 +506,9 @@ Dropped 289 packets on interface eth0
 -A RH-Firewall-1-INPUT -j REJECT --reject-with icmp-host-prohibited
 COMMIT
 # Completed on Fri Apr  9 11:22:57 2004
-</pre>
-
-    <p>This corresponds to the following script:</p>
-
-<pre style="margin-left:2em;">
-#!/bin/sh
+</code></pre>
+<p>This corresponds to the following script:</p>
+<pre><code>#!/bin/sh
 PATH=/sbin:$PATH
 
 iptables --flush
@@ -562,178 +535,75 @@ iptables -A firewall -p tcp -m state --state NEW -m tcp --dport 25 -j ACCEPT
 iptables -A firewall -j REJECT --reject-with icmp-host-prohibited
 
 ######################################################################
-</pre>
-
-    <p>Before we go any further, let's understand what this script does.</p>
-    
-<pre style="margin-left:2em;">
-iptables --flush
+</code></pre>
+<p>Before we go any further, let's understand what this script does.</p>
+<pre><code>iptables --flush
 iptables --delete-chain
-</pre>
-
-    <p>These two lines clear out the filter table, deleting all rules
-      (<code>--flush</code>) and deleting all user-defined chains
-      (<code>--delete-chain</code>).  By default, <code>iptables</code> acts on
-      the <em>filter</em> table, which contains the INPUT, FORWARD, and
-      OUTPUT chains.</p>
-
-<pre style="margin-left:2em;">
-iptables --policy INPUT ACCEPT
+</code></pre>
+<p>These two lines clear out the filter table, deleting all rules (<code>--flush</code>) and deleting all user-defined chains (<code>--delete-chain</code>). By default, <code>iptables</code> acts on the <em>filter</em> table, which contains the INPUT, FORWARD, and OUTPUT chains.</p>
+<pre><code>iptables --policy INPUT ACCEPT
 iptables --policy FORWARD ACCEPT
 iptables --policy OUTPUT ACCEPT
-</pre>
-
-    <p>These three lines sets the default policy on these three chains.
-      The policy is the like the last rule in the chain.  In this case,
-      if a packet reaches the end of the chain, it gets accepted.</p>
-    
-<pre style="margin-left:2em;">
-iptables --new-chain firewall
+</code></pre>
+<p>These three lines sets the default policy on these three chains. The policy is the like the last rule in the chain. In this case, if a packet reaches the end of the chain, it gets accepted.</p>
+<pre><code>iptables --new-chain firewall
 iptables -A INPUT -j firewall
 iptables -A FORWARD -j firewall
-</pre>
-
-    <p>These lines create a new chain (we can call it anything we like)
-      and appends it to the INPUT and FORWARD chains. the &ldquo;firewall&rdquo;
-      chain will have the duty to ACCEPT some good packets and DROP or
-      REJECT all bad packets.</p>
-
-    <p>The firewall chain will have rules to ACCEPT all good packets.
-      It will then REJECT everything else.</p>
-
-<pre style="margin-left:2em;">
-iptables -A firewall -i lo -j ACCEPT
-</pre>
-
-    <p>the lo interface is the loopback device.  All packets that come
-      from here originate on this computer, and can be assumed to be
-      good.</p>
-
-<pre style="margin-left:2em;">
-iptables -A firewall -p icmp -m icmp --icmp-type 255 -j ACCEPT
-</pre>
-
-    <p>Internet Control Message Protocol (icmp) type packets are used
-      for thins like <code>ping</code>.  Mostly innocuous, until you get a
-      denial-of-service attack. We let these through.</p>
-
-<pre style="margin-left:2em;">
-iptables -A firewall -p esp -j ACCEPT
+</code></pre>
+<p>These lines create a new chain (we can call it anything we like) and appends it to the INPUT and FORWARD chains. the “firewall” chain will have the duty to ACCEPT some good packets and DROP or REJECT all bad packets.</p>
+<p>The firewall chain will have rules to ACCEPT all good packets. It will then REJECT everything else.</p>
+<pre><code>iptables -A firewall -i lo -j ACCEPT
+</code></pre>
+<p>the lo interface is the loopback device. All packets that come from here originate on this computer, and can be assumed to be good.</p>
+<pre><code>iptables -A firewall -p icmp -m icmp --icmp-type 255 -j ACCEPT
+</code></pre>
+<p>Internet Control Message Protocol (icmp) type packets are used for thins like <code>ping</code>. Mostly innocuous, until you get a denial-of-service attack. We let these through.</p>
+<pre><code>iptables -A firewall -p esp -j ACCEPT
 iptables -A firewall -p ah -j ACCEPT
-</pre>
-
-    <p>This is VPN stuff, according to the guys on #fedora.  I don't
-      fully understand.</p>
-
-<pre style="margin-left:2em;">
-iptables -A firewall -m state --state RELATED,ESTABLISHED -j ACCEPT
-</pre>
-
-    <p>If a packet is part of an established connection, let it through.
-      This allows clients on this computer to talk to servers on the
-      internet. </p>
-
-<pre style="margin-left:2em;">
-iptables -A firewall -p tcp -m state --state NEW -m tcp --dport 80 -j ACCEPT
+</code></pre>
+<p>This is VPN stuff, according to the guys on #fedora. I don't fully understand.</p>
+<pre><code>iptables -A firewall -m state --state RELATED,ESTABLISHED -j ACCEPT
+</code></pre>
+<p>If a packet is part of an established connection, let it through. This allows clients on this computer to talk to servers on the internet.</p>
+<pre><code>iptables -A firewall -p tcp -m state --state NEW -m tcp --dport 80 -j ACCEPT
 iptables -A firewall -p tcp -m state --state NEW -m tcp --dport 21 -j ACCEPT
 iptables -A firewall -p tcp -m state --state NEW -m tcp --dport 22 -j ACCEPT
 iptables -A firewall -p tcp -m state --state NEW -m tcp --dport 23 -j ACCEPT
 iptables -A firewall -p tcp -m state --state NEW -m tcp --dport 25 -j ACCEPT
-</pre>
-
-    <p>These are the five services we enabled with
-      <code>redhat-config-securitylevel</code>.</p>
-
-    <table class="p">
-      <tr><th>name   </th><th>port </th>
-	<th> aka                      </th></tr>
-      <tr><td>http   </td><td>80   </td>
-	<td> WorldWideWeb HTTP        </td></tr>
-      <tr><td>ftp    </td><td>21   </td>
-	<td>                          </td></tr>
-      <tr><td>ssh    </td><td>22   </td>
-	<td> SSH Remote Login Protocol</td></tr>
-      <tr><td>telnet </td><td>23   </td>
-	<td>                          </td></tr>
-      <tr><td>smtp   </td><td>25   </td>
-	<td> mail                     </td></tr>
-    </table>
-
-<pre style="margin-left:2em;">
+</code></pre>
+<p>These are the five services we enabled with <code>redhat-config-securitylevel</code>.</p>
+<table class="p"><tbody><tr><th>name</th><th>port</th><th>aka</th></tr><tr><td>http</td><td>80</td><td>WorldWideWeb HTTP</td></tr><tr><td>ftp</td><td>21</td><td></td></tr><tr><td>ssh</td><td>22</td><td>SSH Remote Login Protocol</td></tr><tr><td>telnet</td><td>23</td><td></td></tr><tr><td>smtp</td><td>25</td><td>mail</td></tr></tbody></table>
+<pre><code>iptables -A firewall -j REJECT --reject-with icmp-host-prohibited
+</code></pre>
+<p>As we promised, we REJECT everything else.</p>
+<hr />
+<h3>Changing things</h3>
+<p>Now that you understand what's going on, you can begin to make changes. I keep my firewall scripts in <code>/usr/local/sbin</code>. Begin by putting a script there that mimicks your preexisting setup. Compare iptables-save outputs to verify.</p>
+<p>If you are happy with the results of a script, run</p>
+<pre><code>/sbin/service iptables save
+</code></pre>
+<p>or</p>
+<pre><code>/sbin/iptables-save &gt; /etc/sysconfig/iptables
+</code></pre>
+<p>to save the current setup to <code>/etc/sysconfig/iptables</code>, where it will loaded upon next boot.</p>
+<p>The first thing I did when editing my firewall script was to delete the “<code>-p esp</code>” and “<code>-p ah</code>” stuff that I don't use anyways.</p>
+<p>Then I open whatever ports I want open. A CUPS print server needs port 631 (ipp service) open. BitTorrent likes to have tcp ports 6881 through 6889 open.</p>
+<p>(ASIDE: You can choose another range of ports for BitTorrent. Use the <code>--minport</code> and <code>--maxport</code> options to set them. Some suggest that everybody choose a different random integer for their minport for security reasons. <code>perl -e 'print int(rand(65536-1024)+1024),&quot;\n&quot;'</code>)</p>
+<p>Port 443 is used for https. Maybe a user wants to use port 12345 for a custom server.</p>
+<p>Remember that “<code>-p tcp --dport</code>” only opens the tcp port. To open a udp port,</p>
+<pre><code>iptables -A firewall -p udp -m state --state NEW -m udp --dport &lt;PORT&gt; -j ACCEPT
+</code></pre>
+<p>If you want to know how many packets go through your chains, use the</p>
+<pre><code>/sbin/iptables -L -v
+</code></pre>
+<p>command to look at the counters.</p>
+<p>Because I get so many packets aimed at 255.255.255.255, I explictly DROP them before I REJECT the rest:</p>
+<pre><code>iptables -A firewall -d 255.255.255.255 -j DROP
 iptables -A firewall -j REJECT --reject-with icmp-host-prohibited
-</pre>  
-
-    <p>As we promised, we REJECT everything else.</p>
-  </div>
-  <div class="subsection">
-
-    <h3>Changing things</h3>
-    
-    <p>Now that you understand what's going on, you can begin to make
-      changes.  I keep my firewall scripts in <code>/usr/local/sbin</code>.
-      Begin by putting a script there that mimicks your preexisting
-      setup.  Compare iptables-save outputs to verify.</p>
-    
-    <p>If you are happy with the results of a script, run</p>
-
-    <pre style="margin-left:2em;">/sbin/service iptables save</pre>
-
-    <p>or</p>
-
-    <pre style="margin-left:2em;">/sbin/iptables-save > /etc/sysconfig/iptables</pre>
-
-    <p>to save the current setup to <code>/etc/sysconfig/iptables</code>,
-      where it will loaded upon next boot.</p>
-
-
-    <p>The first thing I did when editing my firewall script was to
-      delete the &ldquo;<code>-p esp</code>&rdquo; and 
-      &ldquo;<code>-p ah</code>&rdquo; stuff that I don't use anyways.</p>
-
-    <p>Then I open whatever ports I want open.  A CUPS print server
-      needs port 631 (ipp service) open.  BitTorrent likes to have tcp
-      ports 6881 through 6889 open.</p>
-
-    <p>(ASIDE: You can choose another range of ports for BitTorrent.
-      Use the <code>--minport</code> and <code>--maxport</code> options to set
-      them.  Some suggest that everybody choose a different random
-      integer for their minport for security reasons. <code>perl -e
-      'print int(rand(65536-1024)+1024),"\n"'</code>)</p>
-
-    <p>Port 443 is used for https.  Maybe a user wants to use port
-      12345 for a custom server.</p>
-
-    <p>Remember that &ldquo;<code>-p tcp --dport</code>&rdquo; only opens
-      the tcp port.  To open a udp port, </p>
-
-<pre style="margin-left:2em;">
-iptables -A firewall -p udp -m state --state NEW -m udp --dport &lt;PORT&gt; -j ACCEPT
-</pre>
-
-    <p>If you want to know how many packets go through your chains, use
-      the</p>
-
-    <pre style="margin-left:2em;">/sbin/iptables -L -v</pre>
-
-    <p>command to look at the counters.  </p>
-
-    <p>Because I get so many packets aimed at 255.255.255.255, I
-      explictly DROP them before I REJECT the rest:</p>
-
-<pre style="margin-left:2em;">
-iptables -A firewall -d 255.255.255.255 -j DROP
-iptables -A firewall -j REJECT --reject-with icmp-host-prohibited
-</pre>
-
-    <p>This gives me two seperate counters.  It also allows me to
-      politely reject only those packets which are directed at me, and
-      ignore those that are broadcast to the world.</p>
-
-    <p>Another option is logging. This will fill up
-      <code>/var/log/messages</code>.</p>
-
-<pre style="margin-left:2em;">
-iptables -A firewall -d 255.255.255.255 \
+</code></pre>
+<p>This gives me two seperate counters. It also allows me to politely reject only those packets which are directed at me, and ignore those that are broadcast to the world.</p>
+<p>Another option is logging. This will fill up <code>/var/log/messages</code>.</p>
+<pre><code>iptables -A firewall -d 255.255.255.255 \
          -m limit --limit 1/minute \
          -j LOG --log-prefix &quot;DROPPED_PACKET &quot; \
          --log-ip-options --log-tcp-options
@@ -743,31 +613,16 @@ iptables -A firewall -m limit --limit 1/minute \
          -j LOG --log-prefix &quot;REJECTED_PACKET &quot; \
          --log-ip-options --log-tcp-options
 iptables -A firewall -j REJECT --reject-with icmp-host-prohibited
-</pre>
-
-    <p>Logging will give you a better feel for what is going on with
-      your firewall.  Are you dropping packets you want to keep?  What
-      type of attacks are being tried?  From what servers?</p>
-
-  </div>
-  <div class="subsection">
-    <h3>Network address translation</h3>
-
-    <p>Before you can route, you'll have to set the kernel variable
-      <code>net.ipv4.ip_forward</code> to <code>1</code>.  Do this by editing
-      <code>/etc/sysctl.conf</code> and then rereading that file with 
-      &ldquo;<code>/sbin/sysctl -p</code>&rdquo;.
-
-<pre style="margin-left:2em;">
-## line from /etc/sysctl.conf
+</code></pre>
+<p>Logging will give you a better feel for what is going on with your firewall. Are you dropping packets you want to keep? What type of attacks are being tried? From what servers?</p>
+<hr />
+<h3>Network address translation</h3>
+<p>Before you can route, you'll have to set the kernel variable <code>net.ipv4.ip_forward</code> to <code>1</code>. Do this by editing <code>/etc/sysctl.conf</code> and then rereading that file with “<code>/sbin/sysctl -p</code>”.</p>
+<pre><code>## line from /etc/sysctl.conf
 net.ipv4.ip_forward = 1
-</pre>
-
-    <p>Here's an example bit of script that sets up the <em>nat</em>
-      table for routing: </p>
-
-<pre style="margin-left:2em;">
-############################################################
+</code></pre>
+<p>Here's an example bit of script that sets up the <em>nat</em> table for routing:</p>
+<pre><code>############################################################
 IP_ADDR='XXX.XXX.XXX.XXX'
 WEB_SERVER='192.168.1.12'
 
@@ -785,36 +640,17 @@ iptables -t nat -A PREROUTING  -i eth0 -d $IP_ADDR \
 
 iptables -t filter --insert FORWARD -i eth1 -j ACCEPT
 ############################################################
-</pre>
-
-    <p>This assumes that you have a static IP address. Here's what the
-    network looks like.</p>
-
-    <p class="centered">
-      <img src="/images/network_diagram_nat_2.png" 
-	   alt="[network diagram for a nat]"
-	   title="made with DIA!"
-	   class="fn" />
-    </p>
-
-    <p>eth1 is connected to a 192.168.0.0 network.  Anything that's
-      going out on the eth0 iterface needs to pretend its source IP
-      address is $IP_ADDR. That's done with POSTROUTING/SNAT.
-      Anything trying to connect to port 80 on $IP_ADDR needs to have
-      it's destination IP changed to $WEB_SERVER; this is done with
-      PREROUTING/DNAT.</p>
-
-    <p>If you do not have a static IP address, you can't SNAT or DNAT,
-      'cause you don't know the address before hand. Yo will have to
-      MASQUERADE, which is like SNAT, but smarter.</p>
-
-<pre style="margin-left:2em;">
-#!/bin/sh
+</code></pre>
+<p>This assumes that you have a static IP address. Here's what the network looks like.</p>
+<p><img src="/images/network_diagram_nat_2.png" alt="[network diagram for a nat]" title="made with DIA!" /></p>
+<p>eth1 is connected to a 192.168.0.0 network. Anything that's going out on the eth0 iterface needs to pretend its source IP address is $IP_ADDR. That's done with POSTROUTING/SNAT. Anything trying to connect to port 80 on $IP_ADDR needs to have it's destination IP changed to $WEB_SERVER; this is done with PREROUTING/DNAT.</p>
+<p>If you do not have a static IP address, you can't SNAT or DNAT, 'cause you don't know the address before hand. Yo will have to MASQUERADE, which is like SNAT, but smarter.</p>
+<pre><code>#!/bin/sh
 ############################################################
 ## ${HOME}/bin/iptables-masquerade
 ############################################################
-OUT_IFACE="eth0"
-IN_IFACE="eth1"
+OUT_IFACE=&quot;eth0&quot;
+IN_IFACE=&quot;eth1&quot;
 PATH=/sbin:$PATH
 iptables -t nat --flush
 iptables -t nat --delete-chain
@@ -823,20 +659,16 @@ iptables -t nat --policy POSTROUTING ACCEPT
 iptables -t nat --policy OUTPUT ACCEPT
 iptables -t nat -A POSTROUTING -o ${OUT_IFACE} -j MASQUERADE
 iptables -t filter --insert FORWARD -i ${IN_IFACE} -j ACCEPT
-echo "DONE!"
-echo "remember: In '/etc/sysctl.conf', put the line"
-echo "    net.ipv4.ip_forward = 1"
-echo ""
+echo &quot;DONE!&quot;
+echo &quot;remember: In '/etc/sysctl.conf', put the line&quot;
+echo &quot;    net.ipv4.ip_forward = 1&quot;
+echo &quot;&quot;
 ############################################################
-</pre>
-
-
-  </div>
-  <div class="subsection">
-    <h3>Cleaning it up a bit:</h3>
-    <p>Here's a slightly cleaner way of doing things.</p>
-    <pre style="margin-left:2em;">
-#!/bin/sh
+</code></pre>
+<hr />
+<h3>Cleaning it up a bit:</h3>
+<p>Here's a slightly cleaner way of doing things.</p>
+<pre><code>#!/bin/sh
 PATH=/sbin:$PATH
 
 iptables --flush
@@ -871,42 +703,32 @@ iptables -t nat --policy OUTPUT ACCEPT
 
 iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
 ######################################################################
-    </pre>
+</code></pre>
+<hr />
+<h3>Advanced topics</h3>
+<p>More topics I would like to cover:</p>
+<ul>
+<li>REJECT targets</li>
+<li>REJECT vs DROP</li>
+<li><code>-m limit</code> rate limiting</li>
+</ul>
+<p>Topics I want to learn about:</p>
+<ul>
+<li>DNATing ssh and hostkeys.</li>
+<li>the <em>mangle</em> table</li>
+<li>statefull vs nonstateful packet filtering</li>
+<li>Why are they targeting me?</li>
+<li>Why do I get 255.255.255.255 packets anyways?</li>
+</ul>
+<hr />
+<h3>Notice</h3>
+<p>This document (c) 2004 Hal Canary. Liscenced under a <a href="http://creativecommons.org/licenses/by-nd/1.0/">Creative Commons Attribution-NoDerivs License</a>.</p>
+<p>Let me know if it is useful.</p>
+<hr />
+<hr />
+<p>file modification time: 2006-07-16 15:38:08</p>
+<hr />
 
-  </div>
-  <div class="subsection">
-    <h3>Advanced topics</h3>
-    <p>More topics I would like to cover:</p>
-    <ul>
-      <li>REJECT targets</li>
-      <li>REJECT vs DROP</li>
-      <li><code>-m limit</code> rate limiting</li>
-    </ul>
-    <p>Topics I want to learn about:</p>
-    <ul>
-      <li>DNATing ssh and hostkeys.</li>
-      <li>the <em>mangle</em> table</li>
-      <li>statefull vs nonstateful packet filtering</li>
-      <li>Why are they targeting me?</li>
-      <li>Why do I get 255.255.255.255 packets anyways?</li>
-    </ul>
-  </div>
-  <div class="subsection">
-    <h3>Notice</h3>
-    <p>This document (c) 2004 Hal Canary.  Liscenced under a 
-      <a href="http://creativecommons.org/licenses/by-nd/1.0/">
-	Creative Commons Attribution-NoDerivs License</a>.</p>
-    <p>Let me know if it is useful.</p>
-  </div>
 </div>
-
-<div class="section"><p class="rightside">file modification time: 2006-07-16 15:38:08</p></div>
-
-<div class="section">
-<p class="centered">Copyright 1997-2013 by Hal Canary.<br>
-<i>mailto: halcanary at gmail dot com</i><br>
-<a href="https://halcanary.org"><i>http://halcanary.org</i></a></p>
-</div>
-
 </body>
 </html>

@@ -1,30 +1,68 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en-US">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Copyright 1997-2022 Hal Canary. ALL RIGHTS RESERVED. -->
-<title>World of Hal Canary</title>
-<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==">
-<link rel="stylesheet" type="text/css" href="/styles/scrapple-from-the-apple.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Centered &lt;div&gt; Issue</title>
+<link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==" rel="icon"/>
 <style>
-@media screen { body{
-    max-width: 35em;
-    margin: 22px auto 64px auto;
-    padding: 0 8px;
-} }
-body {
-    color: #000000;
-    background-color: #ffffff;
-    background-image: none;
-    text-align: initial;
+@media (prefers-color-scheme:dark) {body {background-color:#000;color:#FFF;}
+a:visited {color:#C0F;}
+a:link, a:hover, a:active {color:#0CF;}
 }
+@media print {body {max-width:8in;font-size:12px;margin:0;}
+}
+@media screen {body {font-family:sans-serif;max-width:35em;margin:22px auto 64px auto;padding:0 8px;}
+}
+body {overflow-wrap:break-word;}
+@page {size:auto;margin:0.25in 0.5in 0.5in 0.5in;}
+svg {fill:currentColor;}
+img {max-width:100%;height:auto;}
+hr {border-style:solid none;}
+.content {margin:1em 0;}
+.content hr {padding:0;margin:0;border:none;text-align:center;}
+.content hr:after {font-size:150%;content:"* \A0 * \A0 *";display:block;position:relative;}
+.rightside {text-align:right;}
+.centered {text-align:center;}
+pre {overflow-x:auto;}
+.byline > * {display:inline-block;border-style:solid;border-width:thin;padding:3px 8px;border-radius:5px;text-align:initial;}
+.byline {text-align:right;}
+.box {border-style:solid;border-width:thin;margin:8px 0;padding:0 8px;}
+a.hiddenlink:link {background:inherit;color:inherit;text-decoration:none;}
+a.hiddenlink:visited {background:inherit;color:inherit;text-decoration:none;}
+a.hiddenlink:active {background:inherit;color:inherit;text-decoration:none;}
+ul,ol {padding-left:30px;}
+table.border {border-collapse:collapse;margin:8px auto;}
+table.border tr > * {border-style:solid;border-width:thin;padding:3px 8px;border-radius:5px;}
+.tophead {text-align:center;margin:1ex auto 0 auto;max-width:35em;}
+.tightmargins li > ul > li {list-style-type:square;}
+.tightmargins h1,
+.tightmargins h2,
+.tightmargins p,
+.tightmargins ul {margin:0.5ex 0;}
+.tightmargins li > ul {margin:0 0 0.5ex 0;}
+.tightmargins ul {padding-left:30px;}
+.tightmargins li {margin:0 0 0.5ex 0;}
+.plainlink a:link,
+.plainlink a:visited,
+.plainlink a:hover,
+.plainlink a:active {color:inherit;text-decoration:underline;}
+.nolink a:link,
+.nolink a:visited,
+.nolink a:hover,
+.nolink a:active {color:inherit;text-decoration:none;}
+div.lcr {display:grid;grid-template-columns:auto auto auto;}
+ul.flat {list-style-type:none;margin:16px 0;padding:0;}
+ul.flat li {display:inline;}
+ul.flat li::after {content:"]";}
+ul.flat li::before {content:"[";}
 </style>
+<!--
+Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
+-->
 </head>
-
 <body>
-
-<h1><a href="/" class="hiddenlink">
+<div class="tophead" role="banner">
 <svg aria-label="Hal W Canary 3" role="img" viewBox="-200 0 800 91" width="100%">
 <title>Hal W Canary 3</title>
 <rect height="4" width="180" x="-200" y="43" />
@@ -73,27 +111,14 @@ C 325 43 324 42 322 43 C 319 45 322 52 323 54 C 324 58 327 59 328 63 C 329 67
 375 71 C 383 67 399 55 393 45 C 390 38 382 37 380 31 C 384 29 394 26 395 20 C
 395 17 392 15 389 13 C 384 9 378 6 372 10" />
 </svg>
-</a></h1>
-
-<nav class="section"><p><a href="/">Home</a></p></nav>
-
-<!-- p/centered-div -->
-
-<div class="section">
-      <h2>The Centered &lt;div&gt; Issue</h2>
-
-<p>The goal is to put text inside a box of a fixed width that is centered in the middle of the web page.  Right now, I use such a layout on <a href="/vv/">https://halcanary.org/vv/</a> .</p>
-
+</div>
+<div role="main">
+<h1>The Centered <div> Issue</h1>
+<p>The goal is to put text inside a box of a fixed width that is centered in the middle of the web page. Right now, I use such a layout on <a href="/vv/">https://halcanary.org/vv/</a> .</p>
 <p>I had a problem doing this with non-deprecated HTML. This is how I solved that problem.</p>
-
 <hr />
-
-<p>This is a common enough way to layout
-  text on a web page.  The HTML 3 way of doing things: &lt;table&gt;s
-  and &lt;center&gt;s:</p>
-
-<pre>
-&lt;!DOCTYPE HTML PUBLIC
+<p>This is a common enough way to layout text on a web page. The HTML 3 way of doing things: <table>s and <center>s:</p>
+<pre><code>&lt;!DOCTYPE HTML PUBLIC
 	&quot;-//W3C//DTD HTML 3.2 Final//EN&quot;&gt;
 &lt;HTML&gt;&lt;HEAD&gt;&lt;TITLE&gt;&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;
 &lt;center&gt;
@@ -105,16 +130,10 @@ TEST
 &lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/center&gt;
 &lt;/BODY&gt;&lt;/HTML&gt;
-</pre>
+</code></pre>
 <p><img src="/images/centered-div-1.png" alt="[browser rendering]" /></p>
-
-<p>Let's replace that &lt;table&gt; with a
-  &lt;div&gt;.  &lt;table&gt;s should not be used for layout.  Notice
-  I have to use a &quot;text-align:left:&quot; to undo the
-  &lt;center&gt;.  This seems like a kludge.</p>
-
-<pre>
-&lt;!DOCTYPE HTML PUBLIC
+<p>Let's replace that <table> with a <div>. <table>s should not be used for layout. Notice I have to use a &quot;text-align:left:&quot; to undo the <center>. This seems like a kludge.</p>
+<pre><code>&lt;!DOCTYPE HTML PUBLIC
 	&quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;
         &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;
 &lt;HTML&gt;&lt;HEAD&gt;&lt;TITLE&gt;&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;
@@ -126,16 +145,10 @@ TEST
 &lt;/div&gt;
 &lt;/center&gt;
 &lt;/BODY&gt;&lt;/HTML&gt;
-</pre>
+</code></pre>
 <p><img src="/images/centered-div-2.png" alt="[browser rendering]" /></p>
-
-<p>&lt;center&gt; is 
-  <a href="http://www.w3.org/TR/REC-html40/present/graphics.html#edef-CENTER">
-    deprecated</a>, so we can replace it with &lt;div
-  align=&quot;center&quot;&gt;</p> 
-
-<pre>
-&lt;!DOCTYPE HTML PUBLIC
+<center> is [deprecated](http://www.w3.org/TR/REC-html40/present/graphics.html#edef-CENTER), so we can replace it with <div align="center">
+<pre><code>&lt;!DOCTYPE HTML PUBLIC
 	&quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;
         &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;
 &lt;HTML&gt;&lt;HEAD&gt;&lt;TITLE&gt;&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;
@@ -147,17 +160,10 @@ TEST
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/BODY&gt;&lt;/HTML&gt;
-</pre>
+</code></pre>
 <p><img src="/images/centered-div-3.png" alt="[browser rendering]" /></p>
-
-<p>But &lt;div align=&quot;???&quot;&gt; is
-  also 
-  <a href="http://www.w3.org/TR/REC-html40/present/graphics.html#h-15.1.2">
-    deprecated</a>, so lets use &lt;div
-  style=&quot;text-align:center&quot;&gt;</p>  
-
-<pre>
-&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01//EN&quot;
+<p>But <div align="???"> is also <a href="http://www.w3.org/TR/REC-html40/present/graphics.html#h-15.1.2">deprecated</a>, so lets use <div style="text-align:center"></p>
+<pre><code>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01//EN&quot;
    &quot;http://www.w3.org/TR/html4/strict.dtd&quot;&gt;
 &lt;HTML&gt;&lt;HEAD&gt;&lt;TITLE&gt;&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;
 &lt;div style=&quot;text-align:center&quot;&gt;
@@ -168,17 +174,12 @@ TEST
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/BODY&gt;&lt;/HTML&gt;
-</pre>
+</code></pre>
 <p><img src="/images/centered-div-4.png" alt="[browser rendering]" /></p>
-
-
-<p>But that <strong>doesn't work</strong>!  It no longer centers the &lt;div&gt;.  It looks like the text-align:center and the text-align:left are cancelling out.</p>
-
+<p>But that <strong>doesn't work</strong>! It no longer centers the <div>. It looks like the text-align:center and the text-align:left are cancelling out.</p>
 <hr />
 <p><strong>Here's the solution:</strong></p>
-
-<pre>
-&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01//EN&quot;
+<pre><code>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01//EN&quot;
    &quot;http://www.w3.org/TR/html4/strict.dtd&quot;&gt;
 &lt;HTML&gt;&lt;HEAD&gt;&lt;TITLE&gt;&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;
 &lt;div style=&quot;margin:auto; border:1px solid; width:300px&quot;&gt;
@@ -187,17 +188,12 @@ TEST
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/BODY&gt;&lt;/HTML&gt;
-</pre>
+</code></pre>
 <p><img src="/images/centered-div-5.png" alt="[browser rendering]" /></p>
-
 <p>This is correct CSS and it reneders properly in Mozilla Firefox.</p>
-
 <hr />
-
 <p>Now let's try converting that file into a XHTML file.</p>
-
-<pre>
-&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
 &lt;!DOCTYPE html
         PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot;
         &quot;http://www.w3.org/TR/xhtml1/DTD/strict.dtd&quot;&gt;
@@ -210,18 +206,12 @@ TEST
 &lt;/p&gt;
 &lt;/div&gt;
 &lt;/body&gt;&lt;/html&gt;
-</pre>
-
+</code></pre>
 <p>Here is how it renders in IE6.</p>
-
 <p><img src="/images/centered-div-7-ie.png" alt="[browser rendering]" /></p>
-
-<p>Why does IE6 render Strict XHTML 1.0 differently from the equivilent Strict HTML 4.01?
-
+<p>Why does IE6 render Strict XHTML 1.0 differently from the equivilent Strict HTML 4.01?</p>
 <p>Try this:</p>
-
-<pre>
-&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
 &lt;!DOCTYPE html
         PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot;
         &quot;http://www.w3.org/TR/xhtml1/DTD/strict.dtd&quot;&gt;
@@ -237,16 +227,12 @@ TEST
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/body&gt;&lt;/html&gt;
-</pre>
+</code></pre>
 <p><img src="/images/centered-div-8-ie.png" alt="[browser rendering]" /></p>
-
 <p>That's a bit of a kludge, but it's valid html+css and it displays the same in IE6 and Mozilla.</p>
-
 <hr />
 <p>This is how I go about doing the css for this page:</p>
-
-<pre>
-/* the CSS file */
+<pre><code>/* the CSS file */
 body {
 	text-align: center;
 }
@@ -256,10 +242,9 @@ div.column {
 	width: 640px;
 	text-align: left;
 }
-</pre>
+</code></pre>
 <p>and</p>
-<pre>
-&lt;!-- the HTML File --&gt;
+<pre><code>&lt;!-- the HTML File --&gt;
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
 &lt;!DOCTYPE html
 	PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot;
@@ -277,12 +262,10 @@ div.column {
     &lt;/div&gt;
   &lt;/body&gt;
 &lt;/html&gt;
-</pre>
-    <div class="subsection">
-      <h3>Advanced Topics</h3>
-      <p>Using the max-width property from CSS2.  <a href="http://www.svendtofte.com/code/max_width_in_ie/">This is a good description of the problem and a solution</a>.</p>
-<pre>
-/* the CSS file */
+</code></pre>
+<h3>Advanced Topics</h3>
+<p>Using the max-width property from CSS2. <a href="http://www.svendtofte.com/code/max_width_in_ie/">This is a good description of the problem and a solution</a>.</p>
+<pre><code>/* the CSS file */
 body {
 	text-align: center;
 }
@@ -290,21 +273,15 @@ div.column {
 	margin-left: auto;
 	margin-right: auto;
 	max-width: 640px;
-	width:expression(640 + "px");
+	width:expression(640 + &quot;px&quot;);
 	text-align: left;
 }
-</pre>
+</code></pre>
+<hr />
+<hr />
+<p>file modification time: 2006-09-18 14:08:26</p>
+<hr />
 
-    </div><!-- end div subsection -->
-      </div><!-- end div section -->
-
-<div class="section"><p class="rightside">file modification time: 2006-09-18 14:08:26</p></div>
-
-<div class="section">
-<p class="centered">Copyright 1997-2013 by Hal Canary.<br>
-<i>mailto: halcanary at gmail dot com</i><br>
-<a href="https://halcanary.org"><i>http://halcanary.org</i></a></p>
 </div>
-
 </body>
 </html>
