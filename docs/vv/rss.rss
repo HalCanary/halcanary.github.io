@@ -7,8 +7,8 @@
 		<language>en-US</language>
 		<copyright>Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.</copyright>
 		<link>https://halcanary.org/vv/</link>
-		<pubDate>Mon, 12 Sep 2022 08:59:10 -0400</pubDate>
-		<lastBuildDate>Mon, 12 Sep 2022 08:59:10 -0400</lastBuildDate>
+		<pubDate>Mon, 12 Sep 2022 09:07:29 -0400</pubDate>
+		<lastBuildDate>Mon, 12 Sep 2022 09:07:29 -0400</lastBuildDate>
 		<image>
 			<url>https://halcanary.org/images/HAL_CANARY_20191008_512.jpg</url>
 			<title>Voder-Vocoder</title>
@@ -531,48 +531,9 @@ Projection</a>.”
 		<item>
 			<title>Current Location</title>
 			<link>https://halcanary.org/vv/2013/08/29/3002/</link>
-			<guid isPermaLink="false">ef695d52-e054-5f93-b342-8a6c2455ea55</guid>
+			<guid isPermaLink="false">debf2968-cb54-5248-a00f-e28963ee004c</guid>
 			<pubDate>Thu, 29 Aug 2013 09:48:42 -0500</pubDate>
-			<description><![CDATA[<p>The existing software on your phone makes it impossible to send someone precise latitude/longitude that you pinpoint on a map. Here&#39;s my solution, IF you are already standing where you want to pinpoint.</p>
-<script>
-function nav() {
-  if (! navigator.geolocation) {
-    document.getElementById("location").innerHTML = "Sorry :(";
-    return;
-  }
-  document.getElementById("location").innerHTML = "....";
-  function ae(type, dst) {
-    var x = document.createElement(type);
-    dst.appendChild(x);
-    return x;
-  }
-  function at(content, dst) {
-    var x = document.createTextNode(content);
-    dst.appendChild(x);
-    return x;
-  }
-  function posfunc(pos) {
-    var c = pos.coords;
-    var r = 6;
-    var p = c.latitude.toFixed(r) + "," + c.longitude.toFixed(r);
-    var loc = document.getElementById("location");
-    var url = 'https://maps.google.com/maps?q=' + p;
-    loc.innerHTML = "";
-    at('Your Current Location:', ae('strong', ae('p', loc)))
-    var a = ae('a', ae('p', loc));
-    a.href = url;
-    at(p, a);
-    at("("+ c.accuracy + "m)", ae('p', loc));
-    a = ae('a', ae('p', loc));
-    a.href = "geo:" + p;
-    at("geo:" + p, a);
-  };
-  navigator.geolocation.getCurrentPosition(posfunc);
-  return false;
-}
-window.addEventListener('load', nav);
-</script>
-<div id="location"></div>
+			<description><![CDATA[<p>The existing software on your phone makes it impossible to send someone precise latitude/longitude that you pinpoint on a map. Here&#39;s my solution, IF you are already standing where you want to pinpoint: &lt;https://halcanary.org/loc/&gt;</p>
 ]]></description>
 			<category>computers-code</category>
 		</item>
