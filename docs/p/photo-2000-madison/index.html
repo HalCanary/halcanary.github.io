@@ -1,30 +1,68 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en-US">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Copyright 1997-2022 Hal Canary. ALL RIGHTS RESERVED. -->
-<title>World of Hal Canary</title>
-<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==">
-<link rel="stylesheet" type="text/css" href="/styles/scrapple-from-the-apple.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Year 2000</title>
+<link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==" rel="icon"/>
 <style>
-@media screen { body{
-    max-width: 35em;
-    margin: 22px auto 64px auto;
-    padding: 0 8px;
-} }
-body {
-    color: #000000;
-    background-color: #ffffff;
-    background-image: none;
-    text-align: initial;
+@media (prefers-color-scheme:dark) {body {background-color:#000;color:#FFF;}
+a:visited {color:#C0F;}
+a:link, a:hover, a:active {color:#0CF;}
 }
+@media print {body {max-width:8in;font-size:12px;margin:0;}
+}
+@media screen {body {font-family:sans-serif;max-width:35em;margin:22px auto 64px auto;padding:0 8px;}
+}
+body {overflow-wrap:break-word;}
+@page {size:auto;margin:0.25in 0.5in 0.5in 0.5in;}
+svg {fill:currentColor;}
+img {max-width:100%;height:auto;}
+hr {border-style:solid none;}
+.content {margin:1em 0;}
+.content hr {padding:0;margin:0;border:none;text-align:center;}
+.content hr:after {font-size:150%;content:"* \A0 * \A0 *";display:block;position:relative;}
+.rightside {text-align:right;}
+.centered {text-align:center;}
+pre {overflow-x:auto;}
+.byline > * {display:inline-block;border-style:solid;border-width:thin;padding:3px 8px;border-radius:5px;text-align:initial;}
+.byline {text-align:right;}
+.box {border-style:solid;border-width:thin;margin:8px 0;padding:0 8px;}
+a.hiddenlink:link {background:inherit;color:inherit;text-decoration:none;}
+a.hiddenlink:visited {background:inherit;color:inherit;text-decoration:none;}
+a.hiddenlink:active {background:inherit;color:inherit;text-decoration:none;}
+ul,ol {padding-left:30px;}
+table.border {border-collapse:collapse;margin:8px auto;}
+table.border tr > * {border-style:solid;border-width:thin;padding:3px 8px;border-radius:5px;}
+.tophead {text-align:center;margin:1ex auto 0 auto;max-width:35em;}
+.tightmargins li > ul > li {list-style-type:square;}
+.tightmargins h1,
+.tightmargins h2,
+.tightmargins p,
+.tightmargins ul {margin:0.5ex 0;}
+.tightmargins li > ul {margin:0 0 0.5ex 0;}
+.tightmargins ul {padding-left:30px;}
+.tightmargins li {margin:0 0 0.5ex 0;}
+.plainlink a:link,
+.plainlink a:visited,
+.plainlink a:hover,
+.plainlink a:active {color:inherit;text-decoration:underline;}
+.nolink a:link,
+.nolink a:visited,
+.nolink a:hover,
+.nolink a:active {color:inherit;text-decoration:none;}
+div.lcr {display:grid;grid-template-columns:auto auto auto;}
+ul.flat {list-style-type:none;margin:16px 0;padding:0;}
+ul.flat li {display:inline;}
+ul.flat li::after {content:"]";}
+ul.flat li::before {content:"[";}
 </style>
+<!--
+Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
+-->
 </head>
-
 <body>
-
-<h1><a href="/" class="hiddenlink">
+<div class="tophead" role="banner">
 <svg aria-label="Hal W Canary 3" role="img" viewBox="-200 0 800 91" width="100%">
 <title>Hal W Canary 3</title>
 <rect height="4" width="180" x="-200" y="43" />
@@ -73,162 +111,75 @@ C 325 43 324 42 322 43 C 319 45 322 52 323 54 C 324 58 327 59 328 63 C 329 67
 375 71 C 383 67 399 55 393 45 C 390 38 382 37 380 31 C 384 29 394 26 395 20 C
 395 17 392 15 389 13 C 384 9 378 6 372 10" />
 </svg>
-</a></h1>
-
-<nav class="section"><p><a href="/">Home</a></p></nav>
-
-<!-- p/photo-2000-madison -->
-
-<div class="section"> 
-<h2>Year 2000</h2>
-
-<p><a href="/photos/2000-madison-bethorangecut.jpg">
-  <img alt="[Thumb]" src="/photos/thumb/2000-madison-bethorangecut.jpg" /></a>
-  <br />Beth, late 2000.</p>
-
-<p><a href="/photos/2000-madison-haloween2000.jpg">
-  <img alt="[Thumb]" src="/photos/thumb/2000-madison-haloween2000.jpg" /></a>
-  <br />Several people in costume, Haloween 2000.</p>
-
-<p><a href="/photos/2000-madison-bethsheef.jpg">
-  <img alt="[Thumb]" src="/photos/thumb/2000-madison-bethsheef.jpg" /></a>
-  <br />Beth Scheef.</p>
-
-<p><a href="/photos/2000-madison-alienoverlord.jpg">
-  <img alt="[Thumb]" src="/photos/thumb/2000-madison-alienoverlord.jpg"  /></a>
-  <br />Me, Halloween 2000 </p>
-
-<p><a href="/photos/2000-madison-charmonium.jpg">
-  <img alt="[Thumb]" src="/photos/thumb/2000-madison-charmonium.jpg" /></a>
-  <br />Jill, portraying the Charm Quark, Halloween 2000</p>
-
-<p><a href="/photos/2000-madison-nightcat.jpg">
-  <img alt="[Thumb]" src="/photos/thumb/2000-madison-nightcat.jpg" /></a>
-  <br />Kat and Becca, Halloween 2000. </p>
-
-<p><a href="/photos/2000-madison-radioactiveman.jpg">
-  <img alt="[Thumb]" src="/photos/thumb/2000-madison-radioactiveman.jpg" /></a>
-  <br />Paco, portraying Radioactive Man, Halloween 2000</p>
-
-<p><a href="/photos/2000-madison-bethdil.jpg">
-  <img alt="[Thumb]" src="/photos/thumb/2000-madison-bethdil.jpg" /></a>
-  <br />Beth and Dillan, June 2000. </p>
-
-<p><a href="/photos/2000-madison-katcrossword.jpg">
-  <img alt="[Thumb]" src="/photos/thumb/2000-madison-katcrossword.jpg" /></a>
-  <br />Kat, fall 2000 </p>
-
-<p><a href="/photos/2000-madison-bascom1.jpg">
-  <img alt="[Thumb]" src="/photos/thumb/2000-madison-bascom1.jpg" /></a>
-  <br />Mark, Peter, Jill, Beth, enjoying a Springtime day on Bascom
-     Hill.</p>
-
-<p><a href="/photos/2000-madison-scott.jpg">
-  <img alt="[Thumb]" src="/photos/thumb/2000-madison-scott.jpg" /></a>
-  <br />Scott Simon - May 2000</p>
-
-<p><a href="/photos/2000-madison-markfell.jpg">
-  <img alt="[Thumb]" src="/photos/thumb/2000-madison-markfell.jpg" /></a>
-  <br />March 2000</p>
-
-<p><a href="/photos/2000-madison-piknik1.jpg">
-  <img alt="[Thumb]" src="/photos/thumb/2000-madison-piknik1.jpg" /></a>
-  <br />UPS Spring piknik - may 2000   </p>
-
-<p><a href="/photos/2000-madison-piknik2.jpg">
-  <img alt="[Thumb]" src="/photos/thumb/2000-madison-piknik2.jpg" /></a>
-  <br />UPS Spring piknik 2000
-  <br />Becca and Jill and Beth and Matt</p>
-
-<p><a href="/photos/2000-madison-bethmarkjill.jpg">
-  <img alt="[Thumb]" src="/photos/thumb/2000-madison-bethmarkjill.jpg" /></a>
-  <br />Beth, Mark, Jill   </p>
-
-<p><a href="/photos/2000-madison-bethmarkjill2.jpg">
-  <img alt="[Thumb]" src="/photos/thumb/2000-madison-bethmarkjill2.jpg" /></a>
-  <br />April 2000</p>
-    
-<p><a href="/photos/2000-madison-cleanroom.jpg">
-  <img alt="[Thumb]" src="/photos/thumb/2000-madison-cleanroom.jpg" /></a>
-  <br />UPS Spring Cleaning - April 2000   </p>
-
-<p><a href="/photos/2000-madison-bullshit.jpg">
-  <img alt="[Thumb]" src="/photos/thumb/2000-madison-bullshit.jpg" /></a>
-  <br />A late night - May 2000</p>
-    
-<p><a href="/photos/2000-madison-lucas1.jpg">
-  <img alt="[Thumb]" src="/photos/thumb/2000-madison-lucas1.jpg" /></a>
-  <br />Lucas Finco - March 2000</p>
-    
-<p><a href="/photos/2000-madison-dillan.jpg">
-  <img alt="[Thumb]" src="/photos/thumb/2000-madison-dillan.jpg" /></a>
-  </p>
-    
-<p><a href="/photos/2000-madison-haircut.jpg">
-  <img alt="[Thumb]" src="/photos/thumb/2000-madison-haircut.jpg" /></a>
-  <br />Mark gets his hair cut.
-  <br />March 2000</p>
-
-<p><a href="/photos/2000-madison-hparty1.jpg">
-  <img alt="[Thumb]" src="/photos/thumb/2000-madison-hparty1.jpg" /></a>
-  <br />this is a little celebration at my place. </p>
-
-<p><a href="/photos/2000-madison-hparty2.jpg">
-  <img alt="[Thumb]" src="/photos/thumb/2000-madison-hparty2.jpg" /></a>
-  <br />Suzy, Jill, and myself - my 22nd birthday.</p>
-
-<p><a href="/photos/2000-madison-josh.jpg">
-  <img alt="[Thumb]" src="/photos/thumb/2000-madison-josh.jpg" /></a>
-  <br /><a href="http://ups.physics.wisc.edu/~josh/">Josh</a></p>
-
-<p><a href="/photos/2000-madison-mark.jpg">
-  <img alt="[Thumb]" src="/photos/thumb/2000-madison-mark.jpg" /></a>
-  <br /><a href="http://ups.physics.wisc.edu/~chapman/">Mark</a> </p>
-
-<p><a href="/photos/2000-madison-lab.jpg">
-  <img alt="[Thumb]" src="/photos/thumb/2000-madison-lab.jpg" /></a>
-  <br />Some guys from my old job, down in the 
-  <a href="http://aida.physics.wisc.edu/">lab</a>:
-  Mark, Roch, and 
-  <a href="http://aida.physics.wisc.edu/~oconnell/">Rob</a>
-  <br /><i>If you are one of our competitors, I have been asked to tell
-  you not to look closely at our vessel for design secrets. You have
-  been warned</i>. <br />January 2000</p>
-
 </div>
-
-<div class="section"> 
+<div role="main">
+<h1>Year 2000</h1>
+<p><a href="/photos/2000-madison-bethorangecut.jpg"><img src="/photos/thumb/2000-madison-bethorangecut.jpg" alt="[Thumb]" /></a><br />
+Beth, late 2000.</p>
+<p><a href="/photos/2000-madison-haloween2000.jpg"><img src="/photos/thumb/2000-madison-haloween2000.jpg" alt="[Thumb]" /></a><br />
+Several people in costume, Haloween 2000.</p>
+<p><a href="/photos/2000-madison-bethsheef.jpg"><img src="/photos/thumb/2000-madison-bethsheef.jpg" alt="[Thumb]" /></a><br />
+Beth Scheef.</p>
+<p><a href="/photos/2000-madison-alienoverlord.jpg"><img src="/photos/thumb/2000-madison-alienoverlord.jpg" alt="[Thumb]" /></a><br />
+Me, Halloween 2000</p>
+<p><a href="/photos/2000-madison-charmonium.jpg"><img src="/photos/thumb/2000-madison-charmonium.jpg" alt="[Thumb]" /></a><br />
+Jill, portraying the Charm Quark, Halloween 2000</p>
+<p><a href="/photos/2000-madison-nightcat.jpg"><img src="/photos/thumb/2000-madison-nightcat.jpg" alt="[Thumb]" /></a><br />
+Kat and Becca, Halloween 2000.</p>
+<p><a href="/photos/2000-madison-radioactiveman.jpg"><img src="/photos/thumb/2000-madison-radioactiveman.jpg" alt="[Thumb]" /></a><br />
+Paco, portraying Radioactive Man, Halloween 2000</p>
+<p><a href="/photos/2000-madison-bethdil.jpg"><img src="/photos/thumb/2000-madison-bethdil.jpg" alt="[Thumb]" /></a><br />
+Beth and Dillan, June 2000.</p>
+<p><a href="/photos/2000-madison-katcrossword.jpg"><img src="/photos/thumb/2000-madison-katcrossword.jpg" alt="[Thumb]" /></a><br />
+Kat, fall 2000</p>
+<p><a href="/photos/2000-madison-bascom1.jpg"><img src="/photos/thumb/2000-madison-bascom1.jpg" alt="[Thumb]" /></a><br />
+Mark, Peter, Jill, Beth, enjoying a Springtime day on Bascom Hill.</p>
+<p><a href="/photos/2000-madison-scott.jpg"><img src="/photos/thumb/2000-madison-scott.jpg" alt="[Thumb]" /></a><br />
+Scott Simon - May 2000</p>
+<p><a href="/photos/2000-madison-markfell.jpg"><img src="/photos/thumb/2000-madison-markfell.jpg" alt="[Thumb]" /></a><br />
+March 2000</p>
+<p><a href="/photos/2000-madison-piknik1.jpg"><img src="/photos/thumb/2000-madison-piknik1.jpg" alt="[Thumb]" /></a><br />
+UPS Spring piknik - may 2000</p>
+<p><a href="/photos/2000-madison-piknik2.jpg"><img src="/photos/thumb/2000-madison-piknik2.jpg" alt="[Thumb]" /></a><br />
+UPS Spring piknik 2000<br />
+Becca and Jill and Beth and Matt</p>
+<p><a href="/photos/2000-madison-bethmarkjill.jpg"><img src="/photos/thumb/2000-madison-bethmarkjill.jpg" alt="[Thumb]" /></a><br />
+Beth, Mark, Jill</p>
+<p><a href="/photos/2000-madison-bethmarkjill2.jpg"><img src="/photos/thumb/2000-madison-bethmarkjill2.jpg" alt="[Thumb]" /></a><br />
+April 2000</p>
+<p><a href="/photos/2000-madison-cleanroom.jpg"><img src="/photos/thumb/2000-madison-cleanroom.jpg" alt="[Thumb]" /></a><br />
+UPS Spring Cleaning - April 2000</p>
+<p><a href="/photos/2000-madison-bullshit.jpg"><img src="/photos/thumb/2000-madison-bullshit.jpg" alt="[Thumb]" /></a><br />
+A late night - May 2000</p>
+<p><a href="/photos/2000-madison-lucas1.jpg"><img src="/photos/thumb/2000-madison-lucas1.jpg" alt="[Thumb]" /></a><br />
+Lucas Finco - March 2000</p>
+<p><a href="/photos/2000-madison-dillan.jpg"><img src="/photos/thumb/2000-madison-dillan.jpg" alt="[Thumb]" /></a></p>
+<p><a href="/photos/2000-madison-haircut.jpg"><img src="/photos/thumb/2000-madison-haircut.jpg" alt="[Thumb]" /></a><br />
+Mark gets his hair cut.<br />
+March 2000</p>
+<p><a href="/photos/2000-madison-hparty1.jpg"><img src="/photos/thumb/2000-madison-hparty1.jpg" alt="[Thumb]" /></a><br />
+this is a little celebration at my place.</p>
+<p><a href="/photos/2000-madison-hparty2.jpg"><img src="/photos/thumb/2000-madison-hparty2.jpg" alt="[Thumb]" /></a><br />
+Suzy, Jill, and myself - my 22nd birthday.</p>
+<p><a href="/photos/2000-madison-josh.jpg"><img src="/photos/thumb/2000-madison-josh.jpg" alt="[Thumb]" /></a><br />
+<a href="http://ups.physics.wisc.edu/~josh/">Josh</a></p>
+<p><a href="/photos/2000-madison-mark.jpg"><img src="/photos/thumb/2000-madison-mark.jpg" alt="[Thumb]" /></a><br />
+<a href="http://ups.physics.wisc.edu/~chapman/">Mark</a></p>
+<p><a href="/photos/2000-madison-lab.jpg"><img src="/photos/thumb/2000-madison-lab.jpg" alt="[Thumb]" /></a><br />
+Some guys from my old job, down in the <a href="http://aida.physics.wisc.edu/">lab</a>: Mark, Roch, and <a href="http://aida.physics.wisc.edu/~oconnell/">Rob</a><br />
+<em>If you are one of our competitors, I have been asked to tell you not to look closely at our vessel for design secrets. You have been warned</em>.<br />
+January 2000</p>
+<hr />
 <h2>1999 Madison Things.</h2>
-<p>There are few photos from this period because I was without a
-camera</p>
-
-<p>
-  <a href="/photos/1999-11-josh-jones-bird.jpg">
-    <img width="120" height="108" alt="[Thumb]"
-    src="/photos/thumb/1999-11-josh-jones-bird.jpg" />
-  </a>
-</p>
-
-<p>
-  <a href="/photos/1999-11-ups-1.jpg">
-    <img width="120" height="40" alt="[Thumb]"
-    src="/photos/thumb/1999-11-ups-1.jpg" />
-  </a>
-</p>
-
-<p><a href="/photos/1999-02-20-tinman.jpg" >
-  <img alt="[Thumb]" src="/photos/thumb/1999-02-20-tinman.jpg" /></a>
-  <br />The tin man.</p>
+<p>There are few photos from this period because I was without a camera</p>
+<p><a href="/photos/1999-11-josh-jones-bird.jpg"><img src="/photos/thumb/1999-11-josh-jones-bird.jpg" alt="[Thumb]" /></a></p>
+<p><a href="/photos/1999-11-ups-1.jpg"><img src="/photos/thumb/1999-11-ups-1.jpg" alt="[Thumb]" /></a></p>
+<p><a href="/photos/1999-02-20-tinman.jpg"><img src="/photos/thumb/1999-02-20-tinman.jpg" alt="[Thumb]" /></a><br />
+The tin man.</p>
+<hr />
+<p>file modification time: 2003-07-19 05:35:44</p>
+<hr />
 
 </div>
-
-<div class="section"><p class="rightside">file modification time: 2003-07-19 05:35:44</p></div>
-
-<div class="section">
-<p class="centered">Copyright 1997-2013 by Hal Canary.<br>
-<i>mailto: halcanary at gmail dot com</i><br>
-<a href="https://halcanary.org"><i>http://halcanary.org</i></a></p>
-</div>
-
 </body>
 </html>

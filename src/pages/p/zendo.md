@@ -12,7 +12,7 @@
 
 * * *
 
-<div class="rightsie">
+<div class="rightside">
 
 *file modification time: 2003-07-16 05:18:50*  
 *Copyright 1997-2013 by Hal Canary.*    
