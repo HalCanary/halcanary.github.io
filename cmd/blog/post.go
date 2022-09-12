@@ -11,6 +11,7 @@ import (
 	"time"
 
 	"github.com/HalCanary/booker/dom"
+	"github.com/HalCanary/halcanary.github.io/commonmarker"
 	"gitlab.com/golang-commonmark/markdown"
 )
 
@@ -43,7 +44,8 @@ func header(level int, attributes dom.Attr, children ...*dom.Node) *dom.Node {
 }
 
 func (post Post) Content(level int) string {
-	tokens := Markdowner().Parse(post.Markdown)
+	markdowner := commonmarker.Markdowner()
+	tokens := markdowner.Parse(post.Markdown)
 	lowestLevel := math.MaxInt
 	for _, token := range tokens {
 		if h, ok := token.(*markdown.HeadingOpen); ok && h != nil {
@@ -62,7 +64,7 @@ func (post Post) Content(level int) string {
 			}
 		}
 	}
-	return Markdowner().RenderTokensToString(tokens)
+	return markdowner.RenderTokensToString(tokens)
 }
 
 func (post Post) Article(level int, url string, prefix string) *dom.Node {

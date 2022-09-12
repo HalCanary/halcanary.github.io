@@ -15,6 +15,8 @@ import (
 	"time"
 
 	"github.com/HalCanary/booker/dom"
+	"github.com/HalCanary/halcanary.github.io/check"
+	"github.com/HalCanary/halcanary.github.io/filebuf"
 )
 
 type Blog struct {
@@ -74,18 +76,18 @@ func main() {
 
 	blogRoot := os.Args[1]
 	blog, err := ReadBlogConfig(blogRoot)
-	check(err)
+	check.Check(err)
 
 	matches, err := filepath.Glob(blogRoot + "/src/BlogSrc/*.md")
-	check(err)
+	check.Check(err)
 
 	var allPosts []Post
 	for _, path := range matches {
 		f, err := os.Open(path)
-		check(err)
+		check.Check(err)
 		post, err := ParsePost(f)
 		f.Close()
-		check(err)
+		check.Check(err)
 		post.Source = filepath.Base(path)
 		allPosts = append(allPosts, post)
 	}
@@ -94,7 +96,7 @@ func main() {
 	var lastMod time.Time
 	for _, path := range matches {
 		info, err := os.Stat(path)
-		check(err)
+		check.Check(err)
 		mt := info.ModTime()
 		if lastMod.IsZero() || lastMod.Before(mt) {
 			lastMod = mt
@@ -163,9 +165,9 @@ func writeIndex(blog Blog, allPosts []Post) {
 }
 
 func writeRSS(blog Blog, allPosts []Post, lastMod time.Time) {
-	rss := BufferedFile{Path: concat(blog.Path(), "rss.rss")}
-	check(MakeRSS(lastMod, blog, allPosts, &rss))
-	check(rss.Close())
+	rss := filebuf.FileBuf{Path: concat(blog.Path(), "rss.rss")}
+	check.Check(MakeRSS(lastMod, blog, allPosts, &rss))
+	check.Check(rss.Close())
 	if rss.Changed() {
 		changedFilesChan <- rss.Path
 	}
@@ -181,9 +183,9 @@ func writeCategoryIndex(blog Blog, categories map[string]int) {
 }
 
 func updateHtml(path string, node *dom.Node) {
-	f := BufferedFile{Path: path}
+	f := filebuf.FileBuf{Path: path}
 	node.RenderHTML(&f)
-	check(f.Close())
+	check.Check(f.Close())
 	if f.Changed() {
 		changedFilesChan <- f.Path
 	}
@@ -301,7 +303,7 @@ func (blog Blog) makeIndex(allPosts []Post) *dom.Node {
 
 func (blog Blog) doSegmentedPosts(segmentedPostLists [][]Post, fragFn, titleFn func(p Post) string) {
 	for idx, segment := range segmentedPostLists {
-		assert(len(segment) > 0)
+		check.Assert(len(segment) > 0)
 		var prev, next *dom.Node
 		if idx > 0 {
 			p := segmentedPostLists[idx-1][0]

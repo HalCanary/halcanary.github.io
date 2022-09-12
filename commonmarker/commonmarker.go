@@ -1,4 +1,6 @@
-package main
+// Copyright 2022 Hal Canary
+// Use of this program is governed by the file LICENSE.
+package commonmarker
 
 import (
 	"sync"

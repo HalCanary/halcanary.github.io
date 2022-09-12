@@ -1,12 +1,14 @@
-all: theblog
+all: theblog staticsite
 	src/make-old-pages
 	src/make-redirects
-	src/make-pages
 
-theblog: blog
+theblog: blog $(shell find src/BlogSrc -type f)
 	time ./blog .
 
-blog: $(wildcard cmd/blog/*)
-	go build ./cmd/blog
+staticsite: site $(shell find src/pages -type f)
+	time ./site .
 
-.PHONY: theblog all
+blog site: %: $(wildcard cmd/*/* check/* filebuf/* commonmarker/*)
+	go build ./cmd/$*
+
+.PHONY: theblog all staticsite

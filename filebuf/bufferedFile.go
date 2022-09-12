@@ -1,4 +1,6 @@
-package main
+// Copyright 2022 Hal Canary
+// Use of this program is governed by the file LICENSE.
+package filebuf
 
 import (
 	"bytes"
@@ -6,24 +8,24 @@ import (
 	"path/filepath"
 )
 
-type BufferedFile struct {
+type FileBuf struct {
 	Path    string
 	buf     bytes.Buffer
 	changed bool
 }
 
-func (b *BufferedFile) Write(p []byte) (int, error) { return b.buf.Write(p) }
+func (b *FileBuf) Write(p []byte) (int, error) { return b.buf.Write(p) }
 
-func (b *BufferedFile) WriteString(s string) (int, error) { return b.buf.WriteString(s) }
+func (b *FileBuf) WriteString(s string) (int, error) { return b.buf.WriteString(s) }
 
-func (b *BufferedFile) Reset() error {
+func (b *FileBuf) Reset() error {
 	b.buf = bytes.Buffer{}
 	return nil
 }
 
-func (b *BufferedFile) Len() int { return b.buf.Len() }
+func (b *FileBuf) Len() int { return b.buf.Len() }
 
-func (b *BufferedFile) Close() error {
+func (b *FileBuf) Close() error {
 	d := b.buf.Bytes()
 	b.buf = bytes.Buffer{}
 	c, e := os.ReadFile(b.Path)
@@ -43,4 +45,4 @@ func (b *BufferedFile) Close() error {
 	return e
 }
 
-func (b BufferedFile) Changed() bool { return b.changed }
+func (b FileBuf) Changed() bool { return b.changed }
