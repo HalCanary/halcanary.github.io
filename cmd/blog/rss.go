@@ -42,9 +42,9 @@ func MakeRSS(now time.Time, blog Blog, posts []Post, dst io.Writer) error {
 		xmlElem{
 			XMLName: xml.Name{Local: "image"},
 			Children: []xmlElem{
-				tag("url", blogLink),
+				tag("url", blog.ImageLink),
 				tag("title", blog.Title),
-				tag("link", concat(blog.BaseUrl, blog.ImageLink)),
+				tag("link", blogLink),
 			},
 		},
 	}

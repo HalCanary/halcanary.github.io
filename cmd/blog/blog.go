@@ -20,31 +20,48 @@ import (
 type Blog struct {
 	Title       string
 	Description string
-	Language    string
-	Copyright   string
-	BaseUrl     string
-	Prefix      string
-	ImageLink   string
-	Style       string
-	Icon        string
+	Language    string // RFC-5646
+	Copyright   string // "Copyright YEAR-YEAR Legal Entity. ALL RIGHTS RESERVED."
+	BaseUrl     string // "https://example.com"
+	Prefix      string // "/~example/"
+	ImageLink   string // "/~example/image.png"
+	Style       string // Inline CSS content.
+	Icon        string // URL for icon/
+	path        string // Infered to be os.Args[1] + "/docs" + .Prefix
 }
 
-var waitgroup sync.WaitGroup
+var (
+	waitgroup        sync.WaitGroup
+	changedFiles     []string
+	changedFilesChan chan string
+)
 
 func concat(strs ...string) string {
 	return strings.Join(strs, "")
+}
+
+func (b Blog) Path() string { return b.path }
+
+func ReadBlogConfig(blogRootPath string) (Blog, error) {
+	var blog Blog
+	configFile, err := os.Open(blogRootPath + "/Blog.xml")
+	if err == nil {
+		err = xml.NewDecoder(configFile).Decode(&blog)
+		blog.path = concat(blogRootPath, "/docs", blog.Prefix)
+	}
+	return blog, err
 }
 
 func link(dst, text string) *dom.Node {
 	return dom.Element("a", dom.Attr{"href": dst}, dom.TextNode(text))
 }
 
-var changedFiles []string
-
-var changedFilesChan chan string
-
-func markChanged(s string) {
-	changedFilesChan <- s
+// Syncronize access to the changedFiles data structure.
+func readChangedFilesChan() {
+	changedFilesChan = make(chan string)
+	for s := range changedFilesChan {
+		changedFiles = append(changedFiles, s)
+	}
 }
 
 func main() {
@@ -56,6 +73,9 @@ func main() {
 	}
 
 	blogRoot := os.Args[1]
+	blog, err := ReadBlogConfig(blogRoot)
+	check(err)
+
 	matches, err := filepath.Glob(blogRoot + "/src/BlogSrc/*.md")
 	check(err)
 
@@ -81,19 +101,7 @@ func main() {
 		}
 	}
 
-	directory := blogRoot + "/docs"
-
-	configFile, err := os.Open(blogRoot + "/Blog.xml")
-	check(err)
-	var blog Blog
-	check(xml.NewDecoder(configFile).Decode(&blog))
-
-	changedFilesChan = make(chan string)
-	go func() {
-		for s := range changedFilesChan {
-			changedFiles = append(changedFiles, s)
-		}
-	}()
+	go readChangedFilesChan()
 
 	for idx, post := range allPosts {
 		var prev, next *Post
@@ -105,46 +113,23 @@ func main() {
 		}
 
 		waitgroup.Add(1)
-		go func(post Post, prev, next *Post) {
-			defer waitgroup.Done()
-			updateHtml(
-				concat(directory, blog.Prefix, post.LongId(), "/index.html"),
-				blog.makeIndividualPost(post, prev, next))
-		}(post, prev, next)
+		go writeIndividualPost(blog, post, prev, next)
 	}
 
 	waitgroup.Add(1)
-	go func() {
-		defer waitgroup.Done()
-		updateHtml(
-			concat(directory, blog.Prefix, "archives/", "index.html"),
-			blog.makeListingPage(allPosts, blog.Title+" Archives", nil, nil))
-	}()
+	go writeSegmentedListingPage(blog, allPosts, "archives/", blog.Title+" Archives", nil, nil)
 
-	blog.doSegmentedPosts(directory, splitBy(allPosts, yearEq), yearFrag, yearTitle)
-	blog.doSegmentedPosts(directory, splitBy(allPosts, monthEq), monthFrag, monthTitle)
-	blog.doSegmentedPosts(directory, splitBy(allPosts, dayEq), dayFrag, dayTitle)
+	blog.doSegmentedPosts(splitBy(allPosts, yearEq), yearFrag, yearTitle)
+	blog.doSegmentedPosts(splitBy(allPosts, monthEq), monthFrag, monthTitle)
+	blog.doSegmentedPosts(splitBy(allPosts, dayEq), dayFrag, dayTitle)
 
-	blog.doCategories(directory, allPosts)
+	blog.doCategories(allPosts)
 
 	waitgroup.Add(1)
-	go func() {
-		defer waitgroup.Done()
-		updateHtml(
-			concat(directory, blog.Prefix, "index.html"),
-			blog.makeIndex(allPosts))
-	}()
+	go writeIndex(blog, allPosts)
 
-	rss := BufferedFile{Path: concat(directory, blog.Prefix, "rss.rss")}
 	waitgroup.Add(1)
-	go func() {
-		defer waitgroup.Done()
-		check(MakeRSS(lastMod, blog, allPosts, &rss))
-		check(rss.Close())
-		if rss.Changed() {
-			markChanged(rss.Path)
-		}
-	}()
+	go writeRSS(blog, allPosts, lastMod)
 
 	waitgroup.Wait()
 	if len(changedFiles) == 0 {
@@ -156,12 +141,51 @@ func main() {
 	}
 }
 
+func writeIndividualPost(blog Blog, post Post, prev, next *Post) {
+	updateHtml(
+		concat(blog.Path(), post.LongId(), "/index.html"),
+		blog.makeIndividualPost(post, prev, next))
+	waitgroup.Done()
+}
+
+func writeSegmentedListingPage(blog Blog, segment []Post, fragment, title string, prev, next *dom.Node) {
+	updateHtml(
+		concat(blog.Path(), fragment, "index.html"),
+		blog.makeListingPage(segment, title, prev, next))
+	waitgroup.Done()
+}
+
+func writeIndex(blog Blog, allPosts []Post) {
+	updateHtml(
+		concat(blog.Path(), "index.html"),
+		blog.makeIndex(allPosts))
+	waitgroup.Done()
+}
+
+func writeRSS(blog Blog, allPosts []Post, lastMod time.Time) {
+	rss := BufferedFile{Path: concat(blog.Path(), "rss.rss")}
+	check(MakeRSS(lastMod, blog, allPosts, &rss))
+	check(rss.Close())
+	if rss.Changed() {
+		changedFilesChan <- rss.Path
+	}
+	waitgroup.Done()
+}
+
+func writeCategoryIndex(blog Blog, categories map[string]int) {
+	updateHtml(
+		concat(blog.Path(), "category/index.html"),
+		blog.makeCategoryIndex(categories),
+	)
+	waitgroup.Done()
+}
+
 func updateHtml(path string, node *dom.Node) {
 	f := BufferedFile{Path: path}
 	node.RenderHTML(&f)
 	check(f.Close())
 	if f.Changed() {
-		markChanged(f.Path)
+		changedFilesChan <- f.Path
 	}
 }
 
@@ -275,10 +299,10 @@ func (blog Blog) makeIndex(allPosts []Post) *dom.Node {
 	)
 }
 
-func (blog Blog) doSegmentedPosts(directory string, segmentedPostLists [][]Post, fragFn, titleFn func(p Post) string) {
+func (blog Blog) doSegmentedPosts(segmentedPostLists [][]Post, fragFn, titleFn func(p Post) string) {
 	for idx, segment := range segmentedPostLists {
 		assert(len(segment) > 0)
-		var next, prev *dom.Node
+		var prev, next *dom.Node
 		if idx > 0 {
 			p := segmentedPostLists[idx-1][0]
 			next = dom.Elem("p", dom.TextNode("("), link(concat(blog.Prefix, fragFn(p)), titleFn(p)), dom.TextNode(")"))
@@ -287,13 +311,10 @@ func (blog Blog) doSegmentedPosts(directory string, segmentedPostLists [][]Post,
 			p := segmentedPostLists[idx+1][0]
 			prev = dom.Elem("p", dom.TextNode("("), link(concat(blog.Prefix, fragFn(p)), titleFn(p)), dom.TextNode(")"))
 		}
+		fragment := fragFn(segment[0])
+		title := concat(blog.Title, " Archive ", titleFn(segment[0]))
 		waitgroup.Add(1)
-		go func(directory string, segment []Post, prev, next *dom.Node) {
-			defer waitgroup.Done()
-			updateHtml(
-				concat(directory, blog.Prefix, fragFn(segment[0]), "index.html"),
-				blog.makeListingPage(segment, concat(blog.Title, " Archive ", titleFn(segment[0])), prev, next))
-		}(directory, segment, prev, next)
+		go writeSegmentedListingPage(blog, segment, fragment, title, prev, next)
 	}
 }
 
@@ -314,7 +335,7 @@ func splitBy(posts []Post, equivilent func(Post, Post) bool) [][]Post {
 	return sorted
 }
 
-func (blog Blog) doCategories(directory string, allPosts []Post) {
+func (blog Blog) doCategories(allPosts []Post) {
 	catmap := map[string][]Post{}
 	for _, p := range allPosts {
 		for _, cat := range p.Categories {
@@ -332,21 +353,12 @@ func (blog Blog) doCategories(directory string, allPosts []Post) {
 		categories[cat] = len(postList)
 	}
 	waitgroup.Add(1)
-	go func() {
-		defer waitgroup.Done()
-		updateHtml(
-			concat(directory, blog.Prefix, "category/index.html"),
-			blog.makeCategoryIndex(categories),
-		)
-	}()
+	go writeCategoryIndex(blog, categories)
 	for cat, postList := range catmap {
 		waitgroup.Add(1)
-		go func(cat string, postList []Post) {
-			defer waitgroup.Done()
-			updateHtml(
-				concat(directory, blog.Prefix, "category/", cat, "/index.html"),
-				blog.makeListingPage(postList, blog.Title+" Archive #"+cat, nil, nil))
-		}(cat, postList)
+		fragment := concat("category/", cat, "/")
+		title := concat(blog.Title, " Archive #", cat)
+		go writeSegmentedListingPage(blog, postList, fragment, title, nil, nil)
 	}
 }
 

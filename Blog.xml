@@ -5,7 +5,7 @@
 	<Copyright>Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.</Copyright>
 	<BaseUrl>https://halcanary.org</BaseUrl>
 	<Prefix>/vv/</Prefix>
-	<ImageLink>/images/HAL_CANARY_20191008_512.jpg</ImageLink>
+	<ImageLink>https://halcanary.org/images/HAL_CANARY_20191008_512.jpg</ImageLink>
 	<Style><![CDATA[
 @media (prefers-color-scheme:dark) {body {background-color:#000;color:#FFF;}
 a:visited {color:#C0F;}
