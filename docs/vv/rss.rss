@@ -7,8 +7,8 @@
 		<language>en-US</language>
 		<copyright>Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.</copyright>
 		<link>https://halcanary.org/vv/</link>
-		<pubDate>Mon, 12 Sep 2022 09:07:29 -0400</pubDate>
-		<lastBuildDate>Mon, 12 Sep 2022 09:07:29 -0400</lastBuildDate>
+		<pubDate>Mon, 12 Sep 2022 09:18:10 -0400</pubDate>
+		<lastBuildDate>Mon, 12 Sep 2022 09:18:10 -0400</lastBuildDate>
 		<image>
 			<url>https://halcanary.org/images/HAL_CANARY_20191008_512.jpg</url>
 			<title>Voder-Vocoder</title>
@@ -531,9 +531,10 @@ Projection</a>.”
 		<item>
 			<title>Current Location</title>
 			<link>https://halcanary.org/vv/2013/08/29/3002/</link>
-			<guid isPermaLink="false">debf2968-cb54-5248-a00f-e28963ee004c</guid>
+			<guid isPermaLink="false">bb06b7a5-95f3-589d-a20e-e2ee69865a81</guid>
 			<pubDate>Thu, 29 Aug 2013 09:48:42 -0500</pubDate>
-			<description><![CDATA[<p>The existing software on your phone makes it impossible to send someone precise latitude/longitude that you pinpoint on a map. Here&#39;s my solution, IF you are already standing where you want to pinpoint: &lt;https://halcanary.org/loc/&gt;</p>
+			<description><![CDATA[<p>The existing software on your phone makes it impossible to send someone precise latitude/longitude that you pinpoint on a map.</p>
+<p>Here's my solution, IF you are already standing where you want to pinpoint: <a href="https://halcanary.org/loc/">https://halcanary.org/loc/</a></p>
 ]]></description>
 			<category>computers-code</category>
 		</item>
