@@ -79,17 +79,20 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
+<div>
 <pre><code>#!/bin/sh
 #DTPD#
 DICT=/usr/share/dict/words
-test &quot;$1&quot; || { cat &quot;$0&quot;; exit 1; }
-exec grep -i &quot;$@&quot; &quot;$DICT&quot; | less
+test &#34;$1&#34; || { cat &#34;$0&#34;; exit 1; }
+exec grep -i &#34;$@&#34; &#34;$DICT&#34; | less
 #
 # Useage:
 #   scrabble.sh PATTERN
 # Example:
-#   scrabble.sh '^a[lonrchl]\{4,7\}$'
+#   scrabble.sh &#39;^a[lonrchl]\{4,7\}$&#39;
 </code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

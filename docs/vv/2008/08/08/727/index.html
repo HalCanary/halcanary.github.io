@@ -79,7 +79,8 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
-<p>Because the syntax of the <em>/etc/sudoers</em> file is obscure, I'm noting down here exactly what I've done to mine:</p>
+<div>
+<p>Because the syntax of the <em>/etc/sudoers</em> file is obscure, I&#39;m noting down here exactly what I&#39;ve done to mine:</p>
 <pre><code>root	ALL=(ALL) ALL
 %admin ALL=(ALL) ALL
 %admin ALL=NOPASSWD: /usr/bin/wodim
@@ -88,6 +89,8 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 %admin ALL=NOPASSWD: /sbin/poweroff
 </code></pre>
 <p>This allows a few commonly used commands to be executed without a password.</p>
+
+</div>
 </div>
 </article>
 <hr/>

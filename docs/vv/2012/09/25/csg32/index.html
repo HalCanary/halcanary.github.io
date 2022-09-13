@@ -79,8 +79,9 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
+<div>
 <pre><code class="language-Emacs">(defun guard ()
-  &quot;http://en.wikipedia.org/wiki/Include_guard&quot;
+  &#34;http://en.wikipedia.org/wiki/Include_guard&#34;
   (interactive)
   (if (buffer-file-name)
       (let ((macro-name
@@ -89,23 +90,25 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 	       (file-name-sans-extension
 		(file-name-nondirectory
 		 (buffer-file-name))))
-	      &quot;_H&quot;)))
+	      &#34;_H&#34;)))
 	(save-excursion
 	  (goto-char (point-min))
 	  (insert
 	   (concat
-	    &quot;#ifndef &quot;
+	    &#34;#ifndef &#34;
 	    macro-name
-	    &quot;\n#define &quot;
+	    &#34;\n#define &#34;
 	    macro-name
-	    &quot;\n&quot;))
+	    &#34;\n&#34;))
 	  (goto-char (point-max))
 	  (insert
 	   (concat
-	    &quot;\n#endif /* &quot;
+	    &#34;\n#endif /* &#34;
 	    macro-name
-	    &quot; */\n&quot;))))))
+	    &#34; */\n&#34;))))))
 </code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

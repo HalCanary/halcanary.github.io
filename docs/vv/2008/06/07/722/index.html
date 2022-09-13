@@ -79,15 +79,18 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
+<div>
 <pre><code>#!/bin/sh
 #DTPD#
 # ~/bin/longest-filename
 # How long is the longest filename
 # in these directories?
-{ for x in &quot;$@&quot; ; do
-find &quot;$x&quot; -exec basename {} \;
+{ for x in &#34;$@&#34; ; do
+find &#34;$x&#34; -exec basename {} \;
 done } | wc -L
 </code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

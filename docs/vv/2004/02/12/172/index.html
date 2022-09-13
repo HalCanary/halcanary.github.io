@@ -79,10 +79,11 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
+<div>
 <pre><code class="language-sh">#!/bin/sh
 #DTPD#
 ## ~/bin/wgeto ##
-exec wget -o /dev/null -O - &quot;$@&quot;
+exec wget -o /dev/null -O - &#34;$@&#34;
 </code></pre>
 <p>Then,</p>
 <pre><code>$ wgeto http://craphound.com/ebooksneitherenorbooks.txt \
@@ -91,12 +92,14 @@ exec wget -o /dev/null -O - &quot;$@&quot;
 <p>Explanation for non-unix-literate people: First of all, I wrote a neat script
 called <code>wgeto</code>. <code>wget</code> is a program that downloads stuff off of the internet, via
 http or ftp. wgeto calls wget, but tells it to ignore the progress dialog by
-sending it to the null device, &quot;-o /dev/null&quot;. (See Rule of Silence from
+sending it to the null device, &#34;-o /dev/null&#34;. (See Rule of Silence from
 <a href="http://www.faqs.org/docs/artu/ch01s06.html#id2878450"><em>The Art of Unix Programming</em></a>.)
 <code>wgeto</code> then pipes the document into standard output.</p>
 <p>I pipe it through fold to wrap long lines</p>
 <p>Then I pipe it into a pager, less, so that I can page through the document.</p>
-<p>Now I don't have to save a copy on the hard disk.</p>
+<p>Now I don&#39;t have to save a copy on the hard disk.</p>
+
+</div>
 </div>
 </article>
 <hr/>

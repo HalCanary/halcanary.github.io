@@ -79,28 +79,31 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
+<div>
 <p>R. was looking for an easy way to share files among the computers in his house, most of which ran some version of Linux. SSH offers one solution to this question. Pro: it is available on all the Linux computers, is integrated with Gnome, allows shell as well as file access, and is secure over a wireless network. Cons: Poor support in Windows.</p>
 <p>To set up:</p>
 <ol>
 <li>
-<p>Install the OpenSSH Dæmon. In Ubuntu, for example, &quot;sudo apt-get install -y openssh-server&quot; will install it.</p>
+<p>Install the OpenSSH Dæmon. In Ubuntu, for example, &#34;sudo apt-get install -y openssh-server&#34; will install it.</p>
 </li>
 <li>
 <p>Get the local address of each machine with:</p>
-<p>/sbin/ifconfig | grep 'inet addr' | awk '{print $1 &quot; &quot; $2}'</p>
+<p>/sbin/ifconfig | grep &#39;inet addr&#39; | awk &#39;{print $1 &#34; &#34; $2}&#39;</p>
 </li>
 <li>
-<p>Give each machine a unique and memorable hostname. Hostnames can be changed permanently by changing the contents of the file /etc/hostname (on debian-style systems) and until the next boot with &quot;sudo hostname NEWNAME&quot;.</p>
+<p>Give each machine a unique and memorable hostname. Hostnames can be changed permanently by changing the contents of the file /etc/hostname (on debian-style systems) and until the next boot with &#34;sudo hostname NEWNAME&#34;.</p>
 </li>
 <li>
-<p>Edit the file /etc/hosts on each computer to list all of the local IP addresses for each computer on the network. (Under Windows, it's &quot;%SystemRoot%\system32\drivers\etc\hosts&quot; and under MacOSX it's &quot;/private/etc/hosts&quot;.</p>
+<p>Edit the file /etc/hosts on each computer to list all of the local IP addresses for each computer on the network. (Under Windows, it&#39;s &#34;%SystemRoot%\system32\drivers\etc\hosts&#34; and under MacOSX it&#39;s &#34;/private/etc/hosts&#34;.</p>
 </li>
 <li>
-<p>In Gnome, open the file browser Nautilus (&quot;nautilus&quot; from the command line)→menu bar→File→Connect to server. In the dialog, select &quot;Service type&quot; to be SSH, give the hostname, and username only if it's different on the two computers.</p>
+<p>In Gnome, open the file browser Nautilus (&#34;nautilus&#34; from the command line)→menu bar→File→Connect to server. In the dialog, select &#34;Service type&#34; to be SSH, give the hostname, and username only if it&#39;s different on the two computers.</p>
 </li>
 </ol>
-<p>Alternatively, one can enter &quot;nautilus sftp://USERNAME@HOSTNAME/DIRECTORY&quot; on the command line.</p>
+<p>Alternatively, one can enter &#34;nautilus sftp://USERNAME@HOSTNAME/DIRECTORY&#34; on the command line.</p>
 <p>In recent versions of Nautilus/Gnome, you can bookmark locations like this. Then they will be availible from the Gnome Menu→Places→Bookmarks.</p>
+
+</div>
 </div>
 </article>
 <hr/>

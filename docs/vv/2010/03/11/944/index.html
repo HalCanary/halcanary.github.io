@@ -79,7 +79,8 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
-<p>This example of why the right algorithm matters comes directly from my textbook. Here's the C implementation:</p>
+<div>
+<p>This example of why the right algorithm matters comes directly from my textbook. Here&#39;s the C implementation:</p>
 <p>Bad:</p>
 <pre><code>#include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt;
@@ -92,11 +93,11 @@ long int fib(long int n) {
 }
 int main(int argc, char *argv[]) {
   if (argc &lt;= 1) {
-    fprintf(stderr, &quot;argument?\n\n&quot;);
+    fprintf(stderr, &#34;argument?\n\n&#34;);
     exit(1);
   }
   long int n = atol(argv[1]);
-  printf(&quot;f(%li) = %li\n&quot;,n,fib(n));
+  printf(&#34;f(%li) = %li\n&#34;,n,fib(n));
   return 0;
 }
 </code></pre>
@@ -113,11 +114,11 @@ long int fib(long int n) {
 }
 int main(int argc, char *argv[]) {
   if (argc &lt;= 1) {
-    fprintf(stderr, &quot;argument?\n\n&quot;);
+    fprintf(stderr, &#34;argument?\n\n&#34;);
     exit(1);
   }
   long int n = atol(argv[1]);
-  printf(&quot;f(%li) = %li\n&quot;,n,fib(n));
+  printf(&#34;f(%li) = %li\n&#34;,n,fib(n));
   return 0;
 }
 </code></pre>
@@ -134,7 +135,7 @@ real	0m1.492s
 user	0m1.428s
 sys	0m0.004s
 </code></pre>
-<p>And you can show how nicely the good algorithm scales up by pulling out a bigint library, like Java's BigInteger:</p>
+<p>And you can show how nicely the good algorithm scales up by pulling out a bigint library, like Java&#39;s BigInteger:</p>
 <pre><code>public class fib3 {
   public static String fib(int n) {
     java.math.BigInteger a,b,c;
@@ -147,16 +148,18 @@ sys	0m0.004s
   }
   public static void main(String[] args) {
     if (args.length &lt; 1) {
-      System.err.println(&quot;argument?&quot;);
+      System.err.println(&#34;argument?&#34;);
       System.exit(1);
     }
     int n = Integer.parseInt(args[0]);
-    System.out.print(&quot;f(&quot; +
-      Integer.toString(n) + &quot;) = &quot;);
+    System.out.print(&#34;f(&#34; +
+      Integer.toString(n) + &#34;) = &#34;);
     System.out.println(fib(n));
   }
 }
 </code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

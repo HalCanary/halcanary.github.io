@@ -79,12 +79,15 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
+<div>
 <p><a href="http://www.sun.com/bigadmin/features/articles/burn_iso_images.html">This article</a> tells how to burn CD using <code>cdrecord</code> to make it easier to run a checksum program on the burnt CD.</p>
 <p>For future reference, here it is:</p>
 <pre><code>$ sudo /usr/bin/cdrecord dev=/dev/hdc -dao -v \
 	driveropts=burnfree -eject ${ISOFILE}
 $ sha1sum /dev/hdc
 </code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

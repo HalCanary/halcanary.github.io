@@ -79,6 +79,7 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
+<div>
 <p>Printing a text file is one of those basic things you never think about. Unless you are me. I like to play with the variables and make that printout look <em>good</em>.</p>
 <pre><code>#!/bin/sh
 # Print a UTF-8 document to the default printer
@@ -86,30 +87,32 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 #DTPD# Dedicated to the Public Domain.
 
 # Configurable Options
-font=&quot;Monospace 11&quot;
-#font=&quot;Serif 11&quot;
-#font=&quot;Sans 11&quot;
-paper=&quot;letter&quot;
+font=&#34;Monospace 11&#34;
+#font=&#34;Serif 11&#34;
+#font=&#34;Sans 11&#34;
+paper=&#34;letter&#34;
 b_margin=0.25
 t_margin=0.25
 r_margin=0.25
 l_margin=0.75
 
 # convert inches to PostScript points
-b_margin=`echo &quot;( $b_margin * 72 ) / 1&quot; | bc`
-t_margin=`echo &quot;( $t_margin * 72 ) / 1&quot; | bc`
-r_margin=`echo &quot;( $r_margin * 72 ) / 1&quot; | bc`
-l_margin=`echo &quot;( $l_margin * 72 ) / 1&quot; | bc`
+b_margin=`echo &#34;( $b_margin * 72 ) / 1&#34; | bc`
+t_margin=`echo &#34;( $t_margin * 72 ) / 1&#34; | bc`
+r_margin=`echo &#34;( $r_margin * 72 ) / 1&#34; | bc`
+l_margin=`echo &#34;( $l_margin * 72 ) / 1&#34; | bc`
 
-exec paps --font=&quot;$font&quot; \
-  --paper=&quot;$paper&quot; \
+exec paps --font=&#34;$font&#34; \
+  --paper=&#34;$paper&#34; \
   --bottom-margin=$b_margin \
   --top-margin=$t_margin \
   --right-margin=$r_margin \
   --left-margin=$l_margin \
-  &quot;$@&quot; | lpr
+  &#34;$@&#34; | lpr
 #EOF#
 </code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

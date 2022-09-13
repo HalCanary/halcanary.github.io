@@ -79,12 +79,15 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 <div style="display:none;">adding dark mode to this site.</div>
-<p>I added a <code>@media (prefers-color-scheme: dark) {...}</code> block to this site's CSS. The tough part was to make the SVG fill color respect that.  But it turns out that if you just style the svg element with</p>
+<div>
+<p>I added a <code>@media (prefers-color-scheme: dark) {...}</code> block to this site&#39;s CSS. The tough part was to make the SVG fill color respect that.  But it turns out that if you just style the svg element with</p>
 <pre><code>svg {
     fill: currentColor;    
 }
 </code></pre>
 <p>and remove all style information in the SVG itself, then it works as expected.</p>
+
+</div>
 </div>
 </article>
 <hr/>

@@ -79,19 +79,20 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
-<p>I like Java's verbosity; it is consistant and clear. But sometimes you want succinct things.</p>
-<pre><code>/** &quot;Returns a String object representing the specified integer.&quot; */
+<div>
+<p>I like Java&#39;s verbosity; it is consistant and clear. But sometimes you want succinct things.</p>
+<pre><code>/** &#34;Returns a String object representing the specified integer.&#34; */
 private static String itoa(int i){
 	return Integer.toString(i);
 }
-/** &quot;Returns a String object representing this Integer's value.&quot; */
+/** &#34;Returns a String object representing this Integer&#39;s value.&#34; */
 private static String itoa(Integer i){
 	return i.toString();
 }
 </code></pre>
-<hr />
+<hr/>
 <p>Also, I realized I had been using <code>assert</code> statements without <code>-enableassertions</code> for the last month, which did me very little good. A good habit, I suppose.</p>
-<hr />
+<hr/>
 <p>ALSO:</p>
 <pre><code>private static void printl(String s) {
 	System.out.println(s);
@@ -100,6 +101,8 @@ private static void error(String s) {
 	System.err.println(s);
 }
 </code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

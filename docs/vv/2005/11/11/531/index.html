@@ -79,6 +79,7 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
+<div>
 <pre><code>#!/bin/sh
 ##  RECURSIVE SHRED AND REMOVE
 ##  (c) Hal Canary 2005
@@ -87,18 +88,20 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 ##  This is free software; you can redistribute
 ##  it and modify it under the terms of version
 ##  2 of the GNU GPL.
-for x in &quot;$@&quot; ; do
-  if [ -d &quot;$x&quot; ] ; then
-    if [ &quot;$x&quot; != &quot;.&quot; -a &quot;$x&quot; != &quot;..&quot; ] ; then
-      touch &quot;${x}&quot;/EMPTY
-      rm-shred &quot;${x}&quot;/*
-      rmdir &quot;${x}&quot;
+for x in &#34;$@&#34; ; do
+  if [ -d &#34;$x&#34; ] ; then
+    if [ &#34;$x&#34; != &#34;.&#34; -a &#34;$x&#34; != &#34;..&#34; ] ; then
+      touch &#34;${x}&#34;/EMPTY
+      rm-shred &#34;${x}&#34;/*
+      rmdir &#34;${x}&#34;
     fi
   else
-    shred -n 1 -u &quot;$x&quot;
+    shred -n 1 -u &#34;$x&#34;
   fi
 done
 </code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

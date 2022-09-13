@@ -79,32 +79,33 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
+<div>
 <p>This script will snap your window to the left or right side of the screen in Linux: (<a href="http://www.techsupportalert.com/content/ubuntu-tips-and-tricks.htm#Enable-Aero-Snap">SOURCE</a>)</p>
 <pre><code class="language-sh">#!/bin/sh
 ## ${HOME}/bin/wmctrl-snap-edge
 #DTPD#
-WMCTRL=&quot;${HOME}/bin/wmctrl_`arch`&quot;
-#WMCTRL=&quot;/usr/bin/wmctrl&quot;
-test -x &quot;/usr/bin/xdpyinfo&quot; -a -x &quot;$WMCTRL&quot; || {
-    echo &quot;error&quot;; exit 1; }
+WMCTRL=&#34;${HOME}/bin/wmctrl_`arch`&#34;
+#WMCTRL=&#34;/usr/bin/wmctrl&#34;
+test -x &#34;/usr/bin/xdpyinfo&#34; -a -x &#34;$WMCTRL&#34; || {
+    echo &#34;error&#34;; exit 1; }
 
-WIDTH=`xdpyinfo | sed -n 's/ *dimensions: *\([0-9]*\)x.*/\1/p'`
+WIDTH=`xdpyinfo | sed -n &#39;s/ *dimensions: *\([0-9]*\)x.*/\1/p&#39;`
 HALF=$(($WIDTH / 2));
-&quot;$WMCTRL&quot; -r :ACTIVE: -b add,maximized_vert;
-if test &quot;$1&quot; = &quot;left&quot; ; then
-	&quot;$WMCTRL&quot; -r :ACTIVE: -e 0,0,0,$HALF,-1
-elif test &quot;$1&quot; = &quot;right&quot; ; then
-	&quot;$WMCTRL&quot; -r :ACTIVE: -e 0,$HALF,0,$HALF,-1
+&#34;$WMCTRL&#34; -r :ACTIVE: -b add,maximized_vert;
+if test &#34;$1&#34; = &#34;left&#34; ; then
+	&#34;$WMCTRL&#34; -r :ACTIVE: -e 0,0,0,$HALF,-1
+elif test &#34;$1&#34; = &#34;right&#34; ; then
+	&#34;$WMCTRL&#34; -r :ACTIVE: -e 0,$HALF,0,$HALF,-1
 fi
 </code></pre>
-<p>If you don't have wmctrl installed, you can apt-get it (Ubuntu):</p>
+<p>If you don&#39;t have wmctrl installed, you can apt-get it (Ubuntu):</p>
 <pre><code class="language-sh">sudo apt-get --yes install wmctrl
 </code></pre>
 <p>Or compile it yourself:</p>
 <pre><code class="language-sh">sudo yum install libXmu-devel
 cd /tmp
-wget 'http://tomas.styblo.name/wmctrl/dist/wmctrl-1.07.tar.gz'
-tar --extract --gzip --file &quot;wmctrl-1.07.tar.gz&quot;
+wget &#39;http://tomas.styblo.name/wmctrl/dist/wmctrl-1.07.tar.gz&#39;
+tar --extract --gzip --file &#34;wmctrl-1.07.tar.gz&#34;
 cd wmctrl-1.07
 ./configure
 make -j 4
@@ -113,20 +114,22 @@ mv wmctrl ${HOME}/bin/wmctrl_`arch`
 <p>The next step is to set up hotkeys. If you use Metacity like I do, then:</p>
 <pre><code class="language-sh">gconftool-2 --type string --set \
 	/apps/metacity/global_keybindings/run_command_6 \
-	'&lt;Ctrl&gt;&lt;Alt&gt;Page_Up'
+	&#39;&lt;Ctrl&gt;&lt;Alt&gt;Page_Up&#39;
 
 gconftool-2 --type string --set \
 	/apps/metacity/keybinding_commands/command_6 \
-	&quot;${HOME}/bin/wmctrl-snap-edge left&quot;
+	&#34;${HOME}/bin/wmctrl-snap-edge left&#34;
 
 gconftool-2 --type string --set \
 	/apps/metacity/global_keybindings/run_command_7 \
-	'&lt;Ctrl&gt;&lt;Alt&gt;Page_Down'
+	&#39;&lt;Ctrl&gt;&lt;Alt&gt;Page_Down&#39;
 
 gconftool-2 --type string --set \
 	/apps/metacity/keybinding_commands/command_7 \
-	&quot;${HOME}/bin/wmctrl-snap-edge right&quot;
+	&#34;${HOME}/bin/wmctrl-snap-edge right&#34;
 </code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

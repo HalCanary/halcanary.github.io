@@ -79,7 +79,8 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
-<p>I'm starting to think in maple these days. Cool</p>
+<div>
+<p>I&#39;m starting to think in maple these days. Cool</p>
 <pre><code>#begin Maple Code
 interface(prettyprint=false):
 f := (x) -&gt; a*x^2 + b*x + c:
@@ -97,11 +98,13 @@ Q1 := (n,x) -&gt; add( binomial(2^n,k)
   * (Fib(2^n-k-1)) * x^k,k=0..2^n):
 a:=1: b:=1: c:=(-1):
 for n from 0 to 4 do
-  printf(&quot;x(%a) - P1(%a)/Q1(%a) = %q\n&quot;,n,n,n,
+  printf(&#34;x(%a) - P1(%a)/Q1(%a) = %q\n&#34;,n,n,n,
   simplify(x(n) - (P1(n,x0)/Q1(n,x0)))):
 end do:
 #end Maple Code
 </code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

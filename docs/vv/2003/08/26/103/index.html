@@ -79,17 +79,20 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
-<p>Here's little script that check to see if the ssh-agent knows any keys. If not, it asks for your passphrase. Then it executes ssh.</p>
+<div>
+<p>Here&#39;s little script that check to see if the ssh-agent knows any keys. If not, it asks for your passphrase. Then it executes ssh.</p>
 <pre><code class="language-sh">#!/bin/sh
 #DTPD#
 ## $HOME/bin/ssh ##
 if ! (ssh-add -l &gt; /dev/null); then
   ssh-add;
 fi
-echo ssh &quot;$@&quot;;
-exec /usr/bin/ssh &quot;$@&quot;;
+echo ssh &#34;$@&#34;;
+exec /usr/bin/ssh &#34;$@&#34;;
 </code></pre>
 <p>Of course you have to have the ssh-agent working correctly in the first place.</p>
+
+</div>
 </div>
 </article>
 <hr/>

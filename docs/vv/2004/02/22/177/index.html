@@ -79,7 +79,8 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
-<p>This is how to combine mkisofs and cdrecord. This should be a standard script on all systems, but it's not.</p>
+<div>
+<p>This is how to combine mkisofs and cdrecord. This should be a standard script on all systems, but it&#39;s not.</p>
 <pre><code class="language-sh">#!/bin/sh
 
 ## /usr/local/bin/burn-dir ##
@@ -89,22 +90,24 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 # mkisofs man page.  Assumes that
 # /etc/cdrecord.conf is correct.
 if [ $# -eq 0 ] ; then
-  echo -e &quot;Useage:&quot;
-  echo -e &quot;  $0 directory \&quot;Volume Name \&quot;&quot;
+  echo -e &#34;Useage:&#34;
+  echo -e &#34;  $0 directory \&#34;Volume Name \&#34;&#34;
   exit 1
 fi
 CDROM=/dev/cdrom1
 
 cdblocks=`mkisofs -print-size -quiet -V \
-  &quot;$2&quot; -r -J -f $1`
+  &#34;$2&#34; -r -J -f $1`
 
-echo &quot;mkisofs -quiet -V \&quot;$2\&quot; -r -J -f $1 | \
-  cdrecord -v -pad  tsize=${cdblocks}s -&quot;
-mkisofs -quiet -V &quot;$2&quot; -r -J -f $1 | \
+echo &#34;mkisofs -quiet -V \&#34;$2\&#34; -r -J -f $1 | \
+  cdrecord -v -pad  tsize=${cdblocks}s -&#34;
+mkisofs -quiet -V &#34;$2&#34; -r -J -f $1 | \
   cdrecord -v -pad tsize=${cdblocks}s -
 
 eject $CDROM
 </code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

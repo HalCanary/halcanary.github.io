@@ -79,24 +79,25 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
+<div>
 <pre><code>#!/bin/sh
 ## ~/bin/ssh-show-key-fingerprint
 ## Prints out SSHD Key Fingerprints
 ## Written 2004-2009 Hal Canary
 ## Dedicated ott he Public Domain.
-test &quot;$#&quot; -eq 0 &amp;&amp; \
-  exec &quot;$0&quot; /etc/ssh/ssh_host_*_key.pub
-for file in &quot;$@&quot; ; do
-  ( cd `dirname &quot;$file&quot;`;
+test &#34;$#&#34; -eq 0 &amp;&amp; \
+  exec &#34;$0&#34; /etc/ssh/ssh_host_*_key.pub
+for file in &#34;$@&#34; ; do
+  ( cd `dirname &#34;$file&#34;`;
     /usr/bin/ssh-keygen -l \
-      -f  `basename &quot;$file&quot;`; )
+      -f  `basename &#34;$file&#34;`; )
 done
 </code></pre>
 <p>What to do with this info? first of all, print out the fingerprints and put them in your wallet.</p>
-<p>Here's another thing I do:</p>
+<p>Here&#39;s another thing I do:</p>
 <pre><code>ssh-show-key-fingerprint | \
   sudo tee -a /etc/issue.ssh &gt; /dev/null
-echo 'Banner /etc/issue.ssh' | \
+echo &#39;Banner /etc/issue.ssh&#39; | \
   sudo tee -a /etc/ssh/sshd_config &gt; /dev/null
 </code></pre>
 <p>This, of course, is in no way a secure way to check your fingerprint, since it is just as vulnerable to a man-in-the-middle attack. But it works as a backup plan.</p>
@@ -108,6 +109,8 @@ echo 'Banner /etc/issue.ssh' | \
  RECORDING, READING, COPYING, or CAPTURING and DISCLOSURE
  by SYSTEM OWNER.
 </code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

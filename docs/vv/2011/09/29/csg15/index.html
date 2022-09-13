@@ -79,21 +79,22 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
+<div>
 <pre><code>
 ;_____________________________________________________________________
 ;
 ;	 Look And Feel
 ;_____________________________________________________________________
-(setq inhibit-startup-screen 't)
+(setq inhibit-startup-screen &#39;t)
 (tool-bar-mode nil)
 (menu-bar-mode nil)
-(set-scroll-bar-mode 'right)
+(set-scroll-bar-mode &#39;right)
 (when window-system
-  (add-to-list 'default-frame-alist '(background-color . &quot;black&quot;))
-  (add-to-list 'default-frame-alist '(foreground-color . &quot;white&quot;))
-  (add-to-list 'default-frame-alist '(background-mode . dark))
-  (custom-set-faces '(default ((t
-    (:height 110 :family &quot;DejaVu Sans Mono&quot;))))))
+  (add-to-list &#39;default-frame-alist &#39;(background-color . &#34;black&#34;))
+  (add-to-list &#39;default-frame-alist &#39;(foreground-color . &#34;white&#34;))
+  (add-to-list &#39;default-frame-alist &#39;(background-mode . dark))
+  (custom-set-faces &#39;(default ((t
+    (:height 110 :family &#34;DejaVu Sans Mono&#34;))))))
 
 ;_____________________________________________________________________
 ;
@@ -102,12 +103,14 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 (setq x-select-enable-primary t)
 (setq x-select-enable-clipboard t)
 (cua-mode)
-(global-unset-key (kbd &quot;M-z&quot;))
-(global-set-key (kbd &quot;M-z&quot;) 'suspend-emacs)
-(global-set-key (kbd &quot;C-h&quot;) 'backward-delete-char-untabify)
-(global-set-key	[(control s)] 'save-buffer)
-(global-set-key	[(control f)] 'isearch-forward)
-(define-key isearch-mode-map [(control f)] 'isearch-repeat-forward)</code></pre>
+(global-unset-key (kbd &#34;M-z&#34;))
+(global-set-key (kbd &#34;M-z&#34;) &#39;suspend-emacs)
+(global-set-key (kbd &#34;C-h&#34;) &#39;backward-delete-char-untabify)
+(global-set-key	[(control s)] &#39;save-buffer)
+(global-set-key	[(control f)] &#39;isearch-forward)
+(define-key isearch-mode-map [(control f)] &#39;isearch-repeat-forward)</code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

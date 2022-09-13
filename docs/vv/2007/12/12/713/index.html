@@ -79,9 +79,10 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
-<p>I can't tell the difference between a 32KBps and 224KBps mp3 file. Can you?</p>
-<p>So I'm down-sampling all my mp3s to fit on my new mp3 player. I should be able to fit around 3 days of music onto my 1GB player this way.</p>
-<p>Here's a script to do that---a work in progress</p>
+<div>
+<p>I can&#39;t tell the difference between a 32KBps and 224KBps mp3 file. Can you?</p>
+<p>So I&#39;m down-sampling all my mp3s to fit on my new mp3 player. I should be able to fit around 3 days of music onto my 1GB player this way.</p>
+<p>Here&#39;s a script to do that---a work in progress</p>
 <pre><code>#!/bin/sh
 
 ## Compressmp3s - Copyright 2007 Hal Canary
@@ -91,52 +92,54 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 ## This script will use lame to create a 32kbps version
 ## of those mp3 and save it in a subdirectory of $TARGETDIR
 
-if [ &quot;$#&quot; -lt 1 ] ; then
-    echo &quot;Give me an argument!&quot;
+if [ &#34;$#&#34; -lt 1 ] ; then
+    echo &#34;Give me an argument!&#34;
     exit 1
 fi
 
-TARGETDIR=&quot;$HOME/tmp/CompressedAudio&quot;
-mkdir -p &quot;$TARGETDIR&quot; || {
-    echo &quot;Use a directory you have permissions for.&quot;;
+TARGETDIR=&#34;$HOME/tmp/CompressedAudio&#34;
+mkdir -p &#34;$TARGETDIR&#34; || {
+    echo &#34;Use a directory you have permissions for.&#34;;
     exit 1 ; }
 
-## for FILE in &quot;$@&quot; ; do
-find &quot;$@&quot; -name '*.mp3' | while read FILE; do
-    IN=&quot;$FILE&quot;
-    OUT=&quot;${TARGETDIR}/$FILE&quot;
+## for FILE in &#34;$@&#34; ; do
+find &#34;$@&#34; -name &#39;*.mp3&#39; | while read FILE; do
+    IN=&#34;$FILE&#34;
+    OUT=&#34;${TARGETDIR}/$FILE&#34;
     ## Grab the id3 info for later use
-    artist=`id3info &quot;$IN&quot; | grep TPE1 | \
-        awk -F ': ' '{print $2}'`
-    album=`id3info &quot;$IN&quot; | grep TALB | \
-        awk -F ': ' '{print $2}'`
-    track=`id3info &quot;$IN&quot; | grep TRCK | \
-        awk -F ': ' '{print $2}'`
-    song=`id3info &quot;$IN&quot; | grep TIT2 | \
-        awk -F ': ' '{print $2}'`
-    echo &quot;$OUT&quot;
+    artist=`id3info &#34;$IN&#34; | grep TPE1 | \
+        awk -F &#39;: &#39; &#39;{print $2}&#39;`
+    album=`id3info &#34;$IN&#34; | grep TALB | \
+        awk -F &#39;: &#39; &#39;{print $2}&#39;`
+    track=`id3info &#34;$IN&#34; | grep TRCK | \
+        awk -F &#39;: &#39; &#39;{print $2}&#39;`
+    song=`id3info &#34;$IN&#34; | grep TIT2 | \
+        awk -F &#39;: &#39; &#39;{print $2}&#39;`
+    echo &#34;$OUT&#34;
     ## refuse to clobber a file
-    if [ ! -f &quot;$OUT&quot; ] ; then
-        echo &quot;  artist=$artist&quot;
-        echo &quot;  album=$album&quot;
-        echo &quot;  track=$track&quot;
-        echo &quot;  song=$song&quot;
-        echo &quot;&quot;
-        DIRECTORY=`dirname &quot;$OUT&quot;`
-        mkdir -p &quot;$DIRECTORY&quot; || { echo &quot;permission error&quot; ;
+    if [ ! -f &#34;$OUT&#34; ] ; then
+        echo &#34;  artist=$artist&#34;
+        echo &#34;  album=$album&#34;
+        echo &#34;  track=$track&#34;
+        echo &#34;  song=$song&#34;
+        echo &#34;&#34;
+        DIRECTORY=`dirname &#34;$OUT&#34;`
+        mkdir -p &#34;$DIRECTORY&#34; || { echo &#34;permission error&#34; ;
             exit 1 ; }
-        lame -b 32 &quot;$IN&quot; &quot;$OUT&quot; \
-            --ta &quot;$artist&quot; --tl &quot;$album&quot; \
-            --tn &quot;$track&quot; --tt &quot;$song&quot; \
+        lame -b 32 &#34;$IN&#34; &#34;$OUT&#34; \
+            --ta &#34;$artist&#34; --tl &#34;$album&#34; \
+            --tn &#34;$track&#34; --tt &#34;$song&#34; \
             --add-id3v2
     else
-        echo &quot;  already exists!&quot;
+        echo &#34;  already exists!&#34;
     fi
 done
 </code></pre>
 <p>Okay, on some files, I *can* tell the difference.</p>
 <p>* * *</p>
 <p>Compare: <a href="https://halcanary.org/pub/hidden/Nb99cbhCIxWy7ddxYPNU/032kbps_Catfish_and_the_One_Eyed_Jacks_-_The_Way_You_Move_01_-_Move_.mp3">032kbps mp3</a> versus <a href="https://halcanary.org/pub/hidden/Nb99cbhCIxWy7ddxYPNU/128kbps_Catfish_and_the_One_Eyed_Jacks_-_The_Way_You_Move_01_-_Move_.mp3">128kbps mp3</a>.</p>
+
+</div>
 </div>
 </article>
 <hr/>

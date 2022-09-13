@@ -79,6 +79,7 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
+<div>
 <pre><code>/*
    randpassphrase.c
    This makes use of /dev/random
@@ -91,27 +92,29 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 #include &lt;time.h&gt;
 int main() {
   FILE *devrandom;
-  char source [] = &quot;/dev/random&quot;;
+  char source [] = &#34;/dev/random&#34;;
   unsigned int num;
-  if ((devrandom = fopen(source, &quot;rb&quot;)) == NULL) {
-    fprintf(stderr, &quot;Cannot open %s\n&quot;, source);
+  if ((devrandom = fopen(source, &#34;rb&#34;)) == NULL) {
+    fprintf(stderr, &#34;Cannot open %s\n&#34;, source);
     exit(EXIT_FAILURE);
   }
   int i;
   for (i=0; i&lt; 28; i++) {
     if (fread(&amp;num, sizeof(num), 1, devrandom) != 1) {
-      fprintf(stderr, &quot;%s: file read error.\n&quot;, source);
+      fprintf(stderr, &#34;%s: file read error.\n&#34;, source);
       exit(EXIT_FAILURE);
     }
-    printf(&quot;%c&quot;,((num % 26) + 97));
+    printf(&#34;%c&#34;,((num % 26) + 97));
     fflush(stdout);
-    if (i%4 == 3) { printf(&quot; &quot;); }
+    if (i%4 == 3) { printf(&#34; &#34;); }
   }
   close(devrandom);
-  printf(&quot;\n&quot;);
+  printf(&#34;\n&#34;);
   return(0);
 }
 </code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

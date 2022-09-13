@@ -79,8 +79,9 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
+<div>
 <p>How to install the Fedora Core 4 version of the default Clearlooks theme on Fedora Core 5 and later:</p>
-<p><img src="https://halcanary.org/images/Clearlooks_FC4_example.png" alt="SCREENSHOT OF THEME" /></p>
+<p><img src="https://halcanary.org/images/Clearlooks_FC4_example.png" alt="SCREENSHOT OF THEME" width="463" height="254"/></p>
 <p>Begin by going to <a href="http://fedora.redhat.com/Download/">http://fedora.redhat.com/Download/</a> and find a mirror. Navigate to the directory <code>core/4/i386/os/Fedora/RPMS/</code> to download the two rpm packages we need: gnome-themes-x.xx.x-x.xxx.rpm and gtk2-engines-x.x.x-x.xxxx.rpm</p>
 <pre><code>mkdir workingfolder
 cd workingfolder
@@ -88,7 +89,7 @@ rpm2cpio [PATH]/gnome-themes-2.10.1-2.i386.rpm | cpio -id
 rpm2cpio [PATH]/gtk2-engines-2.6.3-2.i386.rpm | cpio -id
 cp -a usr/share/themes/Clearlooks Clearlooks_FC4
 </code></pre>
-<p>Now we need to edit the files in the Clearlooks_FC4 directory to give this theme a new name so the Theme Manager doesn't get confused. Edit the file <code>Clearlooks_FC4/index.theme</code>:</p>
+<p>Now we need to edit the files in the Clearlooks_FC4 directory to give this theme a new name so the Theme Manager doesn&#39;t get confused. Edit the file <code>Clearlooks_FC4/index.theme</code>:</p>
 <pre><code>[Desktop Entry]
 Name=Clearlooks_FC4
 Type=X-GNOME-Metatheme
@@ -103,7 +104,7 @@ IconTheme=Clearlooks
 <p>Edit the file <code>Clearlooks_FC4/metacity-1/metacity-theme-1.xml</code> and change one line:</p>
 <pre><code>&lt;name&gt;Clearlooks_FC4&lt;/name&gt;
 </code></pre>
-<p>Now let's wrap this up:</p>
+<p>Now let&#39;s wrap this up:</p>
 <pre><code>mkdir -p ~/.themes
 mv Clearlooks_FC4 ~/.themes
 cd ..
@@ -115,6 +116,8 @@ gnome-theme-manager &amp;
 tar xzf Clearlooks_FC4.tar.gz -C ~/.themes/
 gnome-theme-manager &amp;
 </code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

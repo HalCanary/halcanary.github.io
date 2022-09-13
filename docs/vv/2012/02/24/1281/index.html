@@ -79,6 +79,7 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
+<div>
 <pre><code class="language-sh">#!/bin/sh
 #${HOME}/bin/v
 #
@@ -86,7 +87,7 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 #
 # Permission is hereby granted, free of charge, to any
 # person obtaining a copy of this software and
-# associated documentation files (the &quot;Software&quot;), to
+# associated documentation files (the &#34;Software&#34;), to
 # deal in the Software without restriction, including
 # without limitation the rights to use, copy, modify,
 # merge, publish, distribute, sublicense, and/or sell
@@ -98,7 +99,7 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 # notice shall be included in all copies or
 # substantial portions of the Software.
 #
-# THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY
+# THE SOFTWARE IS PROVIDED &#34;AS IS&#34;, WITHOUT WARRANTY
 # OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
 # LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 # FITNESS FOR A PARTICULAR PURPOSE AND
@@ -109,31 +110,33 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 # IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 # DEALINGS IN THE SOFTWARE.
 #
-for arg in &quot;$@&quot;; do
-  case &quot;${arg##*.}&quot; in
+for arg in &#34;$@&#34;; do
+  case &#34;${arg##*.}&#34; in
   png|jpg|jpeg|gif|bmp|tif|tiff|tga|targa)
-    { /usr/bin/gthumb &quot;$arg&quot; &gt; /dev/null 2&gt;&amp;1 &amp; } ;;
+    { /usr/bin/gthumb &#34;$arg&#34; &gt; /dev/null 2&gt;&amp;1 &amp; } ;;
   pdf|ps|eps)
-    { /usr/bin/evince &quot;$arg&quot; &gt; /dev/null 2&gt;&amp;1 &amp; } ;;
+    { /usr/bin/evince &#34;$arg&#34; &gt; /dev/null 2&gt;&amp;1 &amp; } ;;
   txt|tex|c|cxx|cpp|h|hh|cc|C|py|pl|java|hpp|hxx)
-    { /usr/bin/emacs &quot;$arg&quot; \
-        --eval '(setq buffer-read-only t)' \
+    { /usr/bin/emacs &#34;$arg&#34; \
+        --eval &#39;(setq buffer-read-only t)&#39; \
         &gt; /dev/null 2&gt;&amp;1 &amp; } ;;
   htm|html)
-    full=`readlink --canonicalize &quot;$arg&quot;`
-    { /usr/bin/google-chrome &quot;file://${full}&quot; \
+    full=`readlink --canonicalize &#34;$arg&#34;`
+    { /usr/bin/google-chrome &#34;file://${full}&#34; \
         &gt; /dev/null 2&gt;&amp;1 &amp; } ;;
   doc|docx|rtf|odt|odf|odp|ppt|ods|csv|tsv|xls)
-    { /usr/bin/ooffice &quot;$arg&quot; &gt; /dev/null 2&gt;&amp;1 &amp; } ;;
+    { /usr/bin/ooffice &#34;$arg&#34; &gt; /dev/null 2&gt;&amp;1 &amp; } ;;
   xcf)
-    { /usr/bin/gimp &quot;$arg&quot; &gt; /dev/null 2&gt;&amp;1 &amp; } ;;
+    { /usr/bin/gimp &#34;$arg&#34; &gt; /dev/null 2&gt;&amp;1 &amp; } ;;
   svg)
-    { /usr/bin/inkscape &quot;$arg&quot; &gt; /dev/null 2&gt;&amp;1 &amp; } ;;
+    { /usr/bin/inkscape &#34;$arg&#34; &gt; /dev/null 2&gt;&amp;1 &amp; } ;;
   *)
-    echo &quot;What do I do with \&quot;$arg\&quot;?&quot;;;
+    echo &#34;What do I do with \&#34;$arg\&#34;?&#34;;;
   esac
 done
 </code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

@@ -79,16 +79,19 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
+<div>
 <pre><code>(defun diary () (interactive)
-  (let ((ddir &quot;d:/&quot;)
-        (year (format-time-string &quot;%Y&quot;))
-        (ymd (format-time-string &quot;%Y-%m-%d&quot;))
-    (ymdt (format-time-string &quot;%Y-%m-%d %H:%M:%S %z&quot;)))
-    (make-directory (concat ddir year ) 't)
-    (find-file (concat ddir year &quot;/&quot; ymd &quot;.txt&quot;))
+  (let ((ddir &#34;d:/&#34;)
+        (year (format-time-string &#34;%Y&#34;))
+        (ymd (format-time-string &#34;%Y-%m-%d&#34;))
+    (ymdt (format-time-string &#34;%Y-%m-%d %H:%M:%S %z&#34;)))
+    (make-directory (concat ddir year ) &#39;t)
+    (find-file (concat ddir year &#34;/&#34; ymd &#34;.txt&#34;))
     (goto-char (point-max)) (newline)
     (insert  ymdt) (newline) (newline)))
 </code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

@@ -79,6 +79,7 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
+<div>
 <pre><code>#!/bin/sh
 
 ## make-envelope.sh
@@ -91,9 +92,9 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 ## the opening flap to the right.
 ##
 ## Argument is file containing
-## &quot;to&quot; address.
+## &#34;to&#34; address.
 
-FROM=&quot;${HOME}/.return-address.txt&quot;
+FROM=&#34;${HOME}/.return-address.txt&#34;
 
 ## No 6-3/4 Envelope
  WIDTH=6.5	# inches
@@ -107,34 +108,36 @@ FROM=&quot;${HOME}/.return-address.txt&quot;
 #WIDTH=5.5	# inches
 #HEIGHT=4	# inches
 
-MARGINLEFT=$(echo &quot;(11-${WIDTH}+.5)*72&quot; \
-	|bc -l|awk -F. '{ print $1 }')
-MARGINRIGHT=$(echo &quot;.25*72&quot;\
-	|bc -l|awk -F. '{ print $1 }')
-MARGINTOPBOTTOM=$( echo &quot;(((8.5-${HEIGHT})/2)+.25)*72&quot;\
-	|bc -l|awk -F. '{ print $1 }')
+MARGINLEFT=$(echo &#34;(11-${WIDTH}+.5)*72&#34; \
+	|bc -l|awk -F. &#39;{ print $1 }&#39;)
+MARGINRIGHT=$(echo &#34;.25*72&#34;\
+	|bc -l|awk -F. &#39;{ print $1 }&#39;)
+MARGINTOPBOTTOM=$( echo &#34;(((8.5-${HEIGHT})/2)+.25)*72&#34;\
+	|bc -l|awk -F. &#39;{ print $1 }&#39;)
 
-echo &quot;	MARGINLEFT = $MARGINLEFT points&quot;
-echo &quot;	MARGINRIGHT = $MARGINRIGHT points&quot;
-echo &quot;	MARGINTOPBOTTOM = $MARGINTOPBOTTOM points&quot;
+echo &#34;	MARGINLEFT = $MARGINLEFT points&#34;
+echo &#34;	MARGINRIGHT = $MARGINRIGHT points&#34;
+echo &#34;	MARGINTOPBOTTOM = $MARGINTOPBOTTOM points&#34;
 
-TO=&quot;$1&quot;
+TO=&#34;$1&#34;
 PDF=`mktemp`
-mv &quot;${PDF}&quot; &quot;${PDF}.pdf&quot;
-PDF=&quot;${PDF}.pdf&quot;
+mv &#34;${PDF}&#34; &#34;${PDF}.pdf&#34;
+PDF=&#34;${PDF}.pdf&#34;
 TMP=`mktemp`
-{ cat &quot;${FROM}&quot;;
-  echo &quot;\n\n&quot; ;
-  sed 's/^/\t\t/g' &lt;&quot;${TO}&quot;; }  &gt; &quot;${TMP}&quot;
-cat &quot;$TMP&quot;
+{ cat &#34;${FROM}&#34;;
+  echo &#34;\n\n&#34; ;
+  sed &#39;s/^/\t\t/g&#39; &lt;&#34;${TO}&#34;; }  &gt; &#34;${TMP}&#34;
+cat &#34;$TMP&#34;
 paps --landscape \
   --bottom-margin=$MARGINTOPBOTTOM \
   --top-margin=$MARGINTOPBOTTOM \
   --left-margin=$MARGINLEFT  \
   --right-margin=$MARGINRIGHT   \
-  &lt; &quot;${TMP}&quot; | ps2pdf - - &gt; &quot;${PDF}&quot;
-echo &quot;lpr ${PDF}&quot;
+  &lt; &#34;${TMP}&#34; | ps2pdf - - &gt; &#34;${PDF}&#34;
+echo &#34;lpr ${PDF}&#34;
 </code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

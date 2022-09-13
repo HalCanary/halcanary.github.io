@@ -79,6 +79,7 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
+<div>
 <p>I wrote this today as a demonstration of where /dev/random gets all its randomness.</p>
 <pre><code>/* Copyright 2007 Hal Canary, https://halcanary.org/
 Dedicated to the Public Domain. */
@@ -88,7 +89,7 @@ int main(void) {
         struct timeval x;
         struct timezone t;
         gettimeofday(&amp;x, &amp;t);
-        printf(&quot;%u.%06u\n&quot;,x.tv_sec,x.tv_usec);
+        printf(&#34;%u.%06u\n&#34;,x.tv_sec,x.tv_usec);
         return(0);
 }
 </code></pre>
@@ -96,6 +97,8 @@ int main(void) {
 <pre><code>$ cc -o timeinmicroseconds timeinmicroseconds.c
 $ while read -s -n 1 x ; do ./timeinmicroseconds ; done
 </code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

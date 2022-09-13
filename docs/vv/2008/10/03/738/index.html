@@ -79,10 +79,11 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
+<div>
 <p>I always meant to go ahead and fix this function so it did what I want. Now it uses proper regex. See <a href="https://halcanary.org/vv/2004/02/18/176/">the old version, too</a>.</p>
 <pre><code>;; ~/.emacs ;;
 (defun remove-excess-whitespace () (interactive)
-  (auto-mega-replace  &quot;\\( \\|\t\\)$&quot; &quot;&quot;))
+  (auto-mega-replace  &#34;\\( \\|\t\\)$&#34; &#34;&#34;))
 (defun auto-mega-replace (arg1 arg2)
   (save-excursion
     (beginning-of-buffer)
@@ -92,6 +93,8 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
         nil t nil)
       (beginning-of-buffer))))
 </code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

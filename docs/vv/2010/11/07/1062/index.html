@@ -79,32 +79,35 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
+<div>
 <p>Attention Emacs users. It took me a while to realize that new-style fonts can be enabled by adding this to the ~/.emacs file.</p>
-<pre><code>(set-face-attribute 'default
-  nil :font &quot;Monospace-11&quot;)
+<pre><code>(set-face-attribute &#39;default
+  nil :font &#34;Monospace-11&#34;)
 </code></pre>
-<p>So here's how I set up the look of Emacs in my .emacs:</p>
-<pre><code>(require 'color-theme)
+<p>So here&#39;s how I set up the look of Emacs in my .emacs:</p>
+<pre><code>(require &#39;color-theme)
 (color-theme-dark-laptop)
-(set-scroll-bar-mode 'right)
+(set-scroll-bar-mode &#39;right)
 (tool-bar-mode nil)
 (menu-bar-mode nil)
-(set-face-attribute 'default
-  nil :font &quot;Monospace-11&quot;)
+(set-face-attribute &#39;default
+  nil :font &#34;Monospace-11&#34;)
 </code></pre>
-<p>And here's my emacs startup script:</p>
+<p>And here&#39;s my emacs startup script:</p>
 <pre><code>#!/bin/sh
 #DTPD#
 # ${HOME}/bin/e
-if test &quot;$DISPLAY&quot; ; then
+if test &#34;$DISPLAY&#34; ; then
   nohup /usr/bin/emacsclient \
-    -a '' -n  &quot;$@&quot; \
+    -a &#39;&#39; -n  &#34;$@&#34; \
     &gt; /dev/null 2&gt;&amp;1 &amp;
 else
-  exec /usr/bin/emacs &quot;$@&quot;
+  exec /usr/bin/emacs &#34;$@&#34;
 fi
 </code></pre>
-<p>This startes emacs in daemon mode if it's not already running (there's not a lot of harm in leaving a daemon going in the background all the time) and then the client tell the daemon to spawn a new window to open the files mentioned in the command-line arguments. The &quot;nohup&quot; part deparents the server so you don't get error messages hitting your console.</p>
+<p>This startes emacs in daemon mode if it&#39;s not already running (there&#39;s not a lot of harm in leaving a daemon going in the background all the time) and then the client tell the daemon to spawn a new window to open the files mentioned in the command-line arguments. The &#34;nohup&#34; part deparents the server so you don&#39;t get error messages hitting your console.</p>
+
+</div>
 </div>
 </article>
 <hr/>

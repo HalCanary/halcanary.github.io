@@ -79,12 +79,15 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
+<div>
 <pre><code class="language-sh">#!/bin/sh
 # Restart X11 under Ubuntu. #
 #DTPD#
-test `id -u` = &quot;0&quot; || exec sudo &quot;$0&quot;
+test `id -u` = &#34;0&#34; || exec sudo &#34;$0&#34;
 exec /usr/sbin/service gdm restart
 </code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

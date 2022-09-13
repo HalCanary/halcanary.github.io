@@ -79,13 +79,16 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
+<div>
 <pre><code class="language-sh">#/bin/sh
 #DTPD#
 # ~/bin/despacify v2003-05
 ls -x1 | \
-  perl -e 'while(&lt;&gt;){chomp;$x=$\_;s/ /\_/g; \
-  system(&quot;mv \\&quot;$x\\&quot; \\&quot;$\_\\&quot;&quot;) if ($x ne $\_);}'
+  perl -e &#39;while(&lt;&gt;){chomp;$x=$\_;s/ /\_/g; \
+  system(&#34;mv \\&#34;$x\\&#34; \\&#34;$\_\\&#34;&#34;) if ($x ne $\_);}&#39;
 </code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

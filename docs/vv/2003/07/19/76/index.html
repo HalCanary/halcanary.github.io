@@ -79,20 +79,23 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
+<div>
 <p>It now gets rid of apostrophies as well as spaces. It will then convert to lowercase unless it is a directory.</p>
 <pre><code class="language-Perl">#!/usr/bin/perl
 ## ~/bin/despaceify ##
 #DTPD#
-foreach my $file (glob &quot;\*&quot;) {
+foreach my $file (glob &#34;\*&#34;) {
   my $new = $file;
   $new =~ s/ /_/g;
-  $new =~ s/\'//g;
+  $new =~ s/\&#39;//g;
   $new =~ tr/A-Z/a-z/
-    if (system &quot;test -d \&quot;$file\&quot;&quot;);
-  system &quot;mv -vi \&quot;$file\&quot; $new&quot;
+    if (system &#34;test -d \&#34;$file\&#34;&#34;);
+  system &#34;mv -vi \&#34;$file\&#34; $new&#34;
     if ($new ne $file);
 }
 </code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

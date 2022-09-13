@@ -79,26 +79,29 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
+<div>
 <pre><code>#!/usr/bin/env python
 # ~/bin/coin
 #DTPD#
-if (ord(open('/dev/random').read(1)) % 2):
- print &quot;heads&quot;
+if (ord(open(&#39;/dev/random&#39;).read(1)) % 2):
+ print &#34;heads&#34;
 else:
- print &quot;tails&quot;
+ print &#34;tails&#34;
 </code></pre>
 <p>But why throw away seven bits of entropy?</p>
 <pre><code>#!/usr/bin/env python
 #DTPD#
-n=ord(open('/dev/random').read(1))
+n=ord(open(&#39;/dev/random&#39;).read(1))
 for i in xrange(8):
  if  (n % 2):
-  print &quot;heads&quot;,
+  print &#34;heads&#34;,
  else:
-  print &quot;tails&quot;,
+  print &#34;tails&#34;,
  n &gt;&gt;= 1
 print
 </code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

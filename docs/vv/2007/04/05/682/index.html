@@ -79,6 +79,7 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
+<div>
 <pre><code>#!/bin/sh
 # genpasswd.sh
 #   Generate a random password with almost
@@ -91,12 +92,12 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 #   limit ourselves to A-Za-z0-9.
 # Copyright 2007 Hal Canary
 # Dedicated to the Public Domain.
-echo &quot;Grabbing bits from /dev/random...&quot; 1&gt;&amp;2
+echo &#34;Grabbing bits from /dev/random...&#34; 1&gt;&amp;2
 head -c 18 /dev/random | base64 | \
-        sed 's/\//Z/g;s/+/z/g;'
+        sed &#39;s/\//Z/g;s/+/z/g;&#39;
 # If you lack base64 on your system, try:
-# head -c 18 /dev/random  | uuenview -b '' | \
-#       sed 's/\//Z/g;s/+/z/g;'
+# head -c 18 /dev/random  | uuenview -b &#39;&#39; | \
+#       sed &#39;s/\//Z/g;s/+/z/g;&#39;
 </code></pre>
 <p>Exactly how much entropy do we get?</p>
 <p>Each character can be a z or a Z with a probability of 2/64 for each. The other 60 characters have a probability of 1/64 each. Apply the formula:</p>
@@ -110,6 +111,8 @@ head -c 18 /dev/random | base64 | \
     = 5.9375
 </code></pre>
 <p>Mulitply by 24 for 24 characters, and get 142.5 bits of entropy.</p>
+
+</div>
 </div>
 </article>
 <hr/>

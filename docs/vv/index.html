@@ -110,15 +110,18 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
+<div>
 <blockquote>
 <p>Overse added, “Just remember you’re not alone here.”</p>
 <p>I never know what to say to that. I am actually alone in my head, and that’s where 90 plus percent of my problems are.</p>
 </blockquote>
-<hr />
+<hr/>
 <p>“Computer Scientist” is an awkward term.  We need a better term.</p>
 <p>How about “Algorithmer”?</p>
 <p>“Algorithmeter?”</p>
 <p>“Applied Logician”?</p>
+
+</div>
 </div>
 </article>
 <hr/>
@@ -138,8 +141,11 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 <div style="display:none;">I add a RSS feed to the custom blog generator.</div>
-<p><img src="https://halcanary.org/images/rss.svg" alt="rss logo" /></p>
+<div>
+<p><img src="https://halcanary.org/images/rss.svg" alt="rss logo"/></p>
 <p><a href="https://halcanary.org/vv/rss.rss">https://halcanary.org/vv/rss.rss</a></p>
+
+</div>
 </div>
 </article>
 <hr/>
@@ -159,11 +165,14 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
-<p><img src="https://halcanary.org/images/maze20.svg" alt="Size 20 Maze" /></p>
+<div>
+<p><img src="https://halcanary.org/images/maze20.svg" alt="Size 20 Maze"/></p>
 <p>Examples:</p>
-<p><a href="https://halcanary.org/maze/?size=64">https://halcanary.org/maze/?size=64</a><br />
-<a href="https://halcanary.org/maze/?size=32">https://halcanary.org/maze/?size=32</a><br />
+<p><a href="https://halcanary.org/maze/?size=64">https://halcanary.org/maze/?size=64</a><br/>
+<a href="https://halcanary.org/maze/?size=32">https://halcanary.org/maze/?size=32</a><br/>
 <a href="https://halcanary.org/maze/?size=128">https://halcanary.org/maze/?size=128</a></p>
+
+</div>
 </div>
 </article>
 <hr/>
@@ -183,11 +192,12 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 <div style="display:none;">summary of last few years of site changes.</div>
+<div>
 <p>I now host this site on Github, since it is free and fairly easy for me to use.
 I push the new version of the site with a simple <code>git push</code>.  I only pay for my
 domain name.</p>
 <p>I am still using the same blog builder Python script I wrote years ago, but
-I've refactored it a dozen times.  I also use a similar script to rebuild
+I&#39;ve refactored it a dozen times.  I also use a similar script to rebuild
 static pages from markdown source too.</p>
 <p>Other changes:</p>
 <ul>
@@ -199,15 +209,15 @@ box.</p>
 <li>
 <p>Switch from original-flavor Markdown to CommonMark.  Allows me to put
 markdown inside a <code>&lt;div&gt;</code>. For example:</p>
-<pre><code>&lt;div id=&quot;foobar&quot; style=&quot;display:none;&quot;&gt;
+<pre><code>&lt;div id=&#34;foobar&#34; style=&#34;display:none;&#34;&gt;
 
 &gt; Foo
 &gt; Bar
 
 &lt;/div&gt;
-&lt;button onclick=&quot;document.getElementById('foobar')
+&lt;button onclick=&#34;document.getElementById(&#39;foobar&#39;)
                          .style
-                         .display = 'block';&quot;&gt;
+                         .display = &#39;block&#39;;&#34;&gt;
 SHOW
 &lt;/button&gt;
 </code></pre>
@@ -215,7 +225,7 @@ SHOW
 <li>
 <p>Reduce extra resources needed by a page:</p>
 <ul>
-<li>The <code>&lt;link rel=&quot;icon&quot;&gt;</code> is now a <code>data:</code> URL.</li>
+<li>The <code>&lt;link rel=&#34;icon&#34;&gt;</code> is now a <code>data:</code> URL.</li>
 <li>I inline all CSS.</li>
 <li>I also inline a SVG version of my written name on the static pages as a banner.
 Effort was made to minimize the size.  By vectorizing what was
@@ -227,7 +237,7 @@ high-dpi screens.</li>
 <p>Starting to try to meet accessibility standards.</p>
 </li>
 <li>
-<p>Replace <code>&lt;a href=&quot;&quot; onlick=&quot;....&quot;&gt;</code> with <code>&lt;button&gt;</code>, since that is less of
+<p>Replace <code>&lt;a href=&#34;&#34; onlick=&#34;....&#34;&gt;</code> with <code>&lt;button&gt;</code>, since that is less of
 an abuse of html.  It is more clear to the user that clicking that will
 change something on the page, not go to a new page.</p>
 </li>
@@ -235,6 +245,8 @@ change something on the page, not go to a new page.</p>
 <p>Remove extraneous content from main page.</p>
 </li>
 </ul>
+
+</div>
 </div>
 </article>
 <hr/>
@@ -254,12 +266,15 @@ change something on the page, not go to a new page.</p>
 </header>
 <div class="content e-content">
 <div style="display:none;">adding dark mode to this site.</div>
-<p>I added a <code>@media (prefers-color-scheme: dark) {...}</code> block to this site's CSS. The tough part was to make the SVG fill color respect that.  But it turns out that if you just style the svg element with</p>
+<div>
+<p>I added a <code>@media (prefers-color-scheme: dark) {...}</code> block to this site&#39;s CSS. The tough part was to make the SVG fill color respect that.  But it turns out that if you just style the svg element with</p>
 <pre><code>svg {
     fill: currentColor;    
 }
 </code></pre>
 <p>and remove all style information in the SVG itself, then it works as expected.</p>
+
+</div>
 </div>
 </article>
 <hr/>
@@ -279,7 +294,10 @@ change something on the page, not go to a new page.</p>
 </header>
 <div class="content e-content">
 <div style="display:none;">a proposal</div>
-<p><img src="https://halcanary.org/images/dem.svg" alt="Barry of thirteen gules and argent, a jackass kicking azure" /></p>
+<div>
+<p><img src="https://halcanary.org/images/dem.svg" alt="Barry of thirteen gules and argent, a jackass kicking azure"/></p>
+
+</div>
 </div>
 </article>
 <hr/>
@@ -299,17 +317,20 @@ change something on the page, not go to a new page.</p>
 </header>
 <div class="content e-content">
 <div style="display:none;">Remembering my uncle.</div>
-<p>My father's sister's husband, my Uncle Ranny, passed away earlier this year. Even though I never spent much time with him, when I did get to visit him, he was always kind and nice to talk to.</p>
-<p>When Ranny Church told me that his uncle was Alonzo Church of the Church-Turing thesis and the lambda calculus, I though he was joking about the fact that I was studying computer science and that he happened to share a last name with one of the fathers of theoretical computer science.  But in fact, he wasn't joking.  My uncle's uncle was <em>the</em> <a href="https://en.wikipedia.org/wiki/Alonzo_Church">Alonzo Church (1903-1995)</a>, son of Samuel Robbins Church and Mildred Hannah Parker Church, Ranny's grandparents.  I should take people at their word more often.</p>
+<div>
+<p>My father&#39;s sister&#39;s husband, my Uncle Ranny, passed away earlier this year. Even though I never spent much time with him, when I did get to visit him, he was always kind and nice to talk to.</p>
+<p>When Ranny Church told me that his uncle was Alonzo Church of the Church-Turing thesis and the lambda calculus, I though he was joking about the fact that I was studying computer science and that he happened to share a last name with one of the fathers of theoretical computer science.  But in fact, he wasn&#39;t joking.  My uncle&#39;s uncle was <em>the</em> <a href="https://en.wikipedia.org/wiki/Alonzo_Church">Alonzo Church (1903-1995)</a>, son of Samuel Robbins Church and Mildred Hannah Parker Church, Ranny&#39;s grandparents.  I should take people at their word more often.</p>
 <p><a href="https://www.legacy.com/amp/obituaries/washingtonpost/196007855">Randolph Warner Church Jr. (1934-11-06 – 2020-03-24)</a></p>
 <details>
 <summary>Details</summary>
 <blockquote>
-<p>Randolph Warner Church Jr. &quot;Ranny,&quot; age 85, died March 24, 2020 at Westminster Canterbury of the Blue Ridge in Charlottesville after a long struggle with Parkinson's Disease. Born in Richmond, Virginia on November 6, 1934, he was the oldest son of the late Randolph Warner Church Sr. and the late Elizabeth Lewis Gochnauer Church. He graduated from Thomas Jefferson High School in Richmond in 1953 where he played on the state championship tennis team. He was also active in the Boy Scouts, earning the rank of Eagle Scout. In 1957 he received a B.A. with honors in political science from the University of Virginia. He was elected to Phi Beta Kappa, Omicron Delta Kappa, the Raven Society and T.I.L.K.A. He lettered in tennis and in 1957 was the University's lightweight intramural boxing champion. He was Sports Editor of the Cavalier Daily, Editor of the Virginia Spectator, and Managing Editor of the Virginia Law Weekly. In 1960 he received an LL.B. From the University of Virginia and joined the Fairfax firm, McCandlish, Lillard, Marsh &amp; Van Dyck, in which he became a partner in 1963. He served as Managing Partner from 1972 until 1983. In 1984 he became a partner in the Richmond law firm Hunton &amp; Williams and with four other lawyers opened its Northern Virginia office where he served as Managing Partner until his retirement in 1999. Ranny was active in civic affairs, serving on the Board of Visitors of George Mason University from 1982-1990 and as its Rector from 1983-86. He was a member of the board of the Fairfax Symphony Orchestra and its executive committee and served as its general counsel. He was on the boards of the Symphony's foundation, Virginia FREE, and the Virginia Museum of Fine Arts Foundation. From 1994-2000 he was a member of the Board of the Virginia Foundation for the Humanities, serving as its Vice President. In 1999 he brought together several interests to create &quot;Fall for the Book,&quot; a major Virginia book festival, now in its 21st year. He was its first president, and remained on the board until 2018. He also served as a member of the Board of Directors for the Parkinson's Foundation of the Metropolitan D.C. Area and was treasurer of that organization from 2012 to 2014. He served on the board of George Mason Bankshares, Inc. and its subsidiaries, George Mason Bank and George Mason Mortgage Company. In 1985 his social fraternity Sigma Phi Epsilon gave him an award as an outstanding alumnus. He was also a member of the Society of the Cincinnati. Ranny's publications include Appellate Civil Litigation (Charlottesville, 1984), Randolph Warner Church (1907-1984) A Sketch, Pembroke Gochnauer (1841-1919): A Southern Soldier's Story, This Our Life: A View of America (1863-1924), and Travels With Ran: On the Road with Ranny Church (1956-2016). Ranny will be remembered as a Renaissance man: intelligent, knowledgeable, literate, athletic, and social. He is survived by his devoted wife of nearly 50 years, Lucy Canary Church. Together they worked in many political and cultural activities, particularly in support of the arts and George Mason University where they endowed two scholarships. They shared a love of college basketball, football and travel, visiting every continent and more than 110 countries. Additional survivors include their daughter, Leslie Pennell (Mark) of Cincinnati OH, three grandchildren, Ranny's two brothers, John Armistead Church (Phyllis) of Princeton Junction NJ, and Marshall Robbins Church (Priscilla Hoobler) of Philomath OR, and a sister, Mary Armistead Church Kent (Joe) of Richmond. A memorial celebration of Ranny's life will be held at a later date, and his ashes will be placed in the Columbarium at the University of Virginia Cemetery. A memorial celebration of Ranny's life will be held at a later date, and his ashes will be placed in the Columbarium at the University of Virginia Cemetery.  (<em>Published in The Washington Post from Apr. 19 to Apr. 21, 2020.</em>)</p>
+<p>Randolph Warner Church Jr. &#34;Ranny,&#34; age 85, died March 24, 2020 at Westminster Canterbury of the Blue Ridge in Charlottesville after a long struggle with Parkinson&#39;s Disease. Born in Richmond, Virginia on November 6, 1934, he was the oldest son of the late Randolph Warner Church Sr. and the late Elizabeth Lewis Gochnauer Church. He graduated from Thomas Jefferson High School in Richmond in 1953 where he played on the state championship tennis team. He was also active in the Boy Scouts, earning the rank of Eagle Scout. In 1957 he received a B.A. with honors in political science from the University of Virginia. He was elected to Phi Beta Kappa, Omicron Delta Kappa, the Raven Society and T.I.L.K.A. He lettered in tennis and in 1957 was the University&#39;s lightweight intramural boxing champion. He was Sports Editor of the Cavalier Daily, Editor of the Virginia Spectator, and Managing Editor of the Virginia Law Weekly. In 1960 he received an LL.B. From the University of Virginia and joined the Fairfax firm, McCandlish, Lillard, Marsh &amp; Van Dyck, in which he became a partner in 1963. He served as Managing Partner from 1972 until 1983. In 1984 he became a partner in the Richmond law firm Hunton &amp; Williams and with four other lawyers opened its Northern Virginia office where he served as Managing Partner until his retirement in 1999. Ranny was active in civic affairs, serving on the Board of Visitors of George Mason University from 1982-1990 and as its Rector from 1983-86. He was a member of the board of the Fairfax Symphony Orchestra and its executive committee and served as its general counsel. He was on the boards of the Symphony&#39;s foundation, Virginia FREE, and the Virginia Museum of Fine Arts Foundation. From 1994-2000 he was a member of the Board of the Virginia Foundation for the Humanities, serving as its Vice President. In 1999 he brought together several interests to create &#34;Fall for the Book,&#34; a major Virginia book festival, now in its 21st year. He was its first president, and remained on the board until 2018. He also served as a member of the Board of Directors for the Parkinson&#39;s Foundation of the Metropolitan D.C. Area and was treasurer of that organization from 2012 to 2014. He served on the board of George Mason Bankshares, Inc. and its subsidiaries, George Mason Bank and George Mason Mortgage Company. In 1985 his social fraternity Sigma Phi Epsilon gave him an award as an outstanding alumnus. He was also a member of the Society of the Cincinnati. Ranny&#39;s publications include Appellate Civil Litigation (Charlottesville, 1984), Randolph Warner Church (1907-1984) A Sketch, Pembroke Gochnauer (1841-1919): A Southern Soldier&#39;s Story, This Our Life: A View of America (1863-1924), and Travels With Ran: On the Road with Ranny Church (1956-2016). Ranny will be remembered as a Renaissance man: intelligent, knowledgeable, literate, athletic, and social. He is survived by his devoted wife of nearly 50 years, Lucy Canary Church. Together they worked in many political and cultural activities, particularly in support of the arts and George Mason University where they endowed two scholarships. They shared a love of college basketball, football and travel, visiting every continent and more than 110 countries. Additional survivors include their daughter, Leslie Pennell (Mark) of Cincinnati OH, three grandchildren, Ranny&#39;s two brothers, John Armistead Church (Phyllis) of Princeton Junction NJ, and Marshall Robbins Church (Priscilla Hoobler) of Philomath OR, and a sister, Mary Armistead Church Kent (Joe) of Richmond. A memorial celebration of Ranny&#39;s life will be held at a later date, and his ashes will be placed in the Columbarium at the University of Virginia Cemetery. A memorial celebration of Ranny&#39;s life will be held at a later date, and his ashes will be placed in the Columbarium at the University of Virginia Cemetery.  (<em>Published in The Washington Post from Apr. 19 to Apr. 21, 2020.</em>)</p>
 </blockquote>
 </details>
-<hr />
+<hr/>
 <p>Discuss: <a href="https://twitter.com/halcanary/status/1292105093416984578">twitter</a>, <a href="https://www.reddit.com/user/hwc/comments/iftlk2/">reddit</a>.</p>
+
+</div>
 </div>
 </article>
 <hr/>
@@ -329,9 +350,10 @@ change something on the page, not go to a new page.</p>
 </header>
 <div class="content e-content">
 <div style="display:none;">A list of things that we should be seriously working on</div>
+<div>
 <ul>
 <li>
-<p>Clarify and extend meaning of &quot;republican form of government&quot; in Article Four:</p>
+<p>Clarify and extend meaning of &#34;republican form of government&#34; in Article Four:</p>
 <ul>
 <li>
 <p>Affirmative right to vote and access to voting systems for all adult citizens.</p>
@@ -365,8 +387,10 @@ change something on the page, not go to a new page.</p>
 <p>Federal elected officials must use a true blind trust.</p>
 </li>
 </ul>
-<hr />
+<hr/>
 <p>Discuss: <a href="https://twitter.com/halcanary/status/1297950890100502528">twitter</a>, <a href="https://www.reddit.com/user/hwc/comments/iftnaw/">reddit</a>.</p>
+
+</div>
 </div>
 </article>
 <hr/>
@@ -386,17 +410,20 @@ change something on the page, not go to a new page.</p>
 </header>
 <div class="content e-content">
 <div style="display:none;">A refinement of O&#39;Neill&#39;s colonies.</div>
-<p><a href="https://settlement.arc.nasa.gov/70sArtHiRes/70sArt/art.html"><img src="https://halcanary.org/images/Spacecolony1.jpg" alt="[Interior view, O'Neill cylinder, looking out through large windows. NASA ID# AC75-1086]" /></a></p>
-<p>Start with the idea of an <a href="https://en.wikipedia.org/wiki/O%27Neill_cylinder">O'Neill cylinder</a>: a spinning cylindrical space habitat 8 km in diameter and 32 km long.  The frequency of revolution is about two minutes.  This is a good diameter for a space habitat: if it is an order of magnitude larger, the structure won't hold together when it spins; an order of magnitude smaller, the Coriolis force is more noticeable.</p>
+<div>
+<p><a href="https://settlement.arc.nasa.gov/70sArtHiRes/70sArt/art.html"><img src="https://halcanary.org/images/Spacecolony1.jpg" alt="[Interior view, O&#39;Neill cylinder, looking out through large windows. NASA ID# AC75-1086]" width="1920" height="1512"/></a></p>
+<p>Start with the idea of an <a href="https://en.wikipedia.org/wiki/O%27Neill_cylinder">O&#39;Neill cylinder</a>: a spinning cylindrical space habitat 8 km in diameter and 32 km long.  The frequency of revolution is about two minutes.  This is a good diameter for a space habitat: if it is an order of magnitude larger, the structure won&#39;t hold together when it spins; an order of magnitude smaller, the Coriolis force is more noticeable.</p>
 <p>The giant windows are a huge hazard for both radiation and meteor impacts.  Instead, make the cylinder a solid steel vessel, thick enough to block most radiation.  Make it out of many layers of steel sheeting, with a thick layer of ablative insulation on the outside that can absorb and redirect the kinetic energy of a meteor impact.  Construct it as several independent 8 km long segments, each with its own shielded endcaps, all sharing a common axis.  Each hab segment has airlocks at the axis, leading to rotating joints that connect the segment to two small non-rotating modules at the axis, where there are ports for visiting spacecraft to dock.  This is also where arrays of directional communication antennas are located.</p>
 <p>At one end of the axis, there is a massive array of solar panels (not rotating with the hab), at the other, there is an array of radiators.  If the hab is too far from a star for solar power, a nuclear power plant is located outside of the hab, along the axis, in its own shielded module, as far away as needed to minimize radiation hazards to humans entering and exiting the habitat at the docking port module.</p>
 <p>The ecology and economy of the hab is 99.9% closed - with energy as an input and heat as an output.  Occasionally, robots are sent out to mine asteroids or comets for material to replace material losses.  I expect that the solar power and radiator arrays will need constant maintenance and replacement to keep working at 100% capacity.  All of the habs in a star system exchange information, allowing the occupants of the habs to share and trade art, science, and culture.</p>
-<p>The inside of the hab segment is either completely open or is segmented into many smaller &quot;cells&quot; big enough to feel open but small enough to give the human population more room.  A cell might have a ceiling 100 meters tall that looks like Earth's sky and provides similar light.  Some of the interior volume is taken up by light industry and vertical-farm-based agriculture.</p>
-<p>This design is meant to be very robust and adaptable.  It doesn't matter if the hab is located in orbit around a red dwarf or a blue giant, as long as the solar panels work.  The hab can be sent on a thousand-year interstellar voyage as long as enough spare energy and material is taken along.  The occupants of the hab can remotely supervise robots to build new habs.</p>
-<p>This is the future for humanity if we don't become post-human.  There aren't any planets out there that we can walk around in shirtsleeves on.  Terraforming projects would take many thousands of years at best, and might fall afoul of the law of unintended consequences.  Even Mars, one of the best possible places for humans to live outside of Earth, might not have enough gravity for standard humans to thrive.</p>
-<p>I'm not saying rocky planets and moons aren't useful.  After all, that's where a lot of the useable material is.  But if you need that material, why not supervise robot miners from orbit?  Especially if the planet has a surface gravity of 1.5g or a surface temperature of 700 K.</p>
-<hr />
+<p>The inside of the hab segment is either completely open or is segmented into many smaller &#34;cells&#34; big enough to feel open but small enough to give the human population more room.  A cell might have a ceiling 100 meters tall that looks like Earth&#39;s sky and provides similar light.  Some of the interior volume is taken up by light industry and vertical-farm-based agriculture.</p>
+<p>This design is meant to be very robust and adaptable.  It doesn&#39;t matter if the hab is located in orbit around a red dwarf or a blue giant, as long as the solar panels work.  The hab can be sent on a thousand-year interstellar voyage as long as enough spare energy and material is taken along.  The occupants of the hab can remotely supervise robots to build new habs.</p>
+<p>This is the future for humanity if we don&#39;t become post-human.  There aren&#39;t any planets out there that we can walk around in shirtsleeves on.  Terraforming projects would take many thousands of years at best, and might fall afoul of the law of unintended consequences.  Even Mars, one of the best possible places for humans to live outside of Earth, might not have enough gravity for standard humans to thrive.</p>
+<p>I&#39;m not saying rocky planets and moons aren&#39;t useful.  After all, that&#39;s where a lot of the useable material is.  But if you need that material, why not supervise robot miners from orbit?  Especially if the planet has a surface gravity of 1.5g or a surface temperature of 700 K.</p>
+<hr/>
 <p>Discuss: <a href="https://twitter.com/halcanary/status/1283090742852886528">twitter</a>, <a href="https://www.reddit.com/user/hwc/comments/hrmyxc/standard_space_habitats/">reddit</a>.</p>
+
+</div>
 </div>
 </article>
 <hr/>
@@ -416,6 +443,7 @@ change something on the page, not go to a new page.</p>
 </header>
 <div class="content e-content">
 <div style="display:none;">I lay out a proposal to change the US banking system for the better.</div>
+<div>
 <p>Banks provide three essential services to the public:</p>
 <ol>
 <li>
@@ -429,9 +457,9 @@ change something on the page, not go to a new page.</p>
 </li>
 </ol>
 <p>Any change to the banking system should perform those services better than the existing system.</p>
-<p>Currently, depositors (those that put money into bank account) rely on government-guaranteed deposit insurance (the FDIC in America) to reduce risk to near zero.  Therefore, depositors don't choose between banks based on a risk-vs-interest calculation like an uninsured lender might. Instead, they only look at interest rates and the convenience that the bank offers.</p>
-<p>In a risk-based sense, the depositor is loaning money to the FDIC, and the FDIC is loaning money to the bank (which then, in turn, makes long-term loans). In theory, the FDIC can withhold deposit insurance or charge higher premiums for banks likely to default.  It is the FDIC's job to keep banks honest.</p>
-<p>Since there is no longer a connection between the bank's deposit business and its lending business, I propose spitting those into two businesses: deposit banks and lending banks.</p>
+<p>Currently, depositors (those that put money into bank account) rely on government-guaranteed deposit insurance (the FDIC in America) to reduce risk to near zero.  Therefore, depositors don&#39;t choose between banks based on a risk-vs-interest calculation like an uninsured lender might. Instead, they only look at interest rates and the convenience that the bank offers.</p>
+<p>In a risk-based sense, the depositor is loaning money to the FDIC, and the FDIC is loaning money to the bank (which then, in turn, makes long-term loans). In theory, the FDIC can withhold deposit insurance or charge higher premiums for banks likely to default.  It is the FDIC&#39;s job to keep banks honest.</p>
+<p>Since there is no longer a connection between the bank&#39;s deposit business and its lending business, I propose spitting those into two businesses: deposit banks and lending banks.</p>
 <p>The deposit banks can be nationalized and combined into a new publicly-owned entity called the Deposit Bank of the United States: DBUS.</p>
 <p>DBUS:</p>
 <ul>
@@ -445,7 +473,7 @@ change something on the page, not go to a new page.</p>
 <p>provides ATMs across the country for cash withdrawals.  Fees would be as low as possible: ATMs in post office lobbies would have a flat 0.1% fee.  ATMs in remote locations would charge higher rates to reflect additional cost of moving cash around.</p>
 </li>
 <li>
-<p>provides cashier's checks with via ATMs with a built-in printer. The cashier's checks contain a digital signature, so stealing the printer and paper accomplishes nothing. The fee would be 0.1% plus the cost of the paper and ink.</p>
+<p>provides cashier&#39;s checks with via ATMs with a built-in printer. The cashier&#39;s checks contain a digital signature, so stealing the printer and paper accomplishes nothing. The fee would be 0.1% plus the cost of the paper and ink.</p>
 </li>
 <li>
 <p>allows real-time payments between account-holders with a flat 0.1% fee.</p>
@@ -458,17 +486,19 @@ change something on the page, not go to a new page.</p>
 <p>The FDIC no longer guarantees deposit accounts. Instead, they act as a publicly-owned ratings agency for lending banks.  The Fed now, based on the information provided by the FDIC, buys large amounts of bonds from the lending banks.  The Fed can also decide a bank is too large to fail and insist that is split in half before the Fed will resume buying bonds.</p>
 <p>Nominally, the Fed can buy bank bonds in proportion to the amount of money in the DBUS account.  But if the economy needs more money to be created, they can buy more bonds.  If inflation is a worry, they can buy fewer.</p>
 <p>Lending banks now only have two sources of money to lend: bonds and capital.  They no longer have to worry about a run on the bank.</p>
-<p>Lending banks may also provide a line of credit to back a credit card.  But the card's payment system is managed by the DBUS.</p>
-<p>Over time, regular checks and the ACH system would be phased out in favor of cashier's checks (now more convenient) and real-time payments.  Credit cards can also be phased out in favor of real-time payments.  For example, if your restaurant server brings you the bill and it has a QR-code on the bottom linking to a &quot;billing record&quot; in the DBUS database (which has an amount, a receiving account, and text metadata (your itemized receipt)).  You simply make a real-time payment into that billing record and your bill is paid.  The restaurant gets an instant notification that the bill is paid.</p>
-<hr />
+<p>Lending banks may also provide a line of credit to back a credit card.  But the card&#39;s payment system is managed by the DBUS.</p>
+<p>Over time, regular checks and the ACH system would be phased out in favor of cashier&#39;s checks (now more convenient) and real-time payments.  Credit cards can also be phased out in favor of real-time payments.  For example, if your restaurant server brings you the bill and it has a QR-code on the bottom linking to a &#34;billing record&#34; in the DBUS database (which has an amount, a receiving account, and text metadata (your itemized receipt)).  You simply make a real-time payment into that billing record and your bill is paid.  The restaurant gets an instant notification that the bill is paid.</p>
+<hr/>
 <p>Addendum:</p>
-<p>In addition to providing deposit accounts that store US dollars, DBUS could also provide accounts that store stocks, bonds, and other financial instruments.  Such a system would allow a bond-issuer to pay all bond-holders instantly at the time the payment is due, without having to keep track of who owns the bonds, since DBUS's database can store that information.  Similarly for stocks and dividends.</p>
-<p>DBUS could even allow some sets of accounts to be marked as &quot;tax-advantaged account groups&quot; and would report transactions into and out of that group to the IRS. This would allow households to control their own retirement accounts without having to go through a third party.</p>
-<p>Finally, some transactions into a person's accounts can be marked as an &quot;income transaction&quot; and DBUS could use the records of those transactions to calculate that person's income tax obligation and even pay it automatically if the person chooses to.</p>
-<hr />
-<p>Also, some of DBUS's full-service ATMs would allow bulk deposits of coins and bills.  If vending machines can do it, why can't an ATM?  Similarly, full-service ATMs should be able to give out currency in denominations other than 20 USD.</p>
-<hr />
+<p>In addition to providing deposit accounts that store US dollars, DBUS could also provide accounts that store stocks, bonds, and other financial instruments.  Such a system would allow a bond-issuer to pay all bond-holders instantly at the time the payment is due, without having to keep track of who owns the bonds, since DBUS&#39;s database can store that information.  Similarly for stocks and dividends.</p>
+<p>DBUS could even allow some sets of accounts to be marked as &#34;tax-advantaged account groups&#34; and would report transactions into and out of that group to the IRS. This would allow households to control their own retirement accounts without having to go through a third party.</p>
+<p>Finally, some transactions into a person&#39;s accounts can be marked as an &#34;income transaction&#34; and DBUS could use the records of those transactions to calculate that person&#39;s income tax obligation and even pay it automatically if the person chooses to.</p>
+<hr/>
+<p>Also, some of DBUS&#39;s full-service ATMs would allow bulk deposits of coins and bills.  If vending machines can do it, why can&#39;t an ATM?  Similarly, full-service ATMs should be able to give out currency in denominations other than 20 USD.</p>
+<hr/>
 <p>Discuss: <a href="https://twitter.com/halcanary/status/1282663803990220803">twitter</a>, <a href="https://www.reddit.com/user/hwc/comments/hrn0uu/banking_manifesto/">reddit</a>.</p>
+
+</div>
 </div>
 </article>
 <hr/>

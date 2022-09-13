@@ -79,13 +79,14 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 <div style="display:none;">Some shell-script macros for adding color to the output of your programs.</div>
+<div>
 <p> </p>
 <pre><code>#!/bin/sh
 
 # ANSI Color -- use these variables to easily have
 # different color and format output. Make sure to
 # output the reset sequence after colors (f =
-# foreground, b = background), and use the 'off'
+# foreground, b = background), and use the &#39;off&#39;
 # feature for anything you turn on.
 #
 # This function is: Copyright 2004 Dave Taylor
@@ -93,24 +94,24 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 # ISBN 1593270127.
 # http://www.intuitive.com/wicked/showscript.cgi?011-colors.sh
 initializeANSI() {
-    esc=$(printf '\033')
+    esc=$(printf &#39;\033&#39;)
 
-    blackf=&quot;${esc}[30m&quot;; redf=&quot;${esc}[31m&quot;;
-    yellowf=&quot;${esc}[33m&quot; bluef=&quot;${esc}[34m&quot;;
-    cyanf=&quot;${esc}[36m&quot;; whitef=&quot;${esc}[37m&quot;;
-    greenf=&quot;${esc}[32m&quot;; purplef=&quot;${esc}[35m&quot;;
+    blackf=&#34;${esc}[30m&#34;; redf=&#34;${esc}[31m&#34;;
+    yellowf=&#34;${esc}[33m&#34; bluef=&#34;${esc}[34m&#34;;
+    cyanf=&#34;${esc}[36m&#34;; whitef=&#34;${esc}[37m&#34;;
+    greenf=&#34;${esc}[32m&#34;; purplef=&#34;${esc}[35m&#34;;
 
-    blackb=&quot;${esc}[40m&quot;; redb=&quot;${esc}[41m&quot;;
-    yellowb=&quot;${esc}[43m&quot; blueb=&quot;${esc}[44m&quot;;
-    cyanb=&quot;${esc}[46m&quot;; whiteb=&quot;${esc}[47m&quot;;
-    greenb=&quot;${esc}[42m&quot;; purpleb=&quot;${esc}[45m&quot;;
+    blackb=&#34;${esc}[40m&#34;; redb=&#34;${esc}[41m&#34;;
+    yellowb=&#34;${esc}[43m&#34; blueb=&#34;${esc}[44m&#34;;
+    cyanb=&#34;${esc}[46m&#34;; whiteb=&#34;${esc}[47m&#34;;
+    greenb=&#34;${esc}[42m&#34;; purpleb=&#34;${esc}[45m&#34;;
 
-    boldon=&quot;${esc}[1m&quot;; boldoff=&quot;${esc}[22m&quot;;
-    italicson=&quot;${esc}[3m&quot;; italicsoff=&quot;${esc}[23m&quot;;
-    ulon=&quot;${esc}[4m&quot;; uloff=&quot;${esc}[24m&quot;;
-    invon=&quot;${esc}[7m&quot;; invoff=&quot;${esc}[27m&quot;;
+    boldon=&#34;${esc}[1m&#34;; boldoff=&#34;${esc}[22m&#34;;
+    italicson=&#34;${esc}[3m&#34;; italicsoff=&#34;${esc}[23m&#34;;
+    ulon=&#34;${esc}[4m&#34;; uloff=&#34;${esc}[24m&#34;;
+    invon=&#34;${esc}[7m&#34;; invoff=&#34;${esc}[27m&#34;;
 
-    reset=&quot;${esc}[0m&quot;;
+    reset=&#34;${esc}[0m&#34;;
 }
 ##
 ## The rest of the program is:
@@ -118,23 +119,25 @@ initializeANSI() {
 ## Dedicated to the public domain.
 ##
 initializeANSI
-COLORS=&quot;red green yellow blue purple cyan white black&quot;
+COLORS=&#34;red green yellow blue purple cyan white black&#34;
 for B in $COLORS; do
     for F in $COLORS; do
         eval FC=\${${F}f}
         eval BC=\${${B}b}
-        echo -en &quot;${FC}${BC}${F}f ${B}b${reset} \t&quot;
-        echo -en &quot;${boldon}${FC}${BC}${F}f ${B}b bold${reset} \t&quot;
-        echo -e &quot;${FC}${BC}${italicson}${F}f ${B}b italics${reset}&quot;
-        echo -en &quot;${ulon}${FC}${BC}${F}f ${B}b ul${reset} \t&quot;
-        echo -en &quot;${boldon}${ulon}${FC}${BC}${F}f ${B}b bol ul${reset}\t&quot;
-        echo -en &quot;${boldon}${ulon}${italicson}${FC}${BC}&quot;
-        echo -e &quot;${F}f ${B}b bold ul italics${reset}&quot;
+        echo -en &#34;${FC}${BC}${F}f ${B}b${reset} \t&#34;
+        echo -en &#34;${boldon}${FC}${BC}${F}f ${B}b bold${reset} \t&#34;
+        echo -e &#34;${FC}${BC}${italicson}${F}f ${B}b italics${reset}&#34;
+        echo -en &#34;${ulon}${FC}${BC}${F}f ${B}b ul${reset} \t&#34;
+        echo -en &#34;${boldon}${ulon}${FC}${BC}${F}f ${B}b bol ul${reset}\t&#34;
+        echo -en &#34;${boldon}${ulon}${italicson}${FC}${BC}&#34;
+        echo -e &#34;${F}f ${B}b bold ul italics${reset}&#34;
     done
-    echo &quot;&quot;
+    echo &#34;&#34;
 done
 exit 0
 </code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

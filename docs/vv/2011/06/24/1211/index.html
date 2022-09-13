@@ -79,6 +79,7 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
+<div>
 <pre><code>#!/usr/bin/python
 #DTPD#
 import subprocess
@@ -87,11 +88,11 @@ import sys
 import glob
 
 def fixfile(in_file_name):
-  ebookconvert = r'C:\PROGRA~2\Calibre2\ebook-convert.exe'
-  #ebookconvert = '/usr/bin/ebook-convert'
+  ebookconvert = r&#39;C:\PROGRA~2\Calibre2\ebook-convert.exe&#39;
+  #ebookconvert = &#39;/usr/bin/ebook-convert&#39;
   base = os.path.basename(in_file_name)
   dirn = os.path.dirname(in_file_name)
-  newdir = 'myformat'
+  newdir = &#39;myformat&#39;
   try:
     os.mkdir(os.path.join(dirn, newdir))
   except OSError:
@@ -99,23 +100,25 @@ def fixfile(in_file_name):
   out_file_name = os.path.join(dirn, newdir, base)
 
   cmd = [ebookconvert, in_file_name, out_file_name,
-    '--preserve-cover-aspect-ratio',
-    '--change-justification', 'left',
-    '--margin-bottom', '4',
-    '--margin-left', '4',
-    '--margin-right', '4',
-    '--margin-top', '4',
-    '--remove-paragraph-spacing']
-  print ' '.join(cmd), '\n'
+    &#39;--preserve-cover-aspect-ratio&#39;,
+    &#39;--change-justification&#39;, &#39;left&#39;,
+    &#39;--margin-bottom&#39;, &#39;4&#39;,
+    &#39;--margin-left&#39;, &#39;4&#39;,
+    &#39;--margin-right&#39;, &#39;4&#39;,
+    &#39;--margin-top&#39;, &#39;4&#39;,
+    &#39;--remove-paragraph-spacing&#39;]
+  print &#39; &#39;.join(cmd), &#39;\n&#39;
   sproc = subprocess.Popen(cmd)
   sproc.wait()
 
-if __name__ == '__main__':
+if __name__ == &#39;__main__&#39;:
   for arg in sys.argv[1:]:
     for filen in glob.glob(arg):
       fixfile(filen)
   exit(0)
 </code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

@@ -79,6 +79,7 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
+<div>
 <pre><code>#!/usr/bin/env python
 # MakeBookmarksFile - convert a text file containing
 # URLs into a HTMl file with clickable links.
@@ -87,7 +88,7 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 #
 # Permission is hereby granted, free of charge, to any
 # person obtaining a copy of this software and
-# associated documentation files (the 'Software'), to
+# associated documentation files (the &#39;Software&#39;), to
 # deal in the Software without restriction, including
 # without limitation the rights to use, copy, modify,
 # merge, publish, distribute, sublicense, and/or sell
@@ -99,7 +100,7 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 # shall be included in all copies or substantial
 # portions of the Software.
 #
-# THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF
+# THE SOFTWARE IS PROVIDED &#39;AS IS&#39;, WITHOUT WARRANTY OF
 # ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
 # LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
 # FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO
@@ -115,26 +116,28 @@ fi = sys.stdin
 fo = sys.stdout
 s=fi.readline().strip()
 ## The first line of the input is a title.
-head='&lt;!DOCTYPE html PUBLIC \
-&quot;-//W3C//DTD HTML 4.01//EN&quot; \
-&quot;http://www.w3.org/TR/html4/strict.dtd&quot;&gt;\n\
-&lt;html&gt;&lt;head&gt;\n&lt;meta http-equiv=&quot;Content-Type&quot; \
-content=&quot;text/html; charset=utf-8&quot;&gt;\n\
+head=&#39;&lt;!DOCTYPE html PUBLIC \
+&#34;-//W3C//DTD HTML 4.01//EN&#34; \
+&#34;http://www.w3.org/TR/html4/strict.dtd&#34;&gt;\n\
+&lt;html&gt;&lt;head&gt;\n&lt;meta http-equiv=&#34;Content-Type&#34; \
+content=&#34;text/html; charset=utf-8&#34;&gt;\n\
 &lt;title&gt;%s&lt;/title&gt;\n&lt;/head&gt;&lt;body&gt;&lt;div&gt;\n\
-&lt;h1&gt;%s&lt;/h1&gt;\n'
+&lt;h1&gt;%s&lt;/h1&gt;\n&#39;
 fo.write(head % (s,s))
 for line in fi:
   s=line.strip()
-  if (s == &quot;&quot;) :
+  if (s == &#34;&#34;) :
     continue
   ## convert &amp; to &amp;amp; and so on.
-  s=re.sub('&amp;','&amp;amp;',s)
-  s=re.sub('&lt;','&amp;lt;',s)
-  s=re.sub('&gt;','&amp;gt;',s)
-  s=re.sub('&quot;','&amp;quot;',s)
-  fo.write(&quot;&lt;a href=\&quot;%s\&quot;&gt;%s&lt;/a&gt;&lt;br&gt;\n&quot; % (s,s))
-fo.write('&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;\n')
+  s=re.sub(&#39;&amp;&#39;,&#39;&amp;amp;&#39;,s)
+  s=re.sub(&#39;&lt;&#39;,&#39;&amp;lt;&#39;,s)
+  s=re.sub(&#39;&gt;&#39;,&#39;&amp;gt;&#39;,s)
+  s=re.sub(&#39;&#34;&#39;,&#39;&amp;quot;&#39;,s)
+  fo.write(&#34;&lt;a href=\&#34;%s\&#34;&gt;%s&lt;/a&gt;&lt;br&gt;\n&#34; % (s,s))
+fo.write(&#39;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;\n&#39;)
 </code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

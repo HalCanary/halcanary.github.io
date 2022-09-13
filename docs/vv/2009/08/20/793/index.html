@@ -79,32 +79,35 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
+<div>
 <p>Since id3lib is incompatable with version 2.4 id3 tags produced by Sound Juicer, you need to use gstreamer and id3mux to grab the tag info to--for example--renormalize your filenames. Tags can themselves be edited in Rhythmbox.</p>
 <pre><code>#!/bin/sh
 #~/bin/id3v24-info.sh
 #DTPD
-for file in &quot;$@&quot; ; do
+for file in &#34;$@&#34; ; do
   TMP=`/bin/tempfile`
-  echo &quot;$file&quot;
+  echo &#34;$file&#34;
   gst-launch-0.10 filesrc location=/proc/self/fd/0 \
     ! id3demux ! fakesink -t \
-    &lt; &quot;${file}&quot; &gt; &quot;$TMP&quot; 2&gt; /dev/null
-  for tag in 'title' 'artist' 'album' 'genre' \
-      'track count' 'track number' 'disc number' \
-      'artist sortname' ; do
-    grep &quot;${tag}:&quot; &quot;$TMP&quot; | \
-      awk -F &quot;${tag}: &quot; &quot;{ print \&quot;  ${tag} = \&quot; \$2 }&quot;
+    &lt; &#34;${file}&#34; &gt; &#34;$TMP&#34; 2&gt; /dev/null
+  for tag in &#39;title&#39; &#39;artist&#39; &#39;album&#39; &#39;genre&#39; \
+      &#39;track count&#39; &#39;track number&#39; &#39;disc number&#39; \
+      &#39;artist sortname&#39; ; do
+    grep &#34;${tag}:&#34; &#34;$TMP&#34; | \
+      awk -F &#34;${tag}: &#34; &#34;{ print \&#34;  ${tag} = \&#34; \$2 }&#34;
   done
-  rm &quot;$TMP&quot;
+  rm &#34;$TMP&#34;
 done
 </code></pre>
 <p>So my workflow is:</p>
 <ol>
 <li>Rip a stack of CDs in Sound Juicer.</li>
-<li>Notice that the tags aren't right or don't fit with the other tags in the collection</li>
+<li>Notice that the tags aren&#39;t right or don&#39;t fit with the other tags in the collection</li>
 <li>Edit tags in rhythmbox</li>
 <li>Run a script to renormalize the filename.</li>
 </ol>
+
+</div>
 </div>
 </article>
 <hr/>

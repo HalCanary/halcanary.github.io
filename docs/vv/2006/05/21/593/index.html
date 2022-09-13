@@ -79,8 +79,9 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
-<p>Everytime I go into my storage room in the basement, I get spider bites. New plan: I'm getting as many boxes out of there this evening as possible, and leave the big stuff for much later. Then I avoid the basement.</p>
-<hr />
+<div>
+<p>Everytime I go into my storage room in the basement, I get spider bites. New plan: I&#39;m getting as many boxes out of there this evening as possible, and leave the big stuff for much later. Then I avoid the basement.</p>
+<hr/>
 <pre><code>[hal@lensman]$ time-till-I-leave-town.sh
 Time until Mon Jul  3 09:00:00 CDT 2006:
 3747726 seconds
@@ -88,21 +89,23 @@ Time until Mon Jul  3 09:00:00 CDT 2006:
 6 weeks + 1.3764 days
 43.3764 days
 </code></pre>
-<hr />
+<hr/>
 <pre><code>[hal@lensman]$ cat ~/bin/time-till-I-leave-town.sh
 #!/bin/sh
-DDAY=&quot;Mon Jul  3 09:00:00 CDT 2006&quot;
-SECONDS=$(( $(date -d &quot;${DDAY}&quot; +%s)-$(date +%s) ))
-MEGASECONDS=$( echo &quot;scale=4;$SECONDS/10^6&quot; | bc )
-WEEKS=$( echo &quot;$SECONDS/604800&quot; | bc )
-DAYS=$( echo &quot;scale=4;$SECONDS/86400&quot; | bc )
-EXTRAS=$( echo &quot;scale=4;$DAYS-($WEEKS * 7)&quot; | bc )
-echo &quot;Time until ${DDAY}:&quot;
-echo &quot;$SECONDS seconds&quot;
-echo &quot;$MEGASECONDS megaseconds&quot;
-echo &quot;$WEEKS weeks + $EXTRAS days&quot;
-echo &quot;$DAYS days&quot; ; echo &quot;&quot;
+DDAY=&#34;Mon Jul  3 09:00:00 CDT 2006&#34;
+SECONDS=$(( $(date -d &#34;${DDAY}&#34; +%s)-$(date +%s) ))
+MEGASECONDS=$( echo &#34;scale=4;$SECONDS/10^6&#34; | bc )
+WEEKS=$( echo &#34;$SECONDS/604800&#34; | bc )
+DAYS=$( echo &#34;scale=4;$SECONDS/86400&#34; | bc )
+EXTRAS=$( echo &#34;scale=4;$DAYS-($WEEKS * 7)&#34; | bc )
+echo &#34;Time until ${DDAY}:&#34;
+echo &#34;$SECONDS seconds&#34;
+echo &#34;$MEGASECONDS megaseconds&#34;
+echo &#34;$WEEKS weeks + $EXTRAS days&#34;
+echo &#34;$DAYS days&#34; ; echo &#34;&#34;
 </code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

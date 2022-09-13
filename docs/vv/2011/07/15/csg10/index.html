@@ -79,13 +79,14 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
+<div>
 <pre><code>#!/usr/bin/python
-&quot;&quot;&quot;Stopwatch program.
+&#34;&#34;&#34;Stopwatch program.
 
-Hit 'Enter' to save a time.
+Hit &#39;Enter&#39; to save a time.
 
-Hit 'Ctrl-c' to stop the script
-&quot;&quot;&quot;
+Hit &#39;Ctrl-c&#39; to stop the script
+&#34;&#34;&#34;
 from datetime import datetime, date, time
 import time, sys
 start = datetime.now()
@@ -93,12 +94,14 @@ print __doc__
 try:
 	while True:
 		time.sleep(0.071)
-		sys.stdout.write('\b'*22)
+		sys.stdout.write(&#39;\b&#39;*22)
 		sys.stdout.write(str(datetime.now() - start))
 		sys.stdout.flush()
 except KeyboardInterrupt:
-	sys.stdout.write('\n\n')
+	sys.stdout.write(&#39;\n\n&#39;)
 </code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

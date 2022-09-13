@@ -79,22 +79,25 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
+<div>
 <pre><code>#!/bin/sh
 ## ~/bin/tlock ##
-PASS='12345'
-trap '' TERM INT
-BAD=&quot;true&quot;
+PASS=&#39;12345&#39;
+trap &#39;&#39; TERM INT
+BAD=&#34;true&#34;
 clear
-while [ &quot;$BAD&quot; == &quot;true&quot; ] ; do
-    echo -en &quot;\ntlock password: &quot;
+while [ &#34;$BAD&#34; == &#34;true&#34; ] ; do
+    echo -en &#34;\ntlock password: &#34;
     stty -echo;
     read x
     stty echo;
-    [ &quot;$x&quot; == &quot;$PASS&quot; ] &amp;&amp; BAD=&quot;false&quot;
+    [ &#34;$x&#34; == &#34;$PASS&#34; ] &amp;&amp; BAD=&#34;false&#34;
 done
-echo &quot;&quot;;
+echo &#34;&#34;;
 </code></pre>
-<p><strong>UPDATE 2004-12-02:</strong> Add “<code>trap '' TERM SIGTSTP</code>” for additional security.</p>
+<p><strong>UPDATE 2004-12-02:</strong> Add “<code>trap &#39;&#39; TERM SIGTSTP</code>” for additional security.</p>
+
+</div>
 </div>
 </article>
 <hr/>

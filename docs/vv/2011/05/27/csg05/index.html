@@ -79,35 +79,38 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
+<div>
 <p>In high-school chemistry, you learn that the ideal gas law is</p>
-<div style="text-align:center;"><em>P</em>&middot;<em>V</em> =
-<em>n</em>&middot;<em>R</em>&middot;<em>T</em></div>
+<div style="text-align:center;"><em>P</em>·<em>V</em> =
+<em>n</em>·<em>R</em>·<em>T</em></div>
 <p>These letters are drilled into my head, but I realised yesterday that
 I am losing my intuitive understanding of the relation.  The physics
 version of it is</p>
-<div style="text-align:center;"><em>P</em>&middot;<em>V</em> =
-<em>N</em>&middot;<em>kT</em></div>
+<div style="text-align:center;"><em>P</em>·<em>V</em> =
+<em>N</em>·<em>kT</em></div>
 <p>where <em>N</em> is now a dimensionless number and <em>k</em> is comes from the
 definition of <em>T</em>.  Let <em>ρ</em> be our number density and the relation
 simplifies to</p>
 <div style="text-align:center;"><em>P</em> =
-<em>ρ</em>&middot;<em>kT</em></div>
+<em>ρ</em>·<em>kT</em></div>
 <p>Pressure is density times temperature.</p>
-<hr />
+<hr/>
 <p>In the heterogeneous CS Unix environment, I may be executing emacs
 from a console as “<code>emacs -nw</code>” or from an icon on the desktop.  Some
 computers will have the emacs-color-theme package installed, others
-won't.  So in my .emacs file, I put the following lines:</p>
+won&#39;t.  So in my .emacs file, I put the following lines:</p>
 <pre><code>;; from .emacs ...
-(setq emacs-style-file &quot;~/.emacs-style&quot;)
+(setq emacs-style-file &#34;~/.emacs-style&#34;)
 (when
     (and window-system
-         (require 'color-theme nil t)
+         (require &#39;color-theme nil t)
          (file-readable-p emacs-style-file))
   (progn
     (load emacs-style-file)
 (my-color-theme)))
 </code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

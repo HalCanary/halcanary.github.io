@@ -7,8 +7,8 @@
 		<language>en-US</language>
 		<copyright>Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.</copyright>
 		<link>https://halcanary.org/vv/</link>
-		<pubDate>Tue, 13 Sep 2022 11:03:43 -0400</pubDate>
-		<lastBuildDate>Tue, 13 Sep 2022 11:03:43 -0400</lastBuildDate>
+		<pubDate>Tue, 13 Sep 2022 11:13:50 -0400</pubDate>
+		<lastBuildDate>Tue, 13 Sep 2022 11:13:50 -0400</lastBuildDate>
 		<image>
 			<url>https://halcanary.org/images/HAL_CANARY_20191008_512.jpg</url>
 			<title>Voder-Vocoder</title>
@@ -8386,19 +8386,22 @@ print &quot;\n&quot;;
 		<item>
 			<title>The one true way.</title>
 			<link>https://halcanary.org/vv/2006/06/12/613/</link>
-			<guid isPermaLink="false">75d249d4-e5e2-5a48-9069-7bacfe2e3720</guid>
+			<guid isPermaLink="false">3deb440a-3959-5b02-a316-387cd9dd57d4</guid>
 			<pubDate>Mon, 12 Jun 2006 10:50:12 -0500</pubDate>
 			<description><![CDATA[<p>How to make iced tea. The one true way.</p>
 <p>Any tea that does not use boiling water runs the risk of not killing<br />
 the bacteria that might be living in the tea leaves.</p>
-<p>prep:<br />
-0) Make two trays of ice.</p>
-<ol>
+<p>prep:</p>
+<ol start="0">
+<li>
+<p>Make two trays of ice.</p>
+</li>
 <li>
 <p>Bring about 1.5 quarts of water to a boil.</p>
 </li>
 <li>
-<p>Get a two-quart pitcher (Thick high-density polyethylene (<img src="http://upload.wikimedia.org/wikipedia/en/thumb/5/5e/Recycle-resin-logos-lr_02.png/50px-Recycle-resin-logos-lr_02.png" alt="HDPE" />) is<br />
+<p>Get a two-quart pitcher (Thick high-density polyethylene
+(<img src="/images/50px-Recycle-resin-logos-lr_02.png" alt="HDPE" />) is<br />
 good.) Add two large (6g) tea bags. Add about 5 cups of boiling<br />
 water (This will fill the pitcher about 60% of the way.)</p>
 </li>
@@ -8408,12 +8411,12 @@ water (This will fill the pitcher about 60% of the way.)</p>
 <li>
 <p>Remove tea bags.</p>
 </li>
-</ol>
+<li>
 <p>(Optional) Add sweetening agent now. This is completely unnecessary.<br />
 If you drink unsweetened tea for a while, you will acquire the taste<br />
 for it. The most common sweetening agent is sucrose, which should be<br />
 classified as a Schedule II Drug.</p>
-<ol start="5">
+</li>
 <li>
 <p>Fill the pitcher to the 2-quart line by adding<br />
 ice cubes. This will bring the tea down to room temperature.</p>
@@ -9546,10 +9549,10 @@ Trip to FL, 2005 November.</p>
 		<item>
 			<title>Doesn&#x27;t that offend you?</title>
 			<link>https://halcanary.org/vv/2005/11/12/532/</link>
-			<guid isPermaLink="false">8fef011e-6ef3-52f4-b6c9-c722c658cf02</guid>
+			<guid isPermaLink="false">2f938256-8bcd-5238-8981-b01d3306386a</guid>
 			<pubDate>Sat, 12 Nov 2005 23:02:13 -0600</pubDate>
 			<description><![CDATA[<p>Young man, you speak so well!</p>
-<p><img src="http://www.halcanary.org//images/2005-11-12-huey+riley.jpg" alt="[]" /></p>
+<p><img src="/images/2005-11-12-huey+riley.jpg" alt="[]" /></p>
 <p>I enjoyed the show.</p>
 ]]></description>
 			<category>tv</category>
@@ -15064,10 +15067,10 @@ M&lt;/hurtle&gt;e mo&lt;/bellyache&gt;re&lt;/a&gt;
 		<item>
 			<title>Rotor Router Applets page</title>
 			<link>https://halcanary.org/vv/2003/12/27/150/</link>
-			<guid isPermaLink="false">568734f0-6558-5c6d-b484-416d2561bf95</guid>
+			<guid isPermaLink="false">c659758a-bb56-5f22-bc51-b628f00448ad</guid>
 			<pubDate>Sat, 27 Dec 2003 23:08:05 -0600</pubDate>
 			<description><![CDATA[<p>[<br />
-<img src="https://halcanary.org/SSL/Images/rotor-1d-agg.png" alt="screenshot" /></p>
+<img src="https://halcanary.org/SSL/images/rotor-1d-agg.png" alt="screenshot" /></p>
 <p>Work I've been doing](https://halcanary.org/SSL/rotor/)</p>
 ]]></description>
 			<category>computers-code</category>
@@ -15464,9 +15467,10 @@ words,</span> words!</p>
 		<item>
 			<title>Applets for SSL</title>
 			<link>https://halcanary.org/vv/2003/09/25/114/</link>
-			<guid isPermaLink="false">29b070bb-caeb-51d7-88eb-ba01818cb9b6</guid>
+			<guid isPermaLink="false">54cc763a-9927-5ed2-9aa9-e90c1ec7acbb</guid>
 			<pubDate>Thu, 25 Sep 2003 21:17:51 -0500</pubDate>
-			<description><![CDATA[<p><a href="http://ups.physics.wisc.edu/~hal/SSL/"><img src="http://ups.physics.wisc.edu/~hal/SSL/2003/rotor-pics/rotor-182.png" alt="[rotor model]" /></a> Been doing some Java programing for math. I'm getting paid to do this too! I've written two applets that deal with a rotor-based sandpile model.</p>
+			<description><![CDATA[<p><a href="/SSL/"><img src="/SSL/images/rotor-182.png" alt="[rotor model]" /></a>
+Been doing some Java programing for math. I'm getting paid to do this too! I've written two applets that deal with a rotor-based sandpile model.</p>
 ]]></description>
 			<category>mathematics</category>
 		</item>
@@ -15641,11 +15645,11 @@ exec /usr/bin/ssh &quot;$@&quot;;
 		<item>
 			<title>More Art</title>
 			<link>https://halcanary.org/vv/2003/08/24/101/</link>
-			<guid isPermaLink="false">eae7c0e1-1017-5ba8-bd73-641ec7057dd5</guid>
+			<guid isPermaLink="false">55a604d2-06e1-5ffa-8e65-8e5baa4a4e3e</guid>
 			<pubDate>Sun, 24 Aug 2003 18:31:23 -0500</pubDate>
-			<description><![CDATA[<p><a href="https://halcanary.org/art/2003-08-24-art-2.jpg"><img src="https://halcanary.org/art/2003-08-24-art-2-s.jpg" alt="modern art" /></a></p>
+			<description><![CDATA[<p><a href="https://halcanary.org/art/2003-08-24-art-2.jpg"><img src="https://halcanary.org/art/thumb/2003-08-24-art-2.jpg" alt="modern art" /></a></p>
 <p>Here's the final version of the modern piece I started last night.</p>
-<p><a href="https://halcanary.org/art/2003-08-24-art-3.jpg"><img src="https://halcanary.org/art/2003-08-24-art-3-s.jpg" alt="landscape painting" /></a></p>
+<p><a href="https://halcanary.org/art/2003-08-24-art-3.jpg"><img src="https://halcanary.org/art/thumb/2003-08-24-art-3.jpg" alt="landscape painting" /></a></p>
 <p>And on the right is a work in progress. All I can say is that it is less ugly now than it was last night.</p>
 ]]></description>
 			<category>art</category>
@@ -15653,9 +15657,9 @@ exec /usr/bin/ssh &quot;$@&quot;;
 		<item>
 			<title>Art</title>
 			<link>https://halcanary.org/vv/2003/08/24/100/</link>
-			<guid isPermaLink="false">5f1fcf0a-b1bc-5719-868b-50fc090fbaa6</guid>
+			<guid isPermaLink="false">6f251645-dcd2-54c4-b37d-83450bbf1bf7</guid>
 			<pubDate>Sun, 24 Aug 2003 02:22:05 -0500</pubDate>
-			<description><![CDATA[<p><a href="https://halcanary.org/art/2003-08-24-art-1.jpg"><img src="https://halcanary.org/art/2003-08-24-art-1-s.jpg" alt="art" /></a> I did some painting today. This one's not done yet. You can still see that some of the paint is still wet. And all of the white squares need to be painted. I'll finish it tomorow. The most important thing about this piece is mixing good looking colors. That blue needs work.</p>
+			<description><![CDATA[<p><a href="https://halcanary.org/art/2003-08-24-art-1.jpg"><img src="https://halcanary.org/art/thumb/2003-08-24-art-1.jpg" alt="art" /></a> I did some painting today. This one's not done yet. You can still see that some of the paint is still wet. And all of the white squares need to be painted. I'll finish it tomorow. The most important thing about this piece is mixing good looking colors. That blue needs work.</p>
 ]]></description>
 			<category>art</category>
 		</item>
@@ -16611,9 +16615,9 @@ Yeah, it's gone</em></p>
 		<item>
 			<title>Goodbye old server.</title>
 			<link>https://halcanary.org/vv/2003/03/12/38/</link>
-			<guid isPermaLink="false">55018260-5936-52de-a41f-9e66a182ade9</guid>
+			<guid isPermaLink="false">89e1411d-4dae-5b14-b3f2-aeb20fb92207</guid>
 			<pubDate>Wed, 12 Mar 2003 11:42:26 -0600</pubDate>
-			<description><![CDATA[<p><img src="https://halcanary.org/art/kc2_s.jpg" alt="abstract" /></p>
+			<description><![CDATA[<p><img src="https://halcanary.org/art/kc2.jpg" alt="abstract" /></p>
 <p>I put a lot of work into reworking this page yesterday. I've finally moved all content off of <em>http://uw.physics.wisc.edu/~hal/</em> and transferred it to this site. I also grabbed a lot of content off of <em>http://ups.physics.wisc.edu/~hal/</em>.</p>
 <p>There's now a lot of junk on the left sidebar.</p>
 ]]></description>
@@ -17090,15 +17094,15 @@ Lord, have mercy.</em></p>
 		<item>
 			<title>Update on my life:</title>
 			<link>https://halcanary.org/vv/2002/05/20/7/</link>
-			<guid isPermaLink="false">75ff8c2a-73d8-5e79-b967-8dc4862f2c38</guid>
+			<guid isPermaLink="false">d2d153b6-5972-5511-b0fc-e886f34dd5ed</guid>
 			<pubDate>Mon, 20 May 2002 20:08:53 -0500</pubDate>
 			<description><![CDATA[<p>Yesterday I finished a E2 node I've been working on for a while: <a href="http://everything2.com/?node=From+Beirut+to+Jerusalem">http://everything2.com/?node=From+Beirut+to+Jerusalem</a>. Today I noded <a href="http://everything2.com/?node=Kyoto+Now%21">http://everything2.com/?node=Kyoto+Now!</a>.</p>
 <p>Spending more money on CD's.</p>
 <p>Got these nifty thumb screws for my computer. They are the same size as the srews that you use to keep the covers on the case, but they have an oversized thumb knob to make access easier. For the first time in months, my case covers are screwed on!</p>
 <p>As of last weekend, I've been graduated for exactly one year. Crazy.</p>
-<p><img src="http://halcanry.org/art/devil-01.jpg" alt="/art/devil-01.jpg" /></p>
-<p><img src="http://halcanry.org/art/devil-02.jpg" alt="/art/devil-02.jpg" /></p>
-<p><img src="http://halcanry.org/art/devil-03.jpg" alt="/art/devil-03.jpg" /></p>
+<p><img src="/art/devil-01.jpg" alt="/art/devil-01.jpg" /></p>
+<p><img src="/art/devil-02.jpg" alt="/art/devil-02.jpg" /></p>
+<p><img src="/art/devil-03.jpg" alt="/art/devil-03.jpg" /></p>
 <p>Later.</p>
 ]]></description>
 			<category>life</category>

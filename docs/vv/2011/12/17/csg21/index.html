@@ -79,8 +79,9 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
+<div>
 <p><strong>Java Makefiles</strong></p>
-<p>Here's a basic makefile for compiling Java programs. On most systems, you will only need to edit the first three lines.</p>
+<p>Here&#39;s a basic makefile for compiling Java programs. On most systems, you will only need to edit the first three lines.</p>
 <pre><code class="language-Makefile">classes = Prog.class AnotherClass.class
 entrypointclass = Prog
 jarfile = program.jar
@@ -103,6 +104,8 @@ $(jarfile): $(classes)
 %.class : %.java
 	$(JAVAC) $(JCFLAGS) $^
 </code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

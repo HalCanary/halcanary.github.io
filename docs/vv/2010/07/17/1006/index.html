@@ -79,14 +79,17 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
+<div>
 <pre><code>&lt;!-- Easy Gravatar implementation for
      Wordpress comment page: --&gt;
 &lt;?php
-$gravlink = &quot;http://www.gravatar.com/avatar/&quot;;
+$gravlink = &#34;http://www.gravatar.com/avatar/&#34;;
 $gravlink .= md5(strtolower(trim(get_comment_author_email())));
-$gravlink .= &quot;?d=&quot;.urlencode(&quot;https://halcanary.org/images/q80.png&quot;);
+$gravlink .= &#34;?d=&#34;.urlencode(&#34;https://halcanary.org/images/q80.png&#34;);
 echo $gravlink; ?&gt;
 </code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

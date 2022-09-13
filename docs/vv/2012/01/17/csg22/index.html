@@ -79,6 +79,7 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
+<div>
 <pre><code class="language-Python">#!/usr/bin/env python
 
 import PyQt4.QtGui
@@ -89,14 +90,14 @@ def getInt(title, label, mini=-2147483647, maxa=2147483647):
   (ret, ok) = PyQt4.QtGui.QInputDialog.getInt(
     PyQt4.QtGui.QWidget(), title, label, default, mini, maxa)
   if not ok:
-    raise Exception('select error')
+    raise Exception(&#39;select error&#39;)
   return ret
 
 def getItem(title, label, items):
   (ret, ok) = PyQt4.QtGui.QInputDialog.getItem(
     PyQt4.QtGui.QWidget(), title, label, items)
   if not ok:
-    raise Exception('select error')
+    raise Exception(&#39;select error&#39;)
   return str(ret)
 
 def getFloat(title, label, mini=-2147483647, maxa=2147483647,
@@ -107,32 +108,34 @@ def getFloat(title, label, mini=-2147483647, maxa=2147483647,
   (ret, ok) = PyQt4.QtGui.QInputDialog.getDouble(
     PyQt4.QtGui.QWidget(), title, label, default, mini, maxa, decimals)
   if not ok:
-    raise Exception('select error')
+    raise Exception(&#39;select error&#39;)
   return ret
 
 def getItem(title, label, items):
   (ret, ok) = PyQt4.QtGui.QInputDialog.getItem(
     PyQt4.QtGui.QWidget(), title, label, items)
   if not ok:
-    raise Exception('select error')
+    raise Exception(&#39;select error&#39;)
   return str(ret)
 
-def getText(title, label, default=''):
+def getText(title, label, default=&#39;&#39;):
   (ret, ok) = PyQt4.QtGui.QInputDialog.getText(
     PyQt4.QtGui.QWidget(), title, label,
     PyQt4.QtGui.QLineEdit.Normal, default)
   if not ok:
-    raise Exception('select error')
+    raise Exception(&#39;select error&#39;)
   return str(ret)
 
 qApplication = PyQt4.QtGui.QApplication([])
 
-print getItem('getItem()', 'select a color',
-  ['red','orange','yellow','green','blue','violet'])
-print getInt('getInt()', 'give me a number', 0, 100)
-print getFloat('getFloat()', 'give me a number', 0.0, 1.0, None, 2)
-print getText('getText()','give me some text','string')
+print getItem(&#39;getItem()&#39;, &#39;select a color&#39;,
+  [&#39;red&#39;,&#39;orange&#39;,&#39;yellow&#39;,&#39;green&#39;,&#39;blue&#39;,&#39;violet&#39;])
+print getInt(&#39;getInt()&#39;, &#39;give me a number&#39;, 0, 100)
+print getFloat(&#39;getFloat()&#39;, &#39;give me a number&#39;, 0.0, 1.0, None, 2)
+print getText(&#39;getText()&#39;,&#39;give me some text&#39;,&#39;string&#39;)
 </code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

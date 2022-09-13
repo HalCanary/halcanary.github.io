@@ -79,20 +79,21 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
-<p>I wanted to access my desktop's music library from my living room and play it through the amplifier and speakers there. So I grabbed my netbook, and after fumbling around with NFS for too long, I just tried:</p>
+<div>
+<p>I wanted to access my desktop&#39;s music library from my living room and play it through the amplifier and speakers there. So I grabbed my netbook, and after fumbling around with NFS for too long, I just tried:</p>
 <pre><code>yum install sshfs
 </code></pre>
-<p>(It's a OLPC XO-1, so it's Redhat-based.) And then wrote a little script:</p>
+<p>(It&#39;s a OLPC XO-1, so it&#39;s Redhat-based.) And then wrote a little script:</p>
 <pre><code>#!/bin/sh
 ## ~/bin/mount-music
-mkdir -p &quot;${HOME}/music&quot;
-sshfs hal@sloop:/d/music &quot;${HOME}/music&quot;
+mkdir -p &#34;${HOME}/music&#34;
+sshfs hal@sloop:/d/music &#34;${HOME}/music&#34;
 </code></pre>
 <p>I installed mpg123-alsa (by the simple expedient of copying the executable) and wrote a little script to run it.</p>
 <pre><code>#!/bin/sh
-test -f &quot;${HOME}/music/index.txt&quot; || \
-    sshfs hal@sloop:/d/music &quot;${HOME}/music&quot;
-cd &quot;${HOME}/music&quot;
+test -f &#34;${HOME}/music/index.txt&#34; || \
+    sshfs hal@sloop:/d/music &#34;${HOME}/music&#34;
+cd &#34;${HOME}/music&#34;
 exec mpg123-alsa --control --long-tag \
     --shuffle --list index.txt
 </code></pre>
@@ -100,8 +101,10 @@ exec mpg123-alsa --control --long-tag \
 <pre><code>#!/bin/sh
 # run this script to refresh the index file.
 cd $HOME/music
-find . -type f -a -name '*.mp3' &gt; index.txt
+find . -type f -a -name &#39;*.mp3&#39; &gt; index.txt
 </code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

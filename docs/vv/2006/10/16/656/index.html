@@ -79,13 +79,16 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
-<p>Hard Drive A starts making loud clicking noises yesterday. I suspect it has finally died and I unplug it. Hard Drive B is newer, larger, and containes my day-to-day OS of choice. Tho only problem is that HDB contains no bootloader. So I need to install one. So I boot up knoppix from a CD and fool around trying to install grub. Then I figure I'll just try this:</p>
+<div>
+<p>Hard Drive A starts making loud clicking noises yesterday. I suspect it has finally died and I unplug it. Hard Drive B is newer, larger, and containes my day-to-day OS of choice. Tho only problem is that HDB contains no bootloader. So I need to install one. So I boot up knoppix from a CD and fool around trying to install grub. Then I figure I&#39;ll just try this:</p>
 <pre><code>dd if=boot/grub/stage1 of=/dev/hdb bs=512 count=1
 </code></pre>
 <p>Of course what I should have done was:</p>
 <pre><code>dd if=boot/grub/stage1 of=/dev/hdb1 bs=512 count=1
 </code></pre>
-<p>I managed to overwrite the partition table of my only working hard drive. Good thing my latest backup is only two weeks old, cause I'm not sure how to access any of the data on the drive.</p>
+<p>I managed to overwrite the partition table of my only working hard drive. Good thing my latest backup is only two weeks old, cause I&#39;m not sure how to access any of the data on the drive.</p>
+
+</div>
 </div>
 </article>
 <hr/>

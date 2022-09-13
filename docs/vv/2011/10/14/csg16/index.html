@@ -79,24 +79,27 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
-<pre><code class="language-Emacs">(defun next-good-buffer () &quot;HWC&quot; (interactive)
+<div>
+<pre><code class="language-Emacs">(defun next-good-buffer () &#34;HWC&#34; (interactive)
   (next-buffer)
-  (while (and (not (string= (buffer-name) &quot;*scratch*&quot;))
+  (while (and (not (string= (buffer-name) &#34;*scratch*&#34;))
           (equal (buffer-file-name) nil))
     (next-buffer)))
-(defun previous-good-buffer () &quot;HWC&quot; (interactive)
+(defun previous-good-buffer () &#34;HWC&#34; (interactive)
   (previous-buffer)
-  (while (and (not (string= (buffer-name) &quot;*scratch*&quot;))
+  (while (and (not (string= (buffer-name) &#34;*scratch*&#34;))
           (equal (buffer-file-name) nil))
     (previous-buffer)))
 
-(global-set-key [(control next)] 'next-good-buffer)
-(global-set-key [(control prior)] 'previous-good-buffer)
-(global-set-key [(control tab)] 'next-good-buffer)
-(global-set-key [(control shift tab)] 'previous-good-buffer)
-(global-set-key [(control iso-lefttab)] 'next-good-buffer)
-(global-set-key [(control shift iso-lefttab)] 'previous-good-buffer)
+(global-set-key [(control next)] &#39;next-good-buffer)
+(global-set-key [(control prior)] &#39;previous-good-buffer)
+(global-set-key [(control tab)] &#39;next-good-buffer)
+(global-set-key [(control shift tab)] &#39;previous-good-buffer)
+(global-set-key [(control iso-lefttab)] &#39;next-good-buffer)
+(global-set-key [(control shift iso-lefttab)] &#39;previous-good-buffer)
 </code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

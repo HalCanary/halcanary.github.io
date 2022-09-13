@@ -79,7 +79,8 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
-<p>I bought a boxed set of Knuth's <em>Art of Computer Programming</em> last week. As you may or may not know, TAOCP demonstrates programs in assembly for a mythical computer known as the MIX 1009. MIX would not have been out of place in 1965, but is hopelessly outdated today. Nonetheless, I learned enough MIX to write the following program in the MIX Assembly Language.</p>
+<div>
+<p>I bought a boxed set of Knuth&#39;s <em>Art of Computer Programming</em> last week. As you may or may not know, TAOCP demonstrates programs in assembly for a mythical computer known as the MIX 1009. MIX would not have been out of place in 1965, but is hopelessly outdated today. Nonetheless, I learned enough MIX to write the following program in the MIX Assembly Language.</p>
 <pre><code>* factorial.mixal
 *
 * calculate n factorial in MIXAL
@@ -117,7 +118,7 @@ loop	ST1	pp
 	SLAX	5	* Shift rX back to rA.
 	DEC1	1	* k &lt;- k-1
 	J1P	loop	* if (k &gt; 0) loop back
-	CHAR	0	* rAX &lt;- sprintf(&quot;%i&quot;, rA)
+	CHAR	0	* rAX &lt;- sprintf(&#34;%i&#34;, rA)
 	STX	pp+1
 	STA	pp
 	OUT	pp(term)	* output pp and pp+1
@@ -129,14 +130,14 @@ error0	ALF	OVERF
         END     start
 </code></pre>
 <p>Notice how I had to write to memory in order to multiply two numbers together! Crazy.</p>
-<p>(Factorial calculations are a common assignment in computer science 101, as they are a simple exercise in a language's looping constructs.)</p>
-<p>Here's the same program, reimplemented for the Emmix 2009:</p>
+<p>(Factorial calculations are a common assignment in computer science 101, as they are a simple exercise in a language&#39;s looping constructs.)</p>
+<p>Here&#39;s the same program, reimplemented for the Emmix 2009:</p>
 <pre><code>* factorial.mmo
 *
 * Calculate factorial(NUMBER) in MMIXAL.
 * If it overflows, it exits with no output.
 *
-* Tested with Donald E. Knuth's MMIXware (v20060918).
+* Tested with Donald E. Knuth&#39;s MMIXware (v20060918).
 *
 * Assemble with:
 *	mmixal factorial.mms
@@ -169,15 +170,15 @@ Main	LDO	n,pnum,0	load number from memory
 	PBP	k,1B
 
 * Print out n, followed by a newline.
-	SET	r,0		'\0' character
+	SET	r,0		&#39;\0&#39; character
 	STBU	r,pbuf
 	SUB	pbuf,pbuf,1
-	SET	r,10		'\n' char
+	SET	r,10		&#39;\n&#39; char
 	STBU	r,pbuf
 2H	SUB	pbuf,pbuf,1
 	DIVU	n,n,10
 	GET	r,rR		final digit is the remainder
-	INCL	r,'0'		convert digit to ASCII char
+	INCL	r,&#39;0&#39;		convert digit to ASCII char
 	STBU	r,pbuf		store digit char in buffer
 	PBP	n,2B		if there is more chars, loop
 	SET	$255,pbuf	set $255 to point to the
@@ -186,7 +187,9 @@ Main	LDO	n,pnum,0	load number from memory
 
 overflow TRAP	0,Halt,0
 </code></pre>
-<p>This processor required me to (gasp) rewrite 'printf(&quot;%u&quot;,n);', which was the hardest part of the program.</p>
+<p>This processor required me to (gasp) rewrite &#39;printf(&#34;%u&#34;,n);&#39;, which was the hardest part of the program.</p>
+
+</div>
 </div>
 </article>
 <hr/>

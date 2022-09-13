@@ -79,7 +79,8 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
-<p>Here's your basic LaTeX document:</p>
+<div>
+<p>Here&#39;s your basic LaTeX document:</p>
 <pre><code>%% FILE: basic.tex
 \documentclass[letterpaper,12pt]{article}
 \begin{document}
@@ -93,21 +94,23 @@ set xrange [-3:3]
 set yrange [0:.42]
 set ytics nomirror autofreq 0, .1
 set terminal latex size 3,1.5
-set output 'graph.tex'
+set output &#39;graph.tex&#39;
 f(x) = .39894228040143267794 * exp(-0.5 * (x ** 2))
-set style line 1 linecolor rgb &quot;black&quot; linewidth 1
+set style line 1 linecolor rgb &#34;black&#34; linewidth 1
 plot f(x) ls 1 notitle
 </code></pre>
-<p>Here's the execution:</p>
+<p>Here&#39;s the execution:</p>
 <pre><code>$ gnuplot graph.gnuplot
 $ pdflatex basic.tex &gt; /dev/null
 $ evince basic.pdf &amp;
 </code></pre>
 <p>This makes a really professional-looking graph I can put in a document.</p>
-<p><img src="https://halcanary.org/images/2010-07-16_graph.png" alt="[]" /></p>
-<p>Now here's what I want to see:</p>
-<p><img src="https://halcanary.org/images/2010-07-16_graph_2.png" alt="[]" /></p>
+<p><img src="https://halcanary.org/images/2010-07-16_graph.png" alt="[]" width="244" height="132"/></p>
+<p>Now here&#39;s what I want to see:</p>
+<p><img src="https://halcanary.org/images/2010-07-16_graph_2.png" alt="[]" width="244" height="132"/></p>
 <p>How do I do this with Gnuplot?</p>
+
+</div>
 </div>
 </article>
 <hr/>

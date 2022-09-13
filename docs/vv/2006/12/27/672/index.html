@@ -79,9 +79,10 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
+<div>
 <pre><code>#!/bin/sh
 #DTPD#
-echo first argument is '&quot;'${1}'&quot;'
+echo first argument is &#39;&#34;&#39;${1}&#39;&#34;&#39;
 for argc in `seq 2 $#`; do
         eval arg=\${$argc}
         echo ${argc}th arg is $arg
@@ -91,31 +92,33 @@ done
 <pre><code>#!/bin/sh
 # prepend-something.sh
 #DTPD#
-if [ &quot;$#&quot; -lt 2 ] ; then
-        echo &quot;useage:  $0 PREFEX FILE[S]&quot;
+if [ &#34;$#&#34; -lt 2 ] ; then
+        echo &#34;useage:  $0 PREFEX FILE[S]&#34;
         exit 1
 fi
 PREFEX=${1}
 for argc in `seq 2 $#`; do
         eval arg=\${$argc}
-        mv -v &quot;${arg}&quot; &quot;${PREFEX}${arg}&quot;
+        mv -v &#34;${arg}&#34; &#34;${PREFEX}${arg}&#34;
 done
 </code></pre>
-<hr />
+<hr/>
 <p><strong>Update 2009-12-05</strong>: Another way to do it would be to use the shift command.</p>
 <pre><code>#!/bin/sh
 # prepend-something.sh
 #DTPD#
-if [ &quot;$#&quot; -lt 2 ] ; then
-    echo &quot;useage:  $0 PREFEX FILE[S]&quot;
+if [ &#34;$#&#34; -lt 2 ] ; then
+    echo &#34;useage:  $0 PREFEX FILE[S]&#34;
     exit 1
 fi
 prefix=${1}
 shift
-for arg in &quot;$@&quot;; do
-    mv -v &quot;$arg&quot; &quot;${prefix}${arg}&quot;
+for arg in &#34;$@&#34;; do
+    mv -v &#34;$arg&#34; &#34;${prefix}${arg}&#34;
 done
 </code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

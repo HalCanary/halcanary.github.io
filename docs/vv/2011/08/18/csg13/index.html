@@ -79,14 +79,17 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
+<div>
 <p>Update: Russ reccomends 2<em>N</em> threads.</p>
 <pre><code>#!/bin/sh
 ## {$HOME}/bin/makej
 renice 1 $$ &gt; /dev/null
 N_CPUS=`grep processor /proc/cpuinfo | wc -l`
-N_THRDS=`expr ${N_CPUS:-1} &quot;*&quot; 2`
-exec /usr/bin/make -j &quot;$N_THRDS&quot; &quot;$@&quot;
+N_THRDS=`expr ${N_CPUS:-1} &#34;*&#34; 2`
+exec /usr/bin/make -j &#34;$N_THRDS&#34; &#34;$@&#34;
 </code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

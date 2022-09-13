@@ -79,18 +79,21 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
+<div>
 <p>As a html author, should I use</p>
 <p><a name="bleg">Text</a></p>
 <p>or</p>
 <p><a name="bleg"></a>Text?</p>
-<p>It only matters if one has defined something in css for &quot;a:hover&quot;. <a href="http://www.w3.org/TR/REC-CSS2/selector.html#x33">The W3C</a> doesn't specify that :hover should apply to any specific element. So one could define css:</p>
+<p>It only matters if one has defined something in css for &#34;a:hover&#34;. <a href="http://www.w3.org/TR/REC-CSS2/selector.html#x33">The W3C</a> doesn&#39;t specify that :hover should apply to any specific element. So one could define css:</p>
 <p>span.highlight:hover {
 background-color:#ffffaa;
 color:#000000; }</p>
 <p>and use html:</p>
 <p>words, <span class="highlight">
 words,</span> words!</p>
-<p>All this implies that I should make a point to immediately close &quot;&lt;a name=...&quot; tags, unless I want highlighting.</p>
+<p>All this implies that I should make a point to immediately close &#34;&lt;a name=...&#34; tags, unless I want highlighting.</p>
+
+</div>
 </div>
 </article>
 <hr/>

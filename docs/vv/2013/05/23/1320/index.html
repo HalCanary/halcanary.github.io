@@ -79,32 +79,35 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
+<div>
 <p>Bash user? Be sure to install and use the package <code>bash-completion</code>.</p>
-<p>Write a lot of code? Don't forget <code>source-highlight</code></p>
+<p>Write a lot of code? Don&#39;t forget <code>source-highlight</code></p>
 <pre><code class="language-sh"># add to .bashrc
 if command -v source-highlight &gt; /dev/null ; then
 source-highlight-less() {
-    [ $# -eq 0 ] &amp;&amp; { echo &quot;args?&quot; &gt;&amp;2; return 1; }
+    [ $# -eq 0 ] &amp;&amp; { echo &#34;args?&#34; &gt;&amp;2; return 1; }
     for FILE ; do
-        if [ -f &quot;$FILE&quot; ] ; then
-            source-highlight -i &quot;$FILE&quot; -fesc
+        if [ -f &#34;$FILE&#34; ] ; then
+            source-highlight -i &#34;$FILE&#34; -fesc
         else
-            echo &quot;${FILE} does not exist&quot; &gt;&amp;2
+            echo &#34;${FILE} does not exist&#34; &gt;&amp;2
         fi
     done | less -R -x${TAB:-8}
 }
 source_to_html() {
-    [ $# -eq 0 ] &amp;&amp; { echo &quot;args?&quot; &gt;&amp;2; return 1; }
+    [ $# -eq 0 ] &amp;&amp; { echo &#34;args?&#34; &gt;&amp;2; return 1; }
     for FILE ; do
-        if [ -f &quot;$FILE&quot; ] ; then
-            source-highlight -i &quot;$FILE&quot; -fhtml-css
+        if [ -f &#34;$FILE&#34; ] ; then
+            source-highlight -i &#34;$FILE&#34; -fhtml-css
         else
-            echo &quot;${FILE} does not exist&quot; &gt;&amp;2
+            echo &#34;${FILE} does not exist&#34; &gt;&amp;2
         fi
     done | expand -t ${TAB:-8}
 }
 fi
 </code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

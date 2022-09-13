@@ -79,6 +79,7 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
+<div>
 <p>Setting up icecast+liveice so I can stream music from my PC to the internet. A simple</p>
 <pre><code>sudo apt-get install -y liveice icecast-server
 </code></pre>
@@ -106,20 +107,22 @@ PLAYLIST /home/hal/playlist.pl
 <pre><code>#!/bin/sh
 # $HOME/bin/startliveice.sh
 # DTPD
-DIR=&quot;/d/music/&quot;
-find &quot;${DIR}&quot; -name '*.mp3' \
+DIR=&#34;/d/music/&#34;
+find &#34;${DIR}&#34; -name &#39;*.mp3&#39; \
   | ${HOME}/bin/randomize-list.py \
   &gt; ${HOME}/playlist.pl
 exec liveice -F ${HOME}/.liveice.cfg \
   2&gt; /dev/null
 </code></pre>
-<p>Now you're ready to start the liveice program. Read /usr/share/doc/liveice/README.liveice.gz to find out the commands for the curses frontend.</p>
-<p>Check that it's working with</p>
+<p>Now you&#39;re ready to start the liveice program. Read /usr/share/doc/liveice/README.liveice.gz to find out the commands for the curses frontend.</p>
+<p>Check that it&#39;s working with</p>
 <pre><code>mplayer -quiet -cache 32 http://127.0.0.1:8888/x
 </code></pre>
-<p>If I'm broadcasting, check me at at</p>
+<p>If I&#39;m broadcasting, check me at at</p>
 <pre><code>http://halcanary.dyndns.org:8888/x
 </code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

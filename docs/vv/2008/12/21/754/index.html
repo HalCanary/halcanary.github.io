@@ -79,6 +79,7 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
+<div>
 <pre><code>#!/usr/bin/env python
 # randomize_list.py
 # Written 2008 Hal Canary
@@ -92,7 +93,7 @@ while l:
 	l.remove(e)
 	sys.stdout.write(e)
 </code></pre>
-<p><strong>UPDATE 2009-01-04</strong>: Just as I suspected, that code is highly inefficient. Here's a different algorithm which is much faster for large N.</p>
+<p><strong>UPDATE 2009-01-04</strong>: Just as I suspected, that code is highly inefficient. Here&#39;s a different algorithm which is much faster for large N.</p>
 <pre><code>#!/usr/bin/env python
 # randomize_list.py
 # Written 2008-2009 Hal Canary
@@ -106,6 +107,8 @@ while l:
 	sys.stdout.write(l.pop(i))
 </code></pre>
 <p>Testing with the <code>time</code> command showed a 74% reduction in CPU use with the better algorithm.</p>
+
+</div>
 </div>
 </article>
 <hr/>

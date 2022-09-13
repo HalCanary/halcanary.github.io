@@ -79,13 +79,14 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
+<div>
 <pre><code>#!/usr/bin/perl
 ## ~/bin/prepend-something ##
 my $pre = shift;
 my @files = @ARGV;
 foreach $file (@files) {
     my $new = $pre.$file;
-    system (&quot;mv -v \&quot;$file\&quot; \&quot;$new\&quot;&quot;);
+    system (&#34;mv -v \&#34;$file\&#34; \&#34;$new\&#34;&#34;);
 }
 
 
@@ -97,9 +98,11 @@ my @files = @ARGV;
 foreach $file (@files) {
     my $filenew = $file;
     $filenew =~ s/$old/$new/g;
-    system (&quot;mv -v \&quot;$file\&quot; \&quot;$filenew\&quot;&quot;);
+    system (&#34;mv -v \&#34;$file\&#34; \&#34;$filenew\&#34;&#34;);
 }
 </code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

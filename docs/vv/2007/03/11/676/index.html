@@ -79,6 +79,7 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
+<div>
 <pre><code>/*  hexer - Convert  binary files to hexadecimal
     Copyright 2007 Hal Canary
     Dedicated to the Public Domain. */
@@ -90,20 +91,22 @@ int main (int argc, char *argv[]) {
   char x;
   while (fread(&amp;x, sizeof(x), 1, stdin) == 1) {
     i++;
-    printf(&quot;%02hhx&quot;,x);
+    printf(&#34;%02hhx&#34;,x);
     if (i % 32 == 0) {
-      printf(&quot;\n&quot;);
+      printf(&#34;\n&#34;);
     }
   }
-  printf(&quot;\n&quot;);
+  printf(&#34;\n&#34;);
   return(0);
 }
 /*EOF*/
 </code></pre>
 <p>Or:</p>
 <pre><code>#!/bin/sh
-exec hexdump -e '32/1 &quot;%02x&quot; &quot;\n&quot;' &quot;$@&quot;
+exec hexdump -e &#39;32/1 &#34;%02x&#34; &#34;\n&#34;&#39; &#34;$@&#34;
 </code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

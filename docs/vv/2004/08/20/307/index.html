@@ -79,10 +79,13 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
+<div>
 <p><a href="https://halcanary.org/archives/000249.html">See this for background.</a> I am declaring a little victory here. The simplest spam-armoring possible has proved to be the most effective:</p>
-<pre><code>echo $EMAIL | sed 's/@/ at /g;s/\./ dot /g'
+<pre><code>echo $EMAIL | sed &#39;s/@/ at /g;s/\./ dot /g&#39;
 </code></pre>
 <p>As long as that method is not over-used--or used in a predictable manner--it should be safe for a while.</p>
+
+</div>
 </div>
 </article>
 <hr/>

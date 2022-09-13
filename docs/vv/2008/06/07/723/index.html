@@ -79,6 +79,7 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
+<div>
 <pre><code>#!/usr/bin/env python
 
 # jolietify - reduce a filename to 64 chars, preserving
@@ -92,7 +93,7 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 #
 # Permission is hereby granted, free of charge, to any
 # person obtaining a copy of this software and
-# associated documentation files (the 'Software'), to
+# associated documentation files (the &#39;Software&#39;), to
 # deal in the Software without restriction, including
 # without limitation the rights to use, copy, modify,
 # merge, publish, distribute, sublicense, and/or sell
@@ -104,7 +105,7 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 # shall be included in all copies or substantial
 # portions of the Software.
 #
-# THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF
+# THE SOFTWARE IS PROVIDED &#39;AS IS&#39;, WITHOUT WARRANTY OF
 # ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT
 # LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
 # FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO
@@ -123,26 +124,28 @@ import os.path
 def jolietify(dirfilename):
     (head,fname) = os.path.split(dirfilename)
     if (len(fname) &lt;= 64):
-        print &quot;Is good:&quot;, dirfilename
+        print &#34;Is good:&#34;, dirfilename
         return 1
-    splitname=fname.rsplit('.',1)
+    splitname=fname.rsplit(&#39;.&#39;,1)
     if (len(splitname) == 1):
 	new=os.path.join(head,splitname[0][0:64])
-        print 'rename', dirfilename, new
+        print &#39;rename&#39;, dirfilename, new
         os.rename(dirfilename, new)
         return 0
     else:
 	new=os.path.join(head,
-            splitname[0][0:63-len(splitname[1])]+'.'+splitname[1])
-	print 'rename', dirfilename, new
+            splitname[0][0:63-len(splitname[1])]+&#39;.&#39;+splitname[1])
+	print &#39;rename&#39;, dirfilename, new
         os.rename(dirfilename, new)
         return 0
 
-if __name__ == &quot;__main__&quot;:
+if __name__ == &#34;__main__&#34;:
     for x in sys.argv[1:]:
        for y in glob.glob(x):
             jolietify(y)
 </code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

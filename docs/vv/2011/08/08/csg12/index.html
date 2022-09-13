@@ -79,10 +79,13 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
+<div>
 <pre><code>#!/bin/sh
 N_CPUS=`grep processor /proc/cpuinfo | wc -l`
-exec /usr/bin/make -j &quot;$N_CPUS&quot; &quot;$@&quot;
+exec /usr/bin/make -j &#34;$N_CPUS&#34; &#34;$@&#34;
 </code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

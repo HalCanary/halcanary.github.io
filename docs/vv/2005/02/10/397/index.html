@@ -79,21 +79,22 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
-<p>I've used itunes at my parents house to burn audio CDs. It works nicely. At
-home, I use Rhythmbox, which has no such ability. Here's how I do it.</p>
+<div>
+<p>I&#39;ve used itunes at my parents house to burn audio CDs. It works nicely. At
+home, I use Rhythmbox, which has no such ability. Here&#39;s how I do it.</p>
 <p>Create a nice 80-minute playlist. SAve it to /home/hal/tmp/x.</p>
 <p>Run this script:</p>
 <pre><code>#!/bin/sh
 # $HOME/bin/make-audio-cd-from-playlist.sh
-grep '=file://' $1 | awk -F '//' '{print $2}' &gt; tmp-file
+grep &#39;=file://&#39; $1 | awk -F &#39;//&#39; &#39;{print $2}&#39; &gt; tmp-file
 i=1
 for LINE in $(cat tmp-file) ; do
-    if [ &quot;$i&quot; -lt 10 ] ; then
-    FILENAME=&quot;track_0${i}.wav&quot;
+    if [ &#34;$i&#34; -lt 10 ] ; then
+    FILENAME=&#34;track_0${i}.wav&#34;
     else
-    FILENAME=&quot;track_${i}.wav&quot;
+    FILENAME=&#34;track_${i}.wav&#34;
     fi
-    lame --decode &quot;$LINE&quot; $FILENAME
+    lame --decode &#34;$LINE&#34; $FILENAME
     i=$(($i+1))
 done
 cdrecord dev=/dev/cdwriter -pad -v -audio track_??.wav
@@ -102,8 +103,10 @@ cdrecord dev=/dev/cdwriter -pad -v -audio track_??.wav
 <pre><code>$ cd  /home/hal/tmp/
 $ make-audio-cd-from-playlist.sh x
 </code></pre>
-<hr />
+<hr/>
 <p><strong>UPDATE</strong>: Recent versions of Rhythmbox have the ability to burn audio CDs.</p>
+
+</div>
 </div>
 </article>
 <hr/>

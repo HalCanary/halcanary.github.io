@@ -79,6 +79,7 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
+<div>
 <pre><code>/* Copyright 2009 Hal Canary, https://halcanary.org/
    Dedicated to the Public Domain.
 
@@ -90,7 +91,7 @@ int main(int argc, char *argv[]) {
   int totalminutes, totalseconds; /* args */
   int minute, second; /* counter */
   if (argc &lt;= 1) {
-    fprintf(stderr, &quot;Usage: timer MINUTES [SECONDS]\n\n&quot;);
+    fprintf(stderr, &#34;Usage: timer MINUTES [SECONDS]\n\n&#34;);
     return(1);
   }
   totalminutes = atoi(argv[1]); /* FIRST ARGUMENT */
@@ -99,19 +100,21 @@ int main(int argc, char *argv[]) {
   } else {
     totalseconds = 0;
   }
-  printf(&quot;%02i:%02i &quot;,totalminutes,totalseconds);
+  printf(&#34;%02i:%02i &#34;,totalminutes,totalseconds);
   for(minute=totalminutes; minute &gt;= 0; minute--) {
     for(second=totalseconds-1; second &gt;= 0; second--) {
-      printf(&quot;\b\b\b\b\b\b\b%02i:%02i &quot;,minute,second);
+      printf(&#34;\b\b\b\b\b\b\b%02i:%02i &#34;,minute,second);
       fflush(stdout);
       sleep(1);
     }
     totalseconds=60;
   }
-  printf(&quot;\n&quot;);
+  printf(&#34;\n&#34;);
   return(0);
 }
 </code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

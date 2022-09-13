@@ -79,7 +79,8 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
-<p>I installed Fedora Core 3 on my workstaion at home this month. It works fine; I get slightly more up to date versions of the software I use, no big deal. For those who care (really, for my own reference), here's how I set things up.</p>
+<div>
+<p>I installed Fedora Core 3 on my workstaion at home this month. It works fine; I get slightly more up to date versions of the software I use, no big deal. For those who care (really, for my own reference), here&#39;s how I set things up.</p>
 <p><strong>FILESYSTEM</strong></p>
 <p>This is how I set up my hard drive. I planned on formatting every partition except for /home. /home also contained a copy of the four CDs, aquired from a torrent. FC3-i386-disc{1,2,3,4}.iso. I only burnt the first CD. The others could live on disc. (Use “linux askmethod“ at the boot prompt to make this work.)</p>
 <pre><code>Filesystem	1M-blocks	Mounted on
@@ -95,7 +96,7 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </code></pre>
 <p><strong>FSTAB</strong></p>
 <p>I went ahead and installed. After installing, I had to get my /home partition mounted correctly and then link /usr/local to /home/local . I did all of this before I logged in.</p>
-<pre><code>echo '/dev/hdb3 /home ext3 defaults 1 2' \
+<pre><code>echo &#39;/dev/hdb3 /home ext3 defaults 1 2&#39; \
 	&gt; /etc/fstab
 mv /home /OLD.home
 mkdir /home
@@ -131,10 +132,10 @@ rpm -Uvh /usr/local/packages/jdk-1_5_0-linux-i586.rpm
 </code></pre>
 <p>Set up java.</p>
 <pre><code>cat &lt;&lt;EOF &gt; /etc/profile.d/java.sh
-export JAVA_HOME=&quot;/usr/java/jdk1.5.0&quot;
-export JAVA_PATH=&quot;$JAVA_HOME&quot;
-export PATH=&quot;$PATH:$JAVA_HOME/bin&quot;
-export JDK_HOME=&quot;$JAVA_HOME&quot;
+export JAVA_HOME=&#34;/usr/java/jdk1.5.0&#34;
+export JAVA_PATH=&#34;$JAVA_HOME&#34;
+export PATH=&#34;$PATH:$JAVA_HOME/bin&#34;
+export JDK_HOME=&#34;$JAVA_HOME&#34;
 EOF
 ln -s /usr/java/jdk1.5.0/jre/plugin/i386/ns7/libjavaplugin_oji.so \
   /usr/lib/mozilla/plugins/
@@ -148,7 +149,7 @@ yum -y update
 yum install ogle aalib screen bash-completion bittorrent
 yum install id3v2 epic gftp xine grip dhcp
 </code></pre>
-<p>Some things to make mplayer (which lives in /usr/local) happy. Add /usr/local/lib to /etc/ld.so.conf. Change PRELINK_OPTS so that mplayer doesn't crash. Put &quot;dev.rtc.max-user-freq = 1024&quot; in /etc/sysctl.conf</p>
+<p>Some things to make mplayer (which lives in /usr/local) happy. Add /usr/local/lib to /etc/ld.so.conf. Change PRELINK_OPTS so that mplayer doesn&#39;t crash. Put &#34;dev.rtc.max-user-freq = 1024&#34; in /etc/sysctl.conf</p>
 <pre><code>emacs -nw  /etc/ld.so.conf
 /sbin/ldconfig
 ln -s /usr/local/lib/codec /usr/lib/win32
@@ -172,7 +173,7 @@ rename pub pub.OLD *.pub
 cp /home/etc-2004-11-10/ssh/*key* .
 /sbin/service sshd start
 </code></pre>
-<p>My workstation doubles as a router, so I need to: Play with network settings. Set &quot;net.ipv4.ip_forward = 1&quot; in /etc/sysctl.conf . Use my custom iptables script. Set up dhcpd</p>
+<p>My workstation doubles as a router, so I need to: Play with network settings. Set &#34;net.ipv4.ip_forward = 1&#34; in /etc/sysctl.conf . Use my custom iptables script. Set up dhcpd</p>
 <pre><code>system-config-network
 system-config-services
 
@@ -194,10 +195,12 @@ cp -i /home/etc-2004-11-10/dhcpd.conf /etc/dhcpd.conf
 <pre><code>cat &lt;&lt;EOF &gt; $HOME/.asoundrc
 pcm.!default {
         type plug
-        slave.pcm &quot;dmix&quot;
+        slave.pcm &#34;dmix&#34;
 }
 EOF
 </code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

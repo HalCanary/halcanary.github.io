@@ -79,15 +79,18 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
+<div>
 <pre><code>#!/bin/sed -f
 #DTPD#
-#txt2html Cleans up HTML control characters &lt;.&quot;,&amp;,&gt;
+#txt2html Cleans up HTML control characters &lt;.&#34;,&amp;,&gt;
 s/\&amp;/\&amp;amp;/g;
-s/\&quot;/\&amp;quot;/g;
+s/\&#34;/\&amp;quot;/g;
 s/&lt;/\&amp;lt;/g;
 s/&gt;/\&amp;gt;/g;
 s/\\/\&amp;\#0092;/g;
 </code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

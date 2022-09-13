@@ -79,19 +79,22 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
+<div>
 <pre><code>#!/bin/sh
 ## $HOME/bin/unzip-nozipbomb
 ## Written 2007 Hal Canary
 ## DTPD ##
-for zipfile in &quot;$@&quot; ; do
-    dir=$(basename &quot;${zipfile}&quot; .zip)
-    if [ &quot;${dir}&quot; = &quot;${zipfile}&quot; ] ; then
-	dir=&quot;${dir}.d&quot;
+for zipfile in &#34;$@&#34; ; do
+    dir=$(basename &#34;${zipfile}&#34; .zip)
+    if [ &#34;${dir}&#34; = &#34;${zipfile}&#34; ] ; then
+	dir=&#34;${dir}.d&#34;
     fi
-    mkdir -p &quot;${dir}&quot;
-    unzip -d &quot;${dir}&quot; &quot;${zipfile}&quot;
+    mkdir -p &#34;${dir}&#34;
+    unzip -d &#34;${dir}&#34; &#34;${zipfile}&#34;
 done
 </code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

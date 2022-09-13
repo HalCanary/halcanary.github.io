@@ -79,8 +79,9 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
-<p>I've decided to back up my mp3 collection for the first time ever. It's a whopping 14 Gb. which I split up among 21 CDs.</p>
-<p>I'll be burning all night.</p>
+<div>
+<p>I&#39;ve decided to back up my mp3 collection for the first time ever. It&#39;s a whopping 14 Gb. which I split up among 21 CDs.</p>
+<p>I&#39;ll be burning all night.</p>
 <p>At least I automated the task somewhat. I wrote a script that softlinks the files into directories each less than 700000kb.</p>
 <p>Be sure to use “mkisofs -f” (follow symbolic links).</p>
 <pre><code>#!/usr/bin/perl
@@ -93,42 +94,44 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 # To Do: Jolietify (64 char filename).
 #        Preserve directory structure.
 
-$backupdir = &quot;\$HOME/MP3_BACKUP&quot;;
-system(&quot;mkdir -p $backupdir&quot;);
+$backupdir = &#34;\$HOME/MP3_BACKUP&#34;;
+system(&#34;mkdir -p $backupdir&#34;);
 $num=1;
 $dirnum = &amp;padnum($num);
-system(&quot;mkdir $backupdir/$dirnum&quot;);
+system(&#34;mkdir $backupdir/$dirnum&#34;);
 while ($file = &lt;&gt;) {
     chomp ($file);
     @ar = split (/\//, $file);
     $short = pop(@ar);
-    $dir = &quot;$backupdir/$dirnum&quot;;
-    $new = &quot;$dir/$short&quot;;
+    $dir = &#34;$backupdir/$dirnum&#34;;
+    $new = &#34;$dir/$short&#34;;
     &amp;link($file,$new);
-    $size = `du -Ls &quot;$dir&quot;`;
+    $size = `du -Ls &#34;$dir&#34;`;
     chomp ($size);
     if ($size &gt; 700000) {
-        system(&quot;rm \&quot;$new\&quot;&quot;);
+        system(&#34;rm \&#34;$new\&#34;&#34;);
         $num++;
         $dirnum = &amp;padnum($num);
-        $dir = &quot;$backupdir/$dirnum&quot;;
-        system(&quot;mkdir -p $dir&quot;);
-        $new = &quot;$dir/$short&quot;;
+        $dir = &#34;$backupdir/$dirnum&#34;;
+        system(&#34;mkdir -p $dir&#34;);
+        $new = &#34;$dir/$short&#34;;
         &amp;link($file,$new);
     }
 }
 sub link {
     my $o = shift;
     my $l = shift;
-    system(&quot;ln -s \&quot;$o\&quot; \&quot;$l\&quot;&quot;);
+    system(&#34;ln -s \&#34;$o\&#34; \&#34;$l\&#34;&#34;);
 }
 sub padnum {
     my $num=shift;
-    return &quot;00&quot;.$num if $num&lt;10;
-    return &quot;0&quot;.$num if $num&lt;100;
-    return &quot;$num&quot;;
+    return &#34;00&#34;.$num if $num&lt;10;
+    return &#34;0&#34;.$num if $num&lt;100;
+    return &#34;$num&#34;;
 }
 </code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

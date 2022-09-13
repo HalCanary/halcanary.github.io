@@ -79,19 +79,20 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
+<div>
 <p>Suppose you are writing a C++ program and are linking to a C library. Many of the library calls return a pointer to a heap-allocated structure. You are expected to free that structure using a specialized free function. For example, the openssl library has a BIGNUM type that is typically created using BN_new() and deleted using BN_free(); The following <code>Pointer&lt; BIGNUM, BN_clear_free &gt;</code> class will take ownership of the BIGNUM pointer in a smart-pointer way and call the BN_free() function when ever the BIGNUM_ptr goes out of scope.</p>
 <p>This allows me to exit a function in any of several places (using return or throw) without explicitly freeing memeory.</p>
 <pre><code class="language-C++">// Pointer Template
 // Copyright 2013 Hal Canary
 //
-// Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+// Licensed under the Apache License, Version 2.0 (the &#34;License&#34;);
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
 //
 // http://www.apache.org/licenses/LICENSE-2.0
 //
 // Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+// distributed under the License is distributed on an &#34;AS IS&#34; BASIS,
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
@@ -124,7 +125,7 @@ inline T * malloc(unsigned int number=1) {
       static const unsigned int N = 100;
       Pointer&lt; char, Pointers::free&lt; char &gt; &gt; str(
         Pointers::malloc&lt; char &gt;(N));
-      sprintf( str, &quot;%d = 0x%04x\n&quot;, 0x1234, 0x1234);
+      sprintf( str, &#34;%d = 0x%04x\n&#34;, 0x1234, 0x1234);
       std::cout &lt;&lt; str;
     } */
 template&lt; typename T, void (*F)( T *) &gt;
@@ -157,24 +158,26 @@ public:
 #endif /* POINTER_H */
 </code></pre>
 <p>And the main funtion, as promised:</p>
-<pre><code class="language-C++">// compile with &quot;-lcrypto&quot;
+<pre><code class="language-C++">// compile with &#34;-lcrypto&#34;
 #include &lt;iostream&gt; // cout
 #include &lt;exception&gt; // exception
 #include &lt;openssl/bn.h&gt; // BIGNUM
-#include &quot;Pointer.h&quot; // Pointer
+#include &#34;Pointer.h&#34; // Pointer
 /**
    Convert a long hexidecimal number to decimal. */
 int main(int, char **) {
   const char hexnumber[]
-    = &quot;b94d27b9934d3e08a52e52d7da7dabfac484efe37a5380ee9088f7ace2efcde9&quot;;
+    = &#34;b94d27b9934d3e08a52e52d7da7dabfac484efe37a5380ee9088f7ace2efcde9&#34;;
   Pointer&lt; BIGNUM, BN_clear_free &gt; bn(NULL);
   if (! BN_hex2bn(&amp;(bn), hexnumber))
     throw std::exception();
   Pointer&lt; char, Pointers::free&lt; char &gt; &gt; dec(BN_bn2dec(bn));
-  std::cout &lt;&lt; dec &lt;&lt; '\n';
+  std::cout &lt;&lt; dec &lt;&lt; &#39;\n&#39;;
   return 0;
 }
 </code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

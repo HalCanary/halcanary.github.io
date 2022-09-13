@@ -79,21 +79,24 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
+<div>
 <pre><code>#!/bin/sh
-SEDCMD=&quot;$1&quot;
+SEDCMD=&#34;$1&#34;
 shift
-for x in &quot;$@&quot; ; do
-  dirt=`dirname &quot;${x}&quot;`
-  tmp=`mktemp &quot;${dirt}/tmp.XXXXXXXXXX&quot;`
-  sed &quot;${SEDCMD}&quot; &lt; &quot;${x}&quot; &gt; &quot;${tmp}&quot;
-  mv &quot;${tmp}&quot; &quot;${x}&quot;
-  echo &quot;$x fixed.&quot;
+for x in &#34;$@&#34; ; do
+  dirt=`dirname &#34;${x}&#34;`
+  tmp=`mktemp &#34;${dirt}/tmp.XXXXXXXXXX&#34;`
+  sed &#34;${SEDCMD}&#34; &lt; &#34;${x}&#34; &gt; &#34;${tmp}&#34;
+  mv &#34;${tmp}&#34; &#34;${x}&#34;
+  echo &#34;$x fixed.&#34;
 done
 </code></pre>
 <p>UPDATE: The next day I realized that</p>
 <pre><code>sed -i
 </code></pre>
 <p>does exactly the same thing.</p>
+
+</div>
 </div>
 </article>
 <hr/>

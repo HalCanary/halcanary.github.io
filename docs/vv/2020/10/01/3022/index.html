@@ -79,11 +79,12 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 <div style="display:none;">summary of last few years of site changes.</div>
+<div>
 <p>I now host this site on Github, since it is free and fairly easy for me to use.
 I push the new version of the site with a simple <code>git push</code>.  I only pay for my
 domain name.</p>
 <p>I am still using the same blog builder Python script I wrote years ago, but
-I've refactored it a dozen times.  I also use a similar script to rebuild
+I&#39;ve refactored it a dozen times.  I also use a similar script to rebuild
 static pages from markdown source too.</p>
 <p>Other changes:</p>
 <ul>
@@ -95,15 +96,15 @@ box.</p>
 <li>
 <p>Switch from original-flavor Markdown to CommonMark.  Allows me to put
 markdown inside a <code>&lt;div&gt;</code>. For example:</p>
-<pre><code>&lt;div id=&quot;foobar&quot; style=&quot;display:none;&quot;&gt;
+<pre><code>&lt;div id=&#34;foobar&#34; style=&#34;display:none;&#34;&gt;
 
 &gt; Foo
 &gt; Bar
 
 &lt;/div&gt;
-&lt;button onclick=&quot;document.getElementById('foobar')
+&lt;button onclick=&#34;document.getElementById(&#39;foobar&#39;)
                          .style
-                         .display = 'block';&quot;&gt;
+                         .display = &#39;block&#39;;&#34;&gt;
 SHOW
 &lt;/button&gt;
 </code></pre>
@@ -111,7 +112,7 @@ SHOW
 <li>
 <p>Reduce extra resources needed by a page:</p>
 <ul>
-<li>The <code>&lt;link rel=&quot;icon&quot;&gt;</code> is now a <code>data:</code> URL.</li>
+<li>The <code>&lt;link rel=&#34;icon&#34;&gt;</code> is now a <code>data:</code> URL.</li>
 <li>I inline all CSS.</li>
 <li>I also inline a SVG version of my written name on the static pages as a banner.
 Effort was made to minimize the size.  By vectorizing what was
@@ -123,7 +124,7 @@ high-dpi screens.</li>
 <p>Starting to try to meet accessibility standards.</p>
 </li>
 <li>
-<p>Replace <code>&lt;a href=&quot;&quot; onlick=&quot;....&quot;&gt;</code> with <code>&lt;button&gt;</code>, since that is less of
+<p>Replace <code>&lt;a href=&#34;&#34; onlick=&#34;....&#34;&gt;</code> with <code>&lt;button&gt;</code>, since that is less of
 an abuse of html.  It is more clear to the user that clicking that will
 change something on the page, not go to a new page.</p>
 </li>
@@ -131,6 +132,8 @@ change something on the page, not go to a new page.</p>
 <p>Remove extraneous content from main page.</p>
 </li>
 </ul>
+
+</div>
 </div>
 </article>
 <hr/>

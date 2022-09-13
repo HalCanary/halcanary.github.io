@@ -79,24 +79,27 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
-<p>To check out http headers, you can use telnet, but I've found it easier to use <code>nc</code> (netcat):</p>
-<pre><code>H=&quot;en.wikipedia.org&quot;
-G=&quot;/&quot;
-echo -en &quot;GET $G HTTP/1.1\r\nHost: $H\r\n\r\n&quot; \
+<div>
+<p>To check out http headers, you can use telnet, but I&#39;ve found it easier to use <code>nc</code> (netcat):</p>
+<pre><code>H=&#34;en.wikipedia.org&#34;
+G=&#34;/&#34;
+echo -en &#34;GET $G HTTP/1.1\r\nHost: $H\r\n\r\n&#34; \
     | nc $H 80
 </code></pre>
-<p>Here's a script:</p>
+<p>Here&#39;s a script:</p>
 <pre><code>#!/bin/sh
 #DTPD#
-if [ &quot;$#&quot; -ne 2 ] ;  then
-  echo -e &quot;useage:\n  $0 HOST RESOURCE&quot;
-  echo -e &quot;for example:\n  $0 www.google.com /&quot;
+if [ &#34;$#&#34; -ne 2 ] ;  then
+  echo -e &#34;useage:\n  $0 HOST RESOURCE&#34;
+  echo -e &#34;for example:\n  $0 www.google.com /&#34;
   exit 1
 fi
-echo -en &quot;GET $2 HTTP/1.1\r\nHost: $1\r\n\r\n&quot;
-echo -en &quot;GET $2 HTTP/1.1\r\nHost: $1\r\n\r\n&quot; \
+echo -en &#34;GET $2 HTTP/1.1\r\nHost: $1\r\n\r\n&#34;
+echo -en &#34;GET $2 HTTP/1.1\r\nHost: $1\r\n\r\n&#34; \
   | nc $1 80
 </code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

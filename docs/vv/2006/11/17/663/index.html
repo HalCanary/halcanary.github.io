@@ -79,6 +79,7 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
+<div>
 <p>Read <em>Head Rush Ajax</em> yesterday. If you already know Javascript and the DOM, all there is left to learn about the magic of Ajax is the XMLHttpRequest / Msxml2.XMLHTTP / Microsoft.XMLHTTP functions, which aparently all work identically.</p>
 <pre><code>/* ajax-http-request.js */
 function newHttpRequest() {
@@ -87,10 +88,10 @@ function newHttpRequest() {
     request = new XMLHttpRequest();
   } catch (trymicrosoft) {
     try {
-      request = new ActiveXObject(&quot;Msxml2.XMLHTTP&quot;);
+      request = new ActiveXObject(&#34;Msxml2.XMLHTTP&#34;);
     } catch (othermicrosoft) {
       try {
-         request = new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);
+         request = new ActiveXObject(&#34;Microsoft.XMLHTTP&#34;);
       } catch (failed) {
         request = null;
         }
@@ -103,7 +104,7 @@ function newHttpRequest() {
 <pre><code>/* some-other-javascript-file.js */
 var req = newHttpRequest();
 if (req == null)
-  alert(&quot;Error creating request object!&quot;);
+  alert(&#34;Error creating request object!&#34;);
 
 function dealWithResponse() {
   if (req.readyState == 4) {
@@ -113,11 +114,13 @@ function dealWithResponse() {
       throwAnErrorOrSomething();
   }
 }
-req.open(&quot;GET&quot;, &quot;someurl&quot;, true);
+req.open(&#34;GET&#34;, &#34;someurl&#34;, true);
 req.onreadystatechange = dealWithResponse;
 req.send(null);
 </code></pre>
-<p>And that's all you really need to know to do Ajax.</p>
+<p>And that&#39;s all you really need to know to do Ajax.</p>
+
+</div>
 </div>
 </article>
 <hr/>

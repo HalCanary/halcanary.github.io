@@ -79,23 +79,26 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
+<div>
 <pre><code>#!/bin/sh
 # this script will calculate the sha1sum
 # for each regular file in the PWD.
 # and put it into a file called SHA1SUM.txt
-# It prints one &quot;.&quot; to the stderr for each
+# It prints one &#34;.&#34; to the stderr for each
 # file processed.
 # DTPD
 
-[ -f &quot;SHA1SUM.txt&quot; ] &amp;&amp; rm -i SHA1SUM.txt
+[ -f &#34;SHA1SUM.txt&#34; ] &amp;&amp; rm -i SHA1SUM.txt
 TMPFILE=`mktemp`
 find . -type f \
-	-exec sha1sum {} ';' \
-	-fprintf /dev/stderr '.' \
-	&gt; &quot;${TMPFILE}&quot;
-mv &quot;${TMPFILE}&quot; SHA1SUM.txt
-echo '' 2&gt;&amp;1
+	-exec sha1sum {} &#39;;&#39; \
+	-fprintf /dev/stderr &#39;.&#39; \
+	&gt; &#34;${TMPFILE}&#34;
+mv &#34;${TMPFILE}&#34; SHA1SUM.txt
+echo &#39;&#39; 2&gt;&amp;1
 </code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

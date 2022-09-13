@@ -79,16 +79,17 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
+<div>
 <p>Pilot scripts:</p>
 <pre><code>#!/bin/sh
 ## $HOME/Palm/pilot-xfer-install
 export PILOTPORT=/dev/ttyS0
 export PILOTRATE=115200
 if ! (/bin/ls -l $PILOTPORT | grep -q rwxrwxrwx) ; then
-    echo &quot;sudo chmod 777 $PILOTPORT&quot;
+    echo &#34;sudo chmod 777 $PILOTPORT&#34;
     sudo chmod 777 $PILOTPORT
 fi
-exec pilot-xfer -i &quot;$@&quot;
+exec pilot-xfer -i &#34;$@&#34;
 </code></pre>
 <p>and</p>
 <pre><code>#!/bin/sh
@@ -97,6 +98,8 @@ exec $HOME/Palm/pilot-xfer-install \
     $HOME/Palm/Docs/*.pdb \
     $HOME/Palm/Apps/*.prc
 </code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

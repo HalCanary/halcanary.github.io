@@ -79,10 +79,11 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
-<p>Here, I take a 10 second clip from &quot;Whole Lotta Love&quot;, 133 seconds<br />
-into the song, where Plant is orgasmily screaming and Page's guitar is<br />
-doing the same. Then I increase the volume by a factor of 4. I then<br />
-reencode the wav as ALARM.mp3 and use it as the alarm sound for my egg<br />
+<div>
+<p>Here, I take a 10 second clip from &#34;Whole Lotta Love&#34;, 133 seconds<br/>
+into the song, where Plant is orgasmily screaming and Page&#39;s guitar is<br/>
+doing the same. Then I increase the volume by a factor of 4. I then<br/>
+reencode the wav as ALARM.mp3 and use it as the alarm sound for my egg<br/>
 timer program.</p>
 <pre><code>FILE=~/Music/led_zeppelin/Led_Zepplin_-_BS_CD1_01_whole_lotta_love.mp3
 lame --decode $FILE file.wav
@@ -101,9 +102,11 @@ for M in $(seq -w $(($MINUTES - 1)) -1 0); do
 	sleep 5 ; echo ${M}:${S}
     done
 done
-echo -e &quot;\n\n\t\tALARM! ALARM! ALARM!\n\n&quot;
+echo -e &#34;\n\n\t\tALARM! ALARM! ALARM!\n\n&#34;
 exec mplayer ~/Music/ALARM.mp3 &amp;&gt; /dev/null
 </code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

@@ -79,6 +79,7 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
+<div>
 <pre><code class="language-Makefile"># Example (GNU) Makefile for a C++ project.
 # Assume there is a .h file for each .cxx
 
@@ -108,7 +109,7 @@ $(executable_file_name) : $(objects)
 clean:
 	rm -f -v $(objects)
 </code></pre>
-<hr />
+<hr/>
 <pre><code class="language-Makefile"># Example (GNU) Makefile for a Java project.
 # Constructs a JAR file with all of the classes.
 
@@ -139,6 +140,8 @@ $(jarfile): $(classes)
 %.class : %.java
 	$(JAVAC) $(JCFLAGS) $^
 </code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

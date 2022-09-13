@@ -79,7 +79,8 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 <div style="display:none;">Getting my Canon PowerShot A40 working under RedHat Linux 7.3 with gphoto2</div>
-<p><img src="https://halcanary.org/images/A40.jpg" alt="pic of A40" /></p>
+<div>
+<p><img src="https://halcanary.org/images/A40.jpg" alt="pic of A40" width="457" height="190"/></p>
 <p>Before you start, glance through the gphoto2 man page.</p>
 <h2>Getting gphoto2 to recognize the A40</h2>
 <p>First of all, check the version of gphoto2</p>
@@ -90,7 +91,7 @@ Licensed under the Library GNU Public License (LGPL).
 
 $ /usr/bin/gphoto2 -L
 ERROR: Please specify a model.
-*** Error ('Unknown model') ***
+*** Error (&#39;Unknown model&#39;) ***
 
 For debugging messages, please use the --debug option.
 Debugging messages may help finding a solution to your problem.
@@ -102,10 +103,10 @@ gphoto2 as follows:
 
 Please make sure there is sufficient quoting around the arguments.
 </code></pre>
-<p>Version 2.0 does not support the A40, so you'll have to try a command line that looks like this:</p>
+<p>Version 2.0 does not support the A40, so you&#39;ll have to try a command line that looks like this:</p>
 <pre><code>$ gphoto2 --usbid 0x04a9:0x3058=0x04a9:0x304e -L
 </code></pre>
-<p>But a better solution would be to download version 2.1 from <a href="http://prdownloads.sourceforge.net/gphoto/gphoto2-2.1.0.tar.gz">sourceforge</a>. gPhoto v2.1.0 supports the A40. You'll have to build from the source.</p>
+<p>But a better solution would be to download version 2.1 from <a href="http://prdownloads.sourceforge.net/gphoto/gphoto2-2.1.0.tar.gz">sourceforge</a>. gPhoto v2.1.0 supports the A40. You&#39;ll have to build from the source.</p>
 <p>Now, su to root, and try</p>
 <pre><code>$ gphoto2 -v
 gPhoto (v2.1.0) - Cross-platform digital camera library.
@@ -113,17 +114,17 @@ Copyright (C) 2000-2002 Scott Fritzinger and others
 Licensed under the Library GNU Public License (LGPL).
 
 $ gphoto2 -L
-Detected a 'Canon PowerShot A40'.
-There are no files in folder '/'.
-There are no files in folder '/DCIM'.
-There are 2 files in folder '/DCIM/100CANON':
+Detected a &#39;Canon PowerShot A40&#39;.
+There are no files in folder &#39;/&#39;.
+There are no files in folder &#39;/DCIM&#39;.
+There are 2 files in folder &#39;/DCIM/100CANON&#39;:
 #1     IMG\_0020.JPG               rd   458 KB image/jpeg
 #2     IMG\_0021.JPG               rd   429 KB image/jpeg
-There are no files in folder '/DCIM/CANONMSC'.
+There are no files in folder &#39;/DCIM/CANONMSC&#39;.
 </code></pre>
 <h2>Permissions</h2>
 <p>I got most of this from <a href="http://n-dimensional.de/projects/digicam/The_gPhoto2_Manual/html/permissions-usb.html">here</a>.</p>
-<p>Don't want to have to su to root all of the time? Let's get the hotplug set up so that we don't have to worry about it. In this case, we'll just want whoever has ownership of /dev/console to be able to access any usb devices on the machine. The important files should libe in /etc/hotplug.</p>
+<p>Don&#39;t want to have to su to root all of the time? Let&#39;s get the hotplug set up so that we don&#39;t have to worry about it. In this case, we&#39;ll just want whoever has ownership of /dev/console to be able to access any usb devices on the machine. The important files should libe in /etc/hotplug.</p>
 <p>Instructions:</p>
 <ol>
 <li>$ cd /etc/hotplug/</li>
@@ -132,7 +133,9 @@ There are no files in folder '/DCIM/CANONMSC'.
 <li>$ gphoto2 --print-usb-usermap &gt;&gt; usb.usermap</li>
 <li>Make sure that there is a script called /etc/hotplug/usb/usbcam</li>
 </ol>
-<p>I think that's all I had to do.</p>
+<p>I think that&#39;s all I had to do.</p>
+
+</div>
 </div>
 </article>
 <hr/>

@@ -79,15 +79,18 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
+<div>
 <pre><code>#!/bin/sh
 #~/bin/infoless
 #DTPD#
 if [ $# -ne 1 ] ; then
-  echo &quot;which page?&quot;
+  echo &#34;which page?&#34;
   exit 1
 fi
 exec info $1 2&gt; /dev/null | less
 </code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

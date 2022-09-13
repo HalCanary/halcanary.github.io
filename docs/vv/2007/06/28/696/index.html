@@ -79,18 +79,19 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
+<div>
 <p>I hate <a href="http://www.w3.org/Provider/Style/URI">unnecessarily long URLs</a>. One of the things I always try to figure out how to leave out is the file name extension. As Tim Berners-Lee says:</p>
 <blockquote>
-<p>&quot;cgi&quot;, even &quot;.html&quot; is something which will change. You may not be using HTML for that page in 20 years time, but you might want today's links to it to still be valid. The canonical way of making links to the W3C site doesn't use the extension</p>
+<p>&#34;cgi&#34;, even &#34;.html&#34; is something which will change. You may not be using HTML for that page in 20 years time, but you might want today&#39;s links to it to still be valid. The canonical way of making links to the W3C site doesn&#39;t use the extension</p>
 </blockquote>
 <p>Here are two ways of doing this with Apache.</p>
 <ol>
 <li>
-<p>Insert this line into your &quot;.htaccess&quot; file:</p>
+<p>Insert this line into your &#34;.htaccess&#34; file:</p>
 <p>DefaultType text/html</p>
 </li>
 </ol>
-<p>Then when you create any new html pages, call them &quot;foobar&quot; instead of &quot;foobar.html&quot; and then your URL will be:</p>
+<p>Then when you create any new html pages, call them &#34;foobar&#34; instead of &#34;foobar.html&#34; and then your URL will be:</p>
 <pre><code>http://example.com/directory/foobar
 </code></pre>
 <p>and not</p>
@@ -99,24 +100,26 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 <p>Which makes more sense. Now you can at some later point in time change the default to .shtml or .php</p>
 <ol start="2">
 <li>
-<p>Put this in your &quot;.htaccess&quot; file:</p>
+<p>Put this in your &#34;.htaccess&#34; file:</p>
 <p>Options All MultiViews</p>
 </li>
 </ol>
-<p>Then put a file called &quot;foobar.html&quot; in the directory &quot;directory/&quot; and the URL:</p>
+<p>Then put a file called &#34;foobar.html&#34; in the directory &#34;directory/&#34; and the URL:</p>
 <pre><code>http://example.com/directory/foobar
 </code></pre>
 <p>will automagically work.</p>
-<hr />
+<hr/>
 <p>Other options:</p>
 <ol start="3">
 <li>
-<p>Here's a third way:</p>
+<p>Here&#39;s a third way:</p>
 <p>RewriteEngine on
 RewriteCond %{REQUEST_FILENAME}.html  -f
 RewriteRule ^(.*)$           $1.html</p>
 </li>
 </ol>
+
+</div>
 </div>
 </article>
 <hr/>

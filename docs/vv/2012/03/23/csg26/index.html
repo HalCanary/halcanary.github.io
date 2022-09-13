@@ -79,6 +79,7 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
+<div>
 <pre><code class="language-Python">#!/usr/bin/python
 
 import Image
@@ -86,23 +87,25 @@ import numpy
 
 X = 1024
 Y = 768
-filename = '/tmp/x.png'
+filename = &#39;/tmp/x.png&#39;
 
 ima = numpy.zeros((Y,X,4), dtype=numpy.uint8)
 ima[:,:,3] = 255 # make opaque
-Image.fromarray(ima,mode='RGBA').save(filename)
+Image.fromarray(ima,mode=&#39;RGBA&#39;).save(filename)
 </code></pre>
 <p>For example:</p>
 <pre><code class="language-Python">#!/usr/bin/env python
 import Image
 import numpy
 N, K = (16,16), (256, 256)
-fn = 'random_pixels.png'
+fn = &#39;random_pixels.png&#39;
 im = numpy.random.random_integers(
-    0,255,(N[0],N[1],3)).astype('uint8')
-Image.fromarray(im,mode='RGB').resize(K).save(fn)
-print 'Wrote to', fn
+    0,255,(N[0],N[1],3)).astype(&#39;uint8&#39;)
+Image.fromarray(im,mode=&#39;RGB&#39;).resize(K).save(fn)
+print &#39;Wrote to&#39;, fn
 </code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

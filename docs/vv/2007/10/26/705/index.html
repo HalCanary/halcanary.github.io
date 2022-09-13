@@ -79,7 +79,8 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
-<p>A proposal for a better calendar. (If we didn't have the Gregorian calendar
+<div>
+<p>A proposal for a better calendar. (If we didn&#39;t have the Gregorian calendar
 already and wanted to start from scratch.)</p>
 <pre><code>No      Name            Days
 --      ----            ----
@@ -103,7 +104,7 @@ zero meridian). So all dates would be around ten days off from the Gregorain
 calendar.</p>
 <p>As a result of this rule there would be around 8 leap days every 33 years,
 similar to how the Iranian/Persian/Jalālī Calendar works.</p>
-<hr />
+<hr/>
 <p>Of course the final calendar we will all come to accept millennia from now will
 probably simply be
 <a href="http://en.wikipedia.org/wiki/International_Atomic_Time">TAI</a> with picosecond
@@ -111,7 +112,7 @@ precision, expressed as a number of seconds since some <a href="http://en.wikipe
 instant</a>. Then
 calculating intervals become trivially simple, and we will just ignore where
 the sun is.</p>
-<hr />
+<hr/>
 <p>Additional, optional rules to make this a perpetual calendar: January 1 is
 always a Saturday. Then on 365-day years, you would get two Saturdays in a row:</p>
 <pre><code>12-29 12-30 | 01-01 01-02 01-03
@@ -131,8 +132,8 @@ calendar by defining March 1 as always a Saturday.</p>
  Fri   Sat   Sun  |  Sat   Sun   Mon
 </code></pre>
 </div>
-<hr />
-<p><strong>UPDATE 2008-10-25:</strong> Here's very simple python code to give the month, day,
+<hr/>
+<p><strong>UPDATE 2008-10-25:</strong> Here&#39;s very simple python code to give the month, day,
 and week, given the day of year.</p>
 <pre><code># returns (month, day-of-month, weekday)
 # given day-of-year
@@ -156,9 +157,9 @@ def isleapyear2(y, offset=6):
 </code></pre>
 <p>Every 10,000 years, the offset may need to be changed. After 100,000 years, a
 new algorithm will likely be necessary</p>
-<hr />
+<hr/>
 <p><strong>UPDATE 2020-04-22:</strong></p>
-<p>Here's another common option for a perpetual calendar.  Insert one or two
+<p>Here&#39;s another common option for a perpetual calendar.  Insert one or two
 non-weekdays into the year.  With this option, each quarter is always exactly
 13 weeks, and starts on a Sunday.  Many businesses use a <a href="https://en.wikipedia.org/wiki/4-4-5_calendar">4–4–5
 calendar</a> because this property
@@ -185,6 +186,8 @@ is so convienent.</p>
 
      [December 31 is not a weekday]
 </code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

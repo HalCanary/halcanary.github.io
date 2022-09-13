@@ -79,12 +79,15 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
+<div>
 <p>#!/usr/bin/env python</p>
 <p>import glob, sys</p>
 <p>def globlist(l):
 return (j for i in l for j in glob.iglob(i))</p>
 <p>for filename in globlist(sys.argv[1:]):
 print filename</p>
+
+</div>
 </div>
 </article>
 <hr/>

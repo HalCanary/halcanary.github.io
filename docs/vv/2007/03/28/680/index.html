@@ -79,29 +79,32 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
+<div>
 <pre><code>#!/bin/sh
 # txt2prehtml
 # Copyright 2006-2007 Hal Canary
 # DTPD
-echo -n '&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01
-Transitional//EN&quot; &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;
+echo -n &#39;&lt;!DOCTYPE HTML PUBLIC &#34;-//W3C//DTD HTML 4.01
+Transitional//EN&#34; &#34;http://www.w3.org/TR/html4/loose.dtd&#34;&gt;
 &lt;html&gt;
 &lt;head&gt;
-&lt;meta http-equiv=&quot;Content-Type&quot;
-  content=&quot;text/html; charset=utf-8&quot;&gt;
+&lt;meta http-equiv=&#34;Content-Type&#34;
+  content=&#34;text/html; charset=utf-8&#34;&gt;
 &lt;title&gt; &lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
-&lt;pre&gt;' ;
-fold -w 70 -s &quot;$@&quot; | sed 's/\&amp;/\&amp;amp;/g;
-s/\&quot;/\&amp;quot;/g;
+&lt;pre&gt;&#39; ;
+fold -w 70 -s &#34;$@&#34; | sed &#39;s/\&amp;/\&amp;amp;/g;
+s/\&#34;/\&amp;quot;/g;
 s/&lt;/\&amp;lt;/g;
 s/&gt;/\&amp;gt;/g;
-s/\\/\&amp;\#0092;/g;' ;
-echo '&lt;/pre&gt;
+s/\\/\&amp;\#0092;/g;&#39; ;
+echo &#39;&lt;/pre&gt;
 &lt;/body&gt;
-&lt;/html&gt;';
+&lt;/html&gt;&#39;;
 </code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

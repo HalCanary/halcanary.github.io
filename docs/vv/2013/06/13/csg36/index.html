@@ -79,21 +79,24 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
+<div>
 <p>How to ask the desktop to open a file from a shell script? Define this function:</p>
 <pre><code>getopencmd() {
-    case &quot;$(uname -s)&quot; in
+    case &#34;$(uname -s)&#34; in
         *WIN*|*W32*)
-            command -v &quot;start&quot;;;
+            command -v &#34;start&#34;;;
         Darwin)
-            command -v &quot;open&quot;;;
+            command -v &#34;open&#34;;;
         *)
-            command -v &quot;xdg-open&quot;  || \
-            command -v &quot;gvfs-open&quot; || \
-            command -v &quot;kde-open&quot;  || \
-            command -v &quot;exo-open&quot;;
+            command -v &#34;xdg-open&#34;  || \
+            command -v &#34;gvfs-open&#34; || \
+            command -v &#34;kde-open&#34;  || \
+            command -v &#34;exo-open&#34;;
      esac;
 }
 </code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

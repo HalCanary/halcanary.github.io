@@ -79,6 +79,7 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
+<div>
 <p>If you are using CUPS for your printing, there is no reason to continue using Enscript.</p>
 <pre><code>#!/bin/sh
 #DTPD#
@@ -91,12 +92,12 @@ exec lpr -o page-left=36 \
         -o columns=2 \
         -o landscape \
         -o cpi=16.842 \
-        -o lpi=10.1052 &quot;$@&quot;
+        -o lpi=10.1052 &#34;$@&#34;
 # 80 columns width x 70 columns high x 2 columns
 </code></pre>
-<p>That's about 140 80-character lines per page, in two columns. Somewhat analagous to &quot;enscript -2r -B&quot;. I leave room at the left margin for hole-punches, to make binding easier.</p>
-<p>In theory, this should handle Unicode characters much better than enscript or a2ps does. If you are still having issues with unicode printing, try &quot;ooffice - file&quot;.</p>
-<p>Here's the one-column version:</p>
+<p>That&#39;s about 140 80-character lines per page, in two columns. Somewhat analagous to &#34;enscript -2r -B&#34;. I leave room at the left margin for hole-punches, to make binding easier.</p>
+<p>In theory, this should handle Unicode characters much better than enscript or a2ps does. If you are still having issues with unicode printing, try &#34;ooffice - file&#34;.</p>
+<p>Here&#39;s the one-column version:</p>
 <pre><code>#!/bin/sh
 #DTPD#
 # http://cups.org/documentation.php/options.html
@@ -105,9 +106,11 @@ exec lpr -o page-left=72 \
         -o page-right=36 \
         -o page-top=36 \
         -o page-bottom=36 \
-        -o cpi=11.43 -o lpi=6.858 &quot;$@&quot;
+        -o cpi=11.43 -o lpi=6.858 &#34;$@&#34;
 # 80 columns width x 68 columns high
 </code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

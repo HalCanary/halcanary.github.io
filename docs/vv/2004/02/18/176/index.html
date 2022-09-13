@@ -79,15 +79,16 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
+<div>
 <p>When mutt is told to <a href="http://gnupg.org/">gpg</a> sign an email, it will use
 <a href="http://www.freesoft.org/CIE/RFC/1521/6.htm">Quoted-Printable
 Content-Transfer-Encoding</a>, which
-will replace <code>&quot; \n&quot;</code> with <code>&quot;=20\n&quot;</code>, an escape sequence of some sort. (ASCII
-&quot; &quot; is 0x20.)</p>
-<p>I'd rather replace <code>&quot; \n&quot;</code> with <code>&quot;\n&quot;</code> anyways. Here's some elisp code to do just that:</p>
+will replace <code>&#34; \n&#34;</code> with <code>&#34;=20\n&#34;</code>, an escape sequence of some sort. (ASCII
+&#34; &#34; is 0x20.)</p>
+<p>I&#39;d rather replace <code>&#34; \n&#34;</code> with <code>&#34;\n&#34;</code> anyways. Here&#39;s some elisp code to do just that:</p>
 <pre><code class="language-Emacs">;; ~/.emacs ;;
 (defun hal1 () (interactive)
-  (auto-mega-replace  &quot; \n&quot; &quot;\n&quot;))
+  (auto-mega-replace  &#34; \n&#34; &#34;\n&#34;))
 (defun auto-mega-replace (arg1 arg2)
   (save-excursion
     (beginning-of-buffer)
@@ -98,6 +99,8 @@ will replace <code>&quot; \n&quot;</code> with <code>&quot;=20\n&quot;</code>, 
       (beginning-of-buffer))))
 </code></pre>
 <p>[<em>edited 2003-02-20</em>]</p>
+
+</div>
 </div>
 </article>
 <hr/>

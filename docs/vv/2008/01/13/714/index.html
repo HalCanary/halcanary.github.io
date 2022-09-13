@@ -79,50 +79,51 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 <div style="display:none;">A ftp client that uses rcp/scp syntax</div>
-<p>My XO-1 has gotten me interested in hacking in python again, since that is the XO's primary programming environment.</p>
-<p>I quickly hacked out an ftp script in python since the default install lacked an ftp client. &quot;My next project will be to finally write version 1.0 of my fcp (FTP copy) program --- a ftp client that uses rcp/scp syntax.</p>
-<p>Here's the first script:</p>
+<div>
+<p>My XO-1 has gotten me interested in hacking in python again, since that is the XO&#39;s primary programming environment.</p>
+<p>I quickly hacked out an ftp script in python since the default install lacked an ftp client. &#34;My next project will be to finally write version 1.0 of my fcp (FTP copy) program --- a ftp client that uses rcp/scp syntax.</p>
+<p>Here&#39;s the first script:</p>
 <pre><code>#!/usr/bin/env python2.5
 import ftplib
 import os
 import getpass
-host=&quot;hostname&quot;
-user=&quot;hal&quot;
-pas=getpass.getpass(user+&quot;@&quot;+host+&quot;'s password: &quot;)
+host=&#34;hostname&#34;
+user=&#34;hal&#34;
+pas=getpass.getpass(user+&#34;@&#34;+host+&#34;&#39;s password: &#34;)
 # local file with path
-localfile=&quot;ftpcp&quot;
+localfile=&#34;ftpcp&#34;
 # directory  on sever
-dir=&quot;/www/pub&quot;
+dir=&#34;/www/pub&#34;
 # filrnaame on server
-filename=&quot;ftpcp.txt&quot;
+filename=&#34;ftpcp.txt&#34;
 # login to FTP
 f=ftplib.FTP(host)
 f.login(user, pas)
 f.set_pasv(True)
 f.cwd(dir)
-f.storbinary(&quot;STOR &quot; + filename, open(localfile, 'rb'))
+f.storbinary(&#34;STOR &#34; + filename, open(localfile, &#39;rb&#39;))
 f.quit()
 </code></pre>
-<p>Next I've got to write some very savy code that can parse complex command-line options.</p>
-<p>Then I've got to learn how to do everything else in python.</p>
-<hr />
+<p>Next I&#39;ve got to write some very savy code that can parse complex command-line options.</p>
+<p>Then I&#39;ve got to learn how to do everything else in python.</p>
+<hr/>
 <p>Update: a function!</p>
 <pre><code>import ftplib
 import os
 import getpass
 def ftpputfiles(host, direct, *files, **kwds):
-    'user defaults to $USERNAME if blank'
+    &#39;user defaults to $USERNAME if blank&#39;
     # does little error checking.  this is bad!
-    user, password = ('', '')
-    if kwds.has_key('user'):
-        user = kwds['user']
-    if user == '':
-        user = os.environ['USERNAME']
+    user, password = (&#39;&#39;, &#39;&#39;)
+    if kwds.has_key(&#39;user&#39;):
+        user = kwds[&#39;user&#39;]
+    if user == &#39;&#39;:
+        user = os.environ[&#39;USERNAME&#39;]
 
-    if kwds.has_key('password'):
-        password = kwds['password']
-    if password == '':
-        querystring = '%s@%s\'s password: ' % (user,host)
+    if kwds.has_key(&#39;password&#39;):
+        password = kwds[&#39;password&#39;]
+    if password == &#39;&#39;:
+        querystring = &#39;%s@%s\&#39;s password: &#39; % (user,host)
         password = getpass.getpass(querystring)
 
     f = ftplib.FTP(host)
@@ -131,11 +132,13 @@ def ftpputfiles(host, direct, *files, **kwds):
     f.cwd(direct)
     for localfile in files :
         filename = os.path.basename(localfile)
-        fl = open(localfile, 'rb')
-        f.storbinary('STOR %s' % filename, fl)
+        fl = open(localfile, &#39;rb&#39;)
+        f.storbinary(&#39;STOR %s&#39; % filename, fl)
         fl.close()
     f.quit()
 </code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

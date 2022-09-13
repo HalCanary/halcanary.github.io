@@ -79,7 +79,8 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
-<p>Even though I've studied this algorithm a couple of times, I've never had to implement it before. So I assigned it to myself.</p>
+<div>
+<p>Even though I&#39;ve studied this algorithm a couple of times, I&#39;ve never had to implement it before. So I assigned it to myself.</p>
 <pre><code>/** should have a time-complecity of O(N×log(N))
     and a space-compelcity of O(N) **/
 void mergesort(int N, int array[]) {
@@ -90,7 +91,7 @@ void mergesort(int N, int array[]) {
   int ilimit,jlimit; //end of blocks.
   int *hold = malloc(sizeof(hold) * N);
   if (hold == NULL) {
-    fprintf(stderr,&quot;malloc failed\n&quot;);
+    fprintf(stderr,&#34;malloc failed\n&#34;);
     exit(2);
   }
   int *new = hold;
@@ -188,6 +189,8 @@ void mergesort(int N, int array[]) {
         array[i] = old[i];
   }
 </code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

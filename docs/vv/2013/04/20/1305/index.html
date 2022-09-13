@@ -79,13 +79,14 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
+<div>
 <p>In the class I am sitting in on this semester - <a href="http://www.cs.unc.edu/Admin/Courses/descriptions/257.html">Visual Solid Shape</a>, we use a piece of software called <a href="http://andrewthall.org/papers/draft7_7Feb05.pdf">shapemonger</a>.</p>
 <p>I wanted to get a better view at monge patch (a surface defined by (<em>x</em>,<em>y</em>,<em>f</em>(<em>x</em>,<em>y</em>)) so I wrote a little Python-VTK program to generate a vtkPolyData of the surface.</p>
 <pre><code class="language-Python">#!/usr/bin/vtkpython
 import vtk
 
 function = lambda x,y: x**2 - y**2
-outputName = '/tmp/monge.vtp'
+outputName = &#39;/tmp/monge.vtp&#39;
 resolution = 50
 xmin, xmax = -1.0, 1.0
 ymin, ymax = -1.0, 1.0
@@ -117,10 +118,10 @@ writer = vtk.vtkXMLPolyDataWriter()
 writer.SetInput(polyData)
 writer.SetFileName(outputName)
 writer.Write()
-print 'wrote to', outputName
+print &#39;wrote to&#39;, outputName
 </code></pre>
 <p>The surface can be viewed in Paraview or <a href="https://github.com/HalCanary/vtkviewer">vtkviewer</a>.</p>
-<p><img src="https://halcanary.org/images/vtkviewer0.png" alt="[]" /></p>
+<p><img src="https://halcanary.org/images/vtkviewer0.png" alt="[]" width="482" height="389"/></p>
 <p>To make this surface look better, calculate the normals. The (unnormalized) normal direction is (-∂f/∂x,-∂f/∂y,1).</p>
 <pre><code class="language-Python">.......
 def partial(func,v,i):
@@ -148,7 +149,9 @@ normals.SetNumberOfTuples(resolution\*\*2)
 polyData.GetPointData().SetNormals(normals)
 .......
 </code></pre>
-<p><img src="https://halcanary.org/images/vtkviewer.png" alt="[]" /></p>
+<p><img src="https://halcanary.org/images/vtkviewer.png" alt="[]" width="482" height="389"/></p>
+
+</div>
 </div>
 </article>
 <hr/>

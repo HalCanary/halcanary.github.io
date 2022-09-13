@@ -79,15 +79,16 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 <div style="display:none;">Utility Scripts for Unix-compatible systems (id est GNU/Linux). This page collects several of the scripts I&#39;ve written for Linux over the years. Maybe someone else will find them useful.</div>
+<div>
 <p>execute a program in the background, redirect stdout and stderr to null, and keep it from being hungup. [Depends on: Bourne shell, coreutils]</p>
 <pre><code>#!/bin/sh
 # ~/bin/amp
-nohup &quot;$@&quot; &gt; /dev/null 2&gt;&amp;1 &amp;
+nohup &#34;$@&#34; &gt; /dev/null 2&gt;&amp;1 &amp;
 </code></pre>
 <p>Command line calculator based on bc, along with commonly used math functions. [Depends on: Bourne shell, bc]</p>
 <pre><code>#!/bin/sh
 # ~/bin/calc
-echo 'define ln(a) { return l(a); }
+echo &#39;define ln(a) { return l(a); }
 define exp(a) { return e(a); }
 define pow(a,b) { return e(b*l(a)); }
 define sqrtt(a) { return e(0.5*l(a)); }
@@ -112,12 +113,12 @@ define acosh(x) { return l(x+sqrt((x^2)-1)); }
 define atanh(x) { return 0.5*l((1+x)/(1-x)); }
 pi = 4*a(1);
 scale = 6;
-' &quot;$@&quot; | bc -l
+&#39; &#34;$@&#34; | bc -l
 </code></pre>
 <p>Make a file executeable. Saves keystrokes. [Depends on: Bourne shell, coreutils]</p>
 <pre><code>#!/bin/sh
 # ~/bin/chx
-chmod +x &quot;$@&quot;
+chmod +x &#34;$@&#34;
 </code></pre>
 <p>Egg timer. Be sure to make something LOUD for your alarm; use sox to ajust the volume. [Depends on: Bourne shell, coreutils, mplayer]</p>
 <pre><code>#!/bin/sh
@@ -130,38 +131,38 @@ for M in `seq -w $(($MINUTES - 1)) -1 0`; do
     sleep 5 ; echo ${M}:${S}
   done
 done
-echo -e &quot;\n\n\t\tALARM! ALARM! ALARM!\n\n&quot;
+echo -e &#34;\n\n\t\tALARM! ALARM! ALARM!\n\n&#34;
 exec mplayer ~/Music/ALARM.mp3 &amp;&gt; /dev/null
 </code></pre>
 <p>Quickly update the system using yum. Yet another keystroke saver.[Depends on: Bourne shell, sudo, yum]</p>
 <pre><code>#!/bin/sh
 # ~/bin/syyu
-echo 'sudo yum -y update'
+echo &#39;sudo yum -y update&#39;
 exec sudo yum -y update
 </code></pre>
 <p>A somewhat safer way to shred all the files in a directory. [Depends on: Bourne shell, coreutils, findutils]</p>
 <pre><code>#!/bin/sh
 # ~/bin/rm-shred
-{ for x in &quot;$@&quot; ; do
+{ for x in &#34;$@&#34; ; do
   # regular file
-  find &quot;$x&quot; -type f -exec shred -u -n 1 {} \;
+  find &#34;$x&#34; -type f -exec shred -u -n 1 {} \;
   # symlink
-  find &quot;$x&quot; -type l -exec rm {} \;
+  find &#34;$x&#34; -type l -exec rm {} \;
   # wierd files
-  find &quot;$x&quot; -type b -printf &quot;%p is a block file&quot;
-  find &quot;$x&quot; -type c -printf &quot;%p is a character file&quot;
-  find &quot;$x&quot; -type p -printf &quot;%p is a named pipe&quot;
-  find &quot;$x&quot; -type s -printf &quot;%p is a socket&quot;
+  find &#34;$x&#34; -type b -printf &#34;%p is a block file&#34;
+  find &#34;$x&#34; -type c -printf &#34;%p is a character file&#34;
+  find &#34;$x&#34; -type p -printf &#34;%p is a named pipe&#34;
+  find &#34;$x&#34; -type s -printf &#34;%p is a socket&#34;
   # if we get here it is a directory or has been noted
-  rm -r &quot;$x&quot;
+  rm -r &#34;$x&#34;
 done } 2&gt; /dev/null
 </code></pre>
 <p>Safe File Removal [Depends on: Bourne shell, coreutils]</p>
 <pre><code>#!/bin/sh
 
 ## rms
-##   &quot;rm, safely.&quot; I also think it's funny
-##   that I've named my reimplementation
+##   &#34;rm, safely.&#34; I also think it&#39;s funny
+##   that I&#39;ve named my reimplementation
 ##   of the MSFT recycling bin after RMS.
 ## (c) 2000-2003 Hal Canary
 ##
@@ -174,20 +175,20 @@ done } 2&gt; /dev/null
 ## TRASH=/tmp/$USER/trash
 TRASH=${HOME}/tmp/Trash
 
-if [ &quot;$#&quot; -lt 1 ]; then
-  echo &quot;Usage: $0 FILE&quot;;
-  echo &quot;Move FILE to $TRASH.&quot;;
+if [ &#34;$#&#34; -lt 1 ]; then
+  echo &#34;Usage: $0 FILE&#34;;
+  echo &#34;Move FILE to $TRASH.&#34;;
   exit 1;
 fi
 
-test -d &quot;$TRASH&quot; || mkdir -pv $TRASH
+test -d &#34;$TRASH&#34; || mkdir -pv $TRASH
 
-for file in &quot;$@&quot;; do
-  if [ -e &quot;$file&quot; ]; then
-    mv -f -- &quot;$file&quot; $TRASH/
-    echo &quot;$file -&gt; $TRASH/&quot;
+for file in &#34;$@&#34;; do
+  if [ -e &#34;$file&#34; ]; then
+    mv -f -- &#34;$file&#34; $TRASH/
+    echo &#34;$file -&gt; $TRASH/&#34;
   else
-    echo &quot;Does $file exist?&quot;
+    echo &#34;Does $file exist?&#34;
   fi
 done
 exit 0;
@@ -195,26 +196,26 @@ exit 0;
 <p>A terminal locker [Depends on: bash, coreutils]</p>
 <pre><code>#!/bin/sh
 # ~/bin/tlock
-PASS='12345' ; TRY=''
-trap '' TERM INT
+PASS=&#39;12345&#39; ; TRY=&#39;&#39;
+trap &#39;&#39; TERM INT
 clear
-while [ &quot;$TRY&quot; != &quot;$PASS&quot; ] ; do
-  echo -en &quot;\ntlock password: &quot;
+while [ &#34;$TRY&#34; != &#34;$PASS&#34; ] ; do
+  echo -en &#34;\ntlock password: &#34;
   stty -echo; read TRY; stty echo;
 done
-echo &quot;&quot;;
+echo &#34;&#34;;
 </code></pre>
 <p>Prepend a string to the beginning of each of a set of filename. [Depends on: Bourne shell, coreutils]</p>
 <pre><code>#!/bin/sh
 # ~/bin/prepend-something
-if [ &quot;$#&quot; -lt 2 ] ; then
- echo &quot;useage:  $0 PREFEX FILE[S]&quot;
+if [ &#34;$#&#34; -lt 2 ] ; then
+ echo &#34;useage:  $0 PREFEX FILE[S]&#34;
  exit 1
 fi
 PREFEX=${1}
 for argc in `seq 2 $#`; do
  eval arg=\${$argc}
- mv -v &quot;${arg}&quot; &quot;${PREFEX}${arg}&quot;
+ mv -v &#34;${arg}&#34; &#34;${PREFEX}${arg}&#34;
 done
 </code></pre>
 <p>Make a Fair Use backup of a DVD that you own using mencoder. [Depends on: Bourne shell, coreutils, mencoder, mktemp]</p>
@@ -222,9 +223,9 @@ done
 # ~/bin/rip-and-encode-dvd
 X=`mktemp video-XXXXXXXXXX`
 mv $X ${X}.avi
-exec nice mencoder &quot;dvd://1&quot; -alang en \
+exec nice mencoder &#34;dvd://1&#34; -alang en \
  -slang en -o ${X}.avi -ovc lavc \
- -lavcopts &quot;aspect=16/9:vcodec=mpeg4&quot; \
+ -lavcopts &#34;aspect=16/9:vcodec=mpeg4&#34; \
  -oac copy 2&gt; /dev/null
 </code></pre>
 <p>Print date+time in ISO 8601 format. [Depends on: Bourne shell, coreutils]</p>
@@ -238,44 +239,44 @@ exec date +%Y-%m-%dT%T%z
 # ~/bin/isodate
 exec date +%Y-%m-%d
 </code></pre>
-<p>Suppose you want to pipe something into a file as root using sudo. For example: <code>sudo echo 1 &gt; /proc/sys/net/ipv4/ip_forward</code> ; this won't work. Instead try the sud script like this: <code>sud 'echo 1 &gt; /proc/sys/net/ipv4/ip_forward'</code> . [Depends on: Bourne shell, coreutils, sudo]</p>
+<p>Suppose you want to pipe something into a file as root using sudo. For example: <code>sudo echo 1 &gt; /proc/sys/net/ipv4/ip_forward</code> ; this won&#39;t work. Instead try the sud script like this: <code>sud &#39;echo 1 &gt; /proc/sys/net/ipv4/ip_forward&#39;</code> . [Depends on: Bourne shell, coreutils, sudo]</p>
 <pre><code>#!/bin/sh
 # ~/bin/sud
-sudo su -c &quot; $* &quot;
+sudo su -c &#34; $* &#34;
 </code></pre>
 <p>Self-documented. [Depends on: Bourne shell, coreutils]</p>
 <pre><code>#!/bin/sh
 # ~/bin/shorten
-if [ &quot;$#&quot; -ne 1 ] ; then
- echo &quot;useage:  shorten N&quot;
- echo &quot;   where N is a nonnegative integer&quot;
- echo &quot;   To print out the first N bytes of&quot;
- echo &quot;   the stdin to stdout.&quot;
+if [ &#34;$#&#34; -ne 1 ] ; then
+ echo &#34;useage:  shorten N&#34;
+ echo &#34;   where N is a nonnegative integer&#34;
+ echo &#34;   To print out the first N bytes of&#34;
+ echo &#34;   the stdin to stdout.&#34;
  exit 1
 fi
 head -c $1
-echo &quot;&quot;
+echo &#34;&#34;
 </code></pre>
 <p>Launch my favorite terminal editor. [Depends on: Bourne shell, emacs]</p>
 <pre><code>#!/bin/sh
 # ~/bin/e
-#exec nano &quot;$@&quot;
-exec emacs -nw &quot;$@&quot;
+#exec nano &#34;$@&#34;
+exec emacs -nw &#34;$@&#34;
 </code></pre>
 <p>Launch my favorite gui editor, gedit. [Depends on: Bourne shell, coreutils, gedit]</p>
 <pre><code>#!/bin/sh
 # ~/bin/ge
-nohup gedit &quot;$@&quot; &gt; /dev/null 2&gt;&amp;1 &amp;
+nohup gedit &#34;$@&#34; &gt; /dev/null 2&gt;&amp;1 &amp;
 </code></pre>
 <p>sudo ifup [Depends on: Bourne shell, sudo, intiscripts]</p>
 <pre><code>#!/bin/sh
 # ~/bin/u
-sudo /sbin/ifup &quot;$@&quot;
+sudo /sbin/ifup &#34;$@&#34;
 </code></pre>
 <p>sudo ifdown [Depends on: Bourne shell, sudo, intiscripts]</p>
 <pre><code>#!/bin/sh
 # ~/bin/d
-sudo /sbin/ifdown &quot;$@&quot;
+sudo /sbin/ifdown &#34;$@&#34;
 </code></pre>
 <p>[Depends on: Bourne shell, xorg-x11-apps, sudo, Linux kernel]</p>
 <pre><code>#!/bin/sh
@@ -285,24 +286,24 @@ sudo -b xconsole -file /proc/kmsg
 <p>Launch gthumb in the current directory if no argument. otherwise pass over all arguments. [Depends on: Bourne shell, gthumb]</p>
 <pre><code>#!/bin/sh
 # ~/bin/gt
-if [ &quot;$#&quot; -eq 0 ] ;  then
+if [ &#34;$#&#34; -eq 0 ] ;  then
   echo gthumb . \&gt; /dev/null 2\&gt;\&amp;1 \&amp;
   gthumb . &gt; /dev/null 2&gt;&amp;1 &amp;
 else
-  echo gthumb &quot;$@&quot; \&gt; /dev/null 2\&gt;\&amp;1 \&amp;
-  gthumb &quot;$@&quot; &gt; /dev/null 2&gt;&amp;1 &amp;
+  echo gthumb &#34;$@&#34; \&gt; /dev/null 2\&gt;\&amp;1 \&amp;
+  gthumb &#34;$@&#34; &gt; /dev/null 2&gt;&amp;1 &amp;
 fi
 </code></pre>
 <p>Launch Evince [Depends on: Bourne shell, evince]</p>
 <pre><code>#!/bin/sh
 # ~/bin/ev
-evince &quot;$@&quot; &gt; /dev/null 2&gt;&amp;1 &amp;
+evince &#34;$@&#34; &gt; /dev/null 2&gt;&amp;1 &amp;
 </code></pre>
 <p>Encrypt or decrypt with the ROT13 Cypher. Useage: <code>rot13 Uryyb jbeyq.</code> or <code>echo Uryyb jbeyq. | rot13</code> . [Depends on: Bourne shell, coreutils]</p>
 <pre><code>#!/bin/sh
 # ~/bin/rot13
-if [ &quot;$#&quot; -gt 0 ] ; then
- echo &quot;$@&quot; | tr A-Za-z N-ZA-Mn-za-m
+if [ &#34;$#&#34; -gt 0 ] ; then
+ echo &#34;$@&#34; | tr A-Za-z N-ZA-Mn-za-m
 else
  tr A-Za-z N-ZA-Mn-za-m
 fi
@@ -310,20 +311,20 @@ fi
 <p>Grab a file over http and pipe it to stdout. [Depends on: Bourne shell, wget]</p>
 <pre><code>#!/bin/sh
 # ~/bin/wgeto
-exec wget -o /dev/null -O - &quot;$@&quot;
+exec wget -o /dev/null -O - &#34;$@&#34;
 </code></pre>
 <p>Extract a bunch of rar files. [Depends on: Bourne shell, unrar, coreutils]</p>
 <pre><code>#!/bin/sh
 # ~/bin/unrar-extract
-for x in &quot;$@&quot; ; do
- nice unrar x &quot;$x&quot;
+for x in &#34;$@&#34; ; do
+ nice unrar x &#34;$x&#34;
 done
 </code></pre>
 <p>List only directories. [Depends on: Bourne shell, grep, coreutils]</p>
 <pre><code>#!/bin/sh
 # ~/bin/lsd
-/bin/ls --color='yes' -l &quot;$@&quot; | grep &quot;^d&quot;
-# /bin/ls --color=yes -p &quot;$@&quot; | grep &quot;/$&quot;
+/bin/ls --color=&#39;yes&#39; -l &#34;$@&#34; | grep &#34;^d&#34;
+# /bin/ls --color=yes -p &#34;$@&#34; | grep &#34;/$&#34;
 </code></pre>
 <p>Generate Password. Self-documented. [Depends on: Bourne shell, Linux kernel, coreutils, sed]</p>
 <pre><code>#!/bin/sh
@@ -338,12 +339,12 @@ done
 #   limit ourselves to A-Za-z0-9.
 # Copyright 2007 Hal Canary
 # Dedicated to the Public Domain.
-echo &quot;Grabbing bits from /dev/random...&quot; 1&gt;&amp;2
+echo &#34;Grabbing bits from /dev/random...&#34; 1&gt;&amp;2
 head -c 18 /dev/random | base64 | \
- sed 's/\//Z/g;s/+/z/g;'
+ sed &#39;s/\//Z/g;s/+/z/g;&#39;
 # If you lack base64 on your system, try:
-# head -c 18 /dev/random  | uuenview -b '' | \
-#   sed 's/\//Z/g;s/+/z/g;'
+# head -c 18 /dev/random  | uuenview -b &#39;&#39; | \
+#   sed &#39;s/\//Z/g;s/+/z/g;&#39;
 </code></pre>
 <p>Convert mp3 files to CD-Audio. [Depends on Bourne Shell, coreutils, lame, sox.]</p>
 <pre><code>#!/bin/sh
@@ -354,19 +355,21 @@ head -c 18 /dev/random | base64 | \
 # Copyright 2000-2007 Hal Canary
 # Dedicated to the Public Domain.
 
-if [ &quot;$#&quot; -lt 1 ] ; then
-  echo &quot;  Useage: $0 file.mp3 [more files.mp3]&quot;
-  echo &quot;&quot;
-  echo &quot;  After you're done, burn with:&quot;
-  echo -n '   sudo cdrecord -v -dao -eject dev=$DEV'
-  echo ' -pad -audio *.cdr'
+if [ &#34;$#&#34; -lt 1 ] ; then
+  echo &#34;  Useage: $0 file.mp3 [more files.mp3]&#34;
+  echo &#34;&#34;
+  echo &#34;  After you&#39;re done, burn with:&#34;
+  echo -n &#39;   sudo cdrecord -v -dao -eject dev=$DEV&#39;
+  echo &#39; -pad -audio *.cdr&#39;
   exit 1
 fi
-for FILE in &quot;$@&quot; ; do
-  nice lame --decode &quot;$FILE&quot; - | \
-    nice sox -t wav - &quot;$(basename $FILE .mp3).cdr&quot;
+for FILE in &#34;$@&#34; ; do
+  nice lame --decode &#34;$FILE&#34; - | \
+    nice sox -t wav - &#34;$(basename $FILE .mp3).cdr&#34;
 done
 </code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

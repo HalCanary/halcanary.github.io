@@ -79,7 +79,8 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
-<pre><code>tar c directory/ | ssh lensman &quot;tar x&quot;
+<div>
+<pre><code>tar c directory/ | ssh lensman &#34;tar x&#34;
 </code></pre>
 <p>Unix is beautiful.</p>
 <p>(Yes, I know about scp and rsync.)</p>
@@ -90,14 +91,16 @@ $ scp directory.tgz lensman:
 $ ssh lensman
 $ tar xzf directory.tgz
 </code></pre>
-<p>Until I did this research, I didn't know you could do this one: (Notice the rcp-like syntax.)</p>
+<p>Until I did this research, I didn&#39;t know you could do this one: (Notice the rcp-like syntax.)</p>
 <pre><code>$ scp -r directory lensman:
 </code></pre>
-<p>rsync is the king of the rcp replacements. It has the most options and is best for incremental backups.<br />
+<p>rsync is the king of the rcp replacements. It has the most options and is best for incremental backups.<br/>
 Set the RSYNC_RSH variable in your ~/.bashrc file.</p>
-<pre><code>$ export RSYNC_RSH=&quot;ssh&quot;
+<pre><code>$ export RSYNC_RSH=&#34;ssh&#34;
 $ rsync -r directory lensman:
 </code></pre>
+
+</div>
 </div>
 </article>
 <hr/>

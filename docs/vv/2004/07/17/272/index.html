@@ -79,8 +79,9 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 </header>
 <div class="content e-content">
 
-<p>If you have problems getting your .htaccess files working, don't forget to insert &quot;<code>AllowOverride All</code>&quot; into /etc/httpd/conf/httpd.conf.</p>
-<p>I've been having fun with mod_rewrite. For example:</p>
+<div>
+<p>If you have problems getting your .htaccess files working, don&#39;t forget to insert &#34;<code>AllowOverride All</code>&#34; into /etc/httpd/conf/httpd.conf.</p>
+<p>I&#39;ve been having fun with mod_rewrite. For example:</p>
 <pre><code>## public_html/archives/.htaccess
 ## from halcanary.org
 RewriteEngine On
@@ -90,6 +91,8 @@ RewriteRule ^cat$ /archives/cat.php [L]
 </code></pre>
 <p>So <a href="https://halcanary.org/archives/cat"><code>/archives/cat</code></a> is just a pointer to <a href="https://halcanary.org/archives/cat.php"><code>/archives/cat.php</code></a>.</p>
 <p>The whole <code>/p/*</code> directory is just a pointer to a single php script.</p>
+
+</div>
 </div>
 </article>
 <hr/>
