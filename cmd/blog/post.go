@@ -11,8 +11,11 @@ import (
 	"time"
 
 	"github.com/HalCanary/booker/dom"
+	"github.com/HalCanary/halcanary.github.io/check"
 	"github.com/HalCanary/halcanary.github.io/commonmarker"
 	"gitlab.com/golang-commonmark/markdown"
+	"golang.org/x/net/html"
+	"golang.org/x/net/html/atom"
 )
 
 type Post struct {
@@ -41,6 +44,18 @@ func (p Post) Timestamp() string {
 
 func header(level int, attributes dom.Attr, children ...*dom.Node) *dom.Node {
 	return dom.Element("h"+strconv.Itoa(level), attributes, children...)
+}
+
+func parseHtml(s string) *dom.Node {
+	div := &html.Node{Type: html.ElementNode, Data: "div", DataAtom:atom.Div}
+	nodes, err := html.ParseFragment(strings.NewReader(s), div)
+	check.Check(err)
+	div.AppendChild(&html.Node{Type: html.TextNode, Data: "\n"})
+	for _, n := range nodes {
+		div.AppendChild(n)
+	}
+	div.AppendChild(&html.Node{Type: html.TextNode, Data: "\n"})
+	return (*dom.Node)(div)
 }
 
 func (post Post) Content(level int) string {
@@ -129,7 +144,8 @@ func (post Post) Article(level int, url string, prefix string) *dom.Node {
 			dom.TextNode("\n"),
 			summary2,
 			dom.TextNode("\n"),
-			dom.RawHtml(post.Content(level)),
+			parseHtml(post.Content(level)),
+			dom.TextNode("\n"),
 		),
 		dom.TextNode("\n"),
 	)

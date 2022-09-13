@@ -29,7 +29,7 @@ type Blog struct {
 	ImageLink   string // "/~example/image.png"
 	Style       string // Inline CSS content.
 	Icon        string // URL for icon/
-	path        string // Infered to be os.Args[1] + "/docs" + .Prefix
+	path        string // Infered to be os.Args[1] + "/docs"
 }
 
 var (
@@ -42,14 +42,14 @@ func concat(strs ...string) string {
 	return strings.Join(strs, "")
 }
 
-func (b Blog) Path() string { return b.path }
+func (b Blog) Path() string { return concat(b.path, b.Prefix) }
 
 func ReadBlogConfig(blogRootPath string) (Blog, error) {
 	var blog Blog
 	configFile, err := os.Open(blogRootPath + "/Blog.xml")
 	if err == nil {
 		err = xml.NewDecoder(configFile).Decode(&blog)
-		blog.path = concat(blogRootPath, "/docs", blog.Prefix)
+		blog.path = concat(blogRootPath, "/docs")
 	}
 	return blog, err
 }
@@ -228,8 +228,10 @@ func (blog Blog) makeIndex(allPosts []Post) *dom.Node {
 			dom.Elem("li", link("#"+p.LongId(), p.Title)),
 			dom.TextNode("\n"),
 		)
+		article := p.Article(2, concat(blog.BaseUrl, blog.Prefix, p.LongId(), "/"), blog.Prefix)
+		addImageSize(article, blog.BaseUrl, blog.path)
 		main.Append(
-			p.Article(2, concat(blog.BaseUrl, blog.Prefix, p.LongId(), "/"), blog.Prefix),
+			article ,
 			dom.TextNode("\n"),
 			dom.Elem("hr"),
 			dom.TextNode("\n"),
@@ -485,13 +487,15 @@ func (blog Blog) longLink(p *Post, description string) *dom.Node {
 }
 
 func (blog Blog) makeIndividualPost(post Post, prev, next *Post) *dom.Node {
+	article := post.Article(1, concat(blog.BaseUrl, blog.Prefix, post.LongId(), "/"), blog.Prefix)
+	addImageSize(article, blog.BaseUrl, blog.path)
 	return dom.Element("html", dom.Attr{"lang": blog.Language},
 		dom.TextNode("\n"),
 		blog.makeHead(concat(blog.Title, ": "+post.Title)),
 		dom.TextNode("\n"),
 		dom.Elem("body",
 			dom.TextNode("\n"),
-			post.Article(1, concat(blog.BaseUrl, blog.Prefix, post.LongId(), "/"), blog.Prefix),
+			article,
 			dom.TextNode("\n"),
 			dom.Elem("hr"),
 			dom.TextNode("\n"),

@@ -8,27 +8,27 @@ _...the House of the Muses_
 Watercolors by Hal Canary
 -------------------------
 
-[![](/art/devil-04s.jpg)](/art/devil-04.jpg) Devil's Lake  
+[![](/art/thumb/devil-04.jpg)](/art/devil-04.jpg) Devil's Lake  
 Summer 2002
 
-[![ ](/art/devil-01s.jpg)](/art/devil-01.jpg)  
+[![ ](/art/thumb/devil-01.jpg)](/art/devil-01.jpg)  
 Devil's Lake - view from west bluff.  
 May 2002
 
-[![ ](/art/devil-02s.jpg)](/art/devil-02.jpg)  
+[![ ](/art/thumb/devil-02.jpg)](/art/devil-02.jpg)  
 Devil's Lake - view from base of east bluff.  
 May 2002
 
-[![ ](/art/devil-03s.jpg)](/art/devil-03.jpg)  
+[![ ](/art/thumb/devil-03.jpg)](/art/devil-03.jpg)  
 Devil's Lake - tree at base of east bluff.  
 May 2002
 
-[![Foggy Destin Beach, 1998](/art/destin_s.jpg)](/art/destin.jpg)  
+[![Foggy Destin Beach, 1998](/art/thumb/destin.jpg)](/art/destin.jpg)  
 The ominous foggy morning when we arrived in Destin.  
 July 1998  
 For Sale: $110
 
-[![My Front Garden, Panda Lane, Memphis](/art/frontgarden_s.jpg)](/art/frontgarden.jpg)  
+[![My Front Garden, Panda Lane, Memphis](/art/thumb/frontgarden.jpg)](/art/frontgarden.jpg)  
 My front yard, Panda Lane, Memphis.  
 Summer 1998  
 {For Sale: $200}
@@ -38,11 +38,11 @@ _The Reader by the Lake_
 February 1999.  
 {For Sale: $90}
 
-[![South Padre Beach](/art/padre1_s.jpg)](/art/padre1.jpg)  
+[![South Padre Beach](/art/thumb/padre1.jpg)](/art/padre1.jpg)  
 The beach on South Padre Island, Texas.  
 August 1998.
 
-[![South Padre Bar](/art/padre2_s.jpg)](/art/padre2.jpg)  
+[![South Padre Bar](/art/thumb/padre2.jpg)](/art/padre2.jpg)  
 A bar on the beach on South Padre Island, Texas.  
 August 1998.
 
@@ -59,19 +59,19 @@ June 1999.
 Art by Kathy Canary
 -------------------
 
-[![Virginia Beach](/art/kc1_s.jpg)](/art/kc1.jpg)
+[![Virginia Beach](/art/thumb/kc1.jpg)](/art/kc1.jpg)
 
-[![abstract](/art/kc2_s.jpg)](/art/kc2.jpg)
+[![abstract](/art/thumb/kc2.jpg)](/art/kc2.jpg)
 
-[![abstract](/art/kc3_s.jpg)](/art/kc3.jpg)
+[![abstract](/art/thumb/kc3.jpg)](/art/kc3.jpg)
 
-[![A Tree](/art/kc4_s.jpg)](/art/kc4.gif)
+[![A Tree](/art/thumb/kc4.jpg)](/art/kc4.gif)
 
-[![Another Tree](/art/kc5_s.jpg)](/art/kc5.gif)
+[![Another Tree](/art/thumb/kc5.jpg)](/art/kc5.gif)
 
-[![The Butterfly on the Beach](/art/kc6_s.jpg)](/art/kc6.gif)
+[![The Butterfly on the Beach](/art/thumb/kc6.jpg)](/art/kc6.gif)
 
-[![abstract](/art/kc7.gif)](/art/kc7.gif)
+[![abstract](/art/thumb/kc7.gif)](/art/kc7.gif)
 
 * * *
 

@@ -13,10 +13,11 @@ DATE="$("${SDIR}/isodate.py")"
 FILE=$DIR/$(date '+%Y-%m-%d')-${POSTID}.md
 echo $FILE
 cat << EOM > $FILE
+COPYRIGHT=Copyright Hal Canary / ALL RIGHTS RESERVED
 AUTHOR=Hal Canary
-TITLE=
 DATE=$DATE
 POSTID=$POSTID
+TITLE=
 CATEGORIES=
 SUMMARY=
 EOM
