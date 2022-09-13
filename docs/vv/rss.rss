@@ -7,8 +7,8 @@
 		<language>en-US</language>
 		<copyright>Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.</copyright>
 		<link>https://halcanary.org/vv/</link>
-		<pubDate>Tue, 13 Sep 2022 13:50:28 -0400</pubDate>
-		<lastBuildDate>Tue, 13 Sep 2022 13:50:28 -0400</lastBuildDate>
+		<pubDate>Tue, 13 Sep 2022 15:17:30 -0400</pubDate>
+		<lastBuildDate>Tue, 13 Sep 2022 15:17:30 -0400</lastBuildDate>
 		<image>
 			<url>https://halcanary.org/images/HAL_CANARY_20191008_512.jpg</url>
 			<title>Voder-Vocoder</title>
@@ -580,7 +580,7 @@ Projection</a>.”
 		<item>
 			<title>Color in shell scripts (not prompts)</title>
 			<link>https://halcanary.org/vv/2013/06/20/681/</link>
-			<guid isPermaLink="false">5f057149-6359-5cc4-b017-fc1d1fa7ae90</guid>
+			<guid isPermaLink="false">5584baa7-b3e8-5530-85ec-252ae8f087df</guid>
 			<pubDate>Thu, 20 Jun 2013 18:53:31 -0500</pubDate>
 			<description><![CDATA[<p>Some shell-script macros for adding color to the output of your programs.</p>
 <p> </p>
@@ -637,15 +637,14 @@ for B in $COLORS; do
     done
     echo &quot;&quot;
 done
-exit 0
-</code></pre>
+exit 0</code></pre>
 ]]></description>
 			<category>computers-code,shell-scripts</category>
 		</item>
 		<item>
 			<title>or just use xdg-open</title>
 			<link>https://halcanary.org/vv/2013/06/13/csg36/</link>
-			<guid isPermaLink="false">2e8e3809-6e7d-50ee-8443-3d1e34ab5112</guid>
+			<guid isPermaLink="false">be6e1feb-a7ee-5d00-a49e-3f2b9e35f5b6</guid>
 			<pubDate>Thu, 13 Jun 2013 12:00:00 -0500</pubDate>
 			<description><![CDATA[<p>How to ask the desktop to open a file from a shell script? Define this function:</p>
 <pre><code>getopencmd() {
@@ -660,14 +659,13 @@ exit 0
             command -v &quot;kde-open&quot;  || \
             command -v &quot;exo-open&quot;;
      esac;
-}
-</code></pre>
+}</code></pre>
 ]]></description>
 		</item>
 		<item>
 			<title>spiral</title>
 			<link>https://halcanary.org/vv/2013/06/11/1322/</link>
-			<guid isPermaLink="false">22f1d7d7-42a2-501c-89b8-14f722532f7b</guid>
+			<guid isPermaLink="false">d6f25526-109d-5eb6-964d-413bcb47d033</guid>
 			<pubDate>Tue, 11 Jun 2013 14:00:34 -0500</pubDate>
 			<description><![CDATA[<p>Your challenge: make a pretty postscript picture as one tweet</p>
 <p>Your challenge: make a pretty postscript picture as one tweet.  &quot;%!\n&quot;  is not necessary
@@ -708,8 +706,7 @@ showpage
 300 300 translate newpath 3 0 2 copy moveto 604 { 5 add
 exch 1.01 mul exch 2 copy cos mul 3 copy pop sin mul
 lineto } repeat stroke showpage
-EOF
-</code></pre>
+EOF</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
@@ -1525,7 +1522,7 @@ $(jarfile): $(classes)
 		<item>
 			<title>rosetta stone</title>
 			<link>https://halcanary.org/vv/2012/02/01/csg23/</link>
-			<guid isPermaLink="false">7b78d74c-1b02-53fa-bdef-7607d1a4cc3b</guid>
+			<guid isPermaLink="false">71beb154-83fc-547a-a461-5bae899b8717</guid>
 			<pubDate>Wed, 01 Feb 2012 12:00:00 -0600</pubDate>
 			<description><![CDATA[<table class="border"><tbody>
 <tr><th>Language</th><th>Null Pointer</th></tr>
@@ -1533,8 +1530,7 @@ $(jarfile): $(classes)
 <tr><td>Java</td><td>null</td></tr>
 <tr><td>Python</td><td>None</td></tr>
 <tr><td>Lisp</td><td>nill</td></tr>
-</tbody></table>
-]]></description>
+</tbody></table>]]></description>
 		</item>
 		<item>
 			<title>PyQt QInputDialog.get*() wrappers</title>
@@ -1864,7 +1860,7 @@ score SPF_PASS -5.0
 		<item>
 			<title>.emacs look and feel</title>
 			<link>https://halcanary.org/vv/2011/09/29/csg15/</link>
-			<guid isPermaLink="false">3c3641be-b26c-5dfd-8465-b27fbbdf3a60</guid>
+			<guid isPermaLink="false">c8867081-a7c5-5ba2-98a1-5d867ada31ee</guid>
 			<pubDate>Thu, 29 Sep 2011 12:00:00 -0500</pubDate>
 			<description><![CDATA[<pre><code>
 ;_____________________________________________________________________
@@ -1894,20 +1890,18 @@ score SPF_PASS -5.0
 (global-set-key (kbd &quot;C-h&quot;) 'backward-delete-char-untabify)
 (global-set-key	[(control s)] 'save-buffer)
 (global-set-key	[(control f)] 'isearch-forward)
-(define-key isearch-mode-map [(control f)] 'isearch-repeat-forward)</code></pre>
-]]></description>
+(define-key isearch-mode-map [(control f)] 'isearch-repeat-forward)</code></pre>]]></description>
 		</item>
 		<item>
 			<title>ssh hostname alias</title>
 			<link>https://halcanary.org/vv/2011/09/10/csg14/</link>
-			<guid isPermaLink="false">ea85155c-2f42-5f9f-861b-46396d98d93c</guid>
+			<guid isPermaLink="false">f59077d4-3536-5558-aa29-fa68e1f24fcb</guid>
 			<pubDate>Sat, 10 Sep 2011 12:00:00 -0500</pubDate>
 			<description><![CDATA[<p>One can make a hostname alias for SSH and SCP by adding to the the SSH config file:</p>
 <pre><code>##  ~/.ssh/config
 Host cs
     HostName = login.cs.unc.edu
-    User = hal
-</code></pre>
+    User = hal</code></pre>
 ]]></description>
 		</item>
 		<item>
@@ -1933,7 +1927,7 @@ Host cs
 		<item>
 			<title>make -j</title>
 			<link>https://halcanary.org/vv/2011/08/18/csg13/</link>
-			<guid isPermaLink="false">9d990279-11d2-5be8-a71d-b4d6f233d5be</guid>
+			<guid isPermaLink="false">4d585e4e-b663-5e87-aff6-05bafce8ef14</guid>
 			<pubDate>Thu, 18 Aug 2011 12:00:00 -0500</pubDate>
 			<description><![CDATA[<p>Update: Russ reccomends 2<em>N</em> threads.</p>
 <pre><code>#!/bin/sh
@@ -1941,8 +1935,7 @@ Host cs
 renice 1 $$ &gt; /dev/null
 N_CPUS=`grep processor /proc/cpuinfo | wc -l`
 N_THRDS=`expr ${N_CPUS:-1} &quot;*&quot; 2`
-exec /usr/bin/make -j &quot;$N_THRDS&quot; &quot;$@&quot;
-</code></pre>
+exec /usr/bin/make -j &quot;$N_THRDS&quot; &quot;$@&quot;</code></pre>
 ]]></description>
 		</item>
 		<item>
@@ -1977,12 +1970,11 @@ exec /usr/bin/make -j &quot;$N_THRDS&quot; &quot;$@&quot;
 		<item>
 			<title>make -j</title>
 			<link>https://halcanary.org/vv/2011/08/08/csg12/</link>
-			<guid isPermaLink="false">c276f5d0-2d4c-5bab-a4fc-85206f739ff2</guid>
+			<guid isPermaLink="false">15b5b4bd-9e9f-5655-ae65-1f3da08d7586</guid>
 			<pubDate>Mon, 08 Aug 2011 12:00:00 -0500</pubDate>
 			<description><![CDATA[<pre><code>#!/bin/sh
 N_CPUS=`grep processor /proc/cpuinfo | wc -l`
-exec /usr/bin/make -j &quot;$N_CPUS&quot; &quot;$@&quot;
-</code></pre>
+exec /usr/bin/make -j &quot;$N_CPUS&quot; &quot;$@&quot;</code></pre>
 ]]></description>
 		</item>
 		<item>
@@ -1998,7 +1990,7 @@ exec /usr/bin/make -j &quot;$N_CPUS&quot; &quot;$@&quot;
 		<item>
 			<title>yet another emacs function</title>
 			<link>https://halcanary.org/vv/2011/07/18/csg11/</link>
-			<guid isPermaLink="false">d4184ac2-778a-5479-b2d6-22592eae0977</guid>
+			<guid isPermaLink="false">a4fac96f-3026-5cb2-9180-0abdf1adfdea</guid>
 			<pubDate>Mon, 18 Jul 2011 12:00:00 -0500</pubDate>
 			<description><![CDATA[<pre><code>(defun diary () (interactive)
   (let ((ddir &quot;d:/&quot;)
@@ -2008,14 +2000,13 @@ exec /usr/bin/make -j &quot;$N_CPUS&quot; &quot;$@&quot;
     (make-directory (concat ddir year ) 't)
     (find-file (concat ddir year &quot;/&quot; ymd &quot;.txt&quot;))
     (goto-char (point-max)) (newline)
-    (insert  ymdt) (newline) (newline)))
-</code></pre>
+    (insert  ymdt) (newline) (newline)))</code></pre>
 ]]></description>
 		</item>
 		<item>
 			<title>stopwatch</title>
 			<link>https://halcanary.org/vv/2011/07/15/csg10/</link>
-			<guid isPermaLink="false">4c3d7cb8-d42f-58b7-93f7-1dc129db3062</guid>
+			<guid isPermaLink="false">ef5683cf-a09b-5cc6-b039-5e13cd69d192</guid>
 			<pubDate>Fri, 15 Jul 2011 12:00:00 -0500</pubDate>
 			<description><![CDATA[<pre><code>#!/usr/bin/python
 &quot;&quot;&quot;Stopwatch program.
@@ -2035,17 +2026,15 @@ try:
 		sys.stdout.write(str(datetime.now() - start))
 		sys.stdout.flush()
 except KeyboardInterrupt:
-	sys.stdout.write('\n\n')
-</code></pre>
+	sys.stdout.write('\n\n')</code></pre>
 ]]></description>
 		</item>
 		<item>
 			<title>40 minute hilly ride. 6.7 miles</title>
 			<link>https://halcanary.org/vv/2011/07/09/1216/</link>
-			<guid isPermaLink="false">75718c43-66da-548d-b403-0bd30d922b57</guid>
+			<guid isPermaLink="false">6d72f958-8f1f-5316-9f41-bd5c4e774062</guid>
 			<pubDate>Sat, 09 Jul 2011 14:26:48 -0500</pubDate>
-			<description><![CDATA[<div style="text-align:center">![map of ride](https://halcanary.org/images/2011-07-09_142801_bikeride2.png)</div>
-]]></description>
+			<description><![CDATA[<div style="text-align:center">![map of ride](https://halcanary.org/images/2011-07-09_142801_bikeride2.png)</div>]]></description>
 		</item>
 		<item>
 			<title>not lost; zoo; bike</title>
@@ -2078,7 +2067,7 @@ except KeyboardInterrupt:
 		<item>
 			<title>change-epub-formatting.py</title>
 			<link>https://halcanary.org/vv/2011/06/24/1211/</link>
-			<guid isPermaLink="false">28f1f22f-ef7f-5916-b1aa-98fe553fbc51</guid>
+			<guid isPermaLink="false">ff1bf432-9ad3-5b4e-a870-bb1ce910b823</guid>
 			<pubDate>Fri, 24 Jun 2011 15:28:54 -0500</pubDate>
 			<description><![CDATA[<pre><code>#!/usr/bin/python
 #DTPD#
@@ -2115,15 +2104,14 @@ if __name__ == '__main__':
   for arg in sys.argv[1:]:
     for filen in glob.glob(arg):
       fixfile(filen)
-  exit(0)
-</code></pre>
+  exit(0)</code></pre>
 ]]></description>
 			<category>books,computers-code</category>
 		</item>
 		<item>
 			<title>scrabble.sh</title>
 			<link>https://halcanary.org/vv/2011/06/21/1209/</link>
-			<guid isPermaLink="false">b0d94dab-d6df-5192-8635-aea835101224</guid>
+			<guid isPermaLink="false">813ef1b5-bc4a-5086-a4c8-8c7cd3a4749f</guid>
 			<pubDate>Tue, 21 Jun 2011 06:27:46 -0500</pubDate>
 			<description><![CDATA[<pre><code>#!/bin/sh
 #DTPD#
@@ -2134,8 +2122,7 @@ exec grep -i &quot;$@&quot; &quot;$DICT&quot; | less
 # Useage:
 #   scrabble.sh PATTERN
 # Example:
-#   scrabble.sh '^a[lonrchl]\{4,7\}$'
-</code></pre>
+#   scrabble.sh '^a[lonrchl]\{4,7\}$'</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
@@ -2186,7 +2173,7 @@ exec grep -i &quot;$@&quot; &quot;$DICT&quot; | less
 		<item>
 			<title>Reduce</title>
 			<link>https://halcanary.org/vv/2011/05/27/csg05/</link>
-			<guid isPermaLink="false">4972c61c-97c2-5e66-bcfe-6615f3c61a29</guid>
+			<guid isPermaLink="false">4006c09f-b66c-5f5b-bbf4-8ac8f9753aa6</guid>
 			<pubDate>Fri, 27 May 2011 12:00:00 -0500</pubDate>
 			<description><![CDATA[<p>In high-school chemistry, you learn that the ideal gas law is</p>
 <div style="text-align:center;"><em>P</em>&middot;<em>V</em> =
@@ -2215,8 +2202,7 @@ won't.  So in my .emacs file, I put the following lines:</p>
          (file-readable-p emacs-style-file))
   (progn
     (load emacs-style-file)
-(my-color-theme)))
-</code></pre>
+(my-color-theme)))</code></pre>
 ]]></description>
 		</item>
 		<item>
@@ -2246,7 +2232,7 @@ won't.  So in my .emacs file, I put the following lines:</p>
 		<item>
 			<title>I&#x27;m not sure GNU takes windows ports seriously</title>
 			<link>https://halcanary.org/vv/2011/05/12/csg03/</link>
-			<guid isPermaLink="false">22aa0168-b4e1-5154-8a98-613346e2f06f</guid>
+			<guid isPermaLink="false">5b3d2b77-bd25-5a8d-b4c5-c7a1580e7d78</guid>
 			<pubDate>Thu, 12 May 2011 12:00:00 -0500</pubDate>
 			<description><![CDATA[<p>GNU tar for win32 can't actually fork a process for gzip.  What
 century is it?  Here's my fix:</p>
@@ -2257,8 +2243,7 @@ if &quot;%1&quot; == &quot;&quot; goto END
 gzip -d -c &lt; &quot;%1&quot; | tar -xv
 shift
 goto AGAIN
-:END
-</code></pre>
+:END</code></pre>
 ]]></description>
 		</item>
 		<item>
@@ -2293,7 +2278,7 @@ knows to expect these sort of shenanigans.</p>
 		<item>
 			<title>txt to html with hyperlink conversion</title>
 			<link>https://halcanary.org/vv/2011/04/23/1194/</link>
-			<guid isPermaLink="false">57403709-3d0f-5f70-92ce-dfa6b371dd13</guid>
+			<guid isPermaLink="false">72f99763-9944-5f15-ad3b-7a1bc3073da5</guid>
 			<pubDate>Sat, 23 Apr 2011 20:19:44 -0500</pubDate>
 			<description><![CDATA[<p>I don't have time to be writing programs.</p>
 <pre><code>#!/bin/sed -f
@@ -2312,8 +2297,7 @@ s/&gt;/\&amp;gt;/g;
 s/'/\&amp;#0039;/g;
 s/\(http:\/\/[^ ]\+\)/&lt;a href=&quot;\1&quot;&gt;\1&lt;\/a&gt;/g
 1 s/^/&lt;pre&gt;&lt;code&gt;/
-$ s/$/&lt;\/pre&gt;&lt;\/body&gt;&lt;\/html&gt;/
-</code></pre>
+$ s/$/&lt;\/pre&gt;&lt;\/body&gt;&lt;\/html&gt;/</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
@@ -2348,7 +2332,7 @@ $ s/$/&lt;\/pre&gt;&lt;\/body&gt;&lt;\/html&gt;/
 		<item>
 			<title>/bin/coin</title>
 			<link>https://halcanary.org/vv/2011/04/10/1180/</link>
-			<guid isPermaLink="false">0429d8fe-e5b6-5d2f-aae2-2ecf3fda6e89</guid>
+			<guid isPermaLink="false">61f28b2a-1030-5f42-8de6-b9c7e893df7e</guid>
 			<pubDate>Sun, 10 Apr 2011 22:21:24 -0500</pubDate>
 			<description><![CDATA[<pre><code>#!/usr/bin/env python
 # ~/bin/coin
@@ -2368,8 +2352,7 @@ for i in xrange(8):
  else:
   print &quot;tails&quot;,
  n &gt;&gt;= 1
-print
-</code></pre>
+print</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
@@ -2396,15 +2379,14 @@ print
 		<item>
 			<title>convert asterisks to html-bold via sed</title>
 			<link>https://halcanary.org/vv/2011/03/07/1096/</link>
-			<guid isPermaLink="false">0487aa6c-c765-5eb0-b234-31eba7e399a6</guid>
+			<guid isPermaLink="false">79200d58-c338-52db-a797-2bb52ac8c05e</guid>
 			<pubDate>Mon, 07 Mar 2011 20:37:44 -0600</pubDate>
 			<description><![CDATA[<pre><code>#!/bin/sed -f
 #DTPD#
 #convert *bold* text to *html bold*
 # also converts /italic/ text to html em
 s/\*\([^\*]*\)\*/&lt;strong&gt;\1&lt;\/strong&gt;/g;
-s/\/\([^\/]*\)\//&lt;em&gt;\1&lt;\/em&gt;/g;
-</code></pre>
+s/\/\([^\/]*\)\//&lt;em&gt;\1&lt;\/em&gt;/g;</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
@@ -2547,7 +2529,7 @@ fi
 		<item>
 			<title>Update comparison</title>
 			<link>https://halcanary.org/vv/2010/09/04/1032/</link>
-			<guid isPermaLink="false">d16aeb89-aad9-5b89-a5a2-d08dbe05fe3b</guid>
+			<guid isPermaLink="false">93f49297-1e3b-55f6-af68-eb5dddbe7bfb</guid>
 			<pubDate>Sat, 04 Sep 2010 13:43:34 -0500</pubDate>
 			<description><![CDATA[<p>No comparison. APT (the Advanced Packaging Tool) beats Windows Update by a million to one. I had hoped that Windows Seven would improve things, but no such luck.</p>
 <p>APT: You run this script, once, in the background and it does everything.</p>
@@ -2581,8 +2563,7 @@ sudo /usr/bin/nice /usr/bin/apt-get --yes update &amp;&amp; \
 sudo /usr/bin/nice /usr/bin/apt-get --yes dist-upgrade
 sudo /usr/bin/nice /usr/bin/apt-get autoremove
 sudo /usr/bin/nice /usr/bin/apt-get clean
-sudo /usr/bin/nice /usr/bin/dpkg --configure --pending
-</code></pre>
+sudo /usr/bin/nice /usr/bin/dpkg --configure --pending</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
@@ -2611,7 +2592,7 @@ sudo /usr/bin/nice /usr/bin/dpkg --configure --pending
 		<item>
 			<title>gravatar</title>
 			<link>https://halcanary.org/vv/2010/07/17/1006/</link>
-			<guid isPermaLink="false">0fca4d65-cdb6-5a5d-8509-7c715234920b</guid>
+			<guid isPermaLink="false">579d5056-3e3f-50b5-a821-cc54f7da0c53</guid>
 			<pubDate>Sat, 17 Jul 2010 09:25:23 -0500</pubDate>
 			<description><![CDATA[<pre><code>&lt;!-- Easy Gravatar implementation for
      Wordpress comment page: --&gt;
@@ -2619,8 +2600,7 @@ sudo /usr/bin/nice /usr/bin/dpkg --configure --pending
 $gravlink = &quot;http://www.gravatar.com/avatar/&quot;;
 $gravlink .= md5(strtolower(trim(get_comment_author_email())));
 $gravlink .= &quot;?d=&quot;.urlencode(&quot;https://halcanary.org/images/q80.png&quot;);
-echo $gravlink; ?&gt;
-</code></pre>
+echo $gravlink; ?&gt;</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
@@ -2664,15 +2644,14 @@ $ evince basic.pdf &amp;
 		<item>
 			<title>filling an ebook reader</title>
 			<link>https://halcanary.org/vv/2010/06/27/997/</link>
-			<guid isPermaLink="false">eae04543-3dd0-5545-ae5f-3aa128a46dee</guid>
+			<guid isPermaLink="false">6b6d728e-d2b3-5495-af67-81fb3d1734e4</guid>
 			<pubDate>Sun, 27 Jun 2010 14:39:03 -0500</pubDate>
 			<description><![CDATA[<p>This week, I finally broke down and bought an ebook reader — B&amp;N's $150 WiFi <a href="http://bn.com/nook/">Nook</a> (ISBN 9781400532629). It's a beautiful little device.</p>
 <p>I got the Jonathan Adler Punctuation Cover (978161560062) since it's both very sturdy and cheaper than most.</p>
 <p>I've already side-loaded 90 free books onto the device. These books have come from several places. In no particular order:</p>
 <div class="indent"><p>• The Lee County Public Library lets you borrow ebooks via Adobe Digital Editions (ADE) software. You can use ADE to side-load ebooks onto a nook.</p><p>• <a href="http://www.gutenberg.org/">Project Gutenberg</a> — the first place to go for books from the public domain. All of their books are now availible in ePub versions.</p><p>• <a href="http://books.google.com/">Google Books</a>, Some of the scans availible are in the public domain, and are therefore downloadable. Generally, the Gutenberug editions are a higher quality than the Google versions, since The Gutenberg tries to be an ideal textual copy of the book while Google tries to be a good representation a particular physical book.</p><p>• Many of the works of Cory Doctorow are availible as ePubs on his website, <a href="http://craphound.com/">Craphound</a>. I especially recommend <em>Makers</em> and <em>Little Brother</em>.</p><p>• <a href="http://www.baen.com/library/titles.htm">The Baen Free Library</a> — All copyrighted works which you may read for free, and all are availible as ePubs.</p><p>• <a href="http://baencd.thefifthimperium.com/">The Baen CD Mirror</a> — These files are also copyrighted but free to redistribute. The newer CDs have ePub files on them. The older CDs do not, but you can use a program like <a href="http://calibre-ebook.com/">Calibre</a> to covert file formats.</p></div>
 <p>Places to buy eBooks:</p>
-<div class="indent"><p>• <a href="http://bn.com/ebooks">http://bn.com/ebooks</a> — of course. Also check the <a href="http://bn.com/unbound">Unbound Blog</a> every friday for the name of a free book that can be added to your B&amp;N library that week. [Update. Here, too: <a href="http://bn.com/freelibrary">http://bn.com/freelibrary</a>]</p><p>• <a href="http://www.webscription.net/">Webscription</a> — A store that sells unencombered ebooks, all of which are availible in ePub format. The prices aren't bad at all.</p></div>
-]]></description>
+<div class="indent"><p>• <a href="http://bn.com/ebooks">http://bn.com/ebooks</a> — of course. Also check the <a href="http://bn.com/unbound">Unbound Blog</a> every friday for the name of a free book that can be added to your B&amp;N library that week. [Update. Here, too: <a href="http://bn.com/freelibrary">http://bn.com/freelibrary</a>]</p><p>• <a href="http://www.webscription.net/">Webscription</a> — A store that sells unencombered ebooks, all of which are availible in ePub format. The prices aren't bad at all.</p></div>]]></description>
 			<category>books,computers-code</category>
 		</item>
 		<item>
@@ -2688,7 +2667,7 @@ $ evince basic.pdf &amp;
 		<item>
 			<title>simple mergesort</title>
 			<link>https://halcanary.org/vv/2010/05/08/984/</link>
-			<guid isPermaLink="false">73468ae8-8d38-500e-8cbe-b39be684a6c0</guid>
+			<guid isPermaLink="false">cefa31b1-3519-5da6-baea-56cace6a34a5</guid>
 			<pubDate>Sat, 08 May 2010 07:55:23 -0500</pubDate>
 			<description><![CDATA[<p>Even though I've studied this algorithm a couple of times, I've never had to implement it before. So I assigned it to myself.</p>
 <pre><code>/** should have a time-complecity of O(N×log(N))
@@ -2797,8 +2776,7 @@ void mergesort(int N, int array[]) {
     if (old != array)
       for (i = 0; i &lt; N; i++)
         array[i] = old[i];
-  }
-</code></pre>
+  }</code></pre>
 ]]></description>
 			<category>computer-science,computers-code</category>
 		</item>
@@ -2833,7 +2811,7 @@ void mergesort(int N, int array[]) {
 		<item>
 			<title>bourne shell absolute path</title>
 			<link>https://halcanary.org/vv/2010/03/31/968/</link>
-			<guid isPermaLink="false">19205995-6a77-5145-bc5c-280a63315622</guid>
+			<guid isPermaLink="false">7dc80e20-c2e0-574d-bf1a-b1a4dbcbe81f</guid>
 			<pubDate>Wed, 31 Mar 2010 10:20:12 -0500</pubDate>
 			<description><![CDATA[<pre><code>#!/bin/sh
 abspath () {
@@ -2854,8 +2832,7 @@ echo &quot;absolute path = \&quot;${ABSPATH}\&quot;&quot;
 <pre><code>#!/bin/sh
 abspath () {
 	echo &quot;$(cd &quot;$(dirname &quot;$1&quot;)&quot; ; pwd;)/$(basename &quot;$1&quot;)&quot;
-}
-</code></pre>
+}</code></pre>
 ]]></description>
 		</item>
 		<item>
@@ -2888,7 +2865,7 @@ abspath () {
 		<item>
 			<title>dynamic arrays</title>
 			<link>https://halcanary.org/vv/2010/03/17/953/</link>
-			<guid isPermaLink="false">163dcf98-0b7f-59ce-9c5b-c06009eaee86</guid>
+			<guid isPermaLink="false">913fccaa-f642-5c7d-8e42-580a02917ef1</guid>
 			<pubDate>Wed, 17 Mar 2010 09:00:38 -0500</pubDate>
 			<description><![CDATA[<p>About ten years ago, I wrote a C++ program to print out all the prime numbers less than a given number using trial division. I recently went back and looked at the program and realized how little I knew at the time. Even though my first CS class covered object-oriented programming in C++, we never really talked the about simply using the <code>new</code> keyword on arrays to make use of dynamic arrays. The topic was covered in my second CS class, which I took three years later.</p>
 <pre><code>int *array;
@@ -2918,15 +2895,14 @@ for (i = 0; i &lt; array_size; i++)
     temparray[i] = array[i];
 array_size = (array_size * 2);
 free(array);
-array = temparray;
-</code></pre>
+array = temparray;</code></pre>
 ]]></description>
 			<category>computer-science,computers-code</category>
 		</item>
 		<item>
 			<title>algorithms matter</title>
 			<link>https://halcanary.org/vv/2010/03/11/944/</link>
-			<guid isPermaLink="false">4c27f9f3-1f84-5121-97f8-dd3a3fa30588</guid>
+			<guid isPermaLink="false">a8e8f4d5-ff73-581a-8f7c-e0559b04ad0f</guid>
 			<pubDate>Thu, 11 Mar 2010 18:48:25 -0600</pubDate>
 			<description><![CDATA[<p>This example of why the right algorithm matters comes directly from my textbook. Here's the C implementation:</p>
 <p>Bad:</p>
@@ -3004,8 +2980,7 @@ sys	0m0.004s
       Integer.toString(n) + &quot;) = &quot;);
     System.out.println(fib(n));
   }
-}
-</code></pre>
+}</code></pre>
 ]]></description>
 			<category>computer-science,computers-code</category>
 		</item>
@@ -3073,22 +3048,21 @@ sys	0m0.004s
 		<item>
 			<title>zip-one-file</title>
 			<link>https://halcanary.org/vv/2010/02/24/932/</link>
-			<guid isPermaLink="false">c783dd86-8742-5b90-88bc-24a51e6d35a3</guid>
+			<guid isPermaLink="false">107482b8-6cbd-54fe-9a4a-b181c69dc818</guid>
 			<pubDate>Wed, 24 Feb 2010 08:47:50 -0600</pubDate>
 			<description><![CDATA[<pre><code>#!/bin/sh
 ## zip-one-file
 ## DTPD
 for x in &quot;$@&quot;; do
   zip &quot;${x}.zip&quot; &quot;$x&quot;
-done
-</code></pre>
+done</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
 		<item>
 			<title>private static String itoa(int i)</title>
 			<link>https://halcanary.org/vv/2010/02/21/928/</link>
-			<guid isPermaLink="false">e76a3ba8-112f-5166-9505-5bd9b82cf929</guid>
+			<guid isPermaLink="false">676fdd22-a98c-577d-9f5e-3351cd45e49a</guid>
 			<pubDate>Sun, 21 Feb 2010 11:19:27 -0600</pubDate>
 			<description><![CDATA[<p>I like Java's verbosity; it is consistant and clear. But sometimes you want succinct things.</p>
 <pre><code>/** &quot;Returns a String object representing the specified integer.&quot; */
@@ -3109,8 +3083,7 @@ private static String itoa(Integer i){
 }
 private static void error(String s) {
 	System.err.println(s);
-}
-</code></pre>
+}</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
@@ -3246,7 +3219,7 @@ kill $INHIBIT_PID
 		<item>
 			<title>time-wasting methods.</title>
 			<link>https://halcanary.org/vv/2010/01/17/891/</link>
-			<guid isPermaLink="false">70519e2e-85ec-5eaf-94f1-90da23d87040</guid>
+			<guid isPermaLink="false">62edd33a-7604-5e10-9172-fdf3481a525f</guid>
 			<pubDate>Sun, 17 Jan 2010 22:23:38 -0600</pubDate>
 			<description><![CDATA[<pre><code>/* verbose java masturbation: */
 public class Foo {
@@ -3262,8 +3235,7 @@ public class Foo {
 /* much less annoying: */
 public class Foo {
   public int foobar;
-}
-</code></pre>
+}</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
@@ -3290,7 +3262,7 @@ public class Foo {
 		<item>
 			<title>Printing a text file</title>
 			<link>https://halcanary.org/vv/2010/01/07/883/</link>
-			<guid isPermaLink="false">a1f3b640-2b2a-5510-bf24-33e39f92fdb0</guid>
+			<guid isPermaLink="false">31508bd2-37c7-5d68-939c-ac3b5936cd82</guid>
 			<pubDate>Thu, 07 Jan 2010 13:22:40 -0600</pubDate>
 			<description><![CDATA[<p>Printing a text file is one of those basic things you never think about. Unless you are me. I like to play with the variables and make that printout look <em>good</em>.</p>
 <pre><code>#!/bin/sh
@@ -3321,8 +3293,7 @@ exec paps --font=&quot;$font&quot; \
   --right-margin=$r_margin \
   --left-margin=$l_margin \
   &quot;$@&quot; | lpr
-#EOF#
-</code></pre>
+#EOF#</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
@@ -3549,7 +3520,7 @@ exec emacs-snapshot \
 		<item>
 			<title>Command-line Package Tools</title>
 			<link>https://halcanary.org/vv/2009/09/26/827/</link>
-			<guid isPermaLink="false">da558aa1-1f46-5e79-8128-0f4bd25281ac</guid>
+			<guid isPermaLink="false">e32a7548-f954-5d5a-9cdc-956e28afeb3e</guid>
 			<pubDate>Sat, 26 Sep 2009 18:54:45 -0500</pubDate>
 			<description><![CDATA[<p>Command-line package commands for Debian and Ubuntu-type systems that you should know:</p>
 <pre><code>apt-get update
@@ -3586,15 +3557,14 @@ dpkg-query --search FILENAME
     search for a filename from installed packages
 
 sudo dpkg --install DEBPKGFILE
-    install a .deb package
-</code></pre>
+    install a .deb package</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
 		<item>
 			<title>ssh-show-key-fingerprint</title>
 			<link>https://halcanary.org/vv/2009/09/26/825/</link>
-			<guid isPermaLink="false">6e62a8e6-c43a-5b83-a14d-9719b42d8efb</guid>
+			<guid isPermaLink="false">4c5c3c9c-4a60-5550-a00b-af218489d1b5</guid>
 			<pubDate>Sat, 26 Sep 2009 13:01:31 -0500</pubDate>
 			<description><![CDATA[<pre><code>#!/bin/sh
 ## ~/bin/ssh-show-key-fingerprint
@@ -3623,15 +3593,14 @@ echo 'Banner /etc/issue.ssh' | \
  USE OF THIS SYSTEM BY ANY USER, AUTHORIZED OR UNAUTHORIZED,
  CONSTITUTES CONSENT TO THIS MONITORING, INTERCEPTION,
  RECORDING, READING, COPYING, or CAPTURING and DISCLOSURE
- by SYSTEM OWNER.
-</code></pre>
+ by SYSTEM OWNER.</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
 		<item>
 			<title>MakeBookmarksFile</title>
 			<link>https://halcanary.org/vv/2009/09/24/822/</link>
-			<guid isPermaLink="false">6cf1a271-6351-56bf-b15b-fd817aa033a1</guid>
+			<guid isPermaLink="false">7b5cef8c-64ae-581d-86ef-b73fc31e372c</guid>
 			<pubDate>Thu, 24 Sep 2009 12:51:50 -0500</pubDate>
 			<description><![CDATA[<pre><code>#!/usr/bin/env python
 # MakeBookmarksFile - convert a text file containing
@@ -3687,15 +3656,14 @@ for line in fi:
   s=re.sub('&gt;','&amp;gt;',s)
   s=re.sub('&quot;','&amp;quot;',s)
   fo.write(&quot;&lt;a href=\&quot;%s\&quot;&gt;%s&lt;/a&gt;&lt;br&gt;\n&quot; % (s,s))
-fo.write('&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;\n')
-</code></pre>
+fo.write('&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;\n')</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
 		<item>
 			<title>netbook network mp3 player</title>
 			<link>https://halcanary.org/vv/2009/09/16/817/</link>
-			<guid isPermaLink="false">27deca29-8278-517c-ae44-da19897a3f91</guid>
+			<guid isPermaLink="false">a421d00a-34d5-51df-a700-498af837b931</guid>
 			<pubDate>Wed, 16 Sep 2009 15:37:59 -0500</pubDate>
 			<description><![CDATA[<p>I wanted to access my desktop's music library from my living room and play it through the amplifier and speakers there. So I grabbed my netbook, and after fumbling around with NFS for too long, I just tried:</p>
 <pre><code>yum install sshfs
@@ -3718,8 +3686,7 @@ exec mpg123-alsa --control --long-tag \
 <pre><code>#!/bin/sh
 # run this script to refresh the index file.
 cd $HOME/music
-find . -type f -a -name '*.mp3' &gt; index.txt
-</code></pre>
+find . -type f -a -name '*.mp3' &gt; index.txt</code></pre>
 ]]></description>
 			<category>computers-code,music</category>
 		</item>
@@ -3789,7 +3756,7 @@ to current levels for as long as national unemployment is over 6%.</p>
 		<item>
 			<title>Setting the Gnome Desktop Background With a Script</title>
 			<link>https://halcanary.org/vv/2009/09/10/813/</link>
-			<guid isPermaLink="false">e9ce1976-d8ab-5de3-9292-6c2ef3bce38c</guid>
+			<guid isPermaLink="false">54920fc0-eb4b-5e43-9689-c8c89b480481</guid>
 			<pubDate>Thu, 10 Sep 2009 18:23:48 -0500</pubDate>
 			<description><![CDATA[<pre><code>#!/bin/sh
 ## Written 2009 Hal Canary
@@ -3816,8 +3783,7 @@ gconftool-2 -t str --set \
 gconftool-2 -t str --set \
   /desktop/gnome/background/picture_options \
   &quot;centered&quot;
-exit 0
-</code></pre>
+exit 0</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
@@ -3875,7 +3841,7 @@ done
 		<item>
 			<title>unzip-nozipbomb</title>
 			<link>https://halcanary.org/vv/2009/08/26/797/</link>
-			<guid isPermaLink="false">65a0e9c8-7412-5a6c-a2ee-b49b7e6a1c9a</guid>
+			<guid isPermaLink="false">64306fc0-5956-5bcd-a6e2-66428172a75a</guid>
 			<pubDate>Wed, 26 Aug 2009 07:03:57 -0500</pubDate>
 			<description><![CDATA[<pre><code>#!/bin/sh
 ## $HOME/bin/unzip-nozipbomb
@@ -3888,8 +3854,7 @@ for zipfile in &quot;$@&quot; ; do
     fi
     mkdir -p &quot;${dir}&quot;
     unzip -d &quot;${dir}&quot; &quot;${zipfile}&quot;
-done
-</code></pre>
+done</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
@@ -3930,7 +3895,7 @@ done
 		<item>
 			<title>timer.c</title>
 			<link>https://halcanary.org/vv/2009/08/18/787/</link>
-			<guid isPermaLink="false">cc560b4f-19e1-5d7f-9883-6d436d457e4d</guid>
+			<guid isPermaLink="false">433adef3-0188-5e3b-830a-ac03ea1d7405</guid>
 			<pubDate>Tue, 18 Aug 2009 20:33:59 -0500</pubDate>
 			<description><![CDATA[<pre><code>/* Copyright 2009 Hal Canary, https://halcanary.org/
    Dedicated to the Public Domain.
@@ -3963,8 +3928,7 @@ int main(int argc, char *argv[]) {
   }
   printf(&quot;\n&quot;);
   return(0);
-}
-</code></pre>
+}</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
@@ -3980,7 +3944,7 @@ int main(int argc, char *argv[]) {
 		<item>
 			<title>rounding functions for POSIX bc.</title>
 			<link>https://halcanary.org/vv/2009/08/14/783/</link>
-			<guid isPermaLink="false">ab307616-db14-5cf5-be62-ba09a9fc0951</guid>
+			<guid isPermaLink="false">81c4b1d9-4f44-50d0-b6a6-a02dc67b254e</guid>
 			<pubDate>Fri, 14 Aug 2009 12:26:54 -0500</pubDate>
 			<description><![CDATA[<pre><code>$ echo 'scale=10; 1/3*3;'|bc
 .9999999999
@@ -4015,15 +3979,14 @@ define round(x) {
   scale = oscale;
   x = x / (10 ^ dec);
   return x;
-}
-</code></pre>
+}</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
 		<item>
 			<title>guitar chord charts</title>
 			<link>https://halcanary.org/vv/2009/08/12/780/</link>
-			<guid isPermaLink="false">41190804-6b4a-5d2f-9fe3-86dddf244b55</guid>
+			<guid isPermaLink="false">6e23c156-83a3-5691-aa19-0866c82d61cc</guid>
 			<pubDate>Wed, 12 Aug 2009 18:59:01 -0500</pubDate>
 			<description><![CDATA[<p>I'm fooling around with a guitar and wanted to take notes on a blank page of guitar chord charts, so I post-scripted this one: <a href="https://halcanary.org/pub/tablature.pdf">pdf file</a>.</p>
 <pre><code>%!
@@ -4065,8 +4028,7 @@ define round(x) {
 3.5 trow
 6 trow
 8.5 trow
-showpage
-</code></pre>
+showpage</code></pre>
 ]]></description>
 			<category>music</category>
 		</item>
@@ -4095,7 +4057,7 @@ showpage
 		<item>
 			<title>onerous urls</title>
 			<link>https://halcanary.org/vv/2009/07/04/772/</link>
-			<guid isPermaLink="false">7e3336d9-36de-5cf3-a0a6-aff1952f421e</guid>
+			<guid isPermaLink="false">23806b85-2cec-5304-b1e5-3f8bca13fb3b</guid>
 			<pubDate>Sat, 04 Jul 2009 11:03:57 -0500</pubDate>
 			<description><![CDATA[<p>Say I want to send someone a URL that shows the product page for a given item at Bestbuy.com. I enter the SKU (for example, 9222637) into the search field and I get the following URL:</p>
 <pre><code>http://www.bestbuy.com/site/olspage.jsp?
@@ -4108,15 +4070,14 @@ list=n&amp;iht=y&amp;usc=All+Categories&amp;ks=960
 <pre><code>http://bestbuy.com/sku/9222637
 </code></pre>
 <p>Some merchants are easer than others. I've learned that given an ISBN (for example, 9781439132739), BN.com's shortest URL is:</p>
-<pre><code>http://search.barnesandnoble.com///e/9781439132739
-</code></pre>
+<pre><code>http://search.barnesandnoble.com///e/9781439132739</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
 		<item>
 			<title>make-envelope.sh</title>
 			<link>https://halcanary.org/vv/2009/06/08/771/</link>
-			<guid isPermaLink="false">4b107dc5-8439-5ddc-8dcd-a3084a5cf833</guid>
+			<guid isPermaLink="false">5f13565b-92d1-5f12-8f95-e902f4afb38f</guid>
 			<pubDate>Mon, 08 Jun 2009 17:58:49 -0500</pubDate>
 			<description><![CDATA[<pre><code>#!/bin/sh
 
@@ -4172,8 +4133,7 @@ paps --landscape \
   --left-margin=$MARGINLEFT  \
   --right-margin=$MARGINRIGHT   \
   &lt; &quot;${TMP}&quot; | ps2pdf - - &gt; &quot;${PDF}&quot;
-echo &quot;lpr ${PDF}&quot;
-</code></pre>
+echo &quot;lpr ${PDF}&quot;</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
@@ -4371,7 +4331,7 @@ sudo tune2fs -c 150 /dev/sda1
 		<item>
 			<title>icecast+liveice</title>
 			<link>https://halcanary.org/vv/2008/12/22/755/</link>
-			<guid isPermaLink="false">8c36f925-efe8-502e-85e5-14d25b237165</guid>
+			<guid isPermaLink="false">2803e15c-a775-5626-ac41-ed4f24f67262</guid>
 			<pubDate>Mon, 22 Dec 2008 08:43:49 -0600</pubDate>
 			<description><![CDATA[<p>Setting up icecast+liveice so I can stream music from my PC to the internet. A simple</p>
 <pre><code>sudo apt-get install -y liveice icecast-server
@@ -4412,8 +4372,7 @@ exec liveice -F ${HOME}/.liveice.cfg \
 <pre><code>mplayer -quiet -cache 32 http://127.0.0.1:8888/x
 </code></pre>
 <p>If I'm broadcasting, check me at at</p>
-<pre><code>http://halcanary.dyndns.org:8888/x
-</code></pre>
+<pre><code>http://halcanary.dyndns.org:8888/x</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
@@ -4632,7 +4591,7 @@ Now get your ass out of bed!</em></p>
 		<item>
 			<title>utf8 → ascii</title>
 			<link>https://halcanary.org/vv/2008/10/05/742/</link>
-			<guid isPermaLink="false">031074a7-9dcf-5904-b96e-c0783e6d8e6f</guid>
+			<guid isPermaLink="false">21cef8cf-ee6d-57ff-a52f-b3eafd647b23</guid>
 			<pubDate>Sun, 05 Oct 2008 00:04:47 -0500</pubDate>
 			<description><![CDATA[<pre><code>#!/usr/bin/env python
 #
@@ -4896,8 +4855,7 @@ for line in fi:
         fo.write(&quot;&amp;#x%04x;&quot; % ordchar)
         #fo.write(&quot;&amp;#%04d;&quot; % ordchar)
     else:
-      fo.write(chr(ord(char)))
-</code></pre>
+      fo.write(chr(ord(char)))</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
@@ -4924,7 +4882,7 @@ for line in fi:
 		<item>
 			<title>Economics, part 1</title>
 			<link>https://halcanary.org/vv/2008/10/03/739/</link>
-			<guid isPermaLink="false">717cb836-9217-53f9-b1df-db3b72ed56a0</guid>
+			<guid isPermaLink="false">cf16a45c-d07d-5e2c-aea0-09ea42172219</guid>
 			<pubDate>Fri, 03 Oct 2008 21:03:31 -0500</pubDate>
 			<description><![CDATA[<p>(I'm reading a book on recent economics. It's in the current affairs section of the store and is written by the son of a famous economist.)</p>
 <p>The conventional wisdom is that: &quot;We can <em>get away with</em> running trade deficits because foreigners are <em>willing</em> to hold onto dollars.&quot;</p>
@@ -4935,14 +4893,13 @@ for line in fi:
 <p>UPDATE: I <a href="http://en.wikipedia.org/wiki/Double_deficit_(economics)">missed a variable</a>. The correct equation is:</p>
 <div class="centered">TradeDeficit = BudgetDeficit + Investment – NetSavings</div>
 <p>And since Net Savings is negative these days,</p>
-<div class="centered">TradeDeficit = PublicBudgetDeficit + PrivateBudgetDeficit + Investment</div>
-]]></description>
+<div class="centered">TradeDeficit = PublicBudgetDeficit + PrivateBudgetDeficit + Investment</div>]]></description>
 			<category>economics</category>
 		</item>
 		<item>
 			<title>(defun remove-excess-whitespace...</title>
 			<link>https://halcanary.org/vv/2008/10/03/738/</link>
-			<guid isPermaLink="false">52e6b806-5f78-5c19-aabd-ab69a9326108</guid>
+			<guid isPermaLink="false">93b6170f-01a4-5a75-91d0-ca9a5c79593a</guid>
 			<pubDate>Fri, 03 Oct 2008 21:02:56 -0500</pubDate>
 			<description><![CDATA[<p>I always meant to go ahead and fix this function so it did what I want. Now it uses proper regex. See <a href="https://halcanary.org/vv/2004/02/18/176/">the old version, too</a>.</p>
 <pre><code>;; ~/.emacs ;;
@@ -4955,8 +4912,7 @@ for line in fi:
       (beginning-of-buffer)
       (perform-replace arg1 arg2
         nil t nil)
-      (beginning-of-buffer))))
-</code></pre>
+      (beginning-of-buffer))))</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
@@ -5012,14 +4968,13 @@ for line in fi:
 		<item>
 			<title>sudo tee</title>
 			<link>https://halcanary.org/vv/2008/09/28/735/</link>
-			<guid isPermaLink="false">4dafe2e2-653d-58c3-b3a1-8d80565539e5</guid>
+			<guid isPermaLink="false">c231f47c-b745-5321-8fb0-505050371629</guid>
 			<pubDate>Sun, 28 Sep 2008 20:27:24 -0500</pubDate>
 			<description><![CDATA[<p>I had been doing this:</p>
 <pre><code>sudo su -c 'echo AT+MODE=8 &gt; /dev/ttyACM0'
 </code></pre>
 <p>but I think that this is better becasue it spawns one less shell:</p>
-<pre><code>echo AT+MODE=8 | sudo tee /dev/ttyACM0 &gt; /dev/null
-</code></pre>
+<pre><code>echo AT+MODE=8 | sudo tee /dev/ttyACM0 &gt; /dev/null</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
@@ -5135,7 +5090,7 @@ Copyright (C) &lt;year&gt; &lt;name of author&gt;</p>
 		<item>
 			<title>nocomments</title>
 			<link>https://halcanary.org/vv/2008/08/10/729/</link>
-			<guid isPermaLink="false">526a7ecc-db65-58b1-9029-f66152b62713</guid>
+			<guid isPermaLink="false">3b47d31b-f1c1-54ee-8094-228fa3c96a51</guid>
 			<pubDate>Sun, 10 Aug 2008 09:31:10 -0500</pubDate>
 			<description><![CDATA[<pre><code>#!/bin/sh
 # ~/bin/nocomments
@@ -5143,8 +5098,7 @@ Copyright (C) &lt;year&gt; &lt;name of author&gt;</p>
 # empty lines.  Use stdin and stdout.
 # Written 2007 Hal Canary.
 # Dedicated to the Public Domain.
-grep -v '^\#\|^$' &quot;$@&quot;
-</code></pre>
+grep -v '^\#\|^$' &quot;$@&quot;</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
@@ -5205,7 +5159,7 @@ grep -v '^\#\|^$' &quot;$@&quot;
 		<item>
 			<title>jolietify</title>
 			<link>https://halcanary.org/vv/2008/06/07/723/</link>
-			<guid isPermaLink="false">b02860f0-79c1-55e9-8035-7e3ac4d685ab</guid>
+			<guid isPermaLink="false">df7781ce-5f15-5cef-94f3-7b8f0b97bf46</guid>
 			<pubDate>Sat, 07 Jun 2008 18:11:49 -0500</pubDate>
 			<description><![CDATA[<pre><code>#!/usr/bin/env python
 
@@ -5269,15 +5223,14 @@ def jolietify(dirfilename):
 if __name__ == &quot;__main__&quot;:
     for x in sys.argv[1:]:
        for y in glob.glob(x):
-            jolietify(y)
-</code></pre>
+            jolietify(y)</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
 		<item>
 			<title>~/bin/longest-filename</title>
 			<link>https://halcanary.org/vv/2008/06/07/722/</link>
-			<guid isPermaLink="false">f242ad3d-0dff-58b0-9800-7081a3feadb5</guid>
+			<guid isPermaLink="false">65cbce72-0f0c-569b-a742-6112f0dcd046</guid>
 			<pubDate>Sat, 07 Jun 2008 18:10:57 -0500</pubDate>
 			<description><![CDATA[<pre><code>#!/bin/sh
 #DTPD#
@@ -5286,8 +5239,7 @@ if __name__ == &quot;__main__&quot;:
 # in these directories?
 { for x in &quot;$@&quot; ; do
 find &quot;$x&quot; -exec basename {} \;
-done } | wc -L
-</code></pre>
+done } | wc -L</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
@@ -5451,7 +5403,7 @@ app.mainloop()
 		<item>
 			<title>zipme.py</title>
 			<link>https://halcanary.org/vv/2008/01/28/717/</link>
-			<guid isPermaLink="false">f785292e-27a2-5f43-b8d0-092b0efef42e</guid>
+			<guid isPermaLink="false">490b5427-e894-5123-8784-0768c5979354</guid>
 			<pubDate>Mon, 28 Jan 2008 21:49:48 -0600</pubDate>
 			<description><![CDATA[<pre><code>#!/usr/bin/env python
 
@@ -5501,15 +5453,14 @@ def zipme(d):
     z.close()
 
 if __name__ == &quot;__main__&quot;:
-    zipme('Randoms')
-</code></pre>
+    zipme('Randoms')</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
 		<item>
 			<title>genpasswd.py</title>
 			<link>https://halcanary.org/vv/2008/01/27/716/</link>
-			<guid isPermaLink="false">27182c1f-25e8-58f7-96fc-10c2a71862b3</guid>
+			<guid isPermaLink="false">534f9ef4-9603-5d45-b2da-38a24bd194fa</guid>
 			<pubDate>Sun, 27 Jan 2008 15:54:05 -0600</pubDate>
 			<description><![CDATA[<pre><code>#!/usr/bin/env python
 # ~/bin/genpasswd.py
@@ -5524,8 +5475,7 @@ if __name__ == &quot;__main__&quot;:
 # Copyright 2007-2008 Hal Canary
 # Dedicated to the Public Domain.
 import os, base64
-print base64.b64encode(os.urandom(18),'Zz')
-</code></pre>
+print base64.b64encode(os.urandom(18),'Zz')</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
@@ -5740,7 +5690,7 @@ Delivered To: mango &lt;mango@plum.com&gt;
 		<item>
 			<title>fcp (FTP copy)</title>
 			<link>https://halcanary.org/vv/2008/01/13/714/</link>
-			<guid isPermaLink="false">65b9716f-1bf4-523a-9d11-6ceee4dc8fad</guid>
+			<guid isPermaLink="false">1d77cc44-a193-52b1-b8d7-2559be713740</guid>
 			<pubDate>Sun, 13 Jan 2008 00:05:28 -0600</pubDate>
 			<description><![CDATA[<p>A ftp client that uses rcp/scp syntax</p>
 <p>My XO-1 has gotten me interested in hacking in python again, since that is the XO's primary programming environment.</p>
@@ -5798,8 +5748,7 @@ def ftpputfiles(host, direct, *files, **kwds):
         fl = open(localfile, 'rb')
         f.storbinary('STOR %s' % filename, fl)
         fl.close()
-    f.quit()
-</code></pre>
+    f.quit()</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
@@ -6029,7 +5978,7 @@ times&quot;, &quot;1/65536 times&quot;, and &quot;65536 times&quot;—like &quot
 		<item>
 			<title>Not another calendar reform</title>
 			<link>https://halcanary.org/vv/2007/10/26/705/</link>
-			<guid isPermaLink="false">24aeb54a-6b07-5d67-bc05-183b5e370e45</guid>
+			<guid isPermaLink="false">c008dde9-15a1-5d7b-be44-5611a773162b</guid>
 			<pubDate>Fri, 26 Oct 2007 16:45:39 -0500</pubDate>
 			<description><![CDATA[<p>A proposal for a better calendar. (If we didn't have the Gregorian calendar
 already and wanted to start from scratch.)</p>
@@ -6135,8 +6084,7 @@ is so convienent.</p>
 11   November     30       Wednesday
 12   December     30 or 31 Friday
 
-     [December 31 is not a weekday]
-</code></pre>
+     [December 31 is not a weekday]</code></pre>
 ]]></description>
 			<category>new-standards,top,manifesto</category>
 		</item>
@@ -6438,7 +6386,7 @@ RewriteRule ^(.*)$           $1.html</p>
 		<item>
 			<title>Unix Utility Scripts</title>
 			<link>https://halcanary.org/vv/2007/06/12/691/</link>
-			<guid isPermaLink="false">4fc88175-4edc-53c0-b2c7-3e2d78108ba9</guid>
+			<guid isPermaLink="false">73ba2d88-75eb-5978-a9c2-3509cbace047</guid>
 			<pubDate>Tue, 12 Jun 2007 10:26:46 -0500</pubDate>
 			<description><![CDATA[<p>Utility Scripts for Unix-compatible systems (id est GNU/Linux). This page collects several of the scripts I&#39;ve written for Linux over the years. Maybe someone else will find them useful.</p>
 <p>execute a program in the background, redirect stdout and stderr to null, and keep it from being hungup. [Depends on: Bourne shell, coreutils]</p>
@@ -6727,15 +6675,14 @@ fi
 for FILE in &quot;$@&quot; ; do
   nice lame --decode &quot;$FILE&quot; - | \
     nice sox -t wav - &quot;$(basename $FILE .mp3).cdr&quot;
-done
-</code></pre>
+done</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
 		<item>
 			<title>find-and-sha1sum</title>
 			<link>https://halcanary.org/vv/2007/05/17/689/</link>
-			<guid isPermaLink="false">b2736c43-ac5c-5740-a228-3ce391ee090e</guid>
+			<guid isPermaLink="false">6a34f5f3-5d3f-57e0-a198-99fd9eafcb03</guid>
 			<pubDate>Thu, 17 May 2007 18:25:57 -0500</pubDate>
 			<description><![CDATA[<pre><code>#!/bin/sh
 # this script will calculate the sha1sum
@@ -6752,8 +6699,7 @@ find . -type f \
 	-fprintf /dev/stderr '.' \
 	&gt; &quot;${TMPFILE}&quot;
 mv &quot;${TMPFILE}&quot; SHA1SUM.txt
-echo '' 2&gt;&amp;1
-</code></pre>
+echo '' 2&gt;&amp;1</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
@@ -6876,7 +6822,7 @@ overflow TRAP	0,Halt,0
 		<item>
 			<title>because I hate navigating info pages</title>
 			<link>https://halcanary.org/vv/2007/05/10/687/</link>
-			<guid isPermaLink="false">0df95f83-f5a6-53d0-982a-c7001ceee24a</guid>
+			<guid isPermaLink="false">1b18a1e7-a2a8-53e5-a221-1661de291de4</guid>
 			<pubDate>Thu, 10 May 2007 11:25:41 -0500</pubDate>
 			<description><![CDATA[<pre><code>#!/bin/sh
 #~/bin/infoless
@@ -6885,8 +6831,7 @@ if [ $# -ne 1 ] ; then
   echo &quot;which page?&quot;
   exit 1
 fi
-exec info $1 2&gt; /dev/null | less
-</code></pre>
+exec info $1 2&gt; /dev/null | less</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
@@ -7069,7 +7014,7 @@ head -c 18 /dev/random | base64 | \
 		<item>
 			<title>txt2prehtml</title>
 			<link>https://halcanary.org/vv/2007/03/28/680/</link>
-			<guid isPermaLink="false">3f6b1e99-a80c-5a13-9638-aedd63a015e3</guid>
+			<guid isPermaLink="false">0407e646-41cb-5c5f-b8f7-5eeb3ded80bb</guid>
 			<pubDate>Wed, 28 Mar 2007 09:11:21 -0500</pubDate>
 			<description><![CDATA[<pre><code>#!/bin/sh
 # txt2prehtml
@@ -7092,8 +7037,7 @@ s/&gt;/\&amp;gt;/g;
 s/\\/\&amp;\#0092;/g;' ;
 echo '&lt;/pre&gt;
 &lt;/body&gt;
-&lt;/html&gt;';
-</code></pre>
+&lt;/html&gt;';</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
@@ -7130,7 +7074,7 @@ done
 		<item>
 			<title>timeinmicroseconds.c</title>
 			<link>https://halcanary.org/vv/2007/03/22/678/</link>
-			<guid isPermaLink="false">dbf664d7-0dae-5286-aebb-33e5d8eeb572</guid>
+			<guid isPermaLink="false">57d50746-d3ab-5151-927d-ec61f2eca2fd</guid>
 			<pubDate>Thu, 22 Mar 2007 15:50:15 -0500</pubDate>
 			<description><![CDATA[<p>I wrote this today as a demonstration of where /dev/random gets all its randomness.</p>
 <pre><code>/* Copyright 2007 Hal Canary, https://halcanary.org/
@@ -7147,15 +7091,14 @@ int main(void) {
 </code></pre>
 <p>And then...</p>
 <pre><code>$ cc -o timeinmicroseconds timeinmicroseconds.c
-$ while read -s -n 1 x ; do ./timeinmicroseconds ; done
-</code></pre>
+$ while read -s -n 1 x ; do ./timeinmicroseconds ; done</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
 		<item>
 			<title>randpassphrase</title>
 			<link>https://halcanary.org/vv/2007/03/20/677/</link>
-			<guid isPermaLink="false">886495e3-223c-51e6-8416-fd749b7dd86f</guid>
+			<guid isPermaLink="false">2da76d64-3838-5b49-b4a8-966e76606dd1</guid>
 			<pubDate>Tue, 20 Mar 2007 13:24:02 -0500</pubDate>
 			<description><![CDATA[<pre><code>/*
    randpassphrase.c
@@ -7188,15 +7131,14 @@ int main() {
   close(devrandom);
   printf(&quot;\n&quot;);
   return(0);
-}
-</code></pre>
+}</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
 		<item>
 			<title>hexer</title>
 			<link>https://halcanary.org/vv/2007/03/11/676/</link>
-			<guid isPermaLink="false">c4f8a979-9838-583d-8ccb-6d15fc41a359</guid>
+			<guid isPermaLink="false">26a34d55-64e1-52d2-a749-eb4964926810</guid>
 			<pubDate>Sun, 11 Mar 2007 10:16:41 -0500</pubDate>
 			<description><![CDATA[<pre><code>/*  hexer - Convert  binary files to hexadecimal
     Copyright 2007 Hal Canary
@@ -7221,8 +7163,7 @@ int main (int argc, char *argv[]) {
 </code></pre>
 <p>Or:</p>
 <pre><code>#!/bin/sh
-exec hexdump -e '32/1 &quot;%02x&quot; &quot;\n&quot;' &quot;$@&quot;
-</code></pre>
+exec hexdump -e '32/1 &quot;%02x&quot; &quot;\n&quot;' &quot;$@&quot;</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
@@ -7259,7 +7200,7 @@ exec hexdump -e '32/1 &quot;%02x&quot; &quot;\n&quot;' &quot;$@&quot;
 		<item>
 			<title>dealing with lots of arguments in bash</title>
 			<link>https://halcanary.org/vv/2006/12/27/672/</link>
-			<guid isPermaLink="false">40fb0aae-1ddc-5160-a90a-794422c5e98f</guid>
+			<guid isPermaLink="false">41f1491b-9aa5-50fd-9421-00364655d655</guid>
 			<pubDate>Wed, 27 Dec 2006 12:00:57 -0600</pubDate>
 			<description><![CDATA[<pre><code>#!/bin/sh
 #DTPD#
@@ -7296,8 +7237,7 @@ prefix=${1}
 shift
 for arg in &quot;$@&quot;; do
     mv -v &quot;$arg&quot; &quot;${prefix}${arg}&quot;
-done
-</code></pre>
+done</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
@@ -7376,7 +7316,7 @@ ppracer prboom freedoom xpilot-ng</p>
 		<item>
 			<title>telnet to port 80</title>
 			<link>https://halcanary.org/vv/2006/11/30/667/</link>
-			<guid isPermaLink="false">c0246d02-e941-50a4-880f-2a0a3831cd6e</guid>
+			<guid isPermaLink="false">3b90df2b-c0f5-5abb-8599-5a9ed3edd7f6</guid>
 			<pubDate>Thu, 30 Nov 2006 08:56:31 -0600</pubDate>
 			<description><![CDATA[<p>To check out http headers, you can use telnet, but I've found it easier to use <code>nc</code> (netcat):</p>
 <pre><code>H=&quot;en.wikipedia.org&quot;
@@ -7394,8 +7334,7 @@ if [ &quot;$#&quot; -ne 2 ] ;  then
 fi
 echo -en &quot;GET $2 HTTP/1.1\r\nHost: $1\r\n\r\n&quot;
 echo -en &quot;GET $2 HTTP/1.1\r\nHost: $1\r\n\r\n&quot; \
-  | nc $1 80
-</code></pre>
+  | nc $1 80</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
@@ -7415,22 +7354,21 @@ echo -en &quot;GET $2 HTTP/1.1\r\nHost: $1\r\n\r\n&quot; \
 		<item>
 			<title>Dear 1999, please take your music player back.</title>
 			<link>https://halcanary.org/vv/2006/11/23/665/</link>
-			<guid isPermaLink="false">2720ad5f-7d6d-5261-beda-b3928e9e4371</guid>
+			<guid isPermaLink="false">dbc3fcbe-5bbe-554e-a995-a065ff65aefa</guid>
 			<pubDate>Thu, 23 Nov 2006 21:48:30 -0600</pubDate>
 			<description><![CDATA[<pre><code>#!/bin/sh
 #DTPD#
 M=/tmp/Musiclist
 DIR=/home/music
 find $DIR -name &quot;*.mp3&quot; &gt; $M
-mpg321 --list $M --random
-</code></pre>
+mpg321 --list $M --random</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
 		<item>
 			<title>postponing ntpd start</title>
 			<link>https://halcanary.org/vv/2006/11/22/664/</link>
-			<guid isPermaLink="false">4fd8430a-72fa-590a-9f94-cdef7b2c5a8a</guid>
+			<guid isPermaLink="false">0340b355-52ab-5701-ad35-be42234fb675</guid>
 			<pubDate>Wed, 22 Nov 2006 09:28:16 -0600</pubDate>
 			<description><![CDATA[<p>Yet another Linux hint:</p>
 <p>Because ntpd (Network Time Protocol Daemon) takes some time to synchronize with the time server, I don't start it on boot:</p>
@@ -7438,8 +7376,7 @@ mpg321 --list $M --random
 </code></pre>
 <p>But I do start it later on, as a background process, so I can go ahead and log in before it finishes. One could do this with any startup procedure that slows you down.</p>
 <pre><code>##  Line from /etc/rc.local
-nohup /etc/init.d/ntpd start &gt; /dev/null 2&gt;&amp;1 &amp;
-</code></pre>
+nohup /etc/init.d/ntpd start &gt; /dev/null 2&gt;&amp;1 &amp;</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
@@ -7622,13 +7559,12 @@ grub&gt; boot</p>
 		<item>
 			<title>Tiny Utility Script of the Day</title>
 			<link>https://halcanary.org/vv/2006/10/26/657/</link>
-			<guid isPermaLink="false">45ce0e46-445d-5961-821f-53f5f8776e59</guid>
+			<guid isPermaLink="false">c77e52d8-c0f9-51bf-bb37-9e7a831f4ec5</guid>
 			<pubDate>Thu, 26 Oct 2006 11:58:36 -0500</pubDate>
 			<description><![CDATA[<pre><code>#!/bin/sh
 #bin/amp#
 #DTPD#
-nohup &quot;$@&quot; 1&gt; /dev/null 2&gt;&amp;1 &amp;
-</code></pre>
+nohup &quot;$@&quot; 1&gt; /dev/null 2&gt;&amp;1 &amp;</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
@@ -7734,7 +7670,7 @@ dolore magna aliqua.&lt;/p&gt;
 		<item>
 			<title>FC4 version of Clearlooks in FC5</title>
 			<link>https://halcanary.org/vv/2006/10/04/652/</link>
-			<guid isPermaLink="false">1dfcf407-e562-5368-96f7-86b77a758d4b</guid>
+			<guid isPermaLink="false">f87d1b4e-eb40-5845-83b2-eb7f87060e41</guid>
 			<pubDate>Wed, 04 Oct 2006 18:28:35 -0500</pubDate>
 			<description><![CDATA[<p>How to install the Fedora Core 4 version of the default Clearlooks theme on Fedora Core 5 and later:</p>
 <p><img src="https://halcanary.org/images/Clearlooks_FC4_example.png" alt="SCREENSHOT OF THEME" /></p>
@@ -7770,19 +7706,17 @@ gnome-theme-manager &amp;
 <p>Or you could just download my copy of <a href="https://halcanary.org/pub/Clearlooks_FC4.tar.gz">Clearlooks_FC4.tar.gz</a>.</p>
 <pre><code>mkdir -p ~/.themes
 tar xzf Clearlooks_FC4.tar.gz -C ~/.themes/
-gnome-theme-manager &amp;
-</code></pre>
+gnome-theme-manager &amp;</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
 		<item>
 			<title>#</title>
 			<link>https://halcanary.org/vv/2006/09/25/651/</link>
-			<guid isPermaLink="false">58214107-b437-5466-8a3a-7cd32539cd31</guid>
+			<guid isPermaLink="false">6c566f39-1a15-5857-b77a-ea4e5b05d4d6</guid>
 			<pubDate>Mon, 25 Sep 2006 13:06:50 -0500</pubDate>
 			<description><![CDATA[<p><strong>New phone number as of now</strong>:</p>
-<pre><code>239-313-9375
-</code></pre>
+<pre><code>239-313-9375</code></pre>
 ]]></description>
 			<category>life,meta</category>
 		</item>
@@ -7844,14 +7778,13 @@ gnome-theme-manager &amp;
 		<item>
 			<title>Validating Burnt ISO Images</title>
 			<link>https://halcanary.org/vv/2006/09/20/646/</link>
-			<guid isPermaLink="false">bffe614a-3609-5c8a-9965-463b411b265f</guid>
+			<guid isPermaLink="false">6c973369-fcb9-5e90-9919-91faad404102</guid>
 			<pubDate>Wed, 20 Sep 2006 19:37:36 -0500</pubDate>
 			<description><![CDATA[<p><a href="http://www.sun.com/bigadmin/features/articles/burn_iso_images.html">This article</a> tells how to burn CD using <code>cdrecord</code> to make it easier to run a checksum program on the burnt CD.</p>
 <p>For future reference, here it is:</p>
 <pre><code>$ sudo /usr/bin/cdrecord dev=/dev/hdc -dao -v \
 	driveropts=burnfree -eject ${ISOFILE}
-$ sha1sum /dev/hdc
-</code></pre>
+$ sha1sum /dev/hdc</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
@@ -8030,7 +7963,7 @@ quit;
 		<item>
 			<title>Septemebr 12</title>
 			<link>https://halcanary.org/vv/2006/09/12/634/</link>
-			<guid isPermaLink="false">8fbb2ac9-d053-5277-be0b-4bf903aa26d2</guid>
+			<guid isPermaLink="false">c2159f4a-db8f-5da0-a291-8f966199b07f</guid>
 			<pubDate>Tue, 12 Sep 2006 08:52:16 -0500</pubDate>
 			<description><![CDATA[<p>Number dead as a result of 2001 September 11 Hijackings: 2,973</p>
 <p>Number dead as a result of Iraq War: 65,000+</p>
@@ -8073,8 +8006,7 @@ data).</p>
 <strong>Terrorism: 3147</strong><br />
 <strong>Carbon monoxide in products: 1,554</strong></p>
 </div>
-</div>
-</blockquote>
+</div></blockquote>
 ]]></description>
 			<category>politics</category>
 		</item>
@@ -8090,7 +8022,7 @@ data).</p>
 		<item>
 			<title>txt2html</title>
 			<link>https://halcanary.org/vv/2006/09/11/632/</link>
-			<guid isPermaLink="false">9848a798-82dc-5fbf-b8c4-9c57200df831</guid>
+			<guid isPermaLink="false">2047e430-a0db-5f91-98ff-9bee7f05da92</guid>
 			<pubDate>Mon, 11 Sep 2006 15:44:34 -0500</pubDate>
 			<description><![CDATA[<pre><code>#!/bin/sed -f
 #DTPD#
@@ -8099,8 +8031,7 @@ s/\&amp;/\&amp;amp;/g;
 s/\&quot;/\&amp;quot;/g;
 s/&lt;/\&amp;lt;/g;
 s/&gt;/\&amp;gt;/g;
-s/\\/\&amp;\#0092;/g;
-</code></pre>
+s/\\/\&amp;\#0092;/g;</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
@@ -8152,7 +8083,7 @@ X
 		<item>
 			<title>lpr-text for CUPS</title>
 			<link>https://halcanary.org/vv/2006/09/08/629/</link>
-			<guid isPermaLink="false">a2e98369-87eb-50c1-96da-9786ea2e2dfd</guid>
+			<guid isPermaLink="false">2c0cea92-8377-55ce-b7cd-60c8ab35ce9b</guid>
 			<pubDate>Fri, 08 Sep 2006 09:52:37 -0500</pubDate>
 			<description><![CDATA[<p>If you are using CUPS for your printing, there is no reason to continue using Enscript.</p>
 <pre><code>#!/bin/sh
@@ -8181,8 +8112,7 @@ exec lpr -o page-left=72 \
         -o page-top=36 \
         -o page-bottom=36 \
         -o cpi=11.43 -o lpi=6.858 &quot;$@&quot;
-# 80 columns width x 68 columns high
-</code></pre>
+# 80 columns width x 68 columns high</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
@@ -8198,7 +8128,7 @@ exec lpr -o page-left=72 \
 		<item>
 			<title>otpasswd</title>
 			<link>https://halcanary.org/vv/2006/09/03/627/</link>
-			<guid isPermaLink="false">6c59284a-197a-5a74-b495-53e712dc18d7</guid>
+			<guid isPermaLink="false">c3a5dec9-2ca6-5112-958d-86180f559694</guid>
 			<pubDate>Sun, 03 Sep 2006 12:57:58 -0500</pubDate>
 			<description><![CDATA[<pre><code>#!/usr/bin/perl
 ## otpasswd --- One Time Passwd
@@ -8220,8 +8150,7 @@ foreach my $x (0 .. 19) {
 	}
 	printf(&quot;%c&quot;,$num);
 }
-print &quot;\n&quot;;
-</code></pre>
+print &quot;\n&quot;;</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
@@ -8294,12 +8223,11 @@ print &quot;\n&quot;;
 		<item>
 			<title>too big</title>
 			<link>https://halcanary.org/vv/2006/07/17/620/</link>
-			<guid isPermaLink="false">a70819ad-89ec-55a7-9587-83de665c56b7</guid>
+			<guid isPermaLink="false">e881d2be-07f8-5f40-8730-2f7d0a5ff8fc</guid>
 			<pubDate>Mon, 17 Jul 2006 19:46:31 -0500</pubDate>
 			<description><![CDATA[<p>Same Population.</p>
 <p>But way too big.</p>
-<table class="border"><tbody><tr><th></th><th>Population</th><th>Population Density</th></tr><tr><td>Cape Coral Florida Urban Area</td><td>329,757</td><td>1719 / mile^2</td></tr><tr><td>Madison Wisconsin Urban Area</td><td>329,533</td><td>2893 / mile^2</td></tr></tbody></table>
-]]></description>
+<table class="border"><tbody><tr><th></th><th>Population</th><th>Population Density</th></tr><tr><td>Cape Coral Florida Urban Area</td><td>329,757</td><td>1719 / mile^2</td></tr><tr><td>Madison Wisconsin Urban Area</td><td>329,533</td><td>2893 / mile^2</td></tr></tbody></table>]]></description>
 			<category>life</category>
 		</item>
 		<item>
@@ -8571,7 +8499,7 @@ pi = 4*a(1);
 		<item>
 			<title>alarm</title>
 			<link>https://halcanary.org/vv/2006/06/04/604/</link>
-			<guid isPermaLink="false">c35f2c97-67d1-56f5-8518-e119a912c060</guid>
+			<guid isPermaLink="false">c299c632-bc07-5a1a-8930-521b9c70df71</guid>
 			<pubDate>Sun, 04 Jun 2006 13:08:44 -0500</pubDate>
 			<description><![CDATA[<p>Here, I take a 10 second clip from &quot;Whole Lotta Love&quot;, 133 seconds<br />
 into the song, where Plant is orgasmily screaming and Page's guitar is<br />
@@ -8596,8 +8524,7 @@ for M in $(seq -w $(($MINUTES - 1)) -1 0); do
     done
 done
 echo -e &quot;\n\n\t\tALARM! ALARM! ALARM!\n\n&quot;
-exec mplayer ~/Music/ALARM.mp3 &amp;&gt; /dev/null
-</code></pre>
+exec mplayer ~/Music/ALARM.mp3 &amp;&gt; /dev/null</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
@@ -8615,11 +8542,10 @@ publication <a href="http://www.nava.org/Flag%20Design/GFBF/gfbf-1.htm"><em>Good
 		<item>
 			<title>...spectacularly spanning the entire sky...</title>
 			<link>https://halcanary.org/vv/2006/06/03/602/</link>
-			<guid isPermaLink="false">66ad7bca-d283-56a3-8fbb-c82be672d67c</guid>
+			<guid isPermaLink="false">31841d13-bd2d-530c-97cc-e5fd81500c57</guid>
 			<pubDate>Sat, 03 Jun 2006 17:04:18 -0500</pubDate>
 			<description><![CDATA[<blockquote>
-<div>Giant <a href="http://en.wikipedia.org/wiki/Elliptical_galaxy">elliptical galaxies</a> are probably formed by mergers on a grander scale. In the <a href="http://en.wikipedia.org/wiki/Local_Group" title="Local Group">Local Group</a>, the Milky Way and <a href="http://en.wikipedia.org/wiki/M31" title="M31">M31</a> (the <a href="http://en.wikipedia.org/wiki/Andromeda_Galaxy" title="Andromeda Galaxy">Andromeda Galaxy</a>) are gravitationally bound, and currently approaching each other at high speed. Since we cannot determine the speed of M31 perpendicular to the line from us to it, we do not know if it will collide with the Milky Way. If the two galaxies do meet they will pass through each other, with gravity distorting both galaxies severely and ejecting some gas, dust and stars into <a href="http://en.wikipedia.org/wiki/Intergalactic_space" title="Intergalactic space">intergalactic space</a>. They will travel apart, slow down, and then again be drawn towards each other, and again collide. Eventually both galaxies will have merged completely, streams of gas and dust will be flying through the space near the newly formed giant elliptical galaxy. Out of the gas ejected from the merger, new globular clusters and maybe even new dwarf galaxies may form and become the halo of the elliptical. The globulars from both M31 and the Milky Way will also form part of the halo; globulars are so tightly held together that they are largely immune to large scale galactic interactions. On the stellar scale, little will happen. <strong>If anybody is around to watch the merger</strong> (“If it is on a collision course, the impact is predicted to occur <strong>in about 3 billion years</strong>.” (<a href="http://en.wikipedia.org/wiki/Andromeda_Galaxy">S</a>)], <strong>it will be a slow, but magnificent event, with the sight of a distorted M31 spectacularly spanning the entire sky.</strong><br>(<a href="http://en.wikipedia.org/wiki/Galaxy_formation_and_evolution#Elliptical_galaxies">S</a>)</div>
-</blockquote>
+<div>Giant <a href="http://en.wikipedia.org/wiki/Elliptical_galaxy">elliptical galaxies</a> are probably formed by mergers on a grander scale. In the <a href="http://en.wikipedia.org/wiki/Local_Group" title="Local Group">Local Group</a>, the Milky Way and <a href="http://en.wikipedia.org/wiki/M31" title="M31">M31</a> (the <a href="http://en.wikipedia.org/wiki/Andromeda_Galaxy" title="Andromeda Galaxy">Andromeda Galaxy</a>) are gravitationally bound, and currently approaching each other at high speed. Since we cannot determine the speed of M31 perpendicular to the line from us to it, we do not know if it will collide with the Milky Way. If the two galaxies do meet they will pass through each other, with gravity distorting both galaxies severely and ejecting some gas, dust and stars into <a href="http://en.wikipedia.org/wiki/Intergalactic_space" title="Intergalactic space">intergalactic space</a>. They will travel apart, slow down, and then again be drawn towards each other, and again collide. Eventually both galaxies will have merged completely, streams of gas and dust will be flying through the space near the newly formed giant elliptical galaxy. Out of the gas ejected from the merger, new globular clusters and maybe even new dwarf galaxies may form and become the halo of the elliptical. The globulars from both M31 and the Milky Way will also form part of the halo; globulars are so tightly held together that they are largely immune to large scale galactic interactions. On the stellar scale, little will happen. <strong>If anybody is around to watch the merger</strong> (“If it is on a collision course, the impact is predicted to occur <strong>in about 3 billion years</strong>.” (<a href="http://en.wikipedia.org/wiki/Andromeda_Galaxy">S</a>)], <strong>it will be a slow, but magnificent event, with the sight of a distorted M31 spectacularly spanning the entire sky.</strong><br>(<a href="http://en.wikipedia.org/wiki/Galaxy_formation_and_evolution#Elliptical_galaxies">S</a>)</div></blockquote>
 ]]></description>
 			<category>found-on-the-internets</category>
 		</item>
@@ -8713,7 +8639,7 @@ publication <a href="http://www.nava.org/Flag%20Design/GFBF/gfbf-1.htm"><em>Good
 		<item>
 			<title>bitten; shy</title>
 			<link>https://halcanary.org/vv/2006/05/21/593/</link>
-			<guid isPermaLink="false">f3f38140-c6a2-57a2-a0ba-f8f460567a0c</guid>
+			<guid isPermaLink="false">3719760d-69a3-5f33-982b-c10396f37858</guid>
 			<pubDate>Sun, 21 May 2006 00:04:41 -0500</pubDate>
 			<description><![CDATA[<p>Everytime I go into my storage room in the basement, I get spider bites. New plan: I'm getting as many boxes out of there this evening as possible, and leave the big stuff for much later. Then I avoid the basement.</p>
 <hr />
@@ -8737,8 +8663,7 @@ echo &quot;Time until ${DDAY}:&quot;
 echo &quot;$SECONDS seconds&quot;
 echo &quot;$MEGASECONDS megaseconds&quot;
 echo &quot;$WEEKS weeks + $EXTRAS days&quot;
-echo &quot;$DAYS days&quot; ; echo &quot;&quot;
-</code></pre>
+echo &quot;$DAYS days&quot; ; echo &quot;&quot;</code></pre>
 ]]></description>
 			<category>movies</category>
 		</item>
@@ -9204,7 +9129,7 @@ Hmmm. 300 kW*h/month ~= 411 Watts. Most of that is proboably the computer and th
 		<item>
 			<title>palm pilot scripts</title>
 			<link>https://halcanary.org/vv/2006/02/10/560/</link>
-			<guid isPermaLink="false">3ff2e9d2-4571-56e8-a1d3-82a8441f1774</guid>
+			<guid isPermaLink="false">3a3ba3a8-fd82-5a98-a133-ed138c4a9af2</guid>
 			<pubDate>Fri, 10 Feb 2006 14:26:59 -0600</pubDate>
 			<description><![CDATA[<p>Pilot scripts:</p>
 <pre><code>#!/bin/sh
@@ -9222,15 +9147,14 @@ exec pilot-xfer -i &quot;$@&quot;
 ## $HOME/Palm/INSTALL_EVERYTHING.sh
 exec $HOME/Palm/pilot-xfer-install \
     $HOME/Palm/Docs/*.pdb \
-    $HOME/Palm/Apps/*.prc
-</code></pre>
+    $HOME/Palm/Apps/*.prc</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
 		<item>
 			<title>track-numbers/id3tag</title>
 			<link>https://halcanary.org/vv/2006/02/08/559/</link>
-			<guid isPermaLink="false">874a88e1-c7cc-5bb8-b5cc-f1e1f34526a1</guid>
+			<guid isPermaLink="false">6c18af24-6303-5fc0-896c-99819621c628</guid>
 			<pubDate>Wed, 08 Feb 2006 11:32:36 -0600</pubDate>
 			<description><![CDATA[<pre><code>#!/bin/sh
 ## track-numbers.sh
@@ -9240,8 +9164,7 @@ for NUMBER in $(seq -w 1 99); do
     if (/bin/ls *${NUMBER}* &amp;&gt; /dev/null); then
         id3tag -t ${NUMBER} *${NUMBER}*
     fi
-done
-</code></pre>
+done</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
@@ -9561,7 +9484,7 @@ Trip to FL, 2005 November.</p>
 		<item>
 			<title>Recursive Shred And Remove</title>
 			<link>https://halcanary.org/vv/2005/11/11/531/</link>
-			<guid isPermaLink="false">4d054c78-db81-5d7e-ad82-bdb4d08f7e4f</guid>
+			<guid isPermaLink="false">d0fc6c8a-fc61-547a-8f4c-082ed9e73253</guid>
 			<pubDate>Fri, 11 Nov 2005 15:30:34 -0600</pubDate>
 			<description><![CDATA[<pre><code>#!/bin/sh
 ##  RECURSIVE SHRED AND REMOVE
@@ -9581,8 +9504,7 @@ for x in &quot;$@&quot; ; do
   else
     shred -n 1 -u &quot;$x&quot;
   fi
-done
-</code></pre>
+done</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
@@ -10285,7 +10207,7 @@ Brendan McKay (Editor-in-Chief) [Electronic Journal of Combinatorics]</p>
 		<item>
 			<title>id3tag --genre</title>
 			<link>https://halcanary.org/vv/2005/06/14/474/</link>
-			<guid isPermaLink="false">fd572f1a-b612-5c8d-9272-0e01bd06bd8e</guid>
+			<guid isPermaLink="false">7d354190-acd9-5507-80bd-4328759bd703</guid>
 			<pubDate>Tue, 14 Jun 2005 12:34:16 -0500</pubDate>
 			<description><![CDATA[<p><strong>WARNING: boring linux-related post follows!</strong></p>
 <p>Here's how to quickly fix the genres of your mp3 colection.</p>
@@ -10293,8 +10215,7 @@ Brendan McKay (Editor-in-Chief) [Electronic Journal of Combinatorics]</p>
 <pre><code>$ lame --genre-list | sort -n | column
 </code></pre>
 <p>Pick one. In general, the lower the number, the more standard it is. Suppose we pick genre #17 (rock).</p>
-<pre><code>id3tag --genre=17 filelist
-</code></pre>
+<pre><code>id3tag --genre=17 filelist</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
@@ -10503,11 +10424,10 @@ outside.</p>
 		<item>
 			<title>ups$ uptime</title>
 			<link>https://halcanary.org/vv/2005/05/10/459/</link>
-			<guid isPermaLink="false">8fa788e5-c735-56b8-9a90-61dd295212a4</guid>
+			<guid isPermaLink="false">d53bc641-65b5-547c-bc21-73c461b600a3</guid>
 			<pubDate>Tue, 10 May 2005 09:24:03 -0500</pubDate>
 			<description><![CDATA[<pre><code>[hal@ups(pts/1) ~]$ uptime
- 09:23:09  up 133 days, 12:35, 2 users, load average: 0.00, 0.01, 0.00
-</code></pre>
+ 09:23:09  up 133 days, 12:35, 2 users, load average: 0.00, 0.01, 0.00</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
@@ -11093,12 +11013,11 @@ You scored 100% Beginner, 93% Intermediate, 87% Advanced, and 66% Expert!</p>
 		<item>
 			<title>My favorite email interface</title>
 			<link>https://halcanary.org/vv/2005/02/27/409/</link>
-			<guid isPermaLink="false">72cefd39-6ece-5afc-b6de-00390eadbc16</guid>
+			<guid isPermaLink="false">f8bccbdd-2330-5b3b-bd77-e930c80e182b</guid>
 			<pubDate>Sun, 27 Feb 2005 19:19:45 -0600</pubDate>
 			<description><![CDATA[<p>Because I'm geek, AND I'm lazy.</p>
 <pre><code>echo 'Mom, what recipe do you use for chili?' \
- | mutt mom -s chili
-</code></pre>
+ | mutt mom -s chili</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
@@ -11378,7 +11297,7 @@ I rediscovered this a couple of weeks ago when I was looking for something fun t
 		<item>
 			<title>When v. Until</title>
 			<link>https://halcanary.org/vv/2005/01/04/383/</link>
-			<guid isPermaLink="false">2fa92e8d-a50c-55d9-ab61-77f9428b99bc</guid>
+			<guid isPermaLink="false">6124aad3-d3f0-5302-8336-bada1ce33b65</guid>
 			<pubDate>Tue, 04 Jan 2005 10:12:09 -0600</pubDate>
 			<description><![CDATA[<p>A short story, based off of a dream last night....</p>
 <pre><code>		    When v. Until
@@ -11432,8 +11351,7 @@ see the disappointment on his face.
 
 I got up and left the room without looking at them.
 
-I had made an jackass out of myself yet again.
-</code></pre>
+I had made an jackass out of myself yet again.</code></pre>
 ]]></description>
 			<category>life</category>
 		</item>
@@ -11500,12 +11418,11 @@ and<br />
 		<item>
 			<title>happy</title>
 			<link>https://halcanary.org/vv/2004/12/14/375/</link>
-			<guid isPermaLink="false">43ef38ae-58dd-59c5-bb2f-2e69fbb09fac</guid>
+			<guid isPermaLink="false">74f773df-92d1-58fe-8380-0b72f4348e6b</guid>
 			<pubDate>Tue, 14 Dec 2004 17:19:24 -0600</pubDate>
 			<description><![CDATA[<p>Stolen from <a href="http://www.bobharris.com/index.php?option=com_content&amp;task=view&amp;id=265&amp;Itemid=2">here</a></p>
 <blockquote>
-<form action="https://halcanary.org/formmail.cgi" method="post"><div>Happy<br><input type="checkbox" name="Christmas" value="T">Christmas<br><input type="checkbox" name="Chanukah" value="T">Chanukah<br><input type="checkbox" name="Kwanzaa" value="T">Kwanzaa<br><input type="checkbox" name="O Shohgatsu" value="T">O Shohgatsu<br><input type="checkbox" name="Diwali" value="T">Diwali<br><input type="checkbox" name="Soyal" value="T">Soyal<br><input type="checkbox" name="Tongji" value="T">Tongji<br><input type="checkbox" name="Zagmuk" value="T">Zagmuk (for you ancient Mesopotamians with Internet access) or<br><input type="checkbox" name="Dazh Boh" value="T">festival of Dazh Boh (not to be confused with Dodge Ball).And in case my bases aren't fully covered:<br><input type="checkbox" name="Everything" value="T">Happy Everything!<br><input type="checkbox" name="Everything" value="T">Happy Nothing.<br><input type="submit" value="SUBMIT"></div></form>
-</blockquote>
+<form action="https://halcanary.org/formmail.cgi" method="post"><div>Happy<br><input type="checkbox" name="Christmas" value="T">Christmas<br><input type="checkbox" name="Chanukah" value="T">Chanukah<br><input type="checkbox" name="Kwanzaa" value="T">Kwanzaa<br><input type="checkbox" name="O Shohgatsu" value="T">O Shohgatsu<br><input type="checkbox" name="Diwali" value="T">Diwali<br><input type="checkbox" name="Soyal" value="T">Soyal<br><input type="checkbox" name="Tongji" value="T">Tongji<br><input type="checkbox" name="Zagmuk" value="T">Zagmuk (for you ancient Mesopotamians with Internet access) or<br><input type="checkbox" name="Dazh Boh" value="T">festival of Dazh Boh (not to be confused with Dodge Ball).And in case my bases aren't fully covered:<br><input type="checkbox" name="Everything" value="T">Happy Everything!<br><input type="checkbox" name="Everything" value="T">Happy Nothing.<br><input type="submit" value="SUBMIT"></div></form></blockquote>
 ]]></description>
 			<category>life</category>
 		</item>
@@ -11679,7 +11596,7 @@ and styrofoam popcorn. That's all.</p>
 		<item>
 			<title>FC3</title>
 			<link>https://halcanary.org/vv/2004/11/26/358/</link>
-			<guid isPermaLink="false">56807ba8-b12a-5642-b245-b59d371b7d9f</guid>
+			<guid isPermaLink="false">e2579cdf-f2c0-5618-9811-4d02880e8e77</guid>
 			<pubDate>Fri, 26 Nov 2004 17:16:23 -0600</pubDate>
 			<description><![CDATA[<p>I installed Fedora Core 3 on my workstaion at home this month. It works fine; I get slightly more up to date versions of the software I use, no big deal. For those who care (really, for my own reference), here's how I set things up.</p>
 <p><strong>FILESYSTEM</strong></p>
@@ -11798,8 +11715,7 @@ pcm.!default {
         type plug
         slave.pcm &quot;dmix&quot;
 }
-EOF
-</code></pre>
+EOF</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
@@ -11975,7 +11891,7 @@ in todays <em>Times</em>. It discusses two possible outcomes: a market crash or 
 		<item>
 			<title>Chaotic</title>
 			<link>https://halcanary.org/vv/2004/10/31/345/</link>
-			<guid isPermaLink="false">d3f550a8-4ef3-55ba-8f6f-54f7c2fde1fe</guid>
+			<guid isPermaLink="false">a23d53e2-353f-538d-845a-6453236d113e</guid>
 			<pubDate>Sun, 31 Oct 2004 14:20:39 -0600</pubDate>
 			<description><![CDATA[<p>Over the past month, this graph has shown completely chaotic behavior.</p>
 <p><img src="https://halcanary.org/images/2004-10-31-ec-graph.png" alt="[http://www.electoral-vote.com/]" /></p>
@@ -11989,8 +11905,7 @@ foreach $n (0..600){
     $x = $x*(1-$x)*3.8;
     if ( $n % 11 == 0) {
         print &quot;$n $x \n&quot; if ($n&gt;200); }
-}
-</code></pre>
+}</code></pre>
 ]]></description>
 			<category>politics</category>
 		</item>
@@ -12478,7 +12393,7 @@ mt_trackback
 		<item>
 			<title>Fun with Gnome 2</title>
 			<link>https://halcanary.org/vv/2004/08/20/306/</link>
-			<guid isPermaLink="false">ab740ef7-c8f1-5fe7-91e8-09aa06108816</guid>
+			<guid isPermaLink="false">cf7fa09e-69fb-541b-8ba5-247067d83f23</guid>
 			<pubDate>Fri, 20 Aug 2004 12:20:44 -0500</pubDate>
 			<description><![CDATA[<p>These two commands set keybindings for horizonatally and vertically maximizing a window. Most of the time when you maximize, you only need one of the two dimentions to be bigger.</p>
 <pre><code>$ gconftool-2 --type string -s \
@@ -12486,8 +12401,7 @@ mt_trackback
   '&lt;Ctrl&gt;&lt;Alt&gt;v'
 $ gconftool-2 --type string -s \
   /apps/metacity/window_keybindings/maximize_horizontally \
-  '&lt;Ctrl&gt;&lt;Alt&gt;h'
-</code></pre>
+  '&lt;Ctrl&gt;&lt;Alt&gt;h'</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
@@ -12607,7 +12521,7 @@ $ echo $(( (1035692-686080)/1024 ))
 		<item>
 			<title>Apple Pro Keyboard with Linux</title>
 			<link>https://halcanary.org/vv/2004/08/14/300/</link>
-			<guid isPermaLink="false">0131b323-8fb5-5ac9-ab36-6cebc9d5d4ad</guid>
+			<guid isPermaLink="false">ea53c49d-a588-58bc-9446-ca2bc2568a00</guid>
 			<pubDate>Sat, 14 Aug 2004 16:05:05 -0500</pubDate>
 			<description><![CDATA[<p>I have a 109-key Apple Pro Keyboard. This is my current .Xmodmap file:</p>
 <pre><code>! xmodmap $HOME/.Xmodmap
@@ -12626,8 +12540,7 @@ keycode 184 = Pause
 
 !! Remove Caps_Lock
 remove Lock = Caps_Lock
-keycode 66 = F20
-</code></pre>
+keycode 66 = F20</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
@@ -12732,7 +12645,7 @@ Intransitive Verb:
 		<item>
 			<title>Weak Cryto will Die! /or/ Anything that Can be Cracked Will be Cracked!</title>
 			<link>https://halcanary.org/vv/2004/08/12/294/</link>
-			<guid isPermaLink="false">6a27d2ad-bb21-54a3-8a41-03d724e240b8</guid>
+			<guid isPermaLink="false">461f7a5c-93f4-54c0-8dab-2c9e765641bb</guid>
 			<pubDate>Thu, 12 Aug 2004 08:15:08 -0500</pubDate>
 			<description><![CDATA[<p><a href="http://hublog.hubmed.org/archives/000926.html">“Jon ‘DVD Jon’ Johansen has cracked the Apple Lossless encryption used by the Airport Express to communicate with iTunes.”</a></p>
 <pre><code>AirPort Express RSA Public Key,
@@ -12743,8 +12656,7 @@ KSKv6kDqnw4UwPdpOMXziC/AMj3Z/lUVX1G7WSHCAWKf1zNS1eLvqr+boEjXuB
 OitnZ/bDzPHrTOZz0Dew0uowxf/+sG+NCK3eQJVxqcaJ/vEHKIVd2M+5qL71yJ
 Q+87X6oV3eaYvt3zWZYD6z5vYTcrtij2VZ9Zmni/UAaHqn9JdsBWLUEpVviYnh
 imNVvYFZeCXg/IdTQ+x4IRdiXNv5hEew==
-Exponent: AQAB
-</code></pre>
+Exponent: AQAB</code></pre>
 ]]></description>
 			<category>mindless-link-propagation</category>
 		</item>
@@ -12795,7 +12707,7 @@ Exponent: AQAB
 		<item>
 			<title>Tweak MT&#x27;s RSS</title>
 			<link>https://halcanary.org/vv/2004/08/11/290/</link>
-			<guid isPermaLink="false">cae56f13-4a99-51f0-b328-a8b0906f64db</guid>
+			<guid isPermaLink="false">c9632748-aa24-5a12-aa77-68caf487c356</guid>
 			<pubDate>Wed, 11 Aug 2004 15:02:42 -0500</pubDate>
 			<description><![CDATA[<p>To make Movabletype's RSS-feed work the way mine does, replace</p>
 <pre><code>&lt;description&gt;
@@ -12805,8 +12717,7 @@ Exponent: AQAB
 <p>with</p>
 <pre><code>&lt;description&gt;
 &lt;$MTEntryBody encode_xml=&quot;1&quot; $&gt;
-&lt;/description&gt;
-</code></pre>
+&lt;/description&gt;</code></pre>
 ]]></description>
 			<category>meta</category>
 		</item>
@@ -12918,7 +12829,7 @@ Everything after that is a legal fiction (for a good reason).</p>
 		<item>
 			<title>tar c | ssh &#x22;tar x&#x22;</title>
 			<link>https://halcanary.org/vv/2004/08/03/281/</link>
-			<guid isPermaLink="false">f349a46b-a977-57ef-8dec-7a6c006f8e84</guid>
+			<guid isPermaLink="false">0264ccca-cd64-5657-bbca-9a29574a9d60</guid>
 			<pubDate>Tue, 03 Aug 2004 18:44:29 -0500</pubDate>
 			<description><![CDATA[<pre><code>tar c directory/ | ssh lensman &quot;tar x&quot;
 </code></pre>
@@ -12937,8 +12848,7 @@ $ tar xzf directory.tgz
 <p>rsync is the king of the rcp replacements. It has the most options and is best for incremental backups.<br />
 Set the RSYNC_RSH variable in your ~/.bashrc file.</p>
 <pre><code>$ export RSYNC_RSH=&quot;ssh&quot;
-$ rsync -r directory lensman:
-</code></pre>
+$ rsync -r directory lensman:</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
@@ -12971,7 +12881,7 @@ $ rsync -r directory lensman:
 		<item>
 			<title>sshd attacks</title>
 			<link>https://halcanary.org/vv/2004/07/26/278/</link>
-			<guid isPermaLink="false">e792dcc8-3890-538c-a295-f4933700ee08</guid>
+			<guid isPermaLink="false">a5f1e658-43dd-59c1-8bda-75f78a663204</guid>
 			<pubDate>Mon, 26 Jul 2004 13:47:22 -0500</pubDate>
 			<description><![CDATA[<p>I've been getting attacks against my sshd server:</p>
 <pre><code>Failed logins from these:
@@ -12994,8 +12904,7 @@ $ rsync -r directory lensman:
 <pre><code>## lines added to /etc/ssh/sshd_config
 PermitRootLogin no
 DenyUsers admin guest test user
-## EOF
-</code></pre>
+## EOF</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
@@ -13051,7 +12960,7 @@ DenyUsers admin guest test user
 		<item>
 			<title>Inequality in Action</title>
 			<link>https://halcanary.org/vv/2004/07/19/273/</link>
-			<guid isPermaLink="false">9d41aded-41c7-5101-a22b-2b0fa02653a7</guid>
+			<guid isPermaLink="false">9efa7049-53a6-5d2e-b718-a1ba4644a410</guid>
 			<pubDate>Mon, 19 Jul 2004 13:21:37 -0500</pubDate>
 			<description><![CDATA[<pre><code>* votes/person :=
    ( (electoral college votes for this state) /
@@ -13086,8 +12995,7 @@ DenyUsers admin guest test user
 <tr><td> Alabama        </td><td> 1.057 </td><td> D.C.          </td><td> 2.749 </td></tr>
 <tr><td> Oklahoma       </td><td> 1.061 </td><td> Wyoming       </td><td> 3.175 </td></tr>
 <tr><td> Minnesota      </td><td> 1.064 </td><td>               </td><td>       </td></tr>
-</tbody></table>
-]]></description>
+</tbody></table>]]></description>
 			<category>politics</category>
 		</item>
 		<item>
@@ -13133,7 +13041,7 @@ RewriteRule ^cat$ /archives/cat.php [L]
 		<item>
 			<title>Getting Started With Mono</title>
 			<link>https://halcanary.org/vv/2004/07/16/269/</link>
-			<guid isPermaLink="false">14fd188d-4eb8-5c33-8e7f-9e31e40ee111</guid>
+			<guid isPermaLink="false">bb3ff261-aa9f-54bf-94ad-ac20e32219e9</guid>
 			<pubDate>Fri, 16 Jul 2004 20:33:21 -0500</pubDate>
 			<description><![CDATA[<p><img src="https://halcanary.org/images/mono.png" alt="[mono logo]" /></p>
 <p><a href="http://www.mono-project.com/">Mono</a> has just hit 1.0. It is now time for me to abandon Java and start developing in c# instead. Let's get started:</p>
@@ -13170,8 +13078,7 @@ hello world
 $
 </code></pre>
 <p>Yea!</p>
-<pre><code>$ monodoc &amp;
-</code></pre>
+<pre><code>$ monodoc &amp;</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
@@ -13356,7 +13263,7 @@ $
 		<item>
 			<title>about &#x22;$@&#x22;</title>
 			<link>https://halcanary.org/vv/2004/06/01/252/</link>
-			<guid isPermaLink="false">e912f79f-c286-5c9b-94c9-8e875e210625</guid>
+			<guid isPermaLink="false">87f09b7c-a95b-5c45-a99b-948a34593a43</guid>
 			<pubDate>Tue, 01 Jun 2004 16:43:27 -0500</pubDate>
 			<description><![CDATA[<pre><code>#!/bin/sh
 ## test.sh ##
@@ -13378,8 +13285,7 @@ for x in &quot;$@&quot; ; do echo $x; done ; echo &quot;&quot; ;
 3
 
 1
-2 3
-</code></pre>
+2 3</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
@@ -13492,11 +13398,10 @@ echo &quot;&quot;;
 		<item>
 			<title>duh...add-hook</title>
 			<link>https://halcanary.org/vv/2004/05/08/244/</link>
-			<guid isPermaLink="false">c8307af0-bb33-51d2-8ca0-e6e24e8ca933</guid>
+			<guid isPermaLink="false">bd475a94-134f-5799-9cf9-b3893cb0a7c8</guid>
 			<pubDate>Sat, 08 May 2004 16:36:13 -0500</pubDate>
 			<description><![CDATA[<pre><code>;; from ~/.emacs
-(add-hook 'php-mode-hook 'html-mode)
-</code></pre>
+(add-hook 'php-mode-hook 'html-mode)</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
@@ -13518,7 +13423,7 @@ echo &quot;&quot;;
 		<item>
 			<title>spoof</title>
 			<link>https://halcanary.org/vv/2004/05/08/242/</link>
-			<guid isPermaLink="false">a1b8e051-838b-5f3a-9a6d-adcc9682c3c8</guid>
+			<guid isPermaLink="false">c80dd3d3-5800-562e-a37a-e488524d75f6</guid>
 			<pubDate>Sat, 08 May 2004 13:50:40 -0500</pubDate>
 			<description><![CDATA[<p>Some spammer is spoofing my email address into their &quot;From: &quot; address. Evil bastards. This seems like libel of some kind.</p>
 <pre><code>Return-Path: &lt;&gt;
@@ -13592,8 +13497,7 @@ Content-Type: multipart/related;
 X-Priority: 3
 X-MSMail-Priority: Normal
 
---========/408696F2038263BE/smtp8.libero.it--
-</code></pre>
+--========/408696F2038263BE/smtp8.libero.it--</code></pre>
 ]]></description>
 			<category>spam</category>
 		</item>
@@ -13654,7 +13558,7 @@ colden madly monsters in the heat of our revenge</em></p>
 		<item>
 			<title>Stupid Scripts</title>
 			<link>https://halcanary.org/vv/2004/05/01/236/</link>
-			<guid isPermaLink="false">d4865ace-fecd-5c02-a5fd-928bf3205105</guid>
+			<guid isPermaLink="false">09c57ed7-83f2-5d6e-a067-a934942704ec</guid>
 			<pubDate>Sat, 01 May 2004 14:39:03 -0500</pubDate>
 			<description><![CDATA[<pre><code>#!/usr/bin/perl
 ## ~/bin/prepend-something ##
@@ -13675,15 +13579,14 @@ foreach $file (@files) {
     my $filenew = $file;
     $filenew =~ s/$old/$new/g;
     system (&quot;mv -v \&quot;$file\&quot; \&quot;$filenew\&quot;&quot;);
-}
-</code></pre>
+}</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
 		<item>
 			<title>Tiny Vaio Laptop</title>
 			<link>https://halcanary.org/vv/2004/04/28/whc03/</link>
-			<guid isPermaLink="false">7d30efe8-e627-5b0c-bc10-b0d10ec912aa</guid>
+			<guid isPermaLink="false">33832b12-1669-52de-ae32-03515133253c</guid>
 			<pubDate>Wed, 28 Apr 2004 17:07:07 -0500</pubDate>
 			<description><![CDATA[<p>Notes on my Sony VAIO PCG-SRX87 laptop, purchased in 2002.</p>
 <p><img src="https://halcanary.org/photos/2002-12-15-vaio-w-kbd.jpg" alt="[]" /></p>
@@ -13718,13 +13621,12 @@ foreach $file (@files) {
 <tr><td>LCD Screen          </td><td>Sony Notebook LCD (1024x768)                      </td></tr>
 <tr><td>Audio               </td><td>Yamaha AC-XG Audio Device                         </td></tr>
 <tr><td>                    </td><td>                                                  </td></tr>
-</tbody></table>
-]]></description>
+</tbody></table>]]></description>
 		</item>
 		<item>
 			<title>The weather and my notebook.</title>
 			<link>https://halcanary.org/vv/2004/04/28/234/</link>
-			<guid isPermaLink="false">983f6a28-c12b-571d-b931-a257e26f6eef</guid>
+			<guid isPermaLink="false">58ed3868-9998-564c-89c4-90d7ea857972</guid>
 			<pubDate>Wed, 28 Apr 2004 16:15:58 -0500</pubDate>
 			<description><![CDATA[<p>The weather is so nice that I'd like to go work outside, but alas, my <a href="https://halcanary.org/p/vaio/">notebook</a>'s screen was cracked last fall. I think I might look into finding a replacement screen soon, so that I can go work outside.</p>
 <p>Additionally, I'd like to try the 2.6 kernel on that thing. Mabe 2.6 works better.</p>
@@ -13750,8 +13652,7 @@ taxes will be added to your order at checkout.
 Sony Direct Accessories &amp; Parts Center web site -
 http://www.sony.com/accessories
 
-Thank you for your interest in Sony.
-</code></pre>
+Thank you for your interest in Sony.</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
@@ -14067,7 +13968,7 @@ Than the things you say.</em></p>
 		<item>
 			<title>reset-ramdisk</title>
 			<link>https://halcanary.org/vv/2004/03/28/212/</link>
-			<guid isPermaLink="false">be532db5-59d4-530a-84dd-e4879e5ce9a2</guid>
+			<guid isPermaLink="false">b71c969a-2d36-593f-81d5-6c22c66ccb8f</guid>
 			<pubDate>Sun, 28 Mar 2004 00:50:48 -0600</pubDate>
 			<description><![CDATA[<p>The issue: as far as I know, no editor shreds old versions of files upon writing new versions. How do you keep data off of a hard drive? Use the ramdisk.</p>
 <pre><code>#!/bin/sh
@@ -14083,8 +13984,7 @@ chmod 777 /mnt/ramdisk
 </code></pre>
 <p>Run that code before and after you are done with your work.<br />
 (Assumes a single-user system.) Don't forget to turn off swap!</p>
-<pre><code>$ sudo /sbin/swapoff -a
-</code></pre>
+<pre><code>$ sudo /sbin/swapoff -a</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
@@ -14260,7 +14160,7 @@ I installed a Gimp 2 beta off of <a href="http://download.fedora.us/fedora/fedor
 		<item>
 			<title>Backups</title>
 			<link>https://halcanary.org/vv/2004/03/13/195/</link>
-			<guid isPermaLink="false">c200fd6e-0793-51fa-b79c-f7e5e7fce74f</guid>
+			<guid isPermaLink="false">b299427a-9b76-5e27-8b86-5fe16b7b4f47</guid>
 			<pubDate>Sat, 13 Mar 2004 21:22:49 -0600</pubDate>
 			<description><![CDATA[<p>I've decided to back up my mp3 collection for the first time ever. It's a whopping 14 Gb. which I split up among 21 CDs.</p>
 <p>I'll be burning all night.</p>
@@ -14310,8 +14210,7 @@ sub padnum {
     return &quot;00&quot;.$num if $num&lt;10;
     return &quot;0&quot;.$num if $num&lt;100;
     return &quot;$num&quot;;
-}
-</code></pre>
+}</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
@@ -14459,7 +14358,7 @@ classic. It's a prose tranlation. Verse translations loose something in the chan
 		<item>
 			<title>maple</title>
 			<link>https://halcanary.org/vv/2004/03/09/188/</link>
-			<guid isPermaLink="false">e856ca75-0866-5014-8378-299b6499ea9e</guid>
+			<guid isPermaLink="false">a15af570-d760-50fe-a4af-2cc52e825bbd</guid>
 			<pubDate>Tue, 09 Mar 2004 22:41:59 -0600</pubDate>
 			<description><![CDATA[<p>I'm starting to think in maple these days. Cool</p>
 <pre><code>#begin Maple Code
@@ -14482,8 +14381,7 @@ for n from 0 to 4 do
   printf(&quot;x(%a) - P1(%a)/Q1(%a) = %q\n&quot;,n,n,n,
   simplify(x(n) - (P1(n,x0)/Q1(n,x0)))):
 end do:
-#end Maple Code
-</code></pre>
+#end Maple Code</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
@@ -14584,7 +14482,7 @@ $ ./crypt-otp.pl badotp x | gunzip - | less
 		<item>
 			<title>manipulating filenames</title>
 			<link>https://halcanary.org/vv/2004/03/04/182/</link>
-			<guid isPermaLink="false">90701c2b-2cbc-534f-9778-3547748950a5</guid>
+			<guid isPermaLink="false">ff2e8e3b-9ecc-52f7-a728-ae432a5633cf</guid>
 			<pubDate>Thu, 04 Mar 2004 12:27:41 -0600</pubDate>
 			<description><![CDATA[<p>gphoto2 grabs images off of my camera and saves it as IMG_XXXX.JPG. I use the <a href="https://halcanary.org/archives/000073.html">despacify script</a> to convert to lowercase img_XXXX.jpg. Then I run this script to rename th file to include the date the photo was taken: 2003-11-06-img-XXXX.jpg. Then if the filesystem modification date is changed (e.g. if I rotate it.) I will still know when it originated.</p>
 <pre><code>#!/bin/sh
@@ -14593,8 +14491,7 @@ for FILE in img_????.jpg ; do
     X=( `stat  -c %y $FILE ` )
     DATE=${X[0]}
     mv -v &quot;$FILE&quot; &quot;$DATE-$FILE&quot;
-done
-</code></pre>
+done</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
@@ -14633,14 +14530,13 @@ done
 		<item>
 			<title>imagemagik convert</title>
 			<link>https://halcanary.org/vv/2004/03/01/178/</link>
-			<guid isPermaLink="false">60584c06-f8ed-5a31-b102-f07b3ad5e2fe</guid>
+			<guid isPermaLink="false">9696771f-0a21-51e6-8a37-48d75352bf67</guid>
 			<pubDate>Mon, 01 Mar 2004 09:51:16 -0600</pubDate>
 			<description><![CDATA[<p>This:</p>
 <pre><code>convert -size 120x120 $1 -resize 120x120 +profile &quot;*&quot; $2
 </code></pre>
 <p>Works better than this:</p>
-<pre><code>convert -sample 120x120 $1 $2
-</code></pre>
+<pre><code>convert -sample 120x120 $1 $2</code></pre>
 ]]></description>
 			<category>computers-code</category>
 		</item>
@@ -15000,7 +14896,7 @@ I find myself praying for temperatures as warm as 15 ° F.</p>
 		<item>
 			<title>Computer Names</title>
 			<link>https://halcanary.org/vv/2004/01/08/153/</link>
-			<guid isPermaLink="false">effb9eec-da3e-5d88-8818-d4c5f58e9a28</guid>
+			<guid isPermaLink="false">b083234a-2468-5487-ab6d-26069b35b2d8</guid>
 			<pubDate>Thu, 08 Jan 2004 00:55:43 -0600</pubDate>
 			<description><![CDATA[<p>Here is a table of names I've given computers I've been responsible for:</p>
 <table class="border">
@@ -15019,8 +14915,7 @@ I find myself praying for temperatures as warm as 15 ° F.</p>
 <tr><td> dalek      </td><td> Athlon 1400 </td><td> media pc    </td><td> Named by Hal after the race of cyborgs.                     </td></tr>
 <tr><td> lensman    </td><td> Athlon 2200 </td><td> workstation </td><td> Named by Hal after the space opera warriors.                </td></tr>
 <tr><td> hiro (2)   </td><td> PIII-800    </td><td> notebook    </td><td> Named by Hal after hiro (1).                                </td></tr>
-</table>
-]]></description>
+</table>]]></description>
 			<category>computers-code</category>
 		</item>
 		<item>
@@ -16791,7 +16686,7 @@ somewhere.</p>
 		<item>
 			<title>LOTR</title>
 			<link>https://halcanary.org/vv/2002/12/12/23/</link>
-			<guid isPermaLink="false">b26d822f-0e9e-5ea0-8077-f0b6375a972e</guid>
+			<guid isPermaLink="false">b9f541c2-fcc7-5cef-b6f7-698845f8159a</guid>
 			<pubDate>Thu, 12 Dec 2002 00:00:00 -0600</pubDate>
 			<description><![CDATA[<p>Only a little more than one more week of work left. Yeah!</p>
 <hr />
@@ -16808,8 +16703,7 @@ somewhere.</p>
 <tr><td> *Math 522<br>Advanced Calculus </td><td> 11:00 MWF     </td><td> Chen, Xiuxiong       </td><td> 6 </td></tr>
 <tr><td> Math 542<br>Modern Algebra     </td><td> 9:30-10:45 TR </td><td> Uhlenbrock, Dietrich </td><td> 2 </td></tr>
 <tr><td> Math 571<br>Mathematical Logic </td><td> 9:55 MWF      </td><td> Dolich, Alfred       </td><td> 0 </td></tr>
-</tbody></table>
-]]></description>
+</tbody></table>]]></description>
 			<category>life</category>
 		</item>
 		<item>

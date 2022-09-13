@@ -135,8 +135,7 @@ def ftpputfiles(host, direct, *files, **kwds):
         fl = open(localfile, &#39;rb&#39;)
         f.storbinary(&#39;STOR %s&#39; % filename, fl)
         fl.close()
-    f.quit()
-</code></pre>
+    f.quit()</code></pre>
 
 </div>
 </div>

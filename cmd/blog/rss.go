@@ -1,5 +1,8 @@
 package main
 
+// Copyright 2022 Hal Canary
+// Use of this program is governed by the file LICENSE.
+
 import (
 	"crypto/sha256"
 	"encoding/xml"
@@ -50,7 +53,7 @@ func MakeRSS(now time.Time, blog Blog, posts []Post, dst io.Writer) error {
 	}
 	for _, p := range posts {
 		url := concat(blog.BaseUrl, blog.Prefix, p.LongId(), "/")
-		content := p.Content(1)
+		content := PostContent(p, 1)
 		if p.Summary != "" {
 			content = concat("<p>", html.EscapeString(p.Summary), "</p>\n", content)
 		}

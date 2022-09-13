@@ -6,6 +6,7 @@ import (
 	"encoding/xml"
 
 	"log"
+	"math"
 	"os"
 	"path/filepath"
 	"sort"
@@ -16,7 +17,12 @@ import (
 
 	"github.com/HalCanary/booker/dom"
 	"github.com/HalCanary/halcanary.github.io/check"
+	"github.com/HalCanary/halcanary.github.io/commonmarker"
 	"github.com/HalCanary/halcanary.github.io/filebuf"
+	"github.com/HalCanary/halcanary.github.io/logpost"
+	"gitlab.com/golang-commonmark/markdown"
+	"golang.org/x/net/html"
+	"golang.org/x/net/html/atom"
 )
 
 type Blog struct {
@@ -31,6 +37,8 @@ type Blog struct {
 	Icon        string // URL for icon/
 	path        string // Infered to be os.Args[1] + "/docs"
 }
+
+const timestampFormat = "2006-01-02 15:04:05Z07:00 (MST)"
 
 var (
 	waitgroup        sync.WaitGroup
@@ -66,6 +74,17 @@ func readChangedFilesChan() {
 	}
 }
 
+type Post = logpost.Post
+type postList []Post
+
+func (a postList) Len() int           { return len(a) }
+func (a postList) Swap(i, j int)      { a[i], a[j] = a[j], a[i] }
+func (a postList) Less(i, j int) bool { return a[j].Time.Before(a[i].Time) }
+
+func SortPosts(posts []Post) {
+	sort.Sort(postList(posts))
+}
+
 func main() {
 	log.SetFlags(log.Lshortfile)
 
@@ -81,13 +100,21 @@ func main() {
 	matches, err := filepath.Glob(blogRoot + "/src/BlogSrc/*.md")
 	check.Check(err)
 
-	var allPosts []Post
+	var allPosts []logpost.Post
 	for _, path := range matches {
 		f, err := os.Open(path)
 		check.Check(err)
-		post, err := ParsePost(f)
+		post, err := logpost.Parse(f)
 		f.Close()
 		check.Check(err)
+		if len(post.Markdown) == 0 && post.Title == "" && post.Summary == "" {
+			log.Printf("%q has no content.\n", path)
+			continue
+		}
+		check.Assert(post.Id != "")
+		if post.Title == "" {
+			post.Title = post.Time.Format("January 2, 2006")
+		}
 		post.Source = filepath.Base(path)
 		allPosts = append(allPosts, post)
 	}
@@ -228,7 +255,7 @@ func (blog Blog) makeIndex(allPosts []Post) *dom.Node {
 			dom.Elem("li", link("#"+p.LongId(), p.Title)),
 			dom.TextNode("\n"),
 		)
-		article := p.Article(2, concat(blog.BaseUrl, blog.Prefix, p.LongId(), "/"), blog.Prefix)
+		article := PostArticle(p, 2, concat(blog.BaseUrl, blog.Prefix, p.LongId(), "/"), blog.Prefix)
 		addImageSize(article, blog.BaseUrl, blog.path)
 		main.Append(
 			article,
@@ -411,7 +438,7 @@ func (blog Blog) makeListingPage(posts []Post, title string, prev, next *dom.Nod
 				dom.TextNode("\n  "),
 				link(concat(blog.BaseUrl, blog.Prefix, post.LongId(), "/"), post.Title),
 				dom.TextNode("\n  "),
-				dom.TextNode(post.Timestamp()),
+				dom.TextNode(post.Time.Format(timestampFormat)),
 			)
 			if post.Summary != "" {
 				li.Append(
@@ -487,7 +514,7 @@ func (blog Blog) longLink(p *Post, description string) *dom.Node {
 }
 
 func (blog Blog) makeIndividualPost(post Post, prev, next *Post) *dom.Node {
-	article := post.Article(1, concat(blog.BaseUrl, blog.Prefix, post.LongId(), "/"), blog.Prefix)
+	article := PostArticle(post, 1, concat(blog.BaseUrl, blog.Prefix, post.LongId(), "/"), blog.Prefix)
 	addImageSize(article, blog.BaseUrl, blog.path)
 	return dom.Element("html", dom.Attr{"lang": blog.Language},
 		dom.TextNode("\n"),
@@ -555,6 +582,115 @@ func searcher(domain string) *dom.Node {
 				dom.Element("input", dom.Attr{"id": "submitter", "value": "Search", "type": "submit"}),
 				dom.TextNode("\n"),
 			),
+			dom.TextNode("\n"),
+		),
+		dom.TextNode("\n"),
+	)
+}
+
+func header(level int, attributes dom.Attr, children ...*dom.Node) *dom.Node {
+	return dom.Element("h"+strconv.Itoa(level), attributes, children...)
+}
+
+func parseHtml(s string) *dom.Node {
+	div := &html.Node{Type: html.ElementNode, Data: "div", DataAtom: atom.Div}
+	nodes, err := html.ParseFragment(strings.NewReader(s), div)
+	check.Check(err)
+	div.AppendChild(&html.Node{Type: html.TextNode, Data: "\n"})
+	for _, n := range nodes {
+		div.AppendChild(n)
+	}
+	div.AppendChild(&html.Node{Type: html.TextNode, Data: "\n"})
+	return (*dom.Node)(div)
+}
+
+func PostContent(post Post, level int) string {
+	markdowner := commonmarker.Markdowner()
+	tokens := markdowner.Parse(post.Markdown)
+	lowestLevel := math.MaxInt
+	for _, token := range tokens {
+		if h, ok := token.(*markdown.HeadingOpen); ok && h != nil {
+			if h.HLevel < lowestLevel {
+				lowestLevel = h.HLevel
+			}
+		}
+	}
+	if lowestLevel < math.MaxInt {
+		levelChange := level + 1 - lowestLevel
+		for _, token := range tokens {
+			if h, ok := token.(*markdown.HeadingOpen); ok && h != nil {
+				h.HLevel += levelChange
+			} else if h, ok := token.(*markdown.HeadingClose); ok && h != nil {
+				h.HLevel += levelChange
+			}
+		}
+	}
+	return markdowner.RenderTokensToString(tokens)
+}
+
+func PostArticle(post Post, level int, url string, prefix string) *dom.Node {
+	var cats *dom.Node
+	if len(post.Categories) > 0 {
+		cats = dom.Elem("div")
+		for i, c := range post.Categories {
+			if i != 0 {
+				cats.Append(dom.TextNode("; "))
+			}
+			cats.Append(
+				dom.Element("a", dom.Attr{
+					"href":  concat(prefix, "category/", c, "/"),
+					"class": "p-category",
+				}, dom.TextNode("#"+c)),
+			)
+		}
+	}
+
+	var summary *dom.Node
+	var summary2 *dom.Node
+	if post.Summary != "" {
+		summary = dom.Element("p", dom.Attr{"class": "p-summary"}, dom.TextNode(post.Summary))
+		summary2 = dom.Element("div", dom.Attr{"style": "display:none;"}, dom.TextNode(post.Summary))
+	}
+	return dom.Element("article", dom.Attr{"id": post.LongId(), "class": "h-entry"},
+		dom.TextNode("\n"),
+		dom.Elem("header",
+			dom.TextNode("\n"),
+			dom.Comment(concat(" SRC= ", post.Source, " ")),
+			dom.TextNode("\n"),
+			header(level, dom.Attr{"class": "blogtitle p-name"}, dom.TextNode(post.Title)),
+			dom.TextNode("\n"),
+			summary,
+			dom.TextNode("\n"),
+			dom.Element("div", dom.Attr{"class": "byline plainlink"},
+				dom.TextNode("\n"),
+				dom.Elem("div",
+					dom.TextNode("\n"),
+					dom.Element("div", dom.Attr{"class": "p-author"}, dom.TextNode(post.Author)),
+					dom.TextNode("\n"),
+					dom.Elem("div",
+						dom.Element("time",
+							dom.Attr{"datetime": post.Time.Format(time.RFC3339), "class": "dt-published"},
+							dom.TextNode(post.Time.Format(timestampFormat)),
+						),
+					),
+					dom.TextNode("\n"),
+					dom.Elem("div",
+						dom.Element("a", dom.Attr{"href": url, "class": "u-url u-uid"}, dom.TextNode(url)),
+					),
+					dom.TextNode("\n"),
+					cats,
+					dom.TextNode("\n"),
+				),
+				dom.TextNode("\n"),
+			),
+			dom.TextNode("\n"),
+		),
+		dom.TextNode("\n"),
+		dom.Element("div", dom.Attr{"class": "content e-content"},
+			dom.TextNode("\n"),
+			summary2,
+			dom.TextNode("\n"),
+			parseHtml(PostContent(post, level)),
 			dom.TextNode("\n"),
 		),
 		dom.TextNode("\n"),
