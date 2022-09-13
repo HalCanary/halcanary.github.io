@@ -7,8 +7,8 @@
 		<language>en-US</language>
 		<copyright>Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.</copyright>
 		<link>https://halcanary.org/vv/</link>
-		<pubDate>Tue, 13 Sep 2022 13:13:30 -0400</pubDate>
-		<lastBuildDate>Tue, 13 Sep 2022 13:13:30 -0400</lastBuildDate>
+		<pubDate>Tue, 13 Sep 2022 13:41:54 -0400</pubDate>
+		<lastBuildDate>Tue, 13 Sep 2022 13:41:54 -0400</lastBuildDate>
 		<image>
 			<url>https://halcanary.org/images/HAL_CANARY_20191008_512.jpg</url>
 			<title>Voder-Vocoder</title>
@@ -11045,23 +11045,23 @@ gqview, perl-GD, sodipodi, gnofract4d, and starfighter</p>
 		<item>
 			<title>Congressional Districts</title>
 			<link>https://halcanary.org/vv/2005/03/01/412/</link>
-			<guid isPermaLink="false">a0ac012a-b151-5741-b871-67371e0ce621</guid>
+			<guid isPermaLink="false">08419ce4-9387-5984-ae38-e23b2cdef9b7</guid>
 			<pubDate>Tue, 01 Mar 2005 15:44:30 -0600</pubDate>
 			<description><![CDATA[<p>In my polisci class, we discussed congressional redistricting. This post is an attempt to summarize the situation.</p>
 <blockquote>
 <p><strong>Irregularly Shaped Districts</strong><br />
 1991-2000<br />
-(<a href="http://www.fairvote.org/redistricting/reports/remanual/il.htm">SOURCE</a>)</p>
-<p><img src="http://www.fairvote.org/redistricting/reports/remanual/pictures/il4.jpg" alt="IL D4 1992-2001" /><br />
+(<a href="https://web.archive.org/web/20081203013908/http://www.fairvote.org/redistricting/reports/remanual/il.htm">SOURCE</a>)</p>
+<p><img src="https://web.archive.org/web/20081203013908im_/http://www.fairvote.org/redistricting/reports/remanual/pictures/il4.jpg" alt="IL D4 1992-2001" />
 Illinois District 4</p>
-<p><img src="http://www.fairvote.org/redistricting/reports/remanual/pictures/il1.jpg" alt="IL D1 1992-2001" /><br />
+<p><img src="https://web.archive.org/web/20081203013908im_/http://www.fairvote.org/redistricting/reports/remanual/pictures/il1.jpg" alt="IL D1 1992-2001" />
 Illinois District 1</p>
-<p><img src="http://www.fairvote.org/redistricting/reports/remanual/pictures/tn4.jpg" alt="TN D4 1992-2001" /><br />
+<p><img src="https://web.archive.org/web/20081203021738im_/http://www.fairvote.org/redistricting/reports/remanual/pictures/tn4.jpg" alt="TN D4 1992-2001" />
 Tenn. District 4</p>
-<p><img src="http://www.fairvote.org/redistricting/reports/remanual/pictures/tn3.jpg" alt="TN D3 1992-2001" /><br />
+<p><img src="https://web.archive.org/web/20081203021738im_/http://www.fairvote.org/redistricting/reports/remanual/pictures/tn3.jpg" alt="TN D3 1992-2001" />
 Tenn. District 3</p>
 </blockquote>
-<p><a href="http://www.fairvote.org/wheel/wheel.htm">Redistricting Roulette!</a></p>
+<p><a href="https://web.archive.org/web/20210411044208/https://www.fairvote.org/wheel/wheel.htm">Redistricting Roulette!</a></p>
 ]]></description>
 			<category>politics</category>
 		</item>
@@ -16591,7 +16591,7 @@ Yeah, it's gone</em></p>
 		<item>
 			<title>No war due to national drinking holiday.</title>
 			<link>https://halcanary.org/vv/2003/03/17/40/</link>
-			<guid isPermaLink="false">e2fdfe20-58f6-57cc-b7ce-7756233ca95d</guid>
+			<guid isPermaLink="false">0434f8b4-8c83-5738-b1a4-494ef41f5794</guid>
 			<pubDate>Mon, 17 Mar 2003 18:08:35 -0600</pubDate>
 			<description><![CDATA[<p>Today is St. Patrick's Day. Kyle says that the war would have started today, but for that fact. Someone in the administration probably noted that it would be unseemly for Al-Jazeera to broadcast images of Americans geting roaring drunk on Jameson's, Guinness, and Harp on the day that we start an invasion. Probably worse than when some Palestinean punks cheered September 11.</p>
 <p>I kinda think Kyle is right. About the timing issue, that is.</p>
@@ -16599,7 +16599,8 @@ Yeah, it's gone</em></p>
 <hr />
 <p>It's spring today. It's time for me to switch to a lighter coat. That's too bad, 'cause I like my leather coat.</p>
 <hr />
-<p><img src="http://ups.physics.wisc.edu/~hal/Fish_Tank/fish-color-big.jpg" alt="&lt;" /> I've been working on a <a href="http://ups.physics.wisc.edu/~hal/Fish_Tank/">Fish Simulation</a>, based on the thoughts of Chris Wilson.</p>
+<!-- ![<Fish><](http://ups.physics.wisc.edu/~hal/Fish_Tank/fish-color-big.jpg) -->
+<p>I've been working on a <a href="http://ups.physics.wisc.edu/~hal/Fish_Tank/">Fish Simulation</a>, based on the thoughts of Chris Wilson.</p>
 ]]></description>
 			<category>rant</category>
 		</item>

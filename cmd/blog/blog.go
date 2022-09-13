@@ -231,7 +231,7 @@ func (blog Blog) makeIndex(allPosts []Post) *dom.Node {
 		article := p.Article(2, concat(blog.BaseUrl, blog.Prefix, p.LongId(), "/"), blog.Prefix)
 		addImageSize(article, blog.BaseUrl, blog.path)
 		main.Append(
-			article ,
+			article,
 			dom.TextNode("\n"),
 			dom.Elem("hr"),
 			dom.TextNode("\n"),

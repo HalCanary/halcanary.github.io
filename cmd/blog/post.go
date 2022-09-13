@@ -47,7 +47,7 @@ func header(level int, attributes dom.Attr, children ...*dom.Node) *dom.Node {
 }
 
 func parseHtml(s string) *dom.Node {
-	div := &html.Node{Type: html.ElementNode, Data: "div", DataAtom:atom.Div}
+	div := &html.Node{Type: html.ElementNode, Data: "div", DataAtom: atom.Div}
 	nodes, err := html.ParseFragment(strings.NewReader(s), div)
 	check.Check(err)
 	div.AppendChild(&html.Node{Type: html.TextNode, Data: "\n"})

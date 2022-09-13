@@ -47,7 +47,7 @@ func main() {
 
 	makeRedirects(siteConfig, rootPath)
 
-	files, err :=  getFiles(sourceDir)
+	files, err := getFiles(sourceDir)
 	check.Check(err)
 
 	for _, path := range files {
