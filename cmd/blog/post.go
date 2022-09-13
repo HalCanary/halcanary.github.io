@@ -182,6 +182,9 @@ func ParsePost(src io.Reader) (post Post, err error) {
 			}
 		}
 	}
+	if post.Title == "" {
+		post.Title = post.Time.Format("January 2, 2006")
+	}
 	var buffer bytes.Buffer
 	for scanner.Scan() {
 		buffer.Write(scanner.Bytes())
