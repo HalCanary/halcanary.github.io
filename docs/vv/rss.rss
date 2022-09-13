@@ -7,8 +7,8 @@
 		<language>en-US</language>
 		<copyright>Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.</copyright>
 		<link>https://halcanary.org/vv/</link>
-		<pubDate>Mon, 12 Sep 2022 14:47:18 -0400</pubDate>
-		<lastBuildDate>Mon, 12 Sep 2022 14:47:18 -0400</lastBuildDate>
+		<pubDate>Tue, 13 Sep 2022 11:03:43 -0400</pubDate>
+		<lastBuildDate>Tue, 13 Sep 2022 11:03:43 -0400</lastBuildDate>
 		<image>
 			<url>https://halcanary.org/images/HAL_CANARY_20191008_512.jpg</url>
 			<title>Voder-Vocoder</title>
@@ -3823,9 +3823,11 @@ exit 0
 		<item>
 			<title>that someday the sun would die</title>
 			<link>https://halcanary.org/vv/2009/09/04/809/</link>
-			<guid isPermaLink="false">ad2945de-c096-5ebe-b6ed-3cb00f47a1b0</guid>
+			<guid isPermaLink="false">9562130b-c5bb-5b4a-90ca-fa5336e93602</guid>
 			<pubDate>Fri, 04 Sep 2009 08:30:56 -0500</pubDate>
-			<description><![CDATA[<p><img src="http://www.newyorker.com/images/2009/08/24/p233/090824_r18725_p233.jpg" alt="[]" /> “Don’t worry about the sun dying! You and everyone you know will be long gone by then!” (<a href="http://www.newyorker.com/fiction/features/2009/08/24/090824fi_fiction_eggers?printable=true">link</a>)</p>
+			<description><![CDATA[<p><img src="/images/newyorker_090824_r18725_p233.jpg" alt="http://www.newyorker.com/images/2009/08/24/p233/090824_r18725_p233.jpg" />)
+“Don’t worry about the sun dying! You and everyone you know will be long gone by then!”
+(<a href="http://www.newyorker.com/fiction/features/2009/08/24/090824fi_fiction_eggers?printable=true">link</a>)</p>
 ]]></description>
 			<category>books,movies</category>
 		</item>
