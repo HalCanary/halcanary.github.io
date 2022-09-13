@@ -117,7 +117,10 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
     if err != nil {
         return err
     }
-    return syscall.Exec(path, append([]string{cmd}, args...), syscall.Environ())
+    return syscall.Exec(
+        path,
+        append([]string{cmd}, args...),
+        syscall.Environ())
 }
 </code></pre>
 <p>is the Go equivilent of the C <code>execv</code> function!</p>
