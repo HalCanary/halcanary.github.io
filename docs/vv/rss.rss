@@ -7,13 +7,32 @@
 		<language>en-US</language>
 		<copyright>Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.</copyright>
 		<link>https://halcanary.org/vv/</link>
-		<pubDate>Tue, 13 Sep 2022 15:17:30 -0400</pubDate>
-		<lastBuildDate>Tue, 13 Sep 2022 15:17:30 -0400</lastBuildDate>
+		<pubDate>Tue, 13 Sep 2022 15:33:06 -0400</pubDate>
+		<lastBuildDate>Tue, 13 Sep 2022 15:33:06 -0400</lastBuildDate>
 		<image>
 			<url>https://halcanary.org/images/HAL_CANARY_20191008_512.jpg</url>
 			<title>Voder-Vocoder</title>
 			<link>https://halcanary.org/vv/</link>
 		</image>
+		<item>
+			<title>Go exec function</title>
+			<link>https://halcanary.org/vv/2022/09/13/3026/</link>
+			<guid isPermaLink="false">c2cdaca3-571c-5a49-a535-19b421147a6f</guid>
+			<pubDate>Tue, 13 Sep 2022 15:32:58 -0400</pubDate>
+			<description><![CDATA[<p>Execute a program, causing the program that is currently being run to be replaced with a new program</p>
+<p>The following</p>
+<pre><code class="language-go">func execv(cmd string, args ...string) error {
+    path, err := exec.LookPath(cmd)
+    if err != nil {
+        return err
+    }
+    return syscall.Exec(path, append([]string{cmd}, args...), syscall.Environ())
+}
+</code></pre>
+<p>is the Go equivilent of the C <code>execv</code> function!</p>
+]]></description>
+			<category>computers-code</category>
+		</item>
 		<item>
 			<title>September 12, 2022</title>
 			<link>https://halcanary.org/vv/2022/09/12/3025/</link>

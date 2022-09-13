@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Voder-Vocoder: September 13, 2022</title>
+<title>Voder-Vocoder: Go exec function</title>
 <link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==" rel="icon"/>
 <style>
 @media (prefers-color-scheme:dark) {body {background-color:#000;color:#FFF;}
@@ -66,20 +66,30 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 <article class="h-entry" id="2022/09/13/3026">
 <header>
 <!-- SRC= 2022-09-13-3026.md -->
-<h1 class="blogtitle p-name">September 13, 2022</h1>
-
+<h1 class="blogtitle p-name">Go exec function</h1>
+<p class="p-summary">Execute a program, causing the program that is currently being run to be replaced with a new program</p>
 <div class="byline plainlink">
 <div>
 <div class="p-author">Hal Canary</div>
-<div><time class="dt-published" datetime="2022-09-13T15:04:57-04:00">2022-09-13 15:04:57-04:00 (EDT)</time></div>
+<div><time class="dt-published" datetime="2022-09-13T15:32:58-04:00">2022-09-13 15:32:58-04:00 (EDT)</time></div>
 <div><a class="u-url u-uid" href="https://halcanary.org/vv/2022/09/13/3026/">https://halcanary.org/vv/2022/09/13/3026/</a></div>
-
+<div><a class="p-category" href="/vv/category/computers-code/">#computers-code</a></div>
 </div>
 </div>
 </header>
 <div class="content e-content">
-
+<div style="display:none;">Execute a program, causing the program that is currently being run to be replaced with a new program</div>
 <div>
+<p>The following</p>
+<pre><code class="language-go">func execv(cmd string, args ...string) error {
+    path, err := exec.LookPath(cmd)
+    if err != nil {
+        return err
+    }
+    return syscall.Exec(path, append([]string{cmd}, args...), syscall.Environ())
+}
+</code></pre>
+<p>is the Go equivilent of the C <code>execv</code> function!</p>
 
 </div>
 </div>

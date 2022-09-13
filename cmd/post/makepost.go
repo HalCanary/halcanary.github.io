@@ -60,13 +60,13 @@ func main() {
 		o.WriteString(s)
 	}
 	os.Stdout.WriteString(dst + "\n")
-	vim(dst)
+	check.Check(execv("vim", dst))
 }
 
-func vim(path string) {
-	file, err := exec.LookPath("vim")
-	check.Check(err)
-	err = syscall.Exec(file, []string{file, path}, syscall.Environ())
-	check.Check(err)
+func execv(cmd string, args ...string) error {
+	path, err := exec.LookPath(cmd)
+	if err != nil {
+		return err
+	}
+	return syscall.Exec(path, append([]string{cmd}, args...), syscall.Environ())
 }
-

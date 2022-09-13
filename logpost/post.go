@@ -64,7 +64,7 @@ func Parse(src io.Reader) (post Post, err error) {
 		buffer.Write(scanner.Bytes())
 		buffer.Write([]byte{'\n'})
 	}
-	post.Markdown = bytes.TrimLeft( bytes.TrimRight(buffer.Bytes(), " \t\n"), "\n")
+	post.Markdown = bytes.TrimLeft(bytes.TrimRight(buffer.Bytes(), " \t\n"), "\n")
 	err = scanner.Err()
 	return
 }
