@@ -7,8 +7,8 @@
 		<language>en-US</language>
 		<copyright>Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.</copyright>
 		<link>https://halcanary.org/vv/</link>
-		<pubDate>Tue, 13 Sep 2022 13:41:54 -0400</pubDate>
-		<lastBuildDate>Tue, 13 Sep 2022 13:41:54 -0400</lastBuildDate>
+		<pubDate>Tue, 13 Sep 2022 13:50:28 -0400</pubDate>
+		<lastBuildDate>Tue, 13 Sep 2022 13:50:28 -0400</lastBuildDate>
 		<image>
 			<url>https://halcanary.org/images/HAL_CANARY_20191008_512.jpg</url>
 			<title>Voder-Vocoder</title>
@@ -3824,9 +3824,9 @@ exit 0
 		<item>
 			<title>that someday the sun would die</title>
 			<link>https://halcanary.org/vv/2009/09/04/809/</link>
-			<guid isPermaLink="false">9562130b-c5bb-5b4a-90ca-fa5336e93602</guid>
+			<guid isPermaLink="false">2869dadb-f648-584a-82d6-f2670569c615</guid>
 			<pubDate>Fri, 04 Sep 2009 08:30:56 -0500</pubDate>
-			<description><![CDATA[<p><img src="/images/newyorker_090824_r18725_p233.jpg" alt="http://www.newyorker.com/images/2009/08/24/p233/090824_r18725_p233.jpg" />)
+			<description><![CDATA[<p><img src="https://halcanary.org/images/newyorker_090824_r18725_p233.jpg" alt="http://www.newyorker.com/images/2009/08/24/p233/090824_r18725_p233.jpg" />)
 “Don’t worry about the sun dying! You and everyone you know will be long gone by then!”
 (<a href="http://www.newyorker.com/fiction/features/2009/08/24/090824fi_fiction_eggers?printable=true">link</a>)</p>
 ]]></description>
@@ -8387,7 +8387,7 @@ print &quot;\n&quot;;
 		<item>
 			<title>The one true way.</title>
 			<link>https://halcanary.org/vv/2006/06/12/613/</link>
-			<guid isPermaLink="false">3deb440a-3959-5b02-a316-387cd9dd57d4</guid>
+			<guid isPermaLink="false">96da0e7f-53ff-5bc6-acfd-5e722ce7800b</guid>
 			<pubDate>Mon, 12 Jun 2006 10:50:12 -0500</pubDate>
 			<description><![CDATA[<p>How to make iced tea. The one true way.</p>
 <p>Any tea that does not use boiling water runs the risk of not killing<br />
@@ -8402,7 +8402,7 @@ the bacteria that might be living in the tea leaves.</p>
 </li>
 <li>
 <p>Get a two-quart pitcher (Thick high-density polyethylene
-(<img src="/images/50px-Recycle-resin-logos-lr_02.png" alt="HDPE" />) is<br />
+(<img src="https://halcanary.org/images/50px-Recycle-resin-logos-lr_02.png" alt="HDPE" />) is<br />
 good.) Add two large (6g) tea bags. Add about 5 cups of boiling<br />
 water (This will fill the pitcher about 60% of the way.)</p>
 </li>
@@ -9550,10 +9550,10 @@ Trip to FL, 2005 November.</p>
 		<item>
 			<title>Doesn&#x27;t that offend you?</title>
 			<link>https://halcanary.org/vv/2005/11/12/532/</link>
-			<guid isPermaLink="false">2f938256-8bcd-5238-8981-b01d3306386a</guid>
+			<guid isPermaLink="false">729d360f-b66b-5aca-acd5-99f6b68560ed</guid>
 			<pubDate>Sat, 12 Nov 2005 23:02:13 -0600</pubDate>
 			<description><![CDATA[<p>Young man, you speak so well!</p>
-<p><img src="/images/2005-11-12-huey+riley.jpg" alt="[]" /></p>
+<p><img src="https://halcanary.org/images/2005-11-12-huey+riley.jpg" alt="[]" /></p>
 <p>I enjoyed the show.</p>
 ]]></description>
 			<category>tv</category>
@@ -15468,9 +15468,9 @@ words,</span> words!</p>
 		<item>
 			<title>Applets for SSL</title>
 			<link>https://halcanary.org/vv/2003/09/25/114/</link>
-			<guid isPermaLink="false">54cc763a-9927-5ed2-9aa9-e90c1ec7acbb</guid>
+			<guid isPermaLink="false">af62fd35-26ca-537c-8c98-8c6d0d770853</guid>
 			<pubDate>Thu, 25 Sep 2003 21:17:51 -0500</pubDate>
-			<description><![CDATA[<p><a href="/SSL/"><img src="/SSL/images/rotor-182.png" alt="[rotor model]" /></a>
+			<description><![CDATA[<p><a href="/SSL/"><img src="https://halcanary.org/SSL/images/rotor-182.png" alt="[rotor model]" /></a>
 Been doing some Java programing for math. I'm getting paid to do this too! I've written two applets that deal with a rotor-based sandpile model.</p>
 ]]></description>
 			<category>mathematics</category>
@@ -17096,15 +17096,15 @@ Lord, have mercy.</em></p>
 		<item>
 			<title>Update on my life:</title>
 			<link>https://halcanary.org/vv/2002/05/20/7/</link>
-			<guid isPermaLink="false">d2d153b6-5972-5511-b0fc-e886f34dd5ed</guid>
+			<guid isPermaLink="false">e52ed534-88a9-52c6-84c0-e9cec3b0b5f0</guid>
 			<pubDate>Mon, 20 May 2002 20:08:53 -0500</pubDate>
 			<description><![CDATA[<p>Yesterday I finished a E2 node I've been working on for a while: <a href="http://everything2.com/?node=From+Beirut+to+Jerusalem">http://everything2.com/?node=From+Beirut+to+Jerusalem</a>. Today I noded <a href="http://everything2.com/?node=Kyoto+Now%21">http://everything2.com/?node=Kyoto+Now!</a>.</p>
 <p>Spending more money on CD's.</p>
 <p>Got these nifty thumb screws for my computer. They are the same size as the srews that you use to keep the covers on the case, but they have an oversized thumb knob to make access easier. For the first time in months, my case covers are screwed on!</p>
 <p>As of last weekend, I've been graduated for exactly one year. Crazy.</p>
-<p><img src="/art/devil-01.jpg" alt="/art/devil-01.jpg" /></p>
-<p><img src="/art/devil-02.jpg" alt="/art/devil-02.jpg" /></p>
-<p><img src="/art/devil-03.jpg" alt="/art/devil-03.jpg" /></p>
+<p><img src="https://halcanary.org/art/devil-01.jpg" alt="/art/devil-01.jpg" /></p>
+<p><img src="https://halcanary.org/art/devil-02.jpg" alt="/art/devil-02.jpg" /></p>
+<p><img src="https://halcanary.org/art/devil-03.jpg" alt="/art/devil-03.jpg" /></p>
 <p>Later.</p>
 ]]></description>
 			<category>life</category>
