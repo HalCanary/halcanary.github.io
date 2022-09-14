@@ -6,7 +6,7 @@
 
 ## current status:
 
-I currently live in Durham, North Carolina, with my wife, two children, and dog.
+I currently live in Durham, North Carolina, with my wife, two children, and two dogs.
 
 ## index:
 
