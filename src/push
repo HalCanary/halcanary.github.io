@@ -1,4 +1,4 @@
 #! /bin/sh
 cd "$(dirname "$0")/.."
 make
-[ "$(git diff --shortstat -- docs/vv src)" ] && git commit docs/vv src -m `date +%Y-%m-%d` && git push
+[ "$(git diff --shortstat -- docs/vv src)" ] && git commit docs src -m `date +%Y-%m-%d` && git push
