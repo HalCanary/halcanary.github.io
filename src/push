@@ -1,5 +1,4 @@
 #! /bin/sh
 cd "$(dirname "$0")/.."
-./blog .
-./site .
+make
 [ "$(git diff --shortstat -- docs/vv src)" ] && git commit docs/vv src -m `date +%Y-%m-%d` && git push
