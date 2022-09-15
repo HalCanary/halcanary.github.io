@@ -106,6 +106,5 @@ image-upload.php
 
 * * *
 
-file modification time: 2004-11-29 00:40:55
+<div class="rightside"><em>file modification time: 2004-11-29 00:40:55</em></div>
 
-* * *

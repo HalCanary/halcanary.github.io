@@ -29,6 +29,5 @@ The Vatican (that's a suburb of Rome)
 
 * * *
 
-file modification time: 2003-07-16 05:18:44
+<div class="rightside"><em>file modification time: 2003-07-16 05:18:44</em></div>
 
-* * *

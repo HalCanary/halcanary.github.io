@@ -722,6 +722,5 @@ Let me know if it is useful.
 
 * * *
 
-file modification time: 2006-07-16 15:38:08
+<div class="rightside"><em>file modification time: 2006-07-16 15:38:08</em></div>
 
-* * *

@@ -375,6 +375,5 @@ The next three compile into complete files in the /archive/ directory.
 
 * * *
 
-file modification time: 2003-12-17 23:18:50
+<div class="rightside"><em>file modification time: 2003-12-17 23:18:50</em></div>
 
-* * *

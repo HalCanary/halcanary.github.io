@@ -64,6 +64,4 @@ print "\n";
 
 * * *
 
-file modification time: 2003-12-16 16:59:13
-
-* * *
+<div class="rightside"><em>file modification time: 2003-12-16 16:59:13</em></div>

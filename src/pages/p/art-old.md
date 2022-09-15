@@ -110,6 +110,4 @@ In October 1997, this girl I met drew a picture of me while I drew a picture of 
 
 * * *
 
-file modification time: 2003-07-16 05:18:41
-
-* * *
+<div class="rightside"><em>file modification time: 2003-07-16 05:18:41</em></div>

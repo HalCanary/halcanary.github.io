@@ -87,6 +87,4 @@ If I want to print a photo to hang on the wall, I'll go back to the original ima
 
 * * *
 
-file modification time: 2004-07-15 20:30:12
-
-* * *
+<div class="rightside"><em>file modification time: 2004-07-15 20:30:12</em></div>

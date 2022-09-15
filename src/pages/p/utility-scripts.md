@@ -332,6 +332,5 @@ Convert mp3 files to CD-Audio. \[Depends on Bourne Shell, coreutils, lame, sox.\
 
 * * *
 
-file modification time: 2007-06-11 18:58:50
+<div class="rightside"><em>file modification time: 2007-06-11 18:58:50</em></div>
 
-* * *

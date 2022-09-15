@@ -171,6 +171,5 @@ Restart the daemon
 
 * * *
 
-file modification time: 2006-10-31 19:16:23
+<div class="rightside"><em>file modification time: 2006-10-31 19:16:23</em></div>
 
-* * *

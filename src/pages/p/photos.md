@@ -84,6 +84,5 @@ Contents
 
 * * *
 
-file modification time: 2005-05-25 02:53:58
+<div class="rightside"><em>file modification time: 2005-05-25 02:53:58</em></div>
 
-* * *

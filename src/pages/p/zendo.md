@@ -12,10 +12,5 @@
 
 * * *
 
-<div class="rightside">
-
-*file modification time: 2003-07-16 05:18:50*  
-[HOME](/)
-
-</div>
+<div class="rightside"><em>file modification time: 2003-07-16 05:18:50</em></div>
 

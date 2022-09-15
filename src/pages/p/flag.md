@@ -46,6 +46,5 @@ This is a completely novel approach to a flag. If you are going to have a fancy 
 
 * * *
 
-file modification time: 2006-06-06 19:00:01
+<div class="rightside"><em>file modification time: 2006-06-06 19:00:01</em></div>
 
-* * *

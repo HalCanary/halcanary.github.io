@@ -178,6 +178,5 @@ How to use it:
 
 * * *
 
-file modification time: 2006-09-16 03:19:45
+<div class="rightside"><em>file modification time: 2006-09-16 03:19:45</em></div>
 
-* * *

@@ -98,6 +98,5 @@ The tin man.
 
 * * *
 
-file modification time: 2003-07-19 05:35:44
+<div class="rightside"><em>file modification time: 2003-07-19 05:35:44</em></div>
 
-* * *

@@ -72,8 +72,4 @@ The next thing to do is design the look and layout of your page. I'm not going t
 *   Put all your color and paragraph formatting information in a [css](http://www.w3.org/Style/CSS/) file.
 *   Use subtle color shades to differentiate between logical parts of a document.
 
-<div class="rightside">
-
-file modification time: 2003-07-16 05:18:44
-
-</div>
+<div class="rightside"><em>file modification time: 2003-07-16 05:18:44</em></div>

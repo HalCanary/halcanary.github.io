@@ -265,8 +265,4 @@ And here's some sample output:
 
 * * *
 
-* * *
-
-file modification time: 2003-07-16 05:18:49
-
-* * *
+<div class="rightside"><em>file modification time: 2003-07-16 05:18:49</em></div>

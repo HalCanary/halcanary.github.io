@@ -215,8 +215,4 @@ Using the max-width property from CSS2. [This is a good description of the probl
 
 * * *
 
-* * *
-
-file modification time: 2006-09-18 14:08:26
-
-* * *
+<div class="rightside"><em>file modification time: 2006-09-18 14:08:26</em></div>

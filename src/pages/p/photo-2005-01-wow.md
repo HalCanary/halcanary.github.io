@@ -119,8 +119,6 @@ The moon. I need a telescope. I wonder if I can buy those at the auction?
 
 * * *
 
-* * *
 
-file modification time: 2005-01-18 06:55:56
+<div class="rightside"><em>file modification time: 2005-01-18 06:55:56</em></div>
 
-* * *

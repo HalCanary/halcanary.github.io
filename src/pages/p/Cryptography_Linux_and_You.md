@@ -609,6 +609,6 @@ Conclusions: There's a lot more to this subject than just picking the right algo
 
 <div class="rightside">
 
-file modification time: 2007-04-11 18:22:13
+<div class="rightside"><em>file modification time: 2007-04-11 18:22:13</em></div>
 
 </div>

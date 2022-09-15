@@ -27,6 +27,5 @@ SSH fingerprints
 
 * * *
 
-file modification time: 2004-08-20 19:26:13
+<div class="rightside"><em>file modification time: 2004-08-20 19:26:13</em></div>
 
-* * *

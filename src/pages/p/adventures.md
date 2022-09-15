@@ -27,6 +27,4 @@ Most of these were produced around the year 2000.
 
 * * *
 
-file modification time: 2003-07-16 05:18:42
-
-* * *
+<div class="rightside"><em>file modification time: 2003-07-16 05:18:42</em></div>

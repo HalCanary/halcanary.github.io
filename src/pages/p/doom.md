@@ -31,6 +31,4 @@ It is a very dark game.
 
 * * *
 
-file modification time: 2004-08-06 00:37:13
-
-* * *
+<div class="rightside"><em>file modification time: 2004-08-06 00:37:13</em></div>

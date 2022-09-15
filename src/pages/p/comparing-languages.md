@@ -80,6 +80,4 @@ And compile, run, list, and time:
 
 * * *
 
-file modification time: 2006-09-14 18:50:27
-
-* * *
+<div class="rightside"><em>file modification time: 2006-09-14 18:50:27</em></div>

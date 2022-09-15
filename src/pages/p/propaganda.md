@@ -16,8 +16,6 @@ Rumsfeld claims he does all he can to protect troops. Rumsfeld claims that the w
 
 * * *
 
-* * *
 
-file modification time: 2004-12-09 18:34:06
+<div class="rightside"><em>file modification time: 2004-12-09 18:34:06</em></div>
 
-* * *

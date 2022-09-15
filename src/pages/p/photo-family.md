@@ -22,8 +22,5 @@ The Folks: Christmas 1999
 
 * * *
 
-* * *
+<div class="rightside"><em>file modification time: 2003-07-16 05:18:48</em></div>
 
-file modification time: 2003-07-16 05:18:48
-
-* * *

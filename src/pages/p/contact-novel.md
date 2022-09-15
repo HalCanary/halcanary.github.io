@@ -215,6 +215,4 @@ Note: I list a bibliography to (1) resolve any accusation that I steal ideas fro
 
 * * *
 
-file modification time: 2007-03-12 23:43:56
-
-* * *
+<div class="rightside"><em>file modification time: 2007-03-12 23:43:56</em></div>

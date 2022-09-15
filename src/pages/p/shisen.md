@@ -250,8 +250,6 @@ shisen.c
 
 * * *
 
-* * *
 
-file modification time: 2003-12-07 23:45:13
+<div class="rightside"><em>file modification time: 2003-12-07 23:45:13</em></div>
 
-* * *

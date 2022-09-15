@@ -7,6 +7,5 @@ Placeholder page. More information to follow.
 
 * * *
 
-file modification time: 2006-09-15 22:27:37
+<div class="rightside"><em>file modification time: 2006-09-15 22:27:37</em></div>
 
-* * *

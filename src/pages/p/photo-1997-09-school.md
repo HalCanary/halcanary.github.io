@@ -44,6 +44,5 @@ Myself, February 1998. That's about as long as my hair gets.
 
 * * *
 
-file modification time: 2003-07-16 05:18:44
+<div class="rightside"><em>file modification time: 2003-07-16 05:18:44</em></div>
 
-* * *

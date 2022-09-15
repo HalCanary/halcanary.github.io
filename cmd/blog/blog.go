@@ -29,7 +29,8 @@ type Blog struct {
 	Title       string
 	Description string
 	Language    string // RFC-5646
-	Copyright   string // "Copyright YEAR-YEAR Legal Entity. ALL RIGHTS RESERVED."
+	Copyright   string // "Copyright YEAR-YEAR Legal Entity."
+	License     string // "ALL RIGHTS RESERVED."
 	BaseUrl     string // "https://example.com"
 	Prefix      string // "/~example/"
 	ImageLink   string // "/~example/image.png"
@@ -497,7 +498,7 @@ func (blog Blog) makeHead(title string) *dom.Node {
 			"href":  concat(blog.BaseUrl, blog.Prefix, "rss.rss"),
 		}),
 		dom.TextNode("\n"),
-		dom.Comment(concat("\n", blog.Copyright, "\n")),
+		dom.Comment(concat("\n", blog.Copyright, " ", blog.License, "\n")),
 		dom.TextNode("\n"),
 	)
 }

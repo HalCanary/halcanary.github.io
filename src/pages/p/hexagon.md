@@ -523,8 +523,5 @@ hexagon.cpp
 
 * * *
 
-* * *
+<div class="rightside"><em>file modification time: 2003-12-08 05:33:47</em></div>
 
-file modification time: 2003-12-08 05:33:47
-
-* * *

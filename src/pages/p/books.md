@@ -93,6 +93,4 @@ This list will grow.
 
 * * *
 
-file modification time: 2004-03-14 00:28:47
-
-* * *
+<div class="rightside"><em>file modification time: 2004-03-14 00:28:47</em></div>

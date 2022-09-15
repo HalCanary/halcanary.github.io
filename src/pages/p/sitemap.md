@@ -65,6 +65,5 @@ Site Map for Static Pages
 
 * * *
 
-file modification time: 2004-07-15 23:15:32
+<div class="rightside"><em>file modification time: 2004-07-15 23:15:32</em></div>
 
-* * *

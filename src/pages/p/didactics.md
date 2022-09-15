@@ -43,8 +43,5 @@ Furthermore, we're lucky enough to live in a world governed by quantum mechanics
 
 * * *
 
-* * *
+<div class="rightside"><em>file modification time: 2003-07-16 05:18:42</em></div>
 
-file modification time: 2003-07-16 05:18:42
-
-* * *

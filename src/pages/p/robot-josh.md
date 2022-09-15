@@ -9,6 +9,5 @@ Robot Josh
 
 * * *
 
-file modification time: 2006-09-14 20:16:30
+<div class="rightside"><em>file modification time: 2006-09-14 20:16:30</em></div>
 
-* * *

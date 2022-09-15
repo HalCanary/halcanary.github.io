@@ -5,6 +5,5 @@ Google Movie Showtimes
 
 * * *
 
-file modification time: 2006-09-14 18:59:36
+<div class="rightside"><em>file modification time: 2006-09-14 18:59:36</em></div>
 
-* * *

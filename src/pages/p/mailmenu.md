@@ -196,8 +196,5 @@ mailmenu.py
 
 * * *
 
-* * *
+<div class="rightside"><em>file modification time: 2003-12-07 22:23:26</em></div>
 
-file modification time: 2003-12-07 22:23:26
-
-* * *

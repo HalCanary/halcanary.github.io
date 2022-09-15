@@ -157,8 +157,4 @@ I am having problems with dhcpd. More later.
 
 * * *
 
-* * *
-
-file modification time: 2005-06-18 13:34:08
-
-* * *
+<div class="rightside"><em>file modification time: 2005-06-18 13:34:08</em></div>

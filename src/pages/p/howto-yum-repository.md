@@ -199,6 +199,5 @@ Responses are the property of the responders.
 
 * * *
 
-file modification time: 2004-02-20 18:30:44
+<div class="rightside"><em>file modification time: 2004-02-20 18:30:44</em></div>
 
-* * *

@@ -3,7 +3,8 @@
     <Author>Hal Canary</Author>
 	<Description>The Log of Hal Canary</Description>
 	<Language>en-US</Language>
-	<Copyright>Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.</Copyright>
+	<Copyright>Copyright 2002-2022 Hal Canary.</Copyright>
+	<License>ALL RIGHTS RESERVED.</License>
 	<BaseUrl>https://halcanary.org</BaseUrl>
 	<Prefix>/vv/</Prefix>
 	<ImageLink>https://halcanary.org/images/HAL_CANARY_20191008_512.jpg</ImageLink>
@@ -17,7 +18,7 @@ a:link, a:hover, a:active {color:#0CF;}
 @media screen {body {font-family:sans-serif;max-width:35em;margin:22px auto 64px auto;padding:0 8px;}
 }
 body {overflow-wrap:break-word;}
-@page {size:auto;margin:0.25in 0.5in 0.5in 0.5in;}
+@page {size:auto;margin:0.25in 0.5in 0.4in 0.5in;}
 svg {fill:currentColor;}
 img {max-width:100%;height:auto;}
 hr {border-style:solid none;}

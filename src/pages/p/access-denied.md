@@ -5,6 +5,4 @@ This server could not verify that you are authorized to access the document requ
 
 * * *
 
-file modification time: 2003-08-14 03:19:53
-
-* * *
+<div class="rightside"><em>file modification time: 2003-08-14 03:19:53</em></div>

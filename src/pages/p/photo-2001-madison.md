@@ -34,6 +34,5 @@ Somebody riding somebody else's bike indoors. Winter 2001
 
 * * *
 
-file modification time: 2003-07-19 05:38:01
+<div class="rightside"><em>file modification time: 2003-07-19 05:38:01</em></div>
 
-* * *

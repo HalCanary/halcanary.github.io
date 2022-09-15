@@ -13,6 +13,5 @@ Sudoku Solver
 
 * * *
 
-file modification time: 2006-08-02 01:22:17
+<div class="rightside"><em>file modification time: 2006-08-02 01:22:17</em></div>
 
-* * *

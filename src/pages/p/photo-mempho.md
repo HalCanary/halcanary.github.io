@@ -36,6 +36,5 @@ Christmas 2001
 
 * * *
 
-file modification time: 2003-07-16 05:18:48
+<div class="rightside"><em>file modification time: 2003-07-16 05:18:48</em></div>
 
-* * *

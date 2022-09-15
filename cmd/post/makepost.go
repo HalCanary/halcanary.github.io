@@ -16,6 +16,7 @@ import (
 
 type Blog struct {
 	Copyright string
+	License   string
 	Author    string
 }
 
@@ -49,7 +50,7 @@ func main() {
 	check.Check(err)
 	defer o.Close()
 	for _, s := range []string{
-		"COPYRIGHT=", blog.Copyright, "\n",
+		"COPYRIGHT=", blog.Copyright, " ", blog.License, "\n",
 		"AUTHOR=", blog.Author, "\n",
 		"DATE=", now.Format(logpost.TimestampFormat), "\n",
 		"POSTID=", postId, "\n",

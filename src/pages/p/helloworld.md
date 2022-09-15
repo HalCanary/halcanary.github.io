@@ -132,8 +132,5 @@ hello.sh
 
 * * *
 
-* * *
+<div class="rightside"><em>file modification time: 2003-12-08 00:50:23</em></div>
 
-file modification time: 2003-12-08 00:50:23
-
-* * *

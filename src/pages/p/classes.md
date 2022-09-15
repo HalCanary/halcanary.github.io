@@ -76,6 +76,4 @@ Classes Hal Canary took at the UW
 
 * * *
 
-file modification time: 2003-07-16 05:18:41
-
-* * *
+<div class="rightside"><em>file modification time: 2003-07-16 05:18:41</em></div>

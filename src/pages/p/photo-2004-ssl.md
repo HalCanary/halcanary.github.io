@@ -19,6 +19,5 @@
 
 * * *
 
-file modification time: 2004-07-15 18:46:20
+<div class="rightside"><em>file modification time: 2004-07-15 18:46:20</em></div>
 
-* * *

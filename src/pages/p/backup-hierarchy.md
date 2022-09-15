@@ -119,6 +119,4 @@ I use this on my /home/music directory, which is 23 GiB.
 
 * * *
 
-file modification time: 2005-06-24 16:44:06
-
-* * *
+<div class="rightside"><em>file modification time: 2005-06-24 16:44:06</em></div>

@@ -23,6 +23,4 @@ The first card played is the 2♣.
 
 * * *
 
-file modification time: 2005-05-25 05:09:19
-
-* * *
+<div class="rightside"><em>file modification time: 2005-05-25 05:09:19</em></div>

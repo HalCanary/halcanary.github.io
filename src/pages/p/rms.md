@@ -47,8 +47,6 @@ $HOME/bin/rms
 
 * * *
 
-* * *
 
-file modification time: 2003-12-08 21:46:29
+<div class="rightside"><em>file modification time: 2003-12-08 21:46:29</em></div>
 
-* * *

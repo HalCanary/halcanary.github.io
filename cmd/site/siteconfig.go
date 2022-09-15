@@ -12,7 +12,8 @@ import (
 
 type SiteConfig struct {
 	Language  string // RFC-5646
-	Copyright string // "Copyright YEAR-YEAR Legal Entity. ALL RIGHTS RESERVED."
+	Copyright string // "Copyright YEAR-YEAR Legal Entity."
+	License   string // "ALL RIGHTS RESERVED."
 	BaseUrl   string // "https://example.com"
 	Style     string // Inline CSS content.
 	Icon      string // URL for icon/
@@ -42,7 +43,7 @@ func (siteConfig SiteConfig) MakeHead(title string) *dom.Node {
 		dom.TextNode("\n"),
 		dom.Elem("style", dom.TextNode(siteConfig.Style)),
 		dom.TextNode("\n"),
-		dom.Comment("\n"+siteConfig.Copyright+"\n"),
+		dom.Comment("\n"+siteConfig.Copyright + " " + siteConfig.License+"\n"),
 		dom.TextNode("\n"),
 	)
 }

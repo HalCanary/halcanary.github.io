@@ -38,7 +38,7 @@ func MakeRSS(now time.Time, blog Blog, posts []Post, dst io.Writer) error {
 		tag("title", blog.Title),
 		tag("description", blog.Description),
 		tag("language", blog.Language),
-		tag("copyright", blog.Copyright),
+		tag("copyright", blog.Copyright + " " + blog.License),
 		tag("link", blogLink),
 		tag("pubDate", now.Format(time.RFC1123Z)),
 		tag("lastBuildDate", now.Format(time.RFC1123Z)),

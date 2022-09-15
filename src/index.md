@@ -33,13 +33,3 @@ Maybe you want my [Math Applets](/mathapplets/) or [SSL](/SSL/) pages.
 </form>
 </details>
 </div>
-
-* * *
-
-<div class="rightside">
-
-_halcanary.org_  
-_Copyright 1997-2021 Hal W Canary III_  
-_All rights reserved_
-
-</div>

@@ -118,6 +118,5 @@ print "\n";
 
 * * *
 
-file modification time: 2003-12-16 17:12:28
+<div class="rightside"><em>file modification time: 2003-12-16 17:12:28</em></div>
 
-* * *

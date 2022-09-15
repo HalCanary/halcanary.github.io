@@ -61,6 +61,5 @@ Don't forget to fix your browser settings when you are done.
 
 * * *
 
-file modification time: 2005-04-20 02:50:08
+<div class="rightside"><em>file modification time: 2005-04-20 02:50:08</em></div>
 
-* * *

@@ -10,8 +10,4 @@ instead killed scientist Robert Fassnacht. The MRC no longer exists, but this
 sign can be found hidden away in an office in Sterling Hall. Fun scavenger hunt
 topic.
 
-<div class="rightside">
-
-file modification time: 2003-07-16 05:18:44
-
-</div>
+<div class="rightside"><em>file modification time: 2003-07-16 05:18:44</em></div>

@@ -25,6 +25,5 @@ Sony VAIO PCG-SRX87
 
 * * *
 
-file modification time: 2004-04-28 21:07:07
+<div class="rightside"><em>file modification time: 2004-04-28 21:07:07</em></div>
 
-* * *

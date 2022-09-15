@@ -91,6 +91,5 @@ My keys
 
 * * *
 
-file modification time: 2005-03-04 20:58:15
+<div class="rightside"><em>file modification time: 2005-03-04 20:58:15</em></div>
 
-* * *
