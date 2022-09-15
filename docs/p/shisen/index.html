@@ -117,10 +117,10 @@ C 325 43 324 42 322 43 C 319 45 322 52 323 54 C 324 58 327 59 328 63 C 329 67
 <p>Luckilly, this program turned out not to be the pinacle of my c++ career. That came later, with <a href="/p/hexagon/"><code>hexagon</code></a>.</p>
 <p>shisen.c</p>
 <hr />
-<pre><code>/*  Shisen Sho Top Score Displayer
+<pre><code class="language-C++">/*  Shisen Sho Top Score Displayer
  *    -- this IS the pinnacle of our careers
  *
- *  reads in 'filenumber' of files and retrieves 'top' scores 
+ *  reads in 'filenumber' of files and retrieves 'top' scores
  *  for each geometry
  *
  *  (c) 2000-2003 Hal Canary &amp; Mark Chapman
@@ -175,7 +175,7 @@ int main(int argc, char *argv) {
   string buffer,buffer2;
   ifstream fin;
 
-  for(int i=0; i&lt;filenumber; i++) { 
+  for(int i=0; i&lt;filenumber; i++) {
     fin.open(filename[i].c_str());
     do {
       getline(fin, buffer, '\n');
@@ -312,42 +312,42 @@ int main(int argc, char *argv) {
     fin.close();
   }
 
-  cout &lt;&lt; &quot;\nShisen Sho Top Scores\n  presented by:\n&quot; 
+  cout &lt;&lt; &quot;\nShisen Sho Top Scores\n  presented by:\n&quot;
        &lt;&lt; &quot;    Hal Canary\n    Mark Chapman\n&quot;
        &lt;&lt; &quot;    and users like you!\n&quot;;
 
   if(highnum14 &gt; 0)
     cout &lt;&lt; &quot;\n14x6 Geometry\n-------------\n&quot;;
   for(int i = 0; i&lt;highnum14; i++) {
-    cout &lt;&lt; '(' &lt;&lt; i+1 &lt;&lt; &quot;)\t &quot; &lt;&lt; time14[i] &lt;&lt; &quot; seconds\t&quot; 
+    cout &lt;&lt; '(' &lt;&lt; i+1 &lt;&lt; &quot;)\t &quot; &lt;&lt; time14[i] &lt;&lt; &quot; seconds\t&quot;
 	 &lt;&lt; NameSpiller(&amp;highscorer14[i]) &lt;&lt; '\n' ;
   }
 
   if(highnum18 &gt; 0)
     cout &lt;&lt; &quot;\n18x8 Geometry\n-------------\n&quot;;
   for(int i = 0; i&lt;highnum18; i++) {
-    cout &lt;&lt; '(' &lt;&lt; i+1 &lt;&lt; &quot;)\t &quot; &lt;&lt; time18[i] &lt;&lt; &quot; seconds\t&quot; 
+    cout &lt;&lt; '(' &lt;&lt; i+1 &lt;&lt; &quot;)\t &quot; &lt;&lt; time18[i] &lt;&lt; &quot; seconds\t&quot;
 	 &lt;&lt; NameSpiller(&amp;highscorer18[i]) &lt;&lt; '\n' ;
   }
 
   if(highnum24 &gt; 0)
     cout &lt;&lt; &quot;\n24x12 Geometry\n--------------\n&quot;;
   for(int i = 0; i&lt;highnum24; i++) {
-    cout &lt;&lt; '(' &lt;&lt; i+1 &lt;&lt; &quot;)\t &quot; &lt;&lt; time24[i] &lt;&lt; &quot; seconds\t&quot; 
+    cout &lt;&lt; '(' &lt;&lt; i+1 &lt;&lt; &quot;)\t &quot; &lt;&lt; time24[i] &lt;&lt; &quot; seconds\t&quot;
 	 &lt;&lt; NameSpiller(&amp;highscorer24[i]) &lt;&lt; '\n' ;
   }
 
   if(highnum26 &gt; 0)
     cout &lt;&lt; &quot;\n26x14 Geometry\n--------------\n&quot;;
   for(int i = 0; i&lt;highnum26; i++) {
-    cout &lt;&lt; '(' &lt;&lt; i+1 &lt;&lt; &quot;)\t &quot; &lt;&lt; time26[i] &lt;&lt; &quot; seconds\t&quot; 
+    cout &lt;&lt; '(' &lt;&lt; i+1 &lt;&lt; &quot;)\t &quot; &lt;&lt; time26[i] &lt;&lt; &quot; seconds\t&quot;
 	 &lt;&lt; NameSpiller(&amp;highscorer26[i]) &lt;&lt; '\n' ;
   }
 
   if(highnum30 &gt; 0)
     cout &lt;&lt; &quot;\n30x16 Geometry\n--------------\n&quot;;
   for(int i = 0; i&lt;highnum30; i++) {
-    cout &lt;&lt; '(' &lt;&lt; i+1 &lt;&lt; &quot;)\t &quot; &lt;&lt; time30[i] &lt;&lt; &quot; seconds\t&quot; 
+    cout &lt;&lt; '(' &lt;&lt; i+1 &lt;&lt; &quot;)\t &quot; &lt;&lt; time30[i] &lt;&lt; &quot; seconds\t&quot;
 	 &lt;&lt; NameSpiller(&amp;highscorer30[i]) &lt;&lt; '\n' ;
   }
 
