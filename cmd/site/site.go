@@ -56,12 +56,12 @@ func main() {
 		}
 		dst := filepath.Join(dstDir, strings.TrimSuffix(path, ".md"), "index.html")
 		waitgroup.Add(1)
-		go process(siteConfig, filepath.Join(sourceDir, path), dst, false)
+		go process(siteConfig, filepath.Join(sourceDir, path), dst, false, true)
 	}
 	waitgroup.Add(1)
-	go process(siteConfig, "src/index.md", filepath.Join(dstDir, "index.html"), true)
+	go process(siteConfig, "src/index.md", filepath.Join(dstDir, "index.html"), true, true)
 	waitgroup.Add(1)
-	go process(siteConfig, "src/resume.md", filepath.Join(dstDir, "Hal_Canary_Resume.html"), false)
+	go process(siteConfig, "src/resume.md", filepath.Join(dstDir, "Hal_Canary_Resume.html"), false, false)
 
 	waitgroup.Wait()
 	if len(changedFiles) == 0 {
@@ -71,7 +71,7 @@ func main() {
 	}
 }
 
-func process(siteConfig SiteConfig, src, dst string, rootPage bool) {
+func process(siteConfig SiteConfig, src, dst string, rootPage bool, copyright bool) {
 	source, err := os.ReadFile(src)
 	check.Check(err)
 	title := ""
@@ -99,6 +99,24 @@ func process(siteConfig SiteConfig, src, dst string, rootPage bool) {
 			dom.TextNode("\n"),
 		)
 	}
+	var copyrightBlock *dom.Node
+	if copyright {
+		copyrightBlock = dom.Element("div", dom.Attr{"class": "rightside"},
+			dom.TextNode("\n"),
+			dom.Elem("em", dom.TextNode(siteConfig.BaseUrl)),
+			dom.TextNode("\n"),
+			dom.Elem("br"),
+			dom.TextNode("\n"),
+			dom.Elem("em", dom.TextNode(siteConfig.Copyright)),
+			dom.TextNode("\n"),
+			dom.Elem("br"),
+			dom.TextNode("\n"),
+			dom.Elem("em", dom.TextNode(siteConfig.License)),
+			dom.TextNode("\n"),
+		)
+	} else {
+		copyrightBlock = dom.Comment(" " + siteConfig.Copyright + " " + siteConfig.License + " ")
+	}
 	node := dom.Element("html", dom.Attr{"lang": siteConfig.Language},
 		dom.TextNode("\n"),
 		siteConfig.MakeHead(title),
@@ -113,19 +131,7 @@ func process(siteConfig SiteConfig, src, dst string, rootPage bool) {
 				dom.TextNode("\n"),
 			),
 			dom.TextNode("\n"),
-			dom.Element("div", dom.Attr{"class": "rightside"},
-				dom.TextNode("\n"),
-				dom.Elem("em", dom.TextNode(siteConfig.BaseUrl)),
-				dom.TextNode("\n"),
-				dom.Elem("br"),
-				dom.TextNode("\n"),
-				dom.Elem("em", dom.TextNode(siteConfig.Copyright)),
-				dom.TextNode("\n"),
-				dom.Elem("br"),
-				dom.TextNode("\n"),
-				dom.Elem("em", dom.TextNode(siteConfig.License)),
-				dom.TextNode("\n"),
-			),
+			copyrightBlock,
 			dom.TextNode("\n"),
 		),
 		dom.TextNode("\n"),
