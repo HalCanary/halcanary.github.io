@@ -7,23 +7,56 @@
 		<language>en-US</language>
 		<copyright>Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.</copyright>
 		<link>https://halcanary.org/vv/</link>
-		<pubDate>Wed, 12 Oct 2022 11:38:30 -0400</pubDate>
-		<lastBuildDate>Wed, 12 Oct 2022 11:38:30 -0400</lastBuildDate>
+		<pubDate>Wed, 12 Oct 2022 12:04:58 -0400</pubDate>
+		<lastBuildDate>Wed, 12 Oct 2022 12:04:58 -0400</lastBuildDate>
 		<image>
 			<url>https://halcanary.org/images/HAL_CANARY_20191008_512.jpg</url>
 			<title>Voder-Vocoder</title>
 			<link>https://halcanary.org/vv/</link>
 		</image>
 		<item>
+			<title>Programatically Generating HTML</title>
+			<link>https://halcanary.org/vv/2022/10/12/3030/</link>
+			<guid isPermaLink="false">82146a42-5513-5e2a-928a-07d2bee4030c</guid>
+			<pubDate>Wed, 12 Oct 2022 11:43:06 -0400</pubDate>
+			<description><![CDATA[<p>I like libraries that let you programatically generate html documents.  For example, Go&#39;s x/net/html:</p>
+<p><a href="https://gist.github.com/HalCanary/61276afbab042e204e54268f6a42f065">https://gist.github.com/HalCanary/61276afbab042e204e54268f6a42f065</a></p>
+<pre><code class="language-go">func main() {
+	html.Render(os.Stdout,
+		HtmlDocument(
+			&amp;html.Node{Type: html.DoctypeNode, Data: &quot;html&quot;},
+			Element(&quot;html&quot;,
+				Attr{&quot;lang&quot;: &quot;en&quot;},
+				Elem(&quot;head&quot;,
+					Comment(&quot;HELLO WORLD&quot;),
+					Element(&quot;meta&quot;, Attr{&quot;charset&quot;: &quot;utf-8&quot;}),
+					Element(&quot;meta&quot;, Attr{
+						&quot;name&quot;: &quot;viewport&quot;, &quot;content&quot;: &quot;width=device-width, initial-scale=1.0&quot;}),
+					Elem(&quot;title&quot;, TextNode(&quot;HELLO WORLD&quot;)),
+					Elem(&quot;style&quot;, TextNode(&quot;body{max-width:35em;margin:22px auto 64px auto;padding:0 8px;}&quot;)),
+				),
+				Elem(&quot;body&quot;,
+					Elem(&quot;h1&quot;, TextNode(&quot;HELLO!&quot;)),
+					Elem(&quot;p&quot;, TextNode(&quot;world&quot;)),
+				),
+			),
+		),
+	)
+}
+</code></pre>
+]]></description>
+			<category>computers-code</category>
+		</item>
+		<item>
 			<title>…actually alone in my head…</title>
 			<link>https://halcanary.org/vv/2022/10/12/3029/</link>
-			<guid isPermaLink="false">58991dbb-cebd-532b-87d8-7817508cc2f0</guid>
+			<guid isPermaLink="false">577d4da9-3128-592d-9302-7cb3411ae0f3</guid>
 			<pubDate>Wed, 12 Oct 2022 11:29:52 -0400</pubDate>
-			<description><![CDATA[<pre><code>Overse added, “Just remember you’re not alone here.”
-
-I never know what to say to that. I am actually alone in my head, and that’s where 90 plus percent of my problems are.
-
-—[_Network Effect_, Martha Wells](https://halcanary.org/isbn/?1250229855/Network+Effect+%28novel%29)</code></pre>
+			<description><![CDATA[<blockquote>
+<p>Overse added, “Just remember you’re not alone here.”</p>
+<p>I never know what to say to that. I am actually alone in my head, and that’s where 90 plus percent of my problems are.</p>
+<p>—<a href="https://halcanary.org/isbn/?1250229855/Network+Effect+%28novel%29"><em>Network Effect</em>, Martha Wells</a></p>
+</blockquote>
 ]]></description>
 			<category>books,its-funny-laugh</category>
 		</item>
@@ -71,15 +104,9 @@ I never know what to say to that. I am actually alone in my head, and that’s w
 		<item>
 			<title>September 12, 2022</title>
 			<link>https://halcanary.org/vv/2022/09/12/3025/</link>
-			<guid isPermaLink="false">63cc0dfd-809d-5334-94af-e5647b6483be</guid>
+			<guid isPermaLink="false">650e32fc-1ece-5873-b0ae-a083c339fd8a</guid>
 			<pubDate>Mon, 12 Sep 2022 14:44:17 -0400</pubDate>
-			<description><![CDATA[<blockquote>
-<p>Overse added, “Just remember you’re not alone here.”<br />
-I never know what to say to that. I am actually alone in my head, and that’s where 90 plus percent of my problems are.<br />
-— Martha Wells, <em>Network Effect</em></p>
-</blockquote>
-<hr />
-<p>“Computer Scientist” is an awkward term.  We need a better term.</p>
+			<description><![CDATA[<p>“Computer Scientist” is an awkward term.  We need a better term.</p>
 <p>How about “Algorithmer”?</p>
 <p>“Algorithmeter?”</p>
 <p>“Applied Logician”?</p>

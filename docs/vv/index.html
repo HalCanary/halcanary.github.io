@@ -80,6 +80,7 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 <hr/>
 <nav>
 <ul class="flat">
+<li><a href="#2022/10/12/3030">Programatically Generating HTML</a></li>
 <li><a href="#2022/10/12/3029">…actually alone in my head…</a></li>
 <li><a href="#2022/10/12/3028">Stellarium Web</a></li>
 <li><a href="#2022/10/12/3027">Don&#39;t sit on your camelback.</a></li>
@@ -89,11 +90,56 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 <li><a href="#2020/11/17/3023">Javascript SVG printable maze generator</a></li>
 <li><a href="#2020/10/01/3022">Blog/site update</a></li>
 <li><a href="#2020/09/30/3021">Dark Mode</a></li>
-<li><a href="#2020/08/25/3020">A flag for the US Democratic Party</a></li>
 </ul>
 </nav>
 <hr/>
 <div role="main">
+<article class="h-entry" id="2022/10/12/3030">
+<header>
+<!-- SRC= 2022-10-12-3030.md -->
+<h2 class="blogtitle p-name">Programatically Generating HTML</h2>
+<p class="p-summary">I like libraries that let you programatically generate html documents.  For example, Go&#39;s x/net/html:</p>
+<div class="byline plainlink">
+<div>
+<div class="p-author">Hal Canary</div>
+<div><time class="dt-published" datetime="2022-10-12T11:43:06-04:00">2022-10-12 11:43:06-04:00 (EDT)</time></div>
+<div><a class="u-url u-uid" href="https://halcanary.org/vv/2022/10/12/3030/">https://halcanary.org/vv/2022/10/12/3030/</a></div>
+<div><a class="p-category" href="/vv/category/computers-code/">#computers-code</a></div>
+</div>
+</div>
+</header>
+<div class="content e-content">
+<div style="display:none;">I like libraries that let you programatically generate html documents.  For example, Go&#39;s x/net/html:</div>
+<div>
+<p><a href="https://gist.github.com/HalCanary/61276afbab042e204e54268f6a42f065">https://gist.github.com/HalCanary/61276afbab042e204e54268f6a42f065</a></p>
+<pre><code class="language-go">func main() {
+	html.Render(os.Stdout,
+		HtmlDocument(
+			&amp;html.Node{Type: html.DoctypeNode, Data: &#34;html&#34;},
+			Element(&#34;html&#34;,
+				Attr{&#34;lang&#34;: &#34;en&#34;},
+				Elem(&#34;head&#34;,
+					Comment(&#34;HELLO WORLD&#34;),
+					Element(&#34;meta&#34;, Attr{&#34;charset&#34;: &#34;utf-8&#34;}),
+					Element(&#34;meta&#34;, Attr{
+						&#34;name&#34;: &#34;viewport&#34;, &#34;content&#34;: &#34;width=device-width, initial-scale=1.0&#34;}),
+					Elem(&#34;title&#34;, TextNode(&#34;HELLO WORLD&#34;)),
+					Elem(&#34;style&#34;, TextNode(&#34;body{max-width:35em;margin:22px auto 64px auto;padding:0 8px;}&#34;)),
+				),
+				Elem(&#34;body&#34;,
+					Elem(&#34;h1&#34;, TextNode(&#34;HELLO!&#34;)),
+					Elem(&#34;p&#34;, TextNode(&#34;world&#34;)),
+				),
+			),
+		),
+	)
+}
+</code></pre>
+
+</div>
+</div>
+</article>
+<hr/>
 <article class="h-entry" id="2022/10/12/3029">
 <header>
 <!-- SRC= 2022-10-12-3029.md -->
@@ -111,11 +157,11 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 <div class="content e-content">
 
 <div>
-<pre><code>Overse added, “Just remember you’re not alone here.”
-
-I never know what to say to that. I am actually alone in my head, and that’s where 90 plus percent of my problems are.
-
-—[_Network Effect_, Martha Wells](https://halcanary.org/isbn/?1250229855/Network+Effect+%28novel%29)</code></pre>
+<blockquote>
+<p>Overse added, “Just remember you’re not alone here.”</p>
+<p>I never know what to say to that. I am actually alone in my head, and that’s where 90 plus percent of my problems are.</p>
+<p>—<a href="https://halcanary.org/isbn/?1250229855/Network+Effect+%28novel%29"><em>Network Effect</em>, Martha Wells</a></p>
+</blockquote>
 
 </div>
 </div>
@@ -218,12 +264,6 @@ I never know what to say to that. I am actually alone in my head, and that’s w
 <div class="content e-content">
 
 <div>
-<blockquote>
-<p>Overse added, “Just remember you’re not alone here.”<br/>
-I never know what to say to that. I am actually alone in my head, and that’s where 90 plus percent of my problems are.<br/>
-— Martha Wells, <em>Network Effect</em></p>
-</blockquote>
-<hr/>
 <p>“Computer Scientist” is an awkward term.  We need a better term.</p>
 <p>How about “Algorithmer”?</p>
 <p>“Algorithmeter?”</p>
@@ -386,34 +426,11 @@ change something on the page, not go to a new page.</p>
 </div>
 </article>
 <hr/>
-<article class="h-entry" id="2020/08/25/3020">
-<header>
-<!-- SRC= 2020-08-25-3020.md -->
-<h2 class="blogtitle p-name">A flag for the US Democratic Party</h2>
-<p class="p-summary">a proposal</p>
-<div class="byline plainlink">
-<div>
-<div class="p-author">Hal Canary</div>
-<div><time class="dt-published" datetime="2020-08-25T22:47:17-04:00">2020-08-25 22:47:17-04:00 (EDT)</time></div>
-<div><a class="u-url u-uid" href="https://halcanary.org/vv/2020/08/25/3020/">https://halcanary.org/vv/2020/08/25/3020/</a></div>
-<div><a class="p-category" href="/vv/category/politics/">#politics</a></div>
-</div>
-</div>
-</header>
-<div class="content e-content">
-<div style="display:none;">a proposal</div>
-<div>
-<p><img src="https://halcanary.org/images/dem.svg" alt="Barry of thirteen gules and argent, a jackass kicking azure"/></p>
-
-</div>
-</div>
-</article>
-<hr/>
 </div>
 
 <nav aria-label="External Navigation">
 <div class="lcr">
-  <div><p>(older: <a href="https://halcanary.org/vv/2020/08/07/3019/">Randolph Warner Church Jr.</a>)</p></div>
+  <div><p>(older: <a href="https://halcanary.org/vv/2020/08/25/3020/">A flag for the US Democratic Party</a>)</p></div>
   <div class="centered"><p>(<a href="/vv/archives/">ALL POSTS</a>)</p></div>
   <div class="rightside">&nbsp;</div>
 </div>
