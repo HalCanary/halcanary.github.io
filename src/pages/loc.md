@@ -2,6 +2,8 @@
 
 <https://halcanary.org/vv/2013/08/29/3002/>
 
+<noscript>Sorry, this page uses javascript.</noscript>
+
 <script>
 function nav() {
   if (! navigator.geolocation) {

@@ -1,6 +1,9 @@
 # Lookup Book by ISBN
 
+<noscript>Sorry, this page uses javascript.  Just copy the ISBN from the URL.</noscript>
+
 <div id="target"></div>
+
 <script>
 // Example:
 // https://halcanary.org/isbn/?034549752X/The+City+and+The+City

@@ -31,6 +31,11 @@ window.addEventListener('load', () => {{
     }}
   }}
   document.body.style.fontFamily = "sans-serif";
+
+  var b = document.createElement("button");
+  b.addEventListener("click", toggleFontStyle);
+  b.append("Toggle Font Style")
+  document.getElementById("stylish").append(b);
 }});
 const toggleFontStyle = () => {{
   const s = document.body.style;
@@ -53,7 +58,7 @@ a:link,a:hover,a:active{{color:#0CF;}}}}
 </style>
 </head>
 <body>
-<button onclick="toggleFontStyle()">Toggle Font Style</button>
+<div id="stylish"></div>
 '''
 
 tail = '\n</body>\n</html>\n'

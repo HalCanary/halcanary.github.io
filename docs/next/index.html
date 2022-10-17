@@ -5,31 +5,42 @@
 <title>Next!</title>
 <style>
 body { margin:0; padding: 0; }
-.head { padding:5px; color:white; background-color:black; }
+#head { padding:5px; color:white; background-color:black; }
 iframe { width:100%; height:calc(100% - 29px); position:absolute; top:29px; left:0px;
 border:0; overflow:hidden; }
+.tb { width:100%; flex-grow:1; }
 </style>
 <script>
 const rgx = new RegExp('^(.*[^0-9])([0-9]+)$');
-const next = () => {
-  let m = fr.src.match(rgx);
-  if (m) {
-    sc.value = fr.src = m[1] + (1 + parseInt(m[2]));
-  }
-};
-const change = () => { fr.src = sc.value; };
 var fr;
 var sc;
 window.addEventListener("load", () => {
   fr = document.getElementById("fr");
-  sc = document.getElementById("sc")
+  var b = document.createElement("button");
+  b.addEventListener("click", () => {
+      let m = fr.src.match(rgx);
+      if (m) {
+        sc.value = fr.src = m[1] + (1 + parseInt(m[2]));
+      }
+    }
+  );
+  b.append("NEXT")
+  var h = document.getElementById("head");
+  h.append(b);
+  sc = document.createElement("input");
+  sc.addEventListener("change", () => { fr.src = sc.value; });
+  sc.size = 24;
+  sc.value = "";
+  sc.type = "text";
+  sc.className = "tb";
+  h.append(sc);
 });
 </script>
 <body>
-<div class="head" style="display: flex">
-<button onclick="next()">NEXT</button>
-<input type="text" id="sc" size="24" value="" onchange="change()"
-       style="width:100%; flex-grow:1;">
+<div id="head" style="display: flex">
+<noscript>
+Sorry, Javascript is needed to make this work!
+</noscript>
 </div>
 <iframe id="fr" src=""></iframe>
 </body>
