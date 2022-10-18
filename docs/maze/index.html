@@ -64,11 +64,12 @@ const makeMaze = (width, height, w, seed, strokeWidth, strokeColor) => {
         a.pop();
         return r;
     }
-    addToStack(0, 0);
+    let begin_x = random() % w;
+    addToStack(begin_x, random() % h);
     while (stack.length > 0) {
         let [x, y, nx, ny, dir] = getRandom(stack, random);
         let n = nx + w * ny;
-        if (maze[n] != 0) {  // if alreadhy connected, skip.
+        if (maze[n] != 0) {  // if already connected, skip.
             continue;
         }
         maze[x + (w * y)] |= dir;
@@ -116,6 +117,7 @@ const makeMaze = (width, height, w, seed, strokeWidth, strokeColor) => {
 };
 
 window.addEventListener('load', () => {
+    document.getElementById('mazemaker').style.display = "block";
     let params = (new URL(document.location)).searchParams;
     let size = params.get('size');
     let seed = params.get('seed');
@@ -147,11 +149,13 @@ const updateSizeSeed = () => {
 </head>
 <body>
 <noscript>Sorry, this page uses javascript.</noscript>
+<div id="mazemaker" style="display:none;">
 <div id="controls"><p>
 Size: <input type="text" id="size" onChange="updateSizeSeed()">
 Seed: <input type="text" id="seed" onChange="updateSizeSeed()">
 <button onclick="updateSizeSeed()">Update</button>
 </p></div>
 <div id="maze"></div>
+</div>
 </body>
 </html>
