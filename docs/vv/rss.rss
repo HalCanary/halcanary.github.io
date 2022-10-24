@@ -7,8 +7,8 @@
 		<language>en-US</language>
 		<copyright>Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.</copyright>
 		<link>https://halcanary.org/vv/</link>
-		<pubDate>Wed, 12 Oct 2022 12:04:58 -0400</pubDate>
-		<lastBuildDate>Wed, 12 Oct 2022 12:04:58 -0400</lastBuildDate>
+		<pubDate>Mon, 24 Oct 2022 16:01:41 -0400</pubDate>
+		<lastBuildDate>Mon, 24 Oct 2022 16:01:41 -0400</lastBuildDate>
 		<image>
 			<url>https://halcanary.org/images/HAL_CANARY_20191008_512.jpg</url>
 			<title>Voder-Vocoder</title>
@@ -373,10 +373,10 @@ change something on the page, not go to a new page.</p>
 		<item>
 			<title>EM Ratio, again</title>
 			<link>https://halcanary.org/vv/2020/04/03/3014/</link>
-			<guid isPermaLink="false">33e8da19-0297-5bd5-97d6-ebcd87cbfc29</guid>
+			<guid isPermaLink="false">e6aee6f1-0054-55c3-b7b6-1bac4ae11523</guid>
 			<pubDate>Fri, 03 Apr 2020 22:04:48 -0400</pubDate>
 			<description><![CDATA[<p>US Employment-Population Ratio (ages 25-54 Yrs), last 25 Years</p>
-<p><a href="https://fred.stlouisfed.org/graph/?g=qD5Q"><img src="https://fred.stlouisfed.org/graph/fredgraph.png?g=qD5Q" width="1168" height="470" alt="[graph]"></a></p>
+<p><a href="https://fred.stlouisfed.org/graph/?g=qD5Q"><img src="https://fred.stlouisfed.org/graph/fredgraph.png?g=qD5Q" alt="[graph]"></a></p>
 ]]></description>
 			<category>economics</category>
 		</item>
@@ -577,13 +577,13 @@ Memphis, Tennessee, on July 13.</p>
 		<item>
 			<title>EMRATIO(25-54)</title>
 			<link>https://halcanary.org/vv/2017/01/09/3006/</link>
-			<guid isPermaLink="false">41c2d18e-9e6b-54ed-9b88-5f4927534e6b</guid>
+			<guid isPermaLink="false">5beaa742-4915-56b4-9aab-82745e7709c2</guid>
 			<pubDate>Mon, 09 Jan 2017 10:23:00 -0500</pubDate>
 			<description><![CDATA[<p>I use the current Civilian Employment-Population Ratio in the US as a measure of how productive our economy is.</p>
 <p>Some progress, but not enough.</p>
 <p><a href="https://fred.stlouisfed.org/graph/?g=cjIW"><img
 src="https://fred.stlouisfed.org/graph/fredgraph.png?g=cjIW"
-alt="[graph]" width="1168" height="470"></a></p>
+alt="[graph]"></a></p>
 ]]></description>
 			<category>economics,politics</category>
 		</item>
@@ -6348,7 +6348,7 @@ RewriteRule ^(.*)$           $1.html</p>
 		<item>
 			<title>Tension of a Spinning Ring</title>
 			<link>https://halcanary.org/vv/2007/06/23/694/</link>
-			<guid isPermaLink="false">2bba0492-8929-5acf-9d9e-f58056a527e7</guid>
+			<guid isPermaLink="false">a92f04ff-adc8-598e-b282-5035d9c0a9a8</guid>
 			<pubDate>Sat, 23 Jun 2007 10:50:40 -0500</pubDate>
 			<description><![CDATA[<p>fun with physics</p>
 <p>What is the tension in a spinning ring, for example Bank's orbitals or a Niven Ring?</p>
@@ -6356,13 +6356,13 @@ RewriteRule ^(.*)$           $1.html</p>
 <p>Ignoring gravity, there are two forces pulling on each small section: tension pulling to the left and tension pulling to the right. Because the ring is circularly symmetric, the magnitude of the two tensions are equal. The directions of the two forces are dθ from being opposite.</p>
 <p>If at some moment in time, the left tension, <em><strong>Tl</strong></em>, is pointing in the -<em><strong>x̂</strong></em> direction, then the right tension will be</p>
 <blockquote>
-<p><em><strong>Tr</strong></em> = <em>T</em> sin(dθ) <em><strong>ŷ</strong></em> + <em>T</em> cos(dθ) <em><strong>x̂</strong></em></p>
+<p><em><strong>Tr</strong></em> = <em>T</em> sin(dθ) <em><strong>ŷ</strong></em> + <em>T</em> cos(dθ) <em><strong>x̂</strong></em></p>
 </blockquote>
 <p>where <em>T</em> is the magnitude of either tension.</p>
 <p>As <em>N</em> gets large: dθ gets small, cos(dθ) → 1, and sin(dθ) → dθ.  So:</p>
 <blockquote>
 <p><em><strong>Tl</strong></em> = -<em>T</em> <em><strong>x̂</strong></em></p>
-<p><em><strong>Tr</strong></em> = +<em>T</em> <em><strong>x̂</strong></em> + <em>T</em> dθ <em><strong>ŷ</strong></em></p>
+<p><em><strong>Tr</strong></em> = +<em>T</em> <em><strong>x̂</strong></em> + <em>T</em> dθ <em><strong>ŷ</strong></em></p>
 </blockquote>
 <p>Consequently, the centripetal force on the small section is _T_dθ. From Newton's second law:</p>
 <blockquote>
@@ -6372,7 +6372,7 @@ RewriteRule ^(.*)$           $1.html</p>
 <p><em><strong>Tl</strong></em> + <em><strong>Tr</strong></em> = <em>m</em> <strong><em>a</em></strong></p>
 </blockquote>
 <blockquote>
-<p><em>T</em> dθ <em><strong>ŷ</strong></em> = <em>m</em> <strong><em>a</em></strong></p>
+<p><em>T</em> dθ <em><strong>ŷ</strong></em> = <em>m</em> <strong><em>a</em></strong></p>
 </blockquote>
 <p>Let <em>a</em> = |<em><strong>a</strong></em>|, the centripetal acceleration.</p>
 <blockquote>
@@ -8044,7 +8044,7 @@ quit;
 		<item>
 			<title>Septemebr 12</title>
 			<link>https://halcanary.org/vv/2006/09/12/634/</link>
-			<guid isPermaLink="false">c2159f4a-db8f-5da0-a291-8f966199b07f</guid>
+			<guid isPermaLink="false">e3b83921-1461-5a5b-9a55-beeb7394de78</guid>
 			<pubDate>Tue, 12 Sep 2006 08:52:16 -0500</pubDate>
 			<description><![CDATA[<p>Number dead as a result of 2001 September 11 Hijackings: 2,973</p>
 <p>Number dead as a result of Iraq War: 65,000+</p>
@@ -8059,29 +8059,29 @@ America, based on the number of mortalities in each category throughout the
 11-year period spanning 1995 through 2005 (extrapolated from best available
 data).</p>
 <div style="border: 2px black solid;width:402px">
-<div style="width: 398px; border: 2px black solid; background-color:#f00; color:000;text-align:center">
+<div style="width: 398px; border: 2px black solid; background-color:#f00; color:#000;text-align:center">
 <p><span style="font-size:xx-large;"> <strong>S E V E R E</strong> </span><br />
 <strong>Driving off the road: 254,419</strong><br />
 <strong>Falling: 146,542</strong><br />
 <strong>Accidental poisoning: 140,327</strong></p>
 </div>
-<div style="width: 398px; border: 2px black solid; background-color:rgb(255, 204, 0); color:000;text-align:center">
+<div style="width: 398px; border: 2px black solid; background-color:rgb(255, 204, 0); color:#000;text-align:center">
 <p><span style="font-size:xx-large;"> <strong>H I G H</strong> </span><br />
 <strong>Dying from work: 59,730</strong><br />
 <strong>Walking down the street: 52,000.</strong><br />
 <strong>Accidentally drowning: 38,302</strong></p>
 </div>
-<div style="width: 398px; border: 2px black solid; background-color:rgb(238, 238, 0); color:000;text-align:center">
+<div style="width: 398px; border: 2px black solid; background-color:rgb(238, 238, 0); color:#000;text-align:center">
 <p><span style="font-size:xx-large;"> <strong>E L E V A T E D</strong> </span><br />
 <strong>Killed by the flu: 19,41</strong><br />
 <strong>Dying from a hernia: 16,742</strong></p>
 </div>
-<div style="width: 398px; border: 2px black solid; background-color:rgb(51, 51, 255); color:000;text-align:center">
+<div style="width: 398px; border: 2px black solid; background-color:rgb(51, 51, 255); color:#000;text-align:center">
 <p><span style="font-size:xx-large;"> <strong>G U A R D E D</strong> </span><br />
 <strong>Accidental firing of a gun: 8,536</strong><br />
 <strong>Electrocution: 5,171</strong></p>
 </div>
-<div style="width: 398px; border: 2px black solid; background-color:rgb(51, 204, 0); color:000;text-align:center">
+<div style="width: 398px; border: 2px black solid; background-color:rgb(51, 204, 0); color:#000;text-align:center">
 <p><span style="font-size:xx-large;"> <strong>L O W</strong> </span><br />
 <strong>Being shot by law enforcement: 3,949</strong><br />
 <strong>Terrorism: 3147</strong><br />
@@ -8304,11 +8304,15 @@ print &quot;\n&quot;;</code></pre>
 		<item>
 			<title>too big</title>
 			<link>https://halcanary.org/vv/2006/07/17/620/</link>
-			<guid isPermaLink="false">e881d2be-07f8-5f40-8730-2f7d0a5ff8fc</guid>
+			<guid isPermaLink="false">c9f961af-03ee-5d9a-bac2-fde3581a765d</guid>
 			<pubDate>Mon, 17 Jul 2006 19:46:31 -0500</pubDate>
 			<description><![CDATA[<p>Same Population.</p>
 <p>But way too big.</p>
-<table class="border"><tbody><tr><th></th><th>Population</th><th>Population Density</th></tr><tr><td>Cape Coral Florida Urban Area</td><td>329,757</td><td>1719 / mile^2</td></tr><tr><td>Madison Wisconsin Urban Area</td><td>329,533</td><td>2893 / mile^2</td></tr></tbody></table>]]></description>
+<table class="border"><tbody>
+<tr><th> </th><th>Population</th><th>Population Density</th></tr>
+<tr><td>Cape Coral Florida Urban Area</td><td>329,757</td><td>1719 / mile^2</td></tr>
+<tr><td>Madison Wisconsin Urban Area</td><td>329,533</td><td>2893 / mile^2</td></tr>
+</tbody></table>]]></description>
 			<category>life</category>
 		</item>
 		<item>
@@ -15423,20 +15427,24 @@ Links for
 		<item>
 			<title>css junk</title>
 			<link>https://halcanary.org/vv/2003/10/04/120/</link>
-			<guid isPermaLink="false">0e08c4c0-2715-5641-86ca-86c45dbd961d</guid>
+			<guid isPermaLink="false">bd385abb-3f67-5262-a39f-1f605f283887</guid>
 			<pubDate>Sat, 04 Oct 2003 12:09:13 -0500</pubDate>
 			<description><![CDATA[<p>As a html author, should I use</p>
-<p><a name="bleg">Text</a></p>
+<pre><code>&lt;a name=&quot;bleg&quot;&gt;Text&lt;/a&gt;
+</code></pre>
 <p>or</p>
-<p><a name="bleg"></a>Text?</p>
-<p>It only matters if one has defined something in css for &quot;a:hover&quot;. <a href="http://www.w3.org/TR/REC-CSS2/selector.html#x33">The W3C</a> doesn't specify that :hover should apply to any specific element. So one could define css:</p>
-<p>span.highlight:hover {
-background-color:#ffffaa;
-color:#000000; }</p>
+<pre><code>&lt;a name=&quot;bleg&quot;&gt;&lt;/a&gt;Text?
+</code></pre>
+<p>It only matters if one has defined something in css for &quot;<code>a:hover</code>&quot;. <a href="http://www.w3.org/TR/REC-CSS2/selector.html#x33">The W3C</a> doesn't specify that <code>:hover</code> should apply to any specific element. So one could define css:</p>
+<pre><code>span.highlight:hover {
+  background-color:#ffffaa;
+  color:#000000; }
+</code></pre>
 <p>and use html:</p>
-<p>words, <span class="highlight">
-words,</span> words!</p>
-<p>All this implies that I should make a point to immediately close &quot;&lt;a name=...&quot; tags, unless I want highlighting.</p>
+<pre><code>words, &lt;span class=&quot;highlight&quot;&gt;
+ words,&lt;/span&gt; words!
+</code></pre>
+<p>All this implies that I should make a point to immediately close <code>&quot;&lt;a name=...&quot;</code> tags, unless I want highlighting.</p>
 ]]></description>
 			<category>computers-code</category>
 		</item>

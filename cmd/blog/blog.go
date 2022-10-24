@@ -5,6 +5,7 @@ package main
 import (
 	"encoding/xml"
 
+	"bytes"
 	"log"
 	"math"
 	"os"
@@ -23,6 +24,7 @@ import (
 	"gitlab.com/golang-commonmark/markdown"
 	"golang.org/x/net/html"
 	"golang.org/x/net/html/atom"
+	"golang.org/x/text/unicode/norm"
 )
 
 type Blog struct {
@@ -103,10 +105,10 @@ func main() {
 
 	var allPosts []logpost.Post
 	for _, path := range matches {
-		f, err := os.Open(path)
+		content, err := os.ReadFile(path)
 		check.Check(err)
-		post, err := logpost.Parse(f)
-		f.Close()
+		content = norm.NFC.Bytes(content)
+		post, err := logpost.Parse(bytes.NewReader(content))
 		check.Check(err)
 		if len(post.Markdown) == 0 && post.Title == "" && post.Summary == "" {
 			log.Printf("%q has no content.\n", path)
@@ -148,6 +150,7 @@ func main() {
 
 	waitgroup.Add(1)
 	go writeSegmentedListingPage(blog, allPosts, "archives/", blog.Title+" Archives", nil, nil)
+	writeListingPage(blog, allPosts)
 
 	blog.doSegmentedPosts(splitBy(allPosts, yearEq), yearFrag, yearTitle)
 	blog.doSegmentedPosts(splitBy(allPosts, monthEq), monthFrag, monthTitle)
@@ -176,6 +179,71 @@ func writeIndividualPost(blog Blog, post Post, prev, next *Post) {
 		concat(blog.Path(), post.LongId(), "/index.html"),
 		blog.makeIndividualPost(post, prev, next))
 	waitgroup.Done()
+}
+
+func writeListingPage(blog Blog, posts []Post) {
+	if len(posts) == 0 {
+		return
+	}
+	head := blog.makeHead(blog.Title)
+	div := dom.Element("div", dom.Attr{"role": "main"})
+	div.Append(dom.TextNode("\n"))
+	var byYear [][]Post = splitBy(posts, yearEq)
+	for _, yearPosts := range byYear {
+		yearString := strconv.Itoa(yearPosts[0].Time.Year())
+		year := dom.Element("div", dom.Attr{"id": yearString})
+		if len(byYear) > 1 {
+			year.Append(dom.Elem("h2", dom.TextNode(yearString)))
+			year.Append(dom.TextNode("\n"))
+		}
+		year.Append(dom.TextNode("\n"))
+		for _, post := range yearPosts {
+			summary := dom.Elem("summary",
+				dom.TextNode("\n  "),
+				link(concat(blog.BaseUrl, blog.Prefix, post.LongId(), "/"), post.Title),
+				dom.TextNode("\n  "),
+				dom.TextNode(post.Time.Format(timestampFormat)),
+			)
+			if post.Summary != "" {
+				summary.Append(
+					dom.TextNode("\n  "),
+					dom.Elem("br"),
+					dom.TextNode(post.Summary))
+			}
+			article := PostArticle(post, 3, concat(blog.BaseUrl, blog.Prefix, post.LongId(), "/"), blog.Prefix)
+			addImageSize(article, blog.BaseUrl, blog.path)
+			details := dom.Element("details", dom.Attr{"id": "dt/" + post.LongId()},
+				summary, dom.TextNode("\n"),
+				dom.Element("div", dom.Attr{"class": "box"}, article),
+				dom.TextNode("\n"))
+			year.Append(details, dom.TextNode("\n"))
+		}
+		year.Append(dom.TextNode("\n"))
+		div.Append(year, dom.TextNode("\n"))
+	}
+	div.Append(dom.TextNode("\n"))
+	html := dom.Element("html", dom.Attr{"lang": blog.Language},
+		dom.TextNode("\n"),
+		head,
+		dom.TextNode("\n"),
+		dom.Elem("body",
+			dom.TextNode("\n"),
+			dom.Elem("h1", dom.TextNode(blog.Title)),
+			dom.TextNode("\n"),
+			div,
+			dom.TextNode("\n"),
+			dom.Elem("hr"),
+			dom.TextNode("\n"),
+			lcr(
+				dom.TextNode(""),
+				dom.Elem("p", dom.TextNode("("), link("../", "UP"), dom.TextNode(")")),
+				dom.TextNode(""),
+			),
+			dom.TextNode("\n"),
+		),
+		dom.TextNode("\n"),
+	)
+	updateHtml(concat(blog.Path(), "all", "/index.html"), html)
 }
 
 func writeSegmentedListingPage(blog Blog, segment []Post, fragment, title string, prev, next *dom.Node) {
@@ -212,7 +280,7 @@ func writeCategoryIndex(blog Blog, categories map[string]int) {
 
 func updateHtml(path string, node *dom.Node) {
 	f := filebuf.FileBuf{Path: path}
-	node.RenderHTML(&f)
+	node.RenderHTMLExperimental(&f)
 	check.Check(f.Close())
 	if f.Changed() {
 		changedFilesChan <- f.Path

@@ -1,5 +1,5 @@
-github.com/HalCanary/booker v0.0.0-20220907165336-5e9c9d5cd861 h1:+ya9ZbDiRu+f/eAEwPlUi2/uW+P+dHO4drCeSvS0U6Y=
-github.com/HalCanary/booker v0.0.0-20220907165336-5e9c9d5cd861/go.mod h1:4OJ6XYp5QR83iMqGGAMqZdDCawlsdpZw/SIrkN94pnE=
+github.com/HalCanary/booker v0.4.4 h1:s5VE5AKOO0YyMP4MBYyHRINRZKZbJodzjY/ucDaVEmo=
+github.com/HalCanary/booker v0.4.4/go.mod h1:N6/6RLMh357D7dALt60puR8XS3wcZMNRxcPkM1T2XmA=
 github.com/google/uuid v1.3.0 h1:t6JiXgmwXMjEs8VusXIJk2BXHsn+wx8BZdTaoZ5fu7I=
 github.com/google/uuid v1.3.0/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=
 github.com/russross/blackfriday/v2 v2.1.0 h1:JIOH55/0cWyOuilr9/qlrm0BSXldqnqwMsf35Ld67mk=

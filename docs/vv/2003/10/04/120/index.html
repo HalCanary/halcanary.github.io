@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>Voder-Vocoder: css junk</title>
-<link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==" rel="icon"/>
+<link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==" rel="icon">
 <style>
 @media (prefers-color-scheme:dark) {body {background-color:#000;color:#FFF;}
 a:visited {color:#C0F;}
@@ -58,7 +58,7 @@ ul.flat li {display:inline;}
 ul.flat li::after {content:"]";}
 ul.flat li::before {content:"[";}
 </style>
-<link href="https://halcanary.org/vv/rss.rss" rel="alternate" title="Voder-Vocoder" type="application/atom+xml"/>
+<link href="https://halcanary.org/vv/rss.rss" rel="alternate" title="Voder-Vocoder" type="application/atom+xml">
 <!--
 Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 -->
@@ -82,22 +82,26 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 
 <div>
 <p>As a html author, should I use</p>
-<p><a name="bleg">Text</a></p>
+<pre><code>&lt;a name=&#34;bleg&#34;&gt;Text&lt;/a&gt;
+</code></pre>
 <p>or</p>
-<p><a name="bleg"></a>Text?</p>
-<p>It only matters if one has defined something in css for &#34;a:hover&#34;. <a href="http://www.w3.org/TR/REC-CSS2/selector.html#x33">The W3C</a> doesn&#39;t specify that :hover should apply to any specific element. So one could define css:</p>
-<p>span.highlight:hover {
-background-color:#ffffaa;
-color:#000000; }</p>
+<pre><code>&lt;a name=&#34;bleg&#34;&gt;&lt;/a&gt;Text?
+</code></pre>
+<p>It only matters if one has defined something in css for &#34;<code>a:hover</code>&#34;. <a href="http://www.w3.org/TR/REC-CSS2/selector.html#x33">The W3C</a> doesn&#39;t specify that <code>:hover</code> should apply to any specific element. So one could define css:</p>
+<pre><code>span.highlight:hover {
+  background-color:#ffffaa;
+  color:#000000; }
+</code></pre>
 <p>and use html:</p>
-<p>words, <span class="highlight">
-words,</span> words!</p>
-<p>All this implies that I should make a point to immediately close &#34;&lt;a name=...&#34; tags, unless I want highlighting.</p>
+<pre><code>words, &lt;span class=&#34;highlight&#34;&gt;
+ words,&lt;/span&gt; words!
+</code></pre>
+<p>All this implies that I should make a point to immediately close <code>&#34;&lt;a name=...&#34;</code> tags, unless I want highlighting.</p>
 
 </div>
 </div>
 </article>
-<hr/>
+<hr>
 <nav aria-label="External Navigation">
 <div class="lcr">
   <div><p>(older: <a href="https://halcanary.org/vv/2003/10/03/119/">Magnatune, Free Products, SSL, DDP.</a>)</p></div>

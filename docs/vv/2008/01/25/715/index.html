@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>Voder-Vocoder: Email2</title>
-<link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==" rel="icon"/>
+<link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==" rel="icon">
 <style>
 @media (prefers-color-scheme:dark) {body {background-color:#000;color:#FFF;}
 a:visited {color:#C0F;}
@@ -58,7 +58,7 @@ ul.flat li {display:inline;}
 ul.flat li::after {content:"]";}
 ul.flat li::before {content:"[";}
 </style>
-<link href="https://halcanary.org/vv/rss.rss" rel="alternate" title="Voder-Vocoder" type="application/atom+xml"/>
+<link href="https://halcanary.org/vv/rss.rss" rel="alternate" title="Voder-Vocoder" type="application/atom+xml">
 <!--
 Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 -->
@@ -176,7 +176,7 @@ seperated by a single unix-style endline.</li>
 <p>All conforming email clients should display this markup to the user in a consistant way and not expose the underlying escape characters.</p>
 <p>Maformed escape syntax should always throw up an error. No conforming client can ever produce malfomerd syntax, so this might be spam.</p>
 <p>Quoting previous email would always use the indentation markup, like a HTML blockquote element.</p>
-<p>Additionally, whitespace characters like spaces, tabs, and newlines would be rendered just like they would in a plain-text document. One newline standard (such as CRLF or LF) would be chosen and all conforming clients would use it.<br/>
+<p>Additionally, whitespace characters like spaces, tabs, and newlines would be rendered just like they would in a plain-text document. One newline standard (such as CRLF or LF) would be chosen and all conforming clients would use it.<br>
 Tabs would be rendered in a consistant way---for example one could put a tab-stop every 8 ems. (1 em is the width of a single &#34;m&#34; glyph.) Or base the tabs off of the width of the client&#39;s monospaced font.</p>
 <p>Note that the following things are <strong>banned</strong> from this markup language: specifying fonts, specifying font types (other than monospace), specifying font size, specifying font color, specifying background color, blinking text, scrolling text, tables, embedded scripts, embedded images, or embedded documents. If you want any of that, you must attach an attachment.</p>
 <p>Additionally, all conforming mail clinets <strong>must</strong> recognize IANA-registered URI schemes and make them into clickable (or otherwise selectable) links. But those links will look like URIs, to keep the process <strong>transparent</strong> to the user. URI&#39;s can be imbedded in the text in the form &#34;[whitespace]URI[whitespace]&#34;, &#34;(URI)&#34;, &#34;[URI]&#34;, &#34;{URI}&#34;, or &#34;<code>&lt;</code>URI<code>&gt;</code>&#34;. This should be recognizable by the client since URIs generally do not contain whitespace characters or <code>&lt;&gt;[](){}</code>.</p>
@@ -285,7 +285,7 @@ Delivered To: mango &lt;mango@plum.com&gt;
 </div>
 </div>
 </article>
-<hr/>
+<hr>
 <nav aria-label="External Navigation">
 <div class="lcr">
   <div><p>(older: <a href="https://halcanary.org/vv/2008/01/13/714/">fcp (FTP copy)</a>)</p></div>
