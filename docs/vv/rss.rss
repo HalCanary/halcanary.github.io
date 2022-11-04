@@ -7,13 +7,47 @@
 		<language>en-US</language>
 		<copyright>Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.</copyright>
 		<link>https://halcanary.org/vv/</link>
-		<pubDate>Mon, 24 Oct 2022 16:01:41 -0400</pubDate>
-		<lastBuildDate>Mon, 24 Oct 2022 16:01:41 -0400</lastBuildDate>
+		<pubDate>Fri, 04 Nov 2022 10:22:05 -0400</pubDate>
+		<lastBuildDate>Fri, 04 Nov 2022 10:22:05 -0400</lastBuildDate>
 		<image>
 			<url>https://halcanary.org/images/HAL_CANARY_20191008_512.jpg</url>
 			<title>Voder-Vocoder</title>
 			<link>https://halcanary.org/vv/</link>
 		</image>
+		<item>
+			<title>Lieutenant Fusilier</title>
+			<link>https://halcanary.org/vv/2022/11/04/3032/</link>
+			<guid isPermaLink="false">c8f15c39-e919-5060-87fe-420bf353467a</guid>
+			<pubDate>Fri, 04 Nov 2022 10:15:54 -0400</pubDate>
+			<description><![CDATA[<p>I'm enjoying <em>Lieutenant Fusilier in The Farthest Reaches</em> by open_sketch
+<a href="https://forums.sufficientvelocity.com/threads/73927">https://forums.sufficientvelocity.com/threads/73927</a>
+(<a href="https://fichub.net/legacy/epub_export?q=https://forums.sufficientvelocity.com/threads/73927">fichub</a>).</p>
+<blockquote>
+<p>Sergeant Theodora Fusilier, serial number 110552, is one of a hundred
+thousand machines that share her name, line soldiers in the army of the
+United Kingdom of Great Britain and Beyond. She was designed to carry a
+laser musket, protect human space from alien threats, follow the orders of
+her human officers, and be happy to do so.</p>
+<p>But Dora's always been a rather ambitious machine…</p>
+<p>Set in the same universe as <em>Maid to Love You</em>. Expect worldbuilding that
+doesn't try to make sense, laser muskets, adorable robots, and possibly
+some lewd bits.</p>
+</blockquote>
+]]></description>
+			<category>books</category>
+		</item>
+		<item>
+			<title>M2 work machine</title>
+			<link>https://halcanary.org/vv/2022/11/04/3031/</link>
+			<guid isPermaLink="false">0cd82c0f-f017-5be2-91ca-f9c14e02f5d3</guid>
+			<pubDate>Fri, 04 Nov 2022 10:13:16 -0400</pubDate>
+			<description><![CDATA[<p>a new work computer on the way</p>
+<p>I may be shooting myself in the foot, but I requested that work take my 8-Core 2019 MacBook Pro away and issue me a M2 2022 MacBook Air.</p>
+<p>Since we switched our software to Go, the build times have been much faster, so I expect that my productivity will not be affected.</p>
+<p>Discuss: <a href="https://twitter.com/halcanary/status/1587102824579612674">https://twitter.com/halcanary/status/1587102824579612674</a></p>
+]]></description>
+			<category>computers-code</category>
+		</item>
 		<item>
 			<title>Programatically Generating HTML</title>
 			<link>https://halcanary.org/vv/2022/10/12/3030/</link>
