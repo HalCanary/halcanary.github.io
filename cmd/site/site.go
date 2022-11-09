@@ -133,6 +133,8 @@ func process(siteConfig SiteConfig, src, dst string, rootPage bool, copyright bo
 			dom.TextNode("\n"),
 			copyrightBlock,
 			dom.TextNode("\n"),
+			dom.Element("a", dom.Attr{"rel": "me", "href": "https://mastodon.sdf.org/@hal_canary"}, dom.TextNode("")),
+			dom.TextNode("\n"),
 		),
 		dom.TextNode("\n"),
 	)
