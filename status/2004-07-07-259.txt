@@ -1,0 +1,7 @@
+Blog post:
+
+Linux Firewall Notes
+
+https://halcanary.org/vv/2004/07/07/259/
+
+#computers-code

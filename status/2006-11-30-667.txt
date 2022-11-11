@@ -1,0 +1,7 @@
+Blog post:
+
+telnet to port 80
+
+https://halcanary.org/vv/2006/11/30/667/
+
+#computers-code

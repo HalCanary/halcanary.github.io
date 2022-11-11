@@ -1,0 +1,7 @@
+Blog post:
+
+ssh-add script.
+
+https://halcanary.org/vv/2003/08/26/103/
+
+#computers-code

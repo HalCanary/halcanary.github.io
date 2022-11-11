@@ -1,0 +1,5 @@
+Blog post:
+
+Java Makefiles
+
+https://halcanary.org/vv/2011/12/17/csg21/

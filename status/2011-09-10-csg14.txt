@@ -1,0 +1,5 @@
+Blog post:
+
+ssh hostname alias
+
+https://halcanary.org/vv/2011/09/10/csg14/

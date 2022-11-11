@@ -1,0 +1,9 @@
+Blog post:
+
+fcp (FTP copy)
+
+https://halcanary.org/vv/2008/01/13/714/
+
+A ftp client that uses rcp/scp syntax
+
+#computers-code

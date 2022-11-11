@@ -1,0 +1,5 @@
+Blog post:
+
+colapsing multiple for loops
+
+https://halcanary.org/vv/2012/03/16/csg25/

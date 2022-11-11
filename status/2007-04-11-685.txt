@@ -1,0 +1,9 @@
+Blog post:
+
+Presentation last night: Cryptography, Linux, and You
+
+https://halcanary.org/vv/2007/04/11/685/
+
+a presentation I gave at SWLUG
+
+#computers-code

@@ -1,0 +1,7 @@
+Blog post:
+
+timer.c
+
+https://halcanary.org/vv/2009/08/18/787/
+
+#computers-code

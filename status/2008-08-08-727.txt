@@ -1,0 +1,7 @@
+Blog post:
+
+/etc/sudoers
+
+https://halcanary.org/vv/2008/08/08/727/
+
+#computers-code

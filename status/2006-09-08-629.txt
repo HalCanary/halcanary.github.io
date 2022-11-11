@@ -1,0 +1,7 @@
+Blog post:
+
+lpr-text for CUPS
+
+https://halcanary.org/vv/2006/09/08/629/
+
+#computers-code

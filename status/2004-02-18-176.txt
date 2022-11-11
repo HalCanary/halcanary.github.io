@@ -1,0 +1,7 @@
+Blog post:
+
+search and replace for elisp.
+
+https://halcanary.org/vv/2004/02/18/176/
+
+#computers-code

@@ -1,0 +1,7 @@
+Blog post:
+
+Xlib:  extension "GLX" missing
+
+https://halcanary.org/vv/2004/05/30/249/
+
+#computers-code

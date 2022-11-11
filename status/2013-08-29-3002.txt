@@ -1,0 +1,9 @@
+Blog post:
+
+Current Location
+
+https://halcanary.org/vv/2013/08/29/3002/
+
+The existing software on your phone makes it impossible to send someone precise latitude/longitude that you pinpoint on a map.
+
+#computers-code

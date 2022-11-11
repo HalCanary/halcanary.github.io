@@ -1,0 +1,7 @@
+Blog post:
+
+iptables traversal
+
+https://halcanary.org/vv/2004/08/22/308/
+
+#computers-code

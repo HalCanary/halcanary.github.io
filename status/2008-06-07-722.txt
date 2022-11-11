@@ -1,0 +1,7 @@
+Blog post:
+
+~/bin/longest-filename
+
+https://halcanary.org/vv/2008/06/07/722/
+
+#computers-code

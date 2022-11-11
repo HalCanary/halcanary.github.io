@@ -1,0 +1,9 @@
+Blog post:
+
+Unix Utility Scripts
+
+https://halcanary.org/vv/2007/06/12/691/
+
+Utility Scripts for Unix-compatible systems (id est GNU/Linux). This page collects several of the scripts I've written for Linux over the years. Maybe someone else will find them useful.
+
+#computers-code

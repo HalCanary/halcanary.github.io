@@ -1,0 +1,9 @@
+Blog post:
+
+Go exec function
+
+https://halcanary.org/vv/2022/09/13/3026/
+
+Execute a program, causing the program that is currently being run to be replaced with a new program
+
+#computers-code

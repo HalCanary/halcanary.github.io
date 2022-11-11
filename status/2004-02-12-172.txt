@@ -1,0 +1,7 @@
+Blog post:
+
+wget to standard out
+
+https://halcanary.org/vv/2004/02/12/172/
+
+#computers-code

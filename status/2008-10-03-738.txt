@@ -1,0 +1,7 @@
+Blog post:
+
+(defun remove-excess-whitespace...
+
+https://halcanary.org/vv/2008/10/03/738/
+
+#computers-code

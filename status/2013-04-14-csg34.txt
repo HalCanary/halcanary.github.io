@@ -1,0 +1,5 @@
+Blog post:
+
+Pointer class
+
+https://halcanary.org/vv/2013/04/14/csg34/

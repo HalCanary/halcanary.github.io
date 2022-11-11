@@ -1,0 +1,7 @@
+Blog post:
+
+tar c | ssh "tar x"
+
+https://halcanary.org/vv/2004/08/03/281/
+
+#computers-code

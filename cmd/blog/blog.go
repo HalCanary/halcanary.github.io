@@ -3,9 +3,8 @@
 package main
 
 import (
-	"encoding/xml"
-
 	"bytes"
+	"encoding/xml"
 	"log"
 	"math"
 	"os"
@@ -88,6 +87,35 @@ func SortPosts(posts []Post) {
 	sort.Sort(postList(posts))
 }
 
+func postUrl(blog Blog, post logpost.Post) string {
+	return concat(blog.BaseUrl, blog.Prefix, post.LongId(), "/")
+}
+
+func status(path string, blog Blog, p logpost.Post) {
+	b := filebuf.FileBuf{Path: path}
+	b.WriteString("Blog post:\n\n")
+	b.WriteString(p.Title)
+	b.WriteString("\n\n")
+	b.WriteString(postUrl(blog, p))
+	if p.Summary != "" {
+		b.WriteString("\n\n")
+		b.WriteString(p.Summary)
+	}
+	if len(p.Categories) > 0 {
+		b.WriteString("\n\n#")
+		b.WriteString(p.Categories[0])
+		for _, c := range p.Categories[1:] {
+			b.WriteString(" | #")
+			b.WriteString(c)
+		}
+	}
+	b.WriteString("\n")
+	check.Check(b.Close())
+	if b.Changed() {
+		changedFilesChan <- b.Path
+	}
+}
+
 func main() {
 	log.SetFlags(log.Lshortfile)
 
@@ -134,6 +162,11 @@ func main() {
 	}
 
 	go readChangedFilesChan()
+
+	for _, p := range allPosts {
+		path := concat(blogRoot, "/status/", p.Time.Format("2006-01-02"), "-", p.Id, ".txt")
+		status(path, blog, p)
+	}
 
 	for idx, post := range allPosts {
 		var prev, next *Post

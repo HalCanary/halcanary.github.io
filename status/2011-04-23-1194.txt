@@ -1,0 +1,7 @@
+Blog post:
+
+txt to html with hyperlink conversion
+
+https://halcanary.org/vv/2011/04/23/1194/
+
+#computers-code

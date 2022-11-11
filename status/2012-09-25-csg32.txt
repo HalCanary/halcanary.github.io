@@ -1,0 +1,5 @@
+Blog post:
+
+an emacs macro
+
+https://halcanary.org/vv/2012/09/25/csg32/

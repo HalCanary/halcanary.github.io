@@ -1,0 +1,7 @@
+Blog post:
+
+ups$ uptime
+
+https://halcanary.org/vv/2005/05/10/459/
+
+#computers-code

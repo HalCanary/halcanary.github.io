@@ -1,0 +1,9 @@
+Blog post:
+
+notebook
+
+https://halcanary.org/vv/2022/11/11/3033/
+
+It's a command-line note-keeping app that uses git for backups.
+
+#computers-code

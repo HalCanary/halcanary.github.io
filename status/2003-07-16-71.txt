@@ -1,0 +1,7 @@
+Blog post:
+
+<hr> considered harmful.
+
+https://halcanary.org/vv/2003/07/16/71/
+
+#computers-code

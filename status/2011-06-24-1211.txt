@@ -1,0 +1,7 @@
+Blog post:
+
+change-epub-formatting.py
+
+https://halcanary.org/vv/2011/06/24/1211/
+
+#books | #computers-code

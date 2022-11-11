@@ -1,0 +1,7 @@
+Blog post:
+
+sudo tee
+
+https://halcanary.org/vv/2008/09/28/735/
+
+#computers-code

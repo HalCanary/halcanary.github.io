@@ -1,0 +1,7 @@
+Blog post:
+
+emacs clipboard cut and paste, done right!
+
+https://halcanary.org/vv/2004/04/05/222/
+
+#computers-code

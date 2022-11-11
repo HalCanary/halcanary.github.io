@@ -1,0 +1,7 @@
+Blog post:
+
+Installing Wordpress with MySQL
+
+https://halcanary.org/vv/2004/08/24/309/
+
+#computers-code

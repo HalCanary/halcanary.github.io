@@ -1,0 +1,7 @@
+Blog post:
+
+sed in place
+
+https://halcanary.org/vv/2009/11/29/872/
+
+#computers-code
