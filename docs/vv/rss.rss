@@ -7,19 +7,31 @@
 		<language>en-US</language>
 		<copyright>Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.</copyright>
 		<link>https://halcanary.org/vv/</link>
-		<pubDate>Fri, 04 Nov 2022 10:30:11 -0400</pubDate>
-		<lastBuildDate>Fri, 04 Nov 2022 10:30:11 -0400</lastBuildDate>
+		<pubDate>Fri, 11 Nov 2022 14:53:49 -0500</pubDate>
+		<lastBuildDate>Fri, 11 Nov 2022 14:53:49 -0500</lastBuildDate>
 		<image>
 			<url>https://halcanary.org/images/HAL_CANARY_20191008_512.jpg</url>
 			<title>Voder-Vocoder</title>
 			<link>https://halcanary.org/vv/</link>
 		</image>
 		<item>
-			<title>Lieutenant Fusilier</title>
+			<title>notebook</title>
+			<link>https://halcanary.org/vv/2022/11/11/3033/</link>
+			<guid isPermaLink="false">6f4e0995-48ec-59be-9b06-916d0166fc9c</guid>
+			<pubDate>Fri, 11 Nov 2022 14:50:43 -0500</pubDate>
+			<description><![CDATA[<p>It&#39;s a command-line note-keeping app that uses git for backups.</p>
+<p>Here's a new little project: <a href="https://github.com/HalCanary/notebook">https://github.com/HalCanary/notebook</a></p>
+<p>Discuss <a href="https://mastodon.sdf.org/@hal_canary/109326273576559295">https://mastodon.sdf.org/@hal_canary/109326273576559295</a></p>
+]]></description>
+			<category>computers-code</category>
+		</item>
+		<item>
+			<title>Read _Lieutenant Fusilier_ by open_sketch</title>
 			<link>https://halcanary.org/vv/2022/11/04/3032/</link>
-			<guid isPermaLink="false">e1ca06f2-c527-5aac-affc-031c699409d3</guid>
+			<guid isPermaLink="false">28a5ca3a-3f8b-5d1a-a7a0-72659ce57845</guid>
 			<pubDate>Fri, 04 Nov 2022 10:15:54 -0400</pubDate>
-			<description><![CDATA[<p>I'm enjoying <em>Lieutenant Fusilier in The Farthest Reaches</em> by open_sketch
+			<description><![CDATA[<p>I recommend this book.</p>
+<p>I'm enjoying <em>Lieutenant Fusilier in The Farthest Reaches</em> by open_sketch
 <a href="https://forums.sufficientvelocity.com/threads/73927">https://forums.sufficientvelocity.com/threads/73927</a>
 (<a href="https://fichub.net/legacy/epub_export?q=https://forums.sufficientvelocity.com/threads/73927">fichub</a>).</p>
 <blockquote>
@@ -34,6 +46,7 @@ her human officers, and be happy to do so.</p>
 doesn't try to make sense, laser muskets, adorable robots, and possibly
 some lewd bits.</p>
 </blockquote>
+<p>Discuss: <a href="https://mastodon.sdf.org/@hal_canary/109326908089894154">https://mastodon.sdf.org/@hal_canary/109326908089894154</a></p>
 ]]></description>
 			<category>books</category>
 		</item>
