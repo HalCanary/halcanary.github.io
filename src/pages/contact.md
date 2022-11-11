@@ -41,6 +41,8 @@
 
 -   <span class="u-url"><https://twitter.com/halcanary></span>
 
+-   <span class="u-url"><a href="https://mastodon.sdf.org/@hal_canary" rel="me">mastodon: @hal_canary@mastodon.sdf.org</a></span>
+
 -   <span class="u-url"><https://www.facebook.com/hal.canary></span>
 
 -   <span class="u-url"><https://www.linkedin.com/in/halcanary></span>
