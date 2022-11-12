@@ -3,4 +3,4 @@ I hear that in this version…
 
 Read more: https://halcanary.org/vv/2004/08/18/305/
 
-#mindless-link-propagation
+#mindlessLinkPropagation

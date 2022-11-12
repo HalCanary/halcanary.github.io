@@ -3,4 +3,4 @@ scrabble.sh…
 
 Read more: https://halcanary.org/vv/2011/06/21/1209/
 
-#computers-code
+#computersAndCode

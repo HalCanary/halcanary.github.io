@@ -3,4 +3,4 @@ A/C Power Diagram for Hal's Desk.…
 
 Read more: https://halcanary.org/vv/2008/10/03/740/
 
-#computers-code | #energy-policy | #life
+#computersAndCode | #energy-policy | #life

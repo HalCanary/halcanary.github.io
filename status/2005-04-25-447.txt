@@ -3,4 +3,4 @@ the greatest misallocation of resources in the history of the world…
 
 Read more: https://halcanary.org/vv/2005/04/25/447/
 
-#mindless-link-propagation
+#mindlessLinkPropagation

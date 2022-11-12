@@ -7,8 +7,8 @@
 		<language>en-US</language>
 		<copyright>Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.</copyright>
 		<link>https://halcanary.org/vv/</link>
-		<pubDate>Fri, 11 Nov 2022 14:53:49 -0500</pubDate>
-		<lastBuildDate>Fri, 11 Nov 2022 14:53:49 -0500</lastBuildDate>
+		<pubDate>Sat, 12 Nov 2022 13:20:39 -0500</pubDate>
+		<lastBuildDate>Sat, 12 Nov 2022 13:20:39 -0500</lastBuildDate>
 		<image>
 			<url>https://halcanary.org/images/HAL_CANARY_20191008_512.jpg</url>
 			<title>Voder-Vocoder</title>
@@ -23,7 +23,7 @@
 <p>Here's a new little project: <a href="https://github.com/HalCanary/notebook">https://github.com/HalCanary/notebook</a></p>
 <p>Discuss <a href="https://mastodon.sdf.org/@hal_canary/109326273576559295">https://mastodon.sdf.org/@hal_canary/109326273576559295</a></p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Read _Lieutenant Fusilier_ by open_sketch</title>
@@ -60,7 +60,7 @@ some lewd bits.</p>
 <p>Since we switched our software to Go, the build times have been much faster, so I expect that my productivity will not be affected.</p>
 <p>Discuss: <a href="https://twitter.com/halcanary/status/1587102824579612674">https://twitter.com/halcanary/status/1587102824579612674</a></p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Programatically Generating HTML</title>
@@ -93,7 +93,7 @@ some lewd bits.</p>
 }
 </code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>…actually alone in my head…</title>
@@ -106,7 +106,7 @@ some lewd bits.</p>
 <p>—<a href="https://halcanary.org/isbn/?1250229855/Network+Effect+%28novel%29"><em>Network Effect</em>, Martha Wells</a></p>
 </blockquote>
 ]]></description>
-			<category>books,its-funny-laugh</category>
+			<category>books,funny</category>
 		</item>
 		<item>
 			<title>Stellarium Web</title>
@@ -116,7 +116,7 @@ some lewd bits.</p>
 			<description><![CDATA[<p>Stellarium is a free open source planetarium for your computer.  This is the WASM version: it runs in your browser!</p>
 <p><a href="https://stellarium-web.org/">https://stellarium-web.org/</a></p>
 ]]></description>
-			<category>computers-code,space</category>
+			<category>computersAndCode,space</category>
 		</item>
 		<item>
 			<title>Don&#x27;t sit on your camelback.</title>
@@ -147,7 +147,7 @@ some lewd bits.</p>
 </code></pre>
 <p>is the Go equivilent of the C <code>execv</code> function!</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>September 12, 2022</title>
@@ -673,7 +673,7 @@ Projection</a>.”
 <p>When I started this site around ten years ago, I wanted something more reliable than a computer sitting in my bedroom, but still affordable. I ended up going with a service that provided a LAMP stack (Linux, Apache, MySQL, PHP).  I blogged with Movable Type until Wordpress came along.</p>
 <p>Now, I've simply uploaded the site to cloud storage and wrote some scripts to generate the site and automate uploads.</p>
 ]]></description>
-			<category>computers-code,www</category>
+			<category>computersAndCode,www</category>
 		</item>
 		<item>
 			<title>Current Location</title>
@@ -683,7 +683,7 @@ Projection</a>.”
 			<description><![CDATA[<p>The existing software on your phone makes it impossible to send someone precise latitude/longitude that you pinpoint on a map.</p>
 <p>Here's my solution, IF you are already standing where you want to pinpoint: <a href="https://halcanary.org/loc/">https://halcanary.org/loc/</a></p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Updated Contact Info</title>
@@ -768,7 +768,7 @@ for B in $COLORS; do
 done
 exit 0</code></pre>
 ]]></description>
-			<category>computers-code,shell-scripts</category>
+			<category>computersAndCode,shellScripts</category>
 		</item>
 		<item>
 			<title>or just use xdg-open</title>
@@ -837,7 +837,7 @@ exch 1.01 mul exch 2 copy cos mul 3 copy pop sin mul
 lineto } repeat stroke showpage
 EOF</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>packages</title>
@@ -871,7 +871,7 @@ source_to_html() {
 fi
 </code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>VTKViewer</title>
@@ -882,7 +882,7 @@ fi
 <p><a href="https://github.com/HalCanary/vtkviewer">VTKViewer</a><br />
 <img src="https://halcanary.org/images/barbell.png" alt="Screenshot of VTKViewer" /></p>
 ]]></description>
-			<category>computers-code,software-projects</category>
+			<category>computersAndCode,softwareProjects</category>
 		</item>
 		<item>
 			<title>Surface Viewing</title>
@@ -960,7 +960,7 @@ polyData.GetPointData().SetNormals(normals)
 </code></pre>
 <p><img src="https://halcanary.org/images/vtkviewer.png" alt="[]" /></p>
 ]]></description>
-			<category>computer-science,computers-code</category>
+			<category>computerScience,computersAndCode</category>
 		</item>
 		<item>
 			<title>Pointer class</title>
@@ -1148,7 +1148,7 @@ inline void destroy(T*&amp; p) {
 			<description><![CDATA[<p><a href="http://www.aosabook.org/en/"><em>The Architecture of Open Source Applications</em></a>,
 <a href="https://halcanary.org/isbn/?1257638017/The+Architecture+Of+Open+Source+Applications">ISBN 1257638017</a></p>
 ]]></description>
-			<category>books,computers-code,computer-science</category>
+			<category>books,computersAndCode,computerScience</category>
 		</item>
 		<item>
 			<title>Legislative Procedure Via Git</title>
@@ -1405,7 +1405,7 @@ uucp uudecode uuencode uustat uux val what yacc</p>
 <p>dash (/bin/sh) has a smaller set of builtins: it lacks fc and time.
 /usr/bin/time exists, but there is no fc in dash.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>A new printer with Ubuntu 12.04</title>
@@ -1433,7 +1433,7 @@ $ system-config-printer
 </code></pre>
 <p>Then enter <code>/usr/local/share/ppd/Kodak_ESP_C31x_Series.ppd</code> where the CUPS configuration program asks for a PPD file.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Reasonable Contour Levels</title>
@@ -1579,7 +1579,7 @@ for arg in &quot;$@&quot;; do
 done
 </code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>makefiles</title>
@@ -1959,7 +1959,7 @@ score SPF_PASS -5.0
 </code></pre>
 <p>99% of my legitimate correspondents are okay already.</p>
 ]]></description>
-			<category>computers-code,life</category>
+			<category>computersAndCode,life</category>
 		</item>
 		<item>
 			<title>restart gdm under ubuntu</title>
@@ -2235,7 +2235,7 @@ if __name__ == '__main__':
       fixfile(filen)
   exit(0)</code></pre>
 ]]></description>
-			<category>books,computers-code</category>
+			<category>books,computersAndCode</category>
 		</item>
 		<item>
 			<title>scrabble.sh</title>
@@ -2253,7 +2253,7 @@ exec grep -i &quot;$@&quot; &quot;$DICT&quot; | less
 # Example:
 #   scrabble.sh '^a[lonrchl]\{4,7\}$'</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>diagnose</title>
@@ -2297,7 +2297,7 @@ exec grep -i &quot;$@&quot; &quot;$DICT&quot; | less
 <p>For a case where sunk costs exist, imagine that you are a new person who was just now teleported into this person's life. Variant: Imagine you were just teleported into this person's life, and <em>everyone else knows this</em>, and they all <em>expect</em> you to execute sudden changes of course. See what this <em>changes about your thinking</em>, regardless of whether it changes your decision. (<a href="http://lesswrong.com/lw/5x8/teachable_rationality_skills/49d7">source</a>)</p>
 </blockquote>
 ]]></description>
-			<category>found-on-the-internets,rationality</category>
+			<category>foundOnTheInternets,rationality</category>
 		</item>
 		<item>
 			<title>Reduce</title>
@@ -2402,7 +2402,7 @@ knows to expect these sort of shenanigans.</p>
 			<pubDate>Sat, 23 Apr 2011 23:56:00 -0500</pubDate>
 			<description><![CDATA[<p>“I advocate an <em>empirical</em> politics, an <em>anti-ideological</em> politics. We should <em>find the right questions</em>, then <em>gather the data</em>, then <em>structure society based on what works, according to the data</em>.” —Luke Muehlhauser (<a href="http://commonsenseatheism.com/?page_id=3">source</a>)</p>
 ]]></description>
-			<category>found-on-the-internets,mindless-link-propagation,politics</category>
+			<category>foundOnTheInternets,mindlessLinkPropagation,politics</category>
 		</item>
 		<item>
 			<title>txt to html with hyperlink conversion</title>
@@ -2428,7 +2428,7 @@ s/\(http:\/\/[^ ]\+\)/&lt;a href=&quot;\1&quot;&gt;\1&lt;\/a&gt;/g
 1 s/^/&lt;pre&gt;&lt;code&gt;/
 $ s/$/&lt;\/pre&gt;&lt;\/body&gt;&lt;\/html&gt;/</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>sunrises</title>
@@ -2483,7 +2483,7 @@ for i in xrange(8):
  n &gt;&gt;= 1
 print</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>take a load off.</title>
@@ -2517,7 +2517,7 @@ print</code></pre>
 s/\*\([^\*]*\)\*/&lt;strong&gt;\1&lt;\/strong&gt;/g;
 s/\/\([^\/]*\)\//&lt;em&gt;\1&lt;\/em&gt;/g;</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>speaking of the Touch...</title>
@@ -2526,7 +2526,7 @@ s/\/\([^\/]*\)\//&lt;em&gt;\1&lt;\/em&gt;/g;</code></pre>
 			<pubDate>Sat, 05 Mar 2011 21:23:56 -0600</pubDate>
 			<description><![CDATA[<p>I've decided that using it as an ebook reader is incredibly convenient, because of its small size (it fits nicely in my pocket!). The only advantage an e-ink screen still holds for me is super-long battery life.</p>
 ]]></description>
-			<category>books,computers-code</category>
+			<category>books,computersAndCode</category>
 		</item>
 		<item>
 			<title>HTML/CSS for Ipod Touch</title>
@@ -2543,7 +2543,7 @@ s/\/\([^\/]*\)\//&lt;em&gt;\1&lt;\/em&gt;/g;</code></pre>
 </code></pre>
 <p>which seems to make the site render much much better on my Ipod Touch's small screen.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Occam the Dell</title>
@@ -2554,7 +2554,7 @@ s/\/\([^\/]*\)\//&lt;em&gt;\1&lt;\/em&gt;/g;</code></pre>
 <p>I bought a cheap desktop at the store yesterday and didn't even try to look for a good deal online. I just wanted to have a functioning computer. The new case is 34% smaller by volume (I just measured). I would have gotten something even smaller, but I wanted a t least one PCI slot, one PCI Express slot, and room to mount my old HDD. I named it Occam.</p>
 <p>Occam is a Dell. The CPU is a Intel Pentium Dual-Core E5800. One benchmark rates this as 34% faster than Sloop's Athlon 64 X2 6000+, which was an upgrade 18 months ago.</p>
 ]]></description>
-			<category>computers-code,life</category>
+			<category>computersAndCode,life</category>
 		</item>
 		<item>
 			<title>“And they also said it’s impossible...”</title>
@@ -2572,7 +2572,7 @@ s/\/\([^\/]*\)\//&lt;em&gt;\1&lt;\/em&gt;/g;</code></pre>
 			<pubDate>Thu, 09 Dec 2010 00:20:44 -0600</pubDate>
 			<description><![CDATA[<p>“Real” is not an acceptible synonym for “80-bit floating-point number.” Real numbers aren't even countable, much less in a bijection to a set of size 2^80.</p>
 ]]></description>
-			<category>computer-science,computers-code,mathematics</category>
+			<category>computerScience,computersAndCode,mathematics</category>
 		</item>
 		<item>
 			<title>photos from today</title>
@@ -2625,7 +2625,7 @@ fi
 </code></pre>
 <p>This startes emacs in daemon mode if it's not already running (there's not a lot of harm in leaving a daemon going in the background all the time) and then the client tell the daemon to spawn a new window to open the files mentioned in the command-line arguments. The &quot;nohup&quot; part deparents the server so you don't get error messages hitting your console.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Flashblock Alt Image</title>
@@ -2634,7 +2634,7 @@ fi
 			<pubDate>Sun, 26 Sep 2010 19:30:06 -0500</pubDate>
 			<description><![CDATA[<p>I noticed that someone had the bright idea to layer Adobe Flash objects *over* images using a <code>&lt;div style=&quot;background-image:url($IMAGE_URL)&quot;&gt;</code>. That way, when the <a href="https://addons.mozilla.org/en-US/firefox/addon/433/">Flashblock add-on</a> blocks a Flash object, you can give users an idea of what you are blocking. Here's <a href="https://halcanary.org/pub/flashexample.html">an example of the technique in use,</a> but it won't make any sense if you aren't using Flashblock.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>read?</title>
@@ -2694,7 +2694,7 @@ sudo /usr/bin/nice /usr/bin/apt-get autoremove
 sudo /usr/bin/nice /usr/bin/apt-get clean
 sudo /usr/bin/nice /usr/bin/dpkg --configure --pending</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Redesign of the Mexican flag</title>
@@ -2731,7 +2731,7 @@ $gravlink .= md5(strtolower(trim(get_comment_author_email())));
 $gravlink .= &quot;?d=&quot;.urlencode(&quot;https://halcanary.org/images/q80.png&quot;);
 echo $gravlink; ?&gt;</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>gnuplot question</title>
@@ -2768,7 +2768,7 @@ $ evince basic.pdf &amp;
 <p><img src="https://halcanary.org/images/2010-07-16_graph_2.png" alt="[]" /></p>
 <p>How do I do this with Gnuplot?</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>filling an ebook reader</title>
@@ -2781,7 +2781,7 @@ $ evince basic.pdf &amp;
 <div class="indent"><p>• The Lee County Public Library lets you borrow ebooks via Adobe Digital Editions (ADE) software. You can use ADE to side-load ebooks onto a nook.</p><p>• <a href="http://www.gutenberg.org/">Project Gutenberg</a> — the first place to go for books from the public domain. All of their books are now availible in ePub versions.</p><p>• <a href="http://books.google.com/">Google Books</a>, Some of the scans availible are in the public domain, and are therefore downloadable. Generally, the Gutenberug editions are a higher quality than the Google versions, since The Gutenberg tries to be an ideal textual copy of the book while Google tries to be a good representation a particular physical book.</p><p>• Many of the works of Cory Doctorow are availible as ePubs on his website, <a href="http://craphound.com/">Craphound</a>. I especially recommend <em>Makers</em> and <em>Little Brother</em>.</p><p>• <a href="http://www.baen.com/library/titles.htm">The Baen Free Library</a> — All copyrighted works which you may read for free, and all are availible as ePubs.</p><p>• <a href="http://baencd.thefifthimperium.com/">The Baen CD Mirror</a> — These files are also copyrighted but free to redistribute. The newer CDs have ePub files on them. The older CDs do not, but you can use a program like <a href="http://calibre-ebook.com/">Calibre</a> to covert file formats.</p></div>
 <p>Places to buy eBooks:</p>
 <div class="indent"><p>• <a href="http://bn.com/ebooks">http://bn.com/ebooks</a> — of course. Also check the <a href="http://bn.com/unbound">Unbound Blog</a> every friday for the name of a free book that can be added to your B&amp;N library that week. [Update. Here, too: <a href="http://bn.com/freelibrary">http://bn.com/freelibrary</a>]</p><p>• <a href="http://www.webscription.net/">Webscription</a> — A store that sells unencombered ebooks, all of which are availible in ePub format. The prices aren't bad at all.</p></div>]]></description>
-			<category>books,computers-code</category>
+			<category>books,computersAndCode</category>
 		</item>
 		<item>
 			<title>girdle</title>
@@ -2907,7 +2907,7 @@ void mergesort(int N, int array[]) {
         array[i] = old[i];
   }</code></pre>
 ]]></description>
-			<category>computer-science,computers-code</category>
+			<category>computerScience,computersAndCode</category>
 		</item>
 		<item>
 			<title>exam, projects</title>
@@ -2980,7 +2980,7 @@ abspath () {
 			<pubDate>Tue, 23 Mar 2010 08:09:19 -0500</pubDate>
 			<description><![CDATA[<p><a href="https://halcanary.org/isbn/?0306818809/Kaboom"><img src="https://halcanary.org/images/524843ea154bbffaee5d12c0b74d1eccde24d29b.jpg" alt="Kaboom: Embracing The Suck In A Savage Little War by Matthew Gallagher (0306818809).  The subtitle is excellent." title="_Kaboom: Embracing The Suck In A Savage Little War_ by Matthew Gallagher (0306818809).  The subtitle is excellent." /></a></p>
 ]]></description>
-			<category>judging-a-book-by-its-cover</category>
+			<category>judgingBookCovers</category>
 		</item>
 		<item>
 			<title>Judging a Book by its Cover</title>
@@ -2989,7 +2989,7 @@ abspath () {
 			<pubDate>Tue, 23 Mar 2010 08:06:58 -0500</pubDate>
 			<description><![CDATA[<p><a href="https://halcanary.org/isbn/?1439116253/American+Adulterer"><img src="https://halcanary.org/images/2542169ce8e6f4c04d9321b1b29ccf0761770ff4.jpg" alt="American Adulterer by Jed Mercurio (1439116253). Read the cover text." title="_American Adulterer_ by Jed Mercurio (1439116253). Read the cover text." /></a></p>
 ]]></description>
-			<category>judging-a-book-by-its-cover</category>
+			<category>judgingBookCovers</category>
 		</item>
 		<item>
 			<title>dynamic arrays</title>
@@ -3026,7 +3026,7 @@ array_size = (array_size * 2);
 free(array);
 array = temparray;</code></pre>
 ]]></description>
-			<category>computer-science,computers-code</category>
+			<category>computerScience,computersAndCode</category>
 		</item>
 		<item>
 			<title>algorithms matter</title>
@@ -3111,7 +3111,7 @@ sys	0m0.004s
   }
 }</code></pre>
 ]]></description>
-			<category>computer-science,computers-code</category>
+			<category>computerScience,computersAndCode</category>
 		</item>
 		<item>
 			<title>millimeter-wave</title>
@@ -3129,7 +3129,7 @@ sys	0m0.004s
 			<pubDate>Wed, 03 Mar 2010 10:09:37 -0600</pubDate>
 			<description><![CDATA[<p><a href="https://halcanary.org/isbn/?1583333770/Nasty+Brutish+and+Long"><img src="https://halcanary.org/images/e9e7bde8910ad39a090378d63365211a3ef30a4f.jpg" alt="[Nasty, Brutish, and Long: Adventures in Eldercare by Ira Rosofsky (1583333770)]" /></a></p>
 ]]></description>
-			<category>books,judging-a-book-by-its-cover</category>
+			<category>books,judgingBookCovers</category>
 		</item>
 		<item>
 			<title>fullscreen without distractions</title>
@@ -3144,7 +3144,7 @@ sys	0m0.004s
 <p>Step 2. Run your text editor and terminal window fullscreen.</p>
 <p>Step 3. Code without distractions.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Stew Thing Recipe.</title>
@@ -3186,7 +3186,7 @@ for x in &quot;$@&quot;; do
   zip &quot;${x}.zip&quot; &quot;$x&quot;
 done</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>private static String itoa(int i)</title>
@@ -3214,7 +3214,7 @@ private static void error(String s) {
 	System.err.println(s);
 }</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>the 90% diet</title>
@@ -3268,7 +3268,7 @@ private static void error(String s) {
 			<pubDate>Fri, 19 Feb 2010 19:42:09 -0600</pubDate>
 			<description><![CDATA[<p><a href="https://halcanary.org/isbn/?0199734151/Slapped+by+the+Invisible+Hand"><img src="https://halcanary.org/images/48f01db9e0e4136f24fb58379f23ec840fa9e1b2.jpg" alt="Slapped by the Invisible Hand: The Panic of 2007 by Gary Gorton. (9780199734153)" /></a></p>
 ]]></description>
-			<category>books,judging-a-book-by-its-cover</category>
+			<category>books,judgingBookCovers</category>
 		</item>
 		<item>
 			<title>Mplayer and Gnome&#x27;s screensaver.</title>
@@ -3285,7 +3285,7 @@ kill $INHIBIT_PID
 </code></pre>
 <p>This is how to use gnome-screensaver's inhibit command with a video player such as mplayer.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Olive Oil Balsamic Vinaigrette</title>
@@ -3343,7 +3343,7 @@ kill $INHIBIT_PID
 <p>“I personally don't buy ebooks with DRM on them, because I actually like to own the books I own.”<a href="http://whatever.scalzi.com/2010/01/30/a-quick-note-on-ebook-pricing/">John Scalzi</a></p>
 </blockquote>
 ]]></description>
-			<category>books,found-on-the-internets</category>
+			<category>books,foundOnTheInternets</category>
 		</item>
 		<item>
 			<title>time-wasting methods.</title>
@@ -3366,7 +3366,7 @@ public class Foo {
   public int foobar;
 }</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>What am I doing?</title>
@@ -3424,7 +3424,7 @@ exec paps --font=&quot;$font&quot; \
   &quot;$@&quot; | lpr
 #EOF#</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>re: Χριστός-mas</title>
@@ -3471,7 +3471,7 @@ done
 </code></pre>
 <p>does exactly the same thing.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>very different covers</title>
@@ -3491,7 +3491,7 @@ done
 			<pubDate>Sun, 15 Nov 2009 20:46:35 -0600</pubDate>
 			<description><![CDATA[<p><a href="http://search.barnesandnoble.com///e/9780061577932"><img src="https://halcanary.org/images/b11aa3e4ad1f10e0c468c61381f72d29428fe346.jpg" alt="The Department of Mad Scientists: How DARPA is Remaking Our World, From the Internet to Artificial Limbs by Michael P. Belfiore" /></a></p>
 ]]></description>
-			<category>books,judging-a-book-by-its-cover</category>
+			<category>books,judgingBookCovers</category>
 		</item>
 		<item>
 			<title>cocoa and flavonoids</title>
@@ -3512,7 +3512,7 @@ done
 <p>* * *</p>
 <p><a href="http://search.barnesandnoble.com///e/9781402767876"><img src="https://halcanary.org/images/8a5867542d560a04e627affd2b42e7b69cf534fd.jpg" alt="B Is for Bad Poetry by Pamela August Russell" /></a></p>
 ]]></description>
-			<category>judging-a-book-by-its-cover</category>
+			<category>judgingBookCovers</category>
 		</item>
 		<item>
 			<title>palatable iced green tea</title>
@@ -3597,7 +3597,7 @@ it to sign your emails.</p>
 </li>
 </ol>
 ]]></description>
-			<category>computers-code,life,manifesto,top</category>
+			<category>computersAndCode,life,manifesto,top</category>
 		</item>
 		<item>
 			<title>software for ubuntu</title>
@@ -3615,7 +3615,7 @@ exec emacs-snapshot \
 <p>* * *</p>
 <p>Another bleeding-edge thing to check out is Google Chrome's native Linux edition. Go get it <a href="http://dev.chromium.org/getting-involved/dev-channel#TOC-Linux">from this page</a>.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>recent music purchases</title>
@@ -3688,7 +3688,7 @@ dpkg-query --search FILENAME
 sudo dpkg --install DEBPKGFILE
     install a .deb package</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>ssh-show-key-fingerprint</title>
@@ -3724,7 +3724,7 @@ echo 'Banner /etc/issue.ssh' | \
  RECORDING, READING, COPYING, or CAPTURING and DISCLOSURE
  by SYSTEM OWNER.</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>MakeBookmarksFile</title>
@@ -3787,7 +3787,7 @@ for line in fi:
   fo.write(&quot;&lt;a href=\&quot;%s\&quot;&gt;%s&lt;/a&gt;&lt;br&gt;\n&quot; % (s,s))
 fo.write('&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;\n')</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>netbook network mp3 player</title>
@@ -3817,7 +3817,7 @@ exec mpg123-alsa --control --long-tag \
 cd $HOME/music
 find . -type f -a -name '*.mp3' &gt; index.txt</code></pre>
 ]]></description>
-			<category>computers-code,music</category>
+			<category>computersAndCode,music</category>
 		</item>
 		<item>
 			<title>Economic Badness</title>
@@ -3914,7 +3914,7 @@ gconftool-2 -t str --set \
   &quot;centered&quot;
 exit 0</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>that someday the sun would die</title>
@@ -3956,7 +3956,7 @@ done
 </code></pre>
 <p>mp3gain is nice in that it notices that it's already modified a mp3 and won't waste time on it again.</p>
 ]]></description>
-			<category>computers-code,music</category>
+			<category>computersAndCode,music</category>
 		</item>
 		<item>
 			<title>night</title>
@@ -3985,7 +3985,7 @@ for zipfile in &quot;$@&quot; ; do
     unzip -d &quot;${dir}&quot; &quot;${zipfile}&quot;
 done</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Version 2.4 id3 tags</title>
@@ -4019,7 +4019,7 @@ done
 <li>Run a script to renormalize the filename.</li>
 </ol>
 ]]></description>
-			<category>computers-code,music</category>
+			<category>computersAndCode,music</category>
 		</item>
 		<item>
 			<title>timer.c</title>
@@ -4059,7 +4059,7 @@ int main(int argc, char *argv[]) {
   return(0);
 }</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>security check: what word am i thinking of?</title>
@@ -4110,7 +4110,7 @@ define round(x) {
   return x;
 }</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>guitar chord charts</title>
@@ -4181,7 +4181,7 @@ showpage</code></pre>
 			<pubDate>Sat, 11 Jul 2009 15:37:35 -0500</pubDate>
 			<description><![CDATA[<p><a href="http://pbfcomics.com/?cid=PBF094-Freaking_Vortex.gif">I get <strong>sucked into a freaking vortex</strong> on my day <strong>off</strong></a></p>
 ]]></description>
-			<category>its-funny-laugh,mindless-link-propagation</category>
+			<category>funny,mindlessLinkPropagation</category>
 		</item>
 		<item>
 			<title>onerous urls</title>
@@ -4201,7 +4201,7 @@ list=n&amp;iht=y&amp;usc=All+Categories&amp;ks=960
 <p>Some merchants are easer than others. I've learned that given an ISBN (for example, 9781439132739), BN.com's shortest URL is:</p>
 <pre><code>http://search.barnesandnoble.com///e/9781439132739</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>make-envelope.sh</title>
@@ -4264,7 +4264,7 @@ paps --landscape \
   &lt; &quot;${TMP}&quot; | ps2pdf - - &gt; &quot;${PDF}&quot;
 echo &quot;lpr ${PDF}&quot;</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>The Garden</title>
@@ -4289,7 +4289,7 @@ Shauna and I have been landscaping the garden one bit at a time this year. The p
 <p>* * *</p>
 <p>UPDATE #2: Turnes out that the problem is that Windows XP, Service Pack Zero, does not recognize HDDs larger than 128 x 230 bytes.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>ssh filesharing.</title>
@@ -4319,7 +4319,7 @@ Shauna and I have been landscaping the garden one bit at a time this year. The p
 <p>Alternatively, one can enter &quot;nautilus sftp://USERNAME@HOSTNAME/DIRECTORY&quot; on the command line.</p>
 <p>In recent versions of Nautilus/Gnome, you can bookmark locations like this. Then they will be availible from the Gnome Menu→Places→Bookmarks.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Going to post some photos.....</title>
@@ -4360,7 +4360,7 @@ sudo tune2fs -c 150 /dev/sda1
 <hr />
 <p><strong>UPDATE (2011-04-11):</strong> I later realized that the fscks were being triggered at mount time by /ets/fstab. “The sixth field, (fs_passno), is used by the fsck(8) program to determine the order in which filesystem checks are done at reboot time.”</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>reading lately?</title>
@@ -4408,7 +4408,7 @@ sudo tune2fs -c 150 /dev/sda1
 <p>So yes, I own 5 functional computers. This weekend I found out that Dalek, even though it has a motherboard and processor from 2001 and has a Radeon 9200 GPU from 2004 and is running Linux will run World of Warcraft. Not well, mind you, but usable. Now Shauna and I can play together in my house. We're such dorks.</p>
 <p>I've got Dalek set up on my dining room table with a giant 9-year-old CRT monitor and an ethernet cable running across the floor into my room. It's okay because it's been so long since I've had more than two people eat at my dining room table anyway. The other possibility is to squeeze both computers onto my desk. But that would be crowded. We'd bump elbows.</p>
 ]]></description>
-			<category>computers-code,life</category>
+			<category>computersAndCode,life</category>
 		</item>
 		<item>
 			<title>local mean solar time</title>
@@ -4503,7 +4503,7 @@ exec liveice -F ${HOME}/.liveice.cfg \
 <p>If I'm broadcasting, check me at at</p>
 <pre><code>http://halcanary.dyndns.org:8888/x</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>ransdomize</title>
@@ -4538,7 +4538,7 @@ while l:
 </code></pre>
 <p>Testing with the <code>time</code> command showed a 74% reduction in CPU use with the better algorithm.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>/usr/share/dict</title>
@@ -4549,7 +4549,7 @@ while l:
 </code></pre>
 <p>In the Ubuntu OS distribution, the standard dictionaries lack the word &quot;Ubuntu.&quot;</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>RTF</title>
@@ -4595,7 +4595,7 @@ fo.write('}\n\n')
 </code></pre>
 <p>For a manuscript, you don't want to do any fancy formating, bold text, fonts, colors, curly quotes, et cetera. This avoids all of that jazz. One might want italic text, but that's not <a href="http://everything2.com/title/fASCIIst">fASCIIst</a> enough, is it?</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Saturday voting</title>
@@ -4629,7 +4629,7 @@ fo.write('}\n\n')
 			<description><![CDATA[<p>I've got out of the need-to-install-a-new-OS-all-the-time mode. This is mostly because Linux Distributions these days are mostly good enough.</p>
 <p>So I've got Ubuntu <a href="http://en.wikipedia.org/wiki/History_of_Ubuntu_releases#Ubuntu_8.04_.28Hardy_Heron.29">8.04</a> (Hardy Heron) installed. Since this is a &quot;Long Term Support&quot; release, I'll leave it installed until the next LTS release or until it end-of-lifes.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>autostart?  no thanks</title>
@@ -4639,7 +4639,7 @@ fo.write('}\n\n')
 			<description><![CDATA[<p>Q: How do I disable autostart of Totem after inserting a DVD in Ubuntu 8.04 (Hardy Heron)?</p>
 <p>A: Open Nautilus (Places-&gt;Home Folder) then from the menu bar, Edit-&gt;Preferences-&gt;Media-&gt;Never prompt or start programs on media insertion.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>our sail yesterday.</title>
@@ -4715,7 +4715,7 @@ Now get your ass out of bed!</em></p>
 			<description><![CDATA[<p>I see that my computer seems to display U+2019 (RIGHT SINGLE QUOTATION MARK ’) with a glyph identical to U+02bc (MODIFIER LETTER APOSTROPHE ʼ). WordPress and most other software seem to convert U+0027 (APOSTROPHE ') to U+2019. That's odd, because nine out of ten times, it's an apostrophe, not a single quote.</p>
 <p>Of course the crotchety of fASCIIst in me says stick to the 0x27. Straight apostrophes were good enough for every great novel ever make on a typewriter.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>utf8 → ascii</title>
@@ -4986,7 +4986,7 @@ for line in fi:
     else:
       fo.write(chr(ord(char)))</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Recent Photos</title>
@@ -5006,7 +5006,7 @@ for line in fi:
 			<pubDate>Fri, 03 Oct 2008 22:50:16 -0500</pubDate>
 			<description><![CDATA[<p><img src="https://halcanary.org/images/ACDiagram.png" alt="[]" /></p>
 ]]></description>
-			<category>computers-code,energy-policy,life</category>
+			<category>computersAndCode,energy-policy,life</category>
 		</item>
 		<item>
 			<title>Economics, part 1</title>
@@ -5043,7 +5043,7 @@ for line in fi:
         nil t nil)
       (beginning-of-buffer))))</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Universe Building</title>
@@ -5105,7 +5105,7 @@ for line in fi:
 <p>but I think that this is better becasue it spawns one less shell:</p>
 <pre><code>echo AT+MODE=8 | sudo tee /dev/ttyACM0 &gt; /dev/null</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Islanders</title>
@@ -5140,7 +5140,7 @@ Copyright (C) &lt;year&gt; &lt;name of author&gt;</p>
 </div>
 <p>Most importantly, it lacks an &quot;I agree&quot; button, under the theory that you only have to agree to the license if you want to redistribute.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>cooking measures</title>
@@ -5229,7 +5229,7 @@ Copyright (C) &lt;year&gt; &lt;name of author&gt;</p>
 # Dedicated to the Public Domain.
 grep -v '^\#\|^$' &quot;$@&quot;</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>the diet</title>
@@ -5272,7 +5272,7 @@ grep -v '^\#\|^$' &quot;$@&quot;</code></pre>
 </code></pre>
 <p>This allows a few commonly used commands to be executed without a password.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>9 pounds of bacon</title>
@@ -5354,7 +5354,7 @@ if __name__ == &quot;__main__&quot;:
        for y in glob.glob(x):
             jolietify(y)</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>~/bin/longest-filename</title>
@@ -5370,7 +5370,7 @@ if __name__ == &quot;__main__&quot;:
 find &quot;$x&quot; -exec basename {} \;
 done } | wc -L</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Rewrite the tax code!</title>
@@ -5527,7 +5527,7 @@ app.mainloop()
 </code></pre>
 <p><a href="https://halcanary.org/pub/Randoms.zip">Compiled version for windows</a></p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>zipme.py</title>
@@ -5584,7 +5584,7 @@ def zipme(d):
 if __name__ == &quot;__main__&quot;:
     zipme('Randoms')</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>genpasswd.py</title>
@@ -5606,7 +5606,7 @@ if __name__ == &quot;__main__&quot;:
 import os, base64
 print base64.b64encode(os.urandom(18),'Zz')</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Email2</title>
@@ -5814,7 +5814,7 @@ Delivered To: mango &lt;mango@plum.com&gt;
 <p>This gives too much power to the DNS servers and the certificate authorities.</p>
 <p>What about servers that aren't connected to the internet 99+% of the time (most are)?</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>fcp (FTP copy)</title>
@@ -5879,7 +5879,7 @@ def ftpputfiles(host, direct, *files, **kwds):
         fl.close()
     f.quit()</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Downsample</title>
@@ -5945,7 +5945,7 @@ done
 <p>* * *</p>
 <p>Compare: <a href="https://halcanary.org/pub/hidden/Nb99cbhCIxWy7ddxYPNU/032kbps_Catfish_and_the_One_Eyed_Jacks_-_The_Way_You_Move_01_-_Move_.mp3">032kbps mp3</a> versus <a href="https://halcanary.org/pub/hidden/Nb99cbhCIxWy7ddxYPNU/128kbps_Catfish_and_the_One_Eyed_Jacks_-_The_Way_You_Move_01_-_Move_.mp3">128kbps mp3</a>.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>12/05</title>
@@ -6005,7 +6005,7 @@ done
 			<description><![CDATA[<p>My second-generation ipod died this year. It was five years old. I have now replaced it with a $40 1GB flash-based thing (an Insignia Kix from Best Buy). It has %10 of the memory, but is 10 times as easy to use. Just copy files onto it, no messing around with a separate program to create playlists and update databases.</p>
 <p>Of course, next year they'll have a 4GB product for the same price.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>The obvious answer to our problems...</title>
@@ -6056,7 +6056,7 @@ done
 <p><em>k<sub>B</sub></em> = Boltzmann's constant = 16<sup>^-16</sup> M×L²/T²/P (by definition)</p>
 <hr />
 ]]></description>
-			<category>new-standards,physics,top</category>
+			<category>newStandards,physics,top</category>
 		</item>
 		<item>
 			<title>number reform</title>
@@ -6102,7 +6102,7 @@ speed of light equal to an even 16^8 (new standard lengths/new seconds)</p>
 <p>One would have to come up with new prefixes which mean &quot;256 times&quot;, &quot;1/256
 times&quot;, &quot;1/65536 times&quot;, and &quot;65536 times&quot;—like &quot;kilo&quot; means &quot;1000 times&quot;.</p>
 ]]></description>
-			<category>computers-code,new-standards,manifesto,top</category>
+			<category>computersAndCode,newStandards,manifesto,top</category>
 		</item>
 		<item>
 			<title>Not another calendar reform</title>
@@ -6215,7 +6215,7 @@ is so convienent.</p>
 
      [December 31 is not a weekday]</code></pre>
 ]]></description>
-			<category>new-standards,top,manifesto</category>
+			<category>newStandards,top,manifesto</category>
 		</item>
 		<item>
 			<title>the future</title>
@@ -6277,7 +6277,7 @@ is so convienent.</p>
 			<description><![CDATA[<p>I saw the headline “<a href="http://www.nytimes.com/2007/08/27/world/europe/27greece.html">Greek Fires Kill 12 and Threaten Antiquities</a>” and thought it said “<a href="http://en.wikipedia.org/wiki/Greek_Fire">Greek Fire</a> Kills 12 and Threatens Antiquities.”</p>
 <p>Which would have been equally sad but at the same time, very cool.</p>
 ]]></description>
-			<category>found-on-the-internets</category>
+			<category>foundOnTheInternets</category>
 		</item>
 		<item>
 			<title>Sebring House</title>
@@ -6361,7 +6361,7 @@ RewriteRule ^(.*)$           $1.html</p>
 </li>
 </ol>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Firefox Addons</title>
@@ -6391,7 +6391,7 @@ RewriteRule ^(.*)$           $1.html</p>
 </blockquote>
 <p>I'm still trying this out, but it seems like a good idea.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Tension of a Spinning Ring</title>
@@ -6806,7 +6806,7 @@ for FILE in &quot;$@&quot; ; do
     nice sox -t wav - &quot;$(basename $FILE .mp3).cdr&quot;
 done</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>find-and-sha1sum</title>
@@ -6830,7 +6830,7 @@ find . -type f \
 mv &quot;${TMPFILE}&quot; SHA1SUM.txt
 echo '' 2&gt;&amp;1</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>TAOCP/1</title>
@@ -6946,7 +6946,7 @@ overflow TRAP	0,Halt,0
 </code></pre>
 <p>This processor required me to (gasp) rewrite 'printf(&quot;%u&quot;,n);', which was the hardest part of the program.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>because I hate navigating info pages</title>
@@ -6962,7 +6962,7 @@ if [ $# -ne 1 ] ; then
 fi
 exec info $1 2&gt; /dev/null | less</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Fire Season</title>
@@ -6985,7 +6985,7 @@ exec info $1 2&gt; /dev/null | less</code></pre>
 <p>Check out the fancy javascript on this page!</p>
 <p><a href="https://halcanary.org/p/Cryptography_Linux_and_You/">Cryptography, Linux, and You</a></p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>(X)Ubuntu on my P3-700 laptop</title>
@@ -7085,7 +7085,7 @@ connectwifi MySsid 0c0dc52de9fbc078f3c1411100
 </li>
 </ol>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>focus on getting the brand out</title>
@@ -7138,7 +7138,7 @@ head -c 18 /dev/random | base64 | \
 </code></pre>
 <p>Mulitply by 24 for 24 characters, and get 142.5 bits of entropy.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>txt2prehtml</title>
@@ -7168,7 +7168,7 @@ echo '&lt;/pre&gt;
 &lt;/body&gt;
 &lt;/html&gt;';</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>makecdrfiles</title>
@@ -7198,7 +7198,7 @@ done
 </code></pre>
 <p>I burnt four coasters today before I figured this out.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>timeinmicroseconds.c</title>
@@ -7222,7 +7222,7 @@ int main(void) {
 <pre><code>$ cc -o timeinmicroseconds timeinmicroseconds.c
 $ while read -s -n 1 x ; do ./timeinmicroseconds ; done</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>randpassphrase</title>
@@ -7262,7 +7262,7 @@ int main() {
   return(0);
 }</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>hexer</title>
@@ -7294,7 +7294,7 @@ int main (int argc, char *argv[]) {
 <pre><code>#!/bin/sh
 exec hexdump -e '32/1 &quot;%02x&quot; &quot;\n&quot;' &quot;$@&quot;</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>widow&#x27;s walk</title>
@@ -7324,7 +7324,7 @@ exec hexdump -e '32/1 &quot;%02x&quot; &quot;\n&quot;' &quot;$@&quot;</code></pr
 			<pubDate>Sun, 31 Dec 2006 15:44:15 -0600</pubDate>
 			<description><![CDATA[<p><img src="https://halcanary.org/images/2006-12-31-in-game-spam.png" alt="[]" /></p>
 ]]></description>
-			<category>computers-code,games,spam</category>
+			<category>computersAndCode,games,spam</category>
 		</item>
 		<item>
 			<title>dealing with lots of arguments in bash</title>
@@ -7368,7 +7368,7 @@ for arg in &quot;$@&quot;; do
     mv -v &quot;$arg&quot; &quot;${prefix}${arg}&quot;
 done</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Shavegeek.</title>
@@ -7440,7 +7440,7 @@ ppracer prboom freedoom xpilot-ng</p>
 <p><strong>Other</strong></p>
 <p>There are two multiplayer games I want to test out at some point in the future: OpenArena and Tremulous, both bases on the GPLed Quake3 engine. Tremulous can be downloaded from Fedora Extras. OpenArena cannot yet.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>telnet to port 80</title>
@@ -7465,7 +7465,7 @@ echo -en &quot;GET $2 HTTP/1.1\r\nHost: $1\r\n\r\n&quot;
 echo -en &quot;GET $2 HTTP/1.1\r\nHost: $1\r\n\r\n&quot; \
   | nc $1 80</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>just utterances</title>
@@ -7492,7 +7492,7 @@ DIR=/home/music
 find $DIR -name &quot;*.mp3&quot; &gt; $M
 mpg321 --list $M --random</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>postponing ntpd start</title>
@@ -7507,7 +7507,7 @@ mpg321 --list $M --random</code></pre>
 <pre><code>##  Line from /etc/rc.local
 nohup /etc/init.d/ntpd start &gt; /dev/null 2&gt;&amp;1 &amp;</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>In honor of Telemonian Ajax, apparently</title>
@@ -7554,7 +7554,7 @@ req.send(null);
 </code></pre>
 <p>And that's all you really need to know to do Ajax.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Kiniry?</title>
@@ -7591,7 +7591,7 @@ req.send(null);
 </li>
 </ol>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Bandwidth of a Netflix account</title>
@@ -7629,7 +7629,7 @@ req.send(null);
 </code></pre>
 <p>Compiz has more options. It's a bit of a kludge ot change them.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>The fallout.</title>
@@ -7683,7 +7683,7 @@ grub&gt; boot</p>
 <p>* * *</p>
 <p>Thought: Hard disks tend to last long enough for something six times as big to replace them. By which time you won't even miss them.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Tiny Utility Script of the Day</title>
@@ -7695,7 +7695,7 @@ grub&gt; boot</p>
 #DTPD#
 nohup &quot;$@&quot; 1&gt; /dev/null 2&gt;&amp;1 &amp;</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>goodbye partition table</title>
@@ -7710,7 +7710,7 @@ nohup &quot;$@&quot; 1&gt; /dev/null 2&gt;&amp;1 &amp;</code></pre>
 </code></pre>
 <p>I managed to overwrite the partition table of my only working hard drive. Good thing my latest backup is only two weeks old, cause I'm not sure how to access any of the data on the drive.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Colombo</title>
@@ -7794,7 +7794,7 @@ dolore magna aliqua.&lt;/p&gt;
 <img src="https://halcanary.org/images/2006-10-07-html-border-issue.png" alt="html as rendered by firefox" /></p>
 <p>The act of simply adding a border-top and border-bottom to an element's style will radically change the distance between it and the preceding and following blocks. This is why I've stopped using border-top and border-bottom. See <a href="http://www.w3.org/TR/CSS21/box.html#collapsing-margins">collapsing margins</a></p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>FC4 version of Clearlooks in FC5</title>
@@ -7837,7 +7837,7 @@ gnome-theme-manager &amp;
 tar xzf Clearlooks_FC4.tar.gz -C ~/.themes/
 gnome-theme-manager &amp;</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>#</title>
@@ -7915,7 +7915,7 @@ gnome-theme-manager &amp;</code></pre>
 	driveropts=burnfree -eject ${ISOFILE}
 $ sha1sum /dev/hdc</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Art</title>
@@ -8014,7 +8014,7 @@ someone else. I never saw her again. These things happen.</p>
 			<pubDate>Mon, 18 Sep 2006 00:53:51 -0500</pubDate>
 			<description><![CDATA[<p><a href="https://halcanary.org/p/centered-div">An explanation</a> of some obscure HTML/CSS issues.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Review of a World Out of Time</title>
@@ -8162,7 +8162,7 @@ s/&lt;/\&amp;lt;/g;
 s/&gt;/\&amp;gt;/g;
 s/\\/\&amp;\#0092;/g;</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>another funny html thingy: blockquote</title>
@@ -8195,7 +8195,7 @@ X
 </code></pre>
 <p>Check it <a href="http://validator.w3.org/">yourself</a>.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Possibly a medusa.</title>
@@ -8243,7 +8243,7 @@ exec lpr -o page-left=72 \
         -o cpi=11.43 -o lpi=6.858 &quot;$@&quot;
 # 80 columns width x 68 columns high</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>the library again?</title>
@@ -8281,7 +8281,7 @@ foreach my $x (0 .. 19) {
 }
 print &quot;\n&quot;;</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>...Or Chronoliths apeared on the beach....</title>
@@ -8310,7 +8310,7 @@ print &quot;\n&quot;;</code></pre>
 <p>System--&gt;Preferences--&gt;Keyboard--&gt;Layout Options--&gt;Ctrl key position--&gt;Make CapsLock an additional Ctrl.</p>
 <p><img src="https://halcanary.org/images/caps-lock-ctrl-fedora-core-5.png" alt="[Make CapsLock an additional Ctrl.]" /></p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Old Photos</title>
@@ -8394,7 +8394,7 @@ print &quot;\n&quot;;</code></pre>
 <p>(<a href="http://parapublishing.com/sites/para/resources/statistics.cfm">source</a>)</p>
 </blockquote>
 ]]></description>
-			<category>found-on-the-internets</category>
+			<category>foundOnTheInternets</category>
 		</item>
 		<item>
 			<title>done.</title>
@@ -8500,7 +8500,7 @@ over ice to cool it immediately.</p>
 			<description><![CDATA[<p><a href="http://www.achewood.com/index.php?date=06092006"><img src="https://halcanary.org/images/achewood_2006-06-09.png" alt="[nothing is more old school than baking your own damn staff of life]" /></a></p>
 <p>I enjoy <em>Achewood</em> more and more each day.</p>
 ]]></description>
-			<category>mindless-link-propagation</category>
+			<category>mindlessLinkPropagation</category>
 		</item>
 		<item>
 			<title>wen</title>
@@ -8571,7 +8571,7 @@ pi = 4*a(1);
 </code></pre>
 <p>Of course, now that I read more about it I find that I could have just looked up the answers.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Florida Redesign</title>
@@ -8659,7 +8659,7 @@ done
 echo -e &quot;\n\n\t\tALARM! ALARM! ALARM!\n\n&quot;
 exec mplayer ~/Music/ALARM.mp3 &amp;&gt; /dev/null</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>...18 different colors...</title>
@@ -8670,7 +8670,7 @@ exec mplayer ~/Music/ALARM.mp3 &amp;&gt; /dev/null</code></pre>
 <p>This is from the <a href="http://en.wikipedia.org/wiki/North_American_Vexillological_Association">North American Vexillological Associatino</a>'s<br />
 publication <a href="http://www.nava.org/Flag%20Design/GFBF/gfbf-1.htm"><em>Good Flag, Bad Flag</em></a>.</p>
 ]]></description>
-			<category>found-on-the-internets</category>
+			<category>foundOnTheInternets</category>
 		</item>
 		<item>
 			<title>...spectacularly spanning the entire sky...</title>
@@ -8680,7 +8680,7 @@ publication <a href="http://www.nava.org/Flag%20Design/GFBF/gfbf-1.htm"><em>Good
 			<description><![CDATA[<blockquote>
 <div>Giant <a href="http://en.wikipedia.org/wiki/Elliptical_galaxy">elliptical galaxies</a> are probably formed by mergers on a grander scale. In the <a href="http://en.wikipedia.org/wiki/Local_Group" title="Local Group">Local Group</a>, the Milky Way and <a href="http://en.wikipedia.org/wiki/M31" title="M31">M31</a> (the <a href="http://en.wikipedia.org/wiki/Andromeda_Galaxy" title="Andromeda Galaxy">Andromeda Galaxy</a>) are gravitationally bound, and currently approaching each other at high speed. Since we cannot determine the speed of M31 perpendicular to the line from us to it, we do not know if it will collide with the Milky Way. If the two galaxies do meet they will pass through each other, with gravity distorting both galaxies severely and ejecting some gas, dust and stars into <a href="http://en.wikipedia.org/wiki/Intergalactic_space" title="Intergalactic space">intergalactic space</a>. They will travel apart, slow down, and then again be drawn towards each other, and again collide. Eventually both galaxies will have merged completely, streams of gas and dust will be flying through the space near the newly formed giant elliptical galaxy. Out of the gas ejected from the merger, new globular clusters and maybe even new dwarf galaxies may form and become the halo of the elliptical. The globulars from both M31 and the Milky Way will also form part of the halo; globulars are so tightly held together that they are largely immune to large scale galactic interactions. On the stellar scale, little will happen. <strong>If anybody is around to watch the merger</strong> (“If it is on a collision course, the impact is predicted to occur <strong>in about 3 billion years</strong>.” (<a href="http://en.wikipedia.org/wiki/Andromeda_Galaxy">S</a>)], <strong>it will be a slow, but magnificent event, with the sight of a distorted M31 spectacularly spanning the entire sky.</strong><br>(<a href="http://en.wikipedia.org/wiki/Galaxy_formation_and_evolution#Elliptical_galaxies">S</a>)</div></blockquote>
 ]]></description>
-			<category>found-on-the-internets</category>
+			<category>foundOnTheInternets</category>
 		</item>
 		<item>
 			<title>one ton per person per year</title>
@@ -8690,7 +8690,7 @@ publication <a href="http://www.nava.org/Flag%20Design/GFBF/gfbf-1.htm"><em>Good
 			<description><![CDATA[<p>“As of 2005 over six billion tons of concrete are made each year, amounting to the equivalent of one ton for every person on Earth”<br />
 (<a href="http://en.wikipedia.org/wiki/Concrete">source</a>)</p>
 ]]></description>
-			<category>found-on-the-internets</category>
+			<category>foundOnTheInternets</category>
 		</item>
 		<item>
 			<title>new timescales</title>
@@ -8703,7 +8703,7 @@ publication <a href="http://www.nava.org/Flag%20Design/GFBF/gfbf-1.htm"><em>Good
 <p>In comparison, the earth is 4.57 billion years old. Somehow I had thought that Pangaea was the original configuration.</p>
 <p>(See also: <a href="http://en.wikipedia.org/wiki/Supercontinent_cycle">Supercontinent Cycle</a>)</p>
 ]]></description>
-			<category>found-on-the-internets</category>
+			<category>foundOnTheInternets</category>
 		</item>
 		<item>
 			<title>they&#x27;re the only organization I still respect</title>
@@ -8745,7 +8745,7 @@ publication <a href="http://www.nava.org/Flag%20Design/GFBF/gfbf-1.htm"><em>Good
 			<description><![CDATA[<p><img src="https://halcanary.org/images/u142.png" alt="[THIS ISSUE: EVERYBODY DIES!]" /></p>
 <p>(<a href="http://en.wikipedia.org/wiki/Image:Uncanny142.png">source</a>)</p>
 ]]></description>
-			<category>found-on-the-internets</category>
+			<category>foundOnTheInternets</category>
 		</item>
 		<item>
 			<title>500 ft ice slide.</title>
@@ -8811,7 +8811,7 @@ echo &quot;$DAYS days&quot; ; echo &quot;&quot;</code></pre>
 <p>GIYF. Going <a href="http://www.cnn.com/video/player/player.html">here</a> skips the player detection. Then one can simply strip the URL from the Page Info dialog, the way God intended.</p>
 <p><strong>More background:</strong> I use Fedora Linux as my main OS on my desktop. I have several media players installed---Mplayer, Xine, Realplayer, Ogle, Totem. Some of them will play windows-media-video files without a hitch. The fools who wrote the cnn website assumed that ONLY Windows Media Player would be able to play such files. Jackass.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>morning rant</title>
@@ -9036,7 +9036,7 @@ X
 </code></pre>
 <p><a href="http://validator.w3.org/">Check it yerself</a></p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Stuffed</title>
@@ -9147,7 +9147,7 @@ X
 <p>The audience was filled with other examples of an industry gone crazy. One guy moved to the UK and all his DVDs stopped working because they were region-encoded (as most are). Her answer? That was in the contract you agreed to when you bought the DVD. Another guy asked why he can't just download the Sopranos. After all, he's a HBO subscriber, so he paid for it, he just happened to miss the last episode. Her answer, again, was that the time is part of the contract. My answer: Give it a couple years and HBO will be doing this, or they'll be out of business.</p>
 </blockquote>
 ]]></description>
-			<category>mindless-link-propagation</category>
+			<category>mindlessLinkPropagation</category>
 		</item>
 		<item>
 			<title>etymology of &#x22;Austr-&#x22;</title>
@@ -9239,7 +9239,7 @@ Hmmm. 300 kW*h/month ~= 411 Watts. Most of that is proboably the computer and th
 <p>(<a href="http://groups.google.com/group/rec.arts.sf.written/browse_frm/thread/87650429c3654a2b/efeac4ee5bb4ba31#efeac4ee5bb4ba31">from</a>)</p>
 </blockquote>
 ]]></description>
-			<category>found-on-the-internets</category>
+			<category>foundOnTheInternets</category>
 		</item>
 		<item>
 			<title>A Visual Guide To Surviving Timeless Space</title>
@@ -9272,7 +9272,7 @@ Hmmm. 300 kW*h/month ~= 411 Watts. Most of that is proboably the computer and th
 <p>It had been decided back when the last king died that the kings (or chieftains, or scoutmasters, or whatever the hell they called themselves these days) of Arnor were not the royalty of Gondor.</p>
 </blockquote>
 ]]></description>
-			<category>found-on-the-internets</category>
+			<category>foundOnTheInternets</category>
 		</item>
 		<item>
 			<title>palm pilot scripts</title>
@@ -9297,7 +9297,7 @@ exec $HOME/Palm/pilot-xfer-install \
     $HOME/Palm/Docs/*.pdb \
     $HOME/Palm/Apps/*.prc</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>track-numbers/id3tag</title>
@@ -9314,7 +9314,7 @@ for NUMBER in $(seq -w 1 99); do
     fi
 done</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>unpardonably neglected</title>
@@ -9325,7 +9325,7 @@ done</code></pre>
 <p>&quot;There are few things that are so unpardonably neglected in our country as poker... Why, I have known clergymen, good men, kindhearted, liberal, sincere, and all that, who did not know the meaning of a 'flush'. It is enough to make one ashamed of one's species.&quot; --- Mark Twain</p>
 </blockquote>
 ]]></description>
-			<category>found-on-the-internets</category>
+			<category>foundOnTheInternets</category>
 		</item>
 		<item>
 			<title>switchgrass</title>
@@ -9414,7 +9414,7 @@ done</code></pre>
 ---Internal Revenue Service publication 525</p>
 <p>Just so you know.</p>
 ]]></description>
-			<category>found-on-the-internets</category>
+			<category>foundOnTheInternets</category>
 		</item>
 		<item>
 			<title>hibernation sickness</title>
@@ -9445,7 +9445,7 @@ done</code></pre>
 </li>
 </ol>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Firefox Hint</title>
@@ -9464,7 +9464,7 @@ done</code></pre>
 </ol>
 <p>(<a href="http://www.mozilla.org/support/firefox/tips#beh_tabbedbrowsingoptions">source</a>)</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Patrick Henry</title>
@@ -9485,7 +9485,7 @@ done</code></pre>
 			<description><![CDATA[<p>Below the fold: a cartoon from 1989. The story of my year.</p>
 <p><img src="https://halcanary.org/images/1989-boing-boing-issue-1-twisted-image.png" alt="1989-boing-boing-issue-1-twisted-image" /></p>
 ]]></description>
-			<category>found-on-the-internets</category>
+			<category>foundOnTheInternets</category>
 		</item>
 		<item>
 			<title>quils</title>
@@ -9535,7 +9535,7 @@ Trip to FL, 2005 November.</p>
 			<description><![CDATA[<p>My folks play <a href="http://en.wikipedia.org/wiki/Sudoku">Sudoku</a>. I looked at the game and decided it was boring. <a href="https://halcanary.org/p/sudoku-solver">So I wrote a program to solve it.</a></p>
 <p>Shouldn't humans stick to puzzles on which we can outperform computers? Word games and such?</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>1995-12-05</title>
@@ -9654,7 +9654,7 @@ for x in &quot;$@&quot; ; do
   fi
 done</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>The future is now.</title>
@@ -9665,7 +9665,7 @@ done</code></pre>
 <p>George Dyson: “For 30 years I have been wondering, what indication of its existence might we expect from a true AI? Certainly not any explicit revelation, which might spark a movement to pull the plug. Anomalous accumulation or creation of wealth might be a sign, or an unquenchable thirst for raw information, storage space, and processing cycles, or a concerted attempt to secure an uninterrupted, autonomous power supply. But the real sign, I suspect, would be a circle of cheerful, contented, intellectually and physically well-nourished people surrounding the AI. There wouldn't be any need for True Believers, or the downloading of human brains or anything sinister like that: just a gradual, gentle, pervasive and mutually beneficial contact between us and a growing something else.“</p>
 <p>(<a href="http://www.edge.org/3rd_culture/dyson05/dyson05_index.html">Source</a>)</p>
 ]]></description>
-			<category>found-on-the-internets</category>
+			<category>foundOnTheInternets</category>
 		</item>
 		<item>
 			<title>driver humor</title>
@@ -9676,7 +9676,7 @@ done</code></pre>
 <p>...I need a u-turn signal.</p>
 <p>...and a double-parking brake.</p>
 ]]></description>
-			<category>its-funny-laugh</category>
+			<category>funny</category>
 		</item>
 		<item>
 			<title>I miss Prince Mongo.</title>
@@ -9686,7 +9686,7 @@ done</code></pre>
 			<description><![CDATA[<p>Though I never met the man. Edgar T once told me that the Prince gave him a cookie when Ed was young.</p>
 <p>“...The parties were mind-bending. I have a photo of his front yard and its slackful contents: coffins, stacks of tires, dismembered mannequins, etc. I was told he made his millions by taking out an insurance policy against going insane, and then going insane, though I've never been able to verify this....”</p>
 ]]></description>
-			<category>found-on-the-internets</category>
+			<category>foundOnTheInternets</category>
 		</item>
 		<item>
 			<title>president for life</title>
@@ -9698,7 +9698,7 @@ done</code></pre>
 <p>(<a href="http://thepaincomics.com/weekly051012a.htm">source</a>)</p>
 </blockquote>
 ]]></description>
-			<category>found-on-the-internets</category>
+			<category>foundOnTheInternets</category>
 		</item>
 		<item>
 			<title>Mempho</title>
@@ -9716,7 +9716,7 @@ done</code></pre>
 			<pubDate>Thu, 13 Oct 2005 12:23:25 -0500</pubDate>
 			<description><![CDATA[<p>“Temper tantrums are typically frowned upon at the office, but they are still considered more acceptable than crying.” (<a href="http://www.nytimes.com/2005/10/13/fashion/thursdaystyles/13crying.html?pagewanted=2&amp;8hpib">source</a>)</p>
 ]]></description>
-			<category>found-on-the-internets</category>
+			<category>foundOnTheInternets</category>
 		</item>
 		<item>
 			<title>Building Harlequin&#x27;s Moon</title>
@@ -9787,7 +9787,7 @@ done</code></pre>
 <p>Cory Doctorow (<a href="http://www.salon.com/tech/feature/2005/09/26/themepunks_3/">source</a>)</p>
 </blockquote>
 ]]></description>
-			<category>found-on-the-internets</category>
+			<category>foundOnTheInternets</category>
 		</item>
 		<item>
 			<title>it might count as...</title>
@@ -9841,7 +9841,7 @@ interaction.</li>
 <p>It was, I think, orignally designed to act as a dock for an ipod shuffle: it has a port on the top of the device. This port works well for any bulky USB device.</p>
 <p>Did I mention that I love the <em>concept</em> of USB? There is a limit on how many USB devices one computer can handle. 127 devices. Maybe you don't remember the bad old days, when computers had one paralell port and one serial port. If you tried to add more devices, you ran into IRQ issues and had to start playing with jumpers. My family had two computers, networked using a paralell-port nullmodem. But we also had two printers which used the paralell ports as well. The system worked, but there were kludges involved.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>finished ink+wash</title>
@@ -9934,7 +9934,7 @@ When the levee breaks, mama, you got to move.</em></p>
 <p><a href="http://en.wikipedia.org/wiki/1970_Bhola_cyclone">could be worse...</a></p>
 <p>I keep thinking that now would be the time to bulldoze the city and rebuild it... 20 to 30 feet higher.</p>
 ]]></description>
-			<category>disaster-porn</category>
+			<category>disasterResponse</category>
 		</item>
 		<item>
 			<title>War on Terra</title>
@@ -9943,7 +9943,7 @@ When the levee breaks, mama, you got to move.</em></p>
 			<pubDate>Sun, 28 Aug 2005 11:00:00 -0500</pubDate>
 			<description><![CDATA[<p><a href="http://uncyclopedia.org/wiki/War_on_Terra">&quot;In late 2001, President Bush declared total war on Planet Earth and all nation states and ecosystems harboring life...&quot;</a></p>
 ]]></description>
-			<category>mindless-link-propagation</category>
+			<category>mindlessLinkPropagation</category>
 		</item>
 		<item>
 			<title>I&#x27;m not that smart.</title>
@@ -10162,7 +10162,7 @@ Brendan McKay (Editor-in-Chief) [Electronic Journal of Combinatorics]</p>
 			<pubDate>Tue, 19 Jul 2005 11:09:30 -0500</pubDate>
 			<description><![CDATA[<p><a href="http://printfreegraphpaper.com/">http://printfreegraphpaper.com/</a></p>
 ]]></description>
-			<category>mindless-link-propagation</category>
+			<category>mindlessLinkPropagation</category>
 		</item>
 		<item>
 			<title>It&#x27;s nice to be competent.</title>
@@ -10174,7 +10174,7 @@ Brendan McKay (Editor-in-Chief) [Electronic Journal of Combinatorics]</p>
 <p>I hope this computer doesn't die in the next few minutes. Then I would have to find the real problem.</p>
 <p><strong>UPDATE 2005-08-15:</strong> Turn out that the power supply needed to be replaced. I'm not so competent.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>misanthrope</title>
@@ -10195,7 +10195,7 @@ Brendan McKay (Editor-in-Chief) [Electronic Journal of Combinatorics]</p>
 <p>— Tim Kreider (<a href="http://thepaincomics.com/weekly050713a.htm">source</a>)</p>
 </blockquote>
 ]]></description>
-			<category>found-on-the-internets</category>
+			<category>foundOnTheInternets</category>
 		</item>
 		<item>
 			<title>workplace harassment</title>
@@ -10243,7 +10243,7 @@ Brendan McKay (Editor-in-Chief) [Electronic Journal of Combinatorics]</p>
 			<description><![CDATA[<p>People like me read the encylopedia for fun.</p>
 <p>Today I read about Li-ion batteries. <a href="http://en.wikipedia.org/wiki/Lithium_ion_battery">“ At a typical 100% charge level at 25 degrees Celsius, Li-ion batteries irreversibly lose approximately 20% capacity per year from the time they are manufactured, even when unused.”</a></p>
 ]]></description>
-			<category>found-on-the-internets</category>
+			<category>foundOnTheInternets</category>
 		</item>
 		<item>
 			<title>21st century.</title>
@@ -10264,7 +10264,7 @@ Brendan McKay (Editor-in-Chief) [Electronic Journal of Combinatorics]</p>
 			<pubDate>Tue, 05 Jul 2005 21:00:40 -0500</pubDate>
 			<description><![CDATA[<p>“Nowhere in the Constitution does it say anything about it being illegal to ridicule or deride someone's lameass religious beliefs.” (<a href="http://www.rotten.com/library/religion/scientology/">source</a>)</p>
 ]]></description>
-			<category>found-on-the-internets</category>
+			<category>foundOnTheInternets</category>
 		</item>
 		<item>
 			<title>audio</title>
@@ -10298,7 +10298,7 @@ Brendan McKay (Editor-in-Chief) [Electronic Journal of Combinatorics]</p>
 <p>(<a href="http://www.nerve.com/regulars/scanner/06_28_05/">source</a>)</p>
 </blockquote>
 ]]></description>
-			<category>found-on-the-internets</category>
+			<category>foundOnTheInternets</category>
 		</item>
 		<item>
 			<title>ARRR!  What grokster means for free software.</title>
@@ -10311,7 +10311,7 @@ Brendan McKay (Editor-in-Chief) [Electronic Journal of Combinatorics]</p>
 <p>Could pirates continue to use proprietary software? Yes, but KAZAA has taught us not to trust proprietary software. People trusted grokster because a company stood behind their product and guaranteed that they would not bundle spyware.</p>
 <p>The only reason that we trust Microsoft Office not to contain spyware is that MSFT has so much to lose if they were found out.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>(Score:5, Funny)</title>
@@ -10350,7 +10350,7 @@ Brendan McKay (Editor-in-Chief) [Electronic Journal of Combinatorics]</p>
 <p>(<a href="http://www.livejournal.com/users/jwz/495656.html?thread=7162920#t7162920">source</a>)</p>
 </blockquote>
 ]]></description>
-			<category>found-on-the-internets</category>
+			<category>foundOnTheInternets</category>
 		</item>
 		<item>
 			<title>id3tag --genre</title>
@@ -10365,7 +10365,7 @@ Brendan McKay (Editor-in-Chief) [Electronic Journal of Combinatorics]</p>
 <p>Pick one. In general, the lower the number, the more standard it is. Suppose we pick genre #17 (rock).</p>
 <pre><code>id3tag --genre=17 filelist</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>HVD</title>
@@ -10406,7 +10406,7 @@ Brendan McKay (Editor-in-Chief) [Electronic Journal of Combinatorics]</p>
 <table class="border"><tbody><tr><td colspan="6">(price includes shipping)</td></tr><tr><th>Media</th><th>Cost</th><th>Number</th><th>Cost Per</th><th>Bytes</th><th>Cost per GiB</th></tr><tr><td>CD-R</td><td>$17.40</td><td>100</td><td>$0.17</td><td>737280000</td><td>$0.25</td></tr><tr><td>DVD-R</td><td>$15.25</td><td>50</td><td>$0.31</td><td>4700000000</td><td>$0.07</td></tr></tbody></table>
 <p>The moral of the story: buy everything online.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>patents</title>
@@ -10435,7 +10435,7 @@ Brendan McKay (Editor-in-Chief) [Electronic Journal of Combinatorics]</p>
 			<description><![CDATA[<p>&quot;Yeah, well, that's just, like, your opinion, man.&quot;</p>
 <p>Was reading a discussion about an article, and one comment (from someone who disagreed with the article) was simply that quote from <em>The Big Lebowski</em>. I laughed out loud. I should use that one more often.</p>
 ]]></description>
-			<category>found-on-the-internets</category>
+			<category>foundOnTheInternets</category>
 		</item>
 		<item>
 			<title>dumping mt?</title>
@@ -10518,7 +10518,7 @@ rm $TEMP
 <p>The other side of it will be finished as soon as I get to it. Yes, I know that this one is (quite literally) succeptable to a dictionary attack.</p>
 <p><strong>UPDATE 4pm:</strong> <a href="http://ups.physics.wisc.edu/~hal/comments/?2005-05-25-15-40">Go here for an example.</a></p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Memphis Clubs</title>
@@ -10577,7 +10577,7 @@ outside.</p>
 			<description><![CDATA[<pre><code>[hal@ups(pts/1) ~]$ uptime
  09:23:09  up 133 days, 12:35, 2 users, load average: 0.00, 0.01, 0.00</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Mail</title>
@@ -10702,7 +10702,7 @@ outside.</p>
 			<description><![CDATA[<p>Funny term of the day.<br />
 <a href="https://www.google.com/search?q=moralistic+therapeutic+deism">https://www.google.com/search?q=moralistic+therapeutic+deism</a></p>
 ]]></description>
-			<category>found-on-the-internets</category>
+			<category>foundOnTheInternets</category>
 		</item>
 		<item>
 			<title>1 megadeath/year</title>
@@ -10711,7 +10711,7 @@ outside.</p>
 			<pubDate>Mon, 25 Apr 2005 12:22:27 -0500</pubDate>
 			<description><![CDATA[<p>“Worldwide, car accidents kill an estimated one million people each year.” (<a href="http://en.wikipedia.org/wiki/Car_accident">source</a>)</p>
 ]]></description>
-			<category>found-on-the-internets</category>
+			<category>foundOnTheInternets</category>
 		</item>
 		<item>
 			<title>the greatest misallocation of resources in the history of the world</title>
@@ -10723,7 +10723,7 @@ outside.</p>
 <p>(<a href="http://www.rollingstone.com/politics/story/_/id/7203633?pageid=rs.Home&amp;pageregion=single7">source</a>)</p>
 </blockquote>
 ]]></description>
-			<category>mindless-link-propagation</category>
+			<category>mindlessLinkPropagation</category>
 		</item>
 		<item>
 			<title>What is |?</title>
@@ -10755,7 +10755,7 @@ outside.</p>
 <p>My new MD56002/FM560LK PCMCIA modem, combined with my new AC820 modem dongle cable works with my old p200 laptop under a recent Knoppix.</p>
 <p>I have yet to get my <a href="https://halcanary.org/p/802-11b-card">802.11B PCMCIA card</a> working.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Recently published old photos</title>
@@ -10777,7 +10777,7 @@ outside.</p>
 			<description><![CDATA[<p><img src="https://halcanary.org/images/1975-03-16-behind-the-marble.png" alt="[sorry]" /></p>
 <p><em>New York Times</em>, Mar 16, 1975. p. SM14.</p>
 ]]></description>
-			<category>found-on-the-internets</category>
+			<category>foundOnTheInternets</category>
 		</item>
 		<item>
 			<title>caught up</title>
@@ -10901,7 +10901,7 @@ My (hypothetical) cancerous tumor is alive. Fuck life.</p>
 <p>(<a href="http://www.somethingawful.com/">source</a>)</p>
 </blockquote>
 ]]></description>
-			<category>found-on-the-internets</category>
+			<category>foundOnTheInternets</category>
 		</item>
 		<item>
 			<title>Alcoholic Crackheads</title>
@@ -10919,7 +10919,7 @@ My (hypothetical) cancerous tumor is alive. Fuck life.</p>
 			<pubDate>Sat, 19 Mar 2005 20:59:05 -0600</pubDate>
 			<description><![CDATA[<p><a href="https://www.google.com/search?q=Pat+Boone+is+now+an+instrument+of+the+Devil">google: Pat+Boone+is+now+an+instrument+of+the+Devil</a></p>
 ]]></description>
-			<category>found-on-the-internets</category>
+			<category>foundOnTheInternets</category>
 		</item>
 		<item>
 			<title>a man committed to the objectivity of truth, and to objective standards of rationality</title>
@@ -10951,7 +10951,7 @@ My (hypothetical) cancerous tumor is alive. Fuck life.</p>
 <p>My criteria: I need a laptop for traveling that can connect to the internet in three different ways: ethernet, modem, wireless. Three pcmcia cards should do the trick. It needs a CDROM for installing software. It needs basic software (bash, ssh), a text editor and typeseting system, a gui browser (firefox preferably, but dillo is acceptable). Optional software include an office suite, instant messaging, mp3 player, video player, games, and an image editor. Optional hardware include a large hdd and a mouse.</p>
 <p>Right now, I am bidding on ebay to get the last major component, a wireless card. Next time I have some cash, I'll drop $50 on a newer laptop.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>bored</title>
@@ -10981,7 +10981,7 @@ My (hypothetical) cancerous tumor is alive. Fuck life.</p>
 			<pubDate>Wed, 16 Mar 2005 07:32:59 -0600</pubDate>
 			<description><![CDATA[<p><a href="http://www.cheezey.com/thundercats/sounds/outake6.mp3">Samophange</a> from <a href="http://www.cheezey.com/thundercats/sounds/outtakes.html">here</a></p>
 ]]></description>
-			<category>mindless-link-propagation</category>
+			<category>mindlessLinkPropagation</category>
 		</item>
 		<item>
 			<title>laughter</title>
@@ -10990,7 +10990,7 @@ My (hypothetical) cancerous tumor is alive. Fuck life.</p>
 			<pubDate>Wed, 16 Mar 2005 07:07:38 -0600</pubDate>
 			<description><![CDATA[<p>“You can't spell manslaughter without laughter.”</p>
 ]]></description>
-			<category>found-on-the-internets</category>
+			<category>foundOnTheInternets</category>
 		</item>
 		<item>
 			<title>On racial inequality.</title>
@@ -11000,7 +11000,7 @@ My (hypothetical) cancerous tumor is alive. Fuck life.</p>
 			<description><![CDATA[<p><img src="https://halcanary.org/images/ask_your_butler.png" alt="SCARSDALE:WESTCHESTER COUNTY::..." /></p>
 <p>From the <em>Daily Show</em></p>
 ]]></description>
-			<category>found-on-the-internets</category>
+			<category>foundOnTheInternets</category>
 		</item>
 		<item>
 			<title>No More</title>
@@ -11043,7 +11043,7 @@ My (hypothetical) cancerous tumor is alive. Fuck life.</p>
 			<pubDate>Sat, 05 Mar 2005 21:52:03 -0600</pubDate>
 			<description><![CDATA[<p><a href="http://thepaincomics.com/weekly041229.htm">The noble ash is our true ancestor...</a></p>
 ]]></description>
-			<category>mindless-link-propagation</category>
+			<category>mindlessLinkPropagation</category>
 		</item>
 		<item>
 			<title>Sleep to Dream</title>
@@ -11062,7 +11062,7 @@ My (hypothetical) cancerous tumor is alive. Fuck life.</p>
 			<pubDate>Thu, 03 Mar 2005 17:31:48 -0600</pubDate>
 			<description><![CDATA[<p><a href="https://halcanary.org/images/netscape_8.png">Some people should not be allowed to design software</a>.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>HD Photo</title>
@@ -11072,7 +11072,7 @@ My (hypothetical) cancerous tumor is alive. Fuck life.</p>
 			<description><![CDATA[<p><a href="http://bagnewsnotes.typepad.com/bagnews/">Bag News Notes</a> always has a lot to say about photojournalism.</p>
 <p><a href="http://bagnewsnotes.typepad.com/bagnews/2005/02/your_turn_iwhat.html">Here's one of the more artistic and symbolic things I've seen in a while</a>.</p>
 ]]></description>
-			<category>mindless-link-propagation</category>
+			<category>mindlessLinkPropagation</category>
 		</item>
 		<item>
 			<title>IceWM</title>
@@ -11084,7 +11084,7 @@ My (hypothetical) cancerous tumor is alive. Fuck life.</p>
 <p>Shane the physics major (not the monk, the other one) introduced me to IceWM by way of Mandrake. This might be my new lightweight WM of choice. So without further ado, I present:</p>
 <p><a href="https://halcanary.org/p/fedora-icewm">Howto Install IceWM under Fedora.</a> (moved to a new page)</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Fedora Extras</title>
@@ -11096,7 +11096,7 @@ My (hypothetical) cancerous tumor is alive. Fuck life.</p>
 <p>I see that Fedora Extras (The add-ons meant to supplement Fedora Core) have finally been moved to the download.fedora.redhat.com server. I also notice that new packages have been added, such as the ever-popular packages<br />
 gqview, perl-GD, sodipodi, gnofract4d, and starfighter</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>unless they are, in fact, made of Swiss cheese</title>
@@ -11108,7 +11108,7 @@ gqview, perl-GD, sodipodi, gnofract4d, and starfighter</p>
 <p>“Yes, but in some cases, isn't that tacitly agreeing to participate in a political system you may find distateful? Why should Prince Harry get treated to more fawning nomenclature (‘Your Royal Highness...’) than Rosa Parks?”</p>
 <p>(<a href="http://ask.metafilter.com/mefi/15784">source</a>)</p>
 ]]></description>
-			<category>found-on-the-internets</category>
+			<category>foundOnTheInternets</category>
 		</item>
 		<item>
 			<title>Congressional Districts</title>
@@ -11167,7 +11167,7 @@ You scored 100% Beginner, 93% Intermediate, 87% Advanced, and 66% Expert!</p>
 <pre><code>echo 'Mom, what recipe do you use for chili?' \
  | mutt mom -s chili</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Chili</title>
@@ -11216,7 +11216,7 @@ You scored 100% Beginner, 93% Intermediate, 87% Advanced, and 66% Expert!</p>
 <p>(<a href="http://en.wikipedia.org/wiki/Fuck">Source</a>)</p>
 </blockquote>
 ]]></description>
-			<category>found-on-the-internets</category>
+			<category>foundOnTheInternets</category>
 		</item>
 		<item>
 			<title>What&#x27;s the difference?</title>
@@ -11227,7 +11227,7 @@ You scored 100% Beginner, 93% Intermediate, 87% Advanced, and 66% Expert!</p>
 vs.
 http://www.paypal.com/</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>let this be it</title>
@@ -11263,7 +11263,7 @@ http://www.paypal.com/</p>
 			<pubDate>Fri, 25 Feb 2005 13:33:47 -0600</pubDate>
 			<description><![CDATA[<p><a href="http://www.halcanary.org/p/google-movie-showtimes">Google Movie Showtimes</a></p>
 ]]></description>
-			<category>found-on-the-internets</category>
+			<category>foundOnTheInternets</category>
 		</item>
 		<item>
 			<title>h2h</title>
@@ -11272,7 +11272,7 @@ http://www.paypal.com/</p>
 			<pubDate>Wed, 16 Feb 2005 06:48:04 -0600</pubDate>
 			<description><![CDATA[<p>Which term is better? Cory Doctrow's &quot;<a href="http://infinitematrix.net/stories/shorts/i-robot.html">hand-to-hand piracy</a>&quot; or &quot;sneakernet&quot;, which I first heard from Chris Wilson?</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>NN</title>
@@ -11315,7 +11315,7 @@ $ make-audio-cd-from-playlist.sh x
 <hr />
 <p><strong>UPDATE</strong>: Recent versions of Rhythmbox have the ability to burn audio CDs.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>libertarians and statists and terrorists interact with each other in a way that might be quite stable</title>
@@ -11328,7 +11328,7 @@ $ make-audio-cd-from-playlist.sh x
 <p>Stephenson(<a href="http://www.reason.com/0502/fe.mg.neal.shtml">link</a>)</p>
 </blockquote>
 ]]></description>
-			<category>mindless-link-propagation</category>
+			<category>mindlessLinkPropagation</category>
 		</item>
 		<item>
 			<title>HY-3520USB-C</title>
@@ -11337,7 +11337,7 @@ $ make-audio-cd-from-playlist.sh x
 			<pubDate>Fri, 04 Feb 2005 15:13:48 -0600</pubDate>
 			<description><![CDATA[<p>The <a href="http://imagestore.us/product.asp?pf_id=HY%2D3520USB%2DC">HY-3520USB-C</a> is a piece of crap that doesn't work and breaks easilly.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>action figure</title>
@@ -11361,7 +11361,7 @@ $ make-audio-cd-from-playlist.sh x
 (<a href="http://www.sluggy.net/forums/viewtopic.php?t=488">source</a>)</p>
 </blockquote>
 ]]></description>
-			<category>found-on-the-internets</category>
+			<category>foundOnTheInternets</category>
 		</item>
 		<item>
 			<title>Mom</title>
@@ -11391,7 +11391,7 @@ $ make-audio-cd-from-playlist.sh x
 <p><img src="https://halcanary.org/images/copyleftcommie.png" alt="[]" /></p>
 <p>Puts me in mind of the <a href="http://kenmacleod.blogspot.com/">Ken MacLeod</a>'s International Scientific and Technical Worker's Soviet.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Knowledge is power...for real.</title>
@@ -11401,7 +11401,7 @@ $ make-audio-cd-from-playlist.sh x
 			<description><![CDATA[<p><img src="https://halcanary.org/images/heat_vision_jack_01.jpg" alt="[screenshot]" /><br />
 I rediscovered this a couple of weeks ago when I was looking for something fun to watch in my collection of downloads. It's called <a href="http://www.imdb.com/title/tt0363668/"><em>Heat Vision and Jack</em></a> and can be got via Bittorrent <a href="http://waxy.org/bt/">here</a>.</p>
 ]]></description>
-			<category>mindless-link-propagation</category>
+			<category>mindlessLinkPropagation</category>
 		</item>
 		<item>
 			<title>Sorry to delve back into politics...</title>
@@ -11431,7 +11431,7 @@ I rediscovered this a couple of weeks ago when I was looking for something fun t
 			<pubDate>Tue, 11 Jan 2005 13:45:45 -0600</pubDate>
 			<description><![CDATA[<p><a href="http://www.apple.com/macmini/">http://www.apple.com/macmini/</a> and <a href="https://halcanary.org/archives/000312.html">https://halcanary.org/archives/000312.html</a></p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Stop</title>
@@ -11540,7 +11540,7 @@ I had made an jackass out of myself yet again.</code></pre>
 			<description><![CDATA[<p>If you plug a usb device that's not working just right into a hub, or vice-versa (a working device into a misconfigured hub), you will destroy something every time. I just lost my usb keyboard/hub that way. A few years ago, I lost a usb joystick.</p>
 <p>I pulled out my old AT keyboard. Clickety Clack!</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>The Bots</title>
@@ -11582,7 +11582,7 @@ and<br />
 			<description><![CDATA[<p>“People who boast about their I.Q. are losers.”</p>
 <p>— Stephen Hawking(<a href="http://www.nytimes.com/2004/12/12/magazine/12QUESTIONS.html">source</a>)</p>
 ]]></description>
-			<category>mindless-link-propagation</category>
+			<category>mindlessLinkPropagation</category>
 		</item>
 		<item>
 			<title>&#x22;You go to war with the Army you have.&#x22;</title>
@@ -11620,7 +11620,7 @@ and<br />
 			<description><![CDATA[<p>“It is not stated whether there are non-frumious Bandersnatches, or whether these can be approached safely, merely that the hero of the poem must shun a Bandersnatch that is frumious.”<br />
 (<a href="http://en.wikipedia.org/wiki/Bandersnatch">source</a>)</p>
 ]]></description>
-			<category>found-on-the-internets</category>
+			<category>foundOnTheInternets</category>
 		</item>
 		<item>
 			<title>better...</title>
@@ -11630,7 +11630,7 @@ and<br />
 			<description><![CDATA[<p>With the newer releases of linux distributions, things have become extraordinarily user-friendly. This is the only bug I've discovered so far <a href="https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=141043">and it's a minor problem with an easy work-around.</a></p>
 <p>Of course, to do things RIGHT, you do need to know what you are doing. I still want to be able to partition my own drives, write my own firewall scripts, and change a lot of the other configurations; and I can still do all of those things.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Supernatural</title>
@@ -11676,7 +11676,7 @@ and<br />
 			<pubDate>Thu, 02 Dec 2004 21:31:44 -0600</pubDate>
 			<description><![CDATA[<p>I've got an old 30G HDD I won't be using shortly. Anyone have any suggestions on what to do with it? I'm thinking of getting an external enclosure for it. Anyone have experience with those?</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>The 21st century.</title>
@@ -11686,7 +11686,7 @@ and<br />
 			<description><![CDATA[<p>How we know we are living in the 21st century: you can buy harddrives at $0.70/gigabyte.</p>
 <p>CDRs are still cheaper at about $0.20/gigabyte</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Packaging</title>
@@ -11739,7 +11739,7 @@ and styrofoam popcorn. That's all.</p>
 			<pubDate>Sun, 28 Nov 2004 18:37:01 -0600</pubDate>
 			<description><![CDATA[<p><a href="https://halcanary.org/p/image-upload">image-upload.php</a></p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>FC3</title>
@@ -11865,7 +11865,7 @@ pcm.!default {
 }
 EOF</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Good or Bad?</title>
@@ -11918,7 +11918,7 @@ in todays <em>Times</em>. It discusses two possible outcomes: a market crash or 
 <p>— Mike Miksch (<a href="http://www.allspark.com/forums/index.php?showtopic=35400&amp;view=findpost&amp;p=627508">source</a>)</p>
 </blockquote>
 ]]></description>
-			<category>found-on-the-internets</category>
+			<category>foundOnTheInternets</category>
 		</item>
 		<item>
 			<title>Almost.</title>
@@ -12011,7 +12011,7 @@ in todays <em>Times</em>. It discusses two possible outcomes: a market crash or 
 			<description><![CDATA[<p><a href="http://historiansagainstwar.org/wartime/ldw98.jpg">A lot can happen in two years.</a></p>
 <p><a href="http://historiansagainstwar.org/wartime/">Life During Wartime</a></p>
 ]]></description>
-			<category>mindless-link-propagation</category>
+			<category>mindlessLinkPropagation</category>
 		</item>
 		<item>
 			<title>like a twig</title>
@@ -12024,7 +12024,7 @@ in todays <em>Times</em>. It discusses two possible outcomes: a market crash or 
 </blockquote>
 <p>Good thing I no longer put my faith in money.</p>
 ]]></description>
-			<category>mindless-link-propagation</category>
+			<category>mindlessLinkPropagation</category>
 		</item>
 		<item>
 			<title>moral issue</title>
@@ -12253,7 +12253,7 @@ State Capitol Square, Madison, WI.<br />
 </ol>
 <p>Some &quot;experienced&quot; users are just lazy.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>ever</title>
@@ -12271,7 +12271,7 @@ State Capitol Square, Madison, WI.<br />
 			<pubDate>Sat, 02 Oct 2004 11:08:14 -0500</pubDate>
 			<description><![CDATA[<p>“<a href="http://www.juancole.com/2004_10_01_juancole_archive.html#109663852086120616">I wonder if more could not have been made about Bush's constant zigzags on Iraq policy.</a>”</p>
 ]]></description>
-			<category>mindless-link-propagation</category>
+			<category>mindlessLinkPropagation</category>
 		</item>
 		<item>
 			<title>Mount St. Helens</title>
@@ -12282,7 +12282,7 @@ State Capitol Square, Madison, WI.<br />
 <a href="http://story.news.yahoo.com/news?g=events/sc/080601volcano&amp;a=&amp;tmpl=sl&amp;ns=&amp;l=1&amp;e=8&amp;a=0&amp;printer=">From the AP</a></p>
 <p>It's a VOLCANO! Don't you remember how in second grade, volcanos were the coolest thing? Of course, that was before nintendo.</p>
 ]]></description>
-			<category>mindless-link-propagation</category>
+			<category>mindlessLinkPropagation</category>
 		</item>
 		<item>
 			<title>6:13 AM</title>
@@ -12329,7 +12329,7 @@ State Capitol Square, Madison, WI.<br />
 			<pubDate>Thu, 16 Sep 2004 20:39:05 -0500</pubDate>
 			<description><![CDATA[<p><a href="http://www.usmint.gov/pressroom/index.cfm?action=Photo#2004NickelSeries"><img src="https://halcanary.org/images/2005Nickel.jpg" alt="[2005 Nickels]" /></a></p>
 ]]></description>
-			<category>mindless-link-propagation</category>
+			<category>mindlessLinkPropagation</category>
 		</item>
 		<item>
 			<title>Photos from two weeks ago/</title>
@@ -12365,7 +12365,7 @@ State Capitol Square, Madison, WI.<br />
 <p>Turns out that yum uses a lot of processor power when it resolves dependencies. Or maybe it gets into infinite loops.</p>
 <p>**UPDATE 2004-09-12:**The battery is quite dead, and I'll never get the winmodem to work. I may have to invest in a pcmcia modem at some point. But everything else seems to work perfectly.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Cassini</title>
@@ -12385,7 +12385,7 @@ State Capitol Square, Madison, WI.<br />
 			<pubDate>Tue, 07 Sep 2004 22:14:56 -0500</pubDate>
 			<description><![CDATA[<p>Paul Graham has a neat essay <a href="http://www.paulgraham.com/essay.html">About Essays</a>.</p>
 ]]></description>
-			<category>mindless-link-propagation</category>
+			<category>mindlessLinkPropagation</category>
 		</item>
 		<item>
 			<title>About OSS Companies</title>
@@ -12394,7 +12394,7 @@ State Capitol Square, Madison, WI.<br />
 			<pubDate>Tue, 07 Sep 2004 21:55:55 -0500</pubDate>
 			<description><![CDATA[<p>Havoc Pennington put together a nice document detailing what <a href="http://www.redhat.com/">Red Hat</a> does all day: <a href="http://log.ometer.com/2004-09.html">Open Source Software Subscriptions</a></p>
 ]]></description>
-			<category>mindless-link-propagation</category>
+			<category>mindlessLinkPropagation</category>
 		</item>
 		<item>
 			<title>Fashion</title>
@@ -12440,7 +12440,7 @@ State Capitol Square, Madison, WI.<br />
 <p>They could sell a $600 computer without monitor! Then Joe Consumer would just plug in his old CRT and have a decent consumer PC.</p>
 <p><strong>UPDATE:</strong> Yes, I know it would end up costing closer to $800. But still, can't anyone get ahold of a monitor easily?</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Best Headline Ever!</title>
@@ -12449,7 +12449,7 @@ State Capitol Square, Madison, WI.<br />
 			<pubDate>Fri, 27 Aug 2004 08:54:51 -0500</pubDate>
 			<description><![CDATA[<p><a href="http://www.salon.com/opinion/feature/2004/08/27/abu_ghraib/">The Pentagon high command clears the Pentagon high command of any wrongdoing in the Abu Ghraib torture scandal.</a></p>
 ]]></description>
-			<category>mindless-link-propagation</category>
+			<category>mindlessLinkPropagation</category>
 		</item>
 		<item>
 			<title>Installing Wordpress with MySQL</title>
@@ -12517,7 +12517,7 @@ mt_trackback
 <p>I'm getting ahead of myself. Before I got that far, I unpacked the wordpress tarball locally, used a gui ftp program to recursivly copy over the directory. I renamed ~/public_html/wordpress/ to ~/public_html/wp/ for brevity's sake. I then had to change the permission mode on that directory to 777 so that the install program could make the wp-config.php file. Then I made a ~/public_html/b/ directory and copied index.php from the wp/ directory there. This way my permlinks will be to https://halcanary.org/b/, and not to https://halcanary.org/wp/.</p>
 <p>Then I browsed to http://halcanary/wp/ and did the setup.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>iptables traversal</title>
@@ -12527,7 +12527,7 @@ mt_trackback
 			<description><![CDATA[<p>Tuesday I went to Martin Brown's talk on netfilter/iptables.</p>
 <p>He provided this  <a href="http://linux-ip.net/nf/nfk-traversal.png">very useful diagram of how it all works.</a></p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Spam Armoring</title>
@@ -12539,7 +12539,7 @@ mt_trackback
 </code></pre>
 <p>As long as that method is not over-used--or used in a predictable manner--it should be safe for a while.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Fun with Gnome 2</title>
@@ -12554,7 +12554,7 @@ $ gconftool-2 --type string -s \
   /apps/metacity/window_keybindings/maximize_horizontally \
   '&lt;Ctrl&gt;&lt;Alt&gt;h'</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>I hear that in this version</title>
@@ -12564,7 +12564,7 @@ $ gconftool-2 --type string -s \
 			<description><![CDATA[<p><a href="http://slashdot.org/comments.pl?sid=118320&amp;cid=9998015">Alderaan shoots first</a>.</p>
 <p><a href="http://slashdot.org/comments.pl?sid=118320&amp;cid=9998152">there's good inteligence that clearly shows Alderaan had a stockpile of WMDs</a>...</p>
 ]]></description>
-			<category>mindless-link-propagation</category>
+			<category>mindlessLinkPropagation</category>
 		</item>
 		<item>
 			<title>Books for Sale</title>
@@ -12667,7 +12667,7 @@ $ echo $(( (1035692-686080)/1024 ))
 <p>I must admit that Linux 2.6.x tends to be optimized more for lots of RAM, as compaired to 2.2.x or 2.4.x.</p>
 <p>Actually, if I was going to recomend a desktop for those who take no pleasure in building thier own system, I'd say go with something like the HPQ <a href="http://tinyurl.com/4pczd">SR1000Z</a>. Take the slowest Athlon XP offered and 1GB of RAM. I think this is what I reccomended to my father a year ago, and I think he's happy with that computer.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Apple Pro Keyboard with Linux</title>
@@ -12693,7 +12693,7 @@ keycode 184 = Pause
 remove Lock = Caps_Lock
 keycode 66 = F20</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Family Reunion</title>
@@ -12730,7 +12730,7 @@ keycode 66 = F20</code></pre>
 This image shows a keybord with keys color-coded as to what finger you are supposed to use to hit each key. My issue: my D-finger doesn't want to hit the C-key without moving my whole hand.<br />
 Why does the layout of the keys and the geometry of my hand conflict with how they teach you top type?</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>net access for life</title>
@@ -12745,7 +12745,7 @@ Why does the layout of the keys and the geometry of my hand conflict with how th
 <p>— from slashdot (<a href="http://slashdot.org/comments.pl?sid=117744&amp;cid=9949656">source</a>)</p>
 </blockquote>
 ]]></description>
-			<category>mindless-link-propagation</category>
+			<category>mindlessLinkPropagation</category>
 		</item>
 		<item>
 			<title>definition of worship</title>
@@ -12809,7 +12809,7 @@ Q+87X6oV3eaYvt3zWZYD6z5vYTcrtij2VZ9Zmni/UAaHqn9JdsBWLUEpVviYnh
 imNVvYFZeCXg/IdTQ+x4IRdiXNv5hEew==
 Exponent: AQAB</code></pre>
 ]]></description>
-			<category>mindless-link-propagation</category>
+			<category>mindlessLinkPropagation</category>
 		</item>
 		<item>
 			<title>Backup Strategy</title>
@@ -12834,7 +12834,7 @@ Exponent: AQAB</code></pre>
 478M.</li>
 </ul>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Slogan.</title>
@@ -12879,7 +12879,7 @@ Exponent: AQAB</code></pre>
 			<pubDate>Wed, 11 Aug 2004 14:54:06 -0500</pubDate>
 			<description><![CDATA[<p>Every time I burn a CD full of a bunvh of random files in order to get them off of my hard drive, I will print out a list of files it contains so that I know how to find old files.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Missile Command</title>
@@ -12888,7 +12888,7 @@ Exponent: AQAB</code></pre>
 			<pubDate>Wed, 11 Aug 2004 14:40:40 -0500</pubDate>
 			<description><![CDATA[<p><a href="http://sourceforge.net/projects/missile/">Missile Command for linux.</a></p>
 ]]></description>
-			<category>mindless-link-propagation</category>
+			<category>mindlessLinkPropagation</category>
 		</item>
 		<item>
 			<title>Two Gibsons!</title>
@@ -12922,7 +12922,7 @@ Exponent: AQAB</code></pre>
 			<pubDate>Thu, 05 Aug 2004 21:29:48 -0500</pubDate>
 			<description><![CDATA[<p>Why doesn't <a href="http://billmon.org/">bilmon</a> have his own column?</p>
 ]]></description>
-			<category>mindless-link-propagation</category>
+			<category>mindlessLinkPropagation</category>
 		</item>
 		<item>
 			<title>Doom 3</title>
@@ -12936,7 +12936,7 @@ Exponent: AQAB</code></pre>
 <p><strong>suspense</strong>. That's what the game is all about isn't it? Doom3 has got suspense. A lot of the skill is learning that if zombies don't have guns, they can't shoot you. Keep your flashlight on them untill they are five feet away from you. Then pull out your shotgun and shoot at where you last saw them. Demons, on the other hand, move quickly and can't be killed with a single blast. Shoot them until they die. But knowing how to use the flashlight is important.</p>
 <p><strong>graphics</strong>. What can I say? No screenshot can do the overall effect justice, because the cinamatography is so subtle. It's like Id realized the limitations of the graphics and designed a game to emphasize the strengths of the engine and not the weaknesses. (<a href="https://halcanary.org/p/doom">screenshots</a>)</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>copyright infringement is a crime, but it is not theft</title>
@@ -13001,7 +13001,7 @@ Set the RSYNC_RSH variable in your ~/.bashrc file.</p>
 <pre><code>$ export RSYNC_RSH=&quot;ssh&quot;
 $ rsync -r directory lensman:</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>links to DNC speeches on cspan</title>
@@ -13018,7 +13018,7 @@ $ rsync -r directory lensman:</code></pre>
 </ol>
 <p><a href="http://www.c-span.org/search/">Search CSPAN video archive</a></p>
 ]]></description>
-			<category>mindless-link-propagation,politics</category>
+			<category>mindlessLinkPropagation,politics</category>
 		</item>
 		<item>
 			<title>sharpton</title>
@@ -13027,7 +13027,7 @@ $ rsync -r directory lensman:</code></pre>
 			<pubDate>Mon, 26 Jul 2004 15:05:23 -0500</pubDate>
 			<description><![CDATA[<p><a href="http://salon.com/politics/war_room/archive.html?blog=/politics/war_room/2004/07/26/sharpton/index.html">&quot;being born on third base and thinking he hit a triple.&quot;</a></p>
 ]]></description>
-			<category>mindless-link-propagation,politics</category>
+			<category>mindlessLinkPropagation,politics</category>
 		</item>
 		<item>
 			<title>sshd attacks</title>
@@ -13057,7 +13057,7 @@ PermitRootLogin no
 DenyUsers admin guest test user
 ## EOF</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Late Night in Madison</title>
@@ -13079,7 +13079,7 @@ DenyUsers admin guest test user
 			<description><![CDATA[<p><a href="http://salon.com/comics/boll/2004/07/22/boll/"><img src="https://halcanary.org/images/amazing_yet_tautological.png" alt="[amazing_yet_tautological]" /><br />
 </a></p>
 ]]></description>
-			<category>mindless-link-propagation</category>
+			<category>mindlessLinkPropagation</category>
 		</item>
 		<item>
 			<title>Robot Josh</title>
@@ -13166,7 +13166,7 @@ RewriteRule ^cat$ /archives/cat.php [L]
 <p>So <a href="https://halcanary.org/archives/cat"><code>/archives/cat</code></a> is just a pointer to <a href="https://halcanary.org/archives/cat.php"><code>/archives/cat.php</code></a>.</p>
 <p>The whole <code>/p/*</code> directory is just a pointer to a single php script.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>electoral-vote.com</title>
@@ -13175,7 +13175,7 @@ RewriteRule ^cat$ /archives/cat.php [L]
 			<pubDate>Sat, 17 Jul 2004 16:00:30 -0500</pubDate>
 			<description><![CDATA[<p><a href="http://www.electoral-vote.com/">http://www.electoral-vote.com/</a></p>
 ]]></description>
-			<category>mindless-link-propagation</category>
+			<category>mindlessLinkPropagation</category>
 		</item>
 		<item>
 			<title>Chris&#x27;s Photos</title>
@@ -13231,7 +13231,7 @@ $
 <p>Yea!</p>
 <pre><code>$ monodoc &amp;</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>360 panorama of my house.</title>
@@ -13274,7 +13274,7 @@ $
 			<pubDate>Tue, 13 Jul 2004 17:05:18 -0500</pubDate>
 			<description><![CDATA[<p><a href="http://www.fuh2.com/">http://www.fuh2.com/</a></p>
 ]]></description>
-			<category>mindless-link-propagation</category>
+			<category>mindlessLinkPropagation</category>
 		</item>
 		<item>
 			<title>Got Burgled</title>
@@ -13360,7 +13360,7 @@ $
 			<pubDate>Wed, 07 Jul 2004 19:16:43 -0500</pubDate>
 			<description><![CDATA[<p>My <a href="https://halcanary.org/p/firewall">Linux Firewall Notes</a></p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>New Graphics Card.</title>
@@ -13370,7 +13370,7 @@ $
 			<description><![CDATA[<p>A couple of weeks ago I got sick of the whole propritary/binary Nvidia graphics drivers. So I searched around for the best ATI chip that 3D graphics drivers in <a href="http://freedesktop.org/~xorg/X11R6.7.0/doc/radeon.4.html#sect3">Xorg X11</a>. I bought a <a href="http://www.asenashop.com/sfitem/id-6919/pr-0">ATI Radeon 9200</a>. The 3-D driver is a bit buggy, but no worse than any binary drivers I've used. And I can hope that support for this card does nothing but improve.</p>
 <p>Of course the only games I have that take advantage of 3-d on linux are Quake 3 and RtCW.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Wandered</title>
@@ -13438,7 +13438,7 @@ for x in &quot;$@&quot; ; do echo $x; done ; echo &quot;&quot; ;
 1
 2 3</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Spam Test</title>
@@ -13471,7 +13471,7 @@ for x in &quot;$@&quot; ; do echo $x; done ; echo &quot;&quot; ;
 <li>Quake III</li>
 </ul>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Xlib:  extension &#x22;GLX&#x22; missing</title>
@@ -13483,7 +13483,7 @@ for x in &quot;$@&quot; ; do echo $x; done ; echo &quot;&quot; ;
 <p>It should have worked, as the file <code>/usr/X11R6/lib/modules/extensions/libglx.a</code> should have provided this funtionality.</p>
 <p>But alas, Xorg X11 was using the file <code>/usr/X11R6/lib/modules/extensions/libglx.so.1.0.5336</code>, left over from the proprietary driver. I deleted this file, restarted X11, and it all workes correctly! I have a fast enough processor that most small openGL apps work fine without hardware acceleration.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>department of redundant redundant URL department.</title>
@@ -13496,7 +13496,7 @@ for x in &quot;$@&quot; ; do echo $x; done ; echo &quot;&quot; ;
 http://$SERVER/pub/linux/fedora/core/$VERSION/<br />
 http://$SERVER/pub/linux/fedora/extras/$VERSION/</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>California</title>
@@ -13520,7 +13520,7 @@ Spent a week in California. Was fun.<br />
 <p>(<a href="http://www.johntitor.com/Nov2000P.htm">link</a>, via <a href="http://www.idlewords.com/weblog.09.2003.html#293">here</a>)</p>
 </blockquote>
 ]]></description>
-			<category>mindless-link-propagation</category>
+			<category>mindlessLinkPropagation</category>
 		</item>
 		<item>
 			<title>terminal lock</title>
@@ -13544,7 +13544,7 @@ echo &quot;&quot;;
 </code></pre>
 <p><strong>UPDATE 2004-12-02:</strong> Add “<code>trap '' TERM SIGTSTP</code>” for additional security.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>duh...add-hook</title>
@@ -13554,7 +13554,7 @@ echo &quot;&quot;;
 			<description><![CDATA[<pre><code>;; from ~/.emacs
 (add-hook 'php-mode-hook 'html-mode)</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>playing politics with the war on terror</title>
@@ -13732,7 +13732,7 @@ foreach $file (@files) {
     system (&quot;mv -v \&quot;$file\&quot; \&quot;$filenew\&quot;&quot;);
 }</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Tiny Vaio Laptop</title>
@@ -13805,7 +13805,7 @@ http://www.sony.com/accessories
 
 Thank you for your interest in Sony.</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Empire is a Tough Crowd</title>
@@ -13933,7 +13933,7 @@ Now it's a piece of paper that can be taken to the loacal tavern and traded for 
 			<pubDate>Mon, 12 Apr 2004 15:22:46 -0500</pubDate>
 			<description><![CDATA[<p><a href="https://halcanary.org/p/comparing-languages">Comparing compiled languages</a></p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Hexagonal Minesweeper.</title>
@@ -14012,7 +14012,7 @@ Than the things you say.</em></p>
 <p>I figured this out after reading HP's <a href="http://ometer.com/free-software-ui.html">essay on useability</a>, where he mentions that “Emacs is basically the last remaining X application that insists on having cut and paste that doesn't work correctly.”</p>
 <p>A while back, I vowed to switch from emacs to another editor. Silly me. That could never happen.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Photography</title>
@@ -14068,7 +14068,7 @@ Than the things you say.</em></p>
 <img src="https://halcanary.org/images/wecandetainyou.jpg" alt="We can detain you, you know.  --Bush/Cheney/04" /><br />
 </a></p>
 ]]></description>
-			<category>mindless-link-propagation</category>
+			<category>mindlessLinkPropagation</category>
 		</item>
 		<item>
 			<title>Bar Review</title>
@@ -14095,7 +14095,7 @@ Than the things you say.</em></p>
 			<pubDate>Mon, 29 Mar 2004 04:06:09 -0600</pubDate>
 			<description><![CDATA[<p><a href="https://www.google.com/search?q=google">google</a> looks slightly different. I find this jarring and scary.</p>
 ]]></description>
-			<category>mindless-link-propagation</category>
+			<category>mindlessLinkPropagation</category>
 		</item>
 		<item>
 			<title>March Photos</title>
@@ -14139,7 +14139,7 @@ chmod 777 /mnt/ramdisk
 (Assumes a single-user system.) Don't forget to turn off swap!</p>
 <pre><code>$ sudo /sbin/swapoff -a</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Free Music Review: Processor_</title>
@@ -14165,7 +14165,7 @@ chmod 777 /mnt/ramdisk
 <p>— “<a href="http://www.freeculture.org/wiki/wiki.phtml?title=A_culture_of_freedom">A culture of freedom</a>”</p>
 </blockquote>
 ]]></description>
-			<category>mindless-link-propagation</category>
+			<category>mindlessLinkPropagation</category>
 		</item>
 		<item>
 			<title>have a name</title>
@@ -14186,7 +14186,7 @@ chmod 777 /mnt/ramdisk
 			<pubDate>Sun, 21 Mar 2004 23:58:47 -0600</pubDate>
 			<description><![CDATA[<p><a href="http://alistapart.com/articles/emen/">The Trouble With EM 'n EN (and Other Shady Characters)</a></p>
 ]]></description>
-			<category>mindless-link-propagation</category>
+			<category>mindlessLinkPropagation</category>
 		</item>
 		<item>
 			<title>Susan B.</title>
@@ -14211,7 +14211,7 @@ chmod 777 /mnt/ramdisk
 <p>F, it just hung. Damnit.</p>
 <p><strong>UPDATE 2004-08-11:</strong> I've been happy with rhythmbox for the last several months. I reccomend. Yet it still needs a few more features.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>/dev/clue</title>
@@ -14227,7 +14227,7 @@ chmod 777 /mnt/ramdisk
 <p>(<a href="http://developers.slashdot.org/comments.pl?sid=100742&amp;cid=8588208">link</a>)</p>
 </blockquote>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Legal Torrents</title>
@@ -14236,7 +14236,7 @@ chmod 777 /mnt/ramdisk
 			<pubDate>Wed, 17 Mar 2004 12:01:40 -0600</pubDate>
 			<description><![CDATA[<p><a href="http://www.legaltorrents.com/">LegalTorrents.com</a></p>
 ]]></description>
-			<category>mindless-link-propagation</category>
+			<category>mindlessLinkPropagation</category>
 		</item>
 		<item>
 			<title>Ergodic hypothesis</title>
@@ -14256,7 +14256,7 @@ chmod 777 /mnt/ramdisk
 			<description><![CDATA[<p><img src="https://halcanary.org/images/hello_gimp.png" alt="[hello_gimp_image]" /><br />
 I installed a Gimp 2 beta off of <a href="http://download.fedora.us/fedora/fedora/1/i386/RPMS.testing/">fedora.us</a>. It rocks. Here's an image I made with it.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Bloody Omelet</title>
@@ -14292,7 +14292,7 @@ I installed a Gimp 2 beta off of <a href="http://download.fedora.us/fedora/fedor
 			<pubDate>Mon, 15 Mar 2004 12:38:00 -0600</pubDate>
 			<description><![CDATA[<p>Someone should port <a href="http://www.uoregon.edu/~koch/texshop/texshop.html">TeXShop</a> to linux.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Is that legal?</title>
@@ -14308,7 +14308,7 @@ I installed a Gimp 2 beta off of <a href="http://download.fedora.us/fedora/fedor
 <p>—Dave Barry (<a href="http://www.miami.com/mld/miamiherald/living/columnists/dave_barry/8121224.htm">link</a>)</p>
 </blockquote>
 ]]></description>
-			<category>mindless-link-propagation</category>
+			<category>mindlessLinkPropagation</category>
 		</item>
 		<item>
 			<title>Backups</title>
@@ -14365,7 +14365,7 @@ sub padnum {
     return &quot;$num&quot;;
 }</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Marriage</title>
@@ -14403,7 +14403,7 @@ Oxford, Mississippi<br />
 			<description><![CDATA[<p><img src="https://halcanary.org/images/abe.jpg" alt="ABE" /></p>
 <p><a href="http://www.johnnyburrito.com/images/dinero/5_punk.jpg">link</a>, <a href="http://www.johnnyburrito.com/images/dinero/5_paper.jpg">link</a>, <a href="http://www.johnnyburrito.com/images/dinero/1_homer_a.jpg">link</a>, and <a href="http://uglymoney.com/">link</a></p>
 ]]></description>
-			<category>mindless-link-propagation</category>
+			<category>mindlessLinkPropagation</category>
 		</item>
 		<item>
 			<title>Books</title>
@@ -14540,7 +14540,7 @@ classic. It's a prose tranlation. Verse translations loose something in the chan
 			<description><![CDATA[<p><a href="https://halcanary.org/photos/2002-10-19-arbor02.jpg"><img src="https://halcanary.org/photos/thumb/2002-10-19-arbor02.jpg" alt="[Thumb]" /></a></p>
 <p>The way I figure it, 50% of America is stupid. <a href="http://salon.com/opinion/feature/2004/03/10/osp/">50% is evil.</a> All in all, at least 75% is both. We're done for.</p>
 ]]></description>
-			<category>mindless-link-propagation</category>
+			<category>mindlessLinkPropagation</category>
 		</item>
 		<item>
 			<title>maple</title>
@@ -14570,7 +14570,7 @@ for n from 0 to 4 do
 end do:
 #end Maple Code</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>something finer than a grazing animal</title>
@@ -14579,7 +14579,7 @@ end do:
 			<pubDate>Mon, 08 Mar 2004 18:04:58 -0600</pubDate>
 			<description><![CDATA[<p>“Shopping for food while listening to a Bach violin concerto completely remakes the experience. It turns you from a grazing animal into something finer.” (<a href="http://news.bbc.co.uk/2/hi/technology/3542391.stm">link</a>)</p>
 ]]></description>
-			<category>mindless-link-propagation</category>
+			<category>mindlessLinkPropagation</category>
 		</item>
 		<item>
 			<title>The characters that you really love to see killed.</title>
@@ -14619,7 +14619,7 @@ exec mpg123 -z --list $FILE
 </code></pre>
 <p><strong>UPDATE 2007-06-28:</strong> <a href="https://halcanary.org/vv/2006/11/23/665/"><code>find</code> is a lot better than this wildcard stuff</a>.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Fun with randomness</title>
@@ -14654,7 +14654,7 @@ $ ./crypt-otp.pl badotp x | gunzip - | less
 </code></pre>
 <p>If /dev/random hangs, jiggle your mouse for a while to build up entropy. If you input file is biger than your OTP, then it won't work. That's the one part of one-time. So make a bigger OTP by changing the argument to head.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Print on demand.</title>
@@ -14680,7 +14680,7 @@ for FILE in img_????.jpg ; do
     mv -v &quot;$FILE&quot; &quot;$DATE-$FILE&quot;
 done</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>I know...</title>
@@ -14725,7 +14725,7 @@ done</code></pre>
 <p>Works better than this:</p>
 <pre><code>convert -sample 120x120 $1 $2</code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>burn-dir</title>
@@ -14759,7 +14759,7 @@ mkisofs -quiet -V &quot;$2&quot; -r -J -f $1 | \
 eject $CDROM
 </code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>search and replace for elisp.</title>
@@ -14786,7 +14786,7 @@ will replace <code>&quot; \n&quot;</code> with <code>&quot;=20\n&quot;</code>, 
 </code></pre>
 <p>[<em>edited 2003-02-20</em>]</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Vote</title>
@@ -14868,7 +14868,7 @@ sending it to the null device, &quot;-o /dev/null&quot;. (See Rule of Silence fr
 <p>Then I pipe it into a pager, less, so that I can page through the document.</p>
 <p>Now I don't have to save a copy on the hard disk.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>profound</title>
@@ -14894,7 +14894,7 @@ sending it to the null device, &quot;-o /dev/null&quot;. (See Rule of Silence fr
 <li>Maildir is an elegant solution to the problem of locking mail spools. I'm going to try it out.</li>
 </ol>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Promise</title>
@@ -14944,7 +14944,7 @@ sending it to the null device, &quot;-o /dev/null&quot;. (See Rule of Silence fr
 			<description><![CDATA[<p>I published a short article last week on <a href="http://fedoranews.org/contributors/hal_canary/yum/">rsync</a>.</p>
 <p>Maybe I'll get some whuffie out of it.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>wish</title>
@@ -14972,7 +14972,7 @@ I find myself praying for temperatures as warm as 15 ° F.</p>
 			<pubDate>Wed, 28 Jan 2004 12:41:28 -0600</pubDate>
 			<description><![CDATA[<p><a href="http://www.firsttvdrama.com/funstuff/tarkin.php3">The Diary of Grand Moff Tarkin.</a></p>
 ]]></description>
-			<category>mindless-link-propagation</category>
+			<category>mindlessLinkPropagation</category>
 		</item>
 		<item>
 			<title>most source code is relatively defenseless</title>
@@ -14985,7 +14985,7 @@ I find myself praying for temperatures as warm as 15 ° F.</p>
 <p>—Seth Schoen (<a href="http://www.loyalty.org/~schoen/haiku.html">link</a>)</p>
 </blockquote>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Why I can&#x27;t vote for Kerry.</title>
@@ -15009,7 +15009,7 @@ I find myself praying for temperatures as warm as 15 ° F.</p>
 			<description><![CDATA[<p>Sometimes they outdo themselves. On tonights <em>Simpsons</em>, the guest stars are Ashley Olsen, Mary-Kate Olsen, Tom Clancy, and Thomas Pynchon.<br />
 (<a href="http://tv.yahoo.com/tvpdb?.src=my&amp;d=tvp&amp;lineup=us_DMA669&amp;channels=us_WMSN&amp;id=168651995&amp;chspid=166031387&amp;chname=FOX+47&amp;progutn=1075078800&amp;.intl=us">link</a>)</p>
 ]]></description>
-			<category>mindless-link-propagation</category>
+			<category>mindlessLinkPropagation</category>
 		</item>
 		<item>
 			<title>A Sad day.</title>
@@ -15018,7 +15018,7 @@ I find myself praying for temperatures as warm as 15 ° F.</p>
 			<pubDate>Thu, 22 Jan 2004 12:02:34 -0600</pubDate>
 			<description><![CDATA[<p>The first computer that was <em>mine</em> and not shared with my family was dave, a gateway P2-233 that my grandmother bought me in 1997. Last week I permanently retired it from its duties as a web server. Last night I salvaged the last bit of useful hardware off of him: a pair of thumbscrews.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Kicking Ass</title>
@@ -15045,7 +15045,7 @@ I find myself praying for temperatures as warm as 15 ° F.</p>
 <a href="http://science.slashdot.org/comments.pl?sid=92889&amp;cid=7980169">It sucks.</a> |<br />
 <a href="http://story.news.yahoo.com/news?tmpl=story&amp;u=/space/20040116/sc_space/amartianperspectivethestrangetaleoftwomoons">The Strange Tale of Two Moons</a></p>
 ]]></description>
-			<category>mindless-link-propagation</category>
+			<category>mindlessLinkPropagation</category>
 		</item>
 		<item>
 			<title>Fedora Linux</title>
@@ -15065,7 +15065,7 @@ I find myself praying for temperatures as warm as 15 ° F.</p>
 <li><a href="http://fedoranews.org/">FedoraNews</a>: news from the fedora-list mailing list, beginner hints, building RPM packages for your system. Maintained by Thomas Chung.</li>
 </ul>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Until a man is twenty-five...</title>
@@ -15103,7 +15103,7 @@ I find myself praying for temperatures as warm as 15 ° F.</p>
 <tr><td> lensman    </td><td> Athlon 2200 </td><td> workstation </td><td> Named by Hal after the space opera warriors.                </td></tr>
 <tr><td> hiro (2)   </td><td> PIII-800    </td><td> notebook    </td><td> Named by Hal after hiro (1).                                </td></tr>
 </table>]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Medications  Shipped Overnight To Your Do.</title>
@@ -15156,7 +15156,7 @@ M&lt;/hurtle&gt;e mo&lt;/bellyache&gt;re&lt;/a&gt;
 <img src="https://halcanary.org/SSL/images/rotor-1d-agg.png" alt="screenshot" /></p>
 <p>Work I've been doing](https://halcanary.org/SSL/rotor/)</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Trancendentalism for children</title>
@@ -15174,7 +15174,7 @@ M&lt;/hurtle&gt;e mo&lt;/bellyache&gt;re&lt;/a&gt;
 			<pubDate>Thu, 18 Dec 2003 15:04:44 -0600</pubDate>
 			<description><![CDATA[<p><a href="http://www.bldrdoc.gov/timefreq/service/time-servers.html">NIST Internet Time Servers</a></p>
 ]]></description>
-			<category>mindless-link-propagation</category>
+			<category>mindlessLinkPropagation</category>
 		</item>
 		<item>
 			<title>Mist and Shadow/The Walking-Song</title>
@@ -15234,7 +15234,7 @@ Away shall fade ! Away shall fade!</em></p>
 			<pubDate>Sat, 13 Dec 2003 12:30:30 -0600</pubDate>
 			<description><![CDATA[<p>Two recent blogs deserve links: <a href="http://groklaw.net/">Pamela Jones' GrokLaw</a> and the <a href="http://www.abusabletech.org/">Abusable Technologies Awareness Center</a>. The first is devoted to discussions of the legal aspects of OSS. (Since May, all of the articls are about SCO.) The latter is composed of 19 panelists, including several names known to me. I've added them to my bookmarks list.</p>
 ]]></description>
-			<category>mindless-link-propagation</category>
+			<category>mindlessLinkPropagation</category>
 		</item>
 		<item>
 			<title>Snow!</title>
@@ -15277,7 +15277,7 @@ Away shall fade ! Away shall fade!</em></p>
 <p><a href="http://www.pointlesswasteoftime.com/film/resolutions10.html">&quot;...and the money truck will be by around 9:30.&quot;</a></p>
 <p><a href="http://www.howardhallis.com/bis/cthulhuchick/">&quot;Don't worry about going mad, there's no avoiding it!&quot;</a></p>
 ]]></description>
-			<category>mindless-link-propagation</category>
+			<category>mindlessLinkPropagation</category>
 		</item>
 		<item>
 			<title>ls directories script</title>
@@ -15292,7 +15292,7 @@ Away shall fade ! Away shall fade!</em></p>
     -l &quot;$@&quot; | grep &quot;^d&quot;
 </code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Thanksgiving</title>
@@ -15369,7 +15369,7 @@ glue will eventually begin to oxidize?</p>
 <p>And now It just lost most of my music library. I'll have to readd those files. And importing files into the library is the one thing that's not properly multithreaded.</p>
 <p>I'll let you know how this works out.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Business Card</title>
@@ -15411,7 +15411,7 @@ glue will eventually begin to oxidize?</p>
 ssh-keygen -lf $x;
 done</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Week Summary.</title>
@@ -15494,7 +15494,7 @@ Links for
 </code></pre>
 <p>All this implies that I should make a point to immediately close <code>&quot;&lt;a name=...&quot;</code> tags, unless I want highlighting.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Magnatune, Free Products, SSL, DDP.</title>
@@ -15543,7 +15543,7 @@ Links for
 			<description><![CDATA[<p>I played around with Movable Type this weekend. I liked it, but have a couple of issues. I think it should come with a couple of dozen stylesheets for users to choose from. I spent an hour playing with CSS before I got <a href="https://halcanary.org/vv/">something I liked</a>.</p>
 <p>The one thing I don't like is that it groups entries by date. That seems very unnatural.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Giving up on Debian.</title>
@@ -15552,7 +15552,7 @@ Links for
 			<pubDate>Tue, 30 Sep 2003 11:11:44 -0500</pubDate>
 			<description><![CDATA[<p>I am giving up on Debian Linux. I tried installing it for a headless server and it worked great--but was running a 2.2 kernel. So I install the 2.4.x kernel with apt-get, and reboot. Well, the install program modified lilo incorrectly and ran /sbin/lilo, so it was broken and failed to boot. I go in and fix lilo, and get it to boot the 2.4 kernel, but suddenly it no longer is loading the correct module for the net card. At this point I decided to give up on this.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Applets for SSL</title>
@@ -15574,7 +15574,7 @@ Been doing some Java programing for math. I'm getting paid to do this too! I've 
 <p>— <a href="https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=75157#c">Alexander Larsson</a></p>
 </blockquote>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Possessions</title>
@@ -15593,7 +15593,7 @@ Been doing some Java programing for math. I'm getting paid to do this too! I've 
 			<pubDate>Fri, 12 Sep 2003 18:20:32 -0500</pubDate>
 			<description><![CDATA[<p>I picked up a copy of maple 9 yesterday. I'll give you my opinions on it later. I strongly suspect that the computer algebra system which is the true computer algebra system can only be understood by mathematicians.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>RANT</title>
@@ -15701,7 +15701,7 @@ Been doing some Java programing for math. I'm getting paid to do this too! I've 
 <p>If course, if the ui is no good, this boat won't fly. First of all, you need to be able to zoom from 1 meter resolution to 10^12 meter resolution. Second, you need an autopilot that is capable of plotting a course to anywhere. Otherwise, players would always be crashing into the sun, or unable to find neptune.</p>
 <p>And fuel should not be free.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>ssh-add script.</title>
@@ -15720,7 +15720,7 @@ exec /usr/bin/ssh &quot;$@&quot;;
 </code></pre>
 <p>Of course you have to have the ssh-agent working correctly in the first place.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>More on Robots!</title>
@@ -15789,7 +15789,7 @@ exec /usr/bin/ssh &quot;$@&quot;;
 <li><code>grub-install '(hd0)'</code></li>
 </ol>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Media PC</title>
@@ -15811,7 +15811,7 @@ exec /usr/bin/ssh &quot;$@&quot;;
 <p>That photo I just took is meant to show one thing. Since it's a black case, it doesn't stand out much. Which is exactly how things should be. It's just another component in my A/V system. Eventually, the system should consist of (1) a media pc, (2) an amplifier &amp; speakers and (3) a screen.</p>
 <p><strong>UPDATE 2004-12-02:</strong> A while back I broke down and threw a 8 GiB HDD into dalek and installed FC. This eventually got 1, 2, 3, 4, and 6 working. I use scp instead of samba. I just don't trust samba.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Editors for Linux.</title>
@@ -15832,7 +15832,7 @@ exec /usr/bin/ssh &quot;$@&quot;;
 <p>and it asks for a password and opens up the document in a local window. This is <em>beautiful</em>. It also has really good syntax highlighting. It does not have tabs, but it is easy to switch between buffers with alt-rightarrow and alt-leftarrow. It's also easy to edit the keybindings. I just made ctrl-w an alternate for close, and ctrl-[shift]-tab for forward[backward].</p>
 <p>Also note that KDE is the desktop on Knoppix. Anywhere I can stick in a Knoppix CD, I can use kate to edit files locally.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Hippy Christmas/Dreams</title>
@@ -15926,7 +15926,7 @@ exec /usr/bin/ssh &quot;$@&quot;;
 			<pubDate>Wed, 06 Aug 2003 19:38:29 -0500</pubDate>
 			<description><![CDATA[<p><a href="https://halcanary.org/images/login-scaled.png"><img src="https://halcanary.org/images/thumb-login-scaled.png" alt="[login screen]" /></a>The new motherboard and processor arived today, and I finished rebuilding my computer. It was an involved process that required me to take everything apart and put it all back together, repartition my hard drive (I had been wanting to do that for a while), and reinstall my OS. It seems to be working fine. I'd take a photo, but it all looks just like it did before the upgrade.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Sittin by the dock...</title>
@@ -15978,7 +15978,7 @@ exec /usr/bin/ssh &quot;$@&quot;;
 <p>So I began by buying a new motherboard+processor+RAM: an Athlon XP 2200+ and a ASUS A7N8X. I'll stick that in my old case and keep my old drives in that case. I'll probably end up giving it a new name. Possibly <em>lensman</em>.</p>
 <p>Then I'll put my old mobo+processor (still called <em>dalek</em>) in a new case in my living room. Just to keep things simple I'll run Knoppix on that machine so that I don't have to worry about hard drives. Then I can play music off of a nfs mounted drive from lensman.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>the n Queens problem</title>
@@ -16010,7 +16010,7 @@ exec /usr/bin/ssh &quot;$@&quot;;
 <p>The biggest problem seems to be the ctrl-x and ctrl-c behavior.</p>
 <p><a href="http://mail.gnu.org/archive/html/help-gnu-emacs/2003-02/msg00652.html">To those in the emacs community who say that the default behavior is superior</a>, I won't disagree. But ctrl-f is search in my browser, and whenever I hit ctrl-s to search, it tries to save the web page. So I figured I needed to retrain myself and emacs to a single standard.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Robots!</title>
@@ -16039,7 +16039,7 @@ exec /usr/bin/ssh &quot;$@&quot;;
 and <a href="https://web.archive.org/web/20030803023331/https://mightymu.net/">[2]</a>
 and <a href="about:logo">[3]</a></p>
 ]]></description>
-			<category>mindless-link-propagation</category>
+			<category>mindlessLinkPropagation</category>
 		</item>
 		<item>
 			<title>Dreams</title>
@@ -16070,7 +16070,7 @@ foreach my $file (glob &quot;\*&quot;) {
 }
 </code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Photos</title>
@@ -16092,7 +16092,7 @@ foreach my $file (glob &quot;\*&quot;) {
 			<description><![CDATA[<p><a href="https://halcanary.org/images/wohc-firebird06.png"><img src="https://halcanary.org/images/thumb-wohc-firebird06.png" alt="[]" /></a> <a href="https://halcanary.org/images/wohc-ie60.png"><img src="https://halcanary.org/images/thumb-wohc-ie60.png" alt="[]" /></a> <a href="https://halcanary.org/images/wohc-netscape47.png"><img src="https://halcanary.org/images/thumb-wohc-netscape47.png" alt="[]" /></a></p>
 <p>This is what this pages looks likes in various browsers. Notice how NS47 degrades gracefully and IE60 ouputs garbage.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Google Fun</title>
@@ -16102,7 +16102,7 @@ foreach my $file (glob &quot;\*&quot;) {
 			<description><![CDATA[<p><a href="https://www.google.com/search?btnI=l&amp;q=french+military+victories">https://www.google.com/search?btnI=l &amp;q=french+military+victories</a></p>
 <p><a href="https://www.google.com/search?btnI=l&amp;q=weapons+of+mass+destruction">https://www.google.com/search?btnI=l &amp;q=weapons+of+mass+destruction</a></p>
 ]]></description>
-			<category>mindless-link-propagation</category>
+			<category>mindlessLinkPropagation</category>
 		</item>
 		<item>
 			<title>Photos</title>
@@ -16151,7 +16151,7 @@ div.section {
 </code></pre>
 <p>At this point you can have more fun with the css, without touching the html any more. (Isn't that the point?) Try putting each <code>&lt;div class=&quot;section&quot;&gt;</code> in its own little colorful box.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>perl tip of the day</title>
@@ -16160,7 +16160,7 @@ div.section {
 			<pubDate>Wed, 16 Jul 2003 19:19:59 -0500</pubDate>
 			<description><![CDATA[<p>Dont's use “s/bleg/blarg/” when you mean to use “s/bleg/blarg/g”!</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Site Redesign</title>
@@ -16179,7 +16179,7 @@ div.section {
 			<description><![CDATA[<p><a href="http://mail.gnu.org/archive/html/emacs-devel/2002-10/msg00100.html">Emacs will not have Xft support anytime soon</a>, unless somebody codes it.</p>
 <p>I visited the <a href="http://www.csszengarden.com/">CSS Zen Garden</a>, and it inspired the ...</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>robots</title>
@@ -16274,7 +16274,7 @@ There are no files in folder '/DCIM/CANONMSC'.
 <p>If software defined radio ever becomes really common, maybe the price of the hardware will drop. It seems to me that an ADC is such a horribly useful piece of equipment that every computer should come with one. It's refreashing to see that the free software sommunity is <a href="http://www.gnu.org/software/gnuradio/">so far ahead in this game</a>.</p>
 <p>If anyone I know has an old ADC card laying about and wants to work on building something cool, tell me.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Recipe time</title>
@@ -16349,7 +16349,7 @@ I ain't got no matches but I've got so far to go.</em></p>
 <p>This is a well established business principle. Give away the razor and profit on the blades.</p>
 <p>I't just as well that I'm not going to get the game. I'd just have to use windows anyways. And that would be distasteful.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>What I&#x27;ve been up to this summer:</title>
@@ -16428,7 +16428,7 @@ ls -x1 | \
   system(&quot;mv \\&quot;$x\\&quot; \\&quot;$\_\\&quot;&quot;) if ($x ne $\_);}'
 </code></pre>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Huge bloody peeve:</title>
@@ -16498,7 +16498,7 @@ ls -x1 | \
 <hr />
 <p>Happy Good Friday. Except that it's not a particularly happy holiday. It's all about sin and death. [Hal rummages through his old tapes.] Here we go: my copy of <em>Jesus Christ Superstar</em>. No holy week could be complete without a thourough listening to JCS. I'll probably play some Bach passions as well.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>More Linux Crap</title>
@@ -16522,7 +16522,7 @@ ls -x1 | \
 <hr />
 <p>I have an exam friday evening at 6:30. Can you believe that?</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Linux Crap</title>
@@ -16557,7 +16557,7 @@ ls -x1 | \
 <hr />
 <p>It snowed this morning! In April! Crazyness!</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>desk</title>
@@ -16594,7 +16594,7 @@ ls -x1 | \
 </blockquote>
 <p>I went out and bought a <a href="http://www.penny-arcade.com/view.php3?date=2003-01-08">GBA SP</a> today. I love it. It's so tiny and beautiful. I also picked up Metroid Fusion, which is wonderfully old-school, yet beautiful. I hadn't had a gameboy since the first generation of them came out, back in the day. But I still have my old games (Tetris, Metroid II, Pinball, some others), which work on the GBA platform, even though the larger cartridges stick out a bit. Something fun to do on long bus rides.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Phoenix / Hinking</title>
@@ -16712,7 +16712,7 @@ Yeah, it's gone</em></p>
 <p>I put a lot of work into reworking this page yesterday. I've finally moved all content off of <em>http://uw.physics.wisc.edu/~hal/</em> and transferred it to this site. I also grabbed a lot of content off of <em>http://ups.physics.wisc.edu/~hal/</em>.</p>
 <p>There's now a lot of junk on the left sidebar.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>From Today&#x27;s Algebra Class</title>
@@ -16737,7 +16737,7 @@ Yeah, it's gone</em></p>
 </ul>
 <p>It amazes me how little work I get done on the weekend. Look, it's almost over and I accomplished squat.</p>
 ]]></description>
-			<category>mindless-link-propagation</category>
+			<category>mindlessLinkPropagation</category>
 		</item>
 		<item>
 			<title>New Look</title>
@@ -16773,7 +16773,7 @@ file. Add a line<br />
 <code>&quot;Mozilla.navigator:browser&quot; = {Icon = &quot;/path/to/icon.png&quot;;};</code><br />
 somewhere.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Linux on SRX87</title>
@@ -16782,7 +16782,7 @@ somewhere.</p>
 			<pubDate>Sun, 02 Feb 2003 19:52:48 -0600</pubDate>
 			<description><![CDATA[<p><a href="http://www.differentpla.net/~roger/hardware/vaio/linux/">It looks like someone was able to install linux on thier Vaio SRX87.</a> Now I don't know if I need to go to the effort of duplicating that effort, considering that I am relativly happy with things the way things are. I'll probably give it a try sometime in the future.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>P2P</title>
@@ -16829,7 +16829,7 @@ somewhere.</p>
 <p>Also check out <a href="http://www.livejournal.com/talkread.bml?journal=lemonlye&amp;itemid=19097">this</a>.</p>
 <p>Happy new year and whatnot.</p>
 ]]></description>
-			<category>mindless-link-propagation</category>
+			<category>mindlessLinkPropagation</category>
 		</item>
 		<item>
 			<title>Florida photos</title>
@@ -16923,7 +16923,7 @@ somewhere.</p>
 			<description><![CDATA[<p><a href="http://www.xeni.net/images/boingboing/spiderwood.gif">A Moment of Zen</a></p>
 <p><img src="https://web.archive.org/web/20021128032251if_/http://xeni.net:80/images/boingboing/spiderwood.gif" alt="spiderwood.gif" /></p>
 ]]></description>
-			<category>mindless-link-propagation</category>
+			<category>mindlessLinkPropagation</category>
 		</item>
 		<item>
 			<title>Quiting!</title>
@@ -16976,7 +16976,7 @@ somewhere.</p>
 <hr />
 <p>A while back I purchased a subscriotion to <a href="http://salon.com">Salon</a>. So far, I'm happy with it. It's better than most newspapers that I've ever subscribed to. Especially considering how much I hate killing trees just to print up boring sports scores or 14 hour old stock prices.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>little alice</title>
@@ -17108,7 +17108,7 @@ Lord, have mercy.</em></p>
 </ul>
 <p>And, by the way, MACOSX sucks. It's too MACOSish.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Books on JavaScript and Perl</title>
@@ -17123,7 +17123,7 @@ Lord, have mercy.</em></p>
 <p>I've played a bit with js and cookies. See <a href="https://web.archive.org/web/20021013042617/https://halcanary.org/preferences.cgi">the prefs page</a>.</p>
 <p>I've been taking photos. See <a href="https://halcanary.org/p/a40/">this</a>, <a href="https://halcanary.org/p/photo-2002-08-25/">this</a>, and <a href="https://halcanary.org/p/photo-2002-08-31/">that</a>.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>I got me an iPod!</title>
@@ -17143,7 +17143,7 @@ Lord, have mercy.</em></p>
 <p>DOS &lt; MacOS &lt; Windows95,98,ME &lt; NT,2k,XP &lt; other unixes &lt; OSX &lt; linux.</p>
 <p>I just want my parents to move further to the right than they are now.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>why particles have spin</title>
@@ -17153,7 +17153,7 @@ Lord, have mercy.</em></p>
 			<description><![CDATA[<p><a href="http://neilgaming.no-ip.com/stuff/quotes.txt">“God does not play dice with the universe. He plays roulette; that's why particles have spin.”</a><br />
 --Spamalamadingdong</p>
 ]]></description>
-			<category>mindless-link-propagation</category>
+			<category>mindlessLinkPropagation</category>
 		</item>
 		<item>
 			<title>MLP: Mindless Link Propagation</title>
@@ -17164,7 +17164,7 @@ Lord, have mercy.</em></p>
 <p><a href="http://slashdot.org/comments.pl?sid=34833&amp;cid=3763482">http://slashdot.org/comments.pl sid=34833&amp;cid=3763482</a></p>
 <p><a href="http://www.kuro5hin.org/story/2002/6/14/13440/3767">http://www.kuro5hin.org/story/2002/6/14/13440/3767</a></p>
 ]]></description>
-			<category>mindless-link-propagation</category>
+			<category>mindlessLinkPropagation</category>
 		</item>
 		<item>
 			<title>_Fallen Dragon_ and _Survivor_</title>
@@ -17212,7 +17212,7 @@ Lord, have mercy.</em></p>
 <p>KDE's mp3 player - okay, once I leaned how set up the playlist. I've gotten sick of xmms's crappy fonts.</p>
 <p>Connecting to the internet. &quot;rp3 -i ppp0&quot; (the gui option) or &quot;alias u '/sbin/ifup ppp0'&quot; (the CLI option). Should I forget my old-fashoned fASCIIst ways and go the way of the point and click? I don't know.</p>
 ]]></description>
-			<category>computers-code</category>
+			<category>computersAndCode</category>
 		</item>
 		<item>
 			<title>Linus Quote</title>
@@ -17224,7 +17224,7 @@ Lord, have mercy.</em></p>
 <p>---<a href="http://lwn.net/2002/0425/a/ideology-sucks.php3">Linus Torvalds</a></p>
 </blockquote>
 ]]></description>
-			<category>mindless-link-propagation</category>
+			<category>mindlessLinkPropagation</category>
 		</item>
 		<item>
 			<title>First Blog</title>

@@ -3,4 +3,4 @@ Knowledge is power...for real.…
 
 Read more: https://halcanary.org/vv/2005/01/12/388/
 
-#mindless-link-propagation
+#mindlessLinkPropagation

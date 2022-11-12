@@ -3,4 +3,4 @@ to mars…
 
 Read more: https://halcanary.org/vv/2004/01/16/156/
 
-#mindless-link-propagation
+#mindlessLinkPropagation

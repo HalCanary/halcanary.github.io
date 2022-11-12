@@ -3,4 +3,4 @@ Cheap Tech Manefesto…
 
 Read more: https://halcanary.org/vv/2005/03/18/428/
 
-#computers-code
+#computersAndCode

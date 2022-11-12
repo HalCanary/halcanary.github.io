@@ -3,4 +3,4 @@ Mindless! Link Propagation!…
 
 Read more: https://halcanary.org/vv/2003/03/10/36/
 
-#mindless-link-propagation
+#mindlessLinkPropagation

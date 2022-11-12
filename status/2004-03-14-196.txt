@@ -3,4 +3,4 @@ Is that legal?…
 
 Read more: https://halcanary.org/vv/2004/03/14/196/
 
-#mindless-link-propagation
+#mindlessLinkPropagation

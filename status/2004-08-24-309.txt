@@ -3,4 +3,4 @@ Installing Wordpress with MySQL…
 
 Read more: https://halcanary.org/vv/2004/08/24/309/
 
-#computers-code
+#computersAndCode

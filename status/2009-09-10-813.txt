@@ -3,4 +3,4 @@ Setting the Gnome Desktop Background With a Script…
 
 Read more: https://halcanary.org/vv/2009/09/10/813/
 
-#computers-code
+#computersAndCode

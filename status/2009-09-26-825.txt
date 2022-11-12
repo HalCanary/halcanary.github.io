@@ -3,4 +3,4 @@ ssh-show-key-fingerprint…
 
 Read more: https://halcanary.org/vv/2009/09/26/825/
 
-#computers-code
+#computersAndCode

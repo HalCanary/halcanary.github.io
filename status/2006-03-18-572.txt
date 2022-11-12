@@ -3,4 +3,4 @@ MLP: SXSW to MPAA: STFU…
 
 Read more: https://halcanary.org/vv/2006/03/18/572/
 
-#mindless-link-propagation
+#mindlessLinkPropagation

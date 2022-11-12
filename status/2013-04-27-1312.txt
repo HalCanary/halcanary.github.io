@@ -4,4 +4,4 @@ A small and fast application to quickly view several 3D file formats.  There is 
 
 Read more: https://halcanary.org/vv/2013/04/27/1312/
 
-#computers-code | #software-projects
+#computersAndCode | #softwareProjects

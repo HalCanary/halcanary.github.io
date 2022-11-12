@@ -3,4 +3,4 @@ Money!…
 
 Read more: https://halcanary.org/vv/2004/03/13/192/
 
-#mindless-link-propagation
+#mindlessLinkPropagation

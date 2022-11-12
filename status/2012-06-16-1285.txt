@@ -3,4 +3,4 @@ A new printer with Ubuntu 12.04…
 
 Read more: https://halcanary.org/vv/2012/06/16/1285/
 
-#computers-code
+#computersAndCode

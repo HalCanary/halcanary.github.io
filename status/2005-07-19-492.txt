@@ -3,4 +3,4 @@ print free graph paper dot com…
 
 Read more: https://halcanary.org/vv/2005/07/19/492/
 
-#mindless-link-propagation
+#mindlessLinkPropagation

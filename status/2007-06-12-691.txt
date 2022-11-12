@@ -4,4 +4,4 @@ Utility Scripts for Unix-compatible systems (id est GNU/Linux). This page collec
 
 Read more: https://halcanary.org/vv/2007/06/12/691/
 
-#computers-code
+#computersAndCode

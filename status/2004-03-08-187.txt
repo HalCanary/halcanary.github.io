@@ -3,4 +3,4 @@ something finer than a grazing animal…
 
 Read more: https://halcanary.org/vv/2004/03/08/187/
 
-#mindless-link-propagation
+#mindlessLinkPropagation

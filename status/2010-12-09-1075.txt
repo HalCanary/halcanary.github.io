@@ -3,4 +3,4 @@ REAL10…
 
 Read more: https://halcanary.org/vv/2010/12/09/1075/
 
-#computer-science | #computers-code | #mathematics
+#computerScience | #computersAndCode | #mathematics

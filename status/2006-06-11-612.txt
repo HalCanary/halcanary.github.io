@@ -3,4 +3,4 @@ staff of life…
 
 Read more: https://halcanary.org/vv/2006/06/11/612/
 
-#mindless-link-propagation
+#mindlessLinkPropagation

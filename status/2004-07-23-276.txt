@@ -3,4 +3,4 @@ amazing yet tautological…
 
 Read more: https://halcanary.org/vv/2004/07/23/276/
 
-#mindless-link-propagation
+#mindlessLinkPropagation

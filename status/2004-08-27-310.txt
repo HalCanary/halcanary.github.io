@@ -3,4 +3,4 @@ Best Headline Ever!…
 
 Read more: https://halcanary.org/vv/2004/08/27/310/
 
-#mindless-link-propagation
+#mindlessLinkPropagation

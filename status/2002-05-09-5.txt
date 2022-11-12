@@ -3,4 +3,4 @@ Linus Quote…
 
 Read more: https://halcanary.org/vv/2002/05/09/5/
 
-#mindless-link-propagation
+#mindlessLinkPropagation

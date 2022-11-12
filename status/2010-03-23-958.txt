@@ -3,4 +3,4 @@ Judging a Book by its Cover…
 
 Read more: https://halcanary.org/vv/2010/03/23/958/
 
-#judging-a-book-by-its-cover
+#judgingBookCovers
