@@ -1,7 +1,6 @@
 Blog post:
+Random password generator…
 
-Random password generator
-
-https://halcanary.org/vv/2008/02/03/718/
+Read more: https://halcanary.org/vv/2008/02/03/718/
 
 #computers-code

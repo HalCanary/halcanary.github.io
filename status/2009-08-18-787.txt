@@ -1,7 +1,6 @@
 Blog post:
+timer.c…
 
-timer.c
-
-https://halcanary.org/vv/2009/08/18/787/
+Read more: https://halcanary.org/vv/2009/08/18/787/
 
 #computers-code

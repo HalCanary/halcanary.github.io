@@ -1,7 +1,6 @@
 Blog post:
+the emacs doctor…
 
-the emacs doctor
-
-https://halcanary.org/vv/2004/04/23/230/
+Read more: https://halcanary.org/vv/2004/04/23/230/
 
 #life

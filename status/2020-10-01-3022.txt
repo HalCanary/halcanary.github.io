@@ -1,9 +1,7 @@
 Blog post:
-
 Blog/site update
+summary of last few years of site changes.…
 
-https://halcanary.org/vv/2020/10/01/3022/
-
-summary of last few years of site changes.
+Read more: https://halcanary.org/vv/2020/10/01/3022/
 
 #meta

@@ -1,5 +1,4 @@
 Blog post:
+an emacs macro…
 
-an emacs macro
-
-https://halcanary.org/vv/2012/09/25/csg32/
+Read more: https://halcanary.org/vv/2012/09/25/csg32/

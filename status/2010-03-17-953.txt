@@ -1,7 +1,6 @@
 Blog post:
+dynamic arrays…
 
-dynamic arrays
-
-https://halcanary.org/vv/2010/03/17/953/
+Read more: https://halcanary.org/vv/2010/03/17/953/
 
 #computer-science | #computers-code

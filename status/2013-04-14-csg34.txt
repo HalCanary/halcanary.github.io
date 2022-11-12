@@ -1,5 +1,4 @@
 Blog post:
+Pointer class…
 
-Pointer class
-
-https://halcanary.org/vv/2013/04/14/csg34/
+Read more: https://halcanary.org/vv/2013/04/14/csg34/

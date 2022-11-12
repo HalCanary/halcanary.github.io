@@ -1,7 +1,6 @@
 Blog post:
+Linux Firewall Notes…
 
-Linux Firewall Notes
-
-https://halcanary.org/vv/2004/07/07/259/
+Read more: https://halcanary.org/vv/2004/07/07/259/
 
 #computers-code

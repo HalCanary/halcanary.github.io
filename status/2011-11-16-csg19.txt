@@ -1,5 +1,4 @@
 Blog post:
+Quick linear regression…
 
-Quick linear regression
-
-https://halcanary.org/vv/2011/11/16/csg19/
+Read more: https://halcanary.org/vv/2011/11/16/csg19/

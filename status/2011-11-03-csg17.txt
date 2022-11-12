@@ -1,5 +1,4 @@
 Blog post:
+Restart X11 under Ubuntu…
 
-Restart X11 under Ubuntu
-
-https://halcanary.org/vv/2011/11/03/csg17/
+Read more: https://halcanary.org/vv/2011/11/03/csg17/

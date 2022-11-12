@@ -1,9 +1,7 @@
 Blog post:
-
 RSS Feed
+I add a RSS feed to the custom blog generator.…
 
-https://halcanary.org/vv/2021/10/11/3024/
-
-I add a RSS feed to the custom blog generator.
+Read more: https://halcanary.org/vv/2021/10/11/3024/
 
 #meta

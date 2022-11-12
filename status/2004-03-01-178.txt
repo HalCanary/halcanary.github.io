@@ -1,7 +1,6 @@
 Blog post:
+imagemagik convert…
 
-imagemagik convert
-
-https://halcanary.org/vv/2004/03/01/178/
+Read more: https://halcanary.org/vv/2004/03/01/178/
 
 #computers-code

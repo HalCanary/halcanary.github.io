@@ -1,9 +1,7 @@
 Blog post:
-
 notebook
+It's a command-line note-keeping app that uses git for backups.…
 
-https://halcanary.org/vv/2022/11/11/3033/
-
-It's a command-line note-keeping app that uses git for backups.
+Read more: https://halcanary.org/vv/2022/11/11/3033/
 
 #computers-code

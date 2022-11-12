@@ -1,7 +1,6 @@
 Blog post:
+Fedora Linux…
 
-Fedora Linux
-
-https://halcanary.org/vv/2004/01/16/155/
+Read more: https://halcanary.org/vv/2004/01/16/155/
 
 #computers-code

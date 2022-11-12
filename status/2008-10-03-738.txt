@@ -1,7 +1,6 @@
 Blog post:
+(defun remove-excess-whitespace...…
 
-(defun remove-excess-whitespace...
-
-https://halcanary.org/vv/2008/10/03/738/
+Read more: https://halcanary.org/vv/2008/10/03/738/
 
 #computers-code

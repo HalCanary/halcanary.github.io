@@ -1,7 +1,6 @@
 Blog post:
+ssh filesharing.…
 
-ssh filesharing.
-
-https://halcanary.org/vv/2009/05/24/767/
+Read more: https://halcanary.org/vv/2009/05/24/767/
 
 #computers-code

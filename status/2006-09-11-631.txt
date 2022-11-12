@@ -1,7 +1,6 @@
 Blog post:
+another funny html thingy: blockquote…
 
-another funny html thingy: blockquote
-
-https://halcanary.org/vv/2006/09/11/631/
+Read more: https://halcanary.org/vv/2006/09/11/631/
 
 #computers-code

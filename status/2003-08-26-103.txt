@@ -1,7 +1,6 @@
 Blog post:
+ssh-add script.…
 
-ssh-add script.
-
-https://halcanary.org/vv/2003/08/26/103/
+Read more: https://halcanary.org/vv/2003/08/26/103/
 
 #computers-code

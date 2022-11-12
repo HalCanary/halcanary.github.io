@@ -1,7 +1,6 @@
 Blog post:
+sshd attacks…
 
-sshd attacks
-
-https://halcanary.org/vv/2004/07/26/278/
+Read more: https://halcanary.org/vv/2004/07/26/278/
 
 #computers-code

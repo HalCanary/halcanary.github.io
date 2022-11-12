@@ -1,7 +1,6 @@
 Blog post:
+Setting the Gnome Desktop Background With a Script…
 
-Setting the Gnome Desktop Background With a Script
-
-https://halcanary.org/vv/2009/09/10/813/
+Read more: https://halcanary.org/vv/2009/09/10/813/
 
 #computers-code

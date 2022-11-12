@@ -18,6 +18,7 @@ type SiteConfig struct {
 	Style     string // Inline CSS content.
 	Icon      string // URL for icon/
 	Banner    string
+	Melinks   []string
 }
 
 func ReadSiteConfig(siteRootPath string) (SiteConfig, error) {
@@ -43,7 +44,18 @@ func (siteConfig SiteConfig) MakeHead(title string) *dom.Node {
 		dom.TextNode("\n"),
 		dom.Elem("style", dom.TextNode(siteConfig.Style)),
 		dom.TextNode("\n"),
-		dom.Comment("\n"+siteConfig.Copyright + " " + siteConfig.License+"\n"),
+		dom.Comment("\n"+siteConfig.Copyright+" "+siteConfig.License+"\n"),
 		dom.TextNode("\n"),
 	)
+}
+
+func (siteConfig SiteConfig) MakeMelinks() *dom.Node {
+	var d *dom.Node
+	if len(siteConfig.Melinks) > 0 {
+		d = dom.Elem("div")
+		for _, link := range siteConfig.Melinks {
+			d.Append(dom.Element("a", dom.Attr{"rel": "me", "href": link}, dom.TextNode("")))
+		}
+	}
+	return d
 }

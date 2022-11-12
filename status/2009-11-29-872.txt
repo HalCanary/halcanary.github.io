@@ -1,7 +1,6 @@
 Blog post:
+sed in place…
 
-sed in place
-
-https://halcanary.org/vv/2009/11/29/872/
+Read more: https://halcanary.org/vv/2009/11/29/872/
 
 #computers-code

@@ -1,5 +1,4 @@
 Blog post:
+make -j…
 
-make -j
-
-https://halcanary.org/vv/2011/08/08/csg12/
+Read more: https://halcanary.org/vv/2011/08/08/csg12/

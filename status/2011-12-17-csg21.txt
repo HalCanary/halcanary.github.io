@@ -1,5 +1,4 @@
 Blog post:
+Java Makefiles…
 
-Java Makefiles
-
-https://halcanary.org/vv/2011/12/17/csg21/
+Read more: https://halcanary.org/vv/2011/12/17/csg21/

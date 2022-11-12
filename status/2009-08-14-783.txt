@@ -1,7 +1,6 @@
 Blog post:
+rounding functions for POSIX bc.…
 
-rounding functions for POSIX bc.
-
-https://halcanary.org/vv/2009/08/14/783/
+Read more: https://halcanary.org/vv/2009/08/14/783/
 
 #computers-code

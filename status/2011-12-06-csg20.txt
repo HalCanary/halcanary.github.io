@@ -1,5 +1,4 @@
 Blog post:
+quick GDB…
 
-quick GDB
-
-https://halcanary.org/vv/2011/12/06/csg20/
+Read more: https://halcanary.org/vv/2011/12/06/csg20/

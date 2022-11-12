@@ -1,7 +1,6 @@
 Blog post:
+Giving up on Debian.…
 
-Giving up on Debian.
-
-https://halcanary.org/vv/2003/09/30/115/
+Read more: https://halcanary.org/vv/2003/09/30/115/
 
 #computers-code

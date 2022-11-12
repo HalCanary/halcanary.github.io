@@ -1,7 +1,6 @@
 Blog post:
+software for ubuntu…
 
-software for ubuntu
-
-https://halcanary.org/vv/2009/09/27/838/
+Read more: https://halcanary.org/vv/2009/09/27/838/
 
 #computers-code

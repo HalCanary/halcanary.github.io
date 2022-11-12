@@ -1,7 +1,6 @@
 Blog post:
+genpasswd…
 
-genpasswd
-
-https://halcanary.org/vv/2007/04/05/682/
+Read more: https://halcanary.org/vv/2007/04/05/682/
 
 #computers-code

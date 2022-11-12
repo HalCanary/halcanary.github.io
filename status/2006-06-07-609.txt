@@ -1,7 +1,6 @@
 Blog post:
+fun with POSIX bc...…
 
-fun with POSIX bc...
-
-https://halcanary.org/vv/2006/06/07/609/
+Read more: https://halcanary.org/vv/2006/06/07/609/
 
 #computers-code

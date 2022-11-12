@@ -1,5 +1,4 @@
 Blog post:
+yet another emacs function…
 
-yet another emacs function
-
-https://halcanary.org/vv/2011/07/18/csg11/
+Read more: https://halcanary.org/vv/2011/07/18/csg11/

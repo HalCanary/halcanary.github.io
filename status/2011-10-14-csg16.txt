@@ -1,5 +1,4 @@
 Blog post:
+restart gdm under ubuntu…
 
-restart gdm under ubuntu
-
-https://halcanary.org/vv/2011/10/14/csg16/
+Read more: https://halcanary.org/vv/2011/10/14/csg16/

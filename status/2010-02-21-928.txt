@@ -1,7 +1,6 @@
 Blog post:
+private static String itoa(int i)…
 
-private static String itoa(int i)
-
-https://halcanary.org/vv/2010/02/21/928/
+Read more: https://halcanary.org/vv/2010/02/21/928/
 
 #computers-code

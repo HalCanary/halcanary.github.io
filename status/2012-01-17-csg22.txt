@@ -1,5 +1,4 @@
 Blog post:
+PyQt QInputDialog.get*() wrappers…
 
-PyQt QInputDialog.get*() wrappers
-
-https://halcanary.org/vv/2012/01/17/csg22/
+Read more: https://halcanary.org/vv/2012/01/17/csg22/

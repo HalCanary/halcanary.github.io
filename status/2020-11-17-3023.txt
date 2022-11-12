@@ -1,5 +1,4 @@
 Blog post:
+Javascript SVG printable maze generator…
 
-Javascript SVG printable maze generator
-
-https://halcanary.org/vv/2020/11/17/3023/
+Read more: https://halcanary.org/vv/2020/11/17/3023/

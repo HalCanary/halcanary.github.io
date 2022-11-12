@@ -1,7 +1,6 @@
 Blog post:
+most source code is relatively defenseless…
 
-most source code is relatively defenseless
-
-https://halcanary.org/vv/2004/01/28/161/
+Read more: https://halcanary.org/vv/2004/01/28/161/
 
 #computers-code

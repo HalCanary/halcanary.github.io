@@ -1,7 +1,6 @@
 Blog post:
+Backup Strategy…
 
-Backup Strategy
-
-https://halcanary.org/vv/2004/08/11/293/
+Read more: https://halcanary.org/vv/2004/08/11/293/
 
 #computers-code

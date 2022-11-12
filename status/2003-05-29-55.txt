@@ -1,7 +1,6 @@
 Blog post:
+Beautiful one-liner…
 
-Beautiful one-liner
-
-https://halcanary.org/vv/2003/05/29/55/
+Read more: https://halcanary.org/vv/2003/05/29/55/
 
 #computers-code

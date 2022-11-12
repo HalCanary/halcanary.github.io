@@ -1,7 +1,6 @@
 Blog post:
+postponing ntpd start…
 
-postponing ntpd start
-
-https://halcanary.org/vv/2006/11/22/664/
+Read more: https://halcanary.org/vv/2006/11/22/664/
 
 #computers-code

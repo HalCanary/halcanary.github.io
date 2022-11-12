@@ -1,5 +1,4 @@
 Blog post:
+bourne shell absolute path…
 
-bourne shell absolute path
-
-https://halcanary.org/vv/2010/03/31/968/
+Read more: https://halcanary.org/vv/2010/03/31/968/

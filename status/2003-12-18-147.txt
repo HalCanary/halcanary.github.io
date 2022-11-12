@@ -1,7 +1,6 @@
 Blog post:
+NTP Link…
 
-NTP Link
-
-https://halcanary.org/vv/2003/12/18/147/
+Read more: https://halcanary.org/vv/2003/12/18/147/
 
 #mindless-link-propagation

@@ -1,7 +1,6 @@
 Blog post:
+HTML wierdness: border-top and blockquotes:…
 
-HTML wierdness: border-top and blockquotes:
-
-https://halcanary.org/vv/2006/10/07/653/
+Read more: https://halcanary.org/vv/2006/10/07/653/
 
 #computers-code

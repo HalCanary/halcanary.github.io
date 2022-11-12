@@ -1,7 +1,6 @@
 Blog post:
+scrabble.sh…
 
-scrabble.sh
-
-https://halcanary.org/vv/2011/06/21/1209/
+Read more: https://halcanary.org/vv/2011/06/21/1209/
 
 #computers-code

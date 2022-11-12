@@ -1,7 +1,6 @@
 Blog post:
+txt to html with hyperlink conversion…
 
-txt to html with hyperlink conversion
-
-https://halcanary.org/vv/2011/04/23/1194/
+Read more: https://halcanary.org/vv/2011/04/23/1194/
 
 #computers-code

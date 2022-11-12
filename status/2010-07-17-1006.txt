@@ -1,7 +1,6 @@
 Blog post:
+gravatar…
 
-gravatar
-
-https://halcanary.org/vv/2010/07/17/1006/
+Read more: https://halcanary.org/vv/2010/07/17/1006/
 
 #computers-code

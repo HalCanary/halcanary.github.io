@@ -1,5 +1,4 @@
 Blog post:
+git clone clone…
 
-git clone clone
-
-https://halcanary.org/vv/2011/06/03/csg06/
+Read more: https://halcanary.org/vv/2011/06/03/csg06/

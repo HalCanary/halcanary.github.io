@@ -1,9 +1,7 @@
 Blog post:
-
 spiral
+Your challenge: make a pretty postscript picture as one tweet…
 
-https://halcanary.org/vv/2013/06/11/1322/
-
-Your challenge: make a pretty postscript picture as one tweet
+Read more: https://halcanary.org/vv/2013/06/11/1322/
 
 #computers-code

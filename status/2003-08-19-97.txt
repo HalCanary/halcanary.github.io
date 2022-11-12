@@ -1,7 +1,6 @@
 Blog post:
+Grub help.…
 
-Grub help.
-
-https://halcanary.org/vv/2003/08/19/97/
+Read more: https://halcanary.org/vv/2003/08/19/97/
 
 #computers-code

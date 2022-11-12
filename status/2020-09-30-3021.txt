@@ -1,9 +1,7 @@
 Blog post:
-
 Dark Mode
+adding dark mode to this site.…
 
-https://halcanary.org/vv/2020/09/30/3021/
-
-adding dark mode to this site.
+Read more: https://halcanary.org/vv/2020/09/30/3021/
 
 #meta

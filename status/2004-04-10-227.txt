@@ -1,7 +1,6 @@
 Blog post:
+Hexagonal Minesweeper.…
 
-Hexagonal Minesweeper.
-
-https://halcanary.org/vv/2004/04/10/227/
+Read more: https://halcanary.org/vv/2004/04/10/227/
 
 #mathematics

@@ -1,7 +1,6 @@
 Blog post:
+make-envelope.sh…
 
-make-envelope.sh
-
-https://halcanary.org/vv/2009/06/08/771/
+Read more: https://halcanary.org/vv/2009/06/08/771/
 
 #computers-code

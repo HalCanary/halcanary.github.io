@@ -1,5 +1,4 @@
 Blog post:
+.emacs look and feel…
 
-.emacs look and feel
-
-https://halcanary.org/vv/2011/09/29/csg15/
+Read more: https://halcanary.org/vv/2011/09/29/csg15/

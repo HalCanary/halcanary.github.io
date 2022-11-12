@@ -1,7 +1,6 @@
 Blog post:
+Comparing compiled languages:…
 
-Comparing compiled languages:
-
-https://halcanary.org/vv/2004/04/12/228/
+Read more: https://halcanary.org/vv/2004/04/12/228/
 
 #computers-code

@@ -1,7 +1,6 @@
 Blog post:
+sudo tee…
 
-sudo tee
-
-https://halcanary.org/vv/2008/09/28/735/
+Read more: https://halcanary.org/vv/2008/09/28/735/
 
 #computers-code

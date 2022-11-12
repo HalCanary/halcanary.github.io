@@ -1,7 +1,6 @@
 Blog post:
+simple mergesort…
 
-simple mergesort
-
-https://halcanary.org/vv/2010/05/08/984/
+Read more: https://halcanary.org/vv/2010/05/08/984/
 
 #computer-science | #computers-code

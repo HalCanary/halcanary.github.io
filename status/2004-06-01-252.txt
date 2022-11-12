@@ -1,7 +1,6 @@
 Blog post:
+about "$@"…
 
-about "$@"
-
-https://halcanary.org/vv/2004/06/01/252/
+Read more: https://halcanary.org/vv/2004/06/01/252/
 
 #computers-code

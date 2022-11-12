@@ -1,7 +1,6 @@
 Blog post:
+manipulating filenames…
 
-manipulating filenames
-
-https://halcanary.org/vv/2004/03/04/182/
+Read more: https://halcanary.org/vv/2004/03/04/182/
 
 #computers-code

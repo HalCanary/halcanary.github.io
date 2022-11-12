@@ -1,7 +1,6 @@
 Blog post:
+the n Queens problem…
 
-the n Queens problem
-
-https://halcanary.org/vv/2003/08/03/82/
+Read more: https://halcanary.org/vv/2003/08/03/82/
 
 #mathematics

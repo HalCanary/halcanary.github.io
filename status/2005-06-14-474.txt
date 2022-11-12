@@ -1,7 +1,6 @@
 Blog post:
+id3tag --genre…
 
-id3tag --genre
-
-https://halcanary.org/vv/2005/06/14/474/
+Read more: https://halcanary.org/vv/2005/06/14/474/
 
 #computers-code

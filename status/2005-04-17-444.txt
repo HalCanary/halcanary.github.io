@@ -1,7 +1,6 @@
 Blog post:
+pcmcia cards…
 
-pcmcia cards
-
-https://halcanary.org/vv/2005/04/17/444/
+Read more: https://halcanary.org/vv/2005/04/17/444/
 
 #computers-code

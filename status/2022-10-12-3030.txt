@@ -1,9 +1,7 @@
 Blog post:
-
 Programatically Generating HTML
+I like libraries that let you programatically generate html documents.  For example, Go's x/net/html:…
 
-https://halcanary.org/vv/2022/10/12/3030/
-
-I like libraries that let you programatically generate html documents.  For example, Go's x/net/html:
+Read more: https://halcanary.org/vv/2022/10/12/3030/
 
 #computers-code

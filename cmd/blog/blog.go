@@ -93,14 +93,14 @@ func postUrl(blog Blog, post logpost.Post) string {
 
 func status(path string, blog Blog, p logpost.Post) {
 	b := filebuf.FileBuf{Path: path}
-	b.WriteString("Blog post:\n\n")
+	b.WriteString("Blog post:\n")
 	b.WriteString(p.Title)
-	b.WriteString("\n\n")
-	b.WriteString(postUrl(blog, p))
 	if p.Summary != "" {
-		b.WriteString("\n\n")
+		b.WriteString("\n")
 		b.WriteString(p.Summary)
 	}
+	b.WriteString("…\n\nRead more: ")
+	b.WriteString(postUrl(blog, p))
 	if len(p.Categories) > 0 {
 		b.WriteString("\n\n#")
 		b.WriteString(p.Categories[0])

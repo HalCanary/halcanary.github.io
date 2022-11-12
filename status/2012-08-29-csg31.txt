@@ -1,5 +1,4 @@
 Blog post:
+webgl example…
 
-webgl example
-
-https://halcanary.org/vv/2012/08/29/csg31/
+Read more: https://halcanary.org/vv/2012/08/29/csg31/

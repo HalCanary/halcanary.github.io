@@ -1,7 +1,6 @@
 Blog post:
+Apache httpd…
 
-Apache httpd
-
-https://halcanary.org/vv/2004/07/17/272/
+Read more: https://halcanary.org/vv/2004/07/17/272/
 
 #computers-code

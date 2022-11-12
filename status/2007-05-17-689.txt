@@ -1,7 +1,6 @@
 Blog post:
+find-and-sha1sum…
 
-find-and-sha1sum
-
-https://halcanary.org/vv/2007/05/17/689/
+Read more: https://halcanary.org/vv/2007/05/17/689/
 
 #computers-code

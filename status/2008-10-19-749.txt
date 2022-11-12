@@ -1,7 +1,6 @@
 Blog post:
+LTS…
 
-LTS
-
-https://halcanary.org/vv/2008/10/19/749/
+Read more: https://halcanary.org/vv/2008/10/19/749/
 
 #computers-code

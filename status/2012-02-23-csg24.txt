@@ -1,5 +1,4 @@
 Blog post:
+makefiles…
 
-makefiles
-
-https://halcanary.org/vv/2012/02/23/csg24/
+Read more: https://halcanary.org/vv/2012/02/23/csg24/

@@ -1,7 +1,6 @@
 Blog post:
+Excessively long URLs.…
 
-Excessively long URLs.
-
-https://halcanary.org/vv/2007/06/28/696/
+Read more: https://halcanary.org/vv/2007/06/28/696/
 
 #computers-code

@@ -1,7 +1,6 @@
 Blog post:
+gnuplot question…
 
-gnuplot question
-
-https://halcanary.org/vv/2010/07/16/1001/
+Read more: https://halcanary.org/vv/2010/07/16/1001/
 
 #computers-code

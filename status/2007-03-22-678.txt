@@ -1,7 +1,6 @@
 Blog post:
+timeinmicroseconds.c…
 
-timeinmicroseconds.c
-
-https://halcanary.org/vv/2007/03/22/678/
+Read more: https://halcanary.org/vv/2007/03/22/678/
 
 #computers-code

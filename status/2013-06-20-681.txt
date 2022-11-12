@@ -1,9 +1,7 @@
 Blog post:
-
 Color in shell scripts (not prompts)
+Some shell-script macros for adding color to the output of your programs.…
 
-https://halcanary.org/vv/2013/06/20/681/
-
-Some shell-script macros for adding color to the output of your programs.
+Read more: https://halcanary.org/vv/2013/06/20/681/
 
 #computers-code | #shell-scripts

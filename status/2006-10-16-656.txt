@@ -1,7 +1,6 @@
 Blog post:
+goodbye partition table…
 
-goodbye partition table
-
-https://halcanary.org/vv/2006/10/16/656/
+Read more: https://halcanary.org/vv/2006/10/16/656/
 
 #computers-code

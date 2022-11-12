@@ -1,7 +1,6 @@
 Blog post:
+A new printer with Ubuntu 12.04…
 
-A new printer with Ubuntu 12.04
-
-https://halcanary.org/vv/2012/06/16/1285/
+Read more: https://halcanary.org/vv/2012/06/16/1285/
 
 #computers-code

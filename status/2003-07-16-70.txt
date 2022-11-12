@@ -1,7 +1,6 @@
 Blog post:
+perl tip of the day…
 
-perl tip of the day
-
-https://halcanary.org/vv/2003/07/16/70/
+Read more: https://halcanary.org/vv/2003/07/16/70/
 
 #computers-code

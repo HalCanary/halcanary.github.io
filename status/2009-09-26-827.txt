@@ -1,7 +1,6 @@
 Blog post:
+Command-line Package Tools…
 
-Command-line Package Tools
-
-https://halcanary.org/vv/2009/09/26/827/
+Read more: https://halcanary.org/vv/2009/09/26/827/
 
 #computers-code

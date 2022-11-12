@@ -1,5 +1,4 @@
 Blog post:
+I'm not sure GNU takes windows ports seriously…
 
-I'm not sure GNU takes windows ports seriously
-
-https://halcanary.org/vv/2011/05/12/csg03/
+Read more: https://halcanary.org/vv/2011/05/12/csg03/

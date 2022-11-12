@@ -1,7 +1,6 @@
 Blog post:
+convert asterisks to html-bold via sed…
 
-convert asterisks to html-bold via sed
-
-https://halcanary.org/vv/2011/03/07/1096/
+Read more: https://halcanary.org/vv/2011/03/07/1096/
 
 #computers-code

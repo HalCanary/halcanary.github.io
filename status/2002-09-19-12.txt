@@ -1,7 +1,6 @@
 Blog post:
+Books on JavaScript and Perl…
 
-Books on JavaScript and Perl
-
-https://halcanary.org/vv/2002/09/19/12/
+Read more: https://halcanary.org/vv/2002/09/19/12/
 
 #computers-code

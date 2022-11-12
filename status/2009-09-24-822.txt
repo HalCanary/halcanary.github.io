@@ -1,7 +1,6 @@
 Blog post:
+MakeBookmarksFile…
 
-MakeBookmarksFile
-
-https://halcanary.org/vv/2009/09/24/822/
+Read more: https://halcanary.org/vv/2009/09/24/822/
 
 #computers-code

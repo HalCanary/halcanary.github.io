@@ -1,7 +1,6 @@
 Blog post:
+zipme.py…
 
-zipme.py
-
-https://halcanary.org/vv/2008/01/28/717/
+Read more: https://halcanary.org/vv/2008/01/28/717/
 
 #computers-code

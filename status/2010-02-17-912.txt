@@ -1,7 +1,6 @@
 Blog post:
+Mplayer and Gnome's screensaver.…
 
-Mplayer and Gnome's screensaver.
-
-https://halcanary.org/vv/2010/02/17/912/
+Read more: https://halcanary.org/vv/2010/02/17/912/
 
 #computers-code

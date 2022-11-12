@@ -1,7 +1,6 @@
 Blog post:
+FC4 version of Clearlooks in FC5…
 
-FC4 version of Clearlooks in FC5
-
-https://halcanary.org/vv/2006/10/04/652/
+Read more: https://halcanary.org/vv/2006/10/04/652/
 
 #computers-code

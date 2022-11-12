@@ -1,7 +1,6 @@
 Blog post:
+TAOCP/1…
 
-TAOCP/1
-
-https://halcanary.org/vv/2007/05/12/688/
+Read more: https://halcanary.org/vv/2007/05/12/688/
 
 #computers-code

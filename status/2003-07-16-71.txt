@@ -1,7 +1,6 @@
 Blog post:
+<hr> considered harmful.…
 
-<hr> considered harmful.
-
-https://halcanary.org/vv/2003/07/16/71/
+Read more: https://halcanary.org/vv/2003/07/16/71/
 
 #computers-code

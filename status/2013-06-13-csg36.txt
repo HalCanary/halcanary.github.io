@@ -1,5 +1,4 @@
 Blog post:
+or just use xdg-open…
 
-or just use xdg-open
-
-https://halcanary.org/vv/2013/06/13/csg36/
+Read more: https://halcanary.org/vv/2013/06/13/csg36/
