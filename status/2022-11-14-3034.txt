@@ -1,0 +1,7 @@
+Blog post:
+Italic and bold isolate characters for Unicode.
+a proposal…
+
+Read more: https://halcanary.org/vv/2022/11/14/3034/
+
+#unicode | #textShaping | #computersAndCode
