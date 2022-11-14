@@ -7,13 +7,32 @@
 		<language>en-US</language>
 		<copyright>Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.</copyright>
 		<link>https://halcanary.org/vv/</link>
-		<pubDate>Sat, 12 Nov 2022 13:20:39 -0500</pubDate>
-		<lastBuildDate>Sat, 12 Nov 2022 13:20:39 -0500</lastBuildDate>
+		<pubDate>Mon, 14 Nov 2022 10:35:21 -0500</pubDate>
+		<lastBuildDate>Mon, 14 Nov 2022 10:35:21 -0500</lastBuildDate>
 		<image>
 			<url>https://halcanary.org/images/HAL_CANARY_20191008_512.jpg</url>
 			<title>Voder-Vocoder</title>
 			<link>https://halcanary.org/vv/</link>
 		</image>
+		<item>
+			<title>Italic and bold isolate characters for Unicode.</title>
+			<link>https://halcanary.org/vv/2022/11/14/3034/</link>
+			<guid isPermaLink="false">a4d1142d-724f-59f9-a30e-9c861b621612</guid>
+			<pubDate>Mon, 14 Nov 2022 10:27:46 -0500</pubDate>
+			<description><![CDATA[<p>a proposal</p>
+<p>Unicode needs two new pairs of characters.  call them <code>⟪</code>, <code>⟫</code> and <code>⟦</code>,
+<code>⟧</code> for this description, but their actual glyphs could be anything symmetric.</p>
+<p>The string &quot;⟪foobar⟫&quot; would be defined to be semantically equivalent to the
+italic version of &quot;foobar&quot;, i.e. &quot;𝑓𝑜𝑜𝑏𝑎𝑟&quot;.</p>
+<p>Similarly, the string &quot;⟦foobar⟧&quot; would be defined to be semantically
+equivalent to the bold version of &quot;foobar&quot;, i.e. &quot;𝗳𝗼𝗼𝗯𝗮𝗿&quot;.</p>
+<p>…A text shaper (e.g. Harfbuzz) could replace text between these symbols with
+italic or bold text, if possible.</p>
+<p>But when those italic or bold fonts are unavailable or you are in plain-text
+mode (e.g. editing a computer program), then the new glyphs would be shown.</p>
+]]></description>
+			<category>unicode,textShaping,computersAndCode</category>
+		</item>
 		<item>
 			<title>notebook</title>
 			<link>https://halcanary.org/vv/2022/11/11/3033/</link>

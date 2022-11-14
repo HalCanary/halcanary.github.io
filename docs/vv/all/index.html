@@ -68,6 +68,42 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 <div role="main">
 <div id="2022"><h2>2022</h2>
 
+<details id="dt/2022/11/14/3034"><summary>
+  <a href="https://halcanary.org/vv/2022/11/14/3034/">Italic and bold isolate characters for Unicode.</a>
+  2022-11-14 10:27:46-05:00 (EST)
+  <br>a proposal</summary>
+<div class="box"><article class="h-entry" id="2022/11/14/3034">
+<header>
+<!-- SRC= 2022-11-14-3034.md -->
+<h3 class="blogtitle p-name">Italic and bold isolate characters for Unicode.</h3>
+<p class="p-summary">a proposal</p>
+<div class="byline plainlink">
+<div>
+<div class="p-author">Hal Canary</div>
+<div><time class="dt-published" datetime="2022-11-14T10:27:46-05:00">2022-11-14 10:27:46-05:00 (EST)</time></div>
+<div><a class="u-url u-uid" href="https://halcanary.org/vv/2022/11/14/3034/">https://halcanary.org/vv/2022/11/14/3034/</a></div>
+<div><a class="p-category" href="/vv/category/unicode/">#unicode</a>; <a class="p-category" href="/vv/category/textShaping/">#textShaping</a>; <a class="p-category" href="/vv/category/computersAndCode/">#computersAndCode</a></div>
+</div>
+</div>
+</header>
+<div class="content e-content">
+<div style="display:none;">a proposal</div>
+<div>
+<p>Unicode needs two new pairs of characters.  call them <code>⟪</code>, <code>⟫</code> and <code>⟦</code>,
+<code>⟧</code> for this description, but their actual glyphs could be anything symmetric.</p>
+<p>The string &#34;⟪foobar⟫&#34; would be defined to be semantically equivalent to the
+italic version of &#34;foobar&#34;, i.e. &#34;𝑓𝑜𝑜𝑏𝑎𝑟&#34;.</p>
+<p>Similarly, the string &#34;⟦foobar⟧&#34; would be defined to be semantically
+equivalent to the bold version of &#34;foobar&#34;, i.e. &#34;𝗳𝗼𝗼𝗯𝗮𝗿&#34;.</p>
+<p>…A text shaper (e.g. Harfbuzz) could replace text between these symbols with
+italic or bold text, if possible.</p>
+<p>But when those italic or bold fonts are unavailable or you are in plain-text
+mode (e.g. editing a computer program), then the new glyphs would be shown.</p>
+
+</div>
+</div>
+</article></div>
+</details>
 <details id="dt/2022/11/11/3033"><summary>
   <a href="https://halcanary.org/vv/2022/11/11/3033/">notebook</a>
   2022-11-11 14:50:43-05:00 (EST)
