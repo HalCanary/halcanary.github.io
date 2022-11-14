@@ -7,13 +7,24 @@
 		<language>en-US</language>
 		<copyright>Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.</copyright>
 		<link>https://halcanary.org/vv/</link>
-		<pubDate>Mon, 14 Nov 2022 10:37:34 -0500</pubDate>
-		<lastBuildDate>Mon, 14 Nov 2022 10:37:34 -0500</lastBuildDate>
+		<pubDate>Mon, 14 Nov 2022 10:40:15 -0500</pubDate>
+		<lastBuildDate>Mon, 14 Nov 2022 10:40:15 -0500</lastBuildDate>
 		<image>
 			<url>https://halcanary.org/images/HAL_CANARY_20191008_512.jpg</url>
 			<title>Voder-Vocoder</title>
 			<link>https://halcanary.org/vv/</link>
 		</image>
+		<item>
+			<title>Simple Command-Line Mastodon Status Poster!</title>
+			<link>https://halcanary.org/vv/2022/11/14/3035/</link>
+			<guid isPermaLink="false">2f1dd516-d8a3-5be0-a6c6-04987408a02e</guid>
+			<pubDate>Mon, 14 Nov 2022 10:38:48 -0500</pubDate>
+			<description><![CDATA[<p>I wrote a thing.  Link to gist.</p>
+<p><a href="https://gist.github.com/HalCanary/cb51e7fc5128f5762491e748c3827efa">MastodonStatusPoster.go</a></p>
+<p><a href="https://mastodon.sdf.org/@hal_canary/109325551001118991">Discuss</a></p>
+]]></description>
+			<category>mastodon,computersAndCode,golang</category>
+		</item>
 		<item>
 			<title>Italic and bold isolate characters for Unicode.</title>
 			<link>https://halcanary.org/vv/2022/11/14/3034/</link>

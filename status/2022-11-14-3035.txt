@@ -1,0 +1,7 @@
+Blog post:
+Simple Command-Line Mastodon Status Poster!
+I wrote a thing.  Link to gist.…
+
+Read more: https://halcanary.org/vv/2022/11/14/3035/
+
+#mastodon | #computersAndCode | #golang
