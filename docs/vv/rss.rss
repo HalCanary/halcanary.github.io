@@ -7,8 +7,8 @@
 		<language>en-US</language>
 		<copyright>Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.</copyright>
 		<link>https://halcanary.org/vv/</link>
-		<pubDate>Mon, 14 Nov 2022 10:40:15 -0500</pubDate>
-		<lastBuildDate>Mon, 14 Nov 2022 10:40:15 -0500</lastBuildDate>
+		<pubDate>Thu, 01 Dec 2022 09:31:45 -0500</pubDate>
+		<lastBuildDate>Thu, 01 Dec 2022 09:31:45 -0500</lastBuildDate>
 		<image>
 			<url>https://halcanary.org/images/HAL_CANARY_20191008_512.jpg</url>
 			<title>Voder-Vocoder</title>
@@ -693,7 +693,7 @@ Projection</a>.”
 </blockquote>
 <p><img src="https://halcanary.org/images/Optimal_Region_Projection_-_Gomez.png" alt="example program output from my paper" /></p>
 ]]></description>
-			<category>life,what-we-need-more-of-is-science</category>
+			<category>life,whatWeNeedMoreOfIsScience</category>
 		</item>
 		<item>
 			<title>Meta-news</title>
@@ -1765,7 +1765,7 @@ print getText('getText()','give me some text','string')
 <p><a href="http://www.flickr.com/photos/philosophies/6654703693/"><img src="https://halcanary.org/images/f9eac22a84a225c5d2bdddf003be72a8900ef9ed.jpg" alt="2012-01-04_153744_dscn0894" /></a></p>
 <p><a href="http://www.flickr.com/photos/philosophies/6654705749/"><img src="https://halcanary.org/images/bb91bd0c0711984b0239179a2d31675bc88a8bda.jpg" alt="2012-01-04_152454_dscn0892" /></a></p>
 ]]></description>
-			<category>life,urban-design,photos</category>
+			<category>life,urbanDesign,photos</category>
 		</item>
 		<item>
 			<title>AZ 2012</title>
@@ -2379,7 +2379,7 @@ won't.  So in my .emacs file, I put the following lines:</p>
 <p>Electric outlets are availible both in the kitchen center and under the roof, along with light fixtures and perhaps ceiling fans.</p>
 <p>Since there is very little privacy, the idea is to place them in secluded spots in the woods. It's obviously not for everyone, but would be popular with the back-to-nature crowd.</p>
 ]]></description>
-			<category>urban-design,top</category>
+			<category>urbanDesign,top</category>
 		</item>
 		<item>
 			<title>Proof Of Concept</title>
@@ -3363,7 +3363,7 @@ kill $INHIBIT_PID
 			<description><![CDATA[<p>Everyone always talks about human spaceflight. But you know what really excites me? <a href="http://en.wikipedia.org/wiki/New_Horizons">New Horizons</a>. In another five and a half years we'll see what <a href="http://hubblesite.org/newscenter/archive/releases/2010/06">Pluto really looks like</a>.<br />
 <img src="https://halcanary.org/images/Hubble_Maps_of_Pluto_hs-2010-06-a-web.jpg" alt="[hubble photo]" /></p>
 ]]></description>
-			<category>what-we-need-more-of-is-science</category>
+			<category>whatWeNeedMoreOfIsScience</category>
 		</item>
 		<item>
 			<title>own</title>
@@ -4203,7 +4203,7 @@ showpage</code></pre>
 <p>From <em>$20 per Gallon: How the Inevitable Rising Cost of Gas Will Change Our Lives for the Better</em> by Christopher Steiner (<a href="http://search.barnesandnoble.com///e/9780446549547">9780446549547</a>)</p>
 </blockquote>
 ]]></description>
-			<category>books,energy-policy</category>
+			<category>books,energyPolicy</category>
 		</item>
 		<item>
 			<title>vortex</title>
@@ -4448,7 +4448,7 @@ sudo tune2fs -c 150 /dev/sda1
 			<pubDate>Mon, 09 Mar 2009 17:23:13 -0500</pubDate>
 			<description><![CDATA[<p>According to maps.google.com, my longitude is -81.803888 degrees. This puts my house 5.45359253 hours befind Greenwich, England. Call it 5 hours, 27 minutes, and almost 13 seconds. This morning I woke up at 6 AM, Eastern Daylight time, UTC-4; so I got up at 10 AM UTC. This means I got up this morning at 4:32:47 local mean solar time.</p>
 ]]></description>
-			<category>life,what-we-need-more-of-is-science</category>
+			<category>life,whatWeNeedMoreOfIsScience</category>
 		</item>
 		<item>
 			<title>empty clsoet.</title>
@@ -5037,7 +5037,7 @@ for line in fi:
 			<pubDate>Fri, 03 Oct 2008 22:50:16 -0500</pubDate>
 			<description><![CDATA[<p><img src="https://halcanary.org/images/ACDiagram.png" alt="[]" /></p>
 ]]></description>
-			<category>computersAndCode,energy-policy,life</category>
+			<category>computersAndCode,energyPolicy,life</category>
 		</item>
 		<item>
 			<title>Economics, part 1</title>
@@ -5433,7 +5433,7 @@ done } | wc -L</code></pre>
 <p>* * *</p>
 <p>UPDATE: Hey, there's a website for <a href="http://www.carbontax.org/">revenue-neutral carbon taxes</a>!</p>
 ]]></description>
-			<category>economics,energy-policy,politics</category>
+			<category>economics,energyPolicy,politics</category>
 		</item>
 		<item>
 			<title>Razor</title>
@@ -6051,7 +6051,7 @@ done
 </blockquote>
 <p>I'm still only 50 pages into the book. It's a lot of basic science that I learned in high school, combined with a lot of facts I didn't know, written by an author who started learning the subject from a state of total ignorance.</p>
 ]]></description>
-			<category>what-we-need-more-of-is-science</category>
+			<category>whatWeNeedMoreOfIsScience</category>
 		</item>
 		<item>
 			<title>SIG</title>
@@ -6541,7 +6541,7 @@ RewriteRule ^(.*)$           $1.html</p>
 </li>
 </ol>
 ]]></description>
-			<category>energy-policy,life</category>
+			<category>energyPolicy,life</category>
 		</item>
 		<item>
 			<title>Unix Utility Scripts</title>
@@ -8463,7 +8463,7 @@ print &quot;\n&quot;;</code></pre>
 </blockquote>
 <p>Here, he's comparing apples and oranges. Greenhouse gases vs. volcanic ash. Most of what volcanoes spew out is simply ash that falls to the ground over the next few months. And he doesn't cite any of his sources.</p>
 ]]></description>
-			<category>what-we-need-more-of-is-science</category>
+			<category>whatWeNeedMoreOfIsScience</category>
 		</item>
 		<item>
 			<title>coincidence, of course!</title>
@@ -9933,7 +9933,7 @@ blue lines = mass transit (elevated rail or subway) (connects neighborhoods)</p>
 <p>Has anyone ever built a city with mass transit designed in from the beginning? Is it always an afterthought?</p>
 <p>The thing I love the most about this plan is that one could walk from one end of the city to the other and never leave parkland.</p>
 ]]></description>
-			<category>urban-design</category>
+			<category>urbanDesign</category>
 		</item>
 		<item>
 			<title>wickedly curved</title>
@@ -10143,7 +10143,7 @@ Brendan McKay (Editor-in-Chief) [Electronic Journal of Combinatorics]</p>
 		<item>
 			<title>Our advancing technology will solve this problem.</title>
 			<link>https://halcanary.org/vv/2005/07/23/495/</link>
-			<guid isPermaLink="false">25125667-6c68-563a-8e22-6db150ff13ec</guid>
+			<guid isPermaLink="false">e9e7e61c-510c-5826-9fef-eb6d27d7c6a4</guid>
 			<pubDate>Sat, 23 Jul 2005 11:02:36 -0500</pubDate>
 			<description><![CDATA[<blockquote>
 <p>He [Jared Diamond] elaborated a bit on his book's account of the Easter Island collapse, where a society that could build 80-ton statues 33 feet high and drag them 12 miles, and who could navigate the Pacific Ocean to and from the most remote islands in the world, could also cut down their rich rain forest and doom themselves utterly. With no trees left for fishing canoes, the Easter Islanders turned to devouring each other. The appropriate insult to madden a member of a rival clan was, &quot;The flesh of your mother sticks between my teeth!&quot; The population fell by 90% in a few years, and neither the society nor the island ecology have recovered in the 300 years since.</p>
@@ -10156,7 +10156,7 @@ Brendan McKay (Editor-in-Chief) [Electronic Journal of Combinatorics]</p>
 </ul>
 <p>— Summarized by Stewart Brand (<a href="http://radar.oreilly.com/archives/2005/07/on_failing_to_t.html">source</a>)</p>
 </blockquote>
-<p>That was Jared Diamond's take on the impending end of things. I've <a href="https://halcanary.org/archives/000464.html">already made that analogy</a>.</p>
+<p>That was Jared Diamond's take on the impending end of things. I've <a href="/vv/2005/05/26/464/">already made that analogy</a>.</p>
 <p><a href="http://billmon.org/archives/002056.html">Via Billmon</a>, who has more to say:</p>
 <blockquote>
 <p>Ordinarily, I'd be the last one to challenge Jared Diamond's thinking -- the man is a genius. But in this case I have to wonder if he isn't overanalyzing things. Maybe the reason humans act so dumb isn't because of their intellectual frame of reference, or their clan structure, or because they lack historical awareness. Maybe people act dumb because a lot of them are dumb -- dumb as turnips. So stupid they have trouble each morning remembering that their shoes go on their feet. So mentally challenged they have to use crib notes to remember their ABCs. So monumentally dense they can't even do the job of a cable news talk show host -- or at least not properly. Borderline vegetative, in other words.</p>
