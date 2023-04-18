@@ -81,6 +81,7 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 <hr>
 <nav>
 <ul class="flat">
+<li><a href="#2023/04/17/3036">Happy 15th birthday, Lulu!</a></li>
 <li><a href="#2022/11/14/3035">Simple Command-Line Mastodon Status Poster!</a></li>
 <li><a href="#2022/11/14/3034">Italic and bold isolate characters for Unicode.</a></li>
 <li><a href="#2022/11/11/3033">notebook</a></li>
@@ -90,11 +91,33 @@ Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.
 <li><a href="#2022/10/12/3029">…actually alone in my head…</a></li>
 <li><a href="#2022/10/12/3028">Stellarium Web</a></li>
 <li><a href="#2022/10/12/3027">Don&#39;t sit on your camelback.</a></li>
-<li><a href="#2022/09/13/3026">Go exec function</a></li>
 </ul>
 </nav>
 <hr>
 <div role="main">
+<article class="h-entry" id="2023/04/17/3036">
+<header>
+<!-- SRC= 2023-04-17-3036.md -->
+<h2 class="blogtitle p-name">Happy 15th birthday, Lulu!</h2>
+
+<div class="byline plainlink">
+<div>
+<div class="p-author">Hal Canary</div>
+<div><time class="dt-published" datetime="2023-04-17T12:00:00-04:00">2023-04-17 12:00:00-04:00 (EDT)</time></div>
+<div><a class="u-url u-uid" href="https://halcanary.org/vv/2023/04/17/3036/">https://halcanary.org/vv/2023/04/17/3036/</a></div>
+<div><a class="p-category" href="/vv/category/photos/">#photos</a>; <a class="p-category" href="/vv/category/dogs/">#dogs</a></div>
+</div>
+</div>
+</header>
+<div class="content e-content">
+
+<div>
+<p><img src="/photos/PXL_20230417_105413571_2.jpg" alt="Lulu on a walk. Old 20-lbs dog" width="3024" height="1702"></p>
+
+</div>
+</div>
+</article>
+<hr>
 <article class="h-entry" id="2022/11/14/3035">
 <header>
 <!-- SRC= 2022-11-14-3035.md -->
@@ -357,46 +380,11 @@ some lewd bits.</p>
 </div>
 </article>
 <hr>
-<article class="h-entry" id="2022/09/13/3026">
-<header>
-<!-- SRC= 2022-09-13-3026.md -->
-<h2 class="blogtitle p-name">Go exec function</h2>
-<p class="p-summary">Execute a program, causing the program that is currently being run to be replaced with a new program</p>
-<div class="byline plainlink">
-<div>
-<div class="p-author">Hal Canary</div>
-<div><time class="dt-published" datetime="2022-09-13T15:32:58-04:00">2022-09-13 15:32:58-04:00 (EDT)</time></div>
-<div><a class="u-url u-uid" href="https://halcanary.org/vv/2022/09/13/3026/">https://halcanary.org/vv/2022/09/13/3026/</a></div>
-<div><a class="p-category" href="/vv/category/computersAndCode/">#computersAndCode</a></div>
-</div>
-</div>
-</header>
-<div class="content e-content">
-<div style="display:none;">Execute a program, causing the program that is currently being run to be replaced with a new program</div>
-<div>
-<p>The following</p>
-<pre><code class="language-go">func execv(cmd string, args ...string) error {
-    path, err := exec.LookPath(cmd)
-    if err != nil {
-        return err
-    }
-    return syscall.Exec(
-        path,
-        append([]string{cmd}, args...),
-        syscall.Environ())
-}
-</code></pre>
-<p>is the Go equivilent of the C <code>execv</code> function!</p>
-
-</div>
-</div>
-</article>
-<hr>
 </div>
 
 <nav aria-label="External Navigation">
 <div class="lcr">
-  <div><p>(older: <a href="https://halcanary.org/vv/2022/09/12/3025/">September 12, 2022</a>)</p></div>
+  <div><p>(older: <a href="https://halcanary.org/vv/2022/09/13/3026/">Go exec function</a>)</p></div>
   <div class="centered"><p>(<a href="/vv/archives/">ALL POSTS</a>)</p></div>
   <div class="rightside"></div>
 </div>

@@ -7,13 +7,22 @@
 		<language>en-US</language>
 		<copyright>Copyright 2002-2022 Hal Canary. ALL RIGHTS RESERVED.</copyright>
 		<link>https://halcanary.org/vv/</link>
-		<pubDate>Mon, 19 Dec 2022 11:51:43 -0500</pubDate>
-		<lastBuildDate>Mon, 19 Dec 2022 11:51:43 -0500</lastBuildDate>
+		<pubDate>Tue, 18 Apr 2023 09:35:46 -0400</pubDate>
+		<lastBuildDate>Tue, 18 Apr 2023 09:35:46 -0400</lastBuildDate>
 		<image>
 			<url>https://halcanary.org/images/HAL_CANARY_20191008_512.jpg</url>
 			<title>Voder-Vocoder</title>
 			<link>https://halcanary.org/vv/</link>
 		</image>
+		<item>
+			<title>Happy 15th birthday, Lulu!</title>
+			<link>https://halcanary.org/vv/2023/04/17/3036/</link>
+			<guid isPermaLink="false">428c13b7-06d5-506b-8728-f1413aa7683f</guid>
+			<pubDate>Mon, 17 Apr 2023 12:00:00 -0400</pubDate>
+			<description><![CDATA[<p><img src="/photos/PXL_20230417_105413571_2.jpg" alt="Lulu on a walk. Old 20-lbs dog" /></p>
+]]></description>
+			<category>photos,dogs</category>
+		</item>
 		<item>
 			<title>Simple Command-Line Mastodon Status Poster!</title>
 			<link>https://halcanary.org/vv/2022/11/14/3035/</link>
