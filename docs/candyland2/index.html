@@ -5,7 +5,26 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Candyland</title>
 <style>
-body {font-family:sans-serif;max-width:35em;margin:0 auto 0 auto;padding:5px;}
+body {
+    font-family:sans-serif;
+    max-width:35em;
+    margin-left:auto;
+    margin-right:auto;
+    padding-left:5px;
+    padding-right:5px;
+}
+
+nav {
+    position: fixed;
+    background-color:#FFF;
+    color:#000;
+    max-width:35em;
+    padding:5px;
+    border:1px solid #000;
+}
+div.content {
+    padding-top:40px;
+}
 </style>
 <noscript>Sorry, this page uses javascript.</noscript>
 <script>
@@ -133,6 +152,7 @@ function makeGame(player_count) {
         playerCount: () => player_count,
         playerPosition: (p) => players[p],
         lastPlayer: () => player,
+        nextPlayer: () => (player + 1) % players.length,
         lastCard: () => last,
         move: function() { // returns false when someone wins!
             player = (player + 1) % players.length;
@@ -149,11 +169,11 @@ function makeGame(player_count) {
             if (shuffle) {
                 action = action + "(Shuffle) ";
             }
-            if (pitfall) {
-                action = action + "(stuck in pitfall.) ";
-            }
             action = action + "Player " + player + " drew " + last;
             if (index >= 0) {
+                if (pitfall) {
+                return action + " and is still stuck in a pitfall.";
+                }
                 return action + " and moves to position " + index + "/" + TILES.length + " " +
                         NAMES.get(TILES[index]) + ".";
             }
@@ -166,20 +186,43 @@ function appendLine(e, t) {
     e.appendChild(document.createTextNode(t));
     e.appendChild(document.createElement("br"));
 }
-function runGame() {
-    var gp = document.getElementById("game");
-    gp.innerHTML = "";
-    var game = makeGame(4);
-    while(game.move()) {
-        appendLine(gp, game.lastMove());
+
+var gp;
+var clicker;
+var game;
+
+function doClick() {
+    console.log("click");
+    if (game == undefined) {
+        gp.innerHTML = "";
+        game = makeGame(4);
+        clicker.innerHTML = "Player " + game.nextPlayer() + " go.";
+    } else {
+        if (game.move()) {
+            appendLine(gp, game.lastMove());
+            clicker.innerHTML = "Player " + game.nextPlayer() + " go.";
+        } else {
+            appendLine(gp, game.lastMove());
+            game = undefined;
+            clicker.innerHTML = "Restart Game";
+        }
+        window.scrollTo(0, 1000);
     }
-    appendLine(gp, game.lastMove());
 }
+
+window.addEventListener("load", (e) => {
+    gp = document.getElementById("game");
+    clicker = document.getElementById("clicker");
+});
 
 </script>
 <body>
-<button onclick="runGame()">Run Game</button>
+<nav>
+<button onclick="doClick()" id="clicker">Run Game</button>
+</nav>
+<div class="content">
 <p id="game"></p>
+</div>
 </body>
 </html>
 
