@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Candyland</title>
+<style>
+body {font-family:sans-serif;max-width:35em;margin:0 auto 0 auto;padding:5px;}
+</style>
+<noscript>Sorry, this page uses javascript.</noscript>
+<script>
+
+function makeGame(player_count) {
+    const Y               = 0;
+    const B               = 1;
+    const O               = 2;
+    const G               = 3;
+    const R               = 4;
+    const P               = 5;
+    const CANDY_HEARTS    = 6;
+    const PEPERMENT_STICK = 7;
+    const GINGERBREAD_MAN = 8;
+    const GUM_DROPS       = 9;
+    const PEANUT_BRITTLE  = 10;
+    const LOLLYPOP        = 11;
+    const ICE_CREAM       = 12;
+    const TILES = new Uint8Array([
+        Y, B, O, G, R, P, Y, B, CANDY_HEARTS, O, G, R, P, Y, B, O, G,
+        PEPERMENT_STICK, R, P, Y, B, O, G, R, P, Y, B, O, G, R, P, GINGERBREAD_MAN,
+        Y, B, O, G, R, P, Y, B, O, G, R, P, Y, B, O, GUM_DROPS, G, R, P, Y, B, O,
+        G, R, P, Y, B, O, G, R, P, Y, B, O, G, R, P, Y, B, O, G, R, P, Y, B, O, G,
+        R, P, Y, B, PEANUT_BRITTLE, O, G, R, P, Y, B, O, G, R, P, Y, B, O, G, R, P,
+        Y, B, O, G, R, P, Y, B, O, G, LOLLYPOP, R, P, Y, B, O, G, R, P, ICE_CREAM,
+        Y, B, O, G, R, P, Y, B, O, G, R, P, Y, B, O, G, R, P, Y, B, O, G, R, P, Y,
+        B, O, G, R, P, Y, B]);
+    const PITFALLS = new Set([56, 99, 140]);
+    const JUMPS = new Map([[4, 72], [38, 52]]);
+    const COLORS = new Uint8Array([Y, B, O, G, R, P]);
+    const CONFECTIONS = new Uint8Array([
+        CANDY_HEARTS, PEPERMENT_STICK, GINGERBREAD_MAN, GUM_DROPS, PEANUT_BRITTLE,
+        LOLLYPOP, ICE_CREAM]);
+    const NAMES = new Map([
+        [Y,               'yellow'],
+        [B,               'blue'],
+        [O,               'orange'],
+        [G,               'green'],
+        [R,               'red'],
+        [P,               'purple'],
+        [CANDY_HEARTS,    'candy hearts'],
+        [PEPERMENT_STICK, 'peperment stick'],
+        [GINGERBREAD_MAN, 'gingerbread man'],
+        [GUM_DROPS,       'gum drops'],
+        [PEANUT_BRITTLE,  'peanut brittle'],
+        [LOLLYPOP,        'lollypop'],
+        [ICE_CREAM,       'ice cream']]);
+
+    var pitfall = false;
+    var shuffle = false;
+
+    function makeDeck() {
+        var deck = [];
+        return function() {
+            if (deck.length == 0) {
+                // populate deck!
+                shuffle = true;
+                const K = 10;
+                for (let c = 0; c < COLORS.length; c++) {
+                    for (let i = 0; i < 6; i++) {
+                        deck.push(COLORS[c]);
+                    }
+                    for (let i = 6; i < K; i++) {
+                        deck.push(COLORS[c] | 0xF0);
+                    }
+                }
+                for (let x = 0; x < CONFECTIONS.length; x++) {
+                    deck.push(CONFECTIONS[x]);
+                }
+                for (var i = deck.length - 1; i > 0; i--) {
+                    var j = Math.floor(Math.random() * (i + 1));
+                    var temp = deck[i];
+                    deck[i] = deck[j];
+                    deck[j] = temp;
+                }
+            } else {
+                shuffle = false;
+            }
+            return deck.pop();
+        }
+    }
+
+    function cardName(card) {
+        var cardName = NAMES.get(card & 0x0F);
+        if ((card & 0xF0) != 0) {
+            return cardName + "+" + cardName;
+        }
+        return cardName;
+    }
+
+    function moveToken(index, card) {
+        var twoColor = (card & 0xF0) != 0;
+        card = card & 0x0F;
+        if (index == undefined) {
+            index = -1;
+        }
+        if (PITFALLS.has(index) && card != TILES[index]) {
+            pitfall = true;
+            return index;
+        } else {
+            pitfall = false;
+        }
+
+        if (card >= COLORS.length) {
+            return TILES.indexOf(card);
+        }
+        index = TILES.indexOf(card, index + 1)
+        if (twoColor && index >= 0) {
+            index = TILES.indexOf(card, index + 1)
+        }
+        var jump = JUMPS.get(index);
+        if (undefined != jump) {
+            console.log("jump");
+            index = jump;
+        }
+        return index;
+    }
+
+
+    var players = new Array(player_count);
+    var deck = makeDeck();
+    var player = -1;
+    var last =  null;
+    return {
+        playerCount: () => player_count,
+        playerPosition: (p) => players[p],
+        lastPlayer: () => player,
+        lastCard: () => last,
+        move: function() { // returns false when someone wins!
+            player = (player + 1) % players.length;
+            var card = deck();
+            var index = moveToken(players[player], card);
+            last = cardName(card);
+            players[player] = index;
+            return index >= 0;
+        },
+        done : () => (player >= 0) && players[player] < 0,
+        lastMove: function() {
+            var index = players[player];
+            var action = "";
+            if (shuffle) {
+                action = action + "(Shuffle) ";
+            }
+            if (pitfall) {
+                action = action + "(stuck in pitfall.) ";
+            }
+            action = action + "Player " + player + " drew " + last;
+            if (index >= 0) {
+                return action + " and moves to position " + index + "/" + TILES.length + " " +
+                        NAMES.get(TILES[index]) + ".";
+            }
+            return action + " and won!";
+        }
+    }
+}
+
+function appendLine(e, t) {
+    e.appendChild(document.createTextNode(t));
+    e.appendChild(document.createElement("br"));
+}
+function runGame() {
+    var gp = document.getElementById("game");
+    gp.innerHTML = "";
+    var game = makeGame(4);
+    while(game.move()) {
+        appendLine(gp, game.lastMove());
+    }
+    appendLine(gp, game.lastMove());
+}
+
+</script>
+<body>
+<button onclick="runGame()">Run Game</button>
+<p id="game"></p>
+</body>
+</html>
+
