@@ -13,7 +13,6 @@ body {
     padding-left:5px;
     padding-right:5px;
 }
-
 nav {
     position: fixed;
     background-color:#FFF;
@@ -21,9 +20,6 @@ nav {
     max-width:35em;
     padding:5px;
     border:1px solid #000;
-}
-div.content {
-    padding-top:40px;
 }
 </style>
 <noscript>Sorry, this page uses javascript.</noscript>
@@ -75,6 +71,7 @@ function makeGame(player_count) {
 
     var pitfall = false;
     var shuffle = false;
+    var didJump = false;
 
     function makeDeck() {
         var deck = [];
@@ -116,6 +113,7 @@ function makeGame(player_count) {
     }
 
     function moveToken(index, card) {
+        didJump = false;
         var twoColor = (card & 0xF0) != 0;
         card = card & 0x0F;
         if (index == undefined) {
@@ -137,8 +135,8 @@ function makeGame(player_count) {
         }
         var jump = JUMPS.get(index);
         if (undefined != jump) {
-            console.log("jump");
             index = jump;
+            didJump = true;
         }
         return index;
     }
@@ -167,62 +165,63 @@ function makeGame(player_count) {
             var index = players[player];
             var action = "";
             if (shuffle) {
-                action = action + "(Shuffle) ";
+                action = action + "(Shuffle)\n";
+            }
+            if (didJump) {
+                action = action + "(Jump) ";
             }
             action = action + "Player " + player + " drew " + last;
-            if (index >= 0) {
-                if (pitfall) {
-                return action + " and is still stuck in a pitfall.";
-                }
-                return action + " and moves to position " + index + "/" + TILES.length + " " +
-                        NAMES.get(TILES[index]) + ".";
+            if (index < 0) {
+                return action + " and won!";
             }
-            return action + " and won!";
+            if (pitfall) {
+                return action + " and is still stuck in a pitfall.";
+            }
+            return action + " and moves to position " + index + "/" + TILES.length + " " +
+                    NAMES.get(TILES[index]) + ".";
         }
-    }
-}
-
-function appendLine(e, t) {
-    e.appendChild(document.createTextNode(t));
-    e.appendChild(document.createElement("br"));
-}
-
-var gp;
-var clicker;
-var game;
-
-function doClick() {
-    console.log("click");
-    if (game == undefined) {
-        gp.innerHTML = "";
-        game = makeGame(4);
-        clicker.innerHTML = "Player " + game.nextPlayer() + " go.";
-    } else {
-        if (game.move()) {
-            appendLine(gp, game.lastMove());
-            clicker.innerHTML = "Player " + game.nextPlayer() + " go.";
-        } else {
-            appendLine(gp, game.lastMove());
-            game = undefined;
-            clicker.innerHTML = "Restart Game";
-        }
-        window.scrollTo(0, 1000);
     }
 }
 
 window.addEventListener("load", (e) => {
-    gp = document.getElementById("game");
-    clicker = document.getElementById("clicker");
+    var game;
+    var clicker = document.createElement("button");
+    var clickerText = document.createTextNode("Run Game");
+    var text = document.createTextNode("");
+    clicker.appendChild(clickerText);
+    {
+        let nav = document.createElement("nav");
+        nav.appendChild(clicker);
+        document.body.appendChild(nav)
+    }
+    {
+        let gp = document.createElement("p");
+        gp.style.whiteSpace = "pre-wrap";
+        gp.style.paddingTop = "40px";
+        gp.appendChild(text)
+        document.body.appendChild(gp);
+    }
+    clicker.addEventListener("click", function() {
+        if (game == undefined) {
+            text.data = "";
+            game = makeGame(4);
+            clickerText.data = "Player " + game.nextPlayer() + " go.";
+        } else {
+            var notDone = game.move();
+            text.data += game.lastMove() + "\n";
+            if (notDone) {
+                clickerText.data = "Player " + game.nextPlayer() + " go.";
+            } else {
+                game = undefined;
+                clickerText.data = "Restart Game";
+            }
+            window.scrollTo(0, 10000);
+        }
+    });
 });
 
 </script>
 <body>
-<nav>
-<button onclick="doClick()" id="clicker">Run Game</button>
-</nav>
-<div class="content">
-<p id="game"></p>
-</div>
 </body>
 </html>
 
