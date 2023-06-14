@@ -2,7 +2,7 @@
 /node_modules
 /package-lock.json
 *.pyc
-/blog
-/site
-/post
+/bin/blog
+/bin/site
+/bin/post
 .DS_Store

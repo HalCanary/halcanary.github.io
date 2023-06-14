@@ -5,6 +5,7 @@ package main
 import (
 	"bytes"
 	"encoding/xml"
+	"flag"
 	"log"
 	"math"
 	"os"
@@ -118,16 +119,17 @@ func status(path string, blog Blog, p logpost.Post) {
 
 func main() {
 	log.SetFlags(log.Lshortfile)
+	var onlyPrintCats bool
+	flag.BoolVar(&onlyPrintCats, "cats", false, "Only print categories.")
+	flag.Parse()
 
-	if len(os.Args) < 2 {
+	if len(flag.Args()) < 1 {
 		log.Fatal("usage?")
-		return
 	}
 
-	blogRoot := os.Args[1]
+	blogRoot := flag.Arg(0)
 	blog, err := ReadBlogConfig(blogRoot)
 	check.Check(err)
-
 	matches, err := filepath.Glob(blogRoot + "/src/BlogSrc/*.md")
 	check.Check(err)
 
@@ -159,6 +161,26 @@ func main() {
 		if lastMod.IsZero() || lastMod.Before(mt) {
 			lastMod = mt
 		}
+
+	}
+	if onlyPrintCats {
+		cats := map[string]struct{}{}
+		for _, post := range allPosts {
+			for _, c := range post.Categories {
+				cats[c] = struct{}{}
+			}
+		}
+		var allCats []string
+		for c, _ := range cats {
+			allCats = append(allCats, c)
+		}
+		sort.Strings(allCats)
+		for _, c := range allCats {
+			os.Stdout.WriteString("\t")
+			os.Stdout.WriteString(c)
+			os.Stdout.WriteString("\n")
+		}
+		return
 	}
 
 	go readChangedFilesChan()

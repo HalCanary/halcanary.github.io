@@ -1,12 +1,25 @@
-all: theblog staticsite post
+all: theblog staticsite bin/post
 
-theblog: blog $(shell find src/BlogSrc -type f)
-	./blog .
+theblog: bin/blog $(shell find src/BlogSrc -type f)
+	./bin/blog .
 
-staticsite: site $(shell find src/pages -type f)
-	./site .
+staticsite: bin/site $(shell find src/pages -type f)
+	./bin/site .
 
-post blog site: %: $(wildcard cmd/*/* check/* filebuf/* commonmarker/* logpost/*)
-	go build ./cmd/$*
+listcats: bin/blog $(shell find src/BlogSrc -type f)
+	./bin/blog -cats .
 
-.PHONY: theblog all staticsite
+commit-and-push:
+	./src/commit-and-push
+
+make-a-blog-entry:
+	./src/make-a-blog-entry
+
+clean:
+	rm -f bin/post bin/blog bin/site
+
+bin/post bin/blog bin/site: %: $(wildcard cmd/*/* check/* filebuf/* commonmarker/* logpost/*)
+	mkdir -p ./bin
+	go build -o ./bin ./cmd/$(notdir $*)
+
+.PHONY: theblog all staticsite listcats commit-and-push make-a-blog-entry clean
