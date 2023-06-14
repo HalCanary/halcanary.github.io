@@ -20,6 +20,11 @@ clean:
 
 bin/post bin/blog bin/site: %: $(wildcard cmd/*/* check/* filebuf/* commonmarker/* logpost/*)
 	mkdir -p ./bin
+	go get ./...
 	go build -o ./bin ./cmd/$(notdir $*)
 
-.PHONY: theblog all staticsite listcats commit-and-push make-a-blog-entry clean
+update-deps:
+	go get -u ./...
+	git add go.mod go.sum
+
+.PHONY: theblog all staticsite listcats commit-and-push make-a-blog-entry clean update-deps

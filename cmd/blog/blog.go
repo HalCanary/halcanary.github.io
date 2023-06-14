@@ -16,7 +16,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/HalCanary/booker/dom"
+	"github.com/HalCanary/facility/dom"
 	"github.com/HalCanary/halcanary.github.io/check"
 	"github.com/HalCanary/halcanary.github.io/commonmarker"
 	"github.com/HalCanary/halcanary.github.io/filebuf"
@@ -66,7 +66,7 @@ func ReadBlogConfig(blogRootPath string) (Blog, error) {
 }
 
 func link(dst, text string) *dom.Node {
-	return dom.Element("a", dom.Attr{"href": dst}, dom.TextNode(text))
+	return dom.Element("a", dom.Attr{"href": dst}, dom.Text(text))
 }
 
 // Syncronize access to the changedFiles data structure.
@@ -242,61 +242,61 @@ func writeListingPage(blog Blog, posts []Post) {
 	}
 	head := blog.makeHead(blog.Title)
 	div := dom.Element("div", dom.Attr{"role": "main"})
-	div.Append(dom.TextNode("\n"))
+	dom.Append(div, dom.Text("\n"))
 	var byYear [][]Post = splitBy(posts, yearEq)
 	for _, yearPosts := range byYear {
 		yearString := strconv.Itoa(yearPosts[0].Time.Year())
 		year := dom.Element("div", dom.Attr{"id": yearString})
 		if len(byYear) > 1 {
-			year.Append(dom.Elem("h2", dom.TextNode(yearString)))
-			year.Append(dom.TextNode("\n"))
+			dom.Append(year, dom.Elem("h2", dom.Text(yearString)))
+			dom.Append(year, dom.Text("\n"))
 		}
-		year.Append(dom.TextNode("\n"))
+		dom.Append(year, dom.Text("\n"))
 		for _, post := range yearPosts {
 			summary := dom.Elem("summary",
-				dom.TextNode("\n  "),
+				dom.Text("\n  "),
 				link(concat(blog.BaseUrl, blog.Prefix, post.LongId(), "/"), post.Title),
-				dom.TextNode("\n  "),
-				dom.TextNode(post.Time.Format(timestampFormat)),
+				dom.Text("\n  "),
+				dom.Text(post.Time.Format(timestampFormat)),
 			)
 			if post.Summary != "" {
-				summary.Append(
-					dom.TextNode("\n  "),
+				dom.Append(summary,
+					dom.Text("\n  "),
 					dom.Elem("br"),
-					dom.TextNode(post.Summary))
+					dom.Text(post.Summary))
 			}
 			article := PostArticle(post, 3, concat(blog.BaseUrl, blog.Prefix, post.LongId(), "/"), blog.Prefix)
 			addImageSize(article, blog.BaseUrl, blog.path)
 			details := dom.Element("details", dom.Attr{"id": "dt/" + post.LongId()},
-				summary, dom.TextNode("\n"),
+				summary, dom.Text("\n"),
 				dom.Element("div", dom.Attr{"class": "box"}, article),
-				dom.TextNode("\n"))
-			year.Append(details, dom.TextNode("\n"))
+				dom.Text("\n"))
+			dom.Append(year, details, dom.Text("\n"))
 		}
-		year.Append(dom.TextNode("\n"))
-		div.Append(year, dom.TextNode("\n"))
+		dom.Append(year, dom.Text("\n"))
+		dom.Append(div, year, dom.Text("\n"))
 	}
-	div.Append(dom.TextNode("\n"))
+	dom.Append(div, dom.Text("\n"))
 	html := dom.Element("html", dom.Attr{"lang": blog.Language},
-		dom.TextNode("\n"),
+		dom.Text("\n"),
 		head,
-		dom.TextNode("\n"),
+		dom.Text("\n"),
 		dom.Elem("body",
-			dom.TextNode("\n"),
-			dom.Elem("h1", dom.TextNode(blog.Title)),
-			dom.TextNode("\n"),
+			dom.Text("\n"),
+			dom.Elem("h1", dom.Text(blog.Title)),
+			dom.Text("\n"),
 			div,
-			dom.TextNode("\n"),
+			dom.Text("\n"),
 			dom.Elem("hr"),
-			dom.TextNode("\n"),
+			dom.Text("\n"),
 			lcr(
-				dom.TextNode(""),
-				dom.Elem("p", dom.TextNode("("), link("../", "UP"), dom.TextNode(")")),
-				dom.TextNode(""),
+				dom.Text(""),
+				dom.Elem("p", dom.Text("("), link("../", "UP"), dom.Text(")")),
+				dom.Text(""),
 			),
-			dom.TextNode("\n"),
+			dom.Text("\n"),
 		),
-		dom.TextNode("\n"),
+		dom.Text("\n"),
 	)
 	updateHtml(concat(blog.Path(), "all", "/index.html"), html)
 }
@@ -335,7 +335,7 @@ func writeCategoryIndex(blog Blog, categories map[string]int) {
 
 func updateHtml(path string, node *dom.Node) {
 	f := filebuf.FileBuf{Path: path}
-	node.RenderHTMLExperimental(&f)
+	dom.RenderHTMLExperimental(node, &f)
 	check.Check(f.Close())
 	if f.Changed() {
 		changedFilesChan <- f.Path
@@ -372,64 +372,64 @@ func (blog Blog) makeIndex(allPosts []Post) *dom.Node {
 		allPosts = allPosts[:count]
 	}
 
-	ul := dom.Element("ul", dom.Attr{"class": "flat"}, dom.TextNode("\n"))
-	main := dom.Element("div", dom.Attr{"role": "main"}, dom.TextNode("\n"))
+	ul := dom.Element("ul", dom.Attr{"class": "flat"}, dom.Text("\n"))
+	main := dom.Element("div", dom.Attr{"role": "main"}, dom.Text("\n"))
 	for _, p := range allPosts {
-		ul.Append(
+		dom.Append(ul,
 			dom.Elem("li", link("#"+p.LongId(), p.Title)),
-			dom.TextNode("\n"),
+			dom.Text("\n"),
 		)
 		article := PostArticle(p, 2, concat(blog.BaseUrl, blog.Prefix, p.LongId(), "/"), blog.Prefix)
 		addImageSize(article, blog.BaseUrl, blog.path)
-		main.Append(
+		dom.Append(main,
 			article,
-			dom.TextNode("\n"),
+			dom.Text("\n"),
 			dom.Elem("hr"),
-			dom.TextNode("\n"),
+			dom.Text("\n"),
 		)
 	}
 	return dom.Element("html", dom.Attr{"lang": blog.Language},
-		dom.TextNode("\n"),
+		dom.Text("\n"),
 		blog.makeHead(blog.Title),
-		dom.TextNode("\n"),
+		dom.Text("\n"),
 		dom.Elem("body",
-			dom.TextNode("\n"),
+			dom.Text("\n"),
 			dom.Elem("header",
-				dom.TextNode("\n"),
-				dom.Elem("h1", dom.TextNode(blog.Title)),
-				dom.TextNode("\n"),
+				dom.Text("\n"),
+				dom.Elem("h1", dom.Text(blog.Title)),
+				dom.Text("\n"),
 			),
-			dom.TextNode("\n"),
-			dom.Element("div", dom.Attr{"class": "centered", "role": "contentinfo"}, dom.TextNode(blog.Description)),
-			dom.TextNode("\n"),
+			dom.Text("\n"),
+			dom.Element("div", dom.Attr{"class": "centered", "role": "contentinfo"}, dom.Text(blog.Description)),
+			dom.Text("\n"),
 
 			searcher(blog.BaseUrl+blog.Prefix),
-			dom.TextNode("\n"),
+			dom.Text("\n"),
 			dom.Elem("hr"),
-			dom.TextNode("\n"),
+			dom.Text("\n"),
 			dom.Elem("nav",
-				dom.TextNode("\n"),
+				dom.Text("\n"),
 				ul,
-				dom.TextNode("\n"),
+				dom.Text("\n"),
 			),
-			dom.TextNode("\n"),
+			dom.Text("\n"),
 			dom.Elem("hr"),
-			dom.TextNode("\n"),
+			dom.Text("\n"),
 			main,
-			dom.TextNode("\n"),
-			dom.TextNode("\n"),
+			dom.Text("\n"),
+			dom.Text("\n"),
 			lcr(
 				prev,
 				dom.Elem("p",
-					dom.TextNode("("),
+					dom.Text("("),
 					link(blog.Prefix+"archives/", "ALL POSTS"),
-					dom.TextNode(")"),
+					dom.Text(")"),
 				),
 				nil,
 			),
-			dom.TextNode("\n"),
+			dom.Text("\n"),
 		),
-		dom.TextNode("\n"),
+		dom.Text("\n"),
 	)
 }
 
@@ -439,11 +439,11 @@ func (blog Blog) doSegmentedPosts(segmentedPostLists [][]Post, fragFn, titleFn f
 		var prev, next *dom.Node
 		if idx > 0 {
 			p := segmentedPostLists[idx-1][0]
-			next = dom.Elem("p", dom.TextNode("("), link(concat(blog.Prefix, fragFn(p)), titleFn(p)), dom.TextNode(")"))
+			next = dom.Elem("p", dom.Text("("), link(concat(blog.Prefix, fragFn(p)), titleFn(p)), dom.Text(")"))
 		}
 		if idx+1 < len(segmentedPostLists) {
 			p := segmentedPostLists[idx+1][0]
-			prev = dom.Elem("p", dom.TextNode("("), link(concat(blog.Prefix, fragFn(p)), titleFn(p)), dom.TextNode(")"))
+			prev = dom.Elem("p", dom.Text("("), link(concat(blog.Prefix, fragFn(p)), titleFn(p)), dom.Text(")"))
 		}
 		fragment := fragFn(segment[0])
 		title := concat(blog.Title, " Archive ", titleFn(segment[0]))
@@ -498,39 +498,39 @@ func (blog Blog) doCategories(allPosts []Post) {
 
 func (blog Blog) makeCategoryIndex(categories map[string]int) *dom.Node {
 	title := blog.Title + " Archive by Category"
-	ul := dom.Elem("ul", dom.TextNode("\n"))
+	ul := dom.Elem("ul", dom.Text("\n"))
 	var allcats []string
 	for cat, _ := range categories {
 		allcats = append(allcats, cat)
 	}
 	sort.Strings(allcats)
 	for _, cat := range allcats {
-		ul.Append(
+		dom.Append(ul,
 			dom.Elem("li",
 				link(
 					concat(blog.Prefix, "category/", cat, "/"),
 					concat("#", cat, " (", strconv.Itoa(categories[cat]), ")"),
 				),
 			),
-			dom.TextNode("\n"),
+			dom.Text("\n"),
 		)
 	}
 	return dom.Element("html", dom.Attr{"lang": blog.Language},
-		dom.TextNode("\n"),
+		dom.Text("\n"),
 		blog.makeHead(title),
-		dom.TextNode("\n"),
+		dom.Text("\n"),
 		dom.Elem("body",
-			dom.TextNode("\n"),
-			dom.Elem("h1", dom.TextNode(title)),
-			dom.TextNode("\n"),
+			dom.Text("\n"),
+			dom.Elem("h1", dom.Text(title)),
+			dom.Text("\n"),
 			ul,
-			dom.TextNode("\n"),
+			dom.Text("\n"),
 			dom.Elem("hr"),
-			dom.TextNode("\n"),
+			dom.Text("\n"),
 			dom.Element("p", dom.Attr{"class": "centered"}, link("..", "BACK")),
-			dom.TextNode("\n"),
+			dom.Text("\n"),
 		),
-		dom.TextNode("\n"),
+		dom.Text("\n"),
 	)
 }
 
@@ -548,81 +548,81 @@ func (blog Blog) makeListingPage(posts []Post, title string, prev, next *dom.Nod
 	head := blog.makeHead(title)
 
 	div := dom.Element("div", dom.Attr{"role": "main"})
-	div.Append(dom.TextNode("\n"))
+	dom.Append(div, dom.Text("\n"))
 	var byYear [][]Post = splitBy(posts, yearEq)
 	for _, yearPosts := range byYear {
 		if len(byYear) > 1 {
-			div.Append(dom.Elem("h2", dom.TextNode(strconv.Itoa(yearPosts[0].Time.Year()))))
-			div.Append(dom.TextNode("\n"))
+			dom.Append(div, dom.Elem("h2", dom.Text(strconv.Itoa(yearPosts[0].Time.Year()))))
+			dom.Append(div, dom.Text("\n"))
 		}
 		ul := dom.Elem("ul")
-		ul.Append(dom.TextNode("\n"))
+		dom.Append(ul, dom.Text("\n"))
 		for _, post := range yearPosts {
 			li := dom.Elem("li",
-				dom.TextNode("\n  "),
+				dom.Text("\n  "),
 				link(concat(blog.BaseUrl, blog.Prefix, post.LongId(), "/"), post.Title),
-				dom.TextNode("\n  "),
-				dom.TextNode(post.Time.Format(timestampFormat)),
+				dom.Text("\n  "),
+				dom.Text(post.Time.Format(timestampFormat)),
 			)
 			if post.Summary != "" {
-				li.Append(
-					dom.TextNode("\n  "),
-					dom.Elem("div", dom.TextNode(post.Summary)))
+				dom.Append(li,
+					dom.Text("\n  "),
+					dom.Elem("div", dom.Text(post.Summary)))
 			}
-			li.Append(dom.TextNode("\n"))
-			ul.Append(li)
-			ul.Append(dom.TextNode("\n"))
+			dom.Append(li, dom.Text("\n"))
+			dom.Append(ul, li)
+			dom.Append(ul, dom.Text("\n"))
 		}
-		div.Append(ul)
-		div.Append(dom.TextNode("\n"))
+		dom.Append(div, ul)
+		dom.Append(div, dom.Text("\n"))
 	}
-	div.Append(dom.TextNode("\n"))
+	dom.Append(div, dom.Text("\n"))
 	return dom.Element("html", dom.Attr{"lang": blog.Language},
-		dom.TextNode("\n"),
+		dom.Text("\n"),
 		head,
-		dom.TextNode("\n"),
+		dom.Text("\n"),
 		dom.Elem("body",
-			dom.TextNode("\n"),
-			dom.Elem("h1", dom.TextNode(title)),
-			dom.TextNode("\n"),
+			dom.Text("\n"),
+			dom.Elem("h1", dom.Text(title)),
+			dom.Text("\n"),
 			div,
-			dom.TextNode("\n"),
+			dom.Text("\n"),
 			dom.Elem("hr"),
-			dom.TextNode("\n"),
+			dom.Text("\n"),
 			lcr(
 				prev,
-				dom.Elem("p", dom.TextNode("("), link("../", "UP"), dom.TextNode(")")),
+				dom.Elem("p", dom.Text("("), link("../", "UP"), dom.Text(")")),
 				next,
 			),
-			dom.TextNode("\n"),
+			dom.Text("\n"),
 		),
-		dom.TextNode("\n"),
+		dom.Text("\n"),
 	)
 }
 
 func (blog Blog) makeHead(title string) *dom.Node {
 	return dom.Elem("head",
-		dom.TextNode("\n"),
+		dom.Text("\n"),
 		dom.Element("meta", dom.Attr{"charset": "utf-8"}),
-		dom.TextNode("\n"),
+		dom.Text("\n"),
 		dom.Element("meta", dom.Attr{
 			"name": "viewport", "content": "width=device-width, initial-scale=1.0"}),
-		dom.TextNode("\n"),
-		dom.Elem("title", dom.TextNode(title)),
-		dom.TextNode("\n"),
+		dom.Text("\n"),
+		dom.Elem("title", dom.Text(title)),
+		dom.Text("\n"),
 		dom.Element("link", dom.Attr{"rel": "icon", "href": blog.Icon}),
-		dom.TextNode("\n"),
-		dom.Elem("style", dom.TextNode(blog.Style)),
-		dom.TextNode("\n"),
+		dom.Text("\n"),
+		dom.Elem("style", dom.Text(blog.Style)),
+		dom.Text("\n"),
 		dom.Element("link", dom.Attr{
 			"rel":   "alternate",
 			"type":  "application/atom+xml",
 			"title": blog.Title,
 			"href":  concat(blog.BaseUrl, blog.Prefix, "rss.rss"),
 		}),
-		dom.TextNode("\n"),
+		dom.Text("\n"),
 		dom.Comment(concat("\n", blog.Copyright, " ", blog.License, "\n")),
-		dom.TextNode("\n"),
+		dom.Text("\n"),
 	)
 }
 
@@ -631,9 +631,9 @@ func (blog Blog) longLink(p *Post, description string) *dom.Node {
 		return nil
 	}
 	return dom.Elem("p",
-		dom.TextNode(concat("(", description, ": ")),
+		dom.Text(concat("(", description, ": ")),
 		link(concat(blog.BaseUrl, blog.Prefix, p.LongId(), "/"), p.Title),
-		dom.TextNode(")"),
+		dom.Text(")"),
 	)
 }
 
@@ -641,74 +641,74 @@ func (blog Blog) makeIndividualPost(post Post, prev, next *Post) *dom.Node {
 	article := PostArticle(post, 1, concat(blog.BaseUrl, blog.Prefix, post.LongId(), "/"), blog.Prefix)
 	addImageSize(article, blog.BaseUrl, blog.path)
 	return dom.Element("html", dom.Attr{"lang": blog.Language},
-		dom.TextNode("\n"),
+		dom.Text("\n"),
 		blog.makeHead(concat(blog.Title, ": "+post.Title)),
-		dom.TextNode("\n"),
+		dom.Text("\n"),
 		dom.Elem("body",
-			dom.TextNode("\n"),
+			dom.Text("\n"),
 			article,
-			dom.TextNode("\n"),
+			dom.Text("\n"),
 			dom.Elem("hr"),
-			dom.TextNode("\n"),
+			dom.Text("\n"),
 			lcr(
 				blog.longLink(prev, "older"),
 				dom.Elem("p",
-					dom.TextNode("("),
+					dom.Text("("),
 					link(blog.Prefix+"archives/", "back"),
-					dom.TextNode(")"),
+					dom.Text(")"),
 				),
 				blog.longLink(next, "newer"),
 			),
-			dom.TextNode("\n"),
+			dom.Text("\n"),
 		),
-		dom.TextNode("\n"),
+		dom.Text("\n"),
 	)
 }
 
 func replaceNilWithNbsp(v *dom.Node) *dom.Node {
 	if v == nil {
-		v = dom.RawHtml("&nbsp;") // return dom.TextNode("\u00a0")
+		v = dom.RawHtml("&nbsp;") // return dom.Text("\u00a0")
 	}
 	return v
 }
 
 func lcr(prev, center, next *dom.Node) *dom.Node {
 	return dom.Element("nav", dom.Attr{"aria-label": "External Navigation"},
-		dom.TextNode("\n"),
+		dom.Text("\n"),
 		dom.Element("div", dom.Attr{"class": "lcr"},
-			dom.TextNode("\n  "),
+			dom.Text("\n  "),
 			dom.Elem("div", replaceNilWithNbsp(prev)),
-			dom.TextNode("\n  "),
+			dom.Text("\n  "),
 			dom.Element("div", dom.Attr{"class": "centered"}, replaceNilWithNbsp(center)),
-			dom.TextNode("\n  "),
+			dom.Text("\n  "),
 			dom.Element("div", dom.Attr{"class": "rightside"}, replaceNilWithNbsp(next)),
-			dom.TextNode("\n"),
+			dom.Text("\n"),
 		),
-		dom.TextNode("\n"),
+		dom.Text("\n"),
 	)
 }
 
 func searcher(domain string) *dom.Node {
 	return dom.Element("div", dom.Attr{"role": "search"},
 		dom.Element("details", dom.Attr{"class": "rightside"},
-			dom.TextNode("\n"),
-			dom.Elem("summary", dom.TextNode("Search")),
-			dom.TextNode("\n"),
+			dom.Text("\n"),
+			dom.Elem("summary", dom.Text("Search")),
+			dom.Text("\n"),
 			dom.Element("form", dom.Attr{"method": "get", "action": "https://www.google.com/search"},
-				dom.TextNode("\n"),
+				dom.Text("\n"),
 				dom.Element("input", dom.Attr{"name": "domains", "value": domain, "type": "hidden"}),
-				dom.TextNode("\n"),
+				dom.Text("\n"),
 				dom.Element("input", dom.Attr{"name": "sitesearch", "value": domain, "type": "hidden"}),
-				dom.TextNode("\n"),
+				dom.Text("\n"),
 				dom.Element("input",
 					dom.Attr{"id": "search", "name": "q", "size": "30", "maxlength": "255", "aria-labelledby": "submitter"}),
-				dom.TextNode("\n"),
+				dom.Text("\n"),
 				dom.Element("input", dom.Attr{"id": "submitter", "value": "Search", "type": "submit"}),
-				dom.TextNode("\n"),
+				dom.Text("\n"),
 			),
-			dom.TextNode("\n"),
+			dom.Text("\n"),
 		),
-		dom.TextNode("\n"),
+		dom.Text("\n"),
 	)
 }
 
@@ -758,13 +758,13 @@ func PostArticle(post Post, level int, url string, prefix string) *dom.Node {
 		cats = dom.Elem("div")
 		for i, c := range post.Categories {
 			if i != 0 {
-				cats.Append(dom.TextNode("; "))
+				dom.Append(cats, dom.Text("; "))
 			}
-			cats.Append(
+			dom.Append(cats,
 				dom.Element("a", dom.Attr{
 					"href":  concat(prefix, "category/", c, "/"),
 					"class": "p-category",
-				}, dom.TextNode("#"+c)),
+				}, dom.Text("#"+c)),
 			)
 		}
 	}
@@ -772,51 +772,51 @@ func PostArticle(post Post, level int, url string, prefix string) *dom.Node {
 	var summary *dom.Node
 	var summary2 *dom.Node
 	if post.Summary != "" {
-		summary = dom.Element("p", dom.Attr{"class": "p-summary"}, dom.TextNode(post.Summary))
-		summary2 = dom.Element("div", dom.Attr{"style": "display:none;"}, dom.TextNode(post.Summary))
+		summary = dom.Element("p", dom.Attr{"class": "p-summary"}, dom.Text(post.Summary))
+		summary2 = dom.Element("div", dom.Attr{"style": "display:none;"}, dom.Text(post.Summary))
 	}
 	return dom.Element("article", dom.Attr{"id": post.LongId(), "class": "h-entry"},
-		dom.TextNode("\n"),
+		dom.Text("\n"),
 		dom.Elem("header",
-			dom.TextNode("\n"),
+			dom.Text("\n"),
 			dom.Comment(concat(" SRC= ", post.Source, " ")),
-			dom.TextNode("\n"),
-			header(level, dom.Attr{"class": "blogtitle p-name"}, dom.TextNode(post.Title)),
-			dom.TextNode("\n"),
+			dom.Text("\n"),
+			header(level, dom.Attr{"class": "blogtitle p-name"}, dom.Text(post.Title)),
+			dom.Text("\n"),
 			summary,
-			dom.TextNode("\n"),
+			dom.Text("\n"),
 			dom.Element("div", dom.Attr{"class": "byline plainlink"},
-				dom.TextNode("\n"),
+				dom.Text("\n"),
 				dom.Elem("div",
-					dom.TextNode("\n"),
-					dom.Element("div", dom.Attr{"class": "p-author"}, dom.TextNode(post.Author)),
-					dom.TextNode("\n"),
+					dom.Text("\n"),
+					dom.Element("div", dom.Attr{"class": "p-author"}, dom.Text(post.Author)),
+					dom.Text("\n"),
 					dom.Elem("div",
 						dom.Element("time",
 							dom.Attr{"datetime": post.Time.Format(time.RFC3339), "class": "dt-published"},
-							dom.TextNode(post.Time.Format(timestampFormat)),
+							dom.Text(post.Time.Format(timestampFormat)),
 						),
 					),
-					dom.TextNode("\n"),
+					dom.Text("\n"),
 					dom.Elem("div",
-						dom.Element("a", dom.Attr{"href": url, "class": "u-url u-uid"}, dom.TextNode(url)),
+						dom.Element("a", dom.Attr{"href": url, "class": "u-url u-uid"}, dom.Text(url)),
 					),
-					dom.TextNode("\n"),
+					dom.Text("\n"),
 					cats,
-					dom.TextNode("\n"),
+					dom.Text("\n"),
 				),
-				dom.TextNode("\n"),
+				dom.Text("\n"),
 			),
-			dom.TextNode("\n"),
+			dom.Text("\n"),
 		),
-		dom.TextNode("\n"),
+		dom.Text("\n"),
 		dom.Element("div", dom.Attr{"class": "content e-content"},
-			dom.TextNode("\n"),
+			dom.Text("\n"),
 			summary2,
-			dom.TextNode("\n"),
+			dom.Text("\n"),
 			parseHtml(PostContent(post, level)),
-			dom.TextNode("\n"),
+			dom.Text("\n"),
 		),
-		dom.TextNode("\n"),
+		dom.Text("\n"),
 	)
 }

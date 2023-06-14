@@ -18,7 +18,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/HalCanary/booker/dom"
+	"github.com/HalCanary/facility/dom"
 	"golang.org/x/net/html"
 )
 
@@ -74,7 +74,7 @@ func addImageSize(node *dom.Node, urlBase, pathBase string) {
 			}
 		}
 	}
-	for c := node.GetFirstChild(); c != nil; c = c.GetNextSibling() {
+	for c := node.FirstChild; c != nil; c = c.NextSibling {
 		addImageSize(c, urlBase, pathBase)
 	}
 }
