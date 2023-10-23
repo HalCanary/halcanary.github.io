@@ -23,7 +23,7 @@ type Blog struct {
 func main() {
 	ex, err := os.Executable()
 	check.Check(err)
-	blogRoot := filepath.Dir(ex)
+	blogRoot := filepath.Dir(filepath.Dir(ex))
 	config, err := os.Open(filepath.Join(blogRoot, "Blog.xml"))
 	check.Check(err)
 	var blog Blog

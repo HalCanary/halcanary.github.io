@@ -12,8 +12,8 @@ listcats: bin/blog $(shell find src/BlogSrc -type f)
 commit-and-push:
 	./src/commit-and-push
 
-make-a-blog-entry:
-	./src/make-a-blog-entry
+post: bin/post
+	$<
 
 clean:
 	rm -f bin/post bin/blog bin/site
@@ -27,4 +27,4 @@ update-deps:
 	go get -u ./...
 	git add go.mod go.sum
 
-.PHONY: theblog all staticsite listcats commit-and-push make-a-blog-entry clean update-deps
+.PHONY: theblog all staticsite listcats commit-and-push post clean update-deps
