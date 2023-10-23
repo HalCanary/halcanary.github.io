@@ -11,7 +11,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/HalCanary/booker/dom"
+	"github.com/HalCanary/facility/dom"
 	"github.com/HalCanary/halcanary.github.io/check"
 	"github.com/HalCanary/halcanary.github.io/commonmarker"
 	"github.com/HalCanary/halcanary.github.io/filebuf"
@@ -84,62 +84,62 @@ func process(siteConfig SiteConfig, src, dst string, rootPage bool, copyright bo
 	var bannerNode *dom.Node
 	if rootPage {
 		bannerNode = dom.Elem("header",
-			dom.TextNode("\n"),
+			dom.Text("\n"),
 			dom.Elem("h1",
-				dom.TextNode("\n"),
+				dom.Text("\n"),
 				dom.RawHtml(siteConfig.Banner),
-				dom.TextNode("\n"),
+				dom.Text("\n"),
 			),
-			dom.TextNode("\n"),
+			dom.Text("\n"),
 		)
 	} else if !nosvg.MatchString(dst) {
 		bannerNode = dom.Element("div", dom.Attr{"class": "tophead", "role": "banner"},
-			dom.TextNode("\n"),
+			dom.Text("\n"),
 			dom.RawHtml(siteConfig.Banner),
-			dom.TextNode("\n"),
+			dom.Text("\n"),
 		)
 	}
 	var copyrightBlock *dom.Node
 	if copyright {
 		copyrightBlock = dom.Element("div", dom.Attr{"class": "rightside"},
-			dom.TextNode("\n"),
-			dom.Elem("em", dom.TextNode(siteConfig.BaseUrl)),
-			dom.TextNode("\n"),
+			dom.Text("\n"),
+			dom.Elem("em", dom.Text(siteConfig.BaseUrl)),
+			dom.Text("\n"),
 			dom.Elem("br"),
-			dom.TextNode("\n"),
-			dom.Elem("em", dom.TextNode(siteConfig.Copyright)),
-			dom.TextNode("\n"),
+			dom.Text("\n"),
+			dom.Elem("em", dom.Text(siteConfig.Copyright)),
+			dom.Text("\n"),
 			dom.Elem("br"),
-			dom.TextNode("\n"),
-			dom.Elem("em", dom.TextNode(siteConfig.License)),
-			dom.TextNode("\n"),
+			dom.Text("\n"),
+			dom.Elem("em", dom.Text(siteConfig.License)),
+			dom.Text("\n"),
 		)
 	} else {
 		copyrightBlock = dom.Comment(" " + siteConfig.Copyright + " " + siteConfig.License + " ")
 	}
 	node := dom.Element("html", dom.Attr{"lang": siteConfig.Language},
-		dom.TextNode("\n"),
+		dom.Text("\n"),
 		siteConfig.MakeHead(title),
-		dom.TextNode("\n"),
+		dom.Text("\n"),
 		dom.Elem("body",
-			dom.TextNode("\n"),
+			dom.Text("\n"),
 			bannerNode,
-			dom.TextNode("\n"),
+			dom.Text("\n"),
 			siteConfig.MakeMelinks(),
-			dom.TextNode("\n"),
+			dom.Text("\n"),
 			dom.Element("article", dom.Attr{"role": "main"},
-				dom.TextNode("\n"),
+				dom.Text("\n"),
 				dom.RawHtml(html),
-				dom.TextNode("\n"),
+				dom.Text("\n"),
 			),
-			dom.TextNode("\n"),
+			dom.Text("\n"),
 			copyrightBlock,
-			dom.TextNode("\n"),
+			dom.Text("\n"),
 		),
-		dom.TextNode("\n"),
+		dom.Text("\n"),
 	)
 	f := filebuf.FileBuf{Path: dst}
-	node.RenderHTML(&f)
+	dom.RenderHTML(node, &f)
 	check.Check(f.Close())
 	if f.Changed() {
 		changedFilesChan <- f.Path
@@ -182,37 +182,37 @@ func makeRedirects(siteConfig SiteConfig, rootPath string) error {
 
 func makeRedirect(siteConfig SiteConfig, url, dst string) {
 	node := dom.Element("html", dom.Attr{"lang": siteConfig.Language},
-		dom.TextNode("\n"),
+		dom.Text("\n"),
 		dom.Elem("head",
-			dom.TextNode("\n"),
+			dom.Text("\n"),
 			dom.Element("meta", dom.Attr{"charset": "utf-8"}),
-			dom.TextNode("\n"),
+			dom.Text("\n"),
 			dom.Element("meta", dom.Attr{
 				"name": "viewport", "content": "width=device-width, initial-scale=1.0"}),
-			dom.TextNode("\n"),
-			dom.Elem("title", dom.TextNode(url)),
-			dom.TextNode("\n"),
-			dom.Elem("script", dom.TextNode(`window.location.replace("`+url+`");`)),
-			dom.TextNode("\n"),
+			dom.Text("\n"),
+			dom.Elem("title", dom.Text(url)),
+			dom.Text("\n"),
+			dom.Elem("script", dom.Text(`window.location.replace("`+url+`");`)),
+			dom.Text("\n"),
 			dom.Element("link", dom.Attr{"rel": "icon", "href": siteConfig.Icon}),
-			dom.TextNode("\n"),
-			dom.Elem("style", dom.TextNode(`body{font-family:sans-serif;}`)),
-			dom.TextNode("\n"),
+			dom.Text("\n"),
+			dom.Elem("style", dom.Text(`body{font-family:sans-serif;}`)),
+			dom.Text("\n"),
 		),
-		dom.TextNode("\n"),
+		dom.Text("\n"),
 		dom.Elem("body",
-			dom.TextNode("\n"),
+			dom.Text("\n"),
 			siteConfig.MakeMelinks(),
-			dom.TextNode("\n"),
+			dom.Text("\n"),
 			dom.Element("a", dom.Attr{"style": "overflow-wrap:break-word", "href": url},
-				dom.TextNode(url),
+				dom.Text(url),
 			),
-			dom.TextNode("\n"),
+			dom.Text("\n"),
 		),
-		dom.TextNode("\n"),
+		dom.Text("\n"),
 	)
 	f := filebuf.FileBuf{Path: dst}
-	node.RenderHTML(&f)
+	dom.RenderHTML(node, &f)
 	check.Check(f.Close())
 	if f.Changed() {
 		changedFilesChan <- f.Path

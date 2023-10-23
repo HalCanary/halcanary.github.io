@@ -3,12 +3,11 @@ module github.com/HalCanary/halcanary.github.io
 go 1.18
 
 require (
-	github.com/HalCanary/booker v0.5.0
-	github.com/HalCanary/facility v1.0.0
-	github.com/google/uuid v1.3.0
+	github.com/HalCanary/facility v1.0.3
+	github.com/google/uuid v1.3.1
 	gitlab.com/golang-commonmark/markdown v0.0.0-20211110145824-bf3e522c626a
-	golang.org/x/net v0.11.0
-	golang.org/x/text v0.10.0
+	golang.org/x/net v0.17.0
+	golang.org/x/text v0.13.0
 )
 
 require (

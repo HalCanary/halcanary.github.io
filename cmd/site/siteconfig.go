@@ -7,7 +7,7 @@ import (
 	"encoding/xml"
 	"os"
 
-	"github.com/HalCanary/booker/dom"
+	"github.com/HalCanary/facility/dom"
 )
 
 type SiteConfig struct {
@@ -32,20 +32,20 @@ func ReadSiteConfig(siteRootPath string) (SiteConfig, error) {
 
 func (siteConfig SiteConfig) MakeHead(title string) *dom.Node {
 	return dom.Elem("head",
-		dom.TextNode("\n"),
+		dom.Text("\n"),
 		dom.Element("meta", dom.Attr{"charset": "utf-8"}),
-		dom.TextNode("\n"),
+		dom.Text("\n"),
 		dom.Element("meta", dom.Attr{
 			"name": "viewport", "content": "width=device-width, initial-scale=1.0"}),
-		dom.TextNode("\n"),
-		dom.Elem("title", dom.TextNode(title)),
-		dom.TextNode("\n"),
+		dom.Text("\n"),
+		dom.Elem("title", dom.Text(title)),
+		dom.Text("\n"),
 		dom.Element("link", dom.Attr{"rel": "icon", "href": siteConfig.Icon}),
-		dom.TextNode("\n"),
-		dom.Elem("style", dom.TextNode(siteConfig.Style)),
-		dom.TextNode("\n"),
+		dom.Text("\n"),
+		dom.Elem("style", dom.Text(siteConfig.Style)),
+		dom.Text("\n"),
 		dom.Comment("\n"+siteConfig.Copyright+" "+siteConfig.License+"\n"),
-		dom.TextNode("\n"),
+		dom.Text("\n"),
 	)
 }
 
@@ -54,7 +54,7 @@ func (siteConfig SiteConfig) MakeMelinks() *dom.Node {
 	if len(siteConfig.Melinks) > 0 {
 		d = dom.Elem("div")
 		for _, link := range siteConfig.Melinks {
-			d.Append(dom.Element("a", dom.Attr{"rel": "me", "href": link}, dom.TextNode("")))
+			dom.Append(d, dom.Element("a", dom.Attr{"rel": "me", "href": link}, dom.Text("")))
 		}
 	}
 	return d
