@@ -81,6 +81,7 @@ Copyright 2002-2023 Hal Canary. ALL RIGHTS RESERVED.
 <hr>
 <nav>
 <ul class="flat">
+<li><a href="#2023/10/23/3040">Building a Better House.</a></li>
 <li><a href="#2023/10/23/3039">Can the US House of Representatives function without a speaker or with a speaker with limited power?</a></li>
 <li><a href="#2023/10/23/3038">“Rule number one, never carry anything you don’t control.”</a></li>
 <li><a href="#2023/06/14/3037">Tears of The Kingdom</a></li>
@@ -90,11 +91,36 @@ Copyright 2002-2023 Hal Canary. ALL RIGHTS RESERVED.
 <li><a href="#2022/11/11/3033">notebook</a></li>
 <li><a href="#2022/11/04/3032">Read _Lieutenant Fusilier_ by open_sketch</a></li>
 <li><a href="#2022/11/04/3031">M2 work machine</a></li>
-<li><a href="#2022/10/12/3030">Programatically Generating HTML</a></li>
 </ul>
 </nav>
 <hr>
 <div role="main">
+<article class="h-entry" id="2023/10/23/3040">
+<header>
+<!-- SRC= 2023-10-23-3040.md -->
+<h2 class="blogtitle p-name">Building a Better House.</h2>
+<p class="p-summary">Houses should last for hundreds of years and be easy to inspect, maintain, and upgrade.</p>
+<div class="byline plainlink">
+<div>
+<div class="p-author">Hal Canary</div>
+<div><time class="dt-published" datetime="2023-10-23T13:11:05-04:00">2023-10-23 13:11:05-04:00 (EDT)</time></div>
+<div><a class="u-url u-uid" href="https://halcanary.org/vv/2023/10/23/3040/">https://halcanary.org/vv/2023/10/23/3040/</a></div>
+<div><a class="p-category" href="/vv/category/urbanDesign/">#urbanDesign</a>; <a class="p-category" href="/vv/category/technology/">#technology</a></div>
+</div>
+</div>
+</header>
+<div class="content e-content">
+<div style="display:none;">Houses should last for hundreds of years and be easy to inspect, maintain, and upgrade.</div>
+<div>
+<p>I think about this all too often.</p>
+<p>&#34;<a href="https://www.construction-physics.com/p/how-to-design-a-house-to-last-1000">How to design a house to last 1000 years</a>&#34; by Brian Potter.</p>
+<p>&#34;<a href="https://buildingscience.com/documents/insights/bsi-001-the-perfect-wall">The Perfect Wall</a>&#34; by Joseph Lstiburek.</p>
+<p>Oh, and sofas too.</p>
+
+</div>
+</div>
+</article>
+<hr>
 <article class="h-entry" id="2023/10/23/3039">
 <header>
 <!-- SRC= 2023-10-23-3039.md -->
@@ -391,57 +417,11 @@ some lewd bits.</p>
 </div>
 </article>
 <hr>
-<article class="h-entry" id="2022/10/12/3030">
-<header>
-<!-- SRC= 2022-10-12-3030.md -->
-<h2 class="blogtitle p-name">Programatically Generating HTML</h2>
-<p class="p-summary">I like libraries that let you programatically generate html documents.  For example, Go&#39;s x/net/html:</p>
-<div class="byline plainlink">
-<div>
-<div class="p-author">Hal Canary</div>
-<div><time class="dt-published" datetime="2022-10-12T11:43:06-04:00">2022-10-12 11:43:06-04:00 (EDT)</time></div>
-<div><a class="u-url u-uid" href="https://halcanary.org/vv/2022/10/12/3030/">https://halcanary.org/vv/2022/10/12/3030/</a></div>
-<div><a class="p-category" href="/vv/category/computersAndCode/">#computersAndCode</a></div>
-</div>
-</div>
-</header>
-<div class="content e-content">
-<div style="display:none;">I like libraries that let you programatically generate html documents.  For example, Go&#39;s x/net/html:</div>
-<div>
-<p><a href="https://gist.github.com/HalCanary/61276afbab042e204e54268f6a42f065">https://gist.github.com/HalCanary/61276afbab042e204e54268f6a42f065</a></p>
-<pre><code class="language-go">func main() {
-	html.Render(os.Stdout,
-		HtmlDocument(
-			&amp;html.Node{Type: html.DoctypeNode, Data: &#34;html&#34;},
-			Element(&#34;html&#34;,
-				Attr{&#34;lang&#34;: &#34;en&#34;},
-				Elem(&#34;head&#34;,
-					Comment(&#34;HELLO WORLD&#34;),
-					Element(&#34;meta&#34;, Attr{&#34;charset&#34;: &#34;utf-8&#34;}),
-					Element(&#34;meta&#34;, Attr{
-						&#34;name&#34;: &#34;viewport&#34;, &#34;content&#34;: &#34;width=device-width, initial-scale=1.0&#34;}),
-					Elem(&#34;title&#34;, TextNode(&#34;HELLO WORLD&#34;)),
-					Elem(&#34;style&#34;, TextNode(&#34;body{max-width:35em;margin:22px auto 64px auto;padding:0 8px;}&#34;)),
-				),
-				Elem(&#34;body&#34;,
-					Elem(&#34;h1&#34;, TextNode(&#34;HELLO!&#34;)),
-					Elem(&#34;p&#34;, TextNode(&#34;world&#34;)),
-				),
-			),
-		),
-	)
-}
-</code></pre>
-
-</div>
-</div>
-</article>
-<hr>
 </div>
 
 <nav aria-label="External Navigation">
 <div class="lcr">
-  <div><p>(older: <a href="https://halcanary.org/vv/2022/10/12/3029/">…actually alone in my head…</a>)</p></div>
+  <div><p>(older: <a href="https://halcanary.org/vv/2022/10/12/3030/">Programatically Generating HTML</a>)</p></div>
   <div class="centered"><p>(<a href="/vv/archives/">ALL POSTS</a>)</p></div>
   <div class="rightside"></div>
 </div>

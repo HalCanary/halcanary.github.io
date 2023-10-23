@@ -7,13 +7,26 @@
 		<language>en-US</language>
 		<copyright>Copyright 2002-2023 Hal Canary. ALL RIGHTS RESERVED.</copyright>
 		<link>https://halcanary.org/vv/</link>
-		<pubDate>Mon, 23 Oct 2023 13:09:11 -0400</pubDate>
-		<lastBuildDate>Mon, 23 Oct 2023 13:09:11 -0400</lastBuildDate>
+		<pubDate>Mon, 23 Oct 2023 13:14:46 -0400</pubDate>
+		<lastBuildDate>Mon, 23 Oct 2023 13:14:46 -0400</lastBuildDate>
 		<image>
 			<url>https://halcanary.org/images/HAL_CANARY_20191008_512.jpg</url>
 			<title>Voder-Vocoder</title>
 			<link>https://halcanary.org/vv/</link>
 		</image>
+		<item>
+			<title>Building a Better House.</title>
+			<link>https://halcanary.org/vv/2023/10/23/3040/</link>
+			<guid isPermaLink="false">752206e3-972c-5400-846c-6542f28ef034</guid>
+			<pubDate>Mon, 23 Oct 2023 13:11:05 -0400</pubDate>
+			<description><![CDATA[<p>Houses should last for hundreds of years and be easy to inspect, maintain, and upgrade.</p>
+<p>I think about this all too often.</p>
+<p>&quot;<a href="https://www.construction-physics.com/p/how-to-design-a-house-to-last-1000">How to design a house to last 1000 years</a>&quot; by Brian Potter.</p>
+<p>&quot;<a href="https://buildingscience.com/documents/insights/bsi-001-the-perfect-wall">The Perfect Wall</a>&quot; by Joseph Lstiburek.</p>
+<p>Oh, and sofas too.</p>
+]]></description>
+			<category>urbanDesign,technology</category>
+		</item>
 		<item>
 			<title>Can the US House of Representatives function without a speaker or with a speaker with limited power?</title>
 			<link>https://halcanary.org/vv/2023/10/23/3039/</link>
