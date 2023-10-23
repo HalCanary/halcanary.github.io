@@ -7,13 +7,59 @@
 		<language>en-US</language>
 		<copyright>Copyright 2002-2023 Hal Canary. ALL RIGHTS RESERVED.</copyright>
 		<link>https://halcanary.org/vv/</link>
-		<pubDate>Mon, 23 Oct 2023 12:52:07 -0400</pubDate>
-		<lastBuildDate>Mon, 23 Oct 2023 12:52:07 -0400</lastBuildDate>
+		<pubDate>Mon, 23 Oct 2023 13:09:11 -0400</pubDate>
+		<lastBuildDate>Mon, 23 Oct 2023 13:09:11 -0400</lastBuildDate>
 		<image>
 			<url>https://halcanary.org/images/HAL_CANARY_20191008_512.jpg</url>
 			<title>Voder-Vocoder</title>
 			<link>https://halcanary.org/vv/</link>
 		</image>
+		<item>
+			<title>Can the US House of Representatives function without a speaker or with a speaker with limited power?</title>
+			<link>https://halcanary.org/vv/2023/10/23/3039/</link>
+			<guid isPermaLink="false">22141d1e-3622-554c-8d37-7f5152527926</guid>
+			<pubDate>Mon, 23 Oct 2023 13:03:32 -0400</pubDate>
+			<description><![CDATA[<p>A way to let the house pass any bill that gets enough votes, without leadership involement.</p>
+<p>Can the US House of Representatives function without a speaker or with a
+speaker with limited power?</p>
+<p>Expanding on <a href="/vv/2012/08/10/1297/">a previous thought</a>.</p>
+<p>The house should adopt a new method of passing laws &amp; resolutions:</p>
+<ul>
+<li>
+<p>There will be a server that anyone can read from and any member of the
+house can upload a proposed law to.</p>
+</li>
+<li>
+<p>Any bill that passes the Senate is immediately uploaded to the server
+without modification.</p>
+</li>
+<li>
+<p>The text of the bill will then be hashed to produce a cryptographic
+checksum used to identify a law.</p>
+</li>
+<li>
+<p>Any member can amend (modify) a bill, which produces a new identifier.</p>
+</li>
+<li>
+<p>Any member can vote in favor of any bill (identified by checksum)
+electronicly via secure methods.  That vote is public.</p>
+</li>
+<li>
+<p>Any member may un-vote for a bill they have already voted for via the same
+procedure.  This action also goes into the public record.</p>
+</li>
+<li>
+<p>If a bill gets 218 (=floor(N/2)+1) votes in favor (at the same time), it is
+passed the house and sent to the Senate.</p>
+</li>
+<li>
+<p>Bills are deprecated at the end of the term.  There may be other ways of
+deprecating a bill.</p>
+</li>
+</ul>
+]]></description>
+			<category>politics</category>
+		</item>
 		<item>
 			<title>“Rule number one, never carry anything you don’t control.”</title>
 			<link>https://halcanary.org/vv/2023/10/23/3038/</link>
