@@ -9,7 +9,7 @@ staticsite: bin/site $(shell find src/pages -type f)
 listcats: bin/blog $(shell find src/BlogSrc -type f)
 	./bin/blog -cats .
 
-commit-and-push:
+commit-and-push: all
 	./src/commit-and-push
 
 post: bin/post
