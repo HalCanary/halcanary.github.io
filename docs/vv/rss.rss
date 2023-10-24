@@ -7,8 +7,8 @@
 		<language>en-US</language>
 		<copyright>Copyright 2002-2023 Hal Canary. ALL RIGHTS RESERVED.</copyright>
 		<link>https://halcanary.org/vv/</link>
-		<pubDate>Tue, 24 Oct 2023 15:24:20 -0400</pubDate>
-		<lastBuildDate>Tue, 24 Oct 2023 15:24:20 -0400</lastBuildDate>
+		<pubDate>Tue, 24 Oct 2023 18:28:00 -0400</pubDate>
+		<lastBuildDate>Tue, 24 Oct 2023 18:28:00 -0400</lastBuildDate>
 		<image>
 			<url>https://halcanary.org/images/HAL_CANARY_20191008_512.jpg</url>
 			<title>Voder-Vocoder</title>
@@ -781,11 +781,11 @@ alt="[graph]"></a></p>
 		<item>
 			<title>It&#x27;s a girl!</title>
 			<link>https://halcanary.org/vv/2014/08/28/3005/</link>
-			<guid isPermaLink="false">1a1680f7-abbc-560c-a386-bd4354847b1b</guid>
+			<guid isPermaLink="false">0edcfb93-8d4f-5435-8690-650feef0485d</guid>
 			<pubDate>Thu, 28 Aug 2014 23:36:00 -0500</pubDate>
 			<description><![CDATA[<p>I have a daughter!</p>
 <p>Margaret (Peggy) Rose Canary was born at 1:16 p.m on Thursday, August 28, after a little more than four hours of intervention-free, unmedicated labor (three and a half hours at home and a half hour in the hospital). She weighed six pounds and fifteen ounces and was nineteen and three quarters inches long.</p>
-<p><a href="https://halcanary.org/images/2014-08-28_DSC_2209_1024.jpg">![https://halcanary.org/images/2014-08-28_DSC_2209_1024.jpg](Lindsay &amp; Peggy)</a></p>
+<p><a href="https://halcanary.org/images/2014-08-28_DSC_2209_1024.jpg"><img src="https://halcanary.org/images/2014-08-28_DSC_2209_1024.jpg" alt="Lindsay &amp; Peggy" /></a></p>
 ]]></description>
 			<category>life</category>
 		</item>
@@ -3119,18 +3119,18 @@ abspath () {
 		<item>
 			<title>Judging a Book by its Cover</title>
 			<link>https://halcanary.org/vv/2010/03/23/960/</link>
-			<guid isPermaLink="false">96024bb9-a9ee-576c-a1fd-ad915a227e8b</guid>
+			<guid isPermaLink="false">033d8bed-90d9-5059-adfd-f9323aa654b3</guid>
 			<pubDate>Tue, 23 Mar 2010 08:09:19 -0500</pubDate>
-			<description><![CDATA[<p><a href="https://halcanary.org/isbn/?0306818809/Kaboom"><img src="https://halcanary.org/images/524843ea154bbffaee5d12c0b74d1eccde24d29b.jpg" alt="Kaboom: Embracing The Suck In A Savage Little War by Matthew Gallagher (0306818809).  The subtitle is excellent." title="_Kaboom: Embracing The Suck In A Savage Little War_ by Matthew Gallagher (0306818809).  The subtitle is excellent." /></a></p>
+			<description><![CDATA[<p><a href="https://halcanary.org/isbn/?0306818809/Kaboom"><img src="https://halcanary.org/images/524843ea154bbffaee5d12c0b74d1eccde24d29b.jpg" alt="Kaboom: Embracing The Suck In A Savage Little War by Matthew Gallagher (0306818809).  The subtitle is excellent." /></a></p>
 ]]></description>
 			<category>judgingBookCovers</category>
 		</item>
 		<item>
 			<title>Judging a Book by its Cover</title>
 			<link>https://halcanary.org/vv/2010/03/23/958/</link>
-			<guid isPermaLink="false">0f8561b6-7ed0-5f94-94fc-606fe356b206</guid>
+			<guid isPermaLink="false">d21b0278-f2a2-5562-bf06-5b26d30111f7</guid>
 			<pubDate>Tue, 23 Mar 2010 08:06:58 -0500</pubDate>
-			<description><![CDATA[<p><a href="https://halcanary.org/isbn/?1439116253/American+Adulterer"><img src="https://halcanary.org/images/2542169ce8e6f4c04d9321b1b29ccf0761770ff4.jpg" alt="American Adulterer by Jed Mercurio (1439116253). Read the cover text." title="_American Adulterer_ by Jed Mercurio (1439116253). Read the cover text." /></a></p>
+			<description><![CDATA[<p><a href="https://halcanary.org/isbn/?1439116253/American+Adulterer"><img src="https://halcanary.org/images/2542169ce8e6f4c04d9321b1b29ccf0761770ff4.jpg" alt="American Adulterer by Jed Mercurio (1439116253). Read the cover text." /></a></p>
 ]]></description>
 			<category>judgingBookCovers</category>
 		</item>

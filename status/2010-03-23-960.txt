@@ -1,7 +1,7 @@
 Blog post:
 Judging a Book by its Cover
 
-[![_Kaboom: Embracing The Suck In A Savage Little War_ by Matthew Gallagher (0306818809).  The subtitle is excellent.](https://halcanary.org/images/524843ea154bbffaee5d12c0b74d1eccde24d29b.jpg "_Kaboom: Embracing The Suck In A Savage Little War_ by Matthew Gallagher (0306818809).  The subtitle is excellent.")](https://halcanary.org/isbn/?0306818809/Kaboom)
+[![_Kaboom: Embracing The Suck In A Savage Little War_ by Matthew Gallagher (0306818809).  The subtitle is excellent.](https://halcanary.org/images/524843ea154bbffaee5d12c0b74d1eccde24d29b.jpg)](https://halcanary.org/isbn/?0306818809/Kaboom)
 
 Read more: https://halcanary.org/vv/2010/03/23/960/
 
