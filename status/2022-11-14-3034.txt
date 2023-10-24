@@ -1,6 +1,14 @@
 Blog post:
 Italic and bold isolate characters for Unicode.
-a proposal…
+a proposal
+
+Unicode needs two new pairs of characters.  call them `⟪`, `⟫` and `⟦`,
+`⟧` for this description, but their actual glyphs could be anything symmetric.
+
+The string "⟪foobar⟫" would be defined to be semantically equivalent to the
+italic version of "foobar", i.e. "𝑓𝑜𝑜𝑏𝑎𝑟".
+
+Similarly, the string "…
 
 Read more: https://halcanary.org/vv/2022/11/14/3034/
 

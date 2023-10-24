@@ -1,5 +1,16 @@
 Blog post:
-zipme.py…
+zipme.py
+
+    
+    #!/usr/bin/env python
+    
+    # zipme.py - Copyright 2008 Hal Canary
+    #
+    # Permission is hereby granted, free of charge, to any person
+    # obtaining a copy of this software and associated documentation
+    # files (the "Software"), to deal in the Software without
+    # restriction, including without limitation the rights to use,
+    # copy, modify, merge, publish, distribute, sublic…
 
 Read more: https://halcanary.org/vv/2008/01/28/717/
 

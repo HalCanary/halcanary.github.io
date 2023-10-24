@@ -1,5 +1,7 @@
 Blog post:
-New Word!…
+New Word!
+
+[Protoscience](http://en.wikipedia.org/wiki/Protoscience)
 
 Read more: https://halcanary.org/vv/2004/12/06/371/
 

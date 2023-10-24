@@ -1,5 +1,23 @@
 Blog post:
-telnet to port 80…
+telnet to port 80
+
+To check out http headers, you can use telnet, but I've found it easier to use `nc` (netcat):
+
+    H="en.wikipedia.org"
+    G="/"
+    echo -en "GET $G HTTP/1.1\r\nHost: $H\r\n\r\n" \
+        | nc $H 80
+    
+
+Here's a script:
+
+    #!/bin/sh
+    #DTPD#
+    if [ "$#" -ne 2 ] ;  then
+      echo -e "useage:\n  $0 HOST RESOURCE"
+      echo -e "for example:\n  $0 www.google.com /"
+      exit 1
+    …
 
 Read more: https://halcanary.org/vv/2006/11/30/667/
 

@@ -1,5 +1,9 @@
 Blog post:
-happy…
+happy
+
+Stolen from [here](http://www.bobharris.com/index.php?option=com_content&task=view&id=265&Itemid=2)
+
+> <form action="https://halcanary.org/formmail.cgi" method="post"><div>Happy<br><input type="checkbox" name="Christmas" value="T">Christmas<br><input type="checkbox" name="Chanukah" value="T">Chanukah<br><input type="checkbox" name="Kwanzaa" value="T">Kwanzaa<br><input type="checkbox" name="O Shohgatsu" value="T">O …
 
 Read more: https://halcanary.org/vv/2004/12/14/375/
 

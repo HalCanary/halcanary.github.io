@@ -1,5 +1,13 @@
 Blog post:
-number reform…
+number reform
+
+Well, if we were really starting from scratch, I would go with a base 16
+numbering system (already in use by programmers everywhere).
+
+One would have to throw out SI units, which would cease to make sense. It would
+also give us an opportunity to throw out the base 360/60/60 system
+(degrees/minutes/seconds) and 24/60/60 (hours/minutes/seconds) that the
+Babyloni…
 
 Read more: https://halcanary.org/vv/2007/10/31/706/
 

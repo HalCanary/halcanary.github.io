@@ -1,5 +1,7 @@
 Blog post:
-Essay…
+Essay
+
+Paul Graham has a neat essay [About Essays](http://www.paulgraham.com/essay.html).
 
 Read more: https://halcanary.org/vv/2004/09/07/316/
 

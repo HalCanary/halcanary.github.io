@@ -1,5 +1,7 @@
 Blog post:
-I'm scared.…
+I'm scared.
+
+[google](https://www.google.com/search?q=google) looks slightly different. I find this jarring and scary.
 
 Read more: https://halcanary.org/vv/2004/03/29/215/
 

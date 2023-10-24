@@ -1,5 +1,7 @@
 Blog post:
-Business Card…
+Business Card
+
+[![hal canary business card 2003](https://halcanary.org/images/hal-business-card-s.png)](https://halcanary.org/images/hal-business-card.png) I made up new business cards this week.
 
 Read more: https://halcanary.org/vv/2003/10/19/128/
 

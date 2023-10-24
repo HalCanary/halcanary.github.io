@@ -1,5 +1,25 @@
 Blog post:
-Setting the Gnome Desktop Background With a Script…
+Setting the Gnome Desktop Background With a Script
+
+    #!/bin/sh
+    ## Written 2009 Hal Canary
+    ## based on numerous examples
+    ## DTPD
+    if [ "$#" -lt 1 ] ; then
+       X=`basename "$0"`
+       echo "Useage:  $X FILENAME"
+       exit 1
+    fi
+    D=`dirname "$1"`
+    B=`basename "$1"`
+    cd $D
+    X=`pwd`/$B
+    cd -
+    if [ ! -f "$X" ] ; then
+      echo "not a file: '$X'."
+      exit 1
+    fi
+    …
 
 Read more: https://halcanary.org/vv/2009/09/10/813/
 

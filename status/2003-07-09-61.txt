@@ -1,5 +1,15 @@
 Blog post:
-cable torrent…
+cable torrent
+
+### high-speed internet
+
+I got cable modem service last week. This is the first time I've had a high speed connection at my house, and here is what I think:
+
+All in all, it's a good idea. A bit expensive, but these things can be budgeted for.
+
+### bittorrent
+
+[BitTorrent](http://bitconjurer.org/BitTorrent/) is awesome. Because the load is distributed evenly, you can get the full use of whatever b…
 
 Read more: https://halcanary.org/vv/2003/07/09/61/
 

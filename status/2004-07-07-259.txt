@@ -1,5 +1,7 @@
 Blog post:
-Linux Firewall Notes…
+Linux Firewall Notes
+
+My [Linux Firewall Notes](https://halcanary.org/p/firewall)
 
 Read more: https://halcanary.org/vv/2004/07/07/259/
 

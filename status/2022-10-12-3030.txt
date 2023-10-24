@@ -1,6 +1,19 @@
 Blog post:
 Programatically Generating HTML
-I like libraries that let you programatically generate html documents.  For example, Go's x/net/html:…
+I like libraries that let you programatically generate html documents.  For example, Go's x/net/html:
+
+<https://gist.github.com/HalCanary/61276afbab042e204e54268f6a42f065>
+
+```go
+func main() {
+	html.Render(os.Stdout,
+		HtmlDocument(
+			&html.Node{Type: html.DoctypeNode, Data: "html"},
+			Element("html",
+				Attr{"lang": "en"},
+				Elem("head",
+					Comment("HELLO WORLD"),
+					…
 
 Read more: https://halcanary.org/vv/2022/10/12/3030/
 

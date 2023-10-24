@@ -1,5 +1,20 @@
 Blog post:
-otpasswd…
+otpasswd
+
+    #!/usr/bin/perl
+    ## otpasswd --- One Time Passwd
+    ## Generate a random password unsuitable
+    ## for memorization.
+    ## Example output: 2HPxfca3W2tDAPPrhFw8
+    ## Copyright 2006 Hal Canary
+    ## DTPD (Dedicated to the Public Domain)
+    use strict;
+    use warnings;
+    foreach my $x (0 .. 19) {
+    	my $num = int(rand(62));
+    	if ($num < 10) {
+    		$num += 48;
+    	} elsif ($num < …
 
 Read more: https://halcanary.org/vv/2006/09/03/627/
 

@@ -1,5 +1,9 @@
 Blog post:
-iptables traversal…
+iptables traversal
+
+Tuesday I went to Martin Brown's talk on netfilter/iptables.
+ 
+He provided this  [very useful diagram of how it all works.](http://linux-ip.net/nf/nfk-traversal.png)
 
 Read more: https://halcanary.org/vv/2004/08/22/308/
 

@@ -1,5 +1,14 @@
 Blog post:
-simple mergesort…
+simple mergesort
+
+Even though I've studied this algorithm a couple of times, I've never had to implement it before. So I assigned it to myself.
+
+    /** should have a time-complecity of O(N×log(N))
+        and a space-compelcity of O(N) **/
+    void mergesort(int N, int array[]) {
+      int k; // k is the block size.
+      int x; //x is which block we are at.
+      int i,j; //indices in old…
 
 Read more: https://halcanary.org/vv/2010/05/08/984/
 

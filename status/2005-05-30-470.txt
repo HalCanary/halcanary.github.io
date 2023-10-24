@@ -1,5 +1,7 @@
 Blog post:
-patents…
+patents
+
+Correct me if I'm wrong, but if an algorithm is patented, and you develop an application that uses it, you can be sued for infringement, _even if you never sell that application to anyone else_.
 
 Read more: https://halcanary.org/vv/2005/05/30/470/
 

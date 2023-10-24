@@ -1,5 +1,13 @@
 Blog post:
-Bar Review…
+Bar Review
+
+[![[Thumb]](https://halcanary.org/photos/thumb/2004-03-16_blufin_mark.jpg)](https://halcanary.org/photos/2004-03-16_blufin_mark.jpg)
+
+The past few weeks I've been going to [Bluefin](http://www.bluefinclub.com/) Monday nights. Here's why it's cool:
+
+1.  Open pool table.
+2.  Decent DJs. The layout of the club allows one to stand around watching the DJs spin. This is educational.
+3.  TVs. I get a chance to catch …
 
 Read more: https://halcanary.org/vv/2004/03/30/216/
 

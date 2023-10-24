@@ -1,5 +1,19 @@
 Blog post:
-Visual Test CGI thing.…
+Visual Test CGI thing.
+
+    
+    #!/bin/sh
+    ## VISUAL TEST CGI THING
+    ## (C) Hal Canary 2005
+    ## This is free software; you can redistribute
+    ## it and modify it under the terms of version
+    ## 2 of the GNU GPL.
+    TEMP=tempfile.txt
+    # 'random_word' grabs N rand words
+    # from the dictionary file.
+    random_word 200 > ${TEMP}
+    for word in $(cat ${TEMP}) ; do
+        hash=$(echo ${word} …
 
 Read more: https://halcanary.org/vv/2005/05/25/463/
 

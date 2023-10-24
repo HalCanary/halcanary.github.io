@@ -1,5 +1,7 @@
 Blog post:
-The Centered <div> Issue…
+The Centered <div> Issue
+
+[An explanation](https://halcanary.org/p/centered-div) of some obscure HTML/CSS issues.
 
 Read more: https://halcanary.org/vv/2006/09/18/642/
 

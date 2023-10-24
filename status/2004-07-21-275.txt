@@ -1,5 +1,7 @@
 Blog post:
-Robot Josh…
+Robot Josh
+
+[Talk to Robot Josh](https://halcanary.org/p/robot-josh)
 
 Read more: https://halcanary.org/vv/2004/07/21/275/
 

@@ -1,5 +1,19 @@
 Blog post:
-jolietify…
+jolietify
+
+    #!/usr/bin/env python
+    
+    # jolietify - reduce a filename to 64 chars, preserving
+    # the suffix.
+    #
+    # See http://en.wikipedia.org/wiki/Joliet_(file_system)
+    # for a justification.  It is recomended that filenames
+    # be reduced to 64 chars before putting on a CD-ROM.
+    #
+    # Copyright 2008 Hal Canary
+    #
+    # Permission is hereby granted, free of charge, to any
+    # p…
 
 Read more: https://halcanary.org/vv/2008/06/07/723/
 

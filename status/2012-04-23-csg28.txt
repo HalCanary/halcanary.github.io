@@ -1,4 +1,18 @@
 Blog post:
-Reasonable Contour Levels…
+Reasonable Contour Levels
+
+```Python
+import math
+def generateContours(min_value, max_val, target):
+    value_range = max_val - min_value
+    x = int(round(3 * math.log10(value_range / target)))
+    if x % 3 == 1:
+        x = 2.5 * math.pow(10,math.floor(x / 3))
+    elif x % 3 == 2:
+        x = 5.0 * math.pow(10,math.floor(x / 3))
+    else:
+        x = math.pow(10, x / 3)
+    low = math.ceil(min_value / x) * x
+    return [low +…
 
 Read more: https://halcanary.org/vv/2012/04/23/csg28/

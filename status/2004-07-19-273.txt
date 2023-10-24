@@ -1,5 +1,17 @@
 Blog post:
-Inequality in Action…
+Inequality in Action
+
+    
+    * votes/person :=
+       ( (electoral college votes for this state) /
+         (population of this state) ) /
+       ( (total number of electoral votes) / (total us pop) )
+    
+
+<table class="border"><tbody>
+<tr><th> State </th><th> votes/person </th><th> State </th><th> votes/person </th></tr>
+<tr><td> California     </td><td> 0.850 </td><td> Oregon        </td><td> 1.070 </td></tr>
+<tr…
 
 Read more: https://halcanary.org/vv/2004/07/19/273/
 

@@ -1,5 +1,12 @@
 Blog post:
-intel? inside?…
+intel? inside?
+
+> _Sometimes I wonder, "would a matchbox hold my clothes?"  
+> I ain't got no matches but I've got so far to go._
+
+* * *
+
+Funny story. This year, my dad got a new desktop from HPQ. It had an AMD Athlon processor, but on the outside it had one of theose "Intel Inside" decals. I'm not sure which of the two companies should be more upset at HPQ's gaff: AMD for not getting the credit they deserve or Intel for h…
 
 Read more: https://halcanary.org/vv/2003/07/09/63/
 

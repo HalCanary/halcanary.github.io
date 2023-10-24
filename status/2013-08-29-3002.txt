@@ -1,6 +1,8 @@
 Blog post:
 Current Location
-The existing software on your phone makes it impossible to send someone precise latitude/longitude that you pinpoint on a map.…
+The existing software on your phone makes it impossible to send someone precise latitude/longitude that you pinpoint on a map.
+
+Here's my solution, IF you are already standing where you want to pinpoint: <https://halcanary.org/loc/>
 
 Read more: https://halcanary.org/vv/2013/08/29/3002/
 

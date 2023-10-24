@@ -1,6 +1,14 @@
 Blog post:
 “Rule number one, never carry anything you don’t control.”
-On using networked computers you don't understand.…
+On using networked computers you don't understand.
+
+“Rule number one, never carry anything you don’t control.”  (See _Andor_.)
+
+How would one follow this advice in this world?
+
+One would need only computers with a 100% open source stack.  Including hardware.
+
+Imagine starting with a mass-produced phone-sized touchscreen…
 
 Read more: https://halcanary.org/vv/2023/10/23/3038/
 

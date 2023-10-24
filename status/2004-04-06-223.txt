@@ -1,5 +1,7 @@
 Blog post:
-aren't we all?…
+aren't we all?
+
+![[You are connected to Han Solo.  Connection paths:  You <--> Kat <--> Jeff <--> Special E.D. <--> Han Solo.]](https://halcanary.org/images/han_solo.png)
 
 Read more: https://halcanary.org/vv/2004/04/06/223/
 

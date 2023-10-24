@@ -1,5 +1,14 @@
 Blog post:
-~/bin/longest-filename…
+~/bin/longest-filename
+
+    #!/bin/sh
+    #DTPD#
+    # ~/bin/longest-filename
+    # How long is the longest filename
+    # in these directories?
+    { for x in "$@" ; do
+    find "$x" -exec basename {} \;
+    done } | wc -L
 
 Read more: https://halcanary.org/vv/2008/06/07/722/
 

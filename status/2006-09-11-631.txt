@@ -1,5 +1,25 @@
 Blog post:
-another funny html thingy: blockquote…
+another funny html thingy: blockquote
+
+Good html:
+
+    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd">
+    <html><head><title></title></head><body>
+    <div>
+    <blockquote>
+    <div>
+    X
+    </div>
+    </blockquote>
+    </div>
+    </body></html>
+
+Bad html:
+
+    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd">
+    <…
 
 Read more: https://halcanary.org/vv/2006/09/11/631/
 

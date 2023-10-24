@@ -1,5 +1,10 @@
 Blog post:
-Rotor Router Applets page…
+Rotor Router Applets page
+
+[  
+![screenshot](https://halcanary.org/SSL/images/rotor-1d-agg.png)  
+  
+Work I've been doing](https://halcanary.org/SSL/rotor/)
 
 Read more: https://halcanary.org/vv/2003/12/27/150/
 

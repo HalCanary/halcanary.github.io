@@ -1,5 +1,20 @@
 Blog post:
-txt to html with hyperlink conversion…
+txt to html with hyperlink conversion
+
+I don't have time to be writing programs.
+
+    #!/bin/sed -f
+    1 i\
+    <!DOCTYPE HTML PUBLIC \
+    "-//W3C//DTD HTML 4.01 Transitional//EN" \
+    "http://www.w3.org/TR/html4/loose.dtd">\
+    <html><head>\
+    <meta http-equiv="Content-Type" \
+    content="text/html; charset=utf-8">\
+    <title></title></head><body>
+    s/\&/\&amp;/g;
+    s/\"/\&quot;/g;
+    s/</\&lt;/…
 
 Read more: https://halcanary.org/vv/2011/04/23/1194/
 

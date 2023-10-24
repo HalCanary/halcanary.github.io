@@ -1,5 +1,11 @@
 Blog post:
-Fedora Extras…
+Fedora Extras
+
+**Warning/Disclaimer.**
+
+Te following is a geeky linux-related post. Chances are, you will want to skip it. If you are a cute yet non-geeky cyber-stalker, please skip to the next post, which will be about politics, grammar, or food.
+
+I see that Fedora Extras (The add-ons meant to supplement Fedora Core) have finally been moved to the download.fedora.redhat.com server. I also notice that new pack…
 
 Read more: https://halcanary.org/vv/2005/03/01/414/
 

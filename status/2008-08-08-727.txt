@@ -1,5 +1,17 @@
 Blog post:
-/etc/sudoers…
+/etc/sudoers
+
+Because the syntax of the _/etc/sudoers_ file is obscure, I'm noting down here exactly what I've done to mine:
+
+    
+    root	ALL=(ALL) ALL
+    %admin ALL=(ALL) ALL
+    %admin ALL=NOPASSWD: /usr/bin/wodim
+    %admin ALL=NOPASSWD: /usr/bin/apt-get
+    %admin ALL=NOPASSWD: /sbin/reboot
+    %admin ALL=NOPASSWD: /sbin/poweroff
+
+This allows a few commonly used commands to be executed without a password.
 
 Read more: https://halcanary.org/vv/2008/08/08/727/
 

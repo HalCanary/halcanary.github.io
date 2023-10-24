@@ -1,5 +1,16 @@
 Blog post:
-Random password generator…
+Random password generator
+
+![screenshot of app](https://halcanary.org/images/randomness-app.png)
+
+    #!/usr/bin/env python
+    
+    # Randoms - Copyright 2008 Hal Canary
+    #
+    # Permission is hereby granted, free of charge, to any person
+    # obtaining a copy of this software and associated documentation
+    # files (the 'Software'), to deal in the Software without
+    # restriction, including without li…
 
 Read more: https://halcanary.org/vv/2008/02/03/718/
 

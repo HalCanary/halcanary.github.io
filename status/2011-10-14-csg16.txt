@@ -1,4 +1,18 @@
 Blog post:
-restart gdm under ubuntu…
+restart gdm under ubuntu
+
+```Emacs Lisp
+(defun next-good-buffer () "HWC" (interactive)
+  (next-buffer)
+  (while (and (not (string= (buffer-name) "*scratch*"))
+          (equal (buffer-file-name) nil))
+    (next-buffer)))
+(defun previous-good-buffer () "HWC" (interactive)
+  (previous-buffer)
+  (while (and (not (string= (buffer-name) "*scratch*"))
+          (equal (buffer-file-name) nil))
+    (previous-buffer)))
+
+(global-set-key…
 
 Read more: https://halcanary.org/vv/2011/10/14/csg16/

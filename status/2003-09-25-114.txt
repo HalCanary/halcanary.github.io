@@ -1,5 +1,8 @@
 Blog post:
-Applets for SSL…
+Applets for SSL
+
+[![[rotor model]](https://halcanary.org/SSL/images/rotor-182.png)](https://halcanary.org/SSL/)
+Been doing some Java programing for math. I'm getting paid to do this too! I've written two applets that deal with a rotor-based sandpile model.
 
 Read more: https://halcanary.org/vv/2003/09/25/114/
 

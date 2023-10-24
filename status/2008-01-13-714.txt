@@ -1,6 +1,12 @@
 Blog post:
 fcp (FTP copy)
-A ftp client that uses rcp/scp syntax…
+A ftp client that uses rcp/scp syntax
+
+My XO-1 has gotten me interested in hacking in python again, since that is the XO's primary programming environment.
+
+I quickly hacked out an ftp script in python since the default install lacked an ftp client. "My next project will be to finally write version 1.0 of my fcp (FTP copy) program --- a ftp client that uses rcp/scp syntax.
+
+Here's the first scri…
 
 Read more: https://halcanary.org/vv/2008/01/13/714/
 

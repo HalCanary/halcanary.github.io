@@ -1,5 +1,13 @@
 Blog post:
-department of redundant redundant URL department.…
+department of redundant redundant URL department.
+
+[http://mirrors.usc.edu/pub/linux/fedora/fedora/fedora/2/](http://mirrors.usc.edu/pub/linux/fedora/fedora/fedora/2/)
+
+[http://mirrors.usc.edu/pub/linux/distributions/redhat/redhat/linux/](http://mirrors.usc.edu/pub/linux/distributions/redhat/redhat/linux/)
+
+**UPDATE 2004-12-02:** It should be something like  
+http://$SERVER/pub/linux/fedora/core/$VERSION/  
+ht…
 
 Read more: https://halcanary.org/vv/2004/05/26/248/
 

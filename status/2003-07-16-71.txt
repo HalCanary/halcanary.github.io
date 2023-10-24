@@ -1,5 +1,24 @@
 Blog post:
-<hr> considered harmful.…
+<hr> considered harmful.
+
+90% of the time you use a `<hr>` you are putting a divider between sections or subsections that are already (or should already) be divided by `<h2>`'s or `<h3>`'s. Instead use `<div>`'s to break up sections and subsections. So
+
+```HTML
+<!--document.html-->
+<h2>Welcome</h2>
+<p>Paragraph</p>
+<hr />
+
+<h2>Blog</h2>
+<p>Paragraph</p>
+<hr />
+```
+
+becomes
+
+```HTML
+<!--document.html-->
+<div cla…
 
 Read more: https://halcanary.org/vv/2003/07/16/71/
 

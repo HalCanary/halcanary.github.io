@@ -1,5 +1,16 @@
 Blog post:
-Bandwidth of a Netflix account…
+Bandwidth of a Netflix account
+
+Assume you watch a movie on day 0, mail it on day 1, it gets processed on day 2, and you get a new movie on day 3. Ignore weekends. That is 1 DVD for every 3 days.
+
+Your downspeed bandwidth is for a single-layer DVD is
+
+    4.7 x 10^9 bytes / 3 days
+    = 4700000000*8/3/24/3600 bits/second
+    = 145062 bit/s
+    = 145 kbit/s
+
+That, of course, sucks compared to my 1.5 Mbit/s DSL connection. …
 
 Read more: https://halcanary.org/vv/2006/11/05/660/
 

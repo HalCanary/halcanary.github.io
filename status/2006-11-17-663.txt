@@ -1,5 +1,14 @@
 Blog post:
-In honor of Telemonian Ajax, apparently…
+In honor of Telemonian Ajax, apparently
+
+Read _Head Rush Ajax_ yesterday. If you already know Javascript and the DOM, all there is left to learn about the magic of Ajax is the XMLHttpRequest / Msxml2.XMLHTTP / Microsoft.XMLHTTP functions, which aparently all work identically.
+
+    
+    /* ajax-http-request.js */
+    function newHttpRequest() {
+      var request = null;
+      try {
+        request = new XMLHttp…
 
 Read more: https://halcanary.org/vv/2006/11/17/663/
 

@@ -1,4 +1,8 @@
 Blog post:
-make -j…
+make -j
+
+    #!/bin/sh
+    N_CPUS=`grep processor /proc/cpuinfo | wc -l`
+    exec /usr/bin/make -j "$N_CPUS" "$@"
 
 Read more: https://halcanary.org/vv/2011/08/08/csg12/

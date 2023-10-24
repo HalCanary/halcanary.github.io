@@ -1,5 +1,12 @@
 Blog post:
-convert asterisks to html-bold via sed…
+convert asterisks to html-bold via sed
+
+    #!/bin/sed -f
+    #DTPD#
+    #convert *bold* text to *html bold*
+    # also converts /italic/ text to html em
+    s/\*\([^\*]*\)\*/<strong>\1<\/strong>/g;
+    s/\/\([^\/]*\)\//<em>\1<\/em>/g;
 
 Read more: https://halcanary.org/vv/2011/03/07/1096/
 

@@ -1,5 +1,7 @@
 Blog post:
-2011-08-24-ride…
+2011-08-24-ride
+
+[![[]](https://halcanary.org/images/2011-08-24-ride_scale.png)](https://halcanary.org/images/2011-08-24-ride.png)
 
 Read more: https://halcanary.org/vv/2011/08/24/1230/
 

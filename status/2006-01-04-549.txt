@@ -1,5 +1,23 @@
 Blog post:
-hibernation sickness…
+hibernation sickness
+
+Things will get seriously fracked up when two differnet operating systems try and access the same HDD partition at the same time.
+
+How can this happen?  
+  
+I found out.
+
+1) Run some programs in windows xp.
+
+2) Tell XP to hibernate
+
+3) Boot into linux
+
+4) access FAT filesystem, say to copy some music over to the d:\\music directory.
+
+5) reboot to windows.
+
+6) Wait til it hits the fan.
 
 Read more: https://halcanary.org/vv/2006/01/04/549/
 

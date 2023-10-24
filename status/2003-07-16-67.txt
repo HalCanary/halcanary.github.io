@@ -1,5 +1,11 @@
 Blog post:
-robots…
+robots
+
+> **Fry:** Who cares what you're programmed for? If somebody programmed you to jump off a bridge, would you do it?
+> 
+> **Bender:** I'll have to check my program. _`<`pause`>`_ Yep.
+
+Been watching too much _Futurama_ recently, so I've got robots on my mind. I haven't read enough recent sci-fi with robots. There are robots in the old Asimov books, and a handful of sentient AI's in some other books, but not enough.
 
 Read more: https://halcanary.org/vv/2003/07/16/67/
 

@@ -1,5 +1,18 @@
 Blog post:
-Downsample…
+Downsample
+
+I can't tell the difference between a 32KBps and 224KBps mp3 file. Can you?
+
+So I'm down-sampling all my mp3s to fit on my new mp3 player. I should be able to fit around 3 days of music onto my 1GB player this way.
+
+Here's a script to do that---a work in progress
+
+    #!/bin/sh
+    
+    ## Compressmp3s - Copyright 2007 Hal Canary
+    ## Dedicated to the Public Domain.
+    
+    ## Arguments: a list …
 
 Read more: https://halcanary.org/vv/2007/12/12/713/
 

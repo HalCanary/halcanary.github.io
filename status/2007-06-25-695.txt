@@ -1,5 +1,15 @@
 Blog post:
-Firefox Addons…
+Firefox Addons
+
+Favorite Firefox Addons:
+
+**[Go Up](https://addons.mozilla.org/en-US/firefox/addon/1677)**
+
+> Lets you go "up" a level in the current website via the provided toolbar button, or by pressing Alt+Up arrow. The "up" is determined by trimming the last section of the URL, e.g. example.org/foo/somepage.html becomes example.org/foo/
+
+I don't use this much, but it does come in handy every so often.
+
+**…
 
 Read more: https://halcanary.org/vv/2007/06/25/695/
 

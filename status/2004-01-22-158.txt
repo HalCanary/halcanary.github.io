@@ -1,5 +1,7 @@
 Blog post:
-A Sad day.…
+A Sad day.
+
+The first computer that was _mine_ and not shared with my family was dave, a gateway P2-233 that my grandmother bought me in 1997. Last week I permanently retired it from its duties as a web server. Last night I salvaged the last bit of useful hardware off of him: a pair of thumbscrews.
 
 Read more: https://halcanary.org/vv/2004/01/22/158/
 

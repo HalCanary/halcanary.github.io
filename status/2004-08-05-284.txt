@@ -1,5 +1,7 @@
 Blog post:
-Billmon…
+Billmon
+
+Why doesn't [bilmon](http://billmon.org/) have his own column?
 
 Read more: https://halcanary.org/vv/2004/08/05/284/
 

@@ -1,5 +1,11 @@
 Blog post:
-TAOCP/1…
+TAOCP/1
+
+I bought a boxed set of Knuth's _Art of Computer Programming_ last week. As you may or may not know, TAOCP demonstrates programs in assembly for a mythical computer known as the MIX 1009. MIX would not have been out of place in 1965, but is hopelessly outdated today. Nonetheless, I learned enough MIX to write the following program in the MIX Assembly Language.
+
+    * factorial.mixal
+    *
+    * calcul…
 
 Read more: https://halcanary.org/vv/2007/05/12/688/
 

@@ -1,5 +1,9 @@
 Blog post:
-/usr/share/dict…
+/usr/share/dict
+
+    grep -i Ubuntu /usr/share/dict/*
+
+In the Ubuntu OS distribution, the standard dictionaries lack the word "Ubuntu."
 
 Read more: https://halcanary.org/vv/2008/12/06/753/
 

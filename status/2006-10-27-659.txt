@@ -1,5 +1,9 @@
 Blog post:
-Radeon 9200 + Compiz…
+Radeon 9200 + Compiz
+
+> Some segments of the Linux user community, which prefer to avoid the IP-encumbered ATI drivers due to ideological choices, still prefer the R200-based chips, as they are among the fastest modern video cards with stable open source drivers. ([source](http://en.wikipedia.org/wiki/Radeon_R200))
+
+My ATI RV280 Radeon 9200 works great with The new Compiz window manager that comes with Fedora …
 
 Read more: https://halcanary.org/vv/2006/10/27/659/
 

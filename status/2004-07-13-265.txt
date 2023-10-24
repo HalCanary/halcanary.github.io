@@ -1,5 +1,7 @@
 Blog post:
-H2…
+H2
+
+[http://www.fuh2.com/](http://www.fuh2.com/)
 
 Read more: https://halcanary.org/vv/2004/07/13/265/
 

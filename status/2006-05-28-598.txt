@@ -1,5 +1,9 @@
 Blog post:
-The Default.…
+The Default.
+
+![[]](https://halcanary.org/images/aristocrats-rating.png)
+
+([source](http://www.imdb.com/title/tt0436078/))
 
 Read more: https://halcanary.org/vv/2006/05/28/598/
 

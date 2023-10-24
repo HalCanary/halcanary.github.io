@@ -1,5 +1,20 @@
 Blog post:
-bitten; shy…
+bitten; shy
+
+Everytime I go into my storage room in the basement, I get spider bites. New plan: I'm getting as many boxes out of there this evening as possible, and leave the big stuff for much later. Then I avoid the basement.
+
+* * *
+
+    [hal@lensman]$ time-till-I-leave-town.sh
+    Time until Mon Jul  3 09:00:00 CDT 2006:
+    3747726 seconds
+    3.7477 megaseconds
+    6 weeks + 1.3764 days
+    43.3764 days
+
+* * *
+
+   …
 
 Read more: https://halcanary.org/vv/2006/05/21/593/
 

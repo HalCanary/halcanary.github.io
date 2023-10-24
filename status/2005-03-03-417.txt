@@ -1,5 +1,7 @@
 Blog post:
-Design by committe of seventh-grade script kiddies…
+Design by committe of seventh-grade script kiddies
+
+[Some people should not be allowed to design software](https://halcanary.org/images/netscape_8.png).
 
 Read more: https://halcanary.org/vv/2005/03/03/417/
 

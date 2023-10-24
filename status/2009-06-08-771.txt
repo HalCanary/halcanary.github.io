@@ -1,5 +1,24 @@
 Blog post:
-make-envelope.sh…
+make-envelope.sh
+
+    #!/bin/sh
+    
+    ## make-envelope.sh
+    ##
+    ## Written 2009 Hal Canary.
+    ## Dedicated to the public domain.
+    ##
+    ## Put the envelope in the printer
+    ## with the front facing you, and
+    ## the opening flap to the right.
+    ##
+    ## Argument is file containing
+    ## "to" address.
+    
+    FROM="${HOME}/.return-address.txt"
+    
+    ## No 6-3/4 Envelope
+     WIDTH=6.5	…
 
 Read more: https://halcanary.org/vv/2009/06/08/771/
 

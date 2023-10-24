@@ -1,5 +1,10 @@
 Blog post:
-Tiny Utility Script of the Day…
+Tiny Utility Script of the Day
+
+    #!/bin/sh
+    #bin/amp#
+    #DTPD#
+    nohup "$@" 1> /dev/null 2>&1 &
 
 Read more: https://halcanary.org/vv/2006/10/26/657/
 

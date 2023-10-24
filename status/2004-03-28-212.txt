@@ -1,5 +1,18 @@
 Blog post:
-reset-ramdisk…
+reset-ramdisk
+
+The issue: as far as I know, no editor shreds old versions of files upon writing new versions. How do you keep data off of a hard drive? Use the ramdisk.
+
+    
+    #!/bin/sh
+    ## /usr/local/bin/reset-ramdisk ##
+    if `df | grep -q ramdisk` ;then
+        umount /dev/ramdisk
+    fi
+    shred -n 2 /dev/ramdisk
+    /sbin/mke2fs -q /dev/ramdisk
+    mkdir -p /mnt/ramdisk
+    mount /dev/ramdisk /mnt…
 
 Read more: https://halcanary.org/vv/2004/03/28/212/
 

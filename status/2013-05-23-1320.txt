@@ -1,5 +1,20 @@
 Blog post:
-packages…
+packages
+
+Bash user? Be sure to install and use the package `bash-completion`.
+
+Write a lot of code? Don't forget `source-highlight`
+
+```sh
+# add to .bashrc
+if command -v source-highlight > /dev/null ; then
+source-highlight-less() {
+    [ $# -eq 0 ] && { echo "args?" >&2; return 1; }
+    for FILE ; do
+        if [ -f "$FILE" ] ; then
+            source-highlight -i "$FILE" -fesc
+        else
+            echo …
 
 Read more: https://halcanary.org/vv/2013/05/23/1320/
 

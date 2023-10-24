@@ -1,5 +1,7 @@
 Blog post:
-The Promise of the Internet…
+The Promise of the Internet
+
+Two recent blogs deserve links: [Pamela Jones' GrokLaw](http://groklaw.net/) and the [Abusable Technologies Awareness Center](http://www.abusabletech.org/). The first is devoted to discussions of the legal aspects of OSS. (Since May, all of the articls are about SCO.) The latter is composed of 19 panelists, including several names known to me. I've added them to my bookmarks…
 
 Read more: https://halcanary.org/vv/2003/12/13/141/
 

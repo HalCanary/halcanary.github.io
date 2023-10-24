@@ -1,5 +1,21 @@
 Blog post:
-change-epub-formatting.py…
+change-epub-formatting.py
+
+    #!/usr/bin/python
+    #DTPD#
+    import subprocess
+    import os.path
+    import sys
+    import glob
+
+    def fixfile(in_file_name):
+      ebookconvert = r'C:\PROGRA~2\Calibre2\ebook-convert.exe'
+      #ebookconvert = '/usr/bin/ebook-convert'
+      base = os.path.basename(in_file_name)
+      dirn = os.path.dirname(in_file_name)
+      newdir = 'myformat'
+      try:
+     …
 
 Read more: https://halcanary.org/vv/2011/06/24/1211/
 

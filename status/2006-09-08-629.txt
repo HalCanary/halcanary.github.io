@@ -1,5 +1,19 @@
 Blog post:
-lpr-text for CUPS…
+lpr-text for CUPS
+
+If you are using CUPS for your printing, there is no reason to continue using Enscript.
+
+    #!/bin/sh
+    #DTPD#
+    # http://cups.org/documentation.php/options.html
+    # ~/bin/lpr-2col-text
+    exec lpr -o page-left=36 \
+            -o page-right=36 \
+            -o page-top=72 \
+            -o page-bottom=36 \
+            -o columns=2 \
+            -o landscape \
+            -o cpi=16.84…
 
 Read more: https://halcanary.org/vv/2006/09/08/629/
 

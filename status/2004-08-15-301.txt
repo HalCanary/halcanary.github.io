@@ -1,5 +1,19 @@
 Blog post:
-RAM these days.…
+RAM these days.
+
+Just did a reboot of my FC2 workstation, started a terminal emulator and a browser.
+
+    
+    $ head -2 /proc/meminfo
+    MemTotal:      1035692 kB
+    MemFree:        686080 kB
+    $ echo $(( (1035692-686080)/1024 ))
+    341
+    
+
+Including buffers, the system takes 341 MB of RAM just to get going. And you can still buy desktops with 256 MB!
+
+I must admit that Linux 2.6.x tends to be optimize…
 
 Read more: https://halcanary.org/vv/2004/08/15/301/
 

@@ -1,5 +1,8 @@
 Blog post:
-reading book The Architecture of Open Source Applications…
+reading book The Architecture of Open Source Applications
+
+[_The Architecture of Open Source Applications_](http://www.aosabook.org/en/),
+[ISBN 1257638017](https://halcanary.org/isbn/?1257638017/The+Architecture+Of+Open+Source+Applications)
 
 Read more: https://halcanary.org/vv/2012/08/23/1302/
 

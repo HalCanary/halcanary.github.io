@@ -1,4 +1,16 @@
 Blog post:
-validity…
+validity
+
+```C++
+// Oddly enough, this is a
+// valid c++ program
+#include <iostream>
+using namespace std;
+int main(int, char**) {
+  ; ; ; { } ; { } ;
+  cout << "hello world\n";
+  { { ; } { } }
+}
+```
 
 Read more: https://halcanary.org/vv/2012/07/16/csg29/

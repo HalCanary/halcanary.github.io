@@ -1,5 +1,13 @@
 Blog post:
-Book Review: Linux Firewalls…
+Book Review: Linux Firewalls
+
+[![[book cover]](https://halcanary.org/images/linux_firewalls.jpg)](https://halcanary.org/isbn/?0735710996)
+
+I've been using Ziegler's _Linux Firewalls (2nd Edition)_ to teach myself `iptables` syntax. I'm not sure that it's the best book for getting started building firewalls and routers, bcause it advocates really compliated rulesets.
+
+![[]](https://halcanary.org/images/iptables.png)
+
+Ther…
 
 Read more: https://halcanary.org/vv/2004/04/02/220/
 

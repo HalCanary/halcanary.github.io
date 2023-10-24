@@ -1,5 +1,7 @@
 Blog post:
-new timescales…
+new timescales
+
+> <div><a href="http://en.wikipedia.org/wiki/Pangaea">Pangaea</a> was not the first supercontinent. From the evidence available, scientists have reconstructed a predecessor, termed <a href="http://en.wikipedia.org/wiki/Pannotia">Pannotia</a>, that formed about 600&nbsp;mya, before dividing again some 50 million years later. Another, <a href="http://en.wikipedia.org/wiki/Rodinia">Rodinia</a>,…
 
 Read more: https://halcanary.org/vv/2006/05/31/600/
 

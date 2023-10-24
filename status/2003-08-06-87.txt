@@ -1,5 +1,7 @@
 Blog post:
-lensman…
+lensman
+
+ [![[login screen]](https://halcanary.org/images/thumb-login-scaled.png)](https://halcanary.org/images/login-scaled.png)The new motherboard and processor arived today, and I finished rebuilding my computer. It was an involved process that required me to take everything apart and put it all back together, repartition my hard drive (I had been wanting to do that for a while), and reinstall my OS. It seem…
 
 Read more: https://halcanary.org/vv/2003/08/06/87/
 

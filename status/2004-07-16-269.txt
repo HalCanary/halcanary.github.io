@@ -1,5 +1,16 @@
 Blog post:
-Getting Started With Mono…
+Getting Started With Mono
+
+![[mono logo]](https://halcanary.org/images/mono.png)
+
+[Mono](http://www.mono-project.com/) has just hit 1.0. It is now time for me to abandon Java and start developing in c# instead. Let's get started:
+
+    
+    ## Lines added to /etc/yum.conf
+    ## visit http://www.mono-project.com/downloads/
+    ## for the correct url for your distro and version.
+    [ximian-mono]
+    name=Ximian…
 
 Read more: https://halcanary.org/vv/2004/07/16/269/
 

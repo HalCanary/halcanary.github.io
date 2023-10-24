@@ -1,5 +1,9 @@
 Blog post:
-Mathematical Writing, part 2…
+Mathematical Writing, part 2
+
+An interesting article: “[Writing For A Math Class](http://www.mathacademy.com/pr/minitext/writing/index.asp)”
+
+I disagree with the article on issues of style. For style questions, I would defer to Knuth above most other authorities.
 
 Read more: https://halcanary.org/vv/2004/10/23/336/
 

@@ -1,5 +1,17 @@
 Blog post:
-Fun with randomness…
+Fun with randomness
+
+One-time pads are an old-fashoned way of doing cryptography, not used much these days. On the other hand, they are as secure as the random device is random. (Want a better random device? [here's one](http://www.protego.se/sg100_en.htm).)
+
+I've been meaning to write this code for a while now:
+
+    
+    #!/usr/bin/perl
+    ## crypt-otp.pl ##
+    if (@ARGV OUTPUT\n";
+        exit 1;
+    }
+   …
 
 Read more: https://halcanary.org/vv/2004/03/05/184/
 

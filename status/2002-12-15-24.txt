@@ -1,5 +1,13 @@
 Blog post:
-Site Update! / Hardware Standards!…
+Site Update! / Hardware Standards!
+
+**Site Update!** (I wonder who reads this, anyway?)
+
+I've been going back and rewriting the perl backend of this page. You shouldn't be able to tell a difference, but the code is a lot cleaner now. I've moved all of the reusable code into a `.pm` file so I can now knock out new cgi scripts much more quickly.
+
+Yea! Reusable Code!
+
+There's now a [Blog Submission](https://web.archive.org/we…
 
 Read more: https://halcanary.org/vv/2002/12/15/24/
 

@@ -1,5 +1,9 @@
 Blog post:
-September Photos…
+September Photos
+
+[![[Thumb]](https://halcanary.org/photos/thumb/2003-09-20_odd_tree.jpg)](https://halcanary.org/photos/2003-09-20_odd_tree.jpg)
+
+[I've posted new photos.](https://halcanary.org/p/photo-2003-09/)
 
 Read more: https://halcanary.org/vv/2003/10/04/121/
 

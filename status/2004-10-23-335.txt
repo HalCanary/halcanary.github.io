@@ -1,5 +1,9 @@
 Blog post:
-Mathematical Writing, part 1…
+Mathematical Writing, part 1
+
+I am enjoying [_Mathematical Writing_ by Donald E. Knuth, Tracy Larrabee, and Paul M. Roberts](http://tex.loria.fr/typographie/mathwriting.pdf).
+
+“I look forward to the day when a Pulitzer Prize will be given for the best computer program of the year.” ---Knuth
 
 Read more: https://halcanary.org/vv/2004/10/23/335/
 

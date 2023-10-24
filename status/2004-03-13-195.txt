@@ -1,5 +1,20 @@
 Blog post:
-Backups…
+Backups
+
+I've decided to back up my mp3 collection for the first time ever. It's a whopping 14 Gb. which I split up among 21 CDs.
+
+I'll be burning all night.
+
+At least I automated the task somewhat. I wrote a script that softlinks the files into directories each less than 700000kb.
+
+Be sure to use “mkisofs -f” (follow symbolic links).
+
+    
+    #!/usr/bin/perl
+    #
+    #DTPD#
+    #
+    # Arguments: file c…
 
 Read more: https://halcanary.org/vv/2004/03/13/195/
 

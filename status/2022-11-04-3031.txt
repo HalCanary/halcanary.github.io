@@ -1,6 +1,12 @@
 Blog post:
 M2 work machine
-a new work computer on the way…
+a new work computer on the way
+
+I may be shooting myself in the foot, but I requested that work take my 8-Core 2019 MacBook Pro away and issue me a M2 2022 MacBook Air.  
+
+Since we switched our software to Go, the build times have been much faster, so I expect that my productivity will not be affected.
+
+Discuss: <https://twitter.com/halcanary/status/1587102824579612674>
 
 Read more: https://halcanary.org/vv/2022/11/04/3031/
 

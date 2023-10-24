@@ -1,5 +1,10 @@
 Blog post:
-ADV / Geek Out…
+ADV / Geek Out
+
+For some years now, I've had crass commercialism hidden away on the [book](https://halcanary.org/p/books) section of my site. Now I've moved it to the front page. Why, Hal, why?
+
+1.  Every product that I encourage you to buy, I do so first because I think it's a good piece of art, and the artist deserves support.
+2.  This server costs me a few of dollars a month in rent, and the  domain name cost money, too…
 
 Read more: https://halcanary.org/vv/2002/10/02/16/
 

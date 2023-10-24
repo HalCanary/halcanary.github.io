@@ -1,4 +1,27 @@
 Blog post:
-a common idiom…
+a common idiom
+
+```C++
+/*
+  a common idiom:
+ */
+void C::f() {
+  if (this->ptr != NULL) {
+    delete this->ptr;
+    this->ptr = NULL;
+  }
+}
+/*
+  proposed new syntax: a delete expression evaluates to reference to
+  the pointer that was deleted, to make it easer to remember to set
+  that pointer to NULL.
+ */
+void C::f() {
+  if (this->ptr != NULL)
+    (delete this->ptr) = NULL;
+}
+```
+
+**UPDATE** 2013-05-12: Stroustrup suggests an …
 
 Read more: https://halcanary.org/vv/2013/03/01/csg33/

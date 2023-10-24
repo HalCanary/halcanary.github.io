@@ -1,5 +1,11 @@
 Blog post:
-WordPress…
+WordPress
+
+I moved my blog over to [WordPress](http://wordpress.org/), which I have been meaning to do for years. It's finally come along to the point where it is fairly usable.
+
+**Update.** I've put a lot of effort into writing a decent Wordpress theme for this site. I'm debating releasing this theme back to the community, versus keeping it all to myself.
+
+Yesterday I worked on the comments page. The layout is somewhat r…
 
 Read more: https://halcanary.org/vv/2006/09/14/637/
 

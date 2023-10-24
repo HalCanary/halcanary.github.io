@@ -1,4 +1,10 @@
 Blog post:
-quick GDB…
+quick GDB
+
+One can start an executable with arguments inside GDB with a single bash command:
+
+```
+$ gdb EXECUTABLE <<< 'run ARG1 ARG2 ARG3'
+```
 
 Read more: https://halcanary.org/vv/2011/12/06/csg20/

@@ -1,5 +1,9 @@
 Blog post:
 Randolph Warner Church Jr.
-Remembering my uncle.…
+Remembering my uncle.
+
+My father's sister's husband, my Uncle Ranny, passed away earlier this year. Even though I never spent much time with him, when I did get to visit him, he was always kind and nice to talk to.
+
+When Ranny Church told me that his uncle was Alonzo Church of the Church-Turing thesis and the lambda calculus, I though he was joking about the fact that I was studying computer science a…
 
 Read more: https://halcanary.org/vv/2020/08/07/3019/

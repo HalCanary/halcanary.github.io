@@ -1,5 +1,7 @@
 Blog post:
-Around town today:…
+Around town today:
+
+![[car]](https://halcanary.org/photos/2006-05-20-purple-car.jpg)
 
 Read more: https://halcanary.org/vv/2006/05/21/594/
 

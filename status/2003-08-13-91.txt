@@ -1,5 +1,7 @@
 Blog post:
-RSS Feed…
+RSS Feed
+
+Here's my [rss feed](https://halcanary.org/wohc-rss.xml). It seems to be working. I don't know if anyone else would even want to use it, but I will probably use this data to make a blog summary page.
 
 Read more: https://halcanary.org/vv/2003/08/13/91/
 

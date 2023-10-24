@@ -1,5 +1,9 @@
 Blog post:
-profound…
+profound
+
+> “The Internet interprets censorship as damage and routes around it.”
+> 
+> —[John Gilmore](http://www.toad.com/gnu/)([link](http://www.worldofends.com/))
 
 Read more: https://halcanary.org/vv/2004/02/11/171/
 

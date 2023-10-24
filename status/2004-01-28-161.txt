@@ -1,5 +1,9 @@
 Blog post:
-most source code is relatively defenseless…
+most source code is relatively defenseless
+
+From _The History of the DeCSS Haiku_:
+
+> Finally, I felt that expressing the fear of censorship directly and repeatedly within the poem itself created an interesting tension. It emphasized that the poem had really been written by a human author with a human voice and his own interests and passions. Aware of the prospect of censorship, the poem confronts would-be cen…
 
 Read more: https://halcanary.org/vv/2004/01/28/161/
 

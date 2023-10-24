@@ -1,5 +1,21 @@
 Blog post:
-txt2prehtml…
+txt2prehtml
+
+    #!/bin/sh
+    # txt2prehtml
+    # Copyright 2006-2007 Hal Canary
+    # DTPD
+    echo -n '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01
+    Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+    <html>
+    <head>
+    <meta http-equiv="Content-Type"
+      content="text/html; charset=utf-8">
+    <title> </title>
+    </head>
+    <body>
+    <pre>' ;
+    fold -w 70 -s "$@" | sed 's/\&/\&amp;/g…
 
 Read more: https://halcanary.org/vv/2007/03/28/680/
 

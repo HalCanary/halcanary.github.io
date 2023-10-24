@@ -1,5 +1,11 @@
 Blog post:
-Photography…
+Photography
+
+[![[Thumb]](https://halcanary.org/photos/thumb/2004-04-03-img_1214.jpg)](https://halcanary.org/photos/2004-04-03-img_1214.jpg)
+
+[Yesterday's photos](https://halcanary.org/p/photo-2004-04-03/).
+
+A page all [about my photography](https://halcanary.org/p/about-photography).
 
 Read more: https://halcanary.org/vv/2004/04/04/221/
 

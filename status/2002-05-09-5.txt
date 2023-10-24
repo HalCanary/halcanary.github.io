@@ -1,5 +1,9 @@
 Blog post:
-Linus Quote…
+Linus Quote
+
+> Quite frankly, I don't \_want\_ people using Linux for ideological reasons. I think ideology sucks. This world would be a much better place if people had less ideology, and a whole lot more "I do this because it's FUN and because others might find it useful, not because I got religion".
+>
+> \---[Linus Torvalds](http://lwn.net/2002/0425/a/ideology-sucks.php3)
 
 Read more: https://halcanary.org/vv/2002/05/09/5/
 

@@ -1,5 +1,13 @@
 Blog post:
-Weak Cryto will Die! /or/ Anything that Can be Cracked Will be Cracked!…
+Weak Cryto will Die! /or/ Anything that Can be Cracked Will be Cracked!
+
+[“Jon ‘DVD Jon’ Johansen has cracked the Apple Lossless encryption used by the Airport Express to communicate with iTunes.”](http://hublog.hubmed.org/archives/000926.html)
+
+    
+    AirPort Express RSA Public Key,
+    Modulus:
+    59dE8qLieItsH1WgjrcFRKj6eUWqi+bGLOX1HL3U3GhC/j0Qg90u3sG/1CUtwC
+    5vOYvfDmFI6oSFXi5ELabWJmT2d…
 
 Read more: https://halcanary.org/vv/2004/08/12/294/
 

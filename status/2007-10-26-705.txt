@@ -1,5 +1,17 @@
 Blog post:
-Not another calendar reform…
+Not another calendar reform
+
+A proposal for a better calendar. (If we didn't have the Gregorian calendar
+already and wanted to start from scratch.)
+
+    No      Name            Days
+    --      ----            ----
+    01      January         30
+    02      February        31
+    03      March           30
+    04      April           31
+    05      May             30
+    06      June           …
 
 Read more: https://halcanary.org/vv/2007/10/26/705/
 

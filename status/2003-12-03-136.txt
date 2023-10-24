@@ -1,5 +1,15 @@
 Blog post:
-ls directories script…
+ls directories script
+
+Useful unix tip of the week:
+
+```sh
+#!/bin/sh
+#DTPD#
+## $HOME/bin/lsd ##
+/bin/ls --color='yes' \
+    -l "$@" | grep "^d"
+```
 
 Read more: https://halcanary.org/vv/2003/12/03/136/
 

@@ -1,4 +1,12 @@
 Blog post:
-Javascript SVG printable maze generator…
+Javascript SVG printable maze generator
+
+![Size 20 Maze](https://halcanary.org/images/maze20.svg)
+
+Examples:
+
+<https://halcanary.org/maze/?size=64>  
+<https://halcanary.org/maze/?size=32>  
+<https://halcanary.org/maze/?size=128>
 
 Read more: https://halcanary.org/vv/2020/11/17/3023/

@@ -1,5 +1,7 @@
 Blog post:
-UTC-5…
+UTC-5
+
+NEXT weekend, we here in Central US switch from UTC-6 to UTC-5. This is know as "springing forward". It still seems like a bit of an abomination to me. Why can't we all just agree to go to work an hour earlier?
 
 Read more: https://halcanary.org/vv/2006/03/27/576/
 

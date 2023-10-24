@@ -3,6 +3,7 @@ module github.com/HalCanary/halcanary.github.io
 go 1.18
 
 require (
+	github.com/HalCanary/mastodoner v0.2.0
 	github.com/HalCanary/facility v1.0.3
 	github.com/google/uuid v1.3.1
 	gitlab.com/golang-commonmark/markdown v0.0.0-20211110145824-bf3e522c626a

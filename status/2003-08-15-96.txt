@@ -1,5 +1,9 @@
 Blog post:
-Media PC…
+Media PC
+
+[![[Thumb]](https://halcanary.org/photos/thumb/2003-08-15-dalek-media-pc.jpg)](https://halcanary.org/photos/2003-08-15-dalek-media-pc.jpg)
+
+As I've mentioned before, I'm putting together a media pc. I started with my old computer, _dalek_, and put it in a new case. Then I hooked the video card's s-video output up to my television and the sound up to my stereo. When I tried to turn it on two days ago n…
 
 Read more: https://halcanary.org/vv/2003/08/15/96/
 

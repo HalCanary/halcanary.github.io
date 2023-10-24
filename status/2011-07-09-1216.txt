@@ -1,4 +1,6 @@
 Blog post:
-40 minute hilly ride. 6.7 miles…
+40 minute hilly ride. 6.7 miles
+
+<div style="text-align:center">![map of ride](https://halcanary.org/images/2011-07-09_142801_bikeride2.png)</div>
 
 Read more: https://halcanary.org/vv/2011/07/09/1216/

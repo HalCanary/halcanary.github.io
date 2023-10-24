@@ -1,5 +1,22 @@
 Blog post:
-algorithms matter…
+algorithms matter
+
+This example of why the right algorithm matters comes directly from my textbook. Here's the C implementation:
+
+Bad:
+
+    #include <stdio.h>
+    #include <stdlib.h>
+    long int fib(long int n) {
+      if (n==0)
+        return 1;
+      if (n==1)
+        return 1;
+      return fib(n-1) + fib(n-2);
+    }
+    int main(int argc, char *argv[]) {
+      if (argc <= 1) {
+        fp…
 
 Read more: https://halcanary.org/vv/2010/03/11/944/
 

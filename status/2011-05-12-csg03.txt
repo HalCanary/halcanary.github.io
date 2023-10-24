@@ -1,4 +1,16 @@
 Blog post:
-I'm not sure GNU takes windows ports seriously…
+I'm not sure GNU takes windows ports seriously
+
+GNU tar for win32 can't actually fork a process for gzip.  What
+century is it?  Here's my fix:
+
+    @echo off
+    REM untargz.bat
+    :AGAIN
+    if "%1" == "" goto END
+    gzip -d -c < "%1" | tar -xv
+    shift
+    goto AGAIN
+    :END
 
 Read more: https://halcanary.org/vv/2011/05/12/csg03/

@@ -1,5 +1,14 @@
 Blog post:
-txt2html…
+txt2html
+
+    #!/bin/sed -f
+    #DTPD#
+    #txt2html Cleans up HTML control characters <.",&,>
+    s/\&/\&amp;/g;
+    s/\"/\&quot;/g;
+    s/</\&lt;/g;
+    s/>/\&gt;/g;
+    s/\\/\&\#0092;/g;
 
 Read more: https://halcanary.org/vv/2006/09/11/632/
 

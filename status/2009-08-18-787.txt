@@ -1,5 +1,19 @@
 Blog post:
-timer.c…
+timer.c
+
+    /* Copyright 2009 Hal Canary, https://halcanary.org/
+       Dedicated to the Public Domain.
+    
+       cc -o timer timer.c
+    */
+    #include <stdio.h>
+    #include <sys/time.h>
+    int main(int argc, char *argv[]) {
+      int totalminutes, totalseconds; /* args */
+      int minute, second; /* counter */
+      if (argc <= 1) {
+        fprintf(stderr, "Usage: timer MINUTES [SECONDS]\n\n");
+      …
 
 Read more: https://halcanary.org/vv/2009/08/18/787/
 

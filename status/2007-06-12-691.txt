@@ -1,6 +1,12 @@
 Blog post:
 Unix Utility Scripts
-Utility Scripts for Unix-compatible systems (id est GNU/Linux). This page collects several of the scripts I've written for Linux over the years. Maybe someone else will find them useful.…
+Utility Scripts for Unix-compatible systems (id est GNU/Linux). This page collects several of the scripts I've written for Linux over the years. Maybe someone else will find them useful.
+
+execute a program in the background, redirect stdout and stderr to null, and keep it from being hungup. \[Depends on: Bourne shell, coreutils\]
+
+    #!/bin/sh
+    # ~/bin/amp
+    nohup "$@" > /dev/null 2>…
 
 Read more: https://halcanary.org/vv/2007/06/12/691/
 

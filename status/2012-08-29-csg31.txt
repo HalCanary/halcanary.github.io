@@ -1,4 +1,6 @@
 Blog post:
-webgl example…
+webgl example
+
+`$ optirun google-chrome --ignore-gpu-blacklist http://paraviewweb.kitware.com/PWApp/`
 
 Read more: https://halcanary.org/vv/2012/08/29/csg31/

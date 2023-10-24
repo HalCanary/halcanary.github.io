@@ -1,5 +1,7 @@
 Blog post:
-SIG…
+SIG
+
+A galactic system of measures used be several species to communicate with each other in a SF universe in my head. This is an explicitly _designed_ system of units. Base 16 is used because of the importance of binary. Aliens might find caesium-133 as easy to use as humans do. I don't use multiples of the plank length—which might seem like the natural thing to do—because measuring the cons…
 
 Read more: https://halcanary.org/vv/2007/11/04/707/
 

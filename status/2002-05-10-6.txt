@@ -1,5 +1,15 @@
 Blog post:
-RH 7.3…
+RH 7.3
+
+I've installed RedHat 7.3. Everything works well. My review:
+
+Gnome 1.6 - sucks.
+
+KDE3 - Works well. I haven't yet decided between KDE3 and WindowMaker for my window manager/desktop environment. KDE's fonts are okay. And their font installer app rocks.
+
+Ximian Evolution - I got it to sync with my palm!
+
+Konq - As a browser, it sucks. As a file manager, it's okay (not that I need a file manager). It seems…
 
 Read more: https://halcanary.org/vv/2002/05/10/6/
 

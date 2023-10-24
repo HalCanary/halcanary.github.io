@@ -1,4 +1,27 @@
 Blog post:
-Quick linear regression…
+Quick linear regression
+
+Quick linear regression script
+
+```Python
+#!/usr/bin/env python
+#sudo yum -y install scipy
+# input is space-deleimited (x y) pairs.
+import scipy
+import numpy
+import sys
+
+inp = [map(float, l.split()[0:2]) for l in sys.stdin]
+x = numpy.array([t[0] for t in inp])
+y = numpy.array([t[1] for t in inp])
+fit = scipy.polyfit(x,y,1)
+print 'y = (%f) x + (%f)' % tuple(fit)
+```
+    
+
+power fit:
+
+```Python
+#!/usr/bi…
 
 Read more: https://halcanary.org/vv/2011/11/16/csg19/

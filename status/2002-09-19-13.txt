@@ -1,5 +1,15 @@
 Blog post:
-Update on my linux desktop…
+Update on my linux desktop
+
+*   Desktop environment: none (what for?)
+*   Window Manager: Windowmaker
+*   Number of apps in my dock: 12 (I need to pare this down to 8 or so)
+*   Terminal Emulator: Konsole (shift-rightarrow to switch tabs)
+*   Browser: Mozilla 1.1
+*   Editor: GNU Emacs 21
+*   PIM: Evolution (just for syncing with the Palm)
+*   mp3 player: mp3blaster (curses console app)
+*   File manager: konquer…
 
 Read more: https://halcanary.org/vv/2002/09/19/13/
 

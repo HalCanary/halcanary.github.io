@@ -1,5 +1,9 @@
 Blog post:
-A picture says a thousand words.…
+A picture says a thousand words.
+
+[![[After the attacks, Falluja's streets were thick with men and boys and chaos.]](https://halcanary.org/images/2004-03-31-falluja-small.jpg)](https://halcanary.org/images/2004-03-31-falluja.jpg)
+
+([link](http://www.nytimes.com/2004/03/31/international/worldspecial/31CND-IRAQ.html))
 
 Read more: https://halcanary.org/vv/2004/03/31/218/
 

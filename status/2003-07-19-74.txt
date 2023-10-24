@@ -1,5 +1,9 @@
 Blog post:
-Screenshots…
+Screenshots
+
+[![[]](https://halcanary.org/images/thumb-wohc-firebird06.png)](https://halcanary.org/images/wohc-firebird06.png) [![[]](https://halcanary.org/images/thumb-wohc-ie60.png)](https://halcanary.org/images/wohc-ie60.png) [![[]](https://halcanary.org/images/thumb-wohc-netscape47.png)](https://halcanary.org/images/wohc-netscape47.png)
+
+This is what this pages looks likes in various browsers. Notice how NS…
 
 Read more: https://halcanary.org/vv/2003/07/19/74/
 

@@ -1,5 +1,13 @@
 Blog post:
-Wattage…
+Wattage
+
+I got my Kill-A-Watt electricity usage monitor in the mail today. So far I have discovered:
+
+1) When completely powered off, the computer power supply and the television consume 5 watts each.
+
+2) The computer speakers/subwoofer consumes around seven watts if the power is off and around seven watts if the power is on.
+
+3) The 19 inch LCD monitor consumes very little power when off and around 26 wat…
 
 Read more: https://halcanary.org/vv/2007/06/20/692/
 

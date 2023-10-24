@@ -1,5 +1,25 @@
 Blog post:
-the emacs doctor…
+the emacs doctor
+
+I think the emacs doctor needs more work:
+
+`emacs`
+
+`M-x doctor`
+
+**I am the psychotherapist. Please, describe your problems. Each time you are finished talking, type RET twice.**
+
+Hello.
+
+**How do you do? What brings you to see me?**
+
+My friend says the sky is plaid.
+
+**Why do you say your friend says the sky is plaid?**
+
+That's what he said.
+
+**Is it because of your plans that you say that's what he sa…
 
 Read more: https://halcanary.org/vv/2004/04/23/230/
 

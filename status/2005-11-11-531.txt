@@ -1,5 +1,18 @@
 Blog post:
-Recursive Shred And Remove…
+Recursive Shred And Remove
+
+    
+    #!/bin/sh
+    ##  RECURSIVE SHRED AND REMOVE
+    ##  (c) Hal Canary 2005
+    ##  big_geek at halcanary dot org
+    ##  Version:  rm-shred v2005-07-02.
+    ##  This is free software; you can redistribute
+    ##  it and modify it under the terms of version
+    ##  2 of the GNU GPL.
+    for x in "$@" ; do
+      if [ -d "$x" ] ; then
+        if [ "$x" != "." -a "$x" != ".." ] ;…
 
 Read more: https://halcanary.org/vv/2005/11/11/531/
 

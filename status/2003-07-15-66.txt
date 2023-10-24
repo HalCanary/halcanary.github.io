@@ -1,5 +1,7 @@
 Blog post:
-"Hi, my name is Hal..."…
+"Hi, my name is Hal..."
+
+[My Life Story](http://www.robotstories.com/rs187.shtml)
 
 Read more: https://halcanary.org/vv/2003/07/15/66/
 

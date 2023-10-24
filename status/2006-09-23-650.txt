@@ -1,5 +1,13 @@
 Blog post:
-Apolonian Circle Inversion…
+Apolonian Circle Inversion
+
+I was reading some old notes from some math research I did in 2004. I was looking at the Soddy Equation---
+
+    (a + b + c + d)^2 = 2(a^2 + b^2 + c^2 + d^2)
+
+— which relates the curvatures of four kissing circles (see [Descartes' theorem](http://en.wikipedia.org/wiki/Descartes%27_theorem)). Example of four kissing circles.
+
+![circles touching tangentally](https://halcanary.org/images/2…
 
 Read more: https://halcanary.org/vv/2006/09/23/650/
 

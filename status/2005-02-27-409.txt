@@ -1,5 +1,11 @@
 Blog post:
-My favorite email interface…
+My favorite email interface
+
+Because I'm geek, AND I'm lazy.
+
+    
+    echo 'Mom, what recipe do you use for chili?' \
+     | mutt mom -s chili
 
 Read more: https://halcanary.org/vv/2005/02/27/409/
 

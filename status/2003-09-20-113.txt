@@ -1,5 +1,9 @@
 Blog post:
-Xmms…
+Xmms
+
+> "We are well aware that the xmms ui sucks. Some time i hope we can ship media player with a working interface, but for now use Ctrl-D."
+> 
+> — [Alexander Larsson](https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=75157#c)
 
 Read more: https://halcanary.org/vv/2003/09/20/113/
 

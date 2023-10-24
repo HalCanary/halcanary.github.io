@@ -1,5 +1,7 @@
 Blog post:
-EM and EN…
+EM and EN
+
+[The Trouble With EM 'n EN (and Other Shady Characters)](http://alistapart.com/articles/emen/)
 
 Read more: https://halcanary.org/vv/2004/03/21/208/
 

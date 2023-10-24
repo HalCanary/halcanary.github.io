@@ -1,6 +1,16 @@
 Blog post:
 spiral
-Your challenge: make a pretty postscript picture as one tweet…
+Your challenge: make a pretty postscript picture as one tweet
+
+Your challenge: make a pretty postscript picture as one tweet.  "%!\n"  is not necessary
+([tweet](https://twitter.com/halcanary/status/344530170532741120))
+
+    %!
+    300 300 translate newpath 3 0 2 copy moveto 604 { 5 add
+    exch 1.01 mul exch 2 copy cos mul 3 copy pop sin mul
+    lineto } repeat stroke showpage
+
+![program output](https:…
 
 Read more: https://halcanary.org/vv/2013/06/11/1322/
 

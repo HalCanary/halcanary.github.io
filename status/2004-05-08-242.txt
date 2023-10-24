@@ -1,5 +1,15 @@
 Blog post:
-spoof…
+spoof
+
+Some spammer is spoofing my email address into their "From: " address. Evil bastards. This seems like libel of some kind.  
+
+    
+    Return-Path: <>
+    X-Original-To: MY_EMAIL@MY_SERVER
+    Delivered-To: MY_EMAIL@MY_SERVER
+    Received: from smtp8.libero.it (smtp8.libero.it [193.70.192.92])
+            by MY_SERVER (Postfix) with ESMTP id DD543B3B4D
+            for <MY_EMAIL@MY_SERVER>; Sat,  8 May 2004 13:31:05 …
 
 Read more: https://halcanary.org/vv/2004/05/08/242/
 

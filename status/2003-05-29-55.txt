@@ -1,5 +1,14 @@
 Blog post:
-Beautiful one-liner…
+Beautiful one-liner
+
+```sh
+#/bin/sh
+#DTPD#
+# ~/bin/despacify v2003-05
+ls -x1 | \
+  perl -e 'while(<>){chomp;$x=$\_;s/ /\_/g; \
+  system("mv \\"$x\\" \\"$\_\\"") if ($x ne $\_);}'
+```
 
 Read more: https://halcanary.org/vv/2003/05/29/55/
 

@@ -1,6 +1,9 @@
 Blog post:
 VTKViewer
-A small and fast application to quickly view several 3D file formats.  There is both a C++ and a Python version.…
+A small and fast application to quickly view several 3D file formats.  There is both a C++ and a Python version.
+
+[VTKViewer](https://github.com/HalCanary/vtkviewer)  
+![Screenshot of VTKViewer](https://halcanary.org/images/barbell.png)
 
 Read more: https://halcanary.org/vv/2013/04/27/1312/
 

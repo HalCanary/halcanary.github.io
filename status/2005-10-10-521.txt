@@ -1,5 +1,7 @@
 Blog post:
-Pav…
+Pav
+
+[![[Thumb]](https://halcanary.org/photos/thumb/2005-10-08-pavle.jpg)](https://halcanary.org/photos/2005-10-08-pavle.jpg)
 
 Read more: https://halcanary.org/vv/2005/10/10/521/
 

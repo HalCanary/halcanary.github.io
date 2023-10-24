@@ -1,5 +1,13 @@
 Blog post:
-sudo tee…
+sudo tee
+
+I had been doing this:
+
+    sudo su -c 'echo AT+MODE=8 > /dev/ttyACM0'
+
+but I think that this is better becasue it spawns one less shell:
+
+    echo AT+MODE=8 | sudo tee /dev/ttyACM0 > /dev/null
 
 Read more: https://halcanary.org/vv/2008/09/28/735/
 

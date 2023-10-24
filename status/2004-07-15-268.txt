@@ -1,5 +1,7 @@
 Blog post:
-360 panorama of my house.…
+360 panorama of my house.
+
+[![[Thumb]](https://halcanary.org/photos/thumb/2004-07-15-divitt-panorama.jpg)](https://halcanary.org/photos/2004-07-15-divitt-panorama.jpg)
 
 Read more: https://halcanary.org/vv/2004/07/15/268/
 

@@ -1,5 +1,11 @@
 Blog post:
-fun with POSIX bc...…
+fun with POSIX bc...
+
+[POSIX](http://en.wikipedia.org/wiki/POSIX) defines a command-line calculator language/interpretor known as  
+_bc_. [bc](http://en.wikipedia.org/wiki/Bc_programming_language) is convientent but fairly light on the included math  
+functions. I wanted a power function that would take floating point  
+numbers as exponents. bc's basic math library provides the following  
+functions: sqrt(), s…
 
 Read more: https://halcanary.org/vv/2006/06/07/609/
 

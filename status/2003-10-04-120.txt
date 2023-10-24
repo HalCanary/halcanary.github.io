@@ -1,5 +1,21 @@
 Blog post:
-css junk…
+css junk
+
+As a html author, should I use
+
+    <a name="bleg">Text</a>
+
+or
+
+    <a name="bleg"></a>Text?
+
+It only matters if one has defined something in css for "`a:hover`". [The W3C](http://www.w3.org/TR/REC-CSS2/selector.html#x33) doesn't specify that `:hover` should apply to any specific element. So one could define css:
+
+    span.highlight:hover {
+      background-color:#ffffaa;
+      color:#000000; }
+
+and…
 
 Read more: https://halcanary.org/vv/2003/10/04/120/
 

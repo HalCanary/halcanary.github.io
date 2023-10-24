@@ -1,5 +1,9 @@
 Blog post:
-Things are fine, thank you.…
+Things are fine, thank you.
+
+Image below the fold  
+  
+![[questionare]](https://halcanary.org/images/2006-03-07-things-are-fine.jpg)
 
 Read more: https://halcanary.org/vv/2006/03/07/567/
 

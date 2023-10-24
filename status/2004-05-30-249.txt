@@ -1,5 +1,11 @@
 Blog post:
-Xlib:  extension "GLX" missing…
+Xlib:  extension "GLX" missing
+
+Odd issue in linux/x11. I used to have the evil proprietary Nvidia drivers loaded. I gave up on them recently, but once I installed a new kernel without them, glx (openGL for x) stopped working. I got the error:
+
+`Xlib: extension "GLX" missing on display ":0.0"`
+
+It should have worked, as the file `/usr/X11R6/lib/modules/extensions/libglx.a` should have provided this funtionalit…
 
 Read more: https://halcanary.org/vv/2004/05/30/249/
 

@@ -1,5 +1,13 @@
 Blog post:
-Redesign of the Mexican flag…
+Redesign of the Mexican flag
+
+Here's my candidate for a redesign of the Mexican flag.
+
+Old:  
+[![flag](https://halcanary.org/images/thumb/Flag_of_Mexico.png)](https://halcanary.org/images/Flag_of_Mexico.png)
+
+New:  
+[![flag](https://halcanary.org/images/thumb/Flag_of_Mexico_Redesign.png)](https://halcanary.org/images/Flag_of_Mexico_Redesign.png)
 
 Read more: https://halcanary.org/vv/2010/08/28/1026/
 

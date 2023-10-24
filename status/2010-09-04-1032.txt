@@ -1,5 +1,18 @@
 Blog post:
-Update comparison…
+Update comparison
+
+No comparison. APT (the Advanced Packaging Tool) beats Windows Update by a million to one. I had hoped that Windows Seven would improve things, but no such luck.
+
+APT: You run this script, once, in the background and it does everything.
+
+    #!/bin/sh
+    sudo apt-get update
+    sudo apt-get -y dist-upgrade
+    sudo apt-get clean
+
+Windows Update: You run this program—
+
+    %windir%\system…
 
 Read more: https://halcanary.org/vv/2010/09/04/1032/
 

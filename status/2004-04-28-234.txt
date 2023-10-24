@@ -1,5 +1,16 @@
 Blog post:
-The weather and my notebook.…
+The weather and my notebook.
+
+The weather is so nice that I'd like to go work outside, but alas, my [notebook](https://halcanary.org/p/vaio/)'s screen was cracked last fall. I think I might look into finding a replacement screen soon, so that I can go work outside.
+
+Additionally, I'd like to try the 2.6 kernel on that thing. Mabe 2.6 works better.
+
+* * *
+
+**UPDATE 2004-05-01**
+
+    
+    From: "Sony DAPC" <XXXX…
 
 Read more: https://halcanary.org/vv/2004/04/28/234/
 

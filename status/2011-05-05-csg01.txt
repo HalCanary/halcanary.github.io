@@ -1,4 +1,9 @@
 Blog post:
-Network Opacity…
+Network Opacity
+
+Just becasue Samba and AFS allow you to open multi-gigabyte data files
+as if they were local, you still should *not*.  Even if you have a
+nice 100 Mbit/sec direct connection.  Unless the software in question
+knows to expect these sort of shenanigans.
 
 Read more: https://halcanary.org/vv/2011/05/05/csg01/

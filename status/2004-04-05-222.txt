@@ -1,5 +1,17 @@
 Blog post:
-emacs clipboard cut and paste, done right!…
+emacs clipboard cut and paste, done right!
+
+    
+    ;; ~/.emacs ;;
+    (global-unset-key [(control v)]) ;;use page-down
+    (global-set-key   [(control v)]
+        'clipboard-yank)
+    (global-unset-key [(control shift v)]) ;;use page-up
+    (global-set-key   [(control shift v)]
+        'clipboard-yank)
+    (global-unset-key [(control shift c)])
+    (global-set-key   [(control shift c)]
+        'clipboard-kil…
 
 Read more: https://halcanary.org/vv/2004/04/05/222/
 

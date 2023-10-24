@@ -1,4 +1,26 @@
 Blog post:
-an emacs macro…
+an emacs macro
+
+```Emacs Lisp
+(defun guard ()
+  "http://en.wikipedia.org/wiki/Include_guard"
+  (interactive)
+  (if (buffer-file-name)
+      (let ((macro-name
+	     (concat
+	      (upcase
+	       (file-name-sans-extension
+		(file-name-nondirectory
+		 (buffer-file-name))))
+	      "_H")))
+	(save-excursion
+	  (goto-char (point-min))
+	  (insert
+	   (concat
+	    "#ifndef "
+	    macro-name
+	    "\n#define "
+	    macro-name
+	    "\n")…
 
 Read more: https://halcanary.org/vv/2012/09/25/csg32/

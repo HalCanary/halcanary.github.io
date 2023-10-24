@@ -1,5 +1,16 @@
 Blog post:
-netbook network mp3 player…
+netbook network mp3 player
+
+I wanted to access my desktop's music library from my living room and play it through the amplifier and speakers there. So I grabbed my netbook, and after fumbling around with NFS for too long, I just tried:
+
+    yum install sshfs
+
+(It's a OLPC XO-1, so it's Redhat-based.) And then wrote a little script:
+
+    #!/bin/sh
+    ## ~/bin/mount-music
+    mkdir -p "${HOME}/music"
+ …
 
 Read more: https://halcanary.org/vv/2009/09/16/817/
 

@@ -1,5 +1,11 @@
 Blog post:
-Nimrod…
+Nimrod
+
+The folks just sent me their old P200 laptop. (It barely qualifies as a notebook, as its dimentions are 8.5 x 11 x 2.2 inches.) Thanks, guys.
+
+It's a Compaq Armada 1571DM. I named him _nimrod_.
+
+He's a behemoth. CD **and** floppy drive. Integrated power supply. 12-inch 800x600 screen. With all that, there is just one usb port and no ethernet jack. And you can tell the previous owner (Dad) showed him so…
 
 Read more: https://halcanary.org/vv/2004/09/10/319/
 

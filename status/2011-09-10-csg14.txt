@@ -1,4 +1,11 @@
 Blog post:
-ssh hostname alias…
+ssh hostname alias
+
+One can make a hostname alias for SSH and SCP by adding to the the SSH config file:
+
+    ##  ~/.ssh/config
+    Host cs
+        HostName = login.cs.unc.edu
+        User = hal
 
 Read more: https://halcanary.org/vv/2011/09/10/csg14/

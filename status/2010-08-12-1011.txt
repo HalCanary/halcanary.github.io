@@ -1,5 +1,7 @@
 Blog post:
-published…
+published
+
+I am published in [_The Electronic Journal of Combinatorics_ 17(1), R105](http://www.combinatorics.org/Volume_17/Abstracts/v17i1r105.html).
 
 Read more: https://halcanary.org/vv/2010/08/12/1011/
 

@@ -1,5 +1,19 @@
 Blog post:
-genpasswd.py…
+genpasswd.py
+
+    
+    #!/usr/bin/env python
+    # ~/bin/genpasswd.py
+    #   Generate a random password with about
+    #   142 bits of randomness, making use of
+    #   /dev/urandom.
+    # Note:
+    #   Most online services have somewhat
+    #   arbitrary rules about what characters
+    #   can be included in a password. So we
+    #   limit ourselves to A-Za-z0-9.
+    # Copyright 2007-2008 Hal Canary
+    # De…
 
 Read more: https://halcanary.org/vv/2008/01/27/716/
 

@@ -1,6 +1,12 @@
 Blog post:
 EMRATIO(25-54)
-I use the current Civilian Employment-Population Ratio in the US as a measure of how productive our economy is.…
+I use the current Civilian Employment-Population Ratio in the US as a measure of how productive our economy is.
+
+Some progress, but not enough.
+
+<a href="https://fred.stlouisfed.org/graph/?g=cjIW"><img
+src="https://fred.stlouisfed.org/graph/fredgraph.png?g=cjIW"
+alt="[graph]"></a>
 
 Read more: https://halcanary.org/vv/2017/01/09/3006/
 

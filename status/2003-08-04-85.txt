@@ -1,5 +1,8 @@
 Blog post:
-Standards are sexy!…
+Standards are sexy!
+
+*   [Date/Time Standards](http://www.iso.ch/iso/en/prods-services/popstds/datesandtime.html)
+*   [Paper Standards](http://www.cl.cam.ac.uk/~mgk25/iso-paper.html)
 
 Read more: https://halcanary.org/vv/2003/08/04/85/
 

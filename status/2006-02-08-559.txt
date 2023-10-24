@@ -1,5 +1,15 @@
 Blog post:
-track-numbers/id3tag…
+track-numbers/id3tag
+
+    #!/bin/sh
+    ## track-numbers.sh
+    ## (C) 2006 Hal Canary
+    ## DTPD
+    for NUMBER in $(seq -w 1 99); do
+        if (/bin/ls *${NUMBER}* &> /dev/null); then
+            id3tag -t ${NUMBER} *${NUMBER}*
+        fi
+    done
 
 Read more: https://halcanary.org/vv/2006/02/08/559/
 

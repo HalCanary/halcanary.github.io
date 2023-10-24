@@ -1,4 +1,25 @@
 Blog post:
-Java Makefiles…
+Java Makefiles
+
+**Java Makefiles**
+
+Here's a basic makefile for compiling Java programs. On most systems, you will only need to edit the first three lines.
+
+```Makefile
+classes = Prog.class AnotherClass.class
+entrypointclass = Prog
+jarfile = program.jar
+
+JAVAC = javac
+JAVA = java
+JAR = jar
+RM = rm -f
+JCFLAGS = -Xlint -g 
+JFLAGS = -enableassertions
+
+.PHONY : clean all run
+all: $(jarfile)
+run: $(jarfile)
+	$(JAVA) $(JFLAGS) -jar …
 
 Read more: https://halcanary.org/vv/2011/12/17/csg21/

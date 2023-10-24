@@ -1,5 +1,22 @@
 Blog post:
-maple…
+maple
+
+I'm starting to think in maple these days. Cool
+
+    
+    #begin Maple Code
+    interface(prettyprint=false):
+    f := (x) -> a*x^2 + b*x + c:
+    df := D(f):
+    x := proc(n)
+      if n=0 then x0
+      else simplify( x(n-1) - f(x(n-1)) / df(x(n-1)) )
+      fi
+    end:
+    with(combinat, fibonacci):
+    Fib := (n) -> fibonacci(n+1):
+    P1 := (n,x) -> add( binomial(2^n,k)
+      * (Fib(2^n-k-2)) * x^k,k=…
 
 Read more: https://halcanary.org/vv/2004/03/09/188/
 

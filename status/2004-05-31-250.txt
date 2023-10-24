@@ -1,5 +1,17 @@
 Blog post:
-proprietary-sw check…
+proprietary-sw check
+
+I just audited my system at home for installed non-free software. Here's the list:
+
+*   IBM JDK 1.3.0
+*   Sun JDK 1.4.2
+*   Maple 9
+*   Adobe Acrobat Reader 5.0
+*   RealPlayer 10 v0.3.0.120
+*   mp3 plugins for xmms, rhythembox; as well as mpg123  
+    (In the sense that these are encumbered by patents)
+*   Evil codecs for mplayer/xine.
+*   Quake III
 
 Read more: https://halcanary.org/vv/2004/05/31/250/
 

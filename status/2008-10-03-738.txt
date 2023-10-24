@@ -1,5 +1,14 @@
 Blog post:
-(defun remove-excess-whitespace...…
+(defun remove-excess-whitespace...
+
+I always meant to go ahead and fix this function so it did what I want. Now it uses proper regex. See [the old version, too](https://halcanary.org/vv/2004/02/18/176/).
+
+    ;; ~/.emacs ;;
+    (defun remove-excess-whitespace () (interactive)
+      (auto-mega-replace  "\\( \\|\t\\)$" ""))
+    (defun auto-mega-replace (arg1 arg2)
+      (save-excursion
+        (beginning-of-buff…
 
 Read more: https://halcanary.org/vv/2008/10/03/738/
 

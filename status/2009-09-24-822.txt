@@ -1,5 +1,16 @@
 Blog post:
-MakeBookmarksFile…
+MakeBookmarksFile
+
+    #!/usr/bin/env python
+    # MakeBookmarksFile - convert a text file containing
+    # URLs into a HTMl file with clickable links.
+    #
+    # Copyright 2008 Hal Canary
+    #
+    # Permission is hereby granted, free of charge, to any
+    # person obtaining a copy of this software and
+    # associated documentation files (the 'Software'), to
+    # deal in the Software without restriction, i…
 
 Read more: https://halcanary.org/vv/2009/09/24/822/
 

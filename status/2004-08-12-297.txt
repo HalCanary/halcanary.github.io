@@ -1,5 +1,9 @@
 Blog post:
-Touch Typing…
+Touch Typing
+
+![[keyboard image]](https://halcanary.org/images/keyboard-touch-type.jpg)  
+This image shows a keybord with keys color-coded as to what finger you are supposed to use to hit each key. My issue: my D-finger doesn't want to hit the C-key without moving my whole hand.  
+Why does the layout of the keys and the geometry of my hand conflict with how they teach you top type?
 
 Read more: https://halcanary.org/vv/2004/08/12/297/
 

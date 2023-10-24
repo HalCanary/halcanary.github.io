@@ -1,5 +1,13 @@
 Blog post:
-Doom 3…
+Doom 3
+
+[![[]](https://halcanary.org/images/thumb/2004-08-04_shot00001.jpg)](https://halcanary.org/p/doom)
+
+I picked up Doom3 yesterday.
+
+**technical**. It plays well at 1024x768 on my Radeon 9200 (with the proper drivers). This makes me happy. I need 5.1 speakers for my computer to get the full effect, but the sound works well in stereo.
+
+**linux**. Linux binaries have not yet been released. In the mean time,…
 
 Read more: https://halcanary.org/vv/2004/08/05/283/
 

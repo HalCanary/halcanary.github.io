@@ -1,5 +1,11 @@
 Blog post:
-ssh filesharing.…
+ssh filesharing.
+
+R. was looking for an easy way to share files among the computers in his house, most of which ran some version of Linux. SSH offers one solution to this question. Pro: it is available on all the Linux computers, is integrated with Gnome, allows shell as well as file access, and is secure over a wireless network. Cons: Poor support in Windows.
+
+To set up:
+
+1) Install the OpenSSH Dæmon. In Ubu…
 
 Read more: https://halcanary.org/vv/2009/05/24/767/
 

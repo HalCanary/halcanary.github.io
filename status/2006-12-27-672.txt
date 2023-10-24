@@ -1,5 +1,25 @@
 Blog post:
-dealing with lots of arguments in bash…
+dealing with lots of arguments in bash
+
+    #!/bin/sh
+    #DTPD#
+    echo first argument is '"'${1}'"'
+    for argc in `seq 2 $#`; do
+            eval arg=\${$argc}
+            echo ${argc}th arg is $arg
+    done
+
+For example:
+
+    #!/bin/sh
+    # prepend-something.sh
+    #DTPD#
+    if [ "$#" -lt 2 ] ; then
+            echo "useage:  $0 PREFEX FILE[S]"
+            exit 1
+    fi
+    PREFEX=${1}
+    for argc in …
 
 Read more: https://halcanary.org/vv/2006/12/27/672/
 

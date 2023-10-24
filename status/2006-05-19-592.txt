@@ -1,5 +1,15 @@
 Blog post:
-bah.  evil stupid browser detection.…
+bah.  evil stupid browser detection.
+
+Bah.
+
+![[]](https://halcanary.org/images/2006-05-19-cnn1.png)  
+  
+![[]](https://halcanary.org/images/2006-05-19-cnn2.png)
+
+GIYF. Going [here](http://www.cnn.com/video/player/player.html) skips the player detection. Then one can simply strip the URL from the Page Info dialog, the way God intended.
+
+**More background:** I use Fedora Linux as my main OS on my desktop. I have…
 
 Read more: https://halcanary.org/vv/2006/05/19/592/
 

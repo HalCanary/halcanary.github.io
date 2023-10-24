@@ -1,5 +1,15 @@
 Blog post:
-Backup Strategy…
+Backup Strategy
+
+I've got a **Backup Strategy** for my home computers!
+
+1\. I only care about my desktop (lensman), my email server (ups), and my web server (halcanary.org). My laptop (hiro) and my mediapc (dalek) contain no files that need backup.
+
+2\. Backup ups to lensman by way of rsync-over-ssh. Backup halcanary.org by way of wget-over-ftp.
+
+3\. I've segregated my files into directories:
+
+*   **/home/hal*…
 
 Read more: https://halcanary.org/vv/2004/08/11/293/
 

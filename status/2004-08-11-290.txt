@@ -1,5 +1,20 @@
 Blog post:
-Tweak MT's RSS…
+Tweak MT's RSS
+
+To make Movabletype's RSS-feed work the way mine does, replace
+
+    
+    <description>
+    <$MTEntryExcerpt remove_html="1" encode_xml="1" $>
+    </description>
+    
+
+with
+
+    
+    <description>
+    <$MTEntryBody encode_xml="1" $>
+    </description>
 
 Read more: https://halcanary.org/vv/2004/08/11/290/
 

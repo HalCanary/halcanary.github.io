@@ -1,5 +1,7 @@
 Blog post:
-2005 Nickels…
+2005 Nickels
+
+[![[2005 Nickels]](https://halcanary.org/images/2005Nickel.jpg)](http://www.usmint.gov/pressroom/index.cfm?action=Photo#2004NickelSeries)
 
 Read more: https://halcanary.org/vv/2004/09/16/322/
 

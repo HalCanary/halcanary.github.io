@@ -1,5 +1,7 @@
 Blog post:
-Very cold for August…
+Very cold for August
+
+![53degF!](https://halcanary.org/images/2004-08-11-weather.png)
 
 Read more: https://halcanary.org/vv/2004/08/11/291/
 

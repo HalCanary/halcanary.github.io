@@ -1,5 +1,14 @@
 Blog post:
-because I hate navigating info pages…
+because I hate navigating info pages
+
+    #!/bin/sh
+    #~/bin/infoless
+    #DTPD#
+    if [ $# -ne 1 ] ; then
+      echo "which page?"
+      exit 1
+    fi
+    exec info $1 2> /dev/null | less
 
 Read more: https://halcanary.org/vv/2007/05/10/687/
 

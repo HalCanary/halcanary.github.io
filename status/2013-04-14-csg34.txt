@@ -1,4 +1,6 @@
 Blog post:
-Pointer class…
+Pointer class
+
+Suppose you are writing a C++ program and are linking to a C library. Many of the library calls return a pointer to a heap-allocated structure. You are expected to free that structure using a specialized free function. For example, the openssl library has a BIGNUM type that is typically created using BN\_new() and deleted using BN\_free(); The following `Pointer< BIGNUM, BN_clear_free >` class will take ownershi…
 
 Read more: https://halcanary.org/vv/2013/04/14/csg34/

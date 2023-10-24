@@ -5,3 +5,10 @@ ALL RIGHTS RESERVED.
 make post
 make commit-and-push
 ```
+
+Mastodon integration:
+
+```
+make ~/go/bin/poststatus
+~/go/bin/poststatus < status/YYYY-mm-dd-NNNN.txt
+```

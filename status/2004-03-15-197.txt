@@ -1,5 +1,7 @@
 Blog post:
-TeXShop…
+TeXShop
+
+Someone should port [TeXShop](http://www.uoregon.edu/~koch/texshop/texshop.html) to linux.
 
 Read more: https://halcanary.org/vv/2004/03/15/197/
 

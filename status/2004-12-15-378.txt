@@ -1,5 +1,9 @@
 Blog post:
-usb evil…
+usb evil
+
+If you plug a usb device that's not working just right into a hub, or vice-versa (a working device into a misconfigured hub), you will destroy something every time. I just lost my usb keyboard/hub that way. A few years ago, I lost a usb joystick.
+
+I pulled out my old AT keyboard. Clickety Clack!
 
 Read more: https://halcanary.org/vv/2004/12/15/378/
 

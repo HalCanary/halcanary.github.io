@@ -1,5 +1,25 @@
 Blog post:
-gnuplot question…
+gnuplot question
+
+Here's your basic LaTeX document:
+
+    
+    %% FILE: basic.tex
+    \documentclass[letterpaper,12pt]{article}
+    \begin{document}
+    \input{graph}
+    \end{document}
+    
+
+The file graph.tex is generated using Gnuplot like this:
+
+    
+    #!/usr/bin/gnuplot
+    ## FILE: graph.gnuplot
+    set xrange [-3:3]
+    set yrange [0:.42]
+    set ytics nomirror autofreq 0, .1
+    set terminal latex si…
 
 Read more: https://halcanary.org/vv/2010/07/16/1001/
 

@@ -1,5 +1,9 @@
 Blog post:
-Lost Textbook…
+Lost Textbook
+
+I loaned someone my copy of [_Data Structures & Problem Solving Using Java_](https://halcanary.org/isbn/?0201549913) by Mark Weiss a while back. I forgot who, and I want the book back.
+
+**UPDATE:** It would appear that Chris Wilson has it.
 
 Read more: https://halcanary.org/vv/2006/02/15/562/
 

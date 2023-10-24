@@ -1,4 +1,17 @@
 Blog post:
-Collapse paragraphs…
+Collapse paragraphs
+
+```Python
+#!/usr/bin/env python
+# ignores witespace
+# collapses paragraphs
+import sys
+for line in sys.stdin:
+    line = line.strip()
+    if len(line) == 0:
+        sys.stdout.write('\n\n')
+    else:
+        sys.stdout.write(line+' ')
+```
 
 Read more: https://halcanary.org/vv/2012/04/03/csg27/

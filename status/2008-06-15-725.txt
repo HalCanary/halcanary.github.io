@@ -1,5 +1,11 @@
 Blog post:
-9 pounds of bacon…
+9 pounds of bacon
+
+"The Deliverator's car has enough potential energy packed into its batteries to fire a pound of bacon into the Asteroid Belt."
+
+I did the calculation just now. My 20 gallon gas tank has enough potential energy to put 9 pounds of bacon into the Asteroid Belt.
+
+[131 megajoules \* 20 / G / ( (mass of sun / 414,703,838 km) - (mass of sun/ 149,597,887.5 km) - (mass of earth / radius of earth)) in…
 
 Read more: https://halcanary.org/vv/2008/06/15/725/
 

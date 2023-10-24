@@ -1,5 +1,13 @@
 Blog post:
-Phoenix / Hinking…
+Phoenix / Hinking
+
+To users of the phoenix browser: I found this page on [Phoenix Help](http://texturizer.net/phoenix/).
+
+If you use phoenix under linux, and you don't have anti-aliased fonts turned on, try [this](http://phoenix.ragweed.net/download/). I just installed it. It rocks.
+
+No war coverage today. They had bloody golf on the tube. Golf! In this time of crisis.
+
+I hiked around the arboretum for a while today. It wa…
 
 Read more: https://halcanary.org/vv/2003/03/22/44/
 

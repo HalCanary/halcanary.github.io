@@ -1,5 +1,9 @@
 Blog post:
-Excessively long URLs.…
+Excessively long URLs.
+
+I hate [unnecessarily long URLs](http://www.w3.org/Provider/Style/URI). One of the things I always try to figure out how to leave out is the file name extension. As Tim Berners-Lee says:
+
+> "cgi", even ".html" is something which will change. You may not be using HTML for that page in 20 years time, but you might want today's links to it to still be valid. The canonical way of making lin…
 
 Read more: https://halcanary.org/vv/2007/06/28/696/
 

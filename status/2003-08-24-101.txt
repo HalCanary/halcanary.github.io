@@ -1,5 +1,13 @@
 Blog post:
-More Art…
+More Art
+
+[![modern art](https://halcanary.org/art/thumb/2003-08-24-art-2.jpg)](https://halcanary.org/art/2003-08-24-art-2.jpg)
+
+Here's the final version of the modern piece I started last night.
+
+[![landscape painting](https://halcanary.org/art/thumb/2003-08-24-art-3.jpg)](https://halcanary.org/art/2003-08-24-art-3.jpg)
+
+And on the right is a work in progress. All I can say is that it is less ugly now than it was last nig…
 
 Read more: https://halcanary.org/vv/2003/08/24/101/
 

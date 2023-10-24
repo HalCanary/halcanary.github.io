@@ -1,5 +1,19 @@
 Blog post:
-genpasswd…
+genpasswd
+
+    #!/bin/sh
+    # genpasswd.sh
+    #   Generate a random password with almost
+    #   144 bits of randomness, making use of
+    #   /dev/random.
+    # Note:
+    #   Most online services have somewhat
+    #   arbitrary rules about what characters
+    #   can be included in a password. So we
+    #   limit ourselves to A-Za-z0-9.
+    # Copyright 2007 Hal Canary
+    # Dedicated to the Public Domain.
+ …
 
 Read more: https://halcanary.org/vv/2007/04/05/682/
 

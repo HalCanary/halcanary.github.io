@@ -1,6 +1,8 @@
 Blog post:
 A flag for the US Democratic Party
-a proposal…
+a proposal
+
+![Barry of thirteen gules and argent, a jackass kicking azure](https://halcanary.org/images/dem.svg)
 
 Read more: https://halcanary.org/vv/2020/08/25/3020/
 

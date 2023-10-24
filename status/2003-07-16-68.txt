@@ -1,5 +1,9 @@
 Blog post:
-Randomness…
+Randomness
+
+[Emacs will not have Xft support anytime soon](http://mail.gnu.org/archive/html/emacs-devel/2002-10/msg00100.html), unless somebody codes it.
+
+I visited the [CSS Zen Garden](http://www.csszengarden.com/), and it inspired the ...
 
 Read more: https://halcanary.org/vv/2003/07/16/68/
 

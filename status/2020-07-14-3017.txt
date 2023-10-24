@@ -1,6 +1,10 @@
 Blog post:
 Standard Space Habitats
-A refinement of O'Neill's colonies.…
+A refinement of O'Neill's colonies.
+
+<a href="https://settlement.arc.nasa.gov/70sArtHiRes/70sArt/art.html">![[Interior view, O'Neill cylinder, looking out through large windows. NASA ID# AC75-1086]](https://halcanary.org/images/Spacecolony1.jpg)</a>
+
+Start with the idea of an [O'Neill cylinder](https://en.wikipedia.org/wiki/O%27Neill_cylinder): a spinning cylindrical space habitat 8 km in …
 
 Read more: https://halcanary.org/vv/2020/07/14/3017/
 

@@ -1,5 +1,26 @@
 Blog post:
-/bin/coin…
+/bin/coin
+
+    #!/usr/bin/env python
+    # ~/bin/coin
+    #DTPD#
+    if (ord(open('/dev/random').read(1)) % 2):
+     print "heads"
+    else:
+     print "tails"
+
+But why throw away seven bits of entropy?
+
+    #!/usr/bin/env python
+    #DTPD#
+    n=ord(open('/dev/random').read(1))
+    for i in xrange(8):
+     if  (n % 2):
+      print "heads",
+     else:
+      print "tails",
+     n >>= 1
+    print
 
 Read more: https://halcanary.org/vv/2011/04/10/1180/
 

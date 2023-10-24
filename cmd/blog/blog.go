@@ -15,6 +15,7 @@ import (
 	"strings"
 	"sync"
 	"time"
+	"unicode/utf8"
 
 	"github.com/HalCanary/facility/dom"
 	"github.com/HalCanary/halcanary.github.io/check"
@@ -96,25 +97,52 @@ func status(path string, blog Blog, p logpost.Post) {
 	b := filebuf.FileBuf{Path: path}
 	b.WriteString("Blog post:\n")
 	b.WriteString(p.Title)
+	b.WriteString("\n")
 	if p.Summary != "" {
-		b.WriteString("\n")
 		b.WriteString(p.Summary)
-	}
-	b.WriteString("…\n\nRead more: ")
-	b.WriteString(postUrl(blog, p))
-	if len(p.Categories) > 0 {
-		b.WriteString("\n\n#")
-		b.WriteString(p.Categories[0])
-		for _, c := range p.Categories[1:] {
-			b.WriteString(" | #")
-			b.WriteString(c)
-		}
+		b.WriteString("\n")
 	}
 	b.WriteString("\n")
+	var bottom bytes.Buffer
+	bottom.WriteString("\n\nRead more: ")
+	bottom.WriteString(postUrl(blog, p))
+	if len(p.Categories) > 0 {
+		bottom.WriteString("\n\n#")
+		bottom.WriteString(p.Categories[0])
+		for _, c := range p.Categories[1:] {
+			bottom.WriteString(" | #")
+			bottom.WriteString(c)
+		}
+	}
+	bottom.WriteString("\n")
+	const maximumStatusLength = 500
+	remaining := maximumStatusLength - b.Len() - bottom.Len()
+	if len(p.Markdown) < remaining {
+		b.Write(p.Markdown)
+	} else {
+		const ellipsis = "…"
+		b.Write(trimUtf8(p.Markdown, remaining-len(ellipsis)))
+		b.WriteString(ellipsis)
+	}
+	b.Write(bottom.Bytes())
 	check.Check(b.Close())
 	if b.Changed() {
 		changedFilesChan <- b.Path
 	}
+}
+
+func trimUtf8(p []byte, maxLength int) []byte {
+	if len(p) > maxLength {
+		p = p[:maxLength]
+		for len(p) > 0 {
+			r, _ := utf8.DecodeLastRune(p)
+			if r != utf8.RuneError {
+				break
+			}
+			p = p[:len(p)-1]
+		}
+	}
+	return p
 }
 
 func main() {

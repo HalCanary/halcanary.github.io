@@ -1,5 +1,9 @@
 Blog post:
-have a name…
+have a name
+
+> “The children of the Internet finally have a name for their decentralized, networked, bottom-up philosophy. It's called democracy.”
+> 
+> — Adam Rogers, [_Wired_](http://wired.com/), 2004-04
 
 Read more: https://halcanary.org/vv/2004/03/24/209/
 

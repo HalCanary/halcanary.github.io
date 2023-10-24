@@ -1,5 +1,18 @@
 Blog post:
-guitar chord charts…
+guitar chord charts
+
+I'm fooling around with a guitar and wanted to take notes on a blank page of guitar chord charts, so I post-scripted this one: [pdf file](https://halcanary.org/pub/tablature.pdf).
+
+    %!
+    %% Written 2009 Hal Canary
+    %% Dedicated to the Public Domain
+    /Times-Roman findfont
+    14 scalefont setfont
+    /inch {72 mul} def
+    /tabu {
+      newpath
+      moveto
+      90 0 rlineto   0 115 rlinet…
 
 Read more: https://halcanary.org/vv/2009/08/12/780/
 

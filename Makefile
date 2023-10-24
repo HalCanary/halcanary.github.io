@@ -27,4 +27,10 @@ update-deps:
 	go get -u ./...
 	git add go.mod go.sum
 
-.PHONY: theblog all staticsite listcats commit-and-push post clean update-deps
+~/go/bin/poststatus: go.mod
+	@mkdir $(dir $@)
+	GOBIN=$(dir $@) go install github.com/HalCanary/mastodoner/cmd/poststatus
+
+poststatus: ~/go/bin/poststatus
+
+.PHONY: all clean commit-and-push listcats post poststatus staticsite theblog update-deps

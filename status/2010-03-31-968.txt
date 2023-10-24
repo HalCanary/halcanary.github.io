@@ -1,4 +1,24 @@
 Blog post:
-bourne shell absolute path…
+bourne shell absolute path
+
+    #!/bin/sh
+    abspath () {
+        D7636=`/usr/bin/dirname "$1"`;
+        D7636=`(cd "$D7636"; pwd -P)`;
+        B7636=`/usr/bin/basename "$1"`;
+        echo "${D7636}/${B7636}";
+    }
+    PATH=$1
+    echo "path = \"${PATH}\""
+    ABSPATH=`abspath "$PATH"`
+    echo "absolute path = \"${ABSPATH}\""
+
+* * *
+
+UPDATE: I just realised that `readlink -f "$FILE"` will do the trick.
+
+* * *
+
+UPDATE 2: Even …
 
 Read more: https://halcanary.org/vv/2010/03/31/968/

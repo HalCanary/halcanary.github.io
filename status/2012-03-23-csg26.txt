@@ -1,4 +1,30 @@
 Blog post:
-generate image files…
+generate image files
+
+```Python
+#!/usr/bin/python
+
+import Image
+import numpy
+
+X = 1024
+Y = 768
+filename = '/tmp/x.png'
+
+ima = numpy.zeros((Y,X,4), dtype=numpy.uint8)
+ima[:,:,3] = 255 # make opaque
+Image.fromarray(ima,mode='RGBA').save(filename)
+```
+
+For example:
+
+```Python
+#!/usr/bin/env python
+import Image
+import numpy
+N, K = (16,16), (256, 256)
+fn = 'random_pixels.png'
+im = numpy.random.random_integers(
+    0,255,(N[0],N[1],…
 
 Read more: https://halcanary.org/vv/2012/03/23/csg26/

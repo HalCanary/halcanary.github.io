@@ -1,5 +1,12 @@
 Blog post:
-Email2…
+Email2
+
+Here's a proposal for new e-mail protocols to completely replace existing SMTP/MIME/IMAP/POP protocols. There would be a phase-in period, lasting about 5-10 years, during which two systems would exist in paralel and servers would fall back to old protocols where the new ones aren't availible yet.
+
+The name of the new protocols would be Email2. It would contain the following protocols:
+
+    
+  - Email2 …
 
 Read more: https://halcanary.org/vv/2008/01/25/715/
 

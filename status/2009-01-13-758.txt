@@ -1,5 +1,8 @@
 Blog post:
-photos from the weekend…
+photos from the weekend
+
+![[]](https://halcanary.org/photos/2009-01-11_112610_Snailshell.jpg)  
+![[]](https://halcanary.org/photos/2009-01-11_111725_Pine_Flatwoods.jpg)
 
 Read more: https://halcanary.org/vv/2009/01/13/758/
 

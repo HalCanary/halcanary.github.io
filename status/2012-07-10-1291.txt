@@ -1,5 +1,7 @@
 Blog post:
-EMRATIO…
+EMRATIO
+
+[![[emratio]](https://halcanary.org/images/a8aac74aed92c78d6be5a1a6d166c3a15a184a7a.png)](http://research.stlouisfed.org/fred2/graph/?g=8Ch)
 
 Read more: https://halcanary.org/vv/2012/07/10/1291/
 

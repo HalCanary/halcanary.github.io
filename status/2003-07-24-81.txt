@@ -1,5 +1,22 @@
 Blog post:
-Standard Keybinding for Emacs…
+Standard Keybinding for Emacs
+
+```Emacs Lisp
+;; $HOME/.emacs ;;
+(global-set-key
+   [(control s)]
+   'save-buffer)
+(global-set-key
+   [(control f)]
+   'isearch-forward)
+ (define-key isearch-mode-map
+   [(control f)]
+   'isearch-repeat-forward)
+```
+
+Code from [This message](http://mail.gnu.org/archive/html/help-gnu-emacs/2003-02/msg00652.html)
+
+I've been working on this for a while now. I'd like to produce a .ema…
 
 Read more: https://halcanary.org/vv/2003/07/24/81/
 

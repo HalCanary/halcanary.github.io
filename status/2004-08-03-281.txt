@@ -1,5 +1,26 @@
 Blog post:
-tar c | ssh "tar x"…
+tar c | ssh "tar x"
+
+    
+    tar c directory/ | ssh lensman "tar x"
+    
+
+Unix is beautiful.
+
+(Yes, I know about scp and rsync.)
+
+**UPDATE 2004-08-06:** Other options:
+
+This is the most ugly way of doing it. It involves wasting disc space.
+
+    
+    $ tar czf directory.tgz directory
+    $ scp directory.tgz lensman:
+    $ ssh lensman
+    $ tar xzf directory.tgz
+    
+
+Until I did this research, I didn't know yo…
 
 Read more: https://halcanary.org/vv/2004/08/03/281/
 

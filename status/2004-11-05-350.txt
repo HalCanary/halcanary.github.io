@@ -1,5 +1,12 @@
 Blog post:
-MS Access.  Jeez.…
+MS Access.  Jeez.
+
+> Let's explain what these "central vote-counting" machines are. Basically, it's a machine running Microsoft Windows with a Microsoft Access database attached. (Note to the computer-savvy among you: Yes, I shit you not. MS Access. Jeez.)
+> 
+> ([source](http://www.dailykos.com/story/2004/11/4/224812/643))
+
+  
+From [Franklin County Ohio Unofficial Abstract of Votes General 2004](http://www.franklincountyo…
 
 Read more: https://halcanary.org/vv/2004/11/05/350/
 

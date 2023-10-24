@@ -1,5 +1,25 @@
 Blog post:
-gui's suck…
+gui's suck
+
+xmms was giving me some crap the other day, so I gave up on it, again.
+
+    
+    #!/bin/sh
+    ## $HOME/bin/playmusic ##
+    
+    FILE="$HOME/music-file.txt"
+    M="$HOME/Music"
+    
+    echo -n "" > $FILE
+    cd $M
+    for x in */*.mp3 ; do
+        echo $M/$x >> $FILE
+    done
+    for x in */*/*.mp3 ; do
+        echo $M/$x >> $FILE
+    done
+    for x in */*/*/*.mp3 ; do
+        echo $M/$x >> $FILE…
 
 Read more: https://halcanary.org/vv/2004/03/06/185/
 

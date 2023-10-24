@@ -1,5 +1,9 @@
 Blog post:
-duh...add-hook…
+duh...add-hook
+
+    
+    ;; from ~/.emacs
+    (add-hook 'php-mode-hook 'html-mode)
 
 Read more: https://halcanary.org/vv/2004/05/08/244/
 

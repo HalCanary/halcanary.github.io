@@ -1,4 +1,12 @@
 Blog post:
-Restart X11 under Ubuntu…
+Restart X11 under Ubuntu
+
+```sh
+#!/bin/sh
+# Restart X11 under Ubuntu. #
+#DTPD#
+test `id -u` = "0" || exec sudo "$0"
+exec /usr/sbin/service gdm restart
+```
 
 Read more: https://halcanary.org/vv/2011/11/03/csg17/

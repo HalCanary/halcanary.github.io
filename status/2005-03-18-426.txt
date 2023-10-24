@@ -1,5 +1,9 @@
 Blog post:
-Geometry Fun…
+Geometry Fun
+
+![geometer's sketchpad](https://halcanary.org/images/2005-03-18_geometry.png)
+
+Somewhere in here is a proof of the law of sines.
 
 Read more: https://halcanary.org/vv/2005/03/18/426/
 

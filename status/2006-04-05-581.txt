@@ -1,5 +1,26 @@
 Blog post:
-funny html thingy…
+funny html thingy
+
+Good html:
+
+    
+    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd">
+    <html><head><title></title></head><body>
+    <div>X</div>
+    </body></html>
+
+Bad html:
+
+    
+    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd">
+    <html><head><title></title></head><body>
+    X
+    </body></html>
+    
+
+[Chec…
 
 Read more: https://halcanary.org/vv/2006/04/05/581/
 

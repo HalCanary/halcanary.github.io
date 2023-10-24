@@ -1,5 +1,9 @@
 Blog post:
-puzzles…
+puzzles
+
+My folks play [Sudoku](http://en.wikipedia.org/wiki/Sudoku). I looked at the game and decided it was boring. [So I wrote a program to solve it.](https://halcanary.org/p/sudoku-solver)
+
+Shouldn't humans stick to puzzles on which we can outperform computers? Word games and such?
 
 Read more: https://halcanary.org/vv/2005/12/06/540/
 

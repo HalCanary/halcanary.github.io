@@ -1,5 +1,7 @@
 Blog post:
-Rotor Router Applet v1.0…
+Rotor Router Applet v1.0
+
+[Here you go...](https://halcanary.org/mathapplets/rotor-router-model/)
 
 Read more: https://halcanary.org/vv/2004/07/06/256/
 

@@ -1,6 +1,23 @@
 Blog post:
 Go exec function
-Execute a program, causing the program that is currently being run to be replaced with a new program…
+Execute a program, causing the program that is currently being run to be replaced with a new program
+
+The following
+
+```go
+func execv(cmd string, args ...string) error {
+    path, err := exec.LookPath(cmd)
+    if err != nil {
+        return err
+    }
+    return syscall.Exec(
+        path,
+        append([]string{cmd}, args...),
+        syscall.Environ())
+}
+```
+
+is the Go equivilent of the C `…
 
 Read more: https://halcanary.org/vv/2022/09/13/3026/
 

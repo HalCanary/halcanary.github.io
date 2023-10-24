@@ -1,5 +1,15 @@
 Blog post:
-alarm…
+alarm
+
+Here, I take a 10 second clip from "Whole Lotta Love", 133 seconds  
+into the song, where Plant is orgasmily screaming and Page's guitar is  
+doing the same. Then I increase the volume by a factor of 4. I then  
+reencode the wav as ALARM.mp3 and use it as the alarm sound for my egg  
+timer program.
+
+    
+    FILE=~/Music/led_zeppelin/Led_Zepplin_-_BS_CD1_01_whole_lotta_love.mp3
+    lame --decode $FILE f…
 
 Read more: https://halcanary.org/vv/2006/06/04/604/
 

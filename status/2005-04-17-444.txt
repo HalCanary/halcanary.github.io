@@ -1,5 +1,11 @@
 Blog post:
-pcmcia cards…
+pcmcia cards
+
+**WARNING: boring linux-related post follows!**
+
+My new MD56002/FM560LK PCMCIA modem, combined with my new AC820 modem dongle cable works with my old p200 laptop under a recent Knoppix.
+
+I have yet to get my [802.11B PCMCIA card](https://halcanary.org/p/802-11b-card) working.
 
 Read more: https://halcanary.org/vv/2005/04/17/444/
 

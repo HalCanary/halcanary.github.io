@@ -4,6 +4,8 @@ github.com/HalCanary/facility v1.0.0 h1:BHF0KJAz+VtYmnW/T6jQSuNhxOHiOgOE5OPisfYU
 github.com/HalCanary/facility v1.0.0/go.mod h1:7fdqyhrk3r4KnNFHrWbyHxgiCZopzggREbNekCsNqWg=
 github.com/HalCanary/facility v1.0.3 h1:6j8UJwr/NJrOK5uc8jzKu5+unl4kqFANhK0OOOxGhSY=
 github.com/HalCanary/facility v1.0.3/go.mod h1:7fdqyhrk3r4KnNFHrWbyHxgiCZopzggREbNekCsNqWg=
+github.com/HalCanary/mastodoner v0.2.0 h1:v89s6rR5ka9NzGOF66QIPuPv2adT4rAEGQGUSdMOyJs=
+github.com/HalCanary/mastodoner v0.2.0/go.mod h1:D8f+0EkFVYMNjMWzfto1XKZRat4pN8LEQUFF4AYZGSY=
 github.com/google/uuid v1.3.0 h1:t6JiXgmwXMjEs8VusXIJk2BXHsn+wx8BZdTaoZ5fu7I=
 github.com/google/uuid v1.3.0/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=
 github.com/google/uuid v1.3.1 h1:KjJaJ9iWZ3jOFZIf1Lqf4laDRCasjl0BCmnEGxkdLb4=

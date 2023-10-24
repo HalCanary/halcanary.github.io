@@ -1,5 +1,21 @@
 Blog post:
-time-wasting methods.…
+time-wasting methods.
+
+    /* verbose java masturbation: */
+    public class Foo {
+      private int foobar;
+      public void setFoobar(int value) {
+        foobar = value;
+      }
+      public int getFoobar(){
+        return foobar;
+      }
+    }
+
+    /* much less annoying: */
+    public class Foo {
+      public int foobar;
+    }
 
 Read more: https://halcanary.org/vv/2010/01/17/891/
 

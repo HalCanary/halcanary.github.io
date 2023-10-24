@@ -1,4 +1,16 @@
 Blog post:
-Reduce…
+Reduce
+
+In high-school chemistry, you learn that the ideal gas law is
+
+<div style="text-align:center;"><em>P</em>&middot;<em>V</em> =
+<em>n</em>&middot;<em>R</em>&middot;<em>T</em></div>
+
+These letters are drilled into my head, but I realised yesterday that
+I am losing my intuitive understanding of the relation.  The physics
+version of it is
+
+<div style="text-align:center;"><em>P</em>&middot;<em>V</em> =
+<em>N</em>&middot;<em>…
 
 Read more: https://halcanary.org/vv/2011/05/27/csg05/

@@ -1,5 +1,7 @@
 Blog post:
-Welcome...…
+Welcome...
+
+[![Welcome to the New American Century](https://halcanary.org/images/new-american-century.jpg)](http://www.newamericancentury.org/)
 
 Read more: https://halcanary.org/vv/2004/11/30/361/
 

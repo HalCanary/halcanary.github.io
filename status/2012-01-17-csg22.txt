@@ -1,4 +1,21 @@
 Blog post:
-PyQt QInputDialog.get*() wrappers…
+PyQt QInputDialog.get*() wrappers
+
+```Python
+#!/usr/bin/env python
+
+import PyQt4.QtGui
+
+def getInt(title, label, mini=-2147483647, maxa=2147483647):
+  assert mini <= maxa
+  default = min(max(0, mini), maxa)
+  (ret, ok) = PyQt4.QtGui.QInputDialog.getInt(
+    PyQt4.QtGui.QWidget(), title, label, default, mini, maxa)
+  if not ok:
+    raise Exception('select error')
+  return ret
+
+def getItem(title, label, items):
+  (ret, ok) = PyQ…
 
 Read more: https://halcanary.org/vv/2012/01/17/csg22/

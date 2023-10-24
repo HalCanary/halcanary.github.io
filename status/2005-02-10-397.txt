@@ -1,5 +1,18 @@
 Blog post:
-icky shiz ...or... burning audio in linux…
+icky shiz ...or... burning audio in linux
+
+I've used itunes at my parents house to burn audio CDs. It works nicely. At
+home, I use Rhythmbox, which has no such ability. Here's how I do it.
+
+Create a nice 80-minute playlist. SAve it to /home/hal/tmp/x.
+
+Run this script:
+
+    #!/bin/sh
+    # $HOME/bin/make-audio-cd-from-playlist.sh
+    grep '=file://' $1 | awk -F '//' '{print $2}' > tmp-file
+    i=1
+    for LINE…
 
 Read more: https://halcanary.org/vv/2005/02/10/397/
 

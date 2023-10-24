@@ -1,5 +1,9 @@
 Blog post:
-Li-ion…
+Li-ion
+
+People like me read the encylopedia for fun.
+
+Today I read about Li-ion batteries. [“ At a typical 100% charge level at 25 degrees Celsius, Li-ion batteries irreversibly lose approximately 20% capacity per year from the time they are manufactured, even when unused.”](http://en.wikipedia.org/wiki/Lithium_ion_battery)
 
 Read more: https://halcanary.org/vv/2005/07/07/484/
 

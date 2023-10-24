@@ -1,4 +1,6 @@
 Blog post:
-git clone clone…
+git clone clone
+
+One beautiful thing about git is that I can clone my own clone of someone else's repository.  That way I can easily keep my laptop in sync with my workstation.  Neat.
 
 Read more: https://halcanary.org/vv/2011/06/03/csg06/

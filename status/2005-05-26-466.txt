@@ -1,5 +1,19 @@
 Blog post:
-dumping mt?…
+dumping mt?
+
+**WARNING:** Metablogging is always stupid. Do not continue reading this post.
+
+Reasons to contiue using movable type:
+
+1.  Already installed and working
+2.  Does everything I want it to.
+3.  Like its template system.
+
+Reasons to dump movable type:
+
+1.  Free as in beer (v2.64), not as in speech.
+2.  Version 2.x no longer supported. Version 3.x not free. (I fell for the BitKeeper Trap!)
+3.  Comment Spam issue.…
 
 Read more: https://halcanary.org/vv/2005/05/26/466/
 

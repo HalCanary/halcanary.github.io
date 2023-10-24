@@ -1,5 +1,9 @@
 Blog post:
-the 16 binary boolean operators…
+the 16 binary boolean operators
+
+Given: the set of binary operators contain all unary and nullary operators as a subset.
+
+There are 2^(2×2)=16 possible binary boolean operators. In order, they are: FALSE, _x_ AND _y_, _x_ AND NOT _y_, _x_, _y_ AND NOT _x_, _y_, _x_ XOR _y_, _x_ OR _y_, _x_ NOR _y_, _x_ EQV _y_, NOT _y_, _x_ OR NOT _y_, NOT _x_, _y_ OR NOT _x_, _x_ NAND _y_, and TRUE.
 
 Read more: https://halcanary.org/vv/2010/04/20/974/
 

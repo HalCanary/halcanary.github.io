@@ -1,5 +1,14 @@
 Blog post:
-Fedora Linux…
+Fedora Linux
+
+![[F]](https://halcanary.org/images/fedora.gif)
+
+I've been using Fedora Linux on six computers I'm responsible for. I like it a lot. Here's why:
+
+1.  The project is becoming more open. All of the how-to-hack-the-system info that RedHat never published is being provided bu the community now.
+2.  More and more third-party rpms are being made availible. Quality is improving.
+
+If you have a FC1 syste…
 
 Read more: https://halcanary.org/vv/2004/01/16/155/
 

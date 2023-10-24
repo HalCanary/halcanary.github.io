@@ -1,6 +1,14 @@
 Blog post:
 Dark Mode
-adding dark mode to this site.…
+adding dark mode to this site.
+
+I added a `@media (prefers-color-scheme: dark) {...}` block to this site's CSS. The tough part was to make the SVG fill color respect that.  But it turns out that if you just style the svg element with
+```
+svg {
+    fill: currentColor;    
+}
+```
+and remove all style information in the SVG itself, then it works as expected.
 
 Read more: https://halcanary.org/vv/2020/09/30/3021/
 

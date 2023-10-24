@@ -1,5 +1,7 @@
 Blog post:
-image-upload.php…
+image-upload.php
+
+[image-upload.php](https://halcanary.org/p/image-upload)
 
 Read more: https://halcanary.org/vv/2004/11/28/359/
 

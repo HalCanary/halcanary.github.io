@@ -1,6 +1,10 @@
 Blog post:
 Simple Command-Line Mastodon Status Poster!
-I wrote a thing.  Link to gist.…
+I wrote a thing.  Link to gist.
+
+[MastodonStatusPoster.go](https://gist.github.com/HalCanary/cb51e7fc5128f5762491e748c3827efa)
+
+[Discuss](https://mastodon.sdf.org/@hal_canary/109325551001118991)
 
 Read more: https://halcanary.org/vv/2022/11/14/3035/
 

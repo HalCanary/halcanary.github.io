@@ -1,5 +1,20 @@
 Blog post:
-Apache httpd…
+Apache httpd
+
+If you have problems getting your .htaccess files working, don't forget to insert "`AllowOverride All`" into /etc/httpd/conf/httpd.conf.
+
+I've been having fun with mod\_rewrite. For example:
+
+    
+    ## public_html/archives/.htaccess
+    ## from halcanary.org
+    RewriteEngine On
+    RewriteBase   /
+    RewriteRule ^cat$ /archives/cat.php [L]
+    ## EOF
+    
+
+So [`/archives/cat`](https://halcana…
 
 Read more: https://halcanary.org/vv/2004/07/17/272/
 

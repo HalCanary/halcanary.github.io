@@ -1,5 +1,20 @@
 Blog post:
-ssh-show-key-fingerprint…
+ssh-show-key-fingerprint
+
+    #!/bin/sh
+    ## ~/bin/ssh-show-key-fingerprint
+    ## Prints out SSHD Key Fingerprints
+    ## Written 2004-2009 Hal Canary
+    ## Dedicated ott he Public Domain.
+    test "$#" -eq 0 && \
+      exec "$0" /etc/ssh/ssh_host_*_key.pub
+    for file in "$@" ; do
+      ( cd `dirname "$file"`;
+        /usr/bin/ssh-keygen -l \
+          -f  `basename "$file"`; )
+    done
+
+What to do with …
 
 Read more: https://halcanary.org/vv/2009/09/26/825/
 

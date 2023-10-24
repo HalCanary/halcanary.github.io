@@ -1,5 +1,9 @@
 Blog post:
-Surface Viewing…
+Surface Viewing
+
+In the class I am sitting in on this semester - [Visual Solid Shape](http://www.cs.unc.edu/Admin/Courses/descriptions/257.html), we use a piece of software called [shapemonger](http://andrewthall.org/papers/draft7_7Feb05.pdf).
+
+I wanted to get a better view at monge patch (a surface defined by (_x_,_y_,_f_(_x_,_y_)) so I wrote a little Python-VTK program to generate a vtkPo…
 
 Read more: https://halcanary.org/vv/2013/04/20/1305/
 

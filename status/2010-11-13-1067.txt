@@ -1,5 +1,7 @@
 Blog post:
-photos from today…
+photos from today
+
+[![[Thumb]](https://halcanary.org/photos/thumb/2010-11-13_12-07-57_DSCN0627.jpg)](https://halcanary.org/photos/2010-11-13_12-07-57_DSCN0627.jpg) [![[Thumb]](https://halcanary.org/photos/thumb/2010-11-13_11-55-46_DSCN0629.jpg)](https://halcanary.org/photos/2010-11-13_11-55-46_DSCN0629.jpg) [![[Thumb]](https://halcanary.org/photos/thumb/2010-11-13_11-56-23_DSCN0639.jpg)](https://halcanary.org/photos/20…
 
 Read more: https://halcanary.org/vv/2010/11/13/1067/
 

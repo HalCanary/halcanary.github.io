@@ -1,5 +1,9 @@
 Blog post:
-Will work for whuffie.…
+Will work for whuffie.
+
+I published a short article last week on [rsync](http://fedoranews.org/contributors/hal_canary/yum/).
+
+Maybe I'll get some whuffie out of it.
 
 Read more: https://halcanary.org/vv/2004/02/05/166/
 

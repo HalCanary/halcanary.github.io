@@ -1,5 +1,12 @@
 Blog post:
-More Linux Crap…
+More Linux Crap
+
+Note: the fact that .Xdefauts doesn't work is due to the fact that the file has been renamed .Xresources.
+
+I tried installing Red Hat 9 onto my Vaio SRX87 this week. The install program did see my hard drive and firewire CD-Rom. I repartitioned and installed. Everything worked great, except for:
+
+1.  modem. I need to search for linmodem drivers
+2.  wireless. It was not auto detected, as far as …
 
 Read more: https://halcanary.org/vv/2003/04/10/49/
 

@@ -1,5 +1,19 @@
 Blog post:
-software for ubuntu…
+software for ubuntu
+
+If you are a LTS user like me and stuck on Hardy Heron, sometimes packages are availible that have the newest shiniest thing prepackaged for you. Emacs 23 can be installed with a simple
+
+    sudo apt-get install emacs-snapshot-gtk
+
+and then I wrote a little script to launch emacs with my favorite font:
+
+    #!/bin/sh
+    exec emacs-snapshot \
+      -fn "Monospace-11" "$@" 
+
+\* \* \*
+
+Anoth…
 
 Read more: https://halcanary.org/vv/2009/09/27/838/
 

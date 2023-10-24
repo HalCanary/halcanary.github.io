@@ -1,4 +1,13 @@
 Blog post:
-make -j…
+make -j
+
+Update: Russ reccomends 2<em>N</em> threads.
+
+    #!/bin/sh
+    ## {$HOME}/bin/makej
+    renice 1 $$ > /dev/null
+    N_CPUS=`grep processor /proc/cpuinfo | wc -l`
+    N_THRDS=`expr ${N_CPUS:-1} "*" 2`
+    exec /usr/bin/make -j "$N_THRDS" "$@"
 
 Read more: https://halcanary.org/vv/2011/08/18/csg13/

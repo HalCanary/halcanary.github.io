@@ -1,6 +1,8 @@
 Blog post:
 EM Ratio, again
-US Employment-Population Ratio (ages 25-54 Yrs), last 25 Years…
+US Employment-Population Ratio (ages 25-54 Yrs), last 25 Years
+
+<a href="https://fred.stlouisfed.org/graph/?g=qD5Q"><img src="https://fred.stlouisfed.org/graph/fredgraph.png?g=qD5Q" alt="[graph]"></a>
 
 Read more: https://halcanary.org/vv/2020/04/03/3014/
 

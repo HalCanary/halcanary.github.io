@@ -1,5 +1,17 @@
 Blog post:
-timeinmicroseconds.c…
+timeinmicroseconds.c
+
+I wrote this today as a demonstration of where /dev/random gets all its randomness.
+
+    /* Copyright 2007 Hal Canary, https://halcanary.org/
+    Dedicated to the Public Domain. */
+    #include <stdio.h>
+    #include <sys/time.h>
+    int main(void) {
+            struct timeval x;
+            struct timezone t;
+            gettimeofday(&x, &t);
+            printf("%u.%06u\n",x.tv_sec,x.tv_…
 
 Read more: https://halcanary.org/vv/2007/03/22/678/
 

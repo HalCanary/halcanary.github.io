@@ -1,5 +1,8 @@
 Blog post:
-EMRATIO…
+EMRATIO
+
+July 1991 – July 2011  
+[![graph of EMRATIO over time](https://halcanary.org/images/a019bf027dcc8694e655d03e007a49c1e81c572a.png)](http://research.stlouisfed.org/fred2/graph/?g=1rw)
 
 Read more: https://halcanary.org/vv/2011/08/05/1227/
 

@@ -1,5 +1,8 @@
 Blog post:
-amazing yet tautological…
+amazing yet tautological
+
+[![[amazing_yet_tautological]](https://halcanary.org/images/amazing_yet_tautological.png)  
+](http://salon.com/comics/boll/2004/07/22/boll/)
 
 Read more: https://halcanary.org/vv/2004/07/23/276/
 

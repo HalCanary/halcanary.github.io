@@ -1,5 +1,8 @@
 Blog post:
-Gimp2 Beta…
+Gimp2 Beta
+
+![[hello_gimp_image]](https://halcanary.org/images/hello_gimp.png)  
+I installed a Gimp 2 beta off of [fedora.us](http://download.fedora.us/fedora/fedora/1/i386/RPMS.testing/). It rocks. Here's an image I made with it.
 
 Read more: https://halcanary.org/vv/2004/03/16/202/
 

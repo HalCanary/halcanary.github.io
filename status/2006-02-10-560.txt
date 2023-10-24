@@ -1,5 +1,25 @@
 Blog post:
-palm pilot scripts…
+palm pilot scripts
+
+Pilot scripts:
+
+    
+    #!/bin/sh
+    ## $HOME/Palm/pilot-xfer-install
+    export PILOTPORT=/dev/ttyS0
+    export PILOTRATE=115200
+    if ! (/bin/ls -l $PILOTPORT | grep -q rwxrwxrwx) ; then
+        echo "sudo chmod 777 $PILOTPORT"
+        sudo chmod 777 $PILOTPORT
+    fi
+    exec pilot-xfer -i "$@"
+
+and
+
+    
+    #!/bin/sh
+    ## $HOME/Palm/INSTALL_EVERYTHING.sh
+    exec $HOME/Palm/pilot-…
 
 Read more: https://halcanary.org/vv/2006/02/10/560/
 

@@ -1,5 +1,19 @@
 Blog post:
-using emacsclient…
+using emacsclient
+
+Attention Emacs users. It took me a while to realize that new-style fonts can be enabled by adding this to the ~/.emacs file.
+
+    (set-face-attribute 'default
+      nil :font "Monospace-11")
+
+So here's how I set up the look of Emacs in my .emacs:
+
+    (require 'color-theme)
+    (color-theme-dark-laptop)
+    (set-scroll-bar-mode 'right)
+    (tool-bar-mode nil)
+    (menu-bar-mode nil)
+    (s…
 
 Read more: https://halcanary.org/vv/2010/11/07/1062/
 

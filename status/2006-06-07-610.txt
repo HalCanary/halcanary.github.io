@@ -1,5 +1,11 @@
 Blog post:
-trigonometry…
+trigonometry
+
+Why do I find trigonometry so beautiful?  
+![[unit circle with trig functions]  All of the trigonometric functions can be constructed geometrically in terms of a unit circle centered at O](https://halcanary.org/images/Circle-trig6.png)  
+([source](http://commons.wikimedia.org/wiki/Image:Circle-trig6.svg))
+
+By definition, versin(A)=1-cos(A), and exsec(A)=sec(A)-1.
 
 Read more: https://halcanary.org/vv/2006/06/07/610/
 

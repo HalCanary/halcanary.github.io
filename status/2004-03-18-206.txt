@@ -1,5 +1,17 @@
 Blog post:
-rhythmbox…
+rhythmbox
+
+I just got rhythmbox working for the first time. I needed to do a “sudo yum install gstreamer-plugins-mp3”. Of course!
+
+Review to follow.
+
+* * *
+
+UPDATE 1:00 pm.
+
+It would seem that I stayed out all night and then came home and figured out how to make rythembox work. Huh?
+
+Okay. here's the deal. My distro, FC1, ships with a broken copy of xmms. You can get xmms-mp3 from the Livna.org repository,…
 
 Read more: https://halcanary.org/vv/2004/03/18/206/
 

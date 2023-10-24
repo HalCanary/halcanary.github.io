@@ -1,5 +1,9 @@
 Blog post:
-gain…
+gain
+
+Back on the CD-ripping project. For popular music, the album titles and artists names are easy and the online databases almost always give me the right answer. But for classical music, there are always discrepancies. So I always change the _artist_ field to be _Composer, Performers_.
+
+After ripping a few CDs with Sound Juicer, I then run [mp3gain](http://mp3gain.sourceforge.net/) (`sudo apt-get …
 
 Read more: https://halcanary.org/vv/2009/08/29/802/
 

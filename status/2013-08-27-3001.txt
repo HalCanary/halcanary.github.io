@@ -1,5 +1,7 @@
 Blog post:
 Updated Contact Info
-How can I contact Hal Canary?…
+How can I contact Hal Canary?
+
+See <https://halcanary.org/contact/>.
 
 Read more: https://halcanary.org/vv/2013/08/27/3001/

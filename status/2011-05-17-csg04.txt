@@ -1,4 +1,6 @@
 Blog post:
-Proof Of Concept…
+Proof Of Concept
+
+After two weeks, I've finally produced a proof of concept.  Not an important program, and it's not finished, but I feel like I've made something.
 
 Read more: https://halcanary.org/vv/2011/05/17/csg04/

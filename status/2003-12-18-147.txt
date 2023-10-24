@@ -1,5 +1,7 @@
 Blog post:
-NTP Link…
+NTP Link
+
+[NIST Internet Time Servers](http://www.bldrdoc.gov/timefreq/service/time-servers.html)
 
 Read more: https://halcanary.org/vv/2003/12/18/147/
 

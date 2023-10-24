@@ -1,5 +1,16 @@
 Blog post:
-scrabble.sh…
+scrabble.sh
+
+    #!/bin/sh
+    #DTPD#
+    DICT=/usr/share/dict/words
+    test "$1" || { cat "$0"; exit 1; }
+    exec grep -i "$@" "$DICT" | less
+    #
+    # Useage:
+    #   scrabble.sh PATTERN
+    # Example:
+    #   scrabble.sh '^a[lonrchl]\{4,7\}$'
 
 Read more: https://halcanary.org/vv/2011/06/21/1209/
 

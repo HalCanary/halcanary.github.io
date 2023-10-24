@@ -1,6 +1,12 @@
 Blog post:
 Presentation last night: Cryptography, Linux, and You
-a presentation I gave at SWLUG…
+a presentation I gave at SWLUG
+
+It would have been better had there been more people show up at LUG, but that happens.
+
+Check out the fancy javascript on this page!
+
+[Cryptography, Linux, and You](https://halcanary.org/p/Cryptography_Linux_and_You/)
 
 Read more: https://halcanary.org/vv/2007/04/11/685/
 

@@ -1,4 +1,18 @@
 Blog post:
-or just use xdg-open…
+or just use xdg-open
+
+How to ask the desktop to open a file from a shell script? Define this function:
+
+    getopencmd() {
+        case "$(uname -s)" in
+            *WIN*|*W32*)
+                command -v "start";;
+            Darwin)
+                command -v "open";;
+            *)
+                command -v "xdg-open"  || \
+                command -v "gvfs-open" || \
+                command -v "kde-open"  || \
+            …
 
 Read more: https://halcanary.org/vv/2013/06/13/csg36/

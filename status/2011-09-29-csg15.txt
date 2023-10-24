@@ -1,4 +1,17 @@
 Blog post:
-.emacs look and feel…
+.emacs look and feel
+
+<pre><code>
+;_____________________________________________________________________
+;
+;	 Look And Feel
+;_____________________________________________________________________
+(setq inhibit-startup-screen 't)
+(tool-bar-mode nil)
+(menu-bar-mode nil)
+(set-scroll-bar-mode 'right)
+(when window-system
+  (add-to-list 'default-frame-alist '(background-color . &quot;black&quot;))
+  (add-to-list 'default-frame-alist …
 
 Read more: https://halcanary.org/vv/2011/09/29/csg15/

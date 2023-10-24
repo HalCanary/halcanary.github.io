@@ -1,5 +1,9 @@
 Blog post:
-better...…
+better...
+
+With the newer releases of linux distributions, things have become extraordinarily user-friendly. This is the only bug I've discovered so far [and it's a minor problem with an easy work-around.](https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=141043)
+
+Of course, to do things RIGHT, you do need to know what you are doing. I still want to be able to partition my own drives, write my own firewall …
 
 Read more: https://halcanary.org/vv/2004/12/04/368/
 

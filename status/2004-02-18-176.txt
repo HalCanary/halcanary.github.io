@@ -1,5 +1,17 @@
 Blog post:
-search and replace for elisp.…
+search and replace for elisp.
+
+When mutt is told to [gpg](http://gnupg.org/) sign an email, it will use
+[Quoted-Printable
+Content-Transfer-Encoding](http://www.freesoft.org/CIE/RFC/1521/6.htm), which
+will replace `" \n"` with `"=20\n"`, an escape sequence of some sort. (ASCII
+" " is 0x20.)
+
+I'd rather replace `" \n"` with `"\n"` anyways. Here's some elisp code to do just that:
+
+```Emacs Lisp
+;; ~/.emacs ;;
+…
 
 Read more: https://halcanary.org/vv/2004/02/18/176/
 

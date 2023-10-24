@@ -1,5 +1,13 @@
 Blog post:
-September 12, 2022…
+September 12, 2022
+
+“Computer Scientist” is an awkward term.  We need a better term. 
+
+How about “Algorithmer”?
+
+“Algorithmeter?”
+
+“Applied Logician”?
 
 Read more: https://halcanary.org/vv/2022/09/12/3025/
 

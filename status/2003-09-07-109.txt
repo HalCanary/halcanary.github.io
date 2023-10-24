@@ -1,5 +1,9 @@
 Blog post:
-My paper…
+My paper
+
+![toad](https://halcanary.org/images/toad.png)
+
+My paper, _Aztec Diamonds and Baxter Permutations_ can now be found at [arXiv:math.CO/0309135](http://arxiv.org/abs/math.CO/0309135).
 
 Read more: https://halcanary.org/vv/2003/09/07/109/
 

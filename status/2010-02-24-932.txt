@@ -1,5 +1,12 @@
 Blog post:
-zip-one-file…
+zip-one-file
+
+    #!/bin/sh
+    ## zip-one-file
+    ## DTPD
+    for x in "$@"; do
+      zip "${x}.zip" "$x"
+    done
 
 Read more: https://halcanary.org/vv/2010/02/24/932/
 

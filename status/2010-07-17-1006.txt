@@ -1,5 +1,14 @@
 Blog post:
-gravatar…
+gravatar
+
+    
+    <!-- Easy Gravatar implementation for
+         Wordpress comment page: -->
+    <?php
+    $gravlink = "http://www.gravatar.com/avatar/";
+    $gravlink .= md5(strtolower(trim(get_comment_author_email())));
+    $gravlink .= "?d=".urlencode("https://halcanary.org/images/q80.png");
+    echo $gravlink; ?>
 
 Read more: https://halcanary.org/vv/2010/07/17/1006/
 

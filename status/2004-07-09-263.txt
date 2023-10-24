@@ -1,5 +1,13 @@
 Blog post:
-Photos Taken with Mark's Camera…
+Photos Taken with Mark's Camera
+
+[link](https://halcanary.org/p/photo-2004-06/)
+
+I took some photos with Mark's camera. I cropped and massaged them, just for you:
+
+[img width="120" height="103" alt="\[Thumb\]" src="/photos/thumb/2004-05-27-guitar5-bw.jpg" />](https://halcanary.org/photos/2004-05-27-guitar5-bw.jpg)
+
+[![[Thumb]](https://halcanary.org/photos/thumb/2004-05-30-keys2-bw.jpg)](https://halcanary.org/photos/2004…
 
 Read more: https://halcanary.org/vv/2004/07/09/263/
 

@@ -1,5 +1,18 @@
 Blog post:
-Command-line Package Tools…
+Command-line Package Tools
+
+Command-line package commands for Debian and Ubuntu-type systems that you should know:
+
+    apt-get update
+        resynchronize the package index files
+
+    apt-get dist-upgrade
+        install the newest versions of all packages currently installed and handle changing dependencies
+
+    apt-get install PKG
+        install a package and figure out dependancies
+
+    apt-get remove PK…
 
 Read more: https://halcanary.org/vv/2009/09/26/827/
 

@@ -1,5 +1,21 @@
 Blog post:
-randpassphrase…
+randpassphrase
+
+    /*
+       randpassphrase.c
+       This makes use of /dev/random
+       Copyright 2006 Hal Canary
+       DTPD (Dedicated to the Public Domain)
+       cc -o randpassphrase randpassphrase.c
+    */
+    #include <stdio.h>
+    #include <stdlib.h>
+    #include <time.h>
+    int main() {
+      FILE *devrandom;
+      char source [] = "/dev/random";
+      unsigned int num;
+      if ((devrandom = fopen…
 
 Read more: https://halcanary.org/vv/2007/03/20/677/
 

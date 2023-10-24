@@ -1,4 +1,6 @@
 Blog post:
-diagnose…
+diagnose
+
+I'm only using one out of four processor cores for this batch job. Why is my computer slowing down?  Ohhh.  Memory leak.  That's easy to remedy.
 
 Read more: https://halcanary.org/vv/2011/06/16/csg08/

@@ -1,4 +1,25 @@
 Blog post:
-makefiles…
+makefiles
+
+```Makefile
+# Example (GNU) Makefile for a C++ project.
+# Assume there is a .h file for each .cxx
+
+executable_file_name = program
+cxxfiles = \
+  file_one.cxx \
+  file_two.cxx \
+  file_three.cxx \
+  file_four.cxx
+
+CXX = g++
+CXXFLAGS = -g -Wall -std=c++0x
+objects := $(cxxfiles:.cxx=.o)
+headers := $(cxxfiles:.cxx=.h)
+
+##  If you use other extensions:
+# objects := $(cxxfiles:.cpp=.o)
+# objects := $(cxxfiles:.cc=.o)
+# he…
 
 Read more: https://halcanary.org/vv/2012/02/23/csg24/

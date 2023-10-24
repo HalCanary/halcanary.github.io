@@ -1,5 +1,7 @@
 Blog post:
-Google Movie Showtimes…
+Google Movie Showtimes
+
+[Google Movie Showtimes](http://www.halcanary.org/p/google-movie-showtimes)
 
 Read more: https://halcanary.org/vv/2005/02/25/402/
 

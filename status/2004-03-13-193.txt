@@ -1,5 +1,9 @@
 Blog post:
-Flux…
+Flux
+
+[![[cover]](https://halcanary.org/images/flux.jpg)](http://www.amazon.com/exec/obidos/ASIN/0006476201/theworldofhalcan)
+
+I just read Stephen Baxter's [_Flux_](http://www.amazon.com/exec/obidos/ASIN/0006476201/theworldofhalcan) again. I last read it in 11th grade, and I didn't appreciate it then much because the physics went right over my head. This is a book with prereqs. And yes, there are big flaws, but that's ok…
 
 Read more: https://halcanary.org/vv/2004/03/13/193/
 

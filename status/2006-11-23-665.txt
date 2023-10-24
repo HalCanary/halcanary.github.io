@@ -1,5 +1,12 @@
 Blog post:
-Dear 1999, please take your music player back.…
+Dear 1999, please take your music player back.
+
+    #!/bin/sh
+    #DTPD#
+    M=/tmp/Musiclist
+    DIR=/home/music
+    find $DIR -name "*.mp3" > $M
+    mpg321 --list $M --random
 
 Read more: https://halcanary.org/vv/2006/11/23/665/
 

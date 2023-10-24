@@ -1,5 +1,20 @@
 Blog post:
-Installing Wordpress with MySQL…
+Installing Wordpress with MySQL
+
+> Definitions:
+> 
+> Wordpress
+> 
+> WordPress is a state-of-the-art semantic personal publishing  
+> platform with a focus on aesthetics, web standards, and  
+> usability. Uses PHP and MySQL. Licenced under the GPL.
+> 
+> MySQL
+> 
+> The MySQL database server is the world's most popular open  
+> source database. It is released under the GPL.
+
+In a properly configured Fedora/Redhat…
 
 Read more: https://halcanary.org/vv/2004/08/24/309/
 

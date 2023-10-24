@@ -1,4 +1,14 @@
 Blog post:
-yet another emacs function…
+yet another emacs function
+
+    (defun diary () (interactive)
+      (let ((ddir "d:/")
+            (year (format-time-string "%Y"))
+            (ymd (format-time-string "%Y-%m-%d"))
+        (ymdt (format-time-string "%Y-%m-%d %H:%M:%S %z")))
+        (make-directory (concat ddir year ) 't)
+        (find-file (concat ddir year "/" ymd ".txt"))
+        (goto-char (point-max)) (newline)
+        (insert  ymdt) (newline) (newline)))
 
 Read more: https://halcanary.org/vv/2011/07/18/csg11/

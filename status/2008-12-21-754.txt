@@ -1,5 +1,20 @@
 Blog post:
-ransdomize…
+ransdomize
+
+    #!/usr/bin/env python
+    # randomize_list.py
+    # Written 2008 Hal Canary
+    # Dedicated to the public domain.
+    import sys, random
+    l=[]
+    for line in sys.stdin:
+    	l.append(line)
+    while l:
+    	e = random.choice(l)
+    	l.remove(e)
+    	sys.stdout.write(e)
+
+**UPDATE 2009-01-04**: Just as I suspected, that code is highly inefficient. Here's a different algorithm which is much fa…
 
 Read more: https://halcanary.org/vv/2008/12/21/754/
 

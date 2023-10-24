@@ -1,5 +1,20 @@
 Blog post:
-find-and-sha1sum…
+find-and-sha1sum
+
+    #!/bin/sh
+    # this script will calculate the sha1sum
+    # for each regular file in the PWD.
+    # and put it into a file called SHA1SUM.txt
+    # It prints one "." to the stderr for each
+    # file processed.
+    # DTPD
+    
+    [ -f "SHA1SUM.txt" ] && rm -i SHA1SUM.txt
+    TMPFILE=`mktemp`
+    find . -type f \
+    	-exec sha1sum {} ';' \
+    	-fprintf /dev/stderr '.' \
+    	> "${TMPFI…
 
 Read more: https://halcanary.org/vv/2007/05/17/689/
 

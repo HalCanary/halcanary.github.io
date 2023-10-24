@@ -1,5 +1,24 @@
 Blog post:
-terminal lock…
+terminal lock
+
+    
+    #!/bin/sh
+    ## ~/bin/tlock ##
+    PASS='12345'
+    trap '' TERM INT
+    BAD="true"
+    clear
+    while [ "$BAD" == "true" ] ; do
+        echo -en "\ntlock password: "
+        stty -echo;
+        read x
+        stty echo;
+        [ "$x" == "$PASS" ] && BAD="false"
+    done
+    echo "";
+    
+
+**UPDATE 2004-12-02:** Add “`trap '' TERM SIGTSTP`” for additional security.
 
 Read more: https://halcanary.org/vv/2004/05/10/245/
 

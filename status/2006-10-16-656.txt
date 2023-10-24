@@ -1,5 +1,9 @@
 Blog post:
-goodbye partition table…
+goodbye partition table
+
+Hard Drive A starts making loud clicking noises yesterday. I suspect it has finally died and I unplug it. Hard Drive B is newer, larger, and containes my day-to-day OS of choice. Tho only problem is that HDB contains no bootloader. So I need to install one. So I boot up knoppix from a CD and fool around trying to install grub. Then I figure I'll just try this:
+
+    dd if=boot/grub/stag…
 
 Read more: https://halcanary.org/vv/2006/10/16/656/
 

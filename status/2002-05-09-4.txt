@@ -1,5 +1,16 @@
 Blog post:
-First Blog…
+First Blog
+
+Good Morning. This is my blog. The idea here is that I'll post here on a regular basis, and other people are encouraged to do so too.
+
+Here are my plans for this blog:
+
+1.  A login system to track users.
+2.  Skinnable Style Sheets.
+3.  Integration with the [chatting applet](https://halcanary.org/~hal/ApChat/)
+4.  Perhapse eventually make my whole site dynamically generated.
+
+Now a link. This is [my new desktop b…
 
 Read more: https://halcanary.org/vv/2002/05/09/4/
 

@@ -1,5 +1,15 @@
 Blog post:
-A new printer with Ubuntu 12.04…
+A new printer with Ubuntu 12.04
+
+We have a WiFi network printer in the house: a Kodak ESP C315. The most recent version of Ubuntu (Ubuntu 12.04 Precise) does not recognize it and it asks for a PPD file. This is because the printer-driver-c2esp package is at version 23.1 but version 24 provides that file.
+
+To install:
+
+Get the necesary packages:
+
+```
+$ sudo /usr/bin/apt-get --yes install \
+    build-essential …
 
 Read more: https://halcanary.org/vv/2012/06/16/1285/
 

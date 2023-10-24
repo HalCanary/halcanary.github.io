@@ -1,5 +1,9 @@
 Blog post:
-The story of my year.…
+The story of my year.
+
+Below the fold: a cartoon from 1989. The story of my year.  
+  
+![1989-boing-boing-issue-1-twisted-image](https://halcanary.org/images/1989-boing-boing-issue-1-twisted-image.png)
 
 Read more: https://halcanary.org/vv/2005/12/17/546/
 

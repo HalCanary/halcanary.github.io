@@ -1,5 +1,13 @@
 Blog post:
-Recently published old photos…
+Recently published old photos
+
+[![[Thumb]](https://halcanary.org/photos/thumb/2004-12-28-img_1613.jpg)](https://halcanary.org/p/photo-2004-12)
+
+Trip to FL, 2004 December.
+
+[![[Thumb]](https://halcanary.org/photos/thumb/2005-04-07-img_1726.jpg)](https://halcanary.org/p/photo-2005-04)
+
+Photos from 2004 October to 2005 April
 
 Read more: https://halcanary.org/vv/2005/04/13/443/
 

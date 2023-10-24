@@ -1,5 +1,15 @@
 Blog post:
-fullscreen without distractions…
+fullscreen without distractions
+
+Step 1. Set a hotkey to make applications run full-screened in Gnome:
+
+    gconftool-2 --type string --set \
+      /apps/metacity/window_keybindings/toggle_fullscreen \
+      '<Ctrl><Alt>f'
+
+Step 2. Run your text editor and terminal window fullscreen.
+
+Step 3. Code without distractions.
 
 Read more: https://halcanary.org/vv/2010/02/27/938/
 

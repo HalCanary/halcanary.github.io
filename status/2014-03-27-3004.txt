@@ -1,6 +1,14 @@
 Blog post:
 Optimal Region Projection
-I've been published in _Computers & Graphics_…
+I've been published in _Computers & Graphics_
+
+I am published again!
+
+>   Hal Canary, Russell M. Taylor II, Cory Quammen, Scott Pratt, Facundo
+>   A. Gómez, Brian O'Shea, Christopher G. Healey. “[Visualizing
+>   Likelihood Density Functions via Optimal Region
+>   Projection](https://www.sciencedirect.com/science/article/pii/S0097849314000296).”
+>   *Computers & …
 
 Read more: https://halcanary.org/vv/2014/03/27/3004/
 

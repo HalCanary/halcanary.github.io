@@ -1,5 +1,22 @@
 Blog post:
-sed in place…
+sed in place
+
+    #!/bin/sh
+    SEDCMD="$1"
+    shift
+    for x in "$@" ; do
+      dirt=`dirname "${x}"`
+      tmp=`mktemp "${dirt}/tmp.XXXXXXXXXX"`
+      sed "${SEDCMD}" < "${x}" > "${tmp}"
+      mv "${tmp}" "${x}"
+      echo "$x fixed."
+    done
+
+UPDATE: The next day I realized that
+
+    sed -i
+
+does exactly the same thing.
 
 Read more: https://halcanary.org/vv/2009/11/29/872/
 

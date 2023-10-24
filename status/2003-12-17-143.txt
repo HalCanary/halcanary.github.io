@@ -1,5 +1,7 @@
 Blog post:
-Movabletype templates…
+Movabletype templates
+
+[Here are the templates used by this site.](https://halcanary.org/p/mt-templates/)
 
 Read more: https://halcanary.org/vv/2003/12/17/143/
 

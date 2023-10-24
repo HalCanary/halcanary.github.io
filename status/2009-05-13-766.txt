@@ -1,5 +1,7 @@
 Blog post:
-Going to post some photos.....…
+Going to post some photos.....
+
+[![[Thumb]](https://halcanary.org/photos/thumb/2009-05-05_130024_grave.jpg)](https://halcanary.org/photos/2009-05-05_130024_grave.jpg)
 
 Read more: https://halcanary.org/vv/2009/05/13/766/
 

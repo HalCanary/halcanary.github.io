@@ -1,5 +1,9 @@
 Blog post:
-(c) 2003 Hal Canary…
+(c) 2003 Hal Canary
+
+I went through and made a bunch of changes to wohc this weekend. First, I finally switched over to movable type. Then I marked all code on the site with a suitable license. Then I added a [FAQ](https://halcanary.org/p/faq/) and [site map](https://halcanary.org/p/sitemap/).
+
+**Wonderfully** wasted time.
 
 Read more: https://halcanary.org/vv/2003/12/07/139/
 

@@ -1,5 +1,7 @@
 Blog post:
-Digging through old photos at the folks' house today.…
+Digging through old photos at the folks' house today.
+
+[![[Thumb]](https://halcanary.org/photos/thumb/2001-05-20-graduation.jpg)](https://halcanary.org/photos/2001-05-20-graduation.jpg)
 
 Read more: https://halcanary.org/vv/2010/04/03/972/
 

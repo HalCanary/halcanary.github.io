@@ -1,5 +1,14 @@
 Blog post:
-Validating Burnt ISO Images…
+Validating Burnt ISO Images
+
+[This article](http://www.sun.com/bigadmin/features/articles/burn_iso_images.html) tells how to burn CD using `cdrecord` to make it easier to run a checksum program on the burnt CD.
+
+For future reference, here it is:
+
+    
+    $ sudo /usr/bin/cdrecord dev=/dev/hdc -dao -v \
+    	driveropts=burnfree -eject ${ISOFILE}
+    $ sha1sum /dev/hdc
 
 Read more: https://halcanary.org/vv/2006/09/20/646/
 

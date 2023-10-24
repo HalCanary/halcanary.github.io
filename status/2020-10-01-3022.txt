@@ -1,6 +1,15 @@
 Blog post:
 Blog/site update
-summary of last few years of site changes.…
+summary of last few years of site changes.
+
+I now host this site on Github, since it is free and fairly easy for me to use.
+I push the new version of the site with a simple `git push`.  I only pay for my
+domain name.
+
+I am still using the same blog builder Python script I wrote years ago, but
+I've refactored it a dozen times.  I also use a similar script to rebuild
+static pages from markdown source too.
+…
 
 Read more: https://halcanary.org/vv/2020/10/01/3022/
 

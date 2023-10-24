@@ -1,5 +1,12 @@
 Blog post:
-WindowMaker Fin…
+WindowMaker Fin
+
+![[screenshot]](https://halcanary.org/images/phoenix-minimized.png)  
+Fixed the minimiztion icon for phoenix under Windowmaker. Edit the  
+_~/GNUstep/Defaults/WMWindowAttributes_  
+file. Add a line  
+`"Mozilla.navigator:browser" = {Icon = "/path/to/icon.png";};`  
+somewhere.
 
 Read more: https://halcanary.org/vv/2003/02/05/33/
 

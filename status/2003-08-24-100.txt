@@ -1,5 +1,7 @@
 Blog post:
-Art…
+Art
+
+[![art](https://halcanary.org/art/thumb/2003-08-24-art-1.jpg)](https://halcanary.org/art/2003-08-24-art-1.jpg) I did some painting today. This one's not done yet. You can still see that some of the paint is still wet. And all of the white squares need to be painted. I'll finish it tomorow. The most important thing about this piece is mixing good looking colors. That blue needs work.
 
 Read more: https://halcanary.org/vv/2003/08/24/100/
 

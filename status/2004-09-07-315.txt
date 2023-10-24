@@ -1,5 +1,7 @@
 Blog post:
-About OSS Companies…
+About OSS Companies
+
+Havoc Pennington put together a nice document detailing what [Red Hat](http://www.redhat.com/) does all day: [Open Source Software Subscriptions](http://log.ometer.com/2004-09.html)
 
 Read more: https://halcanary.org/vv/2004/09/07/315/
 

@@ -1,5 +1,17 @@
 Blog post:
-Chaotic…
+Chaotic
+
+Over the past month, this graph has shown completely chaotic behavior.
+
+![[http://www.electoral-vote.com/]](https://halcanary.org/images/2004-10-31-ec-graph.png)
+
+I interpret it as having major trends, but nothing that is meaningul on the week timescale.
+
+Doesn't the last month look like this chatoic data?
+
+![[logistic]](https://halcanary.org/images/2004-10-31-logistic.png)
+
+This graph is from the logistic eq…
 
 Read more: https://halcanary.org/vv/2004/10/31/345/
 

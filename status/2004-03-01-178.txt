@@ -1,5 +1,13 @@
 Blog post:
-imagemagik convert…
+imagemagik convert
+
+This:
+
+    convert -size 120x120 $1 -resize 120x120 +profile "*" $2
+
+Works better than this:
+
+    convert -sample 120x120 $1 $2
 
 Read more: https://halcanary.org/vv/2004/03/01/178/
 

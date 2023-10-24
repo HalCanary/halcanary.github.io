@@ -1,5 +1,15 @@
 Blog post:
-private static String itoa(int i)…
+private static String itoa(int i)
+
+I like Java's verbosity; it is consistant and clear. But sometimes you want succinct things.
+
+    /** "Returns a String object representing the specified integer." */
+    private static String itoa(int i){
+    	return Integer.toString(i);
+    }
+    /** "Returns a String object representing this Integer's value." */
+    private static String itoa(Integer i){
+    	return i.toSt…
 
 Read more: https://halcanary.org/vv/2010/02/21/928/
 

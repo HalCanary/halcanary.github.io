@@ -1,5 +1,7 @@
 Blog post:
-Judging a Book by its Cover…
+Judging a Book by its Cover
+
+[![[Nasty, Brutish, and Long: Adventures in Eldercare by Ira Rosofsky (1583333770)]](https://halcanary.org/images/e9e7bde8910ad39a090378d63365211a3ef30a4f.jpg)](https://halcanary.org/isbn/?1583333770/Nasty+Brutish+and+Long)
 
 Read more: https://halcanary.org/vv/2010/03/03/940/
 

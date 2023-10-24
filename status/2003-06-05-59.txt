@@ -1,5 +1,10 @@
 Blog post:
-photos!…
+photos!
+
+[![paper blog, page 1](https://halcanary.org/photos/thumb/2003-06-notebook-01.jpg)](https://halcanary.org/photos/2003-06-notebook-01.jpg)
+[![paper blog, page 2](https://halcanary.org/photos/thumb/2003-06-notebook-02.jpg)](https://halcanary.org/photos/2003-06-notebook-02.jpg)
+[![paper blog, page 3](https://halcanary.org/photos/thumb/2003-06-notebook-03.jpg)](https://halcanary.org/photos/2003-06-notebook-03.jpg)
+[…
 
 Read more: https://halcanary.org/vv/2003/06/05/59/
 

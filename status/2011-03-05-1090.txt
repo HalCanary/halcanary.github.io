@@ -1,5 +1,17 @@
 Blog post:
-HTML/CSS for Ipod Touch…
+HTML/CSS for Ipod Touch
+
+I added these lines to the CSS for this page
+
+    pre { overflow:auto;
+          overflow-y:visible; }
+
+and this line to the (X)HTML
+
+    <meta name="viewport"
+          content="width=device-width">
+
+which seems to make the site render much much better on my Ipod Touch's small screen.
 
 Read more: https://halcanary.org/vv/2011/03/05/1090/
 

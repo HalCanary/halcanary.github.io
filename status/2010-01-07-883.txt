@@ -1,5 +1,17 @@
 Blog post:
-Printing a text file…
+Printing a text file
+
+Printing a text file is one of those basic things you never think about. Unless you are me. I like to play with the variables and make that printout look _good_.
+
+    #!/bin/sh
+    # Print a UTF-8 document to the default printer
+    # Written by Hal Canary 2009-12-23.
+    #DTPD# Dedicated to the Public Domain.
+    
+    # Configurable Options
+    font="Monospace 11"
+    #font="Serif 11"
+  …
 
 Read more: https://halcanary.org/vv/2010/01/07/883/
 
