@@ -8,6 +8,7 @@
 	<BaseUrl>https://halcanary.org</BaseUrl>
 	<Prefix>/vv/</Prefix>
 	<ImageLink>https://halcanary.org/images/HAL_CANARY_20191008_512.jpg</ImageLink>
+	<StatusBytes>500</StatusBytes>
 	<Style><![CDATA[
 @media (prefers-color-scheme:dark) {body {background-color:#000;color:#FFF;}
 a:visited {color:#C0F;}

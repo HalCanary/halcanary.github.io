@@ -39,6 +39,7 @@ type Blog struct {
 	ImageLink   string // "/~example/image.png"
 	Style       string // Inline CSS content.
 	Icon        string // URL for icon/
+	StatusBytes int    // Maximum length for status mesages.
 	path        string // Infered to be os.Args[1] + "/docs"
 }
 
@@ -115,12 +116,15 @@ func status(path string, blog Blog, p logpost.Post) {
 		}
 	}
 	bottom.WriteString("\n")
-	const maximumStatusLength = 500
+	var maximumStatusLength = 500
+	if blog.StatusBytes > 0 {
+		maximumStatusLength = blog.StatusBytes
+	}
 	remaining := maximumStatusLength - b.Len() - bottom.Len()
+	const ellipsis = "…"
 	if len(p.Markdown) < remaining {
 		b.Write(p.Markdown)
-	} else {
-		const ellipsis = "…"
+	} else if remaining > len(ellipsis) {
 		b.Write(trimUtf8(p.Markdown, remaining-len(ellipsis)))
 		b.WriteString(ellipsis)
 	}
