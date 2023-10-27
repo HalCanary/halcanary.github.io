@@ -7,13 +7,23 @@
 		<language>en-US</language>
 		<copyright>Copyright 2002-2023 Hal Canary. ALL RIGHTS RESERVED.</copyright>
 		<link>https://halcanary.org/vv/</link>
-		<pubDate>Tue, 24 Oct 2023 21:04:42 -0400</pubDate>
-		<lastBuildDate>Tue, 24 Oct 2023 21:04:42 -0400</lastBuildDate>
+		<pubDate>Fri, 27 Oct 2023 07:54:08 -0400</pubDate>
+		<lastBuildDate>Fri, 27 Oct 2023 07:54:08 -0400</lastBuildDate>
 		<image>
 			<url>https://halcanary.org/images/HAL_CANARY_20191008_512.jpg</url>
 			<title>Voder-Vocoder</title>
 			<link>https://halcanary.org/vv/</link>
 		</image>
+		<item>
+			<title>Using A Theorem Prover</title>
+			<link>https://halcanary.org/vv/2023/10/27/3041/</link>
+			<guid isPermaLink="false">5e1c12b8-b0b5-5d9d-9cdb-9c7f1f2013dd</guid>
+			<pubDate>Fri, 27 Oct 2023 07:49:17 -0400</pubDate>
+			<description><![CDATA[<p>I reccomend the Lean4 Natural Number Game.</p>
+<p>I was playing around with the Lean4 <a href="https://adam.math.hhu.de/#/g/hhu-adam/NNG4/">Natural Number Game</a>. (Via <a href="https://www.reddit.com/r/math/comments/17g3ujl/comment/k6gmp0d/">this discussion</a>.) I really like this way of doing mathematics.  Maybe in the future, all upper-level math classes will use this software for homework.  And all math papers too (<a href="https://mathstodon.xyz/@tao/111287749336059662">Professor Tao is working on formalizing his papers in Lean4!</a>)</p>
+]]></description>
+			<category>mathematics,computerScience</category>
+		</item>
 		<item>
 			<title>Building a Better House.</title>
 			<link>https://halcanary.org/vv/2023/10/23/3040/</link>

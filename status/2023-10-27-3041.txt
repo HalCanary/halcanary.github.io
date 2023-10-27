@@ -1,0 +1,9 @@
+Blog post:
+Using A Theorem Prover
+I reccomend the Lean4 Natural Number Game.
+
+I was playing around with the Lean4 [Natural Number Game](https://adam.math.hhu.de/#/g/hhu-adam/NNG4/). (Via [this discussion](https://www.reddit.com/r/math/comments/17g3ujl/comment/k6gmp0d/).) I really like this way of doing mathematics.  Maybe in the future, all upper-level math classes will use this software for homework.  And…
+
+Read more: https://halcanary.org/vv/2023/10/27/3041/
+
+#mathematics | #computerScience
