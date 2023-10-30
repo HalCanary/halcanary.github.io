@@ -13,7 +13,7 @@ Just did a reboot of my FC2 workstation, started a terminal emulator and a brows
 
 Including buffers, the system takes 341 MB of RAM just to get going. And you can still buy desktops with 256 MB!
 
-I must admit that Linux 2.6.x tends to be optimize…
+I must admit that Linux 2.6.x tends to be optimized more for lots of …
 
 Read more: https://halcanary.org/vv/2004/08/15/301/
 

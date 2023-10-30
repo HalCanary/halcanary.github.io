@@ -3,7 +3,7 @@ Rocket Science
 
 I've been playing [SubSpace/Continuum](http://www.subspacehq.com/) (it's like a massively multiplayer Maelstrom) and it's gotten me thinking. I'd like to see a cross between subspace and an rpg. For lack of a better name, I'm calling it _rocket science_.
 
-You start by building a 2-d model of the solar system. It would consist of objects and artifacts. Objects are things like stars, planets, moo…
+You start by building a 2-d model of the solar system. It would consist of objects and artifacts. Objects are things like stars, planets, moons, asteroids, and com…
 
 Read more: https://halcanary.org/vv/2003/08/26/104/
 

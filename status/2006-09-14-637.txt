@@ -5,7 +5,7 @@ I moved my blog over to [WordPress](http://wordpress.org/), which I have been me
 
 **Update.** I've put a lot of effort into writing a decent Wordpress theme for this site. I'm debating releasing this theme back to the community, versus keeping it all to myself.
 
-Yesterday I worked on the comments page. The layout is somewhat r…
+Yesterday I worked on the comments page. The layout is somewhat reminiscent of the…
 
 Read more: https://halcanary.org/vv/2006/09/14/637/
 

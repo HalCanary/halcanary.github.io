@@ -14,7 +14,7 @@ Everytime I go into my storage room in the basement, I get spider bites. New pla
 
 * * *
 
-   …
+    [hal@lensman]$ cat…
 
 Read more: https://halcanary.org/vv/2006/05/21/593/
 

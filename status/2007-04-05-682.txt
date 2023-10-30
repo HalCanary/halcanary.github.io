@@ -13,7 +13,7 @@ genpasswd
     #   limit ourselves to A-Za-z0-9.
     # Copyright 2007 Hal Canary
     # Dedicated to the Public Domain.
- …
+    echo "Grabbing b…
 
 Read more: https://halcanary.org/vv/2007/04/05/682/
 

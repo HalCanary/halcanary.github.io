@@ -17,7 +17,8 @@ $ wgeto http://craphound.com/ebooksneitherenorbooks.txt \
 
 Explanation for non-unix-literate people: First of all, I wrote a neat script
 called `wgeto`. `wget` is a program that downloads stuff off of the internet, via
-http or ftp. wgeto calls wget, but tell…
+http or ftp. wgeto calls wget, but tells it to ignore the progress dialog by
+sending it to the…
 
 Read more: https://halcanary.org/vv/2004/02/12/172/
 

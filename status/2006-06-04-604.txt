@@ -9,7 +9,8 @@ timer program.
 
     
     FILE=~/Music/led_zeppelin/Led_Zepplin_-_BS_CD1_01_whole_lotta_love.mp3
-    lame --decode $FILE f…
+    lame --decode $FILE file.wav
+    sox fil…
 
 Read more: https://halcanary.org/vv/2006/06/04/604/
 

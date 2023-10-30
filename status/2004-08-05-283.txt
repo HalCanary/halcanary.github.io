@@ -7,7 +7,9 @@ I picked up Doom3 yesterday.
 
 **technical**. It plays well at 1024x768 on my Radeon 9200 (with the proper drivers). This makes me happy. I need 5.1 speakers for my computer to get the full effect, but the sound works well in stereo.
 
-**linux**. Linux binaries have not yet been released. In the mean time,…
+**linux**. Linux binaries have not yet been released. In the mean time, I have been banished to windows-land. Poor me.
+
+**suspense*…
 
 Read more: https://halcanary.org/vv/2004/08/05/283/
 

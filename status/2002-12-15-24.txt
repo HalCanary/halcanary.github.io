@@ -7,7 +7,7 @@ I've been going back and rewriting the perl backend of this page. You shouldn't 
 
 Yea! Reusable Code!
 
-There's now a [Blog Submission](https://web.archive.org/we…
+There's now a [Blog Submission](https://web.archive.org/web/20041021021448/http://halcanary.org/blogsubmit.cgi) form, which will on…
 
 Read more: https://halcanary.org/vv/2002/12/15/24/
 

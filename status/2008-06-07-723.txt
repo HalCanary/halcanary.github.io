@@ -13,7 +13,7 @@ jolietify
     # Copyright 2008 Hal Canary
     #
     # Permission is hereby granted, free of charge, to any
-    # p…
+    # person obtaining a copy of this s…
 
 Read more: https://halcanary.org/vv/2008/06/07/723/
 

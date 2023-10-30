@@ -11,7 +11,8 @@ already and wanted to start from scratch.)
     03      March           30
     04      April           31
     05      May             30
-    06      June           …
+    06      June            31
+    07      Jul…
 
 Read more: https://halcanary.org/vv/2007/10/26/705/
 

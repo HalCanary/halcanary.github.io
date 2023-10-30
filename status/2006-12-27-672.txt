@@ -19,7 +19,8 @@ For example:
             exit 1
     fi
     PREFEX=${1}
-    for argc in …
+    for argc in `seq 2 $#`; do
+    …
 
 Read more: https://halcanary.org/vv/2006/12/27/672/
 

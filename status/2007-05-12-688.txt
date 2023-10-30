@@ -5,7 +5,7 @@ I bought a boxed set of Knuth's _Art of Computer Programming_ last week. As you 
 
     * factorial.mixal
     *
-    * calcul…
+    * calculate n factorial in …
 
 Read more: https://halcanary.org/vv/2007/05/12/688/
 

@@ -8,7 +8,8 @@ Even though I've studied this algorithm a couple of times, I've never had to imp
     void mergesort(int N, int array[]) {
       int k; // k is the block size.
       int x; //x is which block we are at.
-      int i,j; //indices in old…
+      int i,j; //indices in old[]
+      int p; // i…
 
 Read more: https://halcanary.org/vv/2010/05/08/984/
 

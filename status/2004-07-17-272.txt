@@ -14,7 +14,7 @@ I've been having fun with mod\_rewrite. For example:
     ## EOF
     
 
-So [`/archives/cat`](https://halcana…
+So [`/archives/cat`](https://halcanary.org/archives/cat) is just a…
 
 Read more: https://halcanary.org/vv/2004/07/17/272/
 

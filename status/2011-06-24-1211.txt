@@ -15,7 +15,7 @@ change-epub-formatting.py
       dirn = os.path.dirname(in_file_name)
       newdir = 'myformat'
       try:
-     …
+        os.mkdir(os.path.…
 
 Read more: https://halcanary.org/vv/2011/06/24/1211/
 

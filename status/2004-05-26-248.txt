@@ -7,7 +7,7 @@ department of redundant redundant URL department.
 
 **UPDATE 2004-12-02:** It should be something like  
 http://$SERVER/pub/linux/fedora/core/$VERSION/  
-ht…
+http://$SERVER/pub/linux/fedora/extras/$VERSION/
 
 Read more: https://halcanary.org/vv/2004/05/26/248/
 

@@ -19,7 +19,8 @@ The file graph.tex is generated using Gnuplot like this:
     set xrange [-3:3]
     set yrange [0:.42]
     set ytics nomirror autofreq 0, .1
-    set terminal latex si…
+    set terminal latex size 3,1.5
+    set out…
 
 Read more: https://halcanary.org/vv/2010/07/16/1001/
 

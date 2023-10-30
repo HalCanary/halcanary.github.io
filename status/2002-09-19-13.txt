@@ -9,7 +9,7 @@ Update on my linux desktop
 *   Editor: GNU Emacs 21
 *   PIM: Evolution (just for syncing with the Palm)
 *   mp3 player: mp3blaster (curses console app)
-*   File manager: konquer…
+*   File manager: konqueror $HOME (when bas…
 
 Read more: https://halcanary.org/vv/2002/09/19/13/
 

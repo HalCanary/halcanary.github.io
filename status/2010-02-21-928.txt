@@ -9,7 +9,10 @@ I like Java's verbosity; it is consistant and clear. But sometimes you want succ
     }
     /** "Returns a String object representing this Integer's value." */
     private static String itoa(Integer i){
-    	return i.toSt…
+    	return i.toString();
+    }
+
+* * …
 
 Read more: https://halcanary.org/vv/2010/02/21/928/
 

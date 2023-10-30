@@ -16,7 +16,7 @@ Bad:
     }
     int main(int argc, char *argv[]) {
       if (argc <= 1) {
-        fp…
+        fprintf(stderr, "argu…
 
 Read more: https://halcanary.org/vv/2010/03/11/944/
 

@@ -7,7 +7,9 @@ I was reading some old notes from some math research I did in 2004. I was lookin
 
 — which relates the curvatures of four kissing circles (see [Descartes' theorem](http://en.wikipedia.org/wiki/Descartes%27_theorem)). Example of four kissing circles.
 
-![circles touching tangentally](https://halcanary.org/images/2…
+![circles touching tangentally](https://halcanary.org/images/2006-09-23-kissers.png)
+
+Given three kissing circles, one can find two possi…
 
 Read more: https://halcanary.org/vv/2006/09/23/650/
 

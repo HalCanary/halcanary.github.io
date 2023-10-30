@@ -5,7 +5,8 @@ fun with physics
 What is the tension in a spinning ring, for example Bank's orbitals or a Niven Ring?
 
 Let us break the ring into _N_ sections. The angle (in radians) subtended by each section, dθ, is 2π / _N_. Suppose the radius of the ring is _R_ and the mass-per-unit-length of the ring is λ; then the mass of a section is λ _R_ dθ and the mass of the whole ring _M_ = 2π_R_λ.
-…
+
+Ignoring gravity, there a…
 
 Read more: https://halcanary.org/vv/2007/06/23/694/
 

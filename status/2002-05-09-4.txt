@@ -10,7 +10,7 @@ Here are my plans for this blog:
 3.  Integration with the [chatting applet](https://halcanary.org/~hal/ApChat/)
 4.  Perhapse eventually make my whole site dynamically generated.
 
-Now a link. This is [my new desktop b…
+Now a link. This is [my new desktop background](…
 
 Read more: https://halcanary.org/vv/2002/05/09/4/
 

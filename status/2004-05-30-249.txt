@@ -5,7 +5,9 @@ Odd issue in linux/x11. I used to have the evil proprietary Nvidia drivers loade
 
 `Xlib: extension "GLX" missing on display ":0.0"`
 
-It should have worked, as the file `/usr/X11R6/lib/modules/extensions/libglx.a` should have provided this funtionalit…
+It should have worked, as the file `/usr/X11R6/lib/modules/extensions/libglx.a` should have provided this funtionality.
+
+But alas, Xorg …
 
 Read more: https://halcanary.org/vv/2004/05/30/249/
 

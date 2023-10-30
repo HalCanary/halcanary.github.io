@@ -12,7 +12,7 @@ Some shell-script macros for adding color to the output of your programs.
     # foreground, b = background), and use the 'off'
     # feature for anything you turn on.
     #
-    …
+    # This function is:…
 
 Read more: https://halcanary.org/vv/2013/06/20/681/
 

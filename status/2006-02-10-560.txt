@@ -19,7 +19,8 @@ and
     
     #!/bin/sh
     ## $HOME/Palm/INSTALL_EVERYTHING.sh
-    exec $HOME/Palm/pilot-…
+    exec $HOME/Palm/pilot-xfer-install \
+    …
 
 Read more: https://halcanary.org/vv/2006/02/10/560/
 

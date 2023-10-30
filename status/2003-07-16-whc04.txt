@@ -14,6 +14,6 @@ First of all, check the version of gphoto2
 $ /usr/bin/gphoto2 -v
 gPhoto (v2.0) - Cross-platform digital camera library.
 Copyright (C) 2000,2001 Scott Fritzinger and others
-Lice…
+Licensed under the Library GNU Public …
 
 Read more: https://halcanary.org/vv/2003/07/16/whc04/

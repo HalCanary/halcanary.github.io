@@ -9,7 +9,7 @@ What all happened to my computer:
 
 3) /dev/hdb would no longer boot, cause the MBR that contained Grub lived on /dev/hda. Used Knoppix and Fedora Rescue CD to access drive.
 
-4) I tried to convence gr…
+4) I tried to convence grub to install to /d…
 
 Read more: https://halcanary.org/vv/2006/10/26/658/
 

@@ -20,7 +20,7 @@ Bad html:
     </body></html>
     
 
-[Chec…
+[Check it yerself](http://validator.w3.org/)
 
 Read more: https://halcanary.org/vv/2006/04/05/581/
 

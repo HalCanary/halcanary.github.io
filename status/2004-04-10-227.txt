@@ -5,7 +5,7 @@ Instead of doing math the other day, I was playing minesweeper compulsivly. I ha
 
 ![[Hexagonal Minesweeper.]](https://halcanary.org/images/hexagonal-minesweeper.png)
 
-**UPDATE:** I found [XBomb](http://www.gedanken.demon.co.uk/xbomb/) for unix and [Hexatron Hex Mine](http://www.hexatron.com/hex/). [Duh.](https://www.google.com/search?q=minesweeper…
+**UPDATE:** I found [XBomb](http://www.gedanken.demon.co.uk/xbomb/) for unix and [Hexatron Hex Mine](http://www.hexatron.com/hex/). [Duh.](https://www.google.com/search?q=minesweeper+on+a+hexagonal+grid)
 
 Read more: https://halcanary.org/vv/2004/04/10/227/
 

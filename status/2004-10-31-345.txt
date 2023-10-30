@@ -11,7 +11,13 @@ Doesn't the last month look like this chatoic data?
 
 ![[logistic]](https://halcanary.org/images/2004-10-31-logistic.png)
 
-This graph is from the logistic eq…
+This graph is from the logistic equation:
+
+    
+    #!/usr/bin/perl
+    $x=0.5;
+    foreach $n (0..600){
+        $x = …
 
 Read more: https://halcanary.org/vv/2004/10/31/345/
 

@@ -20,7 +20,7 @@ This is the most ugly way of doing it. It involves wasting disc space.
     $ tar xzf directory.tgz
     
 
-Until I did this research, I didn't know yo…
+Until I did this research, I didn't know you could do this one…
 
 Read more: https://halcanary.org/vv/2004/08/03/281/
 

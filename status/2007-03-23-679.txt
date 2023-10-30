@@ -8,7 +8,8 @@ Some years ago, cdrecord gained the ability to convert .wav files to an audio CD
     
     # makecdrfiles - Convert mp3s to
     # .cdr format for an audio CD.
-    # Copyright 2000-2007…
+    # Copyright 2000-2007 Hal Canary
+    # D…
 
 Read more: https://halcanary.org/vv/2007/03/23/679/
 

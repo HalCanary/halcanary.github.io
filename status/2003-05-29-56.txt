@@ -1,7 +1,8 @@
 Blog post:
 Insomnia
 
-[![watercolor of Devil's Lake, WI](https://halcanary.org/art/thumb/devil-04.jpg)](https://halcanary.org/art/devil-04.jpg) I stayed up til dawn last night. Insomnia led to one of the most productive days in months. I spent a lot of time cleaning up the mp3's on my hard drive. The problem was that I had not decided how to go about organizing them until I had already massed a couple of gigs of them. Each file should…
+[![watercolor of Devil's Lake, WI](https://halcanary.org/art/thumb/devil-04.jpg)](https://halcanary.org/art/devil-04.jpg) I stayed up til dawn last night. Insomnia led to one of the most productive days in months. I spent a lot of time cleaning up the mp3's on my hard drive. The problem was that I had not decided how to go about organizing them until I had already massed a couple of gigs of them. Each file should have a correct id3 tag and a filename of  
+`$HOME/Mus…
 
 Read more: https://halcanary.org/vv/2003/05/29/56/
 

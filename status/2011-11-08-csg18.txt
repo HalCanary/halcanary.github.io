@@ -13,6 +13,8 @@ WMCTRL="${HOME}/bin/wmctrl_`arch`"
 test -x "/usr/bin/xdpyinfo" -a -x "$WMCTRL" || {
     echo "error"; exit 1; }
 
-WIDTH=`xdpy…
+WIDTH=`xdpyinfo | sed -n 's/ *dimensions: *\([0-9]*\)x.*/\1/p'`
+HALF=$(($WIDTH / 2));
+"$WMCT…
 
 Read more: https://halcanary.org/vv/2011/11/08/csg18/

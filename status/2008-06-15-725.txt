@@ -5,7 +5,7 @@ Blog post:
 
 I did the calculation just now. My 20 gallon gas tank has enough potential energy to put 9 pounds of bacon into the Asteroid Belt.
 
-[131 megajoules \* 20 / G / ( (mass of sun / 414,703,838 km) - (mass of sun/ 149,597,887.5 km) - (mass of earth / radius of earth)) in…
+[131 megajoules \* 20 / G / ( (mass of sun / 414,703,838 km) - (mass of sun/ 149,597,887.5 km) - (mass of earth / radius of earth)) in pounds](…
 
 Read more: https://halcanary.org/vv/2008/06/15/725/
 

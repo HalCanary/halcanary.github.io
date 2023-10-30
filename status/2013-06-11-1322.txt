@@ -10,7 +10,11 @@ Your challenge: make a pretty postscript picture as one tweet.  "%!\n"  is not n
     exch 1.01 mul exch 2 copy cos mul 3 copy pop sin mul
     lineto } repeat stroke showpage
 
-![program output](https:…
+![program output](https://halcanary.org/images/postscriptChallenge_spiral.png)
+
+* * *
+
+[gmfawcett:](…
 
 Read more: https://halcanary.org/vv/2013/06/11/1322/
 

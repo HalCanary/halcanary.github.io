@@ -14,7 +14,7 @@ ssh-show-key-fingerprint
           -f  `basename "$file"`; )
     done
 
-What to do with …
+What to do with this info? first of…
 
 Read more: https://halcanary.org/vv/2009/09/26/825/
 

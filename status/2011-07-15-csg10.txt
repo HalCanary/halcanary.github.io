@@ -18,6 +18,7 @@ stopwatch
     		sys.stdout.write('\b'*22)
     		sys.stdout.write(str(datetime.now() - start))
     		sys.stdout.flush()
-    except Key…
+    except KeyboardInterrupt:
+    	…
 
 Read more: https://halcanary.org/vv/2011/07/15/csg10/

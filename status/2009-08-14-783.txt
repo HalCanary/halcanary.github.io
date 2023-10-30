@@ -19,7 +19,9 @@ A work in progress, rounding functions for POSIX bc.
       }
       scale = oscale;
       x = x / (10 ^ dec);
-      return …
+      return x;
+    }
+    define…
 
 Read more: https://halcanary.org/vv/2009/08/14/783/
 

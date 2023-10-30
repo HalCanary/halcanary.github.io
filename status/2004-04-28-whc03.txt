@@ -8,6 +8,6 @@ Notes on my Sony VAIO PCG-SRX87 laptop, purchased in 2002.
 
 **Update!**
 
-[It looks like someone was able to install linux on thier Vaio SRX87.](http://www.differentpla.net/%7Eroger/hardware/vaio/linux/) Now I don't know if I need to go to the effort of duplicating that effo…
+[It looks like someone was able to install linux on thier Vaio SRX87.](http://www.differentpla.net/%7Eroger/hardware/vaio/linux/) Now I don't know if I need to go to the effort of duplicating that effort, considering that I am relativly happy with things the way things are. I'll probably give it a try…
 
 Read more: https://halcanary.org/vv/2004/04/28/whc03/

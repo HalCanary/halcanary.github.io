@@ -22,6 +22,7 @@ print 'y = (%f) x + (%f)' % tuple(fit)
 power fit:
 
 ```Python
-#!/usr/bi…
+#!/usr/bin/env python
+#sudo yu…
 
 Read more: https://halcanary.org/vv/2011/11/16/csg19/

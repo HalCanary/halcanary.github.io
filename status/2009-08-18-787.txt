@@ -13,7 +13,8 @@ timer.c
       int minute, second; /* counter */
       if (argc <= 1) {
         fprintf(stderr, "Usage: timer MINUTES [SECONDS]\n\n");
-      …
+        return(1);
+     …
 
 Read more: https://halcanary.org/vv/2009/08/18/787/
 

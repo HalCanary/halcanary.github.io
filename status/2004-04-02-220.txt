@@ -7,7 +7,7 @@ I've been using Ziegler's _Linux Firewalls (2nd Edition)_ to teach myself `iptab
 
 ![[]](https://halcanary.org/images/iptables.png)
 
-Ther…
+There are some basic facts about the way iptables works that aren't explained wel…
 
 Read more: https://halcanary.org/vv/2004/04/02/220/
 

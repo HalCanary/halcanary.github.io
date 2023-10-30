@@ -11,7 +11,8 @@ emacs clipboard cut and paste, done right!
         'clipboard-yank)
     (global-unset-key [(control shift c)])
     (global-set-key   [(control shift c)]
-        'clipboard-kil…
+        'clipboard-kill-ring-save)
+    (g…
 
 Read more: https://halcanary.org/vv/2004/04/05/222/
 

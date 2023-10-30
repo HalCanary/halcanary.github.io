@@ -25,6 +25,7 @@ import numpy
 N, K = (16,16), (256, 256)
 fn = 'random_pixels.png'
 im = numpy.random.random_integers(
-    0,255,(N[0],N[1],…
+    0,255,(N[0],N[1],3)).astype('uint8')
+I…
 
 Read more: https://halcanary.org/vv/2012/03/23/csg26/

@@ -17,7 +17,8 @@ Here's a script:
       echo -e "useage:\n  $0 HOST RESOURCE"
       echo -e "for example:\n  $0 www.google.com /"
       exit 1
-    …
+    fi
+    echo -en "GE…
 
 Read more: https://halcanary.org/vv/2006/11/30/667/
 

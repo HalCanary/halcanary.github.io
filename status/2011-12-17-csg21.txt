@@ -20,6 +20,8 @@ JFLAGS = -enableassertions
 .PHONY : clean all run
 all: $(jarfile)
 run: $(jarfile)
-	$(JAVA) $(JFLAGS) -jar …
+	$(JAVA) $(JFLAGS) -jar $(jarfile)
+clean:
+	$(…
 
 Read more: https://halcanary.org/vv/2011/12/17/csg21/

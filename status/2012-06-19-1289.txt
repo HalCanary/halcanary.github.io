@@ -6,7 +6,7 @@ target bash or tcsh. I always reccomend targeting the standard Bourne Shell,
 since it is guaranteed to exist on POSIX-compatable systems. Unforntunately, a
 lot of bash-specific documentation exists. So we can go to the source for shell
 standard: the Single UNIX Specification, [The Standard Command Language
-Interprete…
+Interpreter](…
 
 Read more: https://halcanary.org/vv/2012/06/19/1289/
 

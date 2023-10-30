@@ -14,7 +14,8 @@ otpasswd
     	my $num = int(rand(62));
     	if ($num < 10) {
     		$num += 48;
-    	} elsif ($num < …
+    	} elsif ($num < 36) {
+    		$num +=…
 
 Read more: https://halcanary.org/vv/2006/09/03/627/
 

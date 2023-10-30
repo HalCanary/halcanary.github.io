@@ -21,6 +21,7 @@ utf8 → ascii
       0x00a5: 'yen',
       0x00a6: 'brvbar',
       0x00a7: 'sect',
+      0x00a8: 'uml',
   …
 
 Read more: https://halcanary.org/vv/2008/10/05/742/

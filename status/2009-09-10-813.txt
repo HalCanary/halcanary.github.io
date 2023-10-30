@@ -19,7 +19,7 @@ Setting the Gnome Desktop Background With a Script
       echo "not a file: '$X'."
       exit 1
     fi
-    …
+    echo "New backgroun…
 
 Read more: https://halcanary.org/vv/2009/09/10/813/
 

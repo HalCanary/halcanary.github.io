@@ -10,7 +10,7 @@ Your downspeed bandwidth is for a single-layer DVD is
     = 145062 bit/s
     = 145 kbit/s
 
-That, of course, sucks compared to my 1.5 Mbit/s DSL connection. …
+That, of course, sucks compared to my 1.5 Mbit/s DSL connection. On the other hand, …
 
 Read more: https://halcanary.org/vv/2006/11/05/660/
 

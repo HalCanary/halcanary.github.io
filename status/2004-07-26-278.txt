@@ -11,7 +11,7 @@ I've been getting attacks against my sshd server:
        guest/password from 134.21.2.227: 1 Time(s)
        guest/password from 210.1.9.227: 1 Time(s)
        guest/password from 61.193.179.162: 1 Time(s)
-      …
+       root/password from…
 
 Read more: https://halcanary.org/vv/2004/07/26/278/
 

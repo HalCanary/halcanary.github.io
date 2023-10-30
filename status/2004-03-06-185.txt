@@ -19,7 +19,10 @@ xmms was giving me some crap the other day, so I gave up on it, again.
         echo $M/$x >> $FILE
     done
     for x in */*/*/*.mp3 ; do
-        echo $M/$x >> $FILE…
+        echo $M/$x >> $FILE
+    done
+    
+    …
 
 Read more: https://halcanary.org/vv/2004/03/06/185/
 

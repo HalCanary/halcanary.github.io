@@ -13,7 +13,8 @@ Reasons to dump movable type:
 
 1.  Free as in beer (v2.64), not as in speech.
 2.  Version 2.x no longer supported. Version 3.x not free. (I fell for the BitKeeper Trap!)
-3.  Comment Spam issue.…
+3.  Comment Spam issue.
+4.  Do I really ne…
 
 Read more: https://halcanary.org/vv/2005/05/26/466/
 

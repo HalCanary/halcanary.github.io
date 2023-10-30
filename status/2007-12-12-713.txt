@@ -12,7 +12,7 @@ Here's a script to do that---a work in progress
     ## Compressmp3s - Copyright 2007 Hal Canary
     ## Dedicated to the Public Domain.
     
-    ## Arguments: a list …
+    ## Arguments: a list of directories to s…
 
 Read more: https://halcanary.org/vv/2007/12/12/713/
 

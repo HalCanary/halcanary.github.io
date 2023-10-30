@@ -11,7 +11,7 @@ UPDATE 1:00 pm.
 
 It would seem that I stayed out all night and then came home and figured out how to make rythembox work. Huh?
 
-Okay. here's the deal. My distro, FC1, ships with a broken copy of xmms. You can get xmms-mp3 from the Livna.org repository,…
+Okay. here's the deal. My distro, FC1, ships with a broken copy of xmms. You can get xmms-mp3 from the Livna.org repository, but xmms still looks l…
 
 Read more: https://halcanary.org/vv/2004/03/18/206/
 

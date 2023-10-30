@@ -13,7 +13,7 @@ generic viewer
 # deal in the Software without restriction, including
 # without limitation the rights to use, copy, modify,
 # merge, publish, distribute, sublicense, and/or sell
-# copies of the…
+# copies of the Software, and to pe…
 
 Read more: https://halcanary.org/vv/2012/02/24/1281/
 

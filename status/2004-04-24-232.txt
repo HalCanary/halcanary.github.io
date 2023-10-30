@@ -1,7 +1,7 @@
 Blog post:
 ai and teleportation.
 
-Had an odd dream last night. After using M-x doctor, I decide that it could be done better, so I sit down and modify the code to make the AI more intelegent. It wakes up and tells me to go on a journey. I say "what the hell" and get started. I ask if it's far, and the AI tells me "not if you travel by wormhole". Then the rest of my dream was all about how odd it is to walk through a wormhole in a …
+Had an odd dream last night. After using M-x doctor, I decide that it could be done better, so I sit down and modify the code to make the AI more intelegent. It wakes up and tells me to go on a journey. I say "what the hell" and get started. I ask if it's far, and the AI tells me "not if you travel by wormhole". Then the rest of my dream was all about how odd it is to walk through a wormhole in a cave somewhere.
 
 Read more: https://halcanary.org/vv/2004/04/24/232/
 

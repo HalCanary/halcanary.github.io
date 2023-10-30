@@ -14,7 +14,8 @@ find-and-sha1sum
     find . -type f \
     	-exec sha1sum {} ';' \
     	-fprintf /dev/stderr '.' \
-    	> "${TMPFI…
+    	> "${TMPFILE}"
+    mv "${TMPF…
 
 Read more: https://halcanary.org/vv/2007/05/17/689/
 

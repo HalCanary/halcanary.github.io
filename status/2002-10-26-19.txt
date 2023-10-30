@@ -3,7 +3,7 @@ Vaio Notebook / Anarchy
 
 A fool and his money are soon parted. I, on the hand, felt that the economy needed stimulating. So I bought a new sub-notebook computer. It's a Sony VAIO PCG-SRX87 (not to be confused with a Swarny WOW). I meant to install linux on it as soon as possible, but soon gave up, seeing as the install program failed to recognize either my DVD drive or hard drive.
 
-So instead, I installed a lot…
+So instead, I installed a lot of cygwin stuff o…
 
 Read more: https://halcanary.org/vv/2002/10/26/19/
 

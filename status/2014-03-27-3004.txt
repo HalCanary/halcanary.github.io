@@ -8,7 +8,9 @@ I am published again!
 >   A. Gómez, Brian O'Shea, Christopher G. Healey. “[Visualizing
 >   Likelihood Density Functions via Optimal Region
 >   Projection](https://www.sciencedirect.com/science/article/pii/S0097849314000296).”
->   *Computers & …
+>   *Computers & Graphics* 41 (2014): 62-71.
+
+![example program output from my paper](…
 
 Read more: https://halcanary.org/vv/2014/03/27/3004/
 

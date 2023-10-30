@@ -11,7 +11,8 @@ Printing a text file is one of those basic things you never think about. Unless 
     # Configurable Options
     font="Monospace 11"
     #font="Serif 11"
-  …
+    #font="Sans 11"
+ …
 
 Read more: https://halcanary.org/vv/2010/01/07/883/
 

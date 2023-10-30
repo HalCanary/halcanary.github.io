@@ -1,7 +1,7 @@
 Blog post:
 dynamic arrays
 
-About ten years ago, I wrote a C++ program to print out all the prime numbers less than a given number using trial division. I recently went back and looked at the program and realized how little I knew at the time. Even though my first CS class covered object-oriented programming in C++, we never really talked the about simply using the `new` keyword on arrays to make use of…
+About ten years ago, I wrote a C++ program to print out all the prime numbers less than a given number using trial division. I recently went back and looked at the program and realized how little I knew at the time. Even though my first CS class covered object-oriented programming in C++, we never really talked the about simply using the `new` keyword on arrays to make use of dynamic arrays. Th…
 
 Read more: https://halcanary.org/vv/2010/03/17/953/
 

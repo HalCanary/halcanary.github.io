@@ -18,7 +18,8 @@ becomes
 
 ```HTML
 <!--document.html-->
-<div cla…
+<div class="section">
+  <h…
 
 Read more: https://halcanary.org/vv/2003/07/16/71/
 

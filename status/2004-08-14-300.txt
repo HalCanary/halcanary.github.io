@@ -16,7 +16,9 @@ I have a 109-key Apple Pro Keyboard. This is my current .Xmodmap file:
     keycode 157 = KP_Equal
     keycode 182 = Print
     keycode 183 = Scroll_Lock
-    keycode 184 = Paus…
+    keycode 184 = Pause
+    
+    !! Remov…
 
 Read more: https://halcanary.org/vv/2004/08/14/300/
 

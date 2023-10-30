@@ -8,7 +8,8 @@ Read _Head Rush Ajax_ yesterday. If you already know Javascript and the DOM, all
     function newHttpRequest() {
       var request = null;
       try {
-        request = new XMLHttp…
+        request = new XMLHttpRequest();
+      } …
 
 Read more: https://halcanary.org/vv/2006/11/17/663/
 

@@ -5,7 +5,7 @@ For a while, I've been upset at the sorry state of emacs. It is not [HIG-complia
 
 So I've decided to abandon the one true editor.
 
-First candidate for Hal's new…
+First candidate for Hal's new editor: **vim**. I quickly dropped tha…
 
 Read more: https://halcanary.org/vv/2003/08/15/95/
 

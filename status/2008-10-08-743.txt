@@ -3,7 +3,7 @@ Cry for MODIFIER LETTER APOSTROPHE
 
 I see that my computer seems to display U+2019 (RIGHT SINGLE QUOTATION MARK ’) with a glyph identical to U+02bc (MODIFIER LETTER APOSTROPHE ʼ). WordPress and most other software seem to convert U+0027 (APOSTROPHE ') to U+2019. That's odd, because nine out of ten times, it's an apostrophe, not a single quote.
 
-Of course the crotchety of fASCIIst in me says stick to the 0x2…
+Of course the crotchety of fASCIIst in me says stick to the 0x27. Straight apostrophe…
 
 Read more: https://halcanary.org/vv/2008/10/08/743/
 

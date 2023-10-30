@@ -5,7 +5,8 @@ fun with POSIX bc...
 _bc_. [bc](http://en.wikipedia.org/wiki/Bc_programming_language) is convientent but fairly light on the included math  
 functions. I wanted a power function that would take floating point  
 numbers as exponents. bc's basic math library provides the following  
-functions: sqrt(), s…
+functions: sqrt(), sin(), cos(), atan(), ln(), and exp()---abriviated  
+to sqrt…
 
 Read more: https://halcanary.org/vv/2006/06/07/609/
 

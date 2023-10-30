@@ -9,7 +9,7 @@ KDE3 - Works well. I haven't yet decided between KDE3 and WindowMaker for my win
 
 Ximian Evolution - I got it to sync with my palm!
 
-Konq - As a browser, it sucks. As a file manager, it's okay (not that I need a file manager). It seems…
+Konq - As a browser, it sucks. As a file manager, it's okay (not that I need a file manager). It seems to be on par wit…
 
 Read more: https://halcanary.org/vv/2002/05/10/6/
 

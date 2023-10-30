@@ -21,6 +21,9 @@ an emacs macro
 	    macro-name
 	    "\n#define "
 	    macro-name
-	    "\n")…
+	    "\n"))
+	  (goto-char (point-max))
+	  (insert
+…
 
 Read more: https://halcanary.org/vv/2012/09/25/csg32/

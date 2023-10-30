@@ -5,7 +5,7 @@ Wondeful farce.
 
 > > I'd love to adopt Linux but am still trying to mount /dev/clue ;-)
 > 
-> Well, that's easy. First, download the latest 2.6 kernel (/dev/clue on 2.4 kernels is still experimental). Use a vanilla kernel, the clue patch is probably not working with the kernel your distro may offer. Then get the clue patch, apply it, recompile (configure the clue as module, building it directly into …
+> Well, that's easy. First, download the latest 2.6 kernel (/dev/clue on 2.4 kernels is still experimental). Use a vanilla kernel, the clue patch is probably not working with the kernel your distro may offer. Then get the clue patch, apply it, recompile (configure the clue as module, building it directly into the kernel is not w…
 
 Read more: https://halcanary.org/vv/2004/03/17/205/
 

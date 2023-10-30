@@ -6,7 +6,10 @@ execute a program in the background, redirect stdout and stderr to null, and kee
 
     #!/bin/sh
     # ~/bin/amp
-    nohup "$@" > /dev/null 2>…
+    nohup "$@" > /dev/null 2>&1 &
+    
+
+Command …
 
 Read more: https://halcanary.org/vv/2007/06/12/691/
 

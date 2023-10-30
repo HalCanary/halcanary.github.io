@@ -5,7 +5,7 @@ Many cities are designed on a Cartesian plan: north-south streets and east-west 
 
 If you want to go northeast, it is nice to be able to get there, but it does tend to make the city confusing.
 
-So I've been thinking about other ways of doing it. instead of four and instead of eight direction, …
+So I've been thinking about other ways of doing it. instead of four and instead of eight direction, how about six? E-W,…
 
 Read more: https://halcanary.org/vv/2005/09/04/510/
 

@@ -7,7 +7,9 @@ I did extremely bad on that analysis exam last week. I should start doing homewo
 
 ### Even More Linux Crap
 
-We installed rh9 onto the ups server/workstation. Gnome is not useable on a pII-233, and there are no smaller windowmanagers. So we installed windowmaker. I find that using [this script](http://freshmeat.net/projects/wmbuildmenu/) helps with getting the wi…
+We installed rh9 onto the ups server/workstation. Gnome is not useable on a pII-233, and there are no smaller windowmanagers. So we installed windowmaker. I find that using [this script](http://freshmeat.net/projects/wmbuildmenu/) helps with getting the windowmaker menus into good shape.
+
+Lin…
 
 Read more: https://halcanary.org/vv/2003/04/18/50/
 

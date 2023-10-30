@@ -13,7 +13,7 @@ and then I wrote a little script to launch emacs with my favorite font:
 
 \* \* \*
 
-Anoth…
+Another bleeding-edge th…
 
 Read more: https://halcanary.org/vv/2009/09/27/838/
 

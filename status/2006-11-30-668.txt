@@ -5,7 +5,7 @@ I wanted to test out the response time of my new LCD monitor, so I downloaded so
 
 All of the games I am reviewing are:
 
-1) Free/Open Source Software, including the game data files. This is a fine distinction that I should explain. For example, Id Software has released the game engines for Doom and Quakes 1, 2, and 3 under the General Public …
+1) Free/Open Source Software, including the game data files. This is a fine distinction that I should explain. For example, Id Software has released the game engines for Doom and Quakes 1, 2, and 3 under the General Public License, but they d…
 
 Read more: https://halcanary.org/vv/2006/11/30/668/
 

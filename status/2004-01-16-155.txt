@@ -8,7 +8,9 @@ I've been using Fedora Linux on six computers I'm responsible for. I like it a l
 1.  The project is becoming more open. All of the how-to-hack-the-system info that RedHat never published is being provided bu the community now.
 2.  More and more third-party rpms are being made availible. Quality is improving.
 
-If you have a FC1 syste…
+If you have a FC1 system, you really should go to:
+
+*   [f…
 
 Read more: https://halcanary.org/vv/2004/01/16/155/
 

@@ -5,7 +5,7 @@ R. was looking for an easy way to share files among the computers in his house, 
 
 To set up:
 
-1) Install the OpenSSH Dæmon. In Ubu…
+1) Install the OpenSSH Dæmon. In Ubuntu, for example, "s…
 
 Read more: https://halcanary.org/vv/2009/05/24/767/
 

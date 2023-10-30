@@ -8,7 +8,8 @@ Unicode needs two new pairs of characters.  call them `⟪`, `⟫` and `⟦`,
 The string "⟪foobar⟫" would be defined to be semantically equivalent to the
 italic version of "foobar", i.e. "𝑓𝑜𝑜𝑏𝑎𝑟".
 
-Similarly, the string "…
+Similarly, the string "⟦foobar⟧" would be defined to be semantically
+equiv…
 
 Read more: https://halcanary.org/vv/2022/11/14/3034/
 

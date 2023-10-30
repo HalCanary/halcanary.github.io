@@ -6,7 +6,7 @@ Here is a table of names I've given computers I've been responsible for:
 <table class="border">
 <tr><th> Name       </th><th> CPU         </th><th> Status      </th><th> Name History                                                </th></tr>
 <tr><td> ups        </td><td> P-75        </td><td> retired     </td><td> Never named.                                                </td></tr>
-<tr><td> e…
+<tr><td> elroy      </td><td>…
 
 Read more: https://halcanary.org/vv/2004/01/08/153/
 

@@ -10,7 +10,11 @@ Getting Started With Mono
     ## visit http://www.mono-project.com/downloads/
     ## for the correct url for your distro and version.
     [ximian-mono]
-    name=Ximian…
+    name=Ximian Mono
+    baseurl=http://mono2.ximian.com/archive/1.0/fedora-2-i386/
+    
+
+After…
 
 Read more: https://halcanary.org/vv/2004/07/16/269/
 

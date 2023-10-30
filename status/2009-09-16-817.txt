@@ -10,7 +10,7 @@ I wanted to access my desktop's music library from my living room and play it th
     #!/bin/sh
     ## ~/bin/mount-music
     mkdir -p "${HOME}/music"
- …
+    sshfs hal@sloop:…
 
 Read more: https://halcanary.org/vv/2009/09/16/817/
 

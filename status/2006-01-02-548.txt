@@ -10,7 +10,7 @@ In [Firefox](http://www.mozilla.com/firefox/), to set it so "open in new window"
 1.  Type **about:config** in the URL bar.
 2.  Type **browser.tabs.showSingleWindowModePrefs** int hte filter.
 3.  Set the value of this variable to **true**.
-4.  Menu -> Tools -> Options ->…
+4.  Menu -> Tools -> Options -> Advanced -> Tabbed Browsin…
 
 Read more: https://halcanary.org/vv/2006/01/02/548/
 

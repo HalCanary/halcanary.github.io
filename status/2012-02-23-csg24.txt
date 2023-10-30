@@ -20,6 +20,6 @@ headers := $(cxxfiles:.cxx=.h)
 ##  If you use other extensions:
 # objects := $(cxxfiles:.cpp=.o)
 # objects := $(cxxfiles:.cc=.o)
-# he…
+# headers := $(cxxfiles:.…
 
 Read more: https://halcanary.org/vv/2012/02/23/csg24/

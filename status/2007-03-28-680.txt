@@ -15,7 +15,9 @@ txt2prehtml
     </head>
     <body>
     <pre>' ;
-    fold -w 70 -s "$@" | sed 's/\&/\&amp;/g…
+    fold -w 70 -s "$@" | sed 's/\&/\&amp;/g;
+    s/\"/\&quot;/g;
+    s/</\&…
 
 Read more: https://halcanary.org/vv/2007/03/28/680/
 

@@ -10,7 +10,7 @@ Because ntpd (Network Time Protocol Daemon) takes some time to synchronize with 
 But I do start it later on, as a background process, so I can go ahead and log in before it finishes. One could do this with any startup procedure that slows you down.
 
     ##  Line from /etc/rc.local
-   …
+    nohup /etc/init.d/…
 
 Read more: https://halcanary.org/vv/2006/11/22/664/
 

@@ -12,6 +12,6 @@ Blog post:
 (set-scroll-bar-mode 'right)
 (when window-system
   (add-to-list 'default-frame-alist '(background-color . &quot;black&quot;))
-  (add-to-list 'default-frame-alist …
+  (add-to-list 'default-frame-alist '(foreground-color . …
 
 Read more: https://halcanary.org/vv/2011/09/29/csg15/

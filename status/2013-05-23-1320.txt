@@ -14,7 +14,7 @@ source-highlight-less() {
         if [ -f "$FILE" ] ; then
             source-highlight -i "$FILE" -fesc
         else
-            echo …
+            echo "${FILE} does not ex…
 
 Read more: https://halcanary.org/vv/2013/05/23/1320/
 

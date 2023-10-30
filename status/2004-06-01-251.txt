@@ -7,7 +7,7 @@ mailto: test at halcanary dot org
 
 on this page as a test of spam email harvesters. This seems like the simplest way to spam-armor an email address. So far I've got no spam at that address since I put the address up on May 21.
 
-This is encouraging. I should be able to switch to another address for all of my personal communication and, as long as I don't use it for mai…
+This is encouraging. I should be able to switch to another address for all of my personal communication and, as long as I don't use it for mailing lists, usenet,…
 
 Read more: https://halcanary.org/vv/2004/06/01/251/
 

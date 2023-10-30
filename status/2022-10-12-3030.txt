@@ -13,7 +13,8 @@ func main() {
 				Attr{"lang": "en"},
 				Elem("head",
 					Comment("HELLO WORLD"),
-					…
+					Element("meta", Attr{"charset": "utf-8"}),
+					Element("meta",…
 
 Read more: https://halcanary.org/vv/2022/10/12/3030/
 

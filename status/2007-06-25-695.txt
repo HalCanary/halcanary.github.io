@@ -9,7 +9,9 @@ Favorite Firefox Addons:
 
 I don't use this much, but it does come in handy every so often.
 
-**…
+**[Flashblock](https://addons.mozilla.org/en-US/firefox/addon/433)**
+
+> Flas…
 
 Read more: https://halcanary.org/vv/2007/06/25/695/
 

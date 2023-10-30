@@ -7,7 +7,7 @@ I'd like to propose a four-part election to replace our current system:
 1.  **Application** On day one of the campaign, eligible citizens can apply for
     the office, at the local, state, or federal board of elections (depending on
     the office). The application window closes after seven days, at which time the
-    board publishes a…
+    board publishes a list of applicants.…
 
 Read more: https://halcanary.org/vv/2019/04/06/3013/
 

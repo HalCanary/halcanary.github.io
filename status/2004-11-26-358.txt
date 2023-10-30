@@ -5,7 +5,7 @@ I installed Fedora Core 3 on my workstaion at home this month. It works fine; I 
   
 **FILESYSTEM**
 
-This is how I set up my hard drive. I planned on formatting every partition except for /home. /home also contained a copy of the four CDs, aquired from a …
+This is how I set up my hard drive. I planned on formatting every partition except for /home. /home also contained a copy of the four CDs, aquired from a torrent. FC3-i386-d…
 
 Read more: https://halcanary.org/vv/2004/11/26/358/
 

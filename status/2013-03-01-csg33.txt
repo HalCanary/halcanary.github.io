@@ -22,6 +22,9 @@ void C::f() {
 }
 ```
 
-**UPDATE** 2013-05-12: Stroustrup suggests an …
+**UPDATE** 2013-05-12: Stroustrup suggests an alternative:
+
+```C++
+…
 
 Read more: https://halcanary.org/vv/2013/03/01/csg33/

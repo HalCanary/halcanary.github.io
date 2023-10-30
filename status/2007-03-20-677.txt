@@ -15,7 +15,7 @@ randpassphrase
       FILE *devrandom;
       char source [] = "/dev/random";
       unsigned int num;
-      if ((devrandom = fopen…
+      if ((devrandom = fopen(source, "rb")) == …
 
 Read more: https://halcanary.org/vv/2007/03/20/677/
 

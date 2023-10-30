@@ -12,7 +12,9 @@ APT: You run this script, once, in the background and it does everything.
 
 Windows Update: You run this program—
 
-    %windir%\system…
+    %windir%\system32\wuapp.exe
+
+—then cl…
 
 Read more: https://halcanary.org/vv/2010/09/04/1032/
 

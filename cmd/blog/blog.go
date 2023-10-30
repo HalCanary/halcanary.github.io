@@ -10,6 +10,7 @@ import (
 	"math"
 	"os"
 	"path/filepath"
+	"regexp"
 	"sort"
 	"strconv"
 	"strings"
@@ -44,6 +45,8 @@ type Blog struct {
 }
 
 const timestampFormat = "2006-01-02 15:04:05Z07:00 (MST)"
+
+var urlRe = regexp.MustCompile("https?://[-#%&+,./:=?@_~A-Za-z0-9]*")
 
 var (
 	waitgroup        sync.WaitGroup
@@ -96,14 +99,15 @@ func postUrl(blog Blog, post logpost.Post) string {
 
 func status(path string, blog Blog, p logpost.Post) {
 	b := filebuf.FileBuf{Path: path}
-	b.WriteString("Blog post:\n")
-	b.WriteString(p.Title)
-	b.WriteString("\n")
+	var top bytes.Buffer
+	top.WriteString("Blog post:\n")
+	top.WriteString(p.Title)
+	top.WriteString("\n")
 	if p.Summary != "" {
-		b.WriteString(p.Summary)
-		b.WriteString("\n")
+		top.WriteString(p.Summary)
+		top.WriteString("\n")
 	}
-	b.WriteString("\n")
+	top.WriteString("\n")
 	var bottom bytes.Buffer
 	bottom.WriteString("\n\nRead more: ")
 	bottom.WriteString(postUrl(blog, p))
@@ -116,37 +120,76 @@ func status(path string, blog Blog, p logpost.Post) {
 		}
 	}
 	bottom.WriteString("\n")
+	bottomBytes := bottom.Bytes()
+	topBytes := top.Bytes()
+
 	var maximumStatusLength = 500
 	if blog.StatusBytes > 0 {
 		maximumStatusLength = blog.StatusBytes
 	}
-	remaining := maximumStatusLength - b.Len() - bottom.Len()
+	remaining := maximumStatusLength - countMastodonBytes(topBytes) - countMastodonBytes(bottomBytes)
 	const ellipsis = "…"
-	if len(p.Markdown) < remaining {
+	var lenEllipsis = utf8.RuneCountInString(ellipsis)
+	b.Write(topBytes)
+	if countMastodonBytes(p.Markdown) < remaining {
 		b.Write(p.Markdown)
-	} else if remaining > len(ellipsis) {
-		b.Write(trimUtf8(p.Markdown, remaining-len(ellipsis)))
+	} else if remaining > lenEllipsis {
+		b.Write(trimMastodonCount(p.Markdown, remaining-lenEllipsis))
 		b.WriteString(ellipsis)
 	}
-	b.Write(bottom.Bytes())
+	b.Write(bottomBytes)
 	check.Check(b.Close())
 	if b.Changed() {
 		changedFilesChan <- b.Path
 	}
 }
 
-func trimUtf8(p []byte, maxLength int) []byte {
-	if len(p) > maxLength {
-		p = p[:maxLength]
-		for len(p) > 0 {
-			r, _ := utf8.DecodeLastRune(p)
-			if r != utf8.RuneError {
-				break
+func countMastodonBytes(s []byte) int {
+	size := utf8.RuneCount(s)
+	var match []byte
+	for _, match = range urlRe.FindAll(s, -1) {
+		size += 23 - utf8.RuneCount(match)
+	}
+	return size
+}
+
+func trimMastodonCount(source []byte, maxCount int) []byte {
+	var match []int
+	var last int = 0
+	for _, match = range urlRe.FindAllIndex(source, -1) {
+		if len(match) == 2 {
+			s := source[last:match[0]]
+			if utf8.RuneCount(s) <= maxCount {
+				last = match[0]
+				maxCount -= utf8.RuneCount(s)
+			} else {
+				for maxCount > 0 && len(s) > 0 {
+					_, byteCount := utf8.DecodeRune(s)
+					last += byteCount
+					s = s[byteCount:]
+					maxCount -= 1
+				}
+				return source[:last]
 			}
-			p = p[:len(p)-1]
+			if maxCount < 23 {
+				return source[:last]
+			}
+			last = match[1]
+			maxCount -= 23
 		}
 	}
-	return p
+	s := source[last:]
+	if utf8.RuneCount(s) <= maxCount {
+		return source
+	} else {
+		for maxCount > 0 && len(s) > 0 {
+			_, byteCount := utf8.DecodeRune(s)
+			last += byteCount
+			s = s[byteCount:]
+			maxCount -= 1
+		}
+	}
+	return source[:last]
 }
 
 func main() {

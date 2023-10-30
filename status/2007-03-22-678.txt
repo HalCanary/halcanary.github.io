@@ -11,7 +11,8 @@ I wrote this today as a demonstration of where /dev/random gets all its randomne
             struct timeval x;
             struct timezone t;
             gettimeofday(&x, &t);
-            printf("%u.%06u\n",x.tv_sec,x.tv_…
+            printf("%u.%06u\n",x.tv_sec,x.tv_usec);
+           …
 
 Read more: https://halcanary.org/vv/2007/03/22/678/
 

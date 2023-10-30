@@ -8,7 +8,7 @@ A list of things that we should be seriously working on
 
       * Secure, transparent, secret ballot voting systems with independent statistical tests for accuracy.
 
-      * Automatic, non-…
+      * Automatic, non-partisan electoral d…
 
 Read more: https://halcanary.org/vv/2020/07/17/3018/
 

@@ -7,7 +7,7 @@ I am moved into my new (to me) house. I have not unpacked anything but my comput
 > 
 > <div style="font-size: 2em; font-weight: bold; margin: .67em 0;">Unsupported Operating System or Browser</div>
 > 
-> <div style="font-size: 1.…
+> <div style="font-size: 1.5em;  font-weight: …
 
 Read more: https://halcanary.org/vv/2007/08/16/698/
 

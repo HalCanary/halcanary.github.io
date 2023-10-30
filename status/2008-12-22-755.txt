@@ -9,7 +9,7 @@ installs the software. Use
 
     makepasswd --crypt
 
-to make a password and a hash of that password for the icecast server. Edit the /etc/icecast/icecast.conf to put the hashed password in there. Set port, hostname, and server\_name. I used my dyndns hostnam…
+to make a password and a hash of that password for the icecast server. Edit the /etc/icecast/icecast.conf to put the hashed password in there. Set port, hostname, and server\_name. I used my dyndns hostname for my server nam…
 
 Read more: https://halcanary.org/vv/2008/12/22/755/
 

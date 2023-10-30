@@ -11,7 +11,8 @@ I'd rather replace `" \n"` with `"\n"` anyways. Here's some elisp code to do ju
 
 ```Emacs Lisp
 ;; ~/.emacs ;;
-…
+(defun hal1 () (interactive)
+  (aut…
 
 Read more: https://halcanary.org/vv/2004/02/18/176/
 

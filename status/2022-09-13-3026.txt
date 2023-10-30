@@ -17,7 +17,7 @@ func execv(cmd string, args ...string) error {
 }
 ```
 
-is the Go equivilent of the C `…
+is the Go equivilent of the C `execv` function!
 
 Read more: https://halcanary.org/vv/2022/09/13/3026/
 

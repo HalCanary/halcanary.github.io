@@ -9,7 +9,7 @@ Bah.
 
 GIYF. Going [here](http://www.cnn.com/video/player/player.html) skips the player detection. Then one can simply strip the URL from the Page Info dialog, the way God intended.
 
-**More background:** I use Fedora Linux as my main OS on my desktop. I have…
+**More background:** I use Fedora Linux as my main OS on my desktop. I have several media players installed---Mplayer, Xine, Realplayer, Ogle, Totem. Some of them w…
 
 Read more: https://halcanary.org/vv/2006/05/19/592/
 

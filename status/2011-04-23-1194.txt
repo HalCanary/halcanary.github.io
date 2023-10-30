@@ -14,7 +14,9 @@ I don't have time to be writing programs.
     <title></title></head><body>
     s/\&/\&amp;/g;
     s/\"/\&quot;/g;
-    s/</\&lt;/…
+    s/</\&lt;/g;
+    s/>/\&gt;/g;
+    s/'/\&#00…
 
 Read more: https://halcanary.org/vv/2011/04/23/1194/
 

@@ -12,7 +12,8 @@ Command-line package commands for Debian and Ubuntu-type systems that you should
     apt-get install PKG
         install a package and figure out dependancies
 
-    apt-get remove PK…
+    apt-get remove PKG
+        remove a …
 
 Read more: https://halcanary.org/vv/2009/09/26/827/
 

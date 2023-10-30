@@ -3,7 +3,7 @@ From Today's Algebra Class
 
 You can define a natural isomorphism from  Hom<sub>R</sub>(R<sup>(Λ<sub>1</sub>)</sup>,  R<sup>(Λ<sub>2</sub>)</sup>)   to (R<sup>(Λ<sub>2</sub>)</sup>)<sup>Λ<sub>1</sub></sup>.  (Where Hom<sub>R</sub>(R<sup>(Λ<sub>1</sub>)</sup>,  R<sup>(Λ<sub>2</sub>)</sup>) is the R-linear homomorphisms from R<sup>(Λ<sub>1</sub>)</sup> to R<sup>(Λ<sub>2</sub>)</sup>.)
 
-Hom<sub>R</sub>(R<sup>(Λ…
+Hom<sub>R</sub>(R<sup>(Λ<sub>1</sub>)</sup>, R<sup>…
 
 Read more: https://halcanary.org/vv/2003/03/11/37/
 

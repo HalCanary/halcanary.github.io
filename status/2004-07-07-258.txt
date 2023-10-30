@@ -1,7 +1,9 @@
 Blog post:
 New Graphics Card.
 
-A couple of weeks ago I got sick of the whole propritary/binary Nvidia graphics drivers. So I searched around for the best ATI chip that 3D graphics drivers in [Xorg X11](http://freedesktop.org/~xorg/X11R6.7.0/doc/radeon.4.html#sect3). I bought a [ATI Radeon 9200](http://www.asenashop.com/sfitem/id-6919/pr-0). The 3-D driver is a bit buggy, but no worse than any binary drivers I've used. An…
+A couple of weeks ago I got sick of the whole propritary/binary Nvidia graphics drivers. So I searched around for the best ATI chip that 3D graphics drivers in [Xorg X11](http://freedesktop.org/~xorg/X11R6.7.0/doc/radeon.4.html#sect3). I bought a [ATI Radeon 9200](http://www.asenashop.com/sfitem/id-6919/pr-0). The 3-D driver is a bit buggy, but no worse than any binary drivers I've used. And I can hope that support for this card does nothing but improve.
+
+Of course th…
 
 Read more: https://halcanary.org/vv/2004/07/07/258/
 

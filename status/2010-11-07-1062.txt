@@ -13,7 +13,7 @@ So here's how I set up the look of Emacs in my .emacs:
     (set-scroll-bar-mode 'right)
     (tool-bar-mode nil)
     (menu-bar-mode nil)
-    (s…
+    (set-face-attribute 'd…
 
 Read more: https://halcanary.org/vv/2010/11/07/1062/
 

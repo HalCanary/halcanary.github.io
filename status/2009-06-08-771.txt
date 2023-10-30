@@ -18,7 +18,8 @@ make-envelope.sh
     FROM="${HOME}/.return-address.txt"
     
     ## No 6-3/4 Envelope
-     WIDTH=6.5	…
+     WIDTH=6.5	# inches
+     HEIGH…
 
 Read more: https://halcanary.org/vv/2009/06/08/771/
 

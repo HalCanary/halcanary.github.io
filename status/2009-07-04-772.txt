@@ -7,7 +7,9 @@ Say I want to send someone a URL that shows the product page for a given item at
     _dyncharset=ISO-8859-1&_dynSessConf=8937
     304157603088075&id=pcat17071&type=page&s
     t=9222637&sc=Global&cp=1&nrp=15&sp=&qp=&
-    list=n&iht=y&usc=All+Categorie…
+    list=n&iht=y&usc=All+Categories&ks=960
+
+Which is too damned long! …
 
 Read more: https://halcanary.org/vv/2009/07/04/772/
 

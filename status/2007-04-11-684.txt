@@ -7,7 +7,7 @@ This is a post I wrote almost a month ago and never posted:
 
 I went to the Linux Users Group the other night. The local LUG tries to have a presentation at every month's meeting. This is ambitious goal, so I thought I'd help out. I went home and started putting together a presentation on F/OSS crytography tools.
 
-Then I realized that if I was going to give a presentat…
+Then I realized that if I was going to give a presentation in front of the…
 
 Read more: https://halcanary.org/vv/2007/04/11/684/
 

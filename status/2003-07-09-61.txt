@@ -9,7 +9,9 @@ All in all, it's a good idea. A bit expensive, but these things can be budgeted 
 
 ### bittorrent
 
-[BitTorrent](http://bitconjurer.org/BitTorrent/) is awesome. Because the load is distributed evenly, you can get the full use of whatever b…
+[BitTorrent](http://bitconjurer.org/BitTorrent/) is awesome. Because the load is distributed evenly, you can get the full use of whatever bandwidth you have.
+
+I love ho…
 
 Read more: https://halcanary.org/vv/2003/07/09/61/
 

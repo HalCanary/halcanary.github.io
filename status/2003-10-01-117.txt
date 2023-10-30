@@ -3,7 +3,9 @@ Diaries and Linux Routing.
 
 I'm thinking about trying to blog more often. Try and update daily. We'll see how that works out. I do enjoy reading [other people's diaries sometimes](http://www.linux.org.uk/~telsa/Diary/diary.html).
 
-Spent most of yesterday learning about iptables, routing, and nat. Still can't print on computer behind the firewall from computer outside the firewall. This type of command should do it, but it…
+Spent most of yesterday learning about iptables, routing, and nat. Still can't print on computer behind the firewall from computer outside the firewall. This type of command should do it, but it doesn't.
+
+/sbin/iptables -t nat -A PREROUT…
 
 Read more: https://halcanary.org/vv/2003/10/01/117/
 

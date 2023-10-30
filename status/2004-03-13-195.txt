@@ -14,7 +14,8 @@ Be sure to use “mkisofs -f” (follow symbolic links).
     #
     #DTPD#
     #
-    # Arguments: file c…
+    # Arguments: file containing list of
+    #…
 
 Read more: https://halcanary.org/vv/2004/03/13/195/
 

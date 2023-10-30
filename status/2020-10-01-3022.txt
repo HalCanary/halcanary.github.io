@@ -9,7 +9,10 @@ domain name.
 I am still using the same blog builder Python script I wrote years ago, but
 I've refactored it a dozen times.  I also use a similar script to rebuild
 static pages from markdown source too.
-…
+
+Other changes:
+
+-  …
 
 Read more: https://halcanary.org/vv/2020/10/01/3022/
 

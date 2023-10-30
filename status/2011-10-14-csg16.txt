@@ -13,6 +13,6 @@ restart gdm under ubuntu
           (equal (buffer-file-name) nil))
     (previous-buffer)))
 
-(global-set-key…
+(global-set-key [(control next)] 'ne…
 
 Read more: https://halcanary.org/vv/2011/10/14/csg16/

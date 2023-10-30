@@ -9,7 +9,7 @@ I've got a **Backup Strategy** for my home computers!
 
 3\. I've segregated my files into directories:
 
-*   **/home/hal*…
+*   **/home/hal** contains normal h…
 
 Read more: https://halcanary.org/vv/2004/08/11/293/
 

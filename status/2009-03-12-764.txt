@@ -11,7 +11,8 @@ My desktop does a fsck too foten for my tastes. Let's find out why
     Check interval: 15552000 (6 months)
     Next check after: Sun Aug 30 18:38:44 2009
 
-I want it to check every three months or 150 boots. …
+I want it to check every three months or 150 boots. That's easy to do.
+…
 
 Read more: https://halcanary.org/vv/2009/03/12/764/
 

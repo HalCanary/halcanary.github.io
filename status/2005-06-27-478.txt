@@ -5,7 +5,7 @@ What does grokster mean for free software? How can this be related?
 
 Remember that Grokster is a for-profit company that distributes a proprietary P2P application. Since the software only comes from the company, it can be destroyed by destroying the company (id est through legal action against the company).
 
-Contrast this with a F/OSS program like bittorrent, whic…
+Contrast this with a F/OSS program like bittorrent, which is based on an op…
 
 Read more: https://halcanary.org/vv/2005/06/27/478/
 

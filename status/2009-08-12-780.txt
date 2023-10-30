@@ -12,7 +12,8 @@ I'm fooling around with a guitar and wanted to take notes on a blank page of gui
     /tabu {
       newpath
       moveto
-      90 0 rlineto   0 115 rlinet…
+      90 0 rlineto   0 115 rlineto
+      -90 0 rlineto  0 -115 rline…
 
 Read more: https://halcanary.org/vv/2009/08/12/780/
 

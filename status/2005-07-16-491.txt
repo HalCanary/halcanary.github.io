@@ -1,7 +1,7 @@
 Blog post:
 It's nice to be competent.
 
-When I got home last night the computer was off but the green light was still on. I had to cycle the power, not just reboot. When it happened again after only a few minutes, I figured that it had overheated. (1) Modern mobos have thermometers and shut off when the CPU gets too hot. (2) I had my AC off and windows open in the apartment for a few days to save energy. (After a while, y…
+When I got home last night the computer was off but the green light was still on. I had to cycle the power, not just reboot. When it happened again after only a few minutes, I figured that it had overheated. (1) Modern mobos have thermometers and shut off when the CPU gets too hot. (2) I had my AC off and windows open in the apartment for a few days to save energy. (After a while, you get used to the …
 
 Read more: https://halcanary.org/vv/2005/07/16/491/
 

@@ -8,7 +8,8 @@ How would one follow this advice in this world?
 
 One would need only computers with a 100% open source stack.  Including hardware.
 
-Imagine starting with a mass-produced phone-sized touchscreen…
+Imagine starting with a mass-produced phone-sized touchscreen and battery that
+contained zero…
 
 Read more: https://halcanary.org/vv/2023/10/23/3038/
 

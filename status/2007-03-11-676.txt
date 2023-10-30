@@ -14,7 +14,8 @@ hexer
         i++;
         printf("%02hhx",x);
         if (i % 32 == 0) {
-         …
+          printf("\n");
+    …
 
 Read more: https://halcanary.org/vv/2007/03/11/676/
 

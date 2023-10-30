@@ -15,7 +15,9 @@ It only matters if one has defined something in css for "`a:hover`". [The W3C](h
       background-color:#ffffaa;
       color:#000000; }
 
-and…
+and use html:
+
+    words, <span class="highlig…
 
 Read more: https://halcanary.org/vv/2003/10/04/120/
 

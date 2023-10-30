@@ -11,6 +11,8 @@ I am losing my intuitive understanding of the relation.  The physics
 version of it is
 
 <div style="text-align:center;"><em>P</em>&middot;<em>V</em> =
-<em>N</em>&middot;<em>…
+<em>N</em>&middot;<em>kT</em></div>
+
+where …
 
 Read more: https://halcanary.org/vv/2011/05/27/csg05/

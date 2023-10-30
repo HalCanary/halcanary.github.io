@@ -13,7 +13,8 @@ Visual Test CGI thing.
     # from the dictionary file.
     random_word 200 > ${TEMP}
     for word in $(cat ${TEMP}) ; do
-        hash=$(echo ${word} …
+        hash=$(echo ${word} | sha1sum - ) ;
+   …
 
 Read more: https://halcanary.org/vv/2005/05/25/463/
 

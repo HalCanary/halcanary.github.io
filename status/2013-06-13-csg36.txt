@@ -13,6 +13,6 @@ How to ask the desktop to open a file from a shell script? Define this function:
                 command -v "xdg-open"  || \
                 command -v "gvfs-open" || \
                 command -v "kde-open"  || \
-            …
+                command -v "exo-o…
 
 Read more: https://halcanary.org/vv/2013/06/13/csg36/

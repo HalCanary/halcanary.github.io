@@ -12,7 +12,8 @@ Recursive Shred And Remove
     ##  2 of the GNU GPL.
     for x in "$@" ; do
       if [ -d "$x" ] ; then
-        if [ "$x" != "." -a "$x" != ".." ] ;…
+        if [ "$x" != "." -a "$x" != ".." ] ; then
+          tou…
 
 Read more: https://halcanary.org/vv/2005/11/11/531/
 

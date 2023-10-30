@@ -14,7 +14,7 @@ Installing Wordpress with MySQL
 > The MySQL database server is the world's most popular open  
 > source database. It is released under the GPL.
 
-In a properly configured Fedora/Redhat…
+In a properly configured Fedora/Redhat system you can ins…
 
 Read more: https://halcanary.org/vv/2004/08/24/309/
 

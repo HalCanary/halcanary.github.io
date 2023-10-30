@@ -11,6 +11,7 @@ I've been meaning to write this code for a while now:
     if (@ARGV OUTPUT\n";
         exit 1;
     }
+    my $a_file = shift @ARGV;
    …
 
 Read more: https://halcanary.org/vv/2004/03/05/184/

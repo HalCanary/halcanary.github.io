@@ -19,6 +19,6 @@ UPDATE: I just realised that `readlink -f "$FILE"` will do the trick.
 
 * * *
 
-UPDATE 2: Even …
+UPDATE 2: Even better, since it is…
 
 Read more: https://halcanary.org/vv/2010/03/31/968/

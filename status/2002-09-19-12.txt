@@ -5,7 +5,7 @@ Last weekend, I picked up a couple of O'Reilly books at the store: _JavaScript: 
 
 I've found that JavaScript (js) is a much easier to grok if you think of it as a real language. And there's a lot of cool things that can be done with the W3C DOM.
 
-Perl, on the other hand, is cool, …
+Perl, on the other hand, is cool, but it's syntax is…
 
 Read more: https://halcanary.org/vv/2002/09/19/12/
 

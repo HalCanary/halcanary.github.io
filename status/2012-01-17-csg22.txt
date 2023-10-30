@@ -16,6 +16,6 @@ def getInt(title, label, mini=-2147483647, maxa=2147483647):
   return ret
 
 def getItem(title, label, items):
-  (ret, ok) = PyQ…
+  (ret, ok) = PyQt4.QtGui.QInputDialog…
 
 Read more: https://halcanary.org/vv/2012/01/17/csg22/

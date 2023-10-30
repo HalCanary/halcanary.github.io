@@ -8,7 +8,8 @@ I always meant to go ahead and fix this function so it did what I want. Now it u
       (auto-mega-replace  "\\( \\|\t\\)$" ""))
     (defun auto-mega-replace (arg1 arg2)
       (save-excursion
-        (beginning-of-buff…
+        (beginning-of-buffer)
+        (while (re-search-forwar…
 
 Read more: https://halcanary.org/vv/2008/10/03/738/
 

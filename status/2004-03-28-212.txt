@@ -12,7 +12,8 @@ The issue: as far as I know, no editor shreds old versions of files upon writing
     shred -n 2 /dev/ramdisk
     /sbin/mke2fs -q /dev/ramdisk
     mkdir -p /mnt/ramdisk
-    mount /dev/ramdisk /mnt…
+    mount /dev/ramdisk /mnt/ramdisk
+    chmod …
 
 Read more: https://halcanary.org/vv/2004/03/28/212/
 

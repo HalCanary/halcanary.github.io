@@ -9,7 +9,7 @@ net access for life
 > 
 > If you buy neighbor cheap wireless linksys router and offer free setup, putting your MAC on it and retaining usr/pwd, you give yourself net access for life.
 > 
-> — from slashdot ([source](http://slashdot.org/comments.pl?sid=1177…
+> — from slashdot ([source](http://slashdot.org/comments.pl?sid=117744&cid=9949656))
 
 Read more: https://halcanary.org/vv/2004/08/12/296/
 

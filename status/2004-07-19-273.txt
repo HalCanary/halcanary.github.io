@@ -11,7 +11,7 @@ Inequality in Action
 <table class="border"><tbody>
 <tr><th> State </th><th> votes/person </th><th> State </th><th> votes/person </th></tr>
 <tr><td> California     </td><td> 0.850 </td><td> Oregon        </td><td> 1.070 </td></tr>
-<tr…
+<tr><td> Texas        …
 
 Read more: https://halcanary.org/vv/2004/07/19/273/
 
