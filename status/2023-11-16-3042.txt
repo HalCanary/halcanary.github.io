@@ -1,0 +1,13 @@
+Blog post:
+Text-only skymap
+Just a list of brightest objects in the sky.
+
+Sometimes, when I want to quickly identify the planets I see in the early evening and before dawn, the planetarium/sky map app on my phone is sometimes harder to use than I want.
+
+I would love to have an website that uses your location and the time to list the brightest dozen objects in the sky right now, along with current azimuth and altitude.
+
+Living in the city…
+
+Read more: https://halcanary.org/vv/2023/11/16/3042/
+
+#astronomy | #space
