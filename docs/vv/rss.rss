@@ -7,13 +7,61 @@
 		<language>en-US</language>
 		<copyright>Copyright 2002-2023 Hal Canary. ALL RIGHTS RESERVED.</copyright>
 		<link>https://halcanary.org/vv/</link>
-		<pubDate>Mon, 11 Dec 2023 18:17:41 -0500</pubDate>
-		<lastBuildDate>Mon, 11 Dec 2023 18:17:41 -0500</lastBuildDate>
+		<pubDate>Tue, 16 Apr 2024 16:50:31 -0400</pubDate>
+		<lastBuildDate>Tue, 16 Apr 2024 16:50:31 -0400</lastBuildDate>
 		<image>
 			<url>https://halcanary.org/images/HAL_CANARY_20191008_512.jpg</url>
 			<title>Voder-Vocoder</title>
 			<link>https://halcanary.org/vv/</link>
 		</image>
+		<item>
+			<title>Golang Pitfall</title>
+			<link>https://halcanary.org/vv/2024/04/16/3044/</link>
+			<guid isPermaLink="false">ddc1296b-a41d-5a77-b398-63008222d4a7</guid>
+			<pubDate>Tue, 16 Apr 2024 16:47:43 -0400</pubDate>
+			<description><![CDATA[<p>Go does not have references.</p>
+<p>In C++11 one might do the following:</p>
+<pre><code class="language-cxx">struct Foo {
+    int Value;
+};
+
+void f() {
+    std::vector&lt;Foo&gt; foovec;
+    //....
+    for (auto&amp; foo : foovec) {
+        if (foo.Value &gt; 10) {
+            foo.Value = 10;
+        }
+    }
+    //....
+}
+</code></pre>
+<p>However, in Go, the following contains a bug:</p>
+<pre><code class="language-go">type Foo struct {
+    Value int
+}   
+
+func f() {
+    var fooslice []Foo
+    //....
+    for _, foo := range fooslice {
+        if foo.Value &gt; 10 {
+            foo.Value = 10
+        }
+    }
+}
+</code></pre>
+<p>What I wanted to do was the following:</p>
+<pre><code class="language-go">    for idx, foo := range fooslice {
+        if foo.Value &gt; 10 {
+            foo.Value = 10
+            fooslice[idx] = foo
+        }
+    }
+</code></pre>
+]]></description>
+			<category>computersAndCode,golang</category>
+		</item>
 		<item>
 			<title>Git Unstage</title>
 			<link>https://halcanary.org/vv/2023/11/17/3043/</link>

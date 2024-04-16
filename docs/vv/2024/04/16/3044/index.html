@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>Voder-Vocoder Archive 2023-11</title>
+<title>Voder-Vocoder: Golang Pitfall</title>
 <link href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACAAQAAAADrRVxmAAAACXBIWXMAAAMfAAADHwHmEQywAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAVZJREFUSMfd1EuOwyAMAFAQ0rAZNUfIUTga5GbsZtkrcINhyQLBYMgHG6ZddJcoSpOXDzY2ZZls7F5Q9iAzhyu/XsAomCm4AdRHYPUUNAH7GTgdRbZd+k6FCZgGZQPw/DV45dgIWw+rc3rrRvGrHcBrjmDzqocAIBCIsr+ERcYFwYNAfMj0QPC9pC+JIWNgpfJvQGXTQwJYCFgMegSHIWPIA/DaplO49UIuEy7qUR5gWakJHA+oXZhNZYBYQNQnlgaBKSthrRjRwJXfcu+ZA28A5fmF7yXWwKg+BgB9AJyxPtgGib8FQSCKjEcZQR7XqUUaTgiCgJME9vRPMEwREJk+McCKodUBDUvjiDTSfU4v2NPvwCqc7QHif3Bz6Ga9vZIYga5yVs9rO1Qf+uOnSw6yhnKu2Yurx+C/Ru8TVLuQl9HPtmx9CqCvTlYwxxz3eqhv3Htl/wEokJpySHNGkgAAAABJRU5ErkJggg==" rel="icon">
 <style>
 @media (prefers-color-scheme:dark) {body {background-color:#000;color:#FFF;}
@@ -64,28 +64,72 @@ Copyright 2002-2023 Hal Canary. ALL RIGHTS RESERVED.
 -->
 </head>
 <body>
-<h1>Voder-Vocoder Archive 2023-11</h1>
-<div role="main">
-<ul>
-<li>
-  <a href="https://halcanary.org/vv/2023/11/17/3043/">Git Unstage</a>
-  2023-11-17 09:28:58-05:00 (EST)
-  <div>Unstaging is the only git action I can never remember.</div>
-</li>
-<li>
-  <a href="https://halcanary.org/vv/2023/11/16/3042/">Text-only skymap</a>
-  2023-11-16 08:07:31-05:00 (EST)
-  <div>Just a list of brightest objects in the sky.</div>
-</li>
-</ul>
+<article class="h-entry" id="2024/04/16/3044">
+<header>
+<!-- SRC= 2024-04-16-3044.md -->
+<h1 class="blogtitle p-name">Golang Pitfall</h1>
+<p class="p-summary">Go does not have references.</p>
+<div class="byline plainlink">
+<div>
+<div class="p-author">Hal Canary</div>
+<div><time class="dt-published" datetime="2024-04-16T16:47:43-04:00">2024-04-16 16:47:43-04:00 (EDT)</time></div>
+<div><a class="u-url u-uid" href="https://halcanary.org/vv/2024/04/16/3044/">https://halcanary.org/vv/2024/04/16/3044/</a></div>
+<div><a class="p-category" href="/vv/category/computersAndCode/">#computersAndCode</a>; <a class="p-category" href="/vv/category/golang/">#golang</a></div>
+</div>
+</div>
+</header>
+<div class="content e-content">
+<div style="display:none;">Go does not have references.</div>
+<div>
+<p>In C++11 one might do the following:</p>
+<pre><code class="language-cxx">struct Foo {
+    int Value;
+};
+
+void f() {
+    std::vector&lt;Foo&gt; foovec;
+    //....
+    for (auto&amp; foo : foovec) {
+        if (foo.Value &gt; 10) {
+            foo.Value = 10;
+        }
+    }
+    //....
+}
+</code></pre>
+<p>However, in Go, the following contains a bug:</p>
+<pre><code class="language-go">type Foo struct {
+    Value int
+}   
+
+func f() {
+    var fooslice []Foo
+    //....
+    for _, foo := range fooslice {
+        if foo.Value &gt; 10 {
+            foo.Value = 10
+        }
+    }
+}
+</code></pre>
+<p>What I wanted to do was the following:</p>
+<pre><code class="language-go">    for idx, foo := range fooslice {
+        if foo.Value &gt; 10 {
+            foo.Value = 10
+            fooslice[idx] = foo
+        }
+    }
+</code></pre>
 
 </div>
+</div>
+</article>
 <hr>
 <nav aria-label="External Navigation">
 <div class="lcr">
-  <div><p>(<a href="/vv/2023/10/">2023-10</a>)</p></div>
-  <div class="centered"><p>(<a href="../">UP</a>)</p></div>
-  <div class="rightside"><p>(<a href="/vv/2024/04/">2024-04</a>)</p></div>
+  <div><p>(older: <a href="https://halcanary.org/vv/2023/11/17/3043/">Git Unstage</a>)</p></div>
+  <div class="centered"><p>(<a href="/vv/archives/">back</a>)</p></div>
+  <div class="rightside"></div>
 </div>
 </nav>
 </body>

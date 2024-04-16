@@ -81,6 +81,7 @@ Copyright 2002-2023 Hal Canary. ALL RIGHTS RESERVED.
 <hr>
 <nav>
 <ul class="flat">
+<li><a href="#2024/04/16/3044">Golang Pitfall</a></li>
 <li><a href="#2023/11/17/3043">Git Unstage</a></li>
 <li><a href="#2023/11/16/3042">Text-only skymap</a></li>
 <li><a href="#2023/10/27/3041">Using A Theorem Prover</a></li>
@@ -90,11 +91,71 @@ Copyright 2002-2023 Hal Canary. ALL RIGHTS RESERVED.
 <li><a href="#2023/06/14/3037">Tears of The Kingdom</a></li>
 <li><a href="#2023/04/17/3036">Happy 15th birthday, Lulu!</a></li>
 <li><a href="#2022/11/14/3035">Simple Command-Line Mastodon Status Poster!</a></li>
-<li><a href="#2022/11/14/3034">Italic and bold isolate characters for Unicode.</a></li>
 </ul>
 </nav>
 <hr>
 <div role="main">
+<article class="h-entry" id="2024/04/16/3044">
+<header>
+<!-- SRC= 2024-04-16-3044.md -->
+<h2 class="blogtitle p-name">Golang Pitfall</h2>
+<p class="p-summary">Go does not have references.</p>
+<div class="byline plainlink">
+<div>
+<div class="p-author">Hal Canary</div>
+<div><time class="dt-published" datetime="2024-04-16T16:47:43-04:00">2024-04-16 16:47:43-04:00 (EDT)</time></div>
+<div><a class="u-url u-uid" href="https://halcanary.org/vv/2024/04/16/3044/">https://halcanary.org/vv/2024/04/16/3044/</a></div>
+<div><a class="p-category" href="/vv/category/computersAndCode/">#computersAndCode</a>; <a class="p-category" href="/vv/category/golang/">#golang</a></div>
+</div>
+</div>
+</header>
+<div class="content e-content">
+<div style="display:none;">Go does not have references.</div>
+<div>
+<p>In C++11 one might do the following:</p>
+<pre><code class="language-cxx">struct Foo {
+    int Value;
+};
+
+void f() {
+    std::vector&lt;Foo&gt; foovec;
+    //....
+    for (auto&amp; foo : foovec) {
+        if (foo.Value &gt; 10) {
+            foo.Value = 10;
+        }
+    }
+    //....
+}
+</code></pre>
+<p>However, in Go, the following contains a bug:</p>
+<pre><code class="language-go">type Foo struct {
+    Value int
+}   
+
+func f() {
+    var fooslice []Foo
+    //....
+    for _, foo := range fooslice {
+        if foo.Value &gt; 10 {
+            foo.Value = 10
+        }
+    }
+}
+</code></pre>
+<p>What I wanted to do was the following:</p>
+<pre><code class="language-go">    for idx, foo := range fooslice {
+        if foo.Value &gt; 10 {
+            foo.Value = 10
+            fooslice[idx] = foo
+        }
+    }
+</code></pre>
+
+</div>
+</div>
+</article>
+<hr>
 <article class="h-entry" id="2023/11/17/3043">
 <header>
 <!-- SRC= 2023-11-17-3043.md -->
@@ -370,44 +431,11 @@ controller back and forth.)  She sent me this funny comic about it:
 </div>
 </article>
 <hr>
-<article class="h-entry" id="2022/11/14/3034">
-<header>
-<!-- SRC= 2022-11-14-3034.md -->
-<h2 class="blogtitle p-name">Italic and bold isolate characters for Unicode.</h2>
-<p class="p-summary">a proposal</p>
-<div class="byline plainlink">
-<div>
-<div class="p-author">Hal Canary</div>
-<div><time class="dt-published" datetime="2022-11-14T10:27:46-05:00">2022-11-14 10:27:46-05:00 (EST)</time></div>
-<div><a class="u-url u-uid" href="https://halcanary.org/vv/2022/11/14/3034/">https://halcanary.org/vv/2022/11/14/3034/</a></div>
-<div><a class="p-category" href="/vv/category/unicode/">#unicode</a>; <a class="p-category" href="/vv/category/textShaping/">#textShaping</a>; <a class="p-category" href="/vv/category/computersAndCode/">#computersAndCode</a></div>
-</div>
-</div>
-</header>
-<div class="content e-content">
-<div style="display:none;">a proposal</div>
-<div>
-<p>Unicode needs two new pairs of characters.  call them <code>⟪</code>, <code>⟫</code> and <code>⟦</code>,
-<code>⟧</code> for this description, but their actual glyphs could be anything symmetric.</p>
-<p>The string &#34;⟪foobar⟫&#34; would be defined to be semantically equivalent to the
-italic version of &#34;foobar&#34;, i.e. &#34;𝑓𝑜𝑜𝑏𝑎𝑟&#34;.</p>
-<p>Similarly, the string &#34;⟦foobar⟧&#34; would be defined to be semantically
-equivalent to the bold version of &#34;foobar&#34;, i.e. &#34;𝗳𝗼𝗼𝗯𝗮𝗿&#34;.</p>
-<p>…A text shaper (e.g. Harfbuzz) could replace text between these symbols with
-italic or bold text, if possible.</p>
-<p>But when those italic or bold fonts are unavailable or you are in plain-text
-mode (e.g. editing a computer program), then the new glyphs would be shown.</p>
-<p>(Discuss on <a href="https://mastodon.sdf.org/@hal_canary/109337333795352828">Mastodon</a>.)</p>
-
-</div>
-</div>
-</article>
-<hr>
 </div>
 
 <nav aria-label="External Navigation">
 <div class="lcr">
-  <div><p>(older: <a href="https://halcanary.org/vv/2022/11/11/3033/">notebook</a>)</p></div>
+  <div><p>(older: <a href="https://halcanary.org/vv/2022/11/14/3034/">Italic and bold isolate characters for Unicode.</a>)</p></div>
   <div class="centered"><p>(<a href="/vv/archives/">ALL POSTS</a>)</p></div>
   <div class="rightside"></div>
 </div>

@@ -1,0 +1,37 @@
+Blog post:
+Golang Pitfall
+Go does not have references.
+
+In C++11 one might do the following:
+
+```cxx
+struct Foo {
+    int Value;
+};
+
+void f() {
+    std::vector<Foo> foovec;
+    //....
+    for (auto& foo : foovec) {
+        if (foo.Value > 10) {
+            foo.Value = 10;
+        }
+    }
+    //....
+}
+```
+
+However, in Go, the following contains a bug:
+
+```go
+type Foo struct {
+    Value int
+}   
+
+func f() {
+    var fooslice []Foo
+ …
+
+Read more: https://halcanary.org/vv/2024/04/16/3044/
+
+#computersAndCode | #golang

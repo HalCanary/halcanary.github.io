@@ -66,6 +66,75 @@ Copyright 2002-2023 Hal Canary. ALL RIGHTS RESERVED.
 <body>
 <h1>Voder-Vocoder</h1>
 <div role="main">
+<div id="2024"><h2>2024</h2>
+
+<details id="dt/2024/04/16/3044"><summary>
+  <a href="https://halcanary.org/vv/2024/04/16/3044/">Golang Pitfall</a>
+  2024-04-16 16:47:43-04:00 (EDT)
+  <br>Go does not have references.</summary>
+<div class="box"><article class="h-entry" id="2024/04/16/3044">
+<header>
+<!-- SRC= 2024-04-16-3044.md -->
+<h3 class="blogtitle p-name">Golang Pitfall</h3>
+<p class="p-summary">Go does not have references.</p>
+<div class="byline plainlink">
+<div>
+<div class="p-author">Hal Canary</div>
+<div><time class="dt-published" datetime="2024-04-16T16:47:43-04:00">2024-04-16 16:47:43-04:00 (EDT)</time></div>
+<div><a class="u-url u-uid" href="https://halcanary.org/vv/2024/04/16/3044/">https://halcanary.org/vv/2024/04/16/3044/</a></div>
+<div><a class="p-category" href="/vv/category/computersAndCode/">#computersAndCode</a>; <a class="p-category" href="/vv/category/golang/">#golang</a></div>
+</div>
+</div>
+</header>
+<div class="content e-content">
+<div style="display:none;">Go does not have references.</div>
+<div>
+<p>In C++11 one might do the following:</p>
+<pre><code class="language-cxx">struct Foo {
+    int Value;
+};
+
+void f() {
+    std::vector&lt;Foo&gt; foovec;
+    //....
+    for (auto&amp; foo : foovec) {
+        if (foo.Value &gt; 10) {
+            foo.Value = 10;
+        }
+    }
+    //....
+}
+</code></pre>
+<p>However, in Go, the following contains a bug:</p>
+<pre><code class="language-go">type Foo struct {
+    Value int
+}   
+
+func f() {
+    var fooslice []Foo
+    //....
+    for _, foo := range fooslice {
+        if foo.Value &gt; 10 {
+            foo.Value = 10
+        }
+    }
+}
+</code></pre>
+<p>What I wanted to do was the following:</p>
+<pre><code class="language-go">    for idx, foo := range fooslice {
+        if foo.Value &gt; 10 {
+            foo.Value = 10
+            fooslice[idx] = foo
+        }
+    }
+</code></pre>
+
+</div>
+</div>
+</article></div>
+</details>
+
+</div>
 <div id="2023"><h2>2023</h2>
 
 <details id="dt/2023/11/17/3043"><summary>

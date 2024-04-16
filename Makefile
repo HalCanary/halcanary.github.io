@@ -28,7 +28,7 @@ update-deps:
 	git add go.mod go.sum
 
 ~/go/bin/poststatus: go.mod
-	@mkdir $(dir $@)
+	@mkdir -p $(dir $@)
 	GOBIN=$(dir $@) go install github.com/HalCanary/mastodoner/cmd/poststatus
 
 poststatus: ~/go/bin/poststatus
