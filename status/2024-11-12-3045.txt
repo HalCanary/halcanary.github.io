@@ -1,0 +1,8 @@
+Blog post:
+Missing Emoji
+
+Someone should design an emoji that means "thank you".  I generally use "👍︎", but I'm not sure that that is the most unambiguous possibility.
+
+Read more: https://halcanary.org/vv/2024/11/12/3045/
+
+#rant | #unicode

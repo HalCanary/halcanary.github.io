@@ -7,13 +7,22 @@
 		<language>en-US</language>
 		<copyright>Copyright 2002-2023 Hal Canary. ALL RIGHTS RESERVED.</copyright>
 		<link>https://halcanary.org/vv/</link>
-		<pubDate>Tue, 16 Apr 2024 16:50:31 -0400</pubDate>
-		<lastBuildDate>Tue, 16 Apr 2024 16:50:31 -0400</lastBuildDate>
+		<pubDate>Tue, 12 Nov 2024 07:34:24 -0500</pubDate>
+		<lastBuildDate>Tue, 12 Nov 2024 07:34:24 -0500</lastBuildDate>
 		<image>
 			<url>https://halcanary.org/images/HAL_CANARY_20191008_512.jpg</url>
 			<title>Voder-Vocoder</title>
 			<link>https://halcanary.org/vv/</link>
 		</image>
+		<item>
+			<title>Missing Emoji</title>
+			<link>https://halcanary.org/vv/2024/11/12/3045/</link>
+			<guid isPermaLink="false">ff96caee-ed54-5218-b289-74ffc6ae7335</guid>
+			<pubDate>Tue, 12 Nov 2024 07:31:44 -0500</pubDate>
+			<description><![CDATA[<p>Someone should design an emoji that means &quot;thank you&quot;.  I generally use &quot;👍︎&quot;, but I'm not sure that that is the most unambiguous possibility.</p>
+]]></description>
+			<category>rant,unicode</category>
+		</item>
 		<item>
 			<title>Golang Pitfall</title>
 			<link>https://halcanary.org/vv/2024/04/16/3044/</link>
