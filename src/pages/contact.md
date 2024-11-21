@@ -49,6 +49,10 @@
 
 </div>
 
+<div style="display:none;">
+<p>Pronunciation: hăl kə'nĕrē</p>
+<p>Pronunciation (IPA): /hæl kəˈnɛəɹi/</p>
+</div>
 
 ```
 -----BEGIN PGP SIGNED MESSAGE-----
