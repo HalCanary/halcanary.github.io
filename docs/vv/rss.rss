@@ -7,13 +7,46 @@
 		<language>en-US</language>
 		<copyright>Copyright 2002-2023 Hal Canary. ALL RIGHTS RESERVED.</copyright>
 		<link>https://halcanary.org/vv/</link>
-		<pubDate>Thu, 21 Nov 2024 08:59:07 -0500</pubDate>
-		<lastBuildDate>Thu, 21 Nov 2024 08:59:07 -0500</lastBuildDate>
+		<pubDate>Wed, 27 Nov 2024 09:36:17 -0500</pubDate>
+		<lastBuildDate>Wed, 27 Nov 2024 09:36:17 -0500</lastBuildDate>
 		<image>
 			<url>https://halcanary.org/images/HAL_CANARY_20191008_512.jpg</url>
 			<title>Voder-Vocoder</title>
 			<link>https://halcanary.org/vv/</link>
 		</image>
+		<item>
+			<title>Python Object JSON Encoder</title>
+			<link>https://halcanary.org/vv/2024/11/27/3046/</link>
+			<guid isPermaLink="false">51ffb4ee-8310-5d85-84fa-29c5d96ea8b5</guid>
+			<pubDate>Wed, 27 Nov 2024 09:33:57 -0500</pubDate>
+			<description><![CDATA[<p>How to JSON-encode any Python object.</p>
+<pre><code>#! /usr/bin/env python3
+
+import json
+
+class ObjectEncoder(json.JSONEncoder):
+    def default(self, o):
+        try:
+            super().default(o)
+        except:
+            return vars(o)
+
+class Example:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+print(ObjectEncoder(indent='  ').encode(Example(42, 24)))
+</code></pre>
+<p>This produces:</p>
+<pre><code>{
+  &quot;x&quot;: 42,
+  &quot;y&quot;: 24
+}
+</code></pre>
+]]></description>
+			<category>computersAndCode,python</category>
+		</item>
 		<item>
 			<title>Missing Emoji</title>
 			<link>https://halcanary.org/vv/2024/11/12/3045/</link>

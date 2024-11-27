@@ -1,0 +1,29 @@
+Blog post:
+Python Object JSON Encoder
+How to JSON-encode any Python object.
+
+```
+#! /usr/bin/env python3
+
+import json
+
+class ObjectEncoder(json.JSONEncoder):
+    def default(self, o):
+        try:
+            super().default(o)
+        except:
+            return vars(o)
+
+class Example:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+print(ObjectEncoder(indent='  ').encode(Example(42, 24)))
+```
+
+This produces:…
+
+Read more: https://halcanary.org/vv/2024/11/27/3046/
+
+#computersAndCode | #python

@@ -81,6 +81,7 @@ Copyright 2002-2023 Hal Canary. ALL RIGHTS RESERVED.
 <hr>
 <nav>
 <ul class="flat">
+<li><a href="#2024/11/27/3046">Python Object JSON Encoder</a></li>
 <li><a href="#2024/11/12/3045">Missing Emoji</a></li>
 <li><a href="#2024/04/16/3044">Golang Pitfall</a></li>
 <li><a href="#2023/11/17/3043">Git Unstage</a></li>
@@ -90,11 +91,56 @@ Copyright 2002-2023 Hal Canary. ALL RIGHTS RESERVED.
 <li><a href="#2023/10/23/3039">Can the US House of Representatives function without a speaker or with a speaker with limited power?</a></li>
 <li><a href="#2023/10/23/3038">“Rule number one, never carry anything you don’t control.”</a></li>
 <li><a href="#2023/06/14/3037">Tears of The Kingdom</a></li>
-<li><a href="#2023/04/17/3036">Happy 15th birthday, Lulu!</a></li>
 </ul>
 </nav>
 <hr>
 <div role="main">
+<article class="h-entry" id="2024/11/27/3046">
+<header>
+<!-- SRC= 2024-11-27-3046.md -->
+<h2 class="blogtitle p-name">Python Object JSON Encoder</h2>
+<p class="p-summary">How to JSON-encode any Python object.</p>
+<div class="byline plainlink">
+<div>
+<div class="p-author">Hal Canary</div>
+<div><time class="dt-published" datetime="2024-11-27T09:33:57-05:00">2024-11-27 09:33:57-05:00 (EST)</time></div>
+<div><a class="u-url u-uid" href="https://halcanary.org/vv/2024/11/27/3046/">https://halcanary.org/vv/2024/11/27/3046/</a></div>
+<div><a class="p-category" href="/vv/category/computersAndCode/">#computersAndCode</a>; <a class="p-category" href="/vv/category/python/">#python</a></div>
+</div>
+</div>
+</header>
+<div class="content e-content">
+<div style="display:none;">How to JSON-encode any Python object.</div>
+<div>
+<pre><code>#! /usr/bin/env python3
+
+import json
+
+class ObjectEncoder(json.JSONEncoder):
+    def default(self, o):
+        try:
+            super().default(o)
+        except:
+            return vars(o)
+
+class Example:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+print(ObjectEncoder(indent=&#39;  &#39;).encode(Example(42, 24)))
+</code></pre>
+<p>This produces:</p>
+<pre><code>{
+  &#34;x&#34;: 42,
+  &#34;y&#34;: 24
+}
+</code></pre>
+
+</div>
+</div>
+</article>
+<hr>
 <article class="h-entry" id="2024/11/12/3045">
 <header>
 <!-- SRC= 2024-11-12-3045.md -->
@@ -407,34 +453,11 @@ controller back and forth.)  She sent me this funny comic about it:
 </div>
 </article>
 <hr>
-<article class="h-entry" id="2023/04/17/3036">
-<header>
-<!-- SRC= 2023-04-17-3036.md -->
-<h2 class="blogtitle p-name">Happy 15th birthday, Lulu!</h2>
-
-<div class="byline plainlink">
-<div>
-<div class="p-author">Hal Canary</div>
-<div><time class="dt-published" datetime="2023-04-17T12:00:00-04:00">2023-04-17 12:00:00-04:00 (EDT)</time></div>
-<div><a class="u-url u-uid" href="https://halcanary.org/vv/2023/04/17/3036/">https://halcanary.org/vv/2023/04/17/3036/</a></div>
-<div><a class="p-category" href="/vv/category/photos/">#photos</a>; <a class="p-category" href="/vv/category/dogs/">#dogs</a></div>
-</div>
-</div>
-</header>
-<div class="content e-content">
-
-<div>
-<p><img src="https://halcanary.org/photos/PXL_20230417_105413571_2.jpg" alt="Lulu on a walk. Old 20-lbs dog" width="3024" height="1702"></p>
-
-</div>
-</div>
-</article>
-<hr>
 </div>
 
 <nav aria-label="External Navigation">
 <div class="lcr">
-  <div><p>(older: <a href="https://halcanary.org/vv/2022/11/14/3035/">Simple Command-Line Mastodon Status Poster!</a>)</p></div>
+  <div><p>(older: <a href="https://halcanary.org/vv/2023/04/17/3036/">Happy 15th birthday, Lulu!</a>)</p></div>
   <div class="centered"><p>(<a href="/vv/archives/">ALL POSTS</a>)</p></div>
   <div class="rightside"></div>
 </div>
