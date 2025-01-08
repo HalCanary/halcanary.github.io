@@ -7,13 +7,25 @@
 		<language>en-US</language>
 		<copyright>Copyright 2002-2023 Hal Canary. ALL RIGHTS RESERVED.</copyright>
 		<link>https://halcanary.org/vv/</link>
-		<pubDate>Fri, 20 Dec 2024 12:23:59 -0500</pubDate>
-		<lastBuildDate>Fri, 20 Dec 2024 12:23:59 -0500</lastBuildDate>
+		<pubDate>Wed, 08 Jan 2025 09:03:06 -0500</pubDate>
+		<lastBuildDate>Wed, 08 Jan 2025 09:03:06 -0500</lastBuildDate>
 		<image>
 			<url>https://halcanary.org/images/HAL_CANARY_20191008_512.jpg</url>
 			<title>Voder-Vocoder</title>
 			<link>https://halcanary.org/vv/</link>
 		</image>
+		<item>
+			<title>Orange Remotes</title>
+			<link>https://halcanary.org/vv/2025/01/08/3048/</link>
+			<guid isPermaLink="false">6c1467c1-d6e3-5b56-91d1-f271063c7107</guid>
+			<pubDate>Wed, 08 Jan 2025 09:00:15 -0500</pubDate>
+			<description><![CDATA[<p>Remote controls should be easier to find.</p>
+<p>All remote controls should be blaze orange.  It was never a problem until I
+began living with other people.  Nobody puts the remotes back where they
+belong.</p>
+]]></description>
+			<category>life,rant</category>
+		</item>
 		<item>
 			<title>Kathy Canary&#x27;s Obituary</title>
 			<link>https://halcanary.org/vv/2024/12/20/3047/</link>
@@ -81,6 +93,25 @@ print(ObjectEncoder(indent='  ').encode(Example(42, 24)))
 </code></pre>
 ]]></description>
 			<category>computersAndCode,python</category>
+		</item>
+		<item>
+			<title>Tariffs</title>
+			<link>https://halcanary.org/vv/2024/11/12/3046/</link>
+			<guid isPermaLink="false">4452ad4e-cb49-5ac1-a93b-89e6bcc7ba3e</guid>
+			<pubDate>Tue, 12 Nov 2024 07:37:12 -0500</pubDate>
+			<description><![CDATA[<p>devil&#39;s advocate</p>
+<p>One <em>could</em> make the case for high tariffs on trade goods.</p>
+<ol>
+<li>
+<p>Some of our trading partners, such as China and Saudi Arabia, have terrible human rights policies.  We could limit trade with these countries as a signal that we disapprove.  To be effective, we would promise to reduce tariffs when their human rights situation improves.  And we would need to apply the same rules with every nation.</p>
+</li>
+<li>
+<p>Global trade has some downsides.  It is a major contributor to climate change.  Regions of the world should be more self-sufficient.  We should &quot;buy local&quot; to support local workers.</p>
+</li>
+</ol>
+<p>That said, any changes to tariffs <em>will</em> have a ton of bad consequences in the short term.  The best approach is to schedule a slow increase of rates over decades, not to unilaterally impose large rates immediately.  It took decades for the current global economy to form; I expect it would take a similar time to make major changes without disruption.</p>
+]]></description>
+			<category>economics,energyPolicy,politics</category>
 		</item>
 		<item>
 			<title>Missing Emoji</title>
