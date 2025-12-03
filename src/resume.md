@@ -8,7 +8,7 @@
 <div class="centered">
 
 [halcanary@gmail.com](mailto:halcanary@gmail.com)
-• [+1-919-724-2801](tel:+1-919-724-280)
+• [+1-919-724-2801](tel:+1-919-724-2801)
 • Durham, NC, USA
 • [https://halcanary.org/](https://halcanary.org/)
 
@@ -18,7 +18,7 @@
 
 *   Languages: Go, C++, JavaScript, Python, C, Java, Shell Scripting
 *   Software Tools: React, NPM, Docker, Kubernetes, Git, CMake, OpenGL
-*   Operating systems: Unix and Linux workstations and servers, Android and iOS.
+*   Operating systems: MacOS, Unix, and Linux workstations and servers, Android and iOS.
 *   Specialties: scientific and numerical computing, scientific visualization,
     computer graphics, full-stack web development, microservices, databases.
 
@@ -31,6 +31,9 @@
 
 *   Senior Software Engineer, Aternity LLC./Riverbed Technology LLC. 2021–present
     *   MacOS software engineer for MacOS Digital Experience Management Agent. <https://www.aternity.com/>
+    *   Ported MacOS DEM agent to Linux.
+    *   Worked on project to port Riverbed Unified Agent from Linux to MacOS.
+    *   Go/C/Objective-C/C++ system programing on MacOS.
 *   Senior Software Engineer, Voith Digital. 2020
     *   Full-stack software engineer for
         Voith OnCumulus Industrial Internet-of-Things project
