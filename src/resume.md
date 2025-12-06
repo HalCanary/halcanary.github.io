@@ -1,11 +1,7 @@
-<div style="display:none;">
-
-# Hal W Canary III — Resume
-
-</div>
-
 <div class="tightmargins nolink">
 <div class="centered">
+
+# Hal W Canary
 
 [halcanary@gmail.com](mailto:halcanary@gmail.com)
 • [+1-919-724-2801](tel:+1-919-724-2801)
@@ -30,9 +26,10 @@
 ## Experience
 
 *   Senior Software Engineer, Aternity LLC./Riverbed Technology LLC. 2021–present
-    *   MacOS software engineer for MacOS Digital Experience Management Agent. <https://www.aternity.com/>
-    *   Ported MacOS DEM agent to Linux.
-    *   Worked on project to port Riverbed Unified Agent from Linux to MacOS.
+    *   MacOS software engineer for MacOS Digital Experience Management Agent.
+        <https://www.aternity.com/>
+    *   Ported MacOS DEM agent to Linux; Worked on project to port Riverbed
+        Unified Agent from Linux to MacOS.
     *   Go/C/Objective-C/C++ system programing on MacOS.
 *   Senior Software Engineer, Voith Digital. 2020
     *   Full-stack software engineer for
@@ -79,8 +76,8 @@
 *   Programmer and Student Researcher, UW-Madison Math Department. 2001–2004
 *   Interface Analyst and Programmer, Epic Systems Corporation. 2001–2002
     *   Developed database interface software in InterSystems Caché;
-        Installed and configured client’s software;.
-        Resolved customer issues with troubleshootingr;
+        Installed and configured client’s software;
+        Resolved customer issues with troubleshooting;
         Developed custom software for clients.
 *   Undergraduate Researcher, UW-Madison Physics Department. 1999–2000
 
