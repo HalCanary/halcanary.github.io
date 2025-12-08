@@ -1,4 +1,4 @@
-<div class="tightmargins nolink">
+<div class="tightmargins nolink squeeze">
 <div class="centered">
 
 # Hal W Canary
@@ -6,9 +6,18 @@
 [halcanary@gmail.com](mailto:halcanary@gmail.com)
 • [+1-919-724-2801](tel:+1-919-724-2801)
 • Durham, NC, USA
-• [https://halcanary.org/](https://halcanary.org/)
+• [https://&#8288;halcanary.org/](https://halcanary.org/)
 
 </div>
+
+## Professional Summary
+
+Senior Software Engineer with 15+ years of experience in systems programming,
+graphics, scientific computing, and full-stack development. Known for
+identifying the simplest effective technical solutions and leaving codebases
+faster, leaner, and more reliable. Proven track record of large-scale
+refactors, cross-platform engineering, and delivering measurable performance
+improvements across macOS, Linux, Windows, Android, and iOS.
 
 ## Technical Skills
 
@@ -20,18 +29,20 @@
 
 ## Education
 
-*   University of North Carolina at Chapel Hill, M.S. Computer Science, August 2013.
-*   University of Wisconsin-Madison, B.S. Physics and Mathematics, May 2001.
+*   University of North Carolina at Chapel Hill, Master of Science, Computer Science, August 2013.
+*   University of Wisconsin-Madison, Bachelor of Science, Physics and Mathematics, May 2001.
 
 ## Experience
 
-*   Senior Software Engineer, Aternity LLC./Riverbed Technology LLC. 2021–present
-    *   MacOS software engineer for MacOS Digital Experience Management Agent.
+*   Senior Software Engineer, Aternity LLC./Riverbed Technology LLC. Jan 2021–Dec 2025
+    *   MacOS software engineer for MacOS End User Experience Agent.
+        Rewrote EUE Agent in Go to reduce resource use by more than half.
         <https://www.aternity.com/>
     *   Ported MacOS DEM agent to Linux; Worked on project to port Riverbed
         Unified Agent from Linux to MacOS.
     *   Go/C/Objective-C/C++ system programing on MacOS.
-*   Senior Software Engineer, Voith Digital. 2020
+
+*   Senior Software Engineer, Voith Digital. Apr 2020–Oct 2020
     *   Full-stack software engineer for
         Voith OnCumulus Industrial Internet-of-Things project
         (<http://voith.com/corp-en/digital-solutions/oncumulus.html>).
@@ -41,7 +52,8 @@
     *   React/JavaScript frontend.
     *   Go microservices backend.
     *   Agile development on a distributed, remote team.
-*   Software Engineer, Google, Inc. 2013–2020
+
+*   Software Engineer, Google, Inc. Sep 2013–Jan 2020
     *   Member of the Skia 2D graphic library (<https://skia.org/>) team.
     *   Created SkQP, a project to use Skia rendering tests to generate new
         Android Compatibility Test Suite tests for OpenGLES and Vulkan drivers,
@@ -59,7 +71,8 @@
     *   Contributed to API documentation and examples.
     *   Created scripts in Python, Go, and Shell to automate tasks (e.g.
         <https://halcanary.org/git-sync-deps/>).
-*   Research Assistant, UNC-Chapel Hill, Computer Science Department. 2011–2013
+
+*   Research Assistant, UNC-Chapel Hill, Computer Science Department. May 2011–Aug 2013
     *   Created novel tools for visualizations of high-dimensional statistical distributions.
     *   Built visualizations for scientific data (nuclear quantum-chromodynamic
         plasma simulation, meteorologic simulation, and cosmological galactic
@@ -71,15 +84,22 @@
     *   Developed new VTK filters and ParaView macros.
     *   Collaborated with domain scientists to develop visualization and
         statistical product requirements.
+
+<!--
 *   Receiving Manager, Barnes & Noble. 2006–2011
+
 *   College Math Tutor, Edgewood College. 2004–2005
+
 *   Programmer and Student Researcher, UW-Madison Math Department. 2001–2004
+
 *   Interface Analyst and Programmer, Epic Systems Corporation. 2001–2002
     *   Developed database interface software in InterSystems Caché;
         Installed and configured client’s software;
         Resolved customer issues with troubleshooting;
         Developed custom software for clients.
+
 *   Undergraduate Researcher, UW-Madison Physics Department. 1999–2000
+-->
 
 ## Publications
 

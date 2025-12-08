@@ -19,7 +19,7 @@ import (
 
 var (
 	h1Regexp         = regexp.MustCompile(`(?s)<h1>(.*?)</h1>`)
-	nosvg            = regexp.MustCompile(`/(SSL|mathapplets|u)/`)
+	nosvg            = regexp.MustCompile(`/(SSL|mathapplets|u)/|/Hal_Canary_Resume.html$`)
 	waitgroup        sync.WaitGroup
 	changedFiles     []string
 	changedFilesChan chan string

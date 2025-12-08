@@ -1,12 +1,12 @@
 all: theblog staticsite bin/post
 
-theblog: bin/blog $(shell find src/BlogSrc -type f)
+theblog: bin/blog $(shell find src/BlogSrc -type f) Blog.xml
 	./bin/blog .
 
-staticsite: bin/site $(shell find src/pages -type f)
+staticsite: bin/site $(shell find src/pages -type f) Blog.xml
 	./bin/site .
 
-listcats: bin/blog $(shell find src/BlogSrc -type f)
+listcats: bin/blog $(shell find src/BlogSrc -type f) Blog.xml
 	./bin/blog -cats .
 
 commit-and-push: all
