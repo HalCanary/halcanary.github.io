@@ -24,25 +24,25 @@ improvements across macOS, Linux, Windows, Android, and iOS.
 *   Languages: Go, C++, JavaScript, Python, C, Java, Shell Scripting
 *   Software Tools: React, NPM, Docker, Kubernetes, Git, CMake, OpenGL
 *   Operating systems: MacOS, Unix, and Linux workstations and servers, Android and iOS.
-*   Specialties: scientific and numerical computing, scientific visualization,
+*   Specialties: systems programming, scientific and numerical computing, scientific visualization,
     computer graphics, full-stack web development, microservices, databases.
 
 ## Education
 
-*   University of North Carolina at Chapel Hill, Master of Science, Computer Science, August 2013.
-*   University of Wisconsin-Madison, Bachelor of Science, Physics and Mathematics, May 2001.
+*   University of North Carolina at Chapel Hill, Master of Science, Computer Science, September 2011–August 2013.
+*   University of Wisconsin-Madison, Bachelor of Science, Physics and Mathematics, September 1997–May 2001.
 
 ## Experience
 
-*   Senior Software Engineer, Aternity LLC./Riverbed Technology LLC. Jan 2021–Dec 2025
+*   Senior Software Engineer, Aternity LLC./Riverbed Technology LLC., Durham, NC. January 2021–December 2025
     *   MacOS software engineer for MacOS End User Experience Agent.
         Rewrote EUE Agent in Go to reduce resource use by more than half.
         <https://www.aternity.com/>
     *   Ported MacOS DEM agent to Linux; Worked on project to port Riverbed
         Unified Agent from Linux to MacOS.
-    *   Go/C/Objective-C/C++ system programing on MacOS.
+    *   Go/C/Objective-C/C++ system programming on MacOS.
 
-*   Senior Software Engineer, Voith Digital. Apr 2020–Oct 2020
+*   Senior Software Engineer, Voith Digital, Raleigh, NC. April 2020–October 2020
     *   Full-stack software engineer for
         Voith OnCumulus Industrial Internet-of-Things project
         (<http://voith.com/corp-en/digital-solutions/oncumulus.html>).
@@ -53,34 +53,34 @@ improvements across macOS, Linux, Windows, Android, and iOS.
     *   Go microservices backend.
     *   Agile development on a distributed, remote team.
 
-*   Software Engineer, Google, Inc. Sep 2013–Jan 2020
+*   Software Engineer, Google, Inc., Chapel Hill, NC. September 2013–January 2020
     *   Member of the Skia 2D graphic library (<https://skia.org/>) team.
     *   Created SkQP, a project to use Skia rendering tests to generate new
         Android Compatibility Test Suite tests for OpenGLES and Vulkan drivers,
         for Android Pie and Andoroid 10
-        (<https://skia.org/dev/testing/skqp>).
+        (<https://skia.org/docs/dev/testing/skqp/>).
     *   Maintained SkPDF, Skia's PDF generator used by Chrome printing and
         Android framework. Refactored entire code to use a fraction of the RAM,
         execute faster, be threadsafe and optionally multithreaded
-        (<https://skia.org/user/sample/pdf>).
+        (<https://skia.org/docs/user/sample/pdf>).
     *   Experience running, testing, debugging Skia software library on Linux,
         MacOS, Windows, Android and iOS.
     *   Wrote example and testing applications for Android and iOS, linking a
         native C++ library to Java (via JNI) or Objective-C (e.g.
-        <https://halcanary.org/skottie-ios-app/>).
+        <https://halcanary.org/skottie-ios-app>).
     *   Contributed to API documentation and examples.
     *   Created scripts in Python, Go, and Shell to automate tasks (e.g.
-        <https://halcanary.org/git-sync-deps/>).
+        <https://halcanary.org/git-sync-deps>).
 
-*   Research Assistant, UNC-Chapel Hill, Computer Science Department. May 2011–Aug 2013
+*   Research Assistant, UNC-Chapel Hill, Computer Science Department, Chapel Hill, NC. May 2011–Aug 2013
     *   Created novel tools for visualizations of high-dimensional statistical distributions.
     *   Built visualizations for scientific data (nuclear quantum-chromodynamic
         plasma simulation, meteorologic simulation, and cosmological galactic
         formation simulation datasets) using VTK and ParaView.
     *   Iteratively designed and developed the MADAI Distribution Sampling Tools
-        (<https://halcanary.org/madai-dst/>)
+        (<https://github.com/MADAI/DistributionSampling>)
         and the MADAI Visualization Workbench
-        (<https://halcanary.org/madai-bench/>).
+        (<https://github.com/MADAI/MADAIWorkbench>).
     *   Developed new VTK filters and ParaView macros.
     *   Collaborated with domain scientists to develop visualization and
         statistical product requirements.
