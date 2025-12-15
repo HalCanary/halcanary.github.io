@@ -10,7 +10,7 @@ listcats: bin/blog $(shell find src/BlogSrc -type f) Blog.xml
 	./bin/blog -cats .
 
 commit-and-push: all
-	./src/commit-and-push
+	./bin/commit-and-push
 
 post: bin/post
 	$<
