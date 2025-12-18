@@ -22,7 +22,7 @@ improvements across macOS, Linux, Windows, Android, and iOS.
 ## Technical Skills
 
 *   Languages: Go, C++, JavaScript, Python, C, Java, Shell Scripting
-*   Software Tools: React, NPM, Docker, Kubernetes, Git, CMake, OpenGL
+*   Software Tools: React, NPM, Docker, Kubernetes, Git, CMake, OpenGL, QT.
 *   Operating systems: MacOS, Unix, and Linux workstations and servers, Android and iOS.
 *   Specialties: systems programming, scientific and numerical computing, scientific visualization,
     computer graphics, full-stack web development, microservices, databases.
@@ -84,6 +84,7 @@ improvements across macOS, Linux, Windows, Android, and iOS.
     *   Developed new VTK filters and ParaView macros.
     *   Collaborated with domain scientists to develop visualization and
         statistical product requirements.
+    *   Wrote QT programs for scientific visualization.
 
 <!--
 *   Receiving Manager, Barnes & Noble. 2006–2011
