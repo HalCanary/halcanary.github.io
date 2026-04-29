@@ -24,8 +24,10 @@ improvements across macOS, Linux, Windows, Android, and iOS.
 *   Languages: Go, C++, JavaScript, Python, C, Java, Shell Scripting
 *   Software Tools: React, NPM, Docker, Kubernetes, Git, CMake, OpenGL, QT.
 *   Operating systems: MacOS, Unix, and Linux workstations and servers, Android and iOS.
-*   Specialties: systems programming, scientific and numerical computing, scientific visualization,
-    computer graphics, full-stack web development, microservices, databases.
+*   Specialties: systems programming, scientific and numerical computing,
+    scientific visualization, computer graphics, full-stack web development,
+    backend development, web application development, SaaS, software development lifecycle,
+    unit testing, microservices, databases.
 
 ## Education
 
