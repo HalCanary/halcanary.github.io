@@ -1,4 +1,4 @@
-all: theblog staticsite bin/post
+all: theblog staticsite bin/post docs/Hal_Canary_Resume.docx
 
 theblog: bin/blog $(shell find src/BlogSrc -type f) Blog.xml
 	./bin/blog .
@@ -32,5 +32,8 @@ update-deps:
 	GOBIN=$(dir $@) go install github.com/HalCanary/mastodoner/cmd/poststatus
 
 poststatus: ~/go/bin/poststatus
+
+docs/Hal_Canary_Resume.docx: src/resume.md formatting.docx
+	pandoc $< -o $@ --reference-doc=formatting.docx
 
 .PHONY: all clean commit-and-push listcats post poststatus staticsite theblog update-deps

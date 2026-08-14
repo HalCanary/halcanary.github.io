@@ -1,14 +1,12 @@
 <div class="tightmargins nolink squeeze">
+
 <div class="centered">
 
 # Hal W Canary
 
-[halcanary@gmail.com](mailto:halcanary@gmail.com)
-• [+1-919-724-2801](tel:+1-919-724-2801)
-• Durham, NC, USA
-• [https://&#8288;halcanary.org/](https://halcanary.org/)
-
 </div>
+
+###### [halcanary@gmail.com](mailto:halcanary@gmail.com) • [+1-919-724-2801](tel:+1-919-724-2801) • Durham, NC, USA • [https://&#8288;halcanary.org/](https://halcanary.org/)
 
 ## Professional Summary
 
