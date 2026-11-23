@@ -14,8 +14,6 @@ You should checkout my [portfolio](/portfolio/).
 
 Maybe you want [my resume](/resume/).
 
-Maybe you want [my calendar](/cal/).
-
 Maybe you want [my contact info](/contact/).
 
 Maybe you want [my Web Log](/vv/).

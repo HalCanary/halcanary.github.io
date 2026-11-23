@@ -20,7 +20,6 @@ https://halcanary.org/SSL/images/
 https://halcanary.org/SSL/photos/
 https://halcanary.org/ascii/
 https://halcanary.org/aztec-diamonds/
-https://halcanary.org/cal/
 https://halcanary.org/candyland/
 https://halcanary.org/contact/
 https://halcanary.org/git-sync-deps/
